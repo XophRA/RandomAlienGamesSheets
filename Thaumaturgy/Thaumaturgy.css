@@ -3917,9 +3917,11 @@ span.sheet-shipLauncherTorpedo
 .sheet-magicCircle
 {
     grid-area: magicCircle;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/Thaumaturgy/img/MagicCircle.png);
-    background-size: 520px 600px;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img00/MagicCircle.png);
+    background-size: 698px 806px;
     background-repeat: no-repeat;
+    width: 520px;
+    height: 600px;
 }
 
 .sheet-ripples
