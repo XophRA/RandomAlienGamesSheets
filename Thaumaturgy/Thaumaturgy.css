@@ -54,8 +54,8 @@ body
     color: #000;
     background-color: #FFF;
     line-height: 150%;
-    max-width: 900px;
-    min-width: 900px;
+    max-width: 850px;
+    min-width: 850px;
 }
 
 h1, h2, h3, h4, th
@@ -72,6 +72,7 @@ h1
 
 h2
 {
+    background-color: #d87d29;
     font-size: 1.75em;
 }
 
@@ -231,7 +232,7 @@ textarea
 /* Master Grids */
 .sheet-masterGrid
 {
-    width: 800px;
+    width: 850px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px auto;
@@ -241,7 +242,7 @@ textarea
 .sheet-crewmemberSheetGrid
 {
     grid-area: sheet;
-    width: 900px;
+    width: 100%;
     display: grid;
     grid-row-gap: 6px;
     grid-template-columns: 1fr;
@@ -254,7 +255,7 @@ textarea
 .sheet-shipSheetGrid
 {
     grid-area: sheet;
-    width: 900px;
+    width: 100%;
     display: grid;
     grid-row-gap: 6px;
     grid-template-columns: 1fr;
@@ -264,13 +265,23 @@ textarea
     align-items: start;
 }
 
+.sheet-mediumSheetGrid
+{
+    grid-area: sheet;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 6px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "spellcastingProcess magicCircle magicCircle" "ripples resources disequilibrium";
+    justify-items: start;
+    align-items: start;
+}
+
 .sheet-sophontSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/SophontLog.png);
-    background-size: 900px 290px;
-    background-repeat: no-repeat;
-    width: 900px;
+    width: 100%;
     height: 285px;
     display: grid;
     grid-row-gap: 0px;
@@ -282,31 +293,10 @@ textarea
     grid-column-gap: 4px;
 }
 
-.sheet-compositeSophontSheetGrid
-{
-    grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/compositeSophontLog.png);
-    background-size: 900px 290px;
-    background-repeat: no-repeat;
-    width: 900px;
-    height: 285px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 40px 78px 4fr 80px 3fr 150px 25px 25px 25px 25px 5px;
-    grid-template-rows: 24px repeat(14,18px) 1fr;
-    justify-items: start;
-    align-items: start;
-    padding: 6px;
-    grid-column-gap: 4px;
-}
-
 .sheet-swarmSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/swarmLog.png);
-    background-size: 900px 340px;
-    background-repeat: no-repeat;
-    width: 900px;
+    width: 100%;
     height: 335px;
     display: grid;
     grid-row-gap: 0px;
@@ -318,31 +308,11 @@ textarea
     grid-column-gap: 4px;
 }
 
-.sheet-droneSheetGrid
-{
-    grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/swarmLog.png);
-    background-size: 900px 340px;
-    background-repeat: no-repeat;
-    width: 900px;
-    height: 335px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 85px 70px 1fr 150px 25px 24px 25px 24px 25px 25px 25px 24px 24px 5px;
-    grid-template-rows: 24px repeat(18,18px) 1fr;
-    justify-items: start;
-    align-items: start;
-    padding: 6px;
-    grid-column-gap: 4px;
-}
 
 .sheet-creatureSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/creatureLog.png);
-    background-size: 900px 285px;
-    background-repeat: no-repeat;
-    width: 900px;
+    width: 100%;
     height: 280px;
     display: grid;
     grid-row-gap: 0px;
@@ -354,49 +324,11 @@ textarea
     grid-column-gap: 4px;
 }
 
-.sheet-smallCraftSheetGrid
-{
-    grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/creatureLog.png);
-    background-size: 900px 285px;
-    background-repeat: no-repeat;
-    width: 900px;
-    height: 280px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 85px 70px 1fr 55px 1fr 150px 25px 25px 25px 25px 5px;
-    grid-template-rows: 24px repeat(14,18px) 1fr;
-    justify-items: start;
-    align-items: start;
-    padding: 6px;
-    grid-column-gap: 4px;
-}
-
-.sheet-shuttleLogSheetGrid
-{
-    grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/shuttleSquadron.png);
-    background-size: 900px 590px;
-    background-repeat: no-repeat;
-    width: 900px;
-    height: 585px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 100px 70px 1fr 80px 1fr 150px 25px 25px 25px 25px 5px;
-    grid-template-rows: 24px repeat(15,18px) 1fr;
-    justify-items: start;
-    align-items: start;
-    padding: 6px;
-    grid-column-gap: 4px;
-}
 
 .sheet-behemothSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/behemoth.png);
-    background-size: 900px 590px;
-    background-repeat: no-repeat;
-    width: 900px;
+    width: 100%;
     height: 585px;
     display: grid;
     grid-row-gap: 0px;
@@ -408,48 +340,16 @@ textarea
     grid-column-gap: 4px;
 }
 
-.sheet-shipLogSheetGrid
-{
-    grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/shipLog.png);
-    background-size: 900px 590px;
-    background-repeat: no-repeat;
-    width: 900px;
-    height: 585px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 100px 80px 1fr 70px 1fr;
-    grid-template-rows: 24px repeat(14,18px) 14px 1fr;
-    justify-items: start;
-    align-items: start;
-    padding: 6px;
-    grid-column-gap: 4px;
-}
-
-.sheet-capitalShipSheetGrid
-{
-    grid-area: sheet;
-    width: 900px;
-    height: 585px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 100px 2fr 70px 1fr;
-    grid-template-rows: repeat(7,18px) 14px 1fr;
-    justify-items: start;
-    align-items: start;
-    padding: 0px;
-    grid-column-gap: 4px;
-}
 
 /*     Sheet header layout    */
 div.sheet-header
 {
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 375px;
+    grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 32px 1fr;
     grid-template-areas: "title . " "title selector" "title version";
-    width: 900px;
+    width: 100%;
     height: 100px;
 }
 
@@ -970,7 +870,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     grid-template-rows: repeat(120, 10px) 1200px;
     background-color: transparent;
     background-size: 1000px 2400px;
-    width: 950px;
+    width: 850px;
     height: 2400px;
 }
     /*Blinds stop hade parts color-profile thead sheet*/
@@ -3670,7 +3570,7 @@ span.sheet-shipLauncherTorpedo
 .sheet-crewTop
 {
     grid-area: crewTop;
-    width: 900px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 28px 1fr;
@@ -3681,7 +3581,7 @@ span.sheet-shipLauncherTorpedo
 
 .sheet-crewID
 {
-    width: 900px;
+    width: 100%;
     grid-area: ID;
     display: grid;
     grid-template-columns: 1fr 6fr 1fr 6fr;
@@ -3744,11 +3644,11 @@ span.sheet-shipLauncherTorpedo
 
 .sheet-crewAspects
 {
-    width: 440px;
+    width: 100%;
     padding: 5px;
     display: grid;
     grid-area: crewAspect;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(6,18px);
     grid-gap: 0px;
     height: 108px;
@@ -3820,9 +3720,6 @@ span.sheet-shipLauncherTorpedo
 
 .sheet-species
 {
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/species.png);
-    background-size: 450px 128px;
-    background-repeat: no-repeat;
     width: 440px;
     padding: 5px;
     display: grid;
@@ -3865,7 +3762,7 @@ span.sheet-shipLauncherTorpedo
 .sheet-shipAspects
 {
     grid-area: aspects;
-    width: 900px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2,90px 30px 1fr);
     grid-template-rows: 18px 15px 15px;
@@ -3997,15 +3894,58 @@ span.sheet-shipLauncherTorpedo
     grid-row-start: 3;
     grid-row-end: 4;
 }
+
+/* ************ */
+/* Medium Sheet */
+/* ************ */
+.sheet-spellcastingProcess
+{
+    grid-area: spellcastingProcess;
+}
+    .sheet-spellcastingProcess > ol
+    {
+        list-style: lower-roman;
+        font-weight: 600;
+    }
+        .sheet-spellcastingProcess > ol > li > ol
+        {
+            list-style: none;
+            text-indent: 1em;
+            font-weight: 400;
+        }
+
+.sheet-magicCircle
+{
+    grid-area: magicCircle;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/Thaumaturgy/img/MagicCircle.png);
+    background-size: 520px 600px;
+    background-repeat: no-repeat;
+}
+
+.sheet-ripples
+{
+    grid-area: ripples;
+}
+
+.sheet-resources
+{
+    grid-area: resources;
+}
+
+.sheet-disequilibrium
+{
+    grid-area: disequilibrium;
+}
+
 /* ******************************* */
 /*			Skills				   */
 /* ******************************* */
 .sheet-skillRow
 {
     grid-area: skills;
-    width: 900px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr) 220px;
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: 32px 1fr 160px 78px;
     grid-gap: 4px;
     height: 410px;
@@ -4020,9 +3960,6 @@ span.sheet-shipLauncherTorpedo
 
 .sheet-skills
 {
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/skills.png);
-    background-size: 220px 370px;
-    background-repeat: no-repeat;
     width: 220px;
     display: grid;
     grid-template-columns: 8px 8px 1fr 40px 64px;
@@ -4113,10 +4050,7 @@ span.sheet-shipLauncherTorpedo
 .sheet-crewConditionsWidget
 {
     grid-area: Conditions;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/conditionPathogen.png);
-    background-size: 220px 156px;
-    background-repeat: no-repeat;
-    width: 220px;
+    width: 100%;
     display: grid;
     grid-template-columns: 13px 1fr 1fr 25px 10px;
     grid-template-rows: 22px repeat(5, 25px ) 1fr;
@@ -4281,10 +4215,7 @@ span.sheet-shipLauncherTorpedo
 .sheet-pathogen
 {
     grid-area: Pathogens;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/conditionPathogen.png);
-    background-size: 220px 156px;
-    background-repeat: no-repeat;
-    width: 220px;
+    width: 100%;
     display: grid;
     grid-template-columns: 75px 1fr;
     grid-template-rows: 25px 1fr 5px;
@@ -4312,10 +4243,7 @@ span.sheet-shipLauncherTorpedo
 .sheet-upkeep
 {
     grid-area: Upkeep;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/upkeep.png);
-    background-size: 220px 77px;
-    background-repeat: no-repeat;
-    width: 220px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 22px 1fr;
@@ -4355,9 +4283,9 @@ input[type="number"].sheet-upkeepBox
 .sheet-crewKitWidget
 {
     grid-area: crewKit;
-    width: 900px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 540px 178px 178px;
+    grid-template-columns: 3fr 1fr 1fr;
     grid-template-rows: 32px 155px 155px 1fr;
     grid-gap: 4px;
     height: 620px;
@@ -4383,9 +4311,6 @@ input[type="number"].sheet-upkeepBox
 .sheet-EVASuit
 {
     grid-area: EVASuit;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/EVAsuit.png);
-    background-size: 180px 314px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 15px 60px 1fr 20px 12px;
     grid-template-rows: 24px 20px 20px 16px 14px 20px 12px 12px 20px 20px 18px 14px 8px 20px 20px 20px 15px 1fr;
@@ -4539,9 +4464,6 @@ input[type="number"].sheet-upkeepBox
 .sheet-Augments
 {
     grid-area: Augments;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/augmentation.png);
-    background-size: 180px 314px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 1fr 1fr 25px 6px;
     grid-template-rows: 18px 15px 15px repeat(11,1fr);
@@ -4662,15 +4584,12 @@ input[type="number"].sheet-upkeepBox
 .sheet-Associations
 {
     grid-area: Associations;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/associations.png);
-    background-size: 900px 255px;
-    background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: 10px repeat(2, 269px 94px 1fr);
+    grid-template-columns: 10px repeat(2, 2fr 1fr 1fr);
     grid-template-rows: 20px 16px 20px repeat(11,18px) 1fr;
     grid-gap: 0px;
     height: 250px;
-    width: 895px;
+    width: 100%;
     padding-top: 4px;
     padding-left: 6px;
     z-index: 0;
@@ -4870,15 +4789,12 @@ input[type="number"].sheet-upkeepBox
 .sheet-descriptionWidget
 {
     grid-area: description;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/description.png);
-    background-size: 900px 100px;
-    background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: repeat(2, 90px 1fr) 10px;
+    grid-template-columns: repeat(2, 1fr 4fr) 10px;
     grid-template-rows: 20px repeat(3,15px) 1fr;
     grid-gap: 4px;
     height: 105px;
-    width: 900px;
+    width: 100%;
     padding-top: 4px;
     padding-left: 6px;
     z-index: 0;
@@ -4940,15 +4856,12 @@ input[type="number"].sheet-upkeepBox
 .sheet-languageWidget
 {
     grid-area: language;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/language.png);
-    background-size: 900px 212px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(4, 15px 1fr) 15px;
     grid-template-rows: 20px 18px repeat(10,15px) 1fr;
     grid-gap: 0px;
     height: 210px;
-    width: 900px;
+    width: 100%;
     padding-top: 4px;
     padding-left: 6px;
     z-index: 0;
@@ -5033,15 +4946,12 @@ input[type="number"].sheet-upkeepBox
 .sheet-contactWidget
 {
     grid-area: contact;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/contactNotes.png);
-    background-size: 440px 390px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 20px repeat(23,15px) 1fr;
     grid-gap: 0px;
     height: 390px;
-    width: 435px;
+    width: 100%;
     padding: 4px;
     z-index: 0;
 }
@@ -5071,15 +4981,12 @@ input[type="number"].sheet-upkeepBox
 .sheet-crewNoteWidget
 {
     grid-area: notes;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/contactNotes.png);
-    background-size: 440px 390px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 1fr 10px;
     grid-template-rows: 20px 1fr;
     grid-gap: 0px;
     height: 390px;
-    width: 435px;
+    width: 100%;
     padding: 4px;
     z-index: 0;
 }
@@ -5101,7 +5008,7 @@ input[type="number"].sheet-upkeepBox
     grid-template-areas: "Title Title" "reserve plan" "debt plan" "shares plan";
     grid-row-gap: 4px;
     height: 440px;
-    width: 900px;
+    width: 100%;
     padding-top: 4px;
     padding-left: 6px;
     z-index: 0;
@@ -5115,15 +5022,12 @@ input[type="number"].sheet-upkeepBox
 .sheet-retirementPlan
 {
     grid-area: plan;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Retirement.png);
-    background-size: 700px 390px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 4fr 1fr 2fr 15px;
     grid-template-rows: 24px 1fr;
     grid-gap: 0px;
     height: 385px;
-    width: 695px;
+    width: 100%;
     padding-top: 4px;
     padding-left: 6px;
     z-index: 0;
@@ -5152,8 +5056,6 @@ input[type="number"].sheet-upkeepBox
 
 .sheet-retirementResources
 {
-    background-size: 169px 120px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 18px 1fr 18px;
     grid-template-rows: 22px 1fr 18px;
@@ -5171,24 +5073,6 @@ input[type="number"].sheet-upkeepBox
     grid-row-end: 2;
     font-variant: small-caps;
     padding-top: 4px;
-}
-
-.sheet-retirementReserve
-{
-    grid-area: reserve;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resources.png);
-}
-
-.sheet-retirementDebt
-{
-    grid-area: debt;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/debt.png);
-}
-
-.sheet-retirementShares
-{
-    grid-area: shares;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/shares.png);
 }
 
 .sheet-retirementResourceBox
@@ -5732,7 +5616,7 @@ input[type="checkbox"]:checked + span.sheet-patch
 {
     grid-area: systemsAmenities;
     display: grid;
-    width: 900px;
+    width: 100%;
     height: 360px;
     grid-template-columns: 535px 1fr;
     grid-template-rows: 1fr;
@@ -5744,7 +5628,7 @@ input[type="checkbox"]:checked + span.sheet-patch
 {
     grid-area: systems;
     display: grid;
-    width: 535px;
+    width: 100%;
     height: 352px;
     grid-template-columns: repeat(3,175px);
     grid-template-rows: 32px 154px 154px;
@@ -5758,36 +5642,14 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-area: title;
 }
 
-.sheet-reactorSystem
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Reactor.png);
-}
-
-.sheet-shipSystem
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ShipSystem.png);
-}
-
-.sheet-weaponSystem
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/PulseArray.png);
-}
-
-.sheet-dataStorage
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/DataStorage.png);
-}
-
 .sheet-system
 {
-    background-size: 175px 155px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: minmax(6px,10px) 4fr 3fr 5fr;
     grid-template-rows: repeat(10,15px);
     grid-gap: 0px;
     height: 150px;
-    width: 170px;
+    width: 33%;
     padding-top: 5px;
     padding-left: 5px;
     z-index: 0;
@@ -5797,7 +5659,7 @@ input[type="checkbox"]:checked + span.sheet-patch
 {
     display: flex;
     flex-flow: nowrap;
-    width: 540px;
+    width: 100%;
     justify-content: space-evenly;
 }
 /* Ship system text*/
@@ -6023,14 +5885,13 @@ input[type="number"].sheet-currentCharge
 .sheet-amenitiesWidget
 {
     grid-area: amenities;
-    width: 362px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 32px 1fr;
     grid-template-areas: "title" "amenities";
     grid-gap: 4px;
     height: 350px;
-    width: 350px;
+    width: 100%;
 }
 
 .sheet-amenities
@@ -6041,7 +5902,7 @@ input[type="number"].sheet-currentCharge
     grid-template-rows: repeat(20,minmax(12px,15px));
     grid-gap: 0px;
     height: 315px;
-    width: 350px;
+    width: 100%;
     align-self: end;
 }
 
@@ -6195,9 +6056,9 @@ input[type="number"].sheet-currentCharge
 {
     grid-area: modules;
     display: grid;
-    width: 535px;
+    width: 100%;
     height: 375px;
-    grid-template-columns: repeat(4,124px) 380px;
+    grid-template-columns: repeat(4,1fr) 3fr;
     grid-template-rows: 32px 166px 166px;
     grid-template-areas: "title title title title title" ". . . . launchbay" ". . . . launchbay";
     grid-gap: 4px;
@@ -6208,38 +6069,19 @@ input[type="number"].sheet-currentCharge
     grid-area: title;
 }
 
-.sheet-basicModule
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Module.png);
-}
-
-.sheet-weaponModule
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/WeaponModule.png);
-}
-
 .sheet-module
 {
-    background-size: 125px 166px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: minmax(6px,14px) minmax(20px,50px) 1fr 40px;
     grid-template-rows: repeat(11,15px);
     grid-gap: 0px;
     height: 162px;
-    width: 120px;
+    width: 100%;
     padding-top: 4px;
     padding-left: 5px;
     z-index: 0;
 }
 
-.sheet-flex-moduleRow
-{
-    display: flex;
-    flex-flow: nowrap;
-    width: 540px;
-    justify-content: space-evenly;
-}
 /* Ship system text*/
 .sheet-moduleTitle
 {
@@ -6577,15 +6419,12 @@ input[type="number"].sheet-currentCharge
 .sheet-launchBay
 {
     grid-area: launchbay;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Shuttle.png);
-    background-size: 385px 335px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 14px 40px 60px 60px 60px 15px 41px 45px 21px 25px;
     grid-template-rows: 15px repeat(2,12px) 15px repeat(2,12px) repeat(5,minmax(12px, 15px)) 20px repeat(9,minmax(12px,15px))1fr;
     grid-gap: 0px;
     height: 335px;
-    width: 381px;
+    width: 100%;
     padding-left: 6px;
     padding-right: 12px;
     padding-top: 4px;
@@ -7221,834 +7060,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 20;
     text-align: center;
 }
-/* ***************************************** */
-/*            SHIP CONFIGURATION CSS         */
-/* ***************************************** */
-div.sheet-shipConfig
-{
-    grid-area: shipConfig;
-    display: grid;
-    grid-template-columns: repeat(4, 217px);
-    grid-template-rows: 32px 330px;
-    grid-template-areas: "title title title title" "shipSectionBow shipSectionStarboard shipSectionPort shipSectionStern";
-    grid-gap: 4px;
-    width: 900px;
-    height: 380px;
-    padding: 5px;
-}
 
-.sheet-ShipConfigTitle
-{
-    grid-area: title;
-}
-
-.sheet-shipSectionBow
-{
-    grid-area: shipSectionBow;
-}
-
-.sheet-shipSectionStarboard
-{
-    grid-area: shipSectionStarboard;
-}
-
-.sheet-shipSectionPort
-{
-    grid-area: shipSectionPort;
-}
-
-.sheet-shipSectionStern
-{
-    grid-area: shipSectionStern;
-}
-
-.sheet-flex-col
-{
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.sheet-flex-center
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-input[type=number].sheet-txtfield::-webkit-inner-spin-button, input[type=number].sheet-txtfield::-webkit-outer-spin-button
-{
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number].sheet-txtfield
-{
-    -moz-appearance: textfield;
-}
-/* ******************************** */
-/*          Ship blocks             */
-/* ******************************** */
-/* General layout */
-.sheet-ship-block
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ship-section.png);
-    background-size: 218px 330px;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr) 40px;
-    grid-template-rows: 24px repeat(12, 1fr);
-    height: 324px;
-    width: 212px;
-    padding-left: 5px;
-    padding-bottom: 5px;
-}
-
-    .sheet-ship-block label
-    {
-        font-weight: bold;
-        font-size: 1.1em;
-        padding-left: 20px;
-    }
-
-    .sheet-ship-block input[type=number].sheet-txtfield
-    {
-        width: 27px;
-        margin-left: 8px;
-        border-radius: 0px;
-        border-style: none;
-    }
-
-    .sheet-ship-block .sheet-ship-label
-    {
-        grid-column: 1 / 6;
-        grid-row: 1 / 1;
-        padding: 5px 0px 8px 10px;
-        margin-bottom: 5px;
-    }
-    /* Ship Upkeep */
-    .sheet-ship-block .sheet-shipUpkeepTitle
-    {
-        font-variant: small-caps;
-        grid-column-start: 8;
-        grid-column-end: 9;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        font-size: 11px;
-        align-self: center;
-        text-align: left;
-        padding-top: 6px;
-    }
-
-    .sheet-ship-block .sheet-ship-sidebar1
-    {
-        grid-column: 8 / 8;
-        grid-row: 2 / 7;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .sheet-ship-block .sheet-space-sidebar
-    {
-        grid-column: 8 / 8;
-        grid-row: 7 / 9;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    /* Ship Patches*/
-    .sheet-ship-block .sheet-shipPatchTitle
-    {
-        font-variant: small-caps;
-        grid-column-start: 8;
-        grid-column-end: 9;
-        grid-row-start: 8;
-        grid-row-end: 9;
-        font-size: 11px;
-        align-self: center;
-        text-align: left;
-        padding-top: 9px;
-    }
-
-    .sheet-ship-block > .sheet-ship-sidebar2
-    {
-        display: grid;
-        grid-column-start: 8;
-        grid-column-end: 9;
-        grid-row-start: 9;
-        grid-row-end: 12;
-        grid-template-columns: 25px;
-        grid-template-rows: repeat(3,25px);
-        grid-template-areas: "patch1" "patch2" "patch3";
-        position: relative;
-        justify-self: end;
-        margin-top: 10px;
-        grid-gap: 2px;
-        margin-right: 4px;
-    }
-
-        .sheet-ship-block > .sheet-ship-sidebar2 > input
-        {
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-            position: absolute;
-        }
-
-        .sheet-ship-block > .sheet-ship-sidebar2 > .sheet-patch1
-        {
-            grid-area: patch1;
-        }
-
-        .sheet-ship-block > .sheet-ship-sidebar2 > .sheet-patch2
-        {
-            grid-area: patch2;
-        }
-
-        .sheet-ship-block > .sheet-ship-sidebar2 > .sheet-patch3
-        {
-            grid-area: patch3;
-        }
-    /* ship section armor */
-    .sheet-ship-block .sheet-border-armor
-    {
-        grid-column: 1 / 4;
-        grid-row: 12 / 14;
-        display: flex;
-        justify-content: center;
-        border: 2px dotted black;
-    }
-
-    .sheet-ship-block .sheet-armor1
-    {
-        grid-column: 1 / 2;
-        grid-row: 12 / 13;
-    }
-
-    .sheet-ship-block .sheet-armor2
-    {
-        grid-column: 2 / 3;
-        grid-row: 12 / 13;
-    }
-
-    .sheet-ship-block .sheet-armor3
-    {
-        grid-column: 3 / 4;
-        grid-row: 12 / 13;
-    }
-
-    .sheet-ship-block .sheet-armor21
-    {
-        grid-column: 1 / 2;
-        grid-row: 13 / 14;
-    }
-
-    .sheet-ship-block .sheet-armor22
-    {
-        grid-column: 2 / 3;
-        grid-row: 13 / 14;
-    }
-
-    .sheet-ship-block .sheet-armor23
-    {
-        grid-column: 3 / 4;
-        grid-row: 13 / 14;
-    }
-    /* ship section resilience */
-    .sheet-ship-block .sheet-border-resilience
-    {
-        grid-column: 4 / 4;
-        grid-row: 12 / 14;
-        display: flex;
-        justify-content: center;
-        border: 2px solid black;
-    }
-
-    .sheet-ship-block .sheet-resilience1
-    {
-        grid-column: 4 / 5;
-        grid-row: 12 / 13;
-    }
-
-    .sheet-ship-block .sheet-resilience21
-    {
-        grid-column: 4 / 5;
-        grid-row: 13 / 14;
-    }
-    /* ship section integrity */
-    .sheet-ship-block .sheet-border-sys-integrity
-    {
-        grid-column: 5 / 7;
-        grid-row: 12 / 14;
-        display: flex;
-        justify-content: center;
-        border: 2px solid black;
-    }
-
-    .sheet-ship-block .sheet-sys-integrity1
-    {
-        grid-column: 5 / 6;
-        grid-row: 12 / 13;
-    }
-
-    .sheet-ship-block .sheet-sys-integrity2
-    {
-        grid-column: 6 / 7;
-        grid-row: 12 / 13;
-    }
-
-    .sheet-ship-block .sheet-sys-integrity21
-    {
-        grid-column: 5 / 6;
-        grid-row: 13 / 14;
-    }
-
-    .sheet-ship-block .sheet-sys-integrity22
-    {
-        grid-column: 6 / 7;
-        grid-row: 13 / 14;
-    }
-    /* ship section vital */
-    .sheet-ship-block .sheet-border-vital
-    {
-        grid-column: 7 / 8;
-        grid-row: 12 / 14;
-        display: flex;
-        justify-content: center;
-        border: 2px solid black;
-    }
-
-    .sheet-ship-block .sheet-vital1
-    {
-        grid-column: 7 / 8;
-        grid-row: 12 / 13;
-    }
-
-    .sheet-ship-block .sheet-vital21
-    {
-        grid-column: 7 / 8;
-        grid-row: 13 / 14;
-    }
-
-    .sheet-ship-block span.sheet-conditions-lbl
-    {
-        grid-column: 4 / 8;
-        grid-row: 12 / 12;
-        font-weight: bold;
-        z-index: 8;
-        padding-left: 17px;
-        padding-top: 3px;
-    }
-
-    .sheet-ship-block span.sheet-armor-lbl
-    {
-        grid-column: 1 / 4;
-        grid-row: 12 / 12;
-        padding-top: 2px;
-    }
-
-        .sheet-ship-block span.sheet-armor-lbl::before
-        {
-            font-weight: bold;
-            z-index: 8;
-            content: "Armour";
-            margin-left: 19px;
-        }
-    /*    Ship section component visuals    */
-    .sheet-ship-block .sheet-patches input[type="checkbox"]
-    {
-        transform: scale(1.5);
-        margin-left: 7px;
-    }
-
-    .sheet-ship-block .sheet-ship-su-box
-    {
-        grid-column: 6 / 8;
-        grid-row: 1 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ship-section-75su.png);
-        background-size: 45px 45px;
-        background-repeat: no-repeat;
-        background-position: bottom;
-    }
-
-    .sheet-ship-block div.sheet-ship-oct
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Octagon.png);
-        background-size: 24px 24px;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 25px;
-        width: 25px;
-    }
-
-.sheet-insec,
-.sheet-artery
-{
-    font-weight: bold;
-    font-size: 9px;
-    padding-bottom: 2px;
-    width: 18px;
-}
-
-.sheet-insec
-{
-    left: -25px;
-}
-
-.sheet-artery
-{
-    margin-left: -2px;
-    left: -23px;
-}
-
-.sheet-ship-block div.sheet-ship-armor
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/armor.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px;
-}
-
-.sheet-ship-block div.sheet-ship-vital
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/vital.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px;
-}
-
-.sheet-ship-block div.sheet-ship-resilience
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resiliance.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px;
-}
-
-.sheet-ship-block div.sheet-ship-sys-integrity
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/sys-int.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px;
-}
-
-.sheet-ship-block .sheet-border-insec
-{
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    width: 21px !important;
-    height: 21px !important;
-}
-
-.sheet-ship-block .sheet-border-artery
-{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    width: 21px !important;
-    height: 21px !important;
-}
-/*  Selection toggle functions */
-.sheet-ship-block .sheet-ship-oct input[type="checkbox"]
-{
-    opacity: 0;
-    z-index: 1;
-    height: 24px;
-    width: 24px;
-    min-width: 17px;
-    -webkit-appearance: checkbox;
-}
-
-    .sheet-ship-block .sheet-ship-oct input[type="checkbox"] + span
-    {
-        height: 20px;
-        width: 1px;
-    }
-        /* InSec & Artery Static boxes*/
-        .sheet-ship-block .sheet-ship-oct input[type="checkbox"] + span::before
-        {
-            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-            content: "■";
-            opacity: 0;
-            font-size: 53px;
-            width: 20px;
-            height: 20px;
-            position: relative;
-            left: -15px;
-            top: -35px;
-            text-align: center;
-            color: #8f8f8f;
-        }
-
-    .sheet-ship-block .sheet-ship-oct input[type="checkbox"]:checked + span::before
-    {
-        opacity: 0.5;
-    }
-
-.sheet-ship-block .sheet-ship-oct.sheet-ship-bottom input[type="checkbox"] + span::before
-{
-    font-size: 52px;
-    left: -27px;
-    top: -34px;
-}
-/* Armor & Conditions toggles */
-.sheet-ship-block .sheet-ship-armor input[type="checkbox"], .sheet-ship-block .sheet-ship-resilience input[type="checkbox"], .sheet-ship-block .sheet-ship-sys-integrity input[type="checkbox"], .sheet-ship-block .sheet-ship-vital input[type="checkbox"]
-{
-    z-index: 5;
-    opacity: 0;
-    height: 23px;
-    width: 23px !important;
-    min-width: 23px;
-    position: relative;
-    left: 13px;
-}
-
-.sheet-ship-block .sheet-ship-resilience input[type="checkbox"]
-{
-    left: 3px;
-}
-
-.sheet-ship-block .sheet-ship-sys-integrity input[type="checkbox"]
-{
-    left: 2px;
-}
-
-.sheet-ship-block .sheet-ship-vital input[type="checkbox"]
-{
-    left: 0px;
-}
-
-.sheet-ship-block .sheet-ship-default input[type="checkbox"]
-{
-    z-index: -8;
-}
-
-.sheet-ship-block .sheet-ship-armor input[type="checkbox"] + span.sheet-armor-x
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/armor2.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px !important;
-    opacity: 0;
-    z-index: 3;
-    position: relative;
-    left: -12px;
-    flex-shrink: 0;
-}
-
-.sheet-ship-block .sheet-ship-resilience input[type="checkbox"] + span.sheet-res-x
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resiliance2.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px;
-    opacity: 0;
-    z-index: 3;
-    margin-left: -24px;
-}
-
-.sheet-ship-block .sheet-ship-sys-integrity input[type="checkbox"] + span.sheet-integ-x
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/sys-int2.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px;
-    opacity: 0;
-    z-index: 3;
-    margin-left: -24px;
-}
-
-.sheet-ship-block .sheet-ship-vital input[type="checkbox"] + span.sheet-vital-x
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/vital2.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 25px;
-    width: 25px;
-    opacity: 0;
-    z-index: 3;
-    margin-left: -24px;
-}
-
-.sheet-ship-block .sheet-ship-armor input[type="checkbox"]:checked + span.sheet-armor-x, .sheet-ship-block .sheet-ship-resilience input[type="checkbox"]:checked + span.sheet-res-x, .sheet-ship-block .sheet-ship-sys-integrity input[type="checkbox"]:checked + span.sheet-integ-x, .sheet-ship-block .sheet-ship-vital input[type="checkbox"]:checked + span.sheet-vital-x
-{
-    opacity: 1;
-}
-/* Color-selected boxes  */
-.sheet-ship-oct.sheet-new
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    background: linear-gradient( rgba(0, 255, 0, 0), rgba(0, 255, 0, 0) ), url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Octagon.png);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-}
-/* Colors / Label toggles */
-/* Orange */
-.sheet-inv-color[value*="1"] + .sheet-ship-oct
-{
-    background: linear-gradient( rgba(255, 125, 0, 0.5), rgba(255, 126, 0, 0.5) ), url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Octagon.png);
-    background-size: 24px 24px;
-}
-/* Cyan */
-.sheet-inv-color[value*="2"] + .sheet-ship-oct
-{
-    background: linear-gradient( rgba(0, 183, 235, 0.5), rgba(0, 183, 235, 0.5) ), url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Octagon.png);
-    background-size: 24px 24px;
-}
-/* Yellow */
-.sheet-inv-color[value*="3"] + .sheet-ship-oct
-{
-    background: linear-gradient( rgba(255, 223, 0, 0.5), rgba(255, 223, 0, 0.5) ), url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Octagon.png);
-    background-size: 24px 24px;
-}
-/* Green */
-.sheet-inv-color[value*="4"] + .sheet-ship-oct
-{
-    background: linear-gradient( rgba(16, 115, 85, 0.5), rgba(16, 115, 85, 0.5) ), url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Octagon.png);
-    background-size: 24px 24px;
-}
-/*     sheet section label toggle     */
-.sheet-ship-oct input[type="text"]
-{
-    opacity: 0;
-    z-index: -3;
-    width: 1px;
-    height: 16px;
-    font-size: 10px;
-    text-align: center;
-}
-/* small label */
-.sheet-inv-color[value*="7"] + .sheet-ship-oct input[type="text"]
-{
-    opacity: 1;
-    z-index: 3;
-    width: 42px;
-    margin-left: 39px;
-    padding: 2px;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-/* medium label */
-.sheet-inv-color[value*="8"] + .sheet-ship-oct input[type="text"]
-{
-    opacity: 1;
-    z-index: 3;
-    width: 68px;
-    margin-left: 65px;
-    padding: 2px;
-    margin-top: 1px;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-/* small label vertical */
-.sheet-inv-color[value*="5"] + .sheet-ship-oct input[type="text"]
-{
-    opacity: 1;
-    z-index: 3;
-    width: 42px;
-    margin-left: 2px;
-    margin-bottom: -25px;
-    padding: 2px;
-    transform: rotate(-90deg);
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-/* medium label vertical*/
-.sheet-inv-color[value*="6"] + .sheet-ship-oct input[type="text"]
-{
-    opacity: 1;
-    z-index: 3;
-    width: 68px;
-    margin-left: -12px;
-    padding: 2px;
-    margin-top: 47px;
-    transform: rotate(-90deg);
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-/* label checkboxes made visible when label visible */
-.sheet-inv-color[value*="7"] + .sheet-ship-oct input[type="checkbox"]
-{
-    opacity: 0.5;
-    z-index: 3;
-    height: 24px;
-    width: 24px;
-    min-width: 17px;
-    -webkit-appearance: checkbox;
-}
-
-.sheet-inv-color[value*="8"] + .sheet-ship-oct input[type="checkbox"]
-{
-    opacity: 0.5;
-    z-index: 3;
-    height: 24px;
-    width: 24px;
-    margin-top: 1px;
-    -webkit-appearance: checkbox;
-    min-width: 17px;
-}
-
-.sheet-inv-color[value*="5"] + .sheet-ship-oct input[type="checkbox"]
-{
-    opacity: 0.5;
-    z-index: 3;
-    height: 24px;
-    width: 24px;
-    min-width: 17px;
-    margin-left: -12px;
-    -webkit-appearance: checkbox;
-}
-
-.sheet-inv-color[value*="6"] + .sheet-ship-oct input[type="checkbox"]
-{
-    opacity: 0.5;
-    z-index: 3;
-    height: 24px;
-    width: 24px;
-    margin-left: -26px;
-    -webkit-appearance: checkbox;
-    min-width: 17px;
-}
-
-.sheet-inv-color[value*="7"] + .sheet-ship-oct input[type="text"]:hover + input[type="checkbox"], .sheet-inv-color[value*="8"] + .sheet-ship-oct input[type="text"]:hover + input[type="checkbox"], .sheet-inv-color[value*="5"] + .sheet-ship-oct input[type="text"]:hover + input[type="checkbox"], .sheet-inv-color[value*="6"] + .sheet-ship-oct input[type="text"]:hover + input[type="checkbox"], .sheet-inv-color[value*="7"] + .sheet-ship-oct input[type="text"] + input[type="checkbox"]:hover, .sheet-inv-color[value*="8"] + .sheet-ship-oct input[type="text"] + input[type="checkbox"]:hover, .sheet-inv-color[value*="5"] + .sheet-ship-oct input[type="text"] + input[type="checkbox"]:hover, .sheet-inv-color[value*="6"] + .sheet-ship-oct input[type="text"] + input[type="checkbox"]:hover
-{
-    opacity: 1;
-    -webkit-appearance: checkbox;
-    min-width: 17px;
-}
-
-.sheet-inv-color + .sheet-ship-oct, .sheet-inv-color[value*="0"] + .sheet-ship-oct
-{
-    background: /* transparent/no color */
-    linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Octagon.png);
-    background-size: 24px 24px;
-}
-/* default insec & artery */
-.sheet-ship-block span.sheet-default
-{
-    z-index: 8;
-    position: relative;
-    left: -11px;
-}
-
-div.sheet-ship-default:nth-child(7) > span:nth-child(2)
-{
-    margin-left: 23px;
-}
-
-div.sheet-ship-default:nth-child(6) > span:nth-child(2)
-{
-    margin-left: 25px;
-}
-/*   Color selector menu  */
-div.sheet-colorselector
-{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    align-self: center;
-}
-
-.sheet-colorselector > select
-{
-    height: 20px;
-    width: 125px;
-}
-
-.sheet-colorselectorTitle
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-self: end;
-    font-size: 12px;
-    font-weight: 700;
-    color: white;
-    align-self: center;
-}
-/* Sheet Styles*/
-.sheet-subtitlesGrid
-{
-    font-weight: bold;
-    background-color: #ff7d00;
-    width: 98%;
-    height: 32px;
-    padding-left: 10px;
-    vertical-align: middle;
-}
-
-.sheet-subtitlesFull
-{
-    font-weight: bold;
-    background-color: #ff7d00;
-    width: 900px;
-    padding-left: 10px;
-    margin-bottom: 5px;
-}
-
-.sheet-subtitlesWide
-{
-    font-weight: bold;
-    background-color: #ff7d00;
-    width: 98%;
-    padding-left: 10px;
-    margin-bottom: 5px;
-}
-
-.sheet-subtitlesNarrow
-{
-    font-weight: bold;
-    background-color: #ff7d00;
-    width: 356px;
-    padding-left: 10px;
-    margin-left: 4px;
-    margin-bottom: 5px;
-}
 /* ***************************************** */
 /*				Ship Page Two				 */
 /* ***************************************** */
@@ -8057,7 +7069,7 @@ div.sheet-colorselector
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 320px 750px;
-    width: 900px;
+    width: 850px;
     grid-gap: 4px;
     grid-template-areas: "resources letter" "cargo letter" "cargo notes";
 }
@@ -8073,9 +7085,6 @@ div.sheet-colorselector
 
 .sheet-resource
 {
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resources.png);
-    background-size: 142px 95px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 1fr 50px;
     grid-template-rows: 15px 1fr 12px;
@@ -8139,15 +7148,12 @@ input[type="number"].sheet-resourceBox
 .sheet-letterOfMarque
 {
     grid-area: letter;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/LetterofMarque.png);
-    background-size: 440px 420px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 30px 1fr 150px;
     grid-template-rows: 24px 17px 1fr 12px 12px 15px;
     grid-gap: 0px;
     height: 412px;
-    width: 438px;
+    width: 100%;
     padding-top: 8px;
     padding-left: 2px;
     z-index: 0;
@@ -8221,19 +7227,17 @@ input[type="number"].sheet-resourceBox
     width: 95%;
     text-align: justify;
 }
+
 /*			Cargo			*/
 .sheet-cargo
 {
     grid-area: cargo;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/AssetTradeGoods.png);
-    background-size: 440px 1066px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 70% 45px 45px 1fr;
     grid-template-rows: 24px 1fr;
     grid-gap: 0px;
     height: 1066px;
-    width: 440px;
+    width: 100%;
     padding-top: 0px;
     padding-left: 4px;
     padding-right: 8px;
@@ -8294,15 +7298,12 @@ input[type="number"].sheet-resourceBox
 .sheet-notes
 {
     grid-area: notes;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/notes.png);
-    background-size: 440px 750px;
-    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 5px 1fr 15px;
     grid-template-rows: 24px 1fr;
     grid-gap: 0px;
     height: 750px;
-    width: 440px;
+    width: 100%;
     z-index: 0;
 }
 
@@ -8313,6 +7314,7 @@ input[type="number"].sheet-resourceBox
     grid-row-start: 2;
     grid-row-end: 3;
 }
+
 /* ************* */
 /* Threat Sheets */
 /* ************* */
@@ -8724,280 +7726,6 @@ input.sheet-threatDamageBox
     text-align: center;
 }
 
-input.sheet-sectionShipDamageBox
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: -2;
-    grid-row-end: -1;
-    align-self: center;
-    justify-self: center;
-    font-size: 16px;
-    width: 2.5em;
-    height: 2em;
-    z-index: 3;
-    border: none;
-    text-align: center;
-}
-
-input.sheet-sectionDamageBox
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: -2;
-    grid-row-end: -1;
-    align-self: center;
-    justify-self: center;
-    font-size: 16px;
-    width: 2.5em;
-    height: 2em;
-    z-index: 3;
-    border: none;
-    text-align: center;
-}
-/* Section Grid */
-.sheet-fourSectionShuttleGrid
-{
-    grid-column-start: 1;
-    grid-column-end: 9;
-    grid-row-start: 17;
-    grid-row-end: -1;
-    margin-top: 6px;
-    width: 780px;
-    height: 285px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 10px 1fr 1fr 5px;
-    grid-template-rows: 24px 1fr 1fr 10px;
-    justify-items: start;
-    align-items: start;
-    grid-row-gap: 4px;
-}
-
-.sheet-fourSectionGrid
-{
-    grid-column-start: 1;
-    grid-column-end: 9;
-    grid-row-start: 17;
-    grid-row-end: -1;
-    width: 880px;
-    height: 285px;
-    display: grid;
-    grid-template-columns: 5px 1fr 1fr 5px;
-    grid-template-rows: 24px 1fr 1fr 10px;
-    justify-items: start;
-    align-items: start;
-    grid-row-gap: 4px;
-    padding-left: 4px;
-}
-
-.sheet-sixSectionGrid
-{
-    grid-column-start: 1;
-    grid-column-end: 9;
-    grid-row-start: 10;
-    grid-row-end: -1;
-    width: 900px;
-    height: 420px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 5px 1fr 1fr 5px;
-    grid-template-rows: 24px 1fr 1fr 1fr 10px;
-    justify-items: start;
-    align-items: start;
-    grid-row-gap: 4px;
-}
-
-.sheet-tenSectionGrid
-{
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 9;
-    grid-row-end: -1;
-    width: 900px;
-    height: 420px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 5px 1fr 1fr 5px;
-    grid-template-rows: 32px 1fr 1fr 1fr 1fr 1fr 10px;
-    justify-items: start;
-    align-items: start;
-    grid-row-gap: 4px;
-}
-
-.sheet-sectionTitle
-{
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.sheet-sectionA
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.sheet-sectionB
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    margin-left: 10px;
-}
-
-.sheet-section1
-{
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.sheet-section2
-{
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.sheet-section3
-{
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.sheet-section4
-{
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.sheet-section5
-{
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.sheet-sectionGrid
-{
-    width: 370px;
-    height: 130px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 13px 45px 1fr;
-    grid-template-rows: 25px 1fr;
-    justify-items: start;
-    align-items: start;
-    grid-column-gap: 0px;
-}
-
-.sheet-sectionShipGrid
-{
-    width: 430px;
-    height: 130px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 60px 90px 1fr;
-    grid-template-rows: 25px 1fr;
-    justify-items: start;
-    align-items: start;
-    grid-column-gap: 0px;
-}
-
-.sheet-sectionBehemothGrid
-{
-    width: 440px;
-    height: 130px;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 18px 100px 1fr;
-    grid-template-rows: 25px 18px 1fr;
-    justify-items: start;
-    align-items: start;
-    grid-column-gap: 0px;
-}
-
-.sheet-sectionCheckbox
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.sheet-sectionName
-{
-    font-variant: small-caps;
-    font-weight: 500;
-    text-align: left;
-    font-size: 13px;
-}
-
-.sheet-sectionFacing
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.sheet-sectionTagTitle
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-self: end;
-    text-align: end;
-    font-size: 12px;
-}
-
-.sheet-sectionTagBoxLocation
-{
-    grid-column-start: 3;
-    grid-column-end: -1;
-    grid-row-start: 2;
-    grid-row-end: -1;
-    justify-self: stretch;
-}
-
-.sheet-sectionBehemothDescriptionTitle
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-self: end;
-    text-align: end;
-    font-size: 12px;
-}
-
-.sheet-sectionBehemothDescription
-{
-    grid-column-start: 3;
-    grid-column-end: -1;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-self: stretch;
-}
-
-.sheet-sectionBehemothTagTitle
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    justify-self: end;
-    text-align: end;
-    font-size: 12px;
-}
-
-.sheet-sectionBehemothTagBox
-{
-    grid-column-start: 3;
-    grid-column-end: -1;
-    grid-row-start: 3;
-    grid-row-end: -1;
-    justify-self: stretch;
-}
 /* Threat Armour & Conditions */
 .sheet-sophontConditionWidget
 {
@@ -9067,52 +7795,7 @@ input.sheet-sectionDamageBox
     justify-self: end;
 }
 
-.sheet-shuttleSquadronConditionWidget
-{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 17;
-    width: 150px;
-    height: 300px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 18px auto 25px;
-    grid-template-rows: 20px repeat(11,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
 
-.sheet-additionalCompositeSophontConditionWidget
-{
-    grid-row-start: 2;
-    grid-row-end: 14;
-    width: 25px;
-    height: 250px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 25px;
-    grid-template-rows: 20px repeat(9,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.sheet-additionalSwarmConditionWidget
-{
-    grid-row-start: 2;
-    grid-row-end: 14;
-    width: 25px;
-    height: 250px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 25px;
-    grid-template-rows: 20px repeat(11,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
 
 .sheet-additionalCreatureConditionWidget
 {
@@ -9127,147 +7810,6 @@ input.sheet-sectionDamageBox
     justify-items: start;
     align-items: start;
     justify-self: end;
-}
-
-.sheet-additionalshuttleSquadronConditionWidget
-{
-    grid-row-start: 1;
-    grid-row-end: 14;
-    width: 25px;
-    height: 275px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 25px;
-    grid-template-rows: 20px repeat(11,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.sheet-sectionConditionWidget
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    width: 270px;
-    height: 25px;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-template-columns: repeat(6,10px 25px) 25px 25px 1fr;
-    grid-template-rows: 25px;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.sheet-sectionShipConditionWidget
-{
-    grid-column-start: -2;
-    grid-column-end: -1;
-    width: 270px;
-    height: 25px;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-template-columns: repeat(5,10px 25px) 25px 25px 25px 25px 1fr;
-    grid-template-rows: 25px;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.sheet-sectionbehemothConditionWidget
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    width: 270px;
-    height: 25px;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-template-columns: repeat(6,10px 25px) 25px 25px 1fr;
-    grid-template-rows: 25px;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.sheet-capitalShipConditionWidget
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    width: 285px;
-    height: 25px;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-template-columns: repeat(3,10px 25px) repeat(7, 25px) 1fr;
-    grid-template-rows: 25px;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.sheet-additionalSwarmCondition0
-{
-    grid-column-start: 5;
-    grid-column-end: 6;
-}
-
-.sheet-additionalSwarmCondition1
-{
-    grid-column-start: 6;
-    grid-column-end: 7;
-}
-
-.sheet-additionalCompositeSophontCondition2
-{
-    grid-column-start: 7;
-    grid-column-end: 8;
-}
-
-.sheet-additionalCompositeSophontCondition3
-{
-    grid-column-start: 8;
-    grid-column-end: 9;
-}
-
-.sheet-additionalCompositeSophontCondition4
-{
-    grid-column-start: 9;
-    grid-column-end: 10;
-}
-
-.sheet-additionalCompositeSophontCondition5
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-}
-
-.sheet-additionalSwarmCondition6
-{
-    grid-column-start: 11;
-    grid-column-end: 12;
-}
-
-.sheet-additionalSwarmCondition7
-{
-    grid-column-start: 12;
-    grid-column-end: 13;
-}
-
-.sheet-additionalSwarmCondition8
-{
-    grid-column-start: 13;
-    grid-column-end: 14;
-}
-
-.sheet-additionalSwarmCondition9
-{
-    grid-column-start: 14;
-    grid-column-end: 15;
-}
-
-.sheet-additionalSwarmCondition10
-{
-    grid-column-start: 14;
-    grid-column-end: 15;
 }
 
 .sheet-sophontConditionTitle
@@ -9397,94 +7939,4 @@ input[type=number].sheet-sophontConditionNumber
 {
     grid-row-start: 12;
     grid-row-end: 13;
-}
-
-.sheet-sectionConditions
-{
-    grid-row-start: 1;
-    grid-row-end: -1;
-}
-
-.sheet-sectionCondition1
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-.sheet-sectionCondition2
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.sheet-sectionCondition3
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-
-.sheet-sectionCondition4
-{
-    grid-column-start: 4;
-    grid-column-end: 5;
-}
-
-.sheet-sectionCondition5
-{
-    grid-column-start: 5;
-    grid-column-end: 6;
-}
-
-.sheet-sectionCondition6
-{
-    grid-column-start: 6;
-    grid-column-end: 7;
-}
-
-.sheet-sectionCondition7
-{
-    grid-column-start: 7;
-    grid-column-end: 8;
-}
-
-.sheet-sectionCondition8
-{
-    grid-column-start: 8;
-    grid-column-end: 9;
-}
-
-.sheet-sectionCondition9
-{
-    grid-column-start: 9;
-    grid-column-end: 10;
-}
-
-.sheet-sectionCondition10
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-}
-
-.sheet-sectionCondition11
-{
-    grid-column-start: 11;
-    grid-column-end: 12;
-}
-
-.sheet-sectionCondition12
-{
-    grid-column-start: 12;
-    grid-column-end: 13;
-}
-
-.sheet-sectionCondition13
-{
-    grid-column-start: 13;
-    grid-column-end: 14;
-}
-
-.sheet-sectionCondition14
-{
-    grid-column-start: 14;
-    grid-column-end: 15;
 }
