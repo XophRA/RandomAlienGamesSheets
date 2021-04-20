@@ -268,6 +268,9 @@ textarea
 .sheet-mediumSheetGrid
 {
     grid-area: sheet;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img00/MediumSheet.png);
+    background-size: 850px 2362px;
+    background-repeat: no-repeat;
     width: 100%;
     display: grid;
     grid-row-gap: 6px;
@@ -3917,11 +3920,6 @@ span.sheet-shipLauncherTorpedo
 .sheet-magicCircle
 {
     grid-area: magicCircle;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img00/MagicCircle.png);
-    background-size: 698px 806px;
-    background-repeat: no-repeat;
-    width: 520px;
-    height: 600px;
 }
 
 .sheet-ripples
