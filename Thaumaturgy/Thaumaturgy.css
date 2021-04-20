@@ -239,9 +239,12 @@ textarea
     grid-template-areas: "header" "sheet";
 }
 
-.sheet-crewmemberSheetGrid
+.sheet-playerCasterSheetGrid
 {
     grid-area: sheet;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img00/PlayerCasterSheet.png);
+    background-size: 850px 2362px;
+    background-repeat: no-repeat;
     width: 100%;
     display: grid;
     grid-row-gap: 6px;
