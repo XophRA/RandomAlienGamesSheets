@@ -242,7 +242,7 @@ textarea
 .sheet-playerCasterSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img00/PlayerCasterSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img01/PlayerCasterSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -271,15 +271,14 @@ textarea
 .sheet-mediumSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img00/MediumSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img01/MediumSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
-    grid-row-gap: 6px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas: "spellcastingProcess magicCircle magicCircle" "ripples resources disequilibrium";
+    grid-row-gap: 0px;
+    grid-template-columns: 151px 1fr 300px;
+    grid-template-rows: 17px 703px repeat(3,500px) 1fr;
     justify-items: start;
     align-items: start;
 }
@@ -3906,38 +3905,41 @@ span.sheet-shipLauncherTorpedo
 /* ************ */
 .sheet-spellcastingProcess
 {
-    grid-area: spellcastingProcess;
+    grid-area: 1 / 1 / 2 / span 3;
 }
     .sheet-spellcastingProcess > ol
     {
         list-style: lower-roman;
+        list-style-position: inside;
         font-weight: 600;
+        font-size: 13px;
     }
         .sheet-spellcastingProcess > ol > li > ol
         {
             list-style: none;
             text-indent: 1em;
             font-weight: 400;
+            font-size: 12px;
         }
 
 .sheet-magicCircle
 {
-    grid-area: magicCircle;
+    grid-area: 2 / 2 / span 2 / span 2;
 }
 
 .sheet-ripples
 {
-    grid-area: ripples;
+    grid-area: 3 / -2 / 4 / -1;
 }
 
 .sheet-resources
 {
-    grid-area: resources;
+    grid-area: 3 / 2 / 4 / -2;
 }
 
 .sheet-disequilibrium
 {
-    grid-area: disequilibrium;
+    /*grid-area: disequilibrium;*/
 }
 
 /* ******************************* */
