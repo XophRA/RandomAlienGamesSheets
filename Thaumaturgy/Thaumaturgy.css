@@ -61,7 +61,6 @@ body
 h1, h2, h3, h4, th
 {
     text-align: left;
-    font-variant: small-caps;
     font-weight: 500;
 }
 
@@ -72,7 +71,6 @@ h1
 
 h2
 {
-    background-color: #d87d29;
     font-size: 1.75em;
 }
 
@@ -278,7 +276,7 @@ textarea
     display: grid;
     grid-row-gap: 0px;
     grid-template-columns: 151px 1fr 300px;
-    grid-template-rows: 17px 703px repeat(3,500px) 1fr;
+    grid-template-rows: 17px 703px 385px 490px 50px;
     justify-items: start;
     align-items: start;
 }
@@ -3919,7 +3917,7 @@ span.sheet-shipLauncherTorpedo
             list-style: none;
             text-indent: 1em;
             font-weight: 400;
-            font-size: 12px;
+            font-size: 11px;
         }
 
 .sheet-magicCircle
@@ -3930,7 +3928,80 @@ span.sheet-shipLauncherTorpedo
 .sheet-ripples
 {
     grid-area: 3 / -2 / 4 / -1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 2px;
+    grid-template-columns: 4fr repeat(2,1fr) 16px;
+    grid-template-rows: 2fr repeat(13,1fr) 15px;
 }
+    .sheet-ripples ~ input[type="number"].sheet-rippleBox
+    {
+        height: 100%;
+        width: 100%;
+        font-size: 18px;
+        border: none;
+    }
+    .sheet-ripples > .sheet-rippleHarmony
+    {
+        grid-column: 2 / 3;
+    }
+    .sheet-ripples > .sheet-rippleChaos
+    {
+        grid-column: 3 / 4;
+    }
+    .sheet-ripples > .sheet-ripple1
+    {
+        grid-row: 2 / 3;
+    }
+    .sheet-ripples > .sheet-ripple2
+    {
+        grid-row: 3 / 4;
+    }
+    .sheet-ripples > .sheet-ripple3
+    {
+        grid-row: 4 / 5;
+    }
+    .sheet-ripples > .sheet-ripple4
+    {
+        grid-row: 5 / 6;
+    }
+    .sheet-ripples > .sheet-ripple5
+    {
+        grid-row: 6 / 7;
+    }
+    .sheet-ripples > .sheet-ripple6
+    {
+        grid-row: 7 / 8;
+    }
+    .sheet-ripples > .sheet-ripple7
+    {
+        grid-row: 8 / 9;
+    }
+    .sheet-ripples > .sheet-ripple8
+    {
+        grid-row: 9 / 10;
+    }
+    .sheet-ripples > .sheet-ripple9
+    {
+        grid-row: 10 / 11;
+    }
+    .sheet-ripples > .sheet-ripple10
+    {
+        grid-row: 11 / 12;
+    }
+    .sheet-ripples > .sheet-ripple11
+    {
+        grid-row: 12 / 13;
+    }
+    .sheet-ripples > .sheet-ripple12
+    {
+        grid-row: 13 / 14;
+    }
+    .sheet-ripples > .sheet-ripple13
+    {
+        grid-row: 14 / 15;
+    }
 
 .sheet-resources
 {
