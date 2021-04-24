@@ -239,7 +239,7 @@ textarea
 .sheet-playerCasterSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img01/PlayerCasterSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img02/PlayerCasterSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -268,7 +268,7 @@ textarea
 .sheet-mediumSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img01/MediumSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img02/MediumSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
