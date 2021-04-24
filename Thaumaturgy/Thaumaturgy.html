@@ -3578,36 +3578,13 @@
 
             <!--Resources-->
             <div class="resources">
-
-                <div class="resource">
-                    <div class="resourceTitle">Result</div>
-                    <div class="resourceBoxPlace"><input type="number" name="attr_complexMaterials" min="0" class="resourceBox" /></div>
-                    <div class="resourceTonnes">tonnes</div>
-                </div>
-                <div class="resource">
-                    <div class="resourceTitle">Aether</div>
-                    <div class="resourceBoxPlace"><input type="number" name="attr_supply" min="0" value="0" class="resourceBox" /></div>
-                    <div class="resourceTonnes">tonnes</div>
-                </div>
-                <div class="resource">
-                    <div class="resourceTitle">Paradox</div>
-
-                    <div class="resourceBoxPlace"><input type="hidden" name="attr_totalResourceOverload" value="0" class="colorChanger" /><input type="number" name="attr_totalResource" min="0" class="resourceBox" readonly /></div>
-                    <div class="resourceTonnes">tonnes</div>
-                </div>
+                <div class="resultResource"><input type="number" name="attr_resultResource" min="0" value="0" class="resourceBox" /></div>
+                <div class="paradoxResource"><input type="number" name="attr_paradoxResource" min="0" value="0" class="resourceBox" /></div>
+                <div class="aetherResource"><input type="number" name="attr_aetherResource" min="0" value="0" class="resourceBox" /></div>
             </div>
             <!--Disequilibrium-->
             <div class="disequilibrium">
-                <div class="cargoTitle">Assets & Trade Goods</div>
-                <div class="cargoWorth">Worth</div>
-                <div class="cargoTonnage">Tonnage</div>
-                <div class="cargoBox">
-                    <fieldset class="repeating_shipCargo" name="repeating_shipCargo">
-                        <input type="text" name="attr_shipCargo" class="fourFifths" />
-                        <input type="number" min="0" name="attr_shipCargoRV" />
-                        <input type="number" min="0" name="attr_shipCargoTonnage" />
-                    </fieldset>
-                </div>
+
             </div>
 
 
