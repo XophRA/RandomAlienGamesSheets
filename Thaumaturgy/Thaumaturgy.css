@@ -226,6 +226,51 @@ textarea
         width: 95%;
     }
 
+/* Sheet header */
+div.sheet-header
+{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 32px 1fr;
+    grid-template-areas: "title . " "title selector" "title version";
+    width: 100%;
+    height: 100px;
+}
+
+div.sheet-title
+{
+    grid-area: title;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/title.png);
+    background-size: 400px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 100px;
+    align-self: center;
+}
+
+.sheet-selectorBar
+{
+    grid-area: selector;
+    justify-self: stretch;
+}
+
+select.sheet-typeSelector
+{
+    width: 235px;
+    font-variant: small-caps;
+    border: none;
+}
+
+.sheet-version
+{
+    grid-area: version;
+    justify-self: end;
+    font-variant: small-caps;
+    font-size: 11px;
+}
+
 /* Master Grids */
 .sheet-masterGrid
 {
@@ -342,54 +387,7 @@ textarea
 }
 
 
-/*     Sheet header layout    */
-div.sheet-header
-{
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 32px 1fr;
-    grid-template-areas: "title . " "title selector" "title version";
-    width: 100%;
-    height: 100px;
-}
-
-div.sheet-title
-{
-    grid-area: title;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/title.png);
-    background-size: 400px 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 400px;
-    height: 100px;
-    align-self: center;
-}
-
-.sheet-selectorBar
-{
-    grid-area: selector;
-    justify-self: stretch;
-}
-
-select.sheet-typeSelector
-{
-    width: 235px;
-    font-variant: small-caps;
-    border: none;
-}
-
-.sheet-version
-{
-    grid-area: version;
-    justify-self: end;
-    font-variant: small-caps;
-    font-size: 11px;
-}
-
-/* ************* */
 /* Roll Template */
-/* ************* */
 .sheet-rolltemplate-FS,
 .sheet-rolltemplate-FSShip
 {
@@ -743,9 +741,8 @@ select.sheet-typeSelector
                 padding: 0;
             }
 
-/* ************ */
+
 /* Salvo Mode  */
-/* *********** */
 
 /*Salvo Mode Button*/
 .sheet-salvoRollButton
@@ -770,8 +767,6 @@ span.sheet-salvoMode
     z-index: 18;
     vertical-align: central;
 }
-
-
 
 /* Open Salvo Mode Button*/
 input.sheet-salvoRollButton + span.sheet-salvoRollButton
