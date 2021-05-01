@@ -3931,7 +3931,6 @@ span.sheet-shipLauncherTorpedo
     grid-template-rows: 227px 120px auto;
     grid-gap: 0px;
 }
-
     .sheet-aetherWidget > .sheet-aetherTracker
     {
         grid-area: 2 / 1 / 3 / 2;
@@ -3939,6 +3938,7 @@ span.sheet-shipLauncherTorpedo
         height: 100%;
         padding-left: 25%;
     }
+
 /* Intentions */
 .sheet-intentionWidget
 {
@@ -3946,13 +3946,66 @@ span.sheet-shipLauncherTorpedo
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 350px auto;
-    grid-template-rows: auto repeat(6,1fr) auto;
+    grid-template-columns: 350px 16px auto;
+    grid-template-rows: 37px repeat(10,20px) auto;
+    grid-row-gap: 4px;
 }
-    .sheet-intentionWidget
-    {
 
-    }
+.sheet-conduitBox
+{
+    grid-column: 2 / 3;
+}
+
+.sheet-conjureBox
+{
+    grid-row: 2 / 3;
+}
+
+.sheet-decayBox
+{
+    grid-row: 3 / 4;
+}
+
+.sheet-dispelBox
+{
+    grid-row: 4 / 5;
+}
+
+.sheet-enchantBox
+{
+    grid-row: 5 / 6;
+}
+
+.sheet-manipulateBox
+{
+    grid-row: 6 / 7;
+}
+
+.sheet-sacrificeBox
+{
+    grid-row: 7 / 8;
+}
+
+.sheet-scryBox
+{
+    grid-row: 8 / 9;
+}
+
+.sheet-summonBox
+{
+    grid-row: 9 / 10;
+}
+
+.sheet-transmuteBox
+{
+    grid-row: 10 / 11;
+}
+
+.sheet-wardBox
+{
+    grid-row: 11 / 12;
+}
+
 /* Arts */
 .sheet-artsWidget
 {
@@ -4362,6 +4415,19 @@ input[type="checkbox"].sheet-mediumCheckbox, input[type="radio"].sheet-mediumChe
     font-size: 18px;
     vertical-align: middle;
 }
+
+input[type="checkbox"].sheet-maxCheckbox,
+input[type="radio"].sheet-maxCheckbox,
+span.sheet-maxCheckbox
+{
+    width: 98%;
+    height: 98%;
+    background-size: 98% 98%;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
 /*  Image Location  */
 span.sheet-largePips
 {
@@ -4376,6 +4442,14 @@ span.sheet-mediumPips
     background-size: 18px 18px;
     height: 19px;
     width: 19px;
+    vertical-align: middle;
+}
+
+span.sheet-mediumChecks
+{
+    background-size: 19px 16px;
+    height: 19px;
+    width: 16px;
     vertical-align: middle;
 }
 
@@ -4462,6 +4536,24 @@ input[type="checkbox"] + span.sheet-overcharge
 input[type="checkbox"]:checked + span.sheet-overcharge
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/overcharge.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    z-index: 2;
+}
+
+input[type="checkbox"] + span.sheet-conduit
+{
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPips.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    z-index: 2;
+}
+
+input[type="checkbox"]:checked + span.sheet-conduit
+{
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPipsFilled.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
