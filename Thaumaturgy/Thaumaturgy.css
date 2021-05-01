@@ -4140,6 +4140,16 @@ span.sheet-shipLauncherTorpedo
         grid-column: 7 / 8;
     }
 
+/* Ascension */
+.sheet-ascensionWidget
+{
+    grid-area: 4 / 1 / span 2 / 2;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 15px repeat(16, 1fr) 15px;
+    grid-template-rows: 42px repeat(16, 1fr) 78px;
+}
 
 /* ******************************* */
 /*           Graphics              */
