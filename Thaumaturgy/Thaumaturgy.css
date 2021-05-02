@@ -284,7 +284,7 @@ select.sheet-typeSelector
 .sheet-playerCasterSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img03/PlayerCasterSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/PlayerCasterSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -312,7 +312,7 @@ select.sheet-typeSelector
 .sheet-mediumSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img03/MediumSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/MediumSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -3836,10 +3836,45 @@ span.sheet-shipLauncherTorpedo
         font-size: 30px;
     }
 
-.sheet-disequilibrium
+.sheet-disequilibriumWidget
 {
-    /*grid-area: disequilibrium;*/
+    grid-area: 4 / 1 / 5 / -1;
 }
+
+/* Table Spread */
+.sheet-tableSpread
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 20px 125px 125px 100px 125px 125px auto;
+    grid-template-rows: 46px 77px 175px 175px auto;
+}
+    .sheet-tableSpread > .sheet-leftLeg
+    {
+        grid-area: 3 / 2 / span 2 / span 2;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+    }
+    .sheet-tableSpread > .sheet-rightLeg
+    {
+        grid-area: 3 / 5 / span 2 / span 2;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+    }
+    .sheet-tableSpread > .sheet-tabletop
+    {
+        grid-area: 2 / 3 / span 2 / span 3;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+
 
 /* ******************* */
 /* Player Caster Sheet */
@@ -4148,7 +4183,14 @@ span.sheet-shipLauncherTorpedo
     width: 100%;
     height: 100%;
     grid-template-columns: 15px repeat(16, 1fr) 15px;
-    grid-template-rows: 42px repeat(16, 1fr) 78px;
+    grid-template-rows: 42px 15px repeat(16, 1fr) 78px;
+}
+
+
+/* Fate */
+.sheet-fateWidget
+{
+    grid-area: 6 / 1 / 7 / -1;
 }
 
 /* ******************************* */
