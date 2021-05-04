@@ -3854,27 +3854,32 @@ span.sheet-shipLauncherTorpedo
     {
         grid-area: 3 / 2 / span 2 / span 2;
         display: grid;
-        width: 100%;
-        height: 100%;
         z-index: 4;
     }
     .sheet-tableSpread > .sheet-rightLeg
     {
         grid-area: 3 / 5 / span 2 / span 2;
         display: grid;
-        width: 100%;
-        height: 100%;
         z-index: 4;
     }
     .sheet-tableSpread > .sheet-tabletop
     {
         grid-area: 2 / 3 / span 2 / span 3;
         display: grid;
-        width: 100%;
-        height: 100%;
         z-index: 5;
     }
 
+/* Cards */
+.sheet-portraitCard
+{
+    width: 250px;
+    height: 350px;
+}
+.sheet-landscapeCard
+{
+    width: 350px;
+    height: 250px;
+}
 
 /* ******************* */
 /* Player Caster Sheet */
@@ -4513,6 +4518,23 @@ span.sheet-smallPips
     vertical-align: middle;
 }
 /* Graphics */
+
+/* Arcana Cards */
+input[type="radio"] + span.sheet-arcanaWizard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_0.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+/* Dice */
 input[type="radio"] + span.sheet-ZeroDie
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D10ZeroPip.png);
