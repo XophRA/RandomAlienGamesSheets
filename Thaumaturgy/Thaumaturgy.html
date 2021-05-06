@@ -509,27 +509,28 @@
             </div>
             <!--Fate-->
             <div class="fateWidget tableSpread">
-                <div class="leftLeg portraitCard">
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="0" checked /><span class="arcanaWizard"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="1" checked /><span class="arcanaFolk"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="2" checked /><span class="arcanaApprentice"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="3" checked /><span class="arcanaWilds"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="4" checked /><span class="arcanaPassions"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="5" checked /><span class="arcanaCoin"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="6" checked /><span class="arcanaJudge"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="7" checked /><span class="arcanaCrown"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="8" checked /><span class="arcanaMaster"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="9" checked /><span class="arcanaRival"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="10" checked /><span class="arcanaDivine"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="11" checked /><span class="arcanaDTrickster"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="12" checked /><span class="arcanaDestroyer"></span>
-                    <input type="radio" class="hideCheckbox" name="attr_Consequences" value="13" checked /><span class="arcanaForgotten"></span>
+                <div class="edit">
+                    <input type="number" class="leftLegChoice" name="attr_Consequences" min="0" max="13" value="0" />
+                    <input type="checkbox" class="facingChoice" name="attr_ConsequencesFacing" value="1"/>
+                    <input type="number" class="rightLegChoice" name="attr_Destiny" min="0" max="13" value="0" />
+                    <input type="checkbox" class="facingChoice" name="attr_DestinyFacing" value="1"/>
+                    <input type="number" class="tabletopChoice" name="attr_Obstacle" min="0" max="13" value="0" />
+                    <input type="checkbox" class="facingChoice" name="attr_ObstacleFacing" value="1"/>
                 </div>
-                <div class="rightLeg portraitCard">
-
+                <div class="leftLeg">
+                    <input type="hidden" class="facingChoice" name="attr_ConsequencesFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Consequences" />
+                    <span class="card"></span>
                 </div>
-                <div class="tabletop landscapeCard">
-                    <input type="radio" class="hideCheckbox" name="attr_Obstacle" value="0" checked /><span class="arcanaCard"></span>
+                <div class="rightLeg">
+                    <input type="hidden" class="facingChoice" name="attr_DestinyFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Destiny" />
+                    <span class="card"></span>
+                </div>
+                <div class="tabletop">
+                    <input type="hidden" class="facingChoice" name="attr_ObstacleFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Obstacle" />
+                    <span class="card landscapeCard"></span>
                 </div>
             </div>
         </div>
@@ -2450,14 +2451,28 @@
             </div>
             <!--Disequilibrium-->
             <div class="disequilibriumWidget tableSpread">
-                <div class="leftLeg portraitCard">
-
+                <div class="edit">
+                    <input type="number" class="leftLegChoice" name="attr_Disruption" min="0" max="13" value="0" />
+                    <input type="checkbox" class="facingChoice" name="attr_DisruptionFacing" value="1" />
+                    <input type="number" class="rightLegChoice" name="attr_Danger" min="0" max="13" value="0" />
+                    <input type="checkbox" class="facingChoice" name="attr_DangerFacing" value="1" />
+                    <input type="number" class="tabletopChoice" name="attr_Divergence" min="0" max="13" value="0" />
+                    <input type="checkbox" class="facingChoice" name="attr_DivergenceFacing" value="1" />
                 </div>
-                <div class="rightLeg portraitCard">
-
+                <div class="leftLeg">
+                    <input type="hidden" class="facingChoice" name="attr_DisruptionFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Disruption" />
+                    <span class="card"></span>
                 </div>
-                <div class="tabletop landscapeCard">
-
+                <div class="rightLeg">
+                    <input type="hidden" class="facingChoice" name="attr_DangerFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Danger" />
+                    <span class="card"></span>
+                </div>
+                <div class="tabletop">
+                    <input type="hidden" class="facingChoice" name="attr_DivergenceFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Divergence" />
+                    <span class="card landscapeCard"></span>
                 </div>
             </div>
 
