@@ -3868,23 +3868,9 @@ span.sheet-shipLauncherTorpedo
         display: grid;
         z-index: 5;
     }
-    .sheet-tableSpread > input.sheet-leftLegChoice
+    .sheet-tableSpread > .sheet-edit
     {
-        grid-area: 4 / 2 / 5 / 3;
-        width: 25px;
-        height: 25px;
-        z-index: 7;
-    }
-    .sheet-tableSpread > input.sheet-rightLegChoice
-    {
-        grid-area: 4 / 8 / 5 / 9;
-        width: 25px;
-        height: 25px;
-        z-index: 7;
-    }
-    .sheet-tableSpread > input.sheet-tabletopChoice
-    {
-        grid-area: 2 / 4 / 3 / 5;
+        grid-area: 1 / 6 / 2 / 7;
         width: 25px;
         height: 25px;
         z-index: 7;
@@ -3911,7 +3897,7 @@ span.sheet-shipLauncherTorpedo
 
 input.sheet-facingChoice[value="1"] + input.sheet-cardChoice + span.sheet-card
 {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 
 
