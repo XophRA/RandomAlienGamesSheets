@@ -284,7 +284,7 @@ select.sheet-typeSelector
 .sheet-playerCasterSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/PlayerCasterSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/PlayerCasterSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -312,7 +312,7 @@ select.sheet-typeSelector
 .sheet-mediumSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/MediumSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/MediumSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -3918,115 +3918,115 @@ input.sheet-facingChoice[value="1"] + input.sheet-cardChoice + span.sheet-card
 /* Arcana Card Background Image*/
 input[value="0"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_0.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_0.png);
 }
 input[value="0"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_0.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_0.png);
 }
 input[value="1"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_1.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_1.png);
 }
 input[value="1"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_1.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_1.png);
 }
 input[value="2"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_2.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_2.png);
 }
 input[value="2"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_2.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_2.png);
 }
 input[value="3"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_3.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_3.png);
 }
 input[value="3"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_3.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_3.png);
 }
 input[value="4"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_4.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_4.png);
 }
 input[value="4"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_4.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_4.png);
 }
 input[value="5"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_5.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_5.png);
 }
 input[value="5"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_5.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_5.png);
 }
 input[value="6"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_6.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_6.png);
 }
 input[value="6"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_6.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_6.png);
 }
 input[value="7"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_7.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_7.png);
 }
 input[value="7"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_7.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_7.png);
 }
 input[value="8"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_8.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_8.png);
 }
 input[value="8"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_8.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_8.png);
 }
 input[value="9"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_9.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_9.png);
 }
 input[value="9"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_9.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_9.png);
 }
 input[value="10"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_10.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_10.png);
 }
 input[value="10"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_10.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_10.png);
 }
 input[value="11"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_11.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_11.png);
 }
 input[value="11"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_11.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_11.png);
 }
 input[value="12"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_12.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_12.png);
 }
 input[value="12"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_12.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_12.png);
 }
 input[value="13"].sheet-cardChoice + span.sheet-card
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaCard_13.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_13.png);
 }
 input[value="13"].sheet-cardChoice + span.sheet-landscapeCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img04/arcanaLandscapeCard_13.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaLandscapeCard_13.png);
 }
 
 /* ******************* */
