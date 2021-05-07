@@ -509,15 +509,24 @@
             </div>
             <!--Fate-->
             <div class="fateWidget tableSpread">
-                <input type="checkbox" class="editCog hideCheckbox" name="attr_EditFate" value="1"/><span class="editCog"></span>
+                <input type="checkbox" class="editCog" name="attr_EditFate" value="1"/><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditFate"/>
                 <div class="editMenu editTableSpread">
-                    <input type="number" class="leftLegChoice" name="attr_Consequences" min="0" max="13" value="0" />
-                    <input type="checkbox" class="facingChoice" name="attr_ConsequencesFacing" value="1"/>
-                    <input type="number" class="rightLegChoice" name="attr_Destiny" min="0" max="13" value="0" />
-                    <input type="checkbox" class="facingChoice" name="attr_DestinyFacing" value="1"/>
-                    <input type="number" class="tabletopChoice" name="attr_Obstacle" min="0" max="13" value="0" />
-                    <input type="checkbox" class="facingChoice" name="attr_ObstacleFacing" value="1"/>
+                    <div>
+                        <h2>Consequences</h2>
+                        <input type="number" class="leftLegChoice" name="attr_Consequences" min="0" max="13" value="0" />
+                        <input type="checkbox" class="facingChoice" name="attr_ConsequencesFacing" value="1" />
+                    </div>
+                    <div>
+                        <h2>Destiny</h2>
+                        <input type="number" class="rightLegChoice" name="attr_Destiny" min="0" max="13" value="0" />
+                        <input type="checkbox" class="facingChoice" name="attr_DestinyFacing" value="1" />
+                    </div>
+                    <div>
+                        <h2>Obstacle</h2>
+                        <input type="number" class="tabletopChoice" name="attr_Obstacle" min="0" max="13" value="0" />
+                        <input type="checkbox" class="facingChoice" name="attr_ObstacleFacing" value="1" />
+                    </div>
                 </div>
                 <div class="leftLeg">
                     <input type="hidden" class="facingChoice" name="attr_ConsequencesFacing" />
@@ -2453,15 +2462,24 @@
             </div>
             <!--Disequilibrium-->
             <div class="disequilibriumWidget tableSpread">
-                <input type="checkbox" class="editCog hideCheckbox" name="attr_EditDisequilbrium" value="1" /><span class="editCog"></span>
+                <input type="checkbox" class="editCog" name="attr_EditDisequilbrium" value="1" /><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditDisequilbrium" />
                 <div class="editMenu editTableSpread">
-                    <input type="number" class="leftLegChoice" name="attr_Disruption" min="0" max="13" value="0" />
-                    <input type="checkbox" class="facingChoice" name="attr_DisruptionFacing" value="1" />
-                    <input type="number" class="rightLegChoice" name="attr_Danger" min="0" max="13" value="0" />
-                    <input type="checkbox" class="facingChoice" name="attr_DangerFacing" value="1" />
-                    <input type="number" class="tabletopChoice" name="attr_Divergence" min="0" max="13" value="0" />
-                    <input type="checkbox" class="facingChoice" name="attr_DivergenceFacing" value="1" />
+                    <div>
+                        <h2>Disruption</h2>
+                        <input type="number" class="leftLegChoice" name="attr_Disruption" min="0" max="13" value="0" />
+                        <input type="checkbox" class="facingChoice" name="attr_DisruptionFacing" value="1" />
+                    </div>
+                    <div>
+                        <h2>Danger</h2>
+                        <input type="number" class="rightLegChoice" name="attr_Danger" min="0" max="13" value="0" />
+                        <input type="checkbox" class="facingChoice" name="attr_DangerFacing" value="1" />
+                    </div>
+                    <div>
+                        <h2>Divergence</h2>
+                        <input type="number" class="tabletopChoice" name="attr_Divergence" min="0" max="13" value="0" />
+                        <input type="checkbox" class="facingChoice" name="attr_DivergenceFacing" value="1" />
+                    </div>
                 </div>
                 <div class="leftLeg">
                     <input type="hidden" class="facingChoice" name="attr_DisruptionFacing" />

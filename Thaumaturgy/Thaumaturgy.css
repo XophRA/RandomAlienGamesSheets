@@ -3872,10 +3872,12 @@ span.sheet-shipLauncherTorpedo
     }
     .sheet-tableSpread > .sheet-editTableSpread
     {
-        grid-area: 1 / -1 / 1 / -1;
-        width: 25px;
-        height: 25px;
-        z-index: 7;
+        grid-area: 2 / 2 / -2 / -2;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(5,1fr);
     }
 
 /* Edit Cards */
@@ -3884,7 +3886,15 @@ span.sheet-shipLauncherTorpedo
     grid-area: 1 / 7 / 2 / 8;
     width: 25px;
     height: 25px;
+    
 }
+input.sheet-editCog
+{
+    opacity: 0;
+    cursor: pointer;
+    z-index: 13;
+}
+
 span.sheet-editCog
 {
     background-repeat: no-repeat;
@@ -3892,6 +3902,7 @@ span.sheet-editCog
     opacity: 1;
     background-size: 24px 24px;
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/editCog.png);
+    z-index: 12;
 }
 
 input.sheet-editToggle[value="0"] + .sheet-editMenu
@@ -3900,7 +3911,10 @@ input.sheet-editToggle[value="0"] + .sheet-editMenu
 }
 input.sheet-editToggle[value="1"] + .sheet-editMenu
 {
-    display: initial;
+    display: grid;
+    background-size: 100%;
+    background: rgba(255,255,255,0.8) no-repeat fixed top;
+    z-index: 10;
 }
 
 /* Cards */
