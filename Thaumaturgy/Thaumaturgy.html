@@ -509,7 +509,9 @@
             </div>
             <!--Fate-->
             <div class="fateWidget tableSpread">
-                <div class="edit">
+                <input type="checkbox" class="editCog hideCheckbox" name="attr_EditFate" value="1"/><span class="editCog"></span>
+                <input type="hidden" class="editToggle" name="attr_EditFate"/>
+                <div class="editMenu editTableSpread">
                     <input type="number" class="leftLegChoice" name="attr_Consequences" min="0" max="13" value="0" />
                     <input type="checkbox" class="facingChoice" name="attr_ConsequencesFacing" value="1"/>
                     <input type="number" class="rightLegChoice" name="attr_Destiny" min="0" max="13" value="0" />
@@ -2451,7 +2453,9 @@
             </div>
             <!--Disequilibrium-->
             <div class="disequilibriumWidget tableSpread">
-                <div class="edit">
+                <input type="checkbox" class="editCog hideCheckbox" name="attr_EditDisequilbrium" value="1" /><span class="editCog"></span>
+                <input type="hidden" class="editToggle" name="attr_EditDisequilbrium" />
+                <div class="editMenu editTableSpread">
                     <input type="number" class="leftLegChoice" name="attr_Disruption" min="0" max="13" value="0" />
                     <input type="checkbox" class="facingChoice" name="attr_DisruptionFacing" value="1" />
                     <input type="number" class="rightLegChoice" name="attr_Danger" min="0" max="13" value="0" />
