@@ -1,6 +1,9 @@
 ﻿/*Thaumaturgy Roll20 Sheet CSS*/
 /******************************/
 
+/* Font Import */
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Open+Sans&display=swap');
+
 /* Multiple Sheet Functionality */
 article.sheetType
 {
@@ -20,15 +23,12 @@ input.creatureSelector:checked ~ article.creatureSheet
 
 
 /*General Sheet Style*/
-.charsheet body
+.charsheet
 {
-    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1em;
     color: #000;
     background-color: #FFF;
-    line-height: 150%;
-    max-width: 850px;
-    min-width: 850px;
 }
 
 .charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheet th
@@ -83,7 +83,7 @@ input.creatureSelector:checked ~ article.creatureSheet
 .charsheet select, .charsheet textarea, .charsheet input[type="text"], .charsheet input[type="number"]
 {
     border: none;
-    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #000;
     height: 100%;
     width: 100%;
@@ -204,9 +204,9 @@ textarea.letter
 {
     grid-area: header;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 450px 1fr 2fr;
     grid-template-rows: 1fr 32px 1fr;
-    grid-template-areas: "title . " "title selector" "title version";
+    grid-template-areas: "title . . " "title selector typeSelector" "title . version";
     width: 100%;
     height: 100px;
 }
@@ -214,25 +214,31 @@ textarea.letter
 div.title
 {
     grid-area: title;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/title.png);
-    background-size: 400px 100px;
+    font-family: "Fredericka the Great", cursive;
+    font-size: 5em;
+    color: #000;
+    background-color: #FFF;
+    /* background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/title.png);*/
+    background-size: 450px 100px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 400px;
+    width: 450px;
     height: 100px;
     align-self: center;
 }
 
-.selectorBar
+.selectorTitle
 {
     grid-area: selector;
-    justify-self: stretch;
+    width: 100%;
 }
 
 select.typeSelector
 {
-    width: 235px;
+    grid-area: typeSelector;
+    width: 100%;
     font-variant: small-caps;
+    font-size: 1.5em;
     border: none;
 }
 
