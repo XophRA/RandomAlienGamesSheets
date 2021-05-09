@@ -1,5 +1,5 @@
-﻿<div class="masterGrid">
-    <div class="header">
+﻿<main class="masterGrid">
+    <header>
         <div class="title" alt="Thaumaturgy"></div>
 
         <h3 class="selectorBar ">
@@ -18,7 +18,7 @@
             </select>
         </h3>
         <div class="version">Version 0.1</div>
-    </div>
+    </header>
     <!--Hidden Sheet Selection Radio switch-->
     <input type="radio" name="attr_selectedSheet" class="hidden crewmemberSelector" value="1" checked>
     <input type="radio" name="attr_selectedSheet" class="hidden shipSelector" value="2">
@@ -29,7 +29,7 @@
     <!-- -------------- -->
     <!-- Player Caster -->
     <!-- -------------- -->
-    <div class="sheetType playerCasterSheet">
+    <article class="sheetType playerCasterSheet">
 
         <!--Salvo Mode-->
         <!--<input type="checkbox" name="attr_salvoMode" class="hideSalvoModeCheckbox salvoRollButton" value="1" />
@@ -275,24 +275,24 @@
         <!--PC Sheet-->
         <div class="playerCasterSheetGrid">
             <!-- True Name -->
-            <div class="trueNameWidget">
+            <section class="trueNameWidget">
                 <div class="trueNamePic"><textarea name="attr_trueName" class="trueNamePic"></textarea></div>
                 <div class="trueNamePhrase"><textarea name="attr_trueNamePhrase" class="trueNamePic"></textarea></div>
-            </div>
+            </section>
             <!-- Aether -->
-            <div class="aetherWidget">
+            <section class="aetherWidget">
                 <div class="aetherTracker"><input type="number" name="attr_aether" min="0" value="0" class="resourceBox" /></div>
-            </div>
+            </section>
             <!-- Description -->
-            <div class="descriptionWidget">
+            <section class="descriptionWidget">
                 <div class="wizardName"><input type="text" name="attr_character_name" class="full aspect" /></div>
                 <div class="pronouns"><input type="text" name="attr_pronouns" class="full aspect" /></div>
                 <div class="apprenticeship"><input type="text" name="attr_apprenticeship" class="full aspect" /></div>
                 <div class="characteristics"><input type="text" name="attr_characteristic" class="full aspect" /></div>
                 <div class="description"><input type="text" name="attr_description" class="full aspect" /></div>
-            </div>
+            </section>
             <!--Intentions-->
-            <div class="intentionWidget">
+            <section class="intentionWidget">
                 <input type="checkbox" class="conduitBox conjureBox hideCheckbox maxCheckbox" name="attr_Conjure" /><span class="conduitBox conjureBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox decayBox hideCheckbox maxCheckbox" name="attr_Decay" /><span class="conduitBox decayBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox dispelBox hideCheckbox maxCheckbox" name="attr_Dispel" /><span class="conduitBox dispelBox maxCheckbox conduit"></span>
@@ -303,9 +303,9 @@
                 <input type="checkbox" class="conduitBox summonBox hideCheckbox maxCheckbox" name="attr_Summon" /><span class="conduitBox summonBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox transmuteBox hideCheckbox maxCheckbox" name="attr_Transmute" /><span class="conduitBox transmuteBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox wardBox hideCheckbox maxCheckbox" name="attr_Ward" /><span class="conduitBox wardBox maxCheckbox conduit"></span>
-            </div>
+            </section>
             <!--Arts -->
-            <div class="artsWidget">
+            <section class="artsWidget">
                 <!--Animaturgy-->
                 <div class="skilldice art1">
                     <input type="radio" class="diceCheckbox diePip0 hideCheckbox" name="attr_Animaturgy" value="0" checked /><span class="diceCheckbox diePip0 ZeroDie"></span>
@@ -502,13 +502,13 @@
                     <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Viviomancy" value="4.1" /><span class="studyCheckbox diePip5 D10"></span>
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Viviomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
-            </div>
+            </section>
             <!--Ascension-->
-            <div class="ascensionWidget">
+            <section class="ascensionWidget">
 
-            </div>
+            </section>
             <!--Fate-->
-            <div class="fateWidget tableSpread">
+            <section class="fateWidget tableSpread">
                 <input type="checkbox" class="editCog" name="attr_EditFate" value="1"/><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditFate"/>
                 <div class="editMenu editTableSpread">
@@ -543,14 +543,14 @@
                     <input type="hidden" class="cardChoice" name="attr_Obstacle" />
                     <span class="card landscapeCard"></span>
                 </div>
-            </div>
+            </section>
         </div>
-    </div>
+    </article>
 
     <!-- ------------------------- -->
     <!-- Sanctum -->
     <!-- ------------------------- -->
-    <div class="sheetType shipSheet">
+    <article class="sheetType shipSheet">
 
         <!--Salvo Mode-->
         <input type="checkbox" name="attr_salvoModeShip" class="hideSalvoModeCheckbox salvoRollButton" value="1" />
@@ -1701,12 +1701,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </article>
 
     <!-- ------------------------- -->
     <!-- Medium -->
     <!-- ------------------------- -->
-    <div class="sheetType mediumSheet">
+    <article class="sheetType mediumSheet">
 
         <!--Salvo Mode-->
         <input type="checkbox" name="attr_salvoModeShip" class="hideSalvoModeCheckbox salvoRollButton" value="1" />
@@ -2499,13 +2499,13 @@
             </div>
 
         </div>
-    </div>
+    </article>
 
 
     <!-- ------------------- -->
     <!--    Sophont Log      -->
     <!-- ------------------- -->
-    <div class="sheetType sophontSheet">
+    <article class="sheetType sophontSheet">
         <div class="sophontSheetGrid">
             <div class="topLineText">Alias:</div>
             <div class="aliasThreatName threatTextBox"><input type="text" name="attr_character_name" class="threatTextBox" /></div>
@@ -2694,13 +2694,13 @@
                 <span class="vital largePips sophontConditionArmour sophontCondition9"></span>
             </div>
         </div>
-    </div>
+    </article>
 
 
     <!-- ----------------------- -->
     <!--	  Creature Log   	 -->
     <!-- ----------------------- -->
-    <div class="sheetType creatureSheet">
+    <article class="sheetType creatureSheet">
         <div class="creatureSheetGrid">
             <div class="topLineText">Species:</div>
             <div class="aliasThreatNameLong threatTextBox"><input type="text" name="attr_species" class="threatTextBox" /></div>
@@ -3025,9 +3025,9 @@
                 <span class="vital largePips sophontCondition10 additionalSophontColumn"></span>
             </div>
         </div>
-    </div>
+    </article>
 
-</div>
+</main>
 
 <!-- ----------------------- -->
 <!--      Roll Template      -->

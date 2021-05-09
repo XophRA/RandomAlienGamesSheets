@@ -1,53 +1,26 @@
 ﻿/*Thaumaturgy Roll20 Sheet CSS*/
 /******************************/
-/* CSS Reset and Basics */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, select,
-input[type="text"],
-input[type="number"],
-input[type="radio"]
+/* Multiple Sheet Functionality */
+article.sheetType
 {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 10px;
-    font: inherit;
-    vertical-align: baseline;
-    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    display: none;
 }
 
-    /* Multiple Sheet Functionality */
-    div.sheet-sheetType
-    {
-        display: none;
-    }
-
-input.sheet-crewmemberSelector:checked ~ div.sheet-playerCasterSheet,
-input.sheet-shipSelector:checked ~ div.sheet-shipSheet,
-input.sheet-mediumSelector:checked ~ div.sheet-mediumSheet,
-input.sheet-sophontSelector:checked ~ div.sheet-sophontSheet,
-input.sheet-compositeSophontSelector:checked ~ div.sheet-compositeSophontSheet,
-input.sheet-swarmSelector:checked ~ div.sheet-swarmSheet,
-input.sheet-creatureSelector:checked ~ div.sheet-creatureSheet
+input.crewmemberSelector:checked ~ article.playerCasterSheet,
+input.shipSelector:checked ~ article.shipSheet,
+input.mediumSelector:checked ~ article.mediumSheet,
+input.sophontSelector:checked ~ article.sophontSheet,
+input.compositeSophontSelector:checked ~ article.compositeSophontSheet,
+input.swarmSelector:checked ~ article.swarmSheet,
+input.creatureSelector:checked ~ article.creatureSheet
 {
     display: initial;
 }
 
 
 /*General Sheet Style*/
-body
+.charsheet body
 {
     font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     font-size: 1em;
@@ -58,56 +31,56 @@ body
     min-width: 850px;
 }
 
-h1, h2, h3, h4, th
+.charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheet th
 {
     text-align: left;
     font-weight: 500;
 }
 
-h1
+.charsheet h1
 {
     font-size: 2em;
 }
 
-h2
+.charsheet h2
 {
     font-size: 1.75em;
 }
 
-h3
+.charsheet h3
 {
     font-size: 1.5em;
 }
 
-h4, th
+.charsheet h4, .charsheet th
 {
     font-size: 1.25em;
 }
 
-td, p
+.charsheet td, .charsheet p
 {
     font-size: 1em;
 }
 
-br
+.charsheet br
 {
     font-size: 0.5em;
     height: 50%;
 }
 
-hr
+.charsheet hr
 {
     border-top: 1px solid #D3D3D3;
 }
 
 /*All Hidden styles*/
-.sheet-hidden
+.hidden
 {
     display: none;
 }
 
 /*select & text boxes*/
-select, textarea, input[type="text"], input[type="number"]
+.charsheet select, .charsheet textarea, .charsheet input[type="text"], .charsheet input[type="number"]
 {
     border: none;
     font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
@@ -119,89 +92,89 @@ select, textarea, input[type="text"], input[type="number"]
     background: transparent;
 }
 
-input[type="number"]
+.charsheet input[type="number"]
 {
     text-align: center;
 }
 
-select.sheet-start
+select.start
 {
     border-style: hidden;
     border: none;
     font-weight: normal;
 }
 
-select.sheet-full,
-input[type="text"].sheet-full,
-input[type="number"].sheet-full
+select.full,
+input[type="text"].full,
+input[type="number"].full
 {
     width: 98%;
 }
 
-input[type="text"].sheet-aspect,
-select.sheet-aspect
+input[type="text"].aspect,
+select.aspect
 {
     font-weight: 500;
 }
 
-select.sheet-most,
-input[type="text"].sheet-most,
-input[type="number"].sheet-most
+select.most,
+input[type="text"].most,
+input[type="number"].most
 {
     width: 80%;
 }
 
-select.sheet-fourFifths,
-input[type="text"].sheet-fourFifths,
-input[type="number"].sheet-fourFifths
+select.fourFifths,
+input[type="text"].fourFifths,
+input[type="number"].fourFifths
 {
     width: 70%;
 }
 
-select.sheet-threeQuarters,
-input[type="text"].sheet-threeQuarters,
-input[type="number"].sheet-threeQuarters
+select.threeQuarters,
+input[type="text"].threeQuarters,
+input[type="number"].threeQuarters
 {
     width: 60%;
 }
 
-select.sheet-half,
-input[type="text"].sheet-half,
-input[type="number"].sheet-half,
-p.sheet-half
+select.half,
+input[type="text"].half,
+input[type="number"].half,
+p.half
 {
     width: 47%;
 }
 
-select.sheet-third,
-input[type="text"].sheet-third,
-input[type="number"].sheet-third
+select.third,
+input[type="text"].third,
+input[type="number"].third
 {
     width: 32%;
 }
 
-select.sheet-quarter,
-input[type="text"].sheet-quarter,
-input[type="number"].sheet-quarter
+select.quarter,
+input[type="text"].quarter,
+input[type="number"].quarter
 {
     width: 28%;
 }
 
-select.sheet-fifth,
-input[type="text"].sheet-fifth,
-input[type="number"].sheet-fifth
+select.fifth,
+input[type="text"].fifth,
+input[type="number"].fifth
 {
     width: 21%;
 }
 
-select.sheet-sixth,
-input[type="text"].sheet-sixth,
-input[type="number"].sheet-sixth
+select.sixth,
+input[type="text"].sixth,
+input[type="number"].sixth
 {
     width: 12%;
 }
 
-textarea
+.charsheet textarea
 {
     border: none;
     font-variant: normal;
@@ -210,24 +183,24 @@ textarea
     resize: none;
 }
 
-    textarea.sheet-description
-    {
-        height: 2.5em;
-    }
+textarea.description
+{
+    height: 2.5em;
+}
 
-    textarea.sheet-data
-    {
-        height: 100px;
-    }
+textarea.data
+{
+    height: 100px;
+}
 
-    textarea.sheet-letter
-    {
-        height: 95%;
-        width: 95%;
-    }
+textarea.letter
+{
+    height: 95%;
+    width: 95%;
+}
 
 /* Sheet header */
-div.sheet-header
+.charsheet header
 {
     grid-area: header;
     display: grid;
@@ -238,7 +211,7 @@ div.sheet-header
     height: 100px;
 }
 
-div.sheet-title
+div.title
 {
     grid-area: title;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/title.png);
@@ -250,20 +223,20 @@ div.sheet-title
     align-self: center;
 }
 
-.sheet-selectorBar
+.selectorBar
 {
     grid-area: selector;
     justify-self: stretch;
 }
 
-select.sheet-typeSelector
+select.typeSelector
 {
     width: 235px;
     font-variant: small-caps;
     border: none;
 }
 
-.sheet-version
+.version
 {
     grid-area: version;
     justify-self: end;
@@ -272,7 +245,7 @@ select.sheet-typeSelector
 }
 
 /* Master Grids */
-.sheet-masterGrid
+main.masterGrid
 {
     width: 850px;
     display: grid;
@@ -281,7 +254,7 @@ select.sheet-typeSelector
     grid-template-areas: "header" "sheet";
 }
 
-.sheet-playerCasterSheetGrid
+.playerCasterSheetGrid
 {
     grid-area: sheet;
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/PlayerCasterSheet.png);
@@ -296,7 +269,7 @@ select.sheet-typeSelector
     align-items: start;
 }
 
-.sheet-shipSheetGrid
+.shipSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -309,7 +282,7 @@ select.sheet-typeSelector
     align-items: start;
 }
 
-.sheet-mediumSheetGrid
+.mediumSheetGrid
 {
     grid-area: sheet;
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/MediumSheet.png);
@@ -324,7 +297,7 @@ select.sheet-typeSelector
     align-items: start;
 }
 
-.sheet-sophontSheetGrid
+.sophontSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -339,7 +312,7 @@ select.sheet-typeSelector
     grid-column-gap: 4px;
 }
 
-.sheet-swarmSheetGrid
+.swarmSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -355,7 +328,7 @@ select.sheet-typeSelector
 }
 
 
-.sheet-creatureSheetGrid
+.creatureSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -371,7 +344,7 @@ select.sheet-typeSelector
 }
 
 
-.sheet-behemothSheetGrid
+.behemothSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -745,14 +718,14 @@ select.sheet-typeSelector
 /* Salvo Mode  */
 
 /*Salvo Mode Button*/
-.sheet-salvoRollButton
+.salvoRollButton
 {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-input[type="checkbox"].sheet-hideSalvoModeCheckbox
+input[type="checkbox"].hideSalvoModeCheckbox
 {
     opacity: 0;
     cursor: pointer;
@@ -762,14 +735,14 @@ input[type="checkbox"].sheet-hideSalvoModeCheckbox
     vertical-align: central;
 }
 
-span.sheet-salvoMode
+span.salvoMode
 {
     z-index: 18;
     vertical-align: central;
 }
 
 /* Open Salvo Mode Button*/
-input.sheet-salvoRollButton + span.sheet-salvoRollButton
+input.salvoRollButton + span.salvoRollButton
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/salvo.png);
     background-repeat: no-repeat;
@@ -778,8 +751,8 @@ input.sheet-salvoRollButton + span.sheet-salvoRollButton
     background-size: 60px 44px;
 }
 
-.sheet-playerCasterSheet input.sheet-salvoRollButton + span.sheet-salvoRollButton,
-.sheet-playerCasterSheet input.sheet-salvoRollButton
+.playerCasterSheet input.salvoRollButton + span.salvoRollButton,
+.playerCasterSheet input.salvoRollButton
 {
     width: 60px;
     height: 44px;
@@ -787,7 +760,7 @@ input.sheet-salvoRollButton + span.sheet-salvoRollButton
     left: 640px;
 }
 
-    .sheet-playerCasterSheet input.sheet-salvoRollButton ~ div.sheet-salvoRollTag
+    .playerCasterSheet input.salvoRollButton ~ div.salvoRollTag
     {
         position: absolute;
         top: 345px;
@@ -802,10 +775,10 @@ input.sheet-salvoRollButton + span.sheet-salvoRollButton
         line-height: 1em;
     }
 
-.sheet-shipSheet input.sheet-salvoRollButton + span.sheet-salvoRollButton,
-.sheet-shipSheet input.sheet-salvoRollButton,
-.sheet-mediumSheet input.sheet-salvoRollButton + span.sheet-salvoRollButton,
-.sheet-mediumSheet input.sheet-salvoRollButton
+.shipSheet input.salvoRollButton + span.salvoRollButton,
+.shipSheet input.salvoRollButton,
+.mediumSheet input.salvoRollButton + span.salvoRollButton,
+.mediumSheet input.salvoRollButton
 {
     width: 60px;
     height: 44px;
@@ -813,8 +786,8 @@ input.sheet-salvoRollButton + span.sheet-salvoRollButton
     left: 505px;
 }
 
-    .sheet-shipSheet input.sheet-salvoRollButton ~ div.sheet-salvoRollTag,
-    .sheet-mediumSheet input.sheet-salvoRollButton ~ div.sheet-salvoRollTag
+    .shipSheet input.salvoRollButton ~ div.salvoRollTag,
+    .mediumSheet input.salvoRollButton ~ div.salvoRollTag
     {
         position: absolute;
         top: 231px;
@@ -831,7 +804,7 @@ input.sheet-salvoRollButton + span.sheet-salvoRollButton
 
 
 /* Close Salvo Mode Button*/
-input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton
+input.salvoRollButton:checked + span.salvoRollButton
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/salvoDeactivate.png);
     background-repeat: no-repeat;
@@ -840,7 +813,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton
     background-size: 24px 20px;
 }
 
-input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-salvoRollButton:checked
+input.salvoRollButton:checked + span.salvoRollButton, input.salvoRollButton:checked
 {
     width: 24px;
     height: 20px;
@@ -848,7 +821,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     left: 900px;
 }
 
-    input.sheet-salvoRollButton:checked ~ div.sheet-salvoRollTag
+    input.salvoRollButton:checked ~ div.salvoRollTag
     {
         display: none;
     }
@@ -856,7 +829,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
 /* ************* */
 /* Salvo Widget */
 /***************/
-.sheet-salvo
+.salvo
 {
     position: absolute;
     z-index: 10;
@@ -870,7 +843,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 2400px;
 }
     /*Blinds stop hade parts color-profile thead sheet*/
-    .sheet-salvo .sheet-blinds
+    .salvo .blinds
     {
         position: absolute;
         z-index: 11;
@@ -878,7 +851,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
         background: rgba(255,255,255,0.8) no-repeat fixed top;
     }
 
-.sheet-playerCasterSheet .sheet-salvo .sheet-blinds.sheet-topBlind
+.playerCasterSheet .salvo .blinds.topBlind
 {
     grid-row: 1;
     grid-column: 1;
@@ -886,7 +859,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 170px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-topBlind
+.shipSheet .salvo .blinds.topBlind
 {
     grid-row: 1;
     grid-column: 1;
@@ -894,7 +867,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 90px;
 }
 
-.sheet-playerCasterSheet .sheet-salvo .sheet-blinds.sheet-pg2Blind
+.playerCasterSheet .salvo .blinds.pg2Blind
 {
     grid-row: -2;
     grid-column: 1;
@@ -903,7 +876,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 1200px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-pg2Blind
+.shipSheet .salvo .blinds.pg2Blind
 {
     grid-row: -42;
     grid-column: 1;
@@ -911,7 +884,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 1600px;
 }
 
-.sheet-playerCasterSheet .sheet-salvo .sheet-blinds.sheet-rightSideBlind
+.playerCasterSheet .salvo .blinds.rightSideBlind
 {
     grid-row: 17;
     grid-column: -24;
@@ -919,7 +892,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 430px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-rightSideBlind
+.shipSheet .salvo .blinds.rightSideBlind
 {
     grid-row: 10;
     left: 6px;
@@ -928,7 +901,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 325px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-reactorBlind
+.shipSheet .salvo .blinds.reactorBlind
 {
     grid-row: 10;
     grid-column: 1;
@@ -936,7 +909,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 160px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-leftSideBlind
+.shipSheet .salvo .blinds.leftSideBlind
 {
     grid-row: 26;
     grid-column: 1;
@@ -944,7 +917,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 165px;
 }
 
-.sheet-playerCasterSheet .sheet-salvo .sheet-blinds.sheet-skillsBlind
+.playerCasterSheet .salvo .blinds.skillsBlind
 {
     grid-row: 17;
     grid-column: 1;
@@ -952,7 +925,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 430px;
 }
 
-.sheet-playerCasterSheet .sheet-salvo .sheet-blinds.sheet-crewKitBlind
+.playerCasterSheet .salvo .blinds.crewKitBlind
 {
     grid-row: 60;
     grid-column: 1;
@@ -960,7 +933,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 616px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-systemsBlind
+.shipSheet .salvo .blinds.systemsBlind
 {
     grid-row: 10;
     grid-column: 22;
@@ -968,7 +941,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 325px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-moduleBlind
+.shipSheet .salvo .blinds.moduleBlind
 {
     grid-row: 63;
     margin-top: 6px;
@@ -977,7 +950,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 170px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-moduleTopBlind
+.shipSheet .salvo .blinds.moduleTopBlind
 {
     grid-row: 42;
     grid-column: 1;
@@ -985,7 +958,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 215px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-moduleBottomBlind
+.shipSheet .salvo .blinds.moduleBottomBlind
 {
     grid-row: 63;
     margin-top: 6px;
@@ -994,7 +967,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 170px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-rightSideBottomBlind
+.shipSheet .salvo .blinds.rightSideBottomBlind
 {
     grid-row: 42;
     grid-column: -41;
@@ -1002,7 +975,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     height: 45px;
 }
 
-.sheet-shipSheet .sheet-salvo .sheet-blinds.sheet-launchbayBlind
+.shipSheet .salvo .blinds.launchbayBlind
 {
     grid-row: 46;
     margin-top: 5px;
@@ -1012,48 +985,48 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
 }
 
 /* Crewmember Blinds functionality*/
-.sheet-playerCasterSheet .sheet-colorChanger[value="Choose a Specialty"] + .sheet-skillsBlind,
-.sheet-playerCasterSheet .sheet-colorChanger:not([value="Choose a Specialty"]) + .sheet-skillsBlind + .sheet-crewKitBlind
+.playerCasterSheet .colorChanger[value="Choose a Specialty"] + .skillsBlind,
+.playerCasterSheet .colorChanger:not([value="Choose a Specialty"]) + .skillsBlind + .crewKitBlind
 {
     display: none;
 }
 
 /* Ship Blinds functionality - Tool Not Selected*/
-.sheet-shipSheet input.sheet-colorChanger:not([value="Select Specialty"]) + input.sheet-colorChanger[value="Choose a Tool"] + div.sheet-systemsBlind,
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value="Choose a Tool"] + .sheet-systemsBlind + .sheet-reactorBlind,
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value="Choose a Tool"] + .sheet-systemsBlind + .sheet-reactorBlind + .sheet-moduleBlind,
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value="Choose a Tool"] + .sheet-systemsBlind + .sheet-reactorBlind + .sheet-moduleBlind + .sheet-launchbayBlind
+.shipSheet input.colorChanger:not([value="Select Specialty"]) + input.colorChanger[value="Choose a Tool"] + div.systemsBlind,
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Choose a Tool"] + .systemsBlind + .reactorBlind,
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Choose a Tool"] + .systemsBlind + .reactorBlind + .moduleBlind,
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Choose a Tool"] + .systemsBlind + .reactorBlind + .moduleBlind + .launchbayBlind
 {
     display: none;
 }
 
 /* Ship Blinds functionality and flow - Launcher Selected*/
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value="Launcher"] + .sheet-systemsBlind + .sheet-reactorBlind + .sheet-moduleBlind,
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value="Launcher"] ~ .sheet-chargeSystemDirection
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launcher"] + .systemsBlind + .reactorBlind + .moduleBlind,
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launcher"] ~ .chargeSystemDirection
 {
     display: none;
 }
 /* Ship Blinds functionality, flow, and trailer - Launch Bay Selected*/
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value="Launch Bay"] + .sheet-systemsBlind + .sheet-reactorBlind + .sheet-moduleBlind + .sheet-launchbayBlind,
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value="Launch Bay"] ~ .sheet-chargeSystemDirection
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launch Bay"] + .systemsBlind + .reactorBlind + .moduleBlind + .launchbayBlind,
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launch Bay"] ~ .chargeSystemDirection
 {
     display: none;
 }
 /* Ship Blinds functionality - A Ship System Selected*/
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value^="Launch"] + .sheet-systemsBlind,
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger[value^="Launch"] + .sheet-systemsBlind + .sheet-reactorBlind
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value^="Launch"] + .systemsBlind,
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value^="Launch"] + .systemsBlind + .reactorBlind
 {
     display: grid;
 }
 
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger:not([value^="Launch"]) + .sheet-systemsBlind,
-.sheet-shipSheet .sheet-colorChanger:not([value="Select Specialty"]) + .sheet-colorChanger:not([value^="Launch"]) + .sheet-systemsBlind + .sheet-reactorBlind
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger:not([value^="Launch"]) + .systemsBlind,
+.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger:not([value^="Launch"]) + .systemsBlind + .reactorBlind
 {
     display: none;
 }
 
 /*Salvo Mode title Box*/
-.sheet-salvoTitle
+.salvoTitle
 {
     grid-row: 1;
     grid-column: 42;
@@ -1076,7 +1049,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
 }
 
 /*Overlay Box Grids*/
-.sheet-salvoOverlayBox
+.salvoOverlayBox
 {
     position: absolute;
     display: grid;
@@ -1084,7 +1057,7 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     grid-template-rows: 1fr 4fr 2fr 5fr;
 }
 
-.sheet-shuttleSystemBox
+.shuttleSystemBox
 {
     position: absolute;
     display: none;
@@ -1094,14 +1067,14 @@ input.sheet-salvoRollButton:checked + span.sheet-salvoRollButton, input.sheet-sa
     grid-template-rows: 10px 20px 26px 20px 20px 20px 1fr 1fr;
 }
 
-span.sheet-shuttleModText
+span.shuttleModText
 {
     font-size: 10px;
     color: black;
     grid-column: 3;
 }
 
-span.sheet-shuttleSystemDetails
+span.shuttleSystemDetails
 {
     font-size: 10px;
     color: black;
@@ -1112,128 +1085,128 @@ span.sheet-shuttleSystemDetails
 }
 
 
-span.sheet-shuttleMods,
-input.sheet-shuttleMods
+span.shuttleMods,
+input.shuttleMods
 {
     grid-column: 2;
 }
 
-span.sheet-shuttleMod1,
-input.sheet-shuttleMod1
+span.shuttleMod1,
+input.shuttleMod1
 {
     grid-row: 4;
 }
 
-span.sheet-shuttleMod2,
-input.sheet-shuttleMod2
+span.shuttleMod2,
+input.shuttleMod2
 {
     grid-row: 5;
 }
 
-span.sheet-shuttleMod3,
-input.sheet-shuttleMod3
+span.shuttleMod3,
+input.shuttleMod3
 {
     grid-row: 6;
 }
 
 /*Crewmember Overlay Box Locations*/
-.sheet-playerCasterSheet .sheet-salvoSkillBox
+.playerCasterSheet .salvoSkillBox
 {
     grid-row: 5;
     grid-column: 4;
 }
 
-.sheet-playerCasterSheet .sheet-salvoSpecialtyBox
+.playerCasterSheet .salvoSpecialtyBox
 {
     grid-row: 5;
     grid-column: 62;
 }
 
-.sheet-playerCasterSheet .sheet-salvoToolBox
+.playerCasterSheet .salvoToolBox
 {
     grid-row: 26;
     grid-column: 31;
 }
 
-.sheet-playerCasterSheet .sheet-salvoChargeBox
+.playerCasterSheet .salvoChargeBox
 {
     grid-row: 45;
     grid-column: 4;
 }
 
-.sheet-playerCasterSheet .sheet-salvoAdvantageBox
+.playerCasterSheet .salvoAdvantageBox
 {
     grid-row: 26;
     grid-column: 62;
 }
 
-.sheet-playerCasterSheet .sheet-salvoThreatBox
+.playerCasterSheet .salvoThreatBox
 {
     grid-row: 45;
     grid-column: 83;
 }
 
 /*Ship Overlay Box Locations*/
-.sheet-shipSheet .sheet-salvoOperatorBox
+.shipSheet .salvoOperatorBox
 {
     grid-row: 6;
     margin-top: 4px;
     grid-column: 4;
 }
 
-.sheet-shipSheet .sheet-salvoSkillBox
+.shipSheet .salvoSkillBox
 {
     grid-row: 6;
     grid-column: 57;
     margin-left: 4px;
 }
 
-.sheet-shipSheet .sheet-salvoSpecialtyBox
+.shipSheet .salvoSpecialtyBox
 {
     grid-row: 20;
     grid-column: 74;
     margin-left: 4px;
 }
 
-.sheet-shipSheet .sheet-salvoToolBox
+.shipSheet .salvoToolBox
 {
     grid-row: 35;
     grid-column: 55;
     margin-left: 4px;
 }
 
-.sheet-shipSheet .sheet-salvoTrailer
+.shipSheet .salvoTrailer
 {
     grid-row: 35;
     grid-column: 37;
     display: none;
 }
 
-.sheet-shipSheet .sheet-salvoChargeBox
+.shipSheet .salvoChargeBox
 {
     grid-row: 30;
     grid-column: 3;
 }
 
-.sheet-shipSheet .sheet-salvoSupplyBox
+.shipSheet .salvoSupplyBox
 {
     grid-row: 70;
     grid-column: 20;
 }
 
-.sheet-shipSheet .sheet-salvoAdvantageBox
+.shipSheet .salvoAdvantageBox
 {
     grid-row: 70;
     grid-column: 1;
 }
 
-.sheet-shipSheet .sheet-salvoThreatBox
+.shipSheet .salvoThreatBox
 {
     grid-row: 50;
     grid-column: 22;
 }
 
-input[type=number].sheet-salvoRating
+input[type=number].salvoRating
 {
     grid-row: 2;
     grid-column: 2;
@@ -1247,7 +1220,7 @@ input[type=number].sheet-salvoRating
     border: none;
 }
 
-input[type=text].sheet-salvoRating
+input[type=text].salvoRating
 {
     grid-row: 2;
     grid-column: 2;
@@ -1261,7 +1234,7 @@ input[type=text].sheet-salvoRating
     border: none;
 }
 
-.sheet-salvoTrailerCheckboxGrid
+.salvoTrailerCheckboxGrid
 {
     grid-row: 2;
     grid-column: 2;
@@ -1272,8 +1245,8 @@ input[type=text].sheet-salvoRating
     grid-template-areas: "checkbox text";
 }
 
-input.sheet-salvoTrailerCheckbox,
-span.sheet-salvoTrailerCheckbox
+input.salvoTrailerCheckbox,
+span.salvoTrailerCheckbox
 {
     grid-area: checkbox;
     justify-self: center;
@@ -1283,13 +1256,13 @@ span.sheet-salvoTrailerCheckbox
     width: 20px;
 }
 
-input.sheet-salvoTrailerCheckbox
+input.salvoTrailerCheckbox
 {
     opacity: 0;
     z-index: 19;
 }
 
-    input.sheet-salvoTrailerCheckbox + span.sheet-salvoTrailerCheckbox
+    input.salvoTrailerCheckbox + span.salvoTrailerCheckbox
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/HexPip.png);
         background-repeat: no-repeat;
@@ -1299,7 +1272,7 @@ input.sheet-salvoTrailerCheckbox
         z-index: 18;
     }
 
-    input.sheet-salvoTrailerCheckbox:checked + span.sheet-salvoTrailerCheckbox
+    input.salvoTrailerCheckbox:checked + span.salvoTrailerCheckbox
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/HexPipFilled.png);
         background-repeat: no-repeat;
@@ -1309,7 +1282,7 @@ input.sheet-salvoTrailerCheckbox
         z-index: 18;
     }
 
-.sheet-salvoTrailerCheckboxText
+.salvoTrailerCheckboxText
 {
     grid-area: text;
     justify-self: start;
@@ -1321,7 +1294,7 @@ input.sheet-salvoTrailerCheckbox
     line-height: 20px;
 }
 
-select.sheet-salvoTrailerChoice
+select.salvoTrailerChoice
 {
     grid-row: 2;
     grid-column: 2 / span 2;
@@ -1342,9 +1315,9 @@ select.sheet-salvoTrailerChoice
 
 
 
-input[type=text].sheet-salvoAttr,
-div.sheet-salvoAttr,
-select.sheet-salvoAttr
+input[type=text].salvoAttr,
+div.salvoAttr,
+select.salvoAttr
 {
     grid-row: 3;
     grid-column: 2;
@@ -1359,40 +1332,40 @@ select.sheet-salvoAttr
     border: none;
 }
 
-    input[type=text].sheet-salvoAttr.sheet-salvoOperator,
-    div.sheet-salvoAttr.sheet-salvoOperator,
-    select.sheet-salvoAttr.sheet-salvoOperator
+    input[type=text].salvoAttr.salvoOperator,
+    div.salvoAttr.salvoOperator,
+    select.salvoAttr.salvoOperator
     {
         margin-top: 8px;
     }
 /*Change the colour of the Charge text*/
-.sheet-salvoChargeBox .sheet-colorChanger[value="Uncharged"] + input,
-.sheet-salvoChargeBox .sheet-colorChanger[value="Uncharged"] + input + input,
-.sheet-salvoChargeBox .sheet-colorChanger[value="Expended"] + input,
-.sheet-salvoChargeBox .sheet-colorChanger[value="Expended"] + input + input,
-.sheet-salvoSupplyBox .sheet-colorChanger[value="Expended"] + input,
-.sheet-salvoSupplyBox .sheet-colorChanger[value="Expended"] + input + input
+.salvoChargeBox .colorChanger[value="Uncharged"] + input,
+.salvoChargeBox .colorChanger[value="Uncharged"] + input + input,
+.salvoChargeBox .colorChanger[value="Expended"] + input,
+.salvoChargeBox .colorChanger[value="Expended"] + input + input,
+.salvoSupplyBox .colorChanger[value="Expended"] + input,
+.salvoSupplyBox .colorChanger[value="Expended"] + input + input
 {
     color: white;
 }
 
-.sheet-salvoChargeBox .sheet-colorChanger[value="Overcharged"] + input,
-.sheet-salvoChargeBox .sheet-colorChanger[value="Overcharged"] + input + input,
-.sheet-salvoChargeBox .sheet-colorChanger[value="NF 2 Charge"] + input,
-.sheet-salvoChargeBox .sheet-colorChanger[value="NF 2 Charge"] + input + input
+.salvoChargeBox .colorChanger[value="Overcharged"] + input,
+.salvoChargeBox .colorChanger[value="Overcharged"] + input + input,
+.salvoChargeBox .colorChanger[value="NF 2 Charge"] + input,
+.salvoChargeBox .colorChanger[value="NF 2 Charge"] + input + input
 {
     color: #a8611f;
 }
 
-.sheet-salvoChargeBox .sheet-colorChanger[value="Insufficient Charge"] + input,
-.sheet-salvoChargeBox .sheet-colorChanger[value="Insufficient Charge"] + input + input,
-.sheet-salvoSupplyBox .sheet-colorChanger[value="Insufficient Supply"] + input,
-.sheet-salvoSupplyBox .sheet-colorChanger[value="Insufficient Supply"] + input + input
+.salvoChargeBox .colorChanger[value="Insufficient Charge"] + input,
+.salvoChargeBox .colorChanger[value="Insufficient Charge"] + input + input,
+.salvoSupplyBox .colorChanger[value="Insufficient Supply"] + input,
+.salvoSupplyBox .colorChanger[value="Insufficient Supply"] + input + input
 {
     color: #8a0a00;
 }
 
-input[type=number].sheet-salvoThreatRating
+input[type=number].salvoThreatRating
 {
     grid-row: 2;
     grid-column: 2;
@@ -1406,7 +1379,7 @@ input[type=number].sheet-salvoThreatRating
     border: none;
 }
 
-div.sheet-salvoThreatAttr
+div.salvoThreatAttr
 {
     grid-row: 3;
     grid-column: 2;
@@ -1421,7 +1394,7 @@ div.sheet-salvoThreatAttr
     border: none;
 }
 
-.sheet-inputBox
+.inputBox
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Input_blue.png);
     background-repeat: no-repeat;
@@ -1432,16 +1405,16 @@ div.sheet-salvoThreatAttr
     z-index: 16;
 }
 
-.sheet-colorChanger[value="Choose a Skill"] + .sheet-inputBox,
-.sheet-colorChanger[value="Choose a Specialty"] + .sheet-inputBox,
-.sheet-colorChanger[value="Choose a Tool"] + .sheet-inputBox,
-.sheet-colorChanger[value="Select Operator"] + .sheet-inputBox,
-.sheet-colorChanger[value="Choose a Trailer"] + .sheet-inputBox
+.colorChanger[value="Choose a Skill"] + .inputBox,
+.colorChanger[value="Choose a Specialty"] + .inputBox,
+.colorChanger[value="Choose a Tool"] + .inputBox,
+.colorChanger[value="Select Operator"] + .inputBox,
+.colorChanger[value="Choose a Trailer"] + .inputBox
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Input_orange.png);
 }
 
-.sheet-processBox
+.processBox
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Process_blue.png);
     background-repeat: no-repeat;
@@ -1452,7 +1425,7 @@ div.sheet-salvoThreatAttr
     z-index: 16;
 }
 
-.sheet-offPage
+.offPage
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/offPage_blue.png);
     background-repeat: no-repeat;
@@ -1463,7 +1436,7 @@ div.sheet-salvoThreatAttr
     z-index: 16;
 }
 
-.sheet-offPageBig
+.offPageBig
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/offPageBig_blue.png);
     background-repeat: no-repeat;
@@ -1474,14 +1447,14 @@ div.sheet-salvoThreatAttr
     z-index: 16;
 }
 
-.sheet-colorChanger[value="Select Skill"] + .sheet-offPageBig,
-.sheet-colorChanger[value="Select Specialty"] + .sheet-offPageBig
+.colorChanger[value="Select Skill"] + .offPageBig,
+.colorChanger[value="Select Specialty"] + .offPageBig
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/offPageBig_orange.png);
 }
 
 
-.sheet-preparationBox
+.preparationBox
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/preperation_blue.png);
     background-repeat: no-repeat;
@@ -1492,12 +1465,12 @@ div.sheet-salvoThreatAttr
     z-index: 16;
 }
 
-.sheet-colorChanger[value="Choose Operator"] + .sheet-preparationBox
+.colorChanger[value="Choose Operator"] + .preparationBox
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/preperation_orange.png);
 }
 
-.sheet-selectionBox
+.selectionBox
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Selection_blue.png);
     background-repeat: no-repeat;
@@ -1508,27 +1481,27 @@ div.sheet-salvoThreatAttr
     z-index: 16;
 }
 
-.sheet-colorChanger[value="Select System"] + .sheet-selectionBox
+.colorChanger[value="Select System"] + .selectionBox
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Selection_orange.png);
 }
 
 /*Roll Button*/
-.sheet-playerCasterSheet .sheet-rollSalvoButton
+.playerCasterSheet .rollSalvoButton
 {
     position: absolute;
     grid-row: 45;
     grid-column: 67;
 }
 
-.sheet-shipSheet .sheet-rollSalvoButton
+.shipSheet .rollSalvoButton
 {
     position: absolute;
     grid-row: 50;
     grid-column: 6;
 }
 
-button.sheet-rollSalvoButton
+button.rollSalvoButton
 {
     margin-top: 5px;
     border: none;
@@ -1540,7 +1513,7 @@ button.sheet-rollSalvoButton
     height: 85px;
 }
 
-    button.sheet-rollSalvoButton + span.sheet-rollSalvoButton
+    button.rollSalvoButton + span.rollSalvoButton
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHex.png);
         background-repeat: no-repeat;
@@ -1551,7 +1524,7 @@ button.sheet-rollSalvoButton
         height: 92px;
     }
 
-        button.sheet-rollSalvoButton + span.sheet-rollSalvoButton + span.sheet-rollSalvoButton
+        button.rollSalvoButton + span.rollSalvoButton + span.rollSalvoButton
         {
             z-index: 18;
             width: 40px;
@@ -1565,28 +1538,28 @@ button.sheet-rollSalvoButton
             font-variant: small-caps;
         }
 
-    button.sheet-rollSalvoButton:hover + span.sheet-rollSalvoButton
+    button.rollSalvoButton:hover + span.rollSalvoButton
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHexHover.png);
         font-weight: 600;
     }
 
 /* Spend Charge and Close Salvo Mode Button*/
-.sheet-playerCasterSheet .sheet-spendChargeCloseSalvoMode
+.playerCasterSheet .spendChargeCloseSalvoMode
 {
     position: absolute;
     grid-row: 55;
     grid-column: 62;
 }
 
-.sheet-shipSheet .sheet-spendChargeCloseSalvoMode
+.shipSheet .spendChargeCloseSalvoMode
 {
     position: absolute;
     grid-row: 60;
     grid-column: 1;
 }
 
-input.sheet-spendChargeCloseSalvoMode
+input.spendChargeCloseSalvoMode
 {
     z-index: 19;
     opacity: 0;
@@ -1594,7 +1567,7 @@ input.sheet-spendChargeCloseSalvoMode
     height: 32px;
 }
 
-span.sheet-spendChargeCloseSalvoMode
+span.spendChargeCloseSalvoMode
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/terminal_orange.png);
     background-repeat: no-repeat;
@@ -1612,43 +1585,43 @@ span.sheet-spendChargeCloseSalvoMode
 
 
 /* Salvo Mode Hiding Functionality */
-div.sheet-salvo
+div.salvo
 {
     display: none;
 }
 
-input[type="checkbox"].sheet-salvoRollButton:checked ~ div.sheet-salvo
+input[type="checkbox"].salvoRollButton:checked ~ div.salvo
 {
     display: grid;
 }
 
 /*Deselect buttons*/
-.sheet-skillDeselect,
-.sheet-specialtyDeselect,
-.sheet-toolDeselect,
-.sheet-operatorDeselect,
-.sheet-trailerDeselect
+.skillDeselect,
+.specialtyDeselect,
+.toolDeselect,
+.operatorDeselect,
+.trailerDeselect
 {
     position: absolute;
     width: 12px;
     height: 10px;
 }
 
-input.sheet-skillDeselect,
-input.sheet-specialtyDeselect,
-input.sheet-toolDeselect,
-input.sheet-operatorDeselect,
-input.sheet-trailerDeselect
+input.skillDeselect,
+input.specialtyDeselect,
+input.toolDeselect,
+input.operatorDeselect,
+input.trailerDeselect
 {
     opacity: 0;
     z-index: 19;
 }
 
-    input.sheet-skillDeselect:not(:checked) + span.sheet-skillDeselect,
-    input.sheet-specialtyDeselect:not(:checked) + span.sheet-specialtyDeselect,
-    input.sheet-toolDeselect:not(:checked) + span.sheet-toolDeselect,
-    input.sheet-operatorDeselect:not(:checked) + span.sheet-operatorDeselect,
-    input.sheet-trailerDeselect:not(:checked) + span.sheet-trailerDeselect
+    input.skillDeselect:not(:checked) + span.skillDeselect,
+    input.specialtyDeselect:not(:checked) + span.specialtyDeselect,
+    input.toolDeselect:not(:checked) + span.toolDeselect,
+    input.operatorDeselect:not(:checked) + span.operatorDeselect,
+    input.trailerDeselect:not(:checked) + span.trailerDeselect
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/salvoDeactivate.png);
         background-repeat: no-repeat;
@@ -1658,52 +1631,52 @@ input.sheet-trailerDeselect
         z-index: 18;
     }
 
-.sheet-playerCasterSheet .sheet-skillDeselect
+.playerCasterSheet .skillDeselect
 {
     grid-row: 5;
     grid-column: 23;
 }
 
-.sheet-shipSheet .sheet-skillDeselect
+.shipSheet .skillDeselect
 {
     grid-row: 5;
     margin-top: 8px;
     grid-column: 74;
 }
 
-.sheet-playerCasterSheet .sheet-specialtyDeselect
+.playerCasterSheet .specialtyDeselect
 {
     grid-row: 5;
     grid-column: 81;
 }
 
-.sheet-shipSheet .sheet-specialtyDeselect
+.shipSheet .specialtyDeselect
 {
     grid-row: 19;
     margin-top: 8px;
     grid-column: -5;
 }
 
-.sheet-playerCasterSheet .sheet-toolDeselect
+.playerCasterSheet .toolDeselect
 {
     grid-row: 26;
     grid-column: 50;
 }
 
-.sheet-shipSheet .sheet-toolDeselect
+.shipSheet .toolDeselect
 {
     grid-row: 35;
     grid-column: 74;
     margin-left: 3px;
 }
 
-.sheet-shipSheet .sheet-trailerDeselect
+.shipSheet .trailerDeselect
 {
     grid-row: 35;
     grid-column: 56;
 }
 
-.sheet-shipSheet .sheet-operatorDeselect
+.shipSheet .operatorDeselect
 {
     grid-row: 6;
     margin-top: 2px;
@@ -1711,140 +1684,140 @@ input.sheet-trailerDeselect
 }
 
 /*Skill  on/off functionality - Skill not Selected*/
-input.sheet-skillDeselect:checked + span.sheet-skillDeselect,
-input.sheet-skillDeselect:checked,
-input.sheet-skillDeselect:checked ~ .sheet-specialtyFlow,
-input.sheet-skillDeselect:checked ~ .sheet-salvoSpecialtyBox,
-input.sheet-skillDeselect:checked ~ .sheet-specialtySelector,
-input.sheet-skillDeselect:checked ~ .sheet-specialtyDeselect,
-input.sheet-skillDeselect:checked ~ .sheet-salvoToolBox,
-input.sheet-skillDeselect:checked ~ .sheet-salvoChargeBox,
-input.sheet-skillDeselect:checked ~ .sheet-salvoSupplyBox,
-input.sheet-skillDeselect:checked ~ .sheet-chargeCrewKitDirection,
-input.sheet-skillDeselect:checked ~ .sheet-chargeSystemDirection,
-input.sheet-skillDeselect:checked ~ .sheet-toolDeselect,
-input.sheet-skillDeselect:checked ~ .sheet-toolSelector,
-input.sheet-skillDeselect:checked ~ .sheet-crewKitMods
+input.skillDeselect:checked + span.skillDeselect,
+input.skillDeselect:checked,
+input.skillDeselect:checked ~ .specialtyFlow,
+input.skillDeselect:checked ~ .salvoSpecialtyBox,
+input.skillDeselect:checked ~ .specialtySelector,
+input.skillDeselect:checked ~ .specialtyDeselect,
+input.skillDeselect:checked ~ .salvoToolBox,
+input.skillDeselect:checked ~ .salvoChargeBox,
+input.skillDeselect:checked ~ .salvoSupplyBox,
+input.skillDeselect:checked ~ .chargeCrewKitDirection,
+input.skillDeselect:checked ~ .chargeSystemDirection,
+input.skillDeselect:checked ~ .toolDeselect,
+input.skillDeselect:checked ~ .toolSelector,
+input.skillDeselect:checked ~ .crewKitMods
 {
     display: none;
 }
 /*Skill  on/off functionality - Skill Selected*/
-input.sheet-skillDeselect:not(:checked) ~ div.sheet-skillDirection,
-input.sheet-skillDeselect:not(:checked) ~ .sheet-skillSelector
+input.skillDeselect:not(:checked) ~ div.skillDirection,
+input.skillDeselect:not(:checked) ~ .skillSelector
 {
     display: none;
 }
 /*Operator on/off functionality - Operator NOT Selected*/
-input.sheet-operatorDeselect:checked + span.sheet-operatorDeselect,
-input.sheet-operatorDeselect:checked,
-input.sheet-operatorDeselect:checked ~ div.sheet-skillDirection,
-input.sheet-operatorDeselect:checked ~ div.sheet-salvoSkillBox,
-input.sheet-operatorDeselect:checked ~ .sheet-specialtyFlow,
-input.sheet-operatorDeselect:checked ~ .sheet-salvoSpecialtyBox,
-input.sheet-operatorDeselect:checked ~ .sheet-specialtySelector,
-input.sheet-operatorDeselect:checked ~ .sheet-specialtyDeselect,
-input.sheet-operatorDeselect:checked ~ .sheet-salvoToolBox,
-input.sheet-operatorDeselect:checked ~ .sheet-salvoChargeBox,
-input.sheet-operatorDeselect:checked ~ .sheet-salvoSupplyBox,
-input.sheet-operatorDeselect:checked ~ .sheet-chargeSystemDirection,
-input.sheet-operatorDeselect:checked ~ .sheet-toolDeselect,
-input.sheet-operatorDeselect:checked ~ .sheet-toolSelector,
-input.sheet-operatorDeselect:checked ~ .sheet-crewKitMods
+input.operatorDeselect:checked + span.operatorDeselect,
+input.operatorDeselect:checked,
+input.operatorDeselect:checked ~ div.skillDirection,
+input.operatorDeselect:checked ~ div.salvoSkillBox,
+input.operatorDeselect:checked ~ .specialtyFlow,
+input.operatorDeselect:checked ~ .salvoSpecialtyBox,
+input.operatorDeselect:checked ~ .specialtySelector,
+input.operatorDeselect:checked ~ .specialtyDeselect,
+input.operatorDeselect:checked ~ .salvoToolBox,
+input.operatorDeselect:checked ~ .salvoChargeBox,
+input.operatorDeselect:checked ~ .salvoSupplyBox,
+input.operatorDeselect:checked ~ .chargeSystemDirection,
+input.operatorDeselect:checked ~ .toolDeselect,
+input.operatorDeselect:checked ~ .toolSelector,
+input.operatorDeselect:checked ~ .crewKitMods
 {
     display: none;
 }
 /*Operator on/off functionality - Operator Selected*/
-input.sheet-operatorDeselect:not(:checked) ~ div.sheet-operatorDirection,
-input.sheet-operatorDeselect:not(:checked) ~ div.sheet-salvoOperatorBG,
-input.sheet-operatorDeselect:not(:checked) ~ .sheet-operatorSelector
+input.operatorDeselect:not(:checked) ~ div.operatorDirection,
+input.operatorDeselect:not(:checked) ~ div.salvoOperatorBG,
+input.operatorDeselect:not(:checked) ~ .operatorSelector
 {
     display: none;
 }
 /*Operator on/off functionality - No Operator Found*/
-input.sheet-colorChanger[value="No Operator Found"] ~ .sheet-operatorSelector
+input.colorChanger[value="No Operator Found"] ~ .operatorSelector
 {
     display: none;
 }
 /*Specialty on/off functionalty*/
-input.sheet-specialtyDeselect:checked + span.sheet-specialtyDeselect,
-input.sheet-specialtyDeselect:checked,
-input.sheet-specialtyDeselect:not(:checked) ~ div.sheet-specialtyFlow,
-input.sheet-specialtyDeselect:not(:checked) ~ .sheet-specialtySelector,
-input.sheet-specialtyDeselect:checked ~ .sheet-salvoSpecialtyBox,
-input.sheet-specialtyDeselect:checked ~ .sheet-salvoToolBox,
-input.sheet-specialtyDeselect:checked ~ .sheet-salvoChargeBox,
-input.sheet-specialtyDeselect:checked ~ .sheet-salvoSupplyBox,
-input.sheet-specialtyDeselect:checked ~ .sheet-chargeCrewKitDirection,
-input.sheet-specialtyDeselect:checked ~ .sheet-chargeSystemDirection,
-input.sheet-specialtyDeselect:checked ~ .sheet-toolDeselect,
-input.sheet-specialtyDeselect:checked ~ .sheet-toolSelector,
-input.sheet-specialtyDeselect:checked ~ .sheet-crewKitMods,
-.sheet-playerCasterSheet input.sheet-specialtyDeselect:checked ~ .sheet-toolCrewKitDirection,
-.sheet-shipSheet input.sheet-specialtyDeselect:checked ~ .sheet-toolShipDirection
+input.specialtyDeselect:checked + span.specialtyDeselect,
+input.specialtyDeselect:checked,
+input.specialtyDeselect:not(:checked) ~ div.specialtyFlow,
+input.specialtyDeselect:not(:checked) ~ .specialtySelector,
+input.specialtyDeselect:checked ~ .salvoSpecialtyBox,
+input.specialtyDeselect:checked ~ .salvoToolBox,
+input.specialtyDeselect:checked ~ .salvoChargeBox,
+input.specialtyDeselect:checked ~ .salvoSupplyBox,
+input.specialtyDeselect:checked ~ .chargeCrewKitDirection,
+input.specialtyDeselect:checked ~ .chargeSystemDirection,
+input.specialtyDeselect:checked ~ .toolDeselect,
+input.specialtyDeselect:checked ~ .toolSelector,
+input.specialtyDeselect:checked ~ .crewKitMods,
+.playerCasterSheet input.specialtyDeselect:checked ~ .toolCrewKitDirection,
+.shipSheet input.specialtyDeselect:checked ~ .toolShipDirection
 {
     display: none;
 }
 
 /*A Tool Selected*/
-.sheet-playerCasterSheet input.sheet-toolDeselect:not(:checked) ~ .sheet-toolCrewKitDirection,
-.sheet-shipSheet input.sheet-toolDeselect:not(:checked) ~ .sheet-toolShipDirection,
-input.sheet-toolDeselect:not(:checked) ~ .sheet-toolSelector
+.playerCasterSheet input.toolDeselect:not(:checked) ~ .toolCrewKitDirection,
+.shipSheet input.toolDeselect:not(:checked) ~ .toolShipDirection,
+input.toolDeselect:not(:checked) ~ .toolSelector
 {
     display: none;
 }
 
 /*No tool selected*/
-input.sheet-toolDeselect:checked + span.sheet-toolDeselect,
-input.sheet-toolDeselect:checked,
-input.sheet-toolDeselect:checked ~ .sheet-salvoAdvantageBox,
-input.sheet-toolDeselect:checked ~ .sheet-advantageDirection,
-input.sheet-toolDeselect:checked ~ .sheet-rollSalvoButton,
-input.sheet-toolDeselect:checked ~ .sheet-spendChargeCloseSalvoMode,
-input.sheet-toolDeselect:checked ~ .sheet-salvoChargeBox,
-input.sheet-toolDeselect:checked ~ .sheet-salvoSupplyBox,
-input.sheet-toolDeselect:checked ~ .sheet-chargeCrewKitDirection,
-input.sheet-toolDeselect:checked ~ .sheet-chargeSystemDirection,
-input.sheet-toolDeselect:checked ~ .sheet-salvoTrailer,
-input.sheet-toolDeselect:checked ~ .sheet-salvoThreatBox,
-input.sheet-toolDeselect:checked ~ .sheet-threatDirection
+input.toolDeselect:checked + span.toolDeselect,
+input.toolDeselect:checked,
+input.toolDeselect:checked ~ .salvoAdvantageBox,
+input.toolDeselect:checked ~ .advantageDirection,
+input.toolDeselect:checked ~ .rollSalvoButton,
+input.toolDeselect:checked ~ .spendChargeCloseSalvoMode,
+input.toolDeselect:checked ~ .salvoChargeBox,
+input.toolDeselect:checked ~ .salvoSupplyBox,
+input.toolDeselect:checked ~ .chargeCrewKitDirection,
+input.toolDeselect:checked ~ .chargeSystemDirection,
+input.toolDeselect:checked ~ .salvoTrailer,
+input.toolDeselect:checked ~ .salvoThreatBox,
+input.toolDeselect:checked ~ .threatDirection
 {
     display: none;
 }
 
 /*Hide Charge or Supply box by tool*/
-.sheet-shipSheet input.sheet-colorChanger[value="Launcher"] + div.sheet-salvoChargeBox,
-.sheet-shipSheet input.sheet-colorChanger[value="Sensors"] + div.sheet-salvoSupplyBox,
-.sheet-shipSheet input.sheet-colorChanger[value="Grav Drive"] + div.sheet-salvoSupplyBox,
-.sheet-shipSheet input.sheet-colorChanger[value="Pulse Array"] + div.sheet-salvoSupplyBox,
-.sheet-shipSheet input.sheet-colorChanger[value="Shields"] + div.sheet-salvoSupplyBox
+.shipSheet input.colorChanger[value="Launcher"] + div.salvoChargeBox,
+.shipSheet input.colorChanger[value="Sensors"] + div.salvoSupplyBox,
+.shipSheet input.colorChanger[value="Grav Drive"] + div.salvoSupplyBox,
+.shipSheet input.colorChanger[value="Pulse Array"] + div.salvoSupplyBox,
+.shipSheet input.colorChanger[value="Shields"] + div.salvoSupplyBox
 {
     display: none;
 }
 
 /*Reveal Trailer*/
-.sheet-shipSheet input.sheet-colorChanger[value="Launch Bay"] ~ .sheet-salvoTrailer
+.shipSheet input.colorChanger[value="Launch Bay"] ~ .salvoTrailer
 {
     display: grid;
 }
 
 /*Hide Trailers once selected*/
-input.sheet-trailerDeselect:checked + span.sheet-trailerDeselect,
-input.sheet-trailerDeselect:checked,
-input.sheet-trailerDeselect:not(:checked) ~ .sheet-shuttleTrailers,
-input.sheet-trailerDeselect:not(:checked) ~ .sheet-trailerDirection
+input.trailerDeselect:checked + span.trailerDeselect,
+input.trailerDeselect:checked,
+input.trailerDeselect:not(:checked) ~ .shuttleTrailers,
+input.trailerDeselect:not(:checked) ~ .trailerDirection
 {
     display: none;
 }
 
 /*Skill Selectors*/
-.sheet-skillSelector
+.skillSelector
 {
     position: absolute;
     width: 162px;
     height: 13px;
 }
 
-input.sheet-skillSelector
+input.skillSelector
 {
     opacity: 0;
     border: none;
@@ -1852,7 +1825,7 @@ input.sheet-skillSelector
     line-height: 13px;
 }
 
-span.sheet-skillSelector
+span.skillSelector
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/skillSelector.png);
     background-repeat: no-repeat;
@@ -1863,41 +1836,41 @@ span.sheet-skillSelector
 }
 
 /* Specialty Hiding Functionality */
-input.sheet-cultureSkill:not(:checked) ~ .sheet-cultureSpecialties,
-input.sheet-economySkill:not(:checked) ~ .sheet-economySpecialties,
-input.sheet-interfaceSkill:not(:checked) ~ .sheet-interfaceSpecialties,
-input.sheet-politicSkill:not(:checked) ~ .sheet-politicSpecialties,
-input.sheet-sophontologySkill:not(:checked) ~ .sheet-sophontologySpecialties,
-input.sheet-athleticsSkill:not(:checked) ~ .sheet-athleticsSpecialties,
-input.sheet-fitnessSkill:not(:checked) ~ .sheet-fitnessSpecialties,
-input.sheet-geosciencesSkill:not(:checked) ~ .sheet-geosciencesSpecialties,
-input.sheet-perceptionSkill:not(:checked) ~ .sheet-perceptionSpecialties,
-input.sheet-pilotSkill:not(:checked) ~ .sheet-pilotSpecialties,
-input.sheet-biosciencesSkill:not(:checked) ~ .sheet-biosciencesSpecialties,
-input.sheet-fieldDynamicsSkill:not(:checked) ~ .sheet-fieldDynamicsSpecialties,
-input.sheet-pulseProjectionSkill:not(:checked) ~ .sheet-pulseProjectionSpecialties,
-input.sheet-inscriptionSkill:not(:checked) ~ .sheet-inscriptionSpecialties,
-input.sheet-mechatronicsSkill:not(:checked) ~ .sheet-mechatronicsSpecialties
+input.cultureSkill:not(:checked) ~ .cultureSpecialties,
+input.economySkill:not(:checked) ~ .economySpecialties,
+input.interfaceSkill:not(:checked) ~ .interfaceSpecialties,
+input.politicSkill:not(:checked) ~ .politicSpecialties,
+input.sophontologySkill:not(:checked) ~ .sophontologySpecialties,
+input.athleticsSkill:not(:checked) ~ .athleticsSpecialties,
+input.fitnessSkill:not(:checked) ~ .fitnessSpecialties,
+input.geosciencesSkill:not(:checked) ~ .geosciencesSpecialties,
+input.perceptionSkill:not(:checked) ~ .perceptionSpecialties,
+input.pilotSkill:not(:checked) ~ .pilotSpecialties,
+input.biosciencesSkill:not(:checked) ~ .biosciencesSpecialties,
+input.fieldDynamicsSkill:not(:checked) ~ .fieldDynamicsSpecialties,
+input.pulseProjectionSkill:not(:checked) ~ .pulseProjectionSpecialties,
+input.inscriptionSkill:not(:checked) ~ .inscriptionSpecialties,
+input.mechatronicsSkill:not(:checked) ~ .mechatronicsSpecialties
 {
     display: none;
 }
 
 /*Specialty Selectors*/
-.sheet-specialtySelector
+.specialtySelector
 {
     position: absolute;
     width: 204px;
     height: 13px;
 }
 
-input.sheet-specialtySelector
+input.specialtySelector
 {
     opacity: 0;
     border: none;
     z-index: 19;
 }
 
-span.sheet-specialtySelector
+span.specialtySelector
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/specialtySelector.png);
     background-repeat: no-repeat;
@@ -1908,192 +1881,192 @@ span.sheet-specialtySelector
 }
 
 /*Department Button Coloumns*/
-input[type=radio].sheet-communicationsSelect,
-span.sheet-communicationsSelect
+input[type=radio].communicationsSelect,
+span.communicationsSelect
 {
     grid-column: 3;
     margin-left: 3px;
 }
 
-    input[type=radio].sheet-communicationsSelect.sheet-specialtySelector,
-    span.sheet-communicationsSelect.sheet-specialtySelector
+    input[type=radio].communicationsSelect.specialtySelector,
+    span.communicationsSelect.specialtySelector
     {
         grid-column: 4;
         margin-left: 3px;
     }
 
-input[type=radio].sheet-operationsSelect,
-span.sheet-operationsSelect
+input[type=radio].operationsSelect,
+span.operationsSelect
 {
     grid-column: 26;
     margin-left: 0px;
 }
 
-    input[type=radio].sheet-operationsSelect.sheet-specialtySelector,
-    span.sheet-operationsSelect.sheet-specialtySelector
+    input[type=radio].operationsSelect.specialtySelector,
+    span.operationsSelect.specialtySelector
     {
         grid-column: 27;
         margin-left: 0px;
     }
 
-input[type=radio].sheet-engineeringSelect,
-span.sheet-engineeringSelect
+input[type=radio].engineeringSelect,
+span.engineeringSelect
 {
     grid-column: 48;
     margin-left: 7px;
 }
 
-    input[type=radio].sheet-engineeringSelect.sheet-specialtySelector,
-    span.sheet-engineeringSelect.sheet-specialtySelector
+    input[type=radio].engineeringSelect.specialtySelector,
+    span.engineeringSelect.specialtySelector
     {
         grid-column: 49;
         margin-left: 7px;
     }
 
 /*Skill button Row Locations*/
-input[type=radio].sheet-skill1Select,
-span.sheet-skill1Select
+input[type=radio].skill1Select,
+span.skill1Select
 {
     grid-row: 24;
     margin-top: 8px;
 }
 
-input[type=radio].sheet-skill2Select,
-span.sheet-skill2Select
+input[type=radio].skill2Select,
+span.skill2Select
 {
     grid-row: 31;
     margin-top: 5px;
 }
 
-input[type=radio].sheet-skill3Select,
-span.sheet-skill3Select
+input[type=radio].skill3Select,
+span.skill3Select
 {
     grid-row: 38;
     margin-top: 2px;
 }
 
-input[type=radio].sheet-skill4Select,
-span.sheet-skill4Select
+input[type=radio].skill4Select,
+span.skill4Select
 {
     grid-row: 44;
     margin-top: 9px;
 }
 
-input[type=radio].sheet-skill5Select,
-span.sheet-skill5Select
+input[type=radio].skill5Select,
+span.skill5Select
 {
     grid-row: 51;
     margin-top: 6px;
 }
 
 /*Specialty button Row Location*/
-input[type=radio].sheet-specialty1Select,
-span.sheet-specialty1Select
+input[type=radio].specialty1Select,
+span.specialty1Select
 {
     grid-row: 26;
     margin-top: 7px;
 }
 
-input[type=radio].sheet-specialty2Select,
-span.sheet-specialty2Select
+input[type=radio].specialty2Select,
+span.specialty2Select
 {
     grid-row: 28;
     margin-top: 2px;
 }
 
-input[type=radio].sheet-specialty3Select,
-span.sheet-specialty3Select
+input[type=radio].specialty3Select,
+span.specialty3Select
 {
     grid-row: 29;
     margin-top: 6px;
 }
 
-input[type=radio].sheet-specialty4Select,
-span.sheet-specialty4Select
+input[type=radio].specialty4Select,
+span.specialty4Select
 {
     grid-row: 33;
     margin-top: 4px;
 }
 
-input[type=radio].sheet-specialty5Select,
-span.sheet-specialty5Select
+input[type=radio].specialty5Select,
+span.specialty5Select
 {
     grid-row: 34;
     margin-top: 8px;
 }
 
-input[type=radio].sheet-specialty6Select,
-span.sheet-specialty6Select
+input[type=radio].specialty6Select,
+span.specialty6Select
 {
     grid-row: 36;
     margin-top: 3px;
 }
 
-input[type=radio].sheet-specialty7Select,
-span.sheet-specialty7Select
+input[type=radio].specialty7Select,
+span.specialty7Select
 {
     grid-row: 40;
     margin-top: 2px;
 }
 
-input[type=radio].sheet-specialty8Select,
-span.sheet-specialty8Select
+input[type=radio].specialty8Select,
+span.specialty8Select
 {
     grid-row: 41;
     margin-top: 5px;
 }
 
-input[type=radio].sheet-specialty9Select,
-span.sheet-specialty9Select
+input[type=radio].specialty9Select,
+span.specialty9Select
 {
     grid-row: 43;
     margin-top: 0px;
 }
 
-input[type=radio].sheet-specialty10Select,
-span.sheet-specialty10Select
+input[type=radio].specialty10Select,
+span.specialty10Select
 {
     grid-row: 46;
     margin-top: 8px;
 }
 
-input[type=radio].sheet-specialty11Select,
-span.sheet-specialty11Select
+input[type=radio].specialty11Select,
+span.specialty11Select
 {
     grid-row: 48;
     margin-top: 2px;
 }
 
-input[type=radio].sheet-specialty12Select,
-span.sheet-specialty12Select
+input[type=radio].specialty12Select,
+span.specialty12Select
 {
     grid-row: 49;
     margin-top: 7px;
 }
 
-input[type=radio].sheet-specialty13Select,
-span.sheet-specialty13Select
+input[type=radio].specialty13Select,
+span.specialty13Select
 {
     grid-row: 53;
     margin-top: 6px;
 }
 
-input[type=radio].sheet-specialty14Select,
-span.sheet-specialty14Select
+input[type=radio].specialty14Select,
+span.specialty14Select
 {
     grid-row: 55;
     margin-top: 0px;
 }
 
-input[type=radio].sheet-specialty15Select,
-span.sheet-specialty15Select
+input[type=radio].specialty15Select,
+span.specialty15Select
 {
     grid-row: 56;
     margin-top: 4px;
 }
 
 /*Operator Selector*/
-div.sheet-salvoOperatorBG
+div.salvoOperatorBG
 {
     position: absolute;
     width: 250px;
@@ -2106,7 +2079,7 @@ div.sheet-salvoOperatorBG
     grid-template-areas: "name name" "stationA stationZ";
 }
 
-input.sheet-salvoOperatorName
+input.salvoOperatorName
 {
     grid-area: name;
     align-self: end;
@@ -2120,7 +2093,7 @@ input.sheet-salvoOperatorName
     border: none;
 }
 
-input.sheet-salvoOperatorStationA
+input.salvoOperatorStationA
 {
     grid-area: stationA;
     align-self: start;
@@ -2134,7 +2107,7 @@ input.sheet-salvoOperatorStationA
     border: none;
 }
 
-input.sheet-salvoOperatorStationZ
+input.salvoOperatorStationZ
 {
     grid-area: stationZ;
     align-self: start;
@@ -2148,71 +2121,71 @@ input.sheet-salvoOperatorStationZ
     border: none;
 }
 
-div.sheet-salvoOperatorCol1,
-input[type=radio].sheet-salvoOperatorCol1,
-span.sheet-salvoOperatorCol1
+div.salvoOperatorCol1,
+input[type=radio].salvoOperatorCol1,
+span.salvoOperatorCol1
 {
     grid-column: 3;
 }
 
-div.sheet-salvoOperatorCol2,
-input[type=radio].sheet-salvoOperatorCol2,
-span.sheet-salvoOperatorCol2
+div.salvoOperatorCol2,
+input[type=radio].salvoOperatorCol2,
+span.salvoOperatorCol2
 {
     grid-column: 35;
 }
 
-div.sheet-salvoOperatorCol3,
-input[type=radio].sheet-salvoOperatorCol3,
-span.sheet-salvoOperatorCol3
+div.salvoOperatorCol3,
+input[type=radio].salvoOperatorCol3,
+span.salvoOperatorCol3
 {
     grid-column: 65;
 }
 
-div.sheet-salvoOperatorRow1,
-input[type=radio].sheet-salvoOperatorRow1,
-span.sheet-salvoOperatorRow1
+div.salvoOperatorRow1,
+input[type=radio].salvoOperatorRow1,
+span.salvoOperatorRow1
 {
     grid-row: 12;
     margin-top: 0px;
 }
 
-div.sheet-salvoOperatorRow2,
-input[type=radio].sheet-salvoOperatorRow2,
-span.sheet-salvoOperatorRow2
+div.salvoOperatorRow2,
+input[type=radio].salvoOperatorRow2,
+span.salvoOperatorRow2
 {
     grid-row: 22;
     margin-top: 0px;
 }
 
-div.sheet-salvoOperatorRow3,
-input[type=radio].sheet-salvoOperatorRow3,
-span.sheet-salvoOperatorRow3
+div.salvoOperatorRow3,
+input[type=radio].salvoOperatorRow3,
+span.salvoOperatorRow3
 {
     grid-row: 32;
     margin-top: 0px;
 }
 
 /*Operator Selector On/Off Functionality*/
-input.sheet-colorChanger[value=""] + div.sheet-salvoOperatorBG,
-input.sheet-colorChanger[value=""] + div.sheet-salvoOperatorBG + input,
-input.sheet-colorChanger[value=""] + div.sheet-salvoOperatorBG + input + span
+input.colorChanger[value=""] + div.salvoOperatorBG,
+input.colorChanger[value=""] + div.salvoOperatorBG + input,
+input.colorChanger[value=""] + div.salvoOperatorBG + input + span
 {
     display: none;
 }
 
 /*Tool Selectors*/
-.sheet-toolSelector,
-.sheet-operatorSelector,
-.sheet-shuttleTrailers
+.toolSelector,
+.operatorSelector,
+.shuttleTrailers
 {
     position: absolute;
     width: 170px;
     height: 15px;
 }
 
-input.sheet-toolSelector,
-input.sheet-shuttleTrailers
+input.toolSelector,
+input.shuttleTrailers
 {
     opacity: 0;
     border: none;
@@ -2222,7 +2195,7 @@ input.sheet-shuttleTrailers
     height: 15px;
 }
 
-input.sheet-operatorSelector
+input.operatorSelector
 {
     opacity: 0;
     border: none;
@@ -2232,9 +2205,9 @@ input.sheet-operatorSelector
     height: 40px;
 }
 
-span.sheet-toolSelector,
-span.sheet-operatorSelector,
-span.sheet-shuttleTrailers
+span.toolSelector,
+span.operatorSelector,
+span.shuttleTrailers
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitToolSelector.png);
     background-repeat: no-repeat;
@@ -2245,14 +2218,14 @@ span.sheet-shuttleTrailers
     justify-self: start;
 }
 
-span.sheet-otherToolLocation
+span.otherToolLocation
 {
     grid-row: 64;
     grid-column: 76;
 }
 
-span.sheet-otherToolBackground,
-div.sheet-otherToolBackground
+span.otherToolBackground,
+div.otherToolBackground
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/otherTool.png);
     background-repeat: no-repeat;
@@ -2265,7 +2238,7 @@ div.sheet-otherToolBackground
     margin: 2px 0 0 3px;
 }
 
-span.sheet-otherToolBlind
+span.otherToolBlind
 {
     position: absolute;
     z-index: 11;
@@ -2278,7 +2251,7 @@ span.sheet-otherToolBlind
     margin: 2px 0 0 3px;
 }
 
-span.sheet-otherToolTitle
+span.otherToolTitle
 {
     background-image: none;
     opacity: 1;
@@ -2291,7 +2264,7 @@ span.sheet-otherToolTitle
     margin: 6px 0 0 5px;
 }
 
-span.sheet-otherToolDetails
+span.otherToolDetails
 {
     background-image: none;
     opacity: 1;
@@ -2304,113 +2277,113 @@ span.sheet-otherToolDetails
 }
 
 /*Other Tool Selected*/
-input.sheet-otherTool:checked ~ .sheet-salvoToolBox,
-input.sheet-otherTool:checked ~ .sheet-salvoChargeBox,
-input.sheet-otherTool:checked ~ .sheet-spendChargeCloseSalvoMode,
-input.sheet-otherTool:checked ~ .sheet-chargeCrewKitDirection
+input.otherTool:checked ~ .salvoToolBox,
+input.otherTool:checked ~ .salvoChargeBox,
+input.otherTool:checked ~ .spendChargeCloseSalvoMode,
+input.otherTool:checked ~ .chargeCrewKitDirection
 {
     display: none;
 }
 
-input.sheet-otherTool:checked ~ .sheet-salvoAdvantageBox,
-input.sheet-otherTool:checked ~ .sheet-advantageDirection,
-input.sheet-otherTool:checked ~ .sheet-spendChargeCloseSalvoMode,
-input.sheet-otherTool:checked ~ .sheet-rollSalvoButton,
-input.sheet-otherTool:checked ~ .sheet-salvoThreatBox,
-input.sheet-otherTool:checked ~ .sheet-threatDirection
+input.otherTool:checked ~ .salvoAdvantageBox,
+input.otherTool:checked ~ .advantageDirection,
+input.otherTool:checked ~ .spendChargeCloseSalvoMode,
+input.otherTool:checked ~ .rollSalvoButton,
+input.otherTool:checked ~ .salvoThreatBox,
+input.otherTool:checked ~ .threatDirection
 {
     display: block;
 }
 
 /*Crew Kit Tool Locations*/
-input[type=radio].sheet-crewKitTop,
-span.sheet-crewKitTop
+input[type=radio].crewKitTop,
+span.crewKitTop
 {
     grid-row: 64;
     margin-top: 7px;
 }
 
-input[type=radio].sheet-crewKitMiddle,
-span.sheet-crewKitMiddle
+input[type=radio].crewKitMiddle,
+span.crewKitMiddle
 {
     grid-row: 80;
     margin-top: 7px;
 }
 
-input[type=radio].sheet-crewKitBottom,
-span.sheet-crewKitBottom
+input[type=radio].crewKitBottom,
+span.crewKitBottom
 {
     grid-row: 96;
     margin-top: 7px;
 }
 
-input[type=radio].sheet-crewKit0,
-span.sheet-crewKit0
+input[type=radio].crewKit0,
+span.crewKit0
 {
     grid-column: 3;
     margin-left: 5px;
 }
 
-input[type=radio].sheet-crewKit1,
-span.sheet-crewKit1
+input[type=radio].crewKit1,
+span.crewKit1
 {
     grid-column: 21;
     margin-left: 4px;
 }
 
-input[type=radio].sheet-crewKit2,
-span.sheet-crewKit2
+input[type=radio].crewKit2,
+span.crewKit2
 {
     grid-column: 39;
     margin-left: 3px;
 }
 
-input[type=radio].sheet-crewKit3,
-span.sheet-crewKit3
+input[type=radio].crewKit3,
+span.crewKit3
 {
     grid-column: 57;
     margin-left: 4px;
 }
 
-input[type=radio].sheet-crewKit4,
-span.sheet-crewKit4
+input[type=radio].crewKit4,
+span.crewKit4
 {
     grid-column: 75;
     margin-left: 8px;
 }
 
 /*Ship System Tool Locations*/
-input[type=radio].sheet-systemTop,
-span.sheet-systemTop
+input[type=radio].systemTop,
+span.systemTop
 {
     grid-row: 11;
     margin-top: 0px;
 }
 
-input[type=radio].sheet-systemBottom,
-span.sheet-systemBottom
+input[type=radio].systemBottom,
+span.systemBottom
 {
     grid-row: 27;
     margin-top: 0px;
 }
 
-input[type=radio].sheet-system1,
-span.sheet-system1
+input[type=radio].system1,
+span.system1
 {
     grid-column: 21;
     margin-left: 6px;
 }
 
-input[type=radio].sheet-system2,
-span.sheet-system2
+input[type=radio].system2,
+span.system2
 {
     grid-column: 39;
     margin-left: 6px;
 }
 
 /*Ship Module Launcher Location*/
-input[type=radio].sheet-shipLauncher,
-span.sheet-shipLauncher
+input[type=radio].shipLauncher,
+span.shipLauncher
 {
     grid-row: 64;
     grid-column: 42;
@@ -2418,8 +2391,8 @@ span.sheet-shipLauncher
 }
 
 /*Shuttle Launch Bay Locations*/
-input[type=radio].sheet-shipLaunchBay,
-span.sheet-shipLaunchBay
+input[type=radio].shipLaunchBay,
+span.shipLaunchBay
 {
     grid-row: 47;
     grid-column: 55;
@@ -2427,149 +2400,149 @@ span.sheet-shipLaunchBay
 }
 
 /*Trailers*/
-input[type=radio].sheet-shuttleTrailers,
-span.sheet-shuttleTrailers
+input[type=radio].shuttleTrailers,
+span.shuttleTrailers
 {
     grid-column: 54;
     margin-left: 6px;
 }
 
-input[type=radio].sheet-trailerNone,
-span.sheet-trailerNone
+input[type=radio].trailerNone,
+span.trailerNone
 {
     grid-row: 51;
     margin-top: 1px;
 }
 
-input[type=radio].sheet-trailerCargo,
-span.sheet-trailerCargo
+input[type=radio].trailerCargo,
+span.trailerCargo
 {
     grid-row: 64;
     margin-top: 3px;
 }
 
-input[type=radio].sheet-trailerTransport,
-span.sheet-trailerTransport
+input[type=radio].trailerTransport,
+span.trailerTransport
 {
     grid-row: 65;
     margin-top: 7px;
 }
 
-input[type=radio].sheet-trailerFlight,
-span.sheet-trailerFlight
+input[type=radio].trailerFlight,
+span.trailerFlight
 {
     grid-row: 67;
     margin-top: 2px;
 }
 
-input[type=radio].sheet-trailerDrop,
-span.sheet-trailerDrop
+input[type=radio].trailerDrop,
+span.trailerDrop
 {
     grid-row: 68;
     margin-top: 7px;
 }
 
-input[type=radio].sheet-trailerBoarding,
-span.sheet-trailerBoarding
+input[type=radio].trailerBoarding,
+span.trailerBoarding
 {
     grid-row: 70;
     margin-top: 2px;
 }
 
-input[type=radio].sheet-trailerTractor,
-span.sheet-trailerTractor
+input[type=radio].trailerTractor,
+span.trailerTractor
 {
     grid-row: 71;
     margin-top: 8px;
 }
 
-input[type=radio].sheet-trailerSurvey,
-span.sheet-trailerSurvey
+input[type=radio].trailerSurvey,
+span.trailerSurvey
 {
     grid-row: 73;
     margin-top: 4px;
 }
 
-input[type=radio].sheet-trailerFighter,
-span.sheet-trailerFighter
+input[type=radio].trailerFighter,
+span.trailerFighter
 {
     grid-row: 74;
     margin-top: 8px;
 }
 
 /*Shuttle Systems Selection On/Off Functionality*/
-input.sheet-shuttleSystemChanger[value="None"] + div.sheet-tugTrailer,
-input.sheet-shuttleSystemChanger[value="Cargo"] + div.sheet-tugTrailer,
-input.sheet-shuttleSystemChanger[value="Transport"] + div.sheet-tugTrailer,
-input.sheet-shuttleSystemChanger[value="Drop"] + div.sheet-tugTrailer,
-input.sheet-shuttleSystemChanger[value="Flight"] + div.sheet-flightTrailer,
-input.sheet-shuttleSystemChanger[value="Boarding"] + div.sheet-boardingTrailer,
-input.sheet-shuttleSystemChanger[value="Tractor"] + div.sheet-tractorTrailer,
-input.sheet-shuttleSystemChanger[value="Survey"] + div.sheet-surveyTrailer,
-input.sheet-shuttleSystemChanger[value="Fighter"] + div.sheet-fighterTrailer
+input.shuttleSystemChanger[value="None"] + div.tugTrailer,
+input.shuttleSystemChanger[value="Cargo"] + div.tugTrailer,
+input.shuttleSystemChanger[value="Transport"] + div.tugTrailer,
+input.shuttleSystemChanger[value="Drop"] + div.tugTrailer,
+input.shuttleSystemChanger[value="Flight"] + div.flightTrailer,
+input.shuttleSystemChanger[value="Boarding"] + div.boardingTrailer,
+input.shuttleSystemChanger[value="Tractor"] + div.tractorTrailer,
+input.shuttleSystemChanger[value="Survey"] + div.surveyTrailer,
+input.shuttleSystemChanger[value="Fighter"] + div.fighterTrailer
 {
     display: grid;
 }
 
 /*Shuttle System Mods Select On/Off Functionality*/
-div.sheet-shuttleSystemBox > input.sheet-shuttleModChanger:not([value="Pulse Drive"]) ~ .sheet-salvoShuttlePulseDrive,
-div.sheet-shuttleSystemBox > input.sheet-shuttleModChanger:not([value="Shields"]) ~ .sheet-salvoShuttleShields,
-div.sheet-shuttleSystemBox > input.sheet-shuttleModChanger:not([value="Pulse Array"]) ~ .sheet-salvoShuttlePulseArray,
-div.sheet-shuttleSystemBox > input.sheet-shuttleModChanger:not([value="Sensors"]) ~ .sheet-salvoShuttleSensors
+div.shuttleSystemBox > input.shuttleModChanger:not([value="Pulse Drive"]) ~ .salvoShuttlePulseDrive,
+div.shuttleSystemBox > input.shuttleModChanger:not([value="Shields"]) ~ .salvoShuttleShields,
+div.shuttleSystemBox > input.shuttleModChanger:not([value="Pulse Array"]) ~ .salvoShuttlePulseArray,
+div.shuttleSystemBox > input.shuttleModChanger:not([value="Sensors"]) ~ .salvoShuttleSensors
 {
     display: none;
 }
 
 /*Crew Kit Tool Selected*/
-input.sheet-crewKitScanner:not(:checked) ~ .sheet-crewKitScannerMods,
-input.sheet-crewKitBioChemKit:not(:checked) ~ .sheet-crewKitBioChemKitMods,
-input.sheet-crewKitAugmentation:not(:checked) ~ .sheet-crewKitAugmentationMods,
-input.sheet-crewKitLink:not(:checked) ~ .sheet-crewKitLinkMods,
-input.sheet-crewKitMultitool:not(:checked) ~ .sheet-crewKitMultitoolMods,
-input.sheet-crewKitShield:not(:checked) ~ .sheet-crewKitShieldMods,
-input.sheet-crewKitAssociations:not(:checked) ~ .sheet-crewKitAssociationMods
+input.crewKitScanner:not(:checked) ~ .crewKitScannerMods,
+input.crewKitBioChemKit:not(:checked) ~ .crewKitBioChemKitMods,
+input.crewKitAugmentation:not(:checked) ~ .crewKitAugmentationMods,
+input.crewKitLink:not(:checked) ~ .crewKitLinkMods,
+input.crewKitMultitool:not(:checked) ~ .crewKitMultitoolMods,
+input.crewKitShield:not(:checked) ~ .crewKitShieldMods,
+input.crewKitAssociations:not(:checked) ~ .crewKitAssociationMods
 {
     display: none;
 }
 
 /*Ship Tool Selected*/
-input.sheet-shipSensors:not(:checked) ~ .sheet-shipSensorsMods,
-input.sheet-shipGravDrive:not(:checked) ~ .sheet-shipGravDriveMods,
-input.sheet-shipPulseArray:not(:checked) ~ .sheet-shipPulseArrayMods,
-input.sheet-shipShields:not(:checked) ~ .sheet-shipShieldsMods,
-input.sheet-shipLauncher:not(:checked) ~ .sheet-shipLauncherMods,
-input.sheet-shipLaunchBay:not(:checked) ~ .sheet-shuttleTrailers,
-input.sheet-shipLaunchBay:not(:checked) ~ .sheet-trailerDirection
+input.shipSensors:not(:checked) ~ .shipSensorsMods,
+input.shipGravDrive:not(:checked) ~ .shipGravDriveMods,
+input.shipPulseArray:not(:checked) ~ .shipPulseArrayMods,
+input.shipShields:not(:checked) ~ .shipShieldsMods,
+input.shipLauncher:not(:checked) ~ .shipLauncherMods,
+input.shipLaunchBay:not(:checked) ~ .shuttleTrailers,
+input.shipLaunchBay:not(:checked) ~ .trailerDirection
 {
     display: none;
 }
 
 /*Crew Kit Mods Selectors*/
-.sheet-crewKitMods
+.crewKitMods
 {
     position: absolute;
     width: 180px;
     height: 13px;
 }
 
-.sheet-crewKitAssociationMods
+.crewKitAssociationMods
 {
     width: 430px;
 }
 
-.sheet-crewKitAugmentationMods
+.crewKitAugmentationMods
 {
     width: 190px;
 }
 
-input.sheet-crewKitMods
+input.crewKitMods
 {
     opacity: 0;
     border: none;
     z-index: 19;
 }
 
-    input.sheet-crewKitMods + span.sheet-crewKitMods
+    input.crewKitMods + span.crewKitMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitMod.png);
         background-repeat: no-repeat;
@@ -2579,7 +2552,7 @@ input.sheet-crewKitMods
         z-index: 18;
     }
 
-    input.sheet-crewKitMods:checked + span.sheet-crewKitMods
+    input.crewKitMods:checked + span.crewKitMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitModChecked.png);
         background-repeat: no-repeat;
@@ -2589,7 +2562,7 @@ input.sheet-crewKitMods
         z-index: 18;
     }
 
-    input.sheet-crewKitMods + span.sheet-crewKitAugmentationMods
+    input.crewKitMods + span.crewKitAugmentationMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAugmentationMod.png);
         background-repeat: no-repeat;
@@ -2599,7 +2572,7 @@ input.sheet-crewKitMods
         z-index: 18;
     }
 
-    input.sheet-crewKitMods:checked + span.sheet-crewKitAugmentationMods
+    input.crewKitMods:checked + span.crewKitAugmentationMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAugmentationModChecked.png);
         background-repeat: no-repeat;
@@ -2609,7 +2582,7 @@ input.sheet-crewKitMods
         z-index: 18;
     }
 
-    input.sheet-crewKitMods + span.sheet-crewKitAssociationMods
+    input.crewKitMods + span.crewKitAssociationMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAssociationMod.png);
         background-repeat: no-repeat;
@@ -2619,7 +2592,7 @@ input.sheet-crewKitMods
         z-index: 18;
     }
 
-    input.sheet-crewKitMods:checked + span.sheet-crewKitAssociationMods
+    input.crewKitMods:checked + span.crewKitAssociationMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAssociationModChecked.png);
         background-repeat: no-repeat;
@@ -2632,337 +2605,337 @@ input.sheet-crewKitMods
 
 /*Crew Kit Mod Locations*/
 /*Scanner*/
-input[type=checkbox].sheet-crewKitScannerMods,
-span.sheet-crewKitScannerMods
+input[type=checkbox].crewKitScannerMods,
+span.crewKitScannerMods
 {
     grid-column: 21;
     margin-left: 2px;
 }
 
-input[type=checkbox].sheet-crewKitScannerSurveySensor,
-span.sheet-crewKitScannerSurveySensor
+input[type=checkbox].crewKitScannerSurveySensor,
+span.crewKitScannerSurveySensor
 {
     grid-row: 72;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitScannerDepthAnalyser,
-span.sheet-crewKitScannerDepthAnalyser
+input[type=checkbox].crewKitScannerDepthAnalyser,
+span.crewKitScannerDepthAnalyser
 {
     grid-row: 73;
     margin-top: 8px;
 }
 
-input[type=checkbox].sheet-crewKitScannerAreaEffect,
-span.sheet-crewKitScannerAreaEffect
+input[type=checkbox].crewKitScannerAreaEffect,
+span.crewKitScannerAreaEffect
 {
     grid-row: 75;
     margin-top: 3px;
 }
 
-input[type=checkbox].sheet-crewKitScannerRangeCompensator,
-span.sheet-crewKitScannerRangeCompensator
+input[type=checkbox].crewKitScannerRangeCompensator,
+span.crewKitScannerRangeCompensator
 {
     grid-row: 76;
     margin-top: 8px;
 }
 
 /*BioChemKit*/
-input[type=checkbox].sheet-crewKitBioChemKitMods,
-span.sheet-crewKitBioChemKitMods
+input[type=checkbox].crewKitBioChemKitMods,
+span.crewKitBioChemKitMods
 {
     grid-column: 39;
     margin-left: 2px;
 }
 
-input[type=checkbox].sheet-crewKitBioChemKitMedtool,
-span.sheet-crewKitBioChemKitMedtool
+input[type=checkbox].crewKitBioChemKitMedtool,
+span.crewKitBioChemKitMedtool
 {
     grid-row: 72;
     margin-top: 3px;
 }
 
-input[type=checkbox].sheet-crewKitBioChemKitSampler,
-span.sheet-crewKitBioChemKitSampler
+input[type=checkbox].crewKitBioChemKitSampler,
+span.crewKitBioChemKitSampler
 {
     grid-row: 73;
     margin-top: 8px;
 }
 
-input[type=checkbox].sheet-crewKitBioChemKitIncubator,
-span.sheet-crewKitBioChemKitIncubator
+input[type=checkbox].crewKitBioChemKitIncubator,
+span.crewKitBioChemKitIncubator
 {
     grid-row: 75;
     margin-top: 4px;
 }
 
 /*Augmentation*/
-input[type=checkbox].sheet-crewKitAugmentationMods,
-span.sheet-crewKitAugmentationMods
+input[type=checkbox].crewKitAugmentationMods,
+span.crewKitAugmentationMods
 {
     grid-column: 57;
     margin-left: 4px;
 }
 
-input[type=checkbox].sheet-crewKitAugmentation1,
-span.sheet-crewKitAugmentation1
+input[type=checkbox].crewKitAugmentation1,
+span.crewKitAugmentation1
 {
     grid-row: 72;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitAugmentation2,
-span.sheet-crewKitAugmentation2
+input[type=checkbox].crewKitAugmentation2,
+span.crewKitAugmentation2
 {
     grid-row: 74;
     margin-top: 6px;
 }
 
-input[type=checkbox].sheet-crewKitAugmentation3,
-span.sheet-crewKitAugmentation3
+input[type=checkbox].crewKitAugmentation3,
+span.crewKitAugmentation3
 {
     grid-row: 77;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitAugmentation4,
-span.sheet-crewKitAugmentation4
+input[type=checkbox].crewKitAugmentation4,
+span.crewKitAugmentation4
 {
     grid-row: 79;
     margin-top: 6px;
 }
 
-input[type=checkbox].sheet-crewKitAugmentation5,
-span.sheet-crewKitAugmentation5
+input[type=checkbox].crewKitAugmentation5,
+span.crewKitAugmentation5
 {
     grid-row: 81;
     margin-top: 8px;
 }
 
 /*Link*/
-input[type=checkbox].sheet-crewKitLinkMods,
-span.sheet-crewKitLinkMods
+input[type=checkbox].crewKitLinkMods,
+span.crewKitLinkMods
 {
     grid-column: 3;
     margin-left: 4px;
 }
 
-input[type=checkbox].sheet-crewKitLinkCommBrowser,
-span.sheet-crewKitLinkCommBrowser
+input[type=checkbox].crewKitLinkCommBrowser,
+span.crewKitLinkCommBrowser
 {
     grid-row: 88;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitLinkDevelopmentKit,
-span.sheet-crewKitLinkDevelopmentKit
+input[type=checkbox].crewKitLinkDevelopmentKit,
+span.crewKitLinkDevelopmentKit
 {
     grid-row: 89;
     margin-top: 6px;
 }
 
-input[type=checkbox].sheet-crewKitFireWall,
-span.sheet-crewKitFireWall
+input[type=checkbox].crewKitFireWall,
+span.crewKitFireWall
 {
     grid-row: 92;
     margin-top: 7px;
 }
 
 /*Multitool*/
-input[type=checkbox].sheet-crewKitMultitoolMods,
-span.sheet-crewKitMultitoolMods
+input[type=checkbox].crewKitMultitoolMods,
+span.crewKitMultitoolMods
 {
     grid-column: 21;
     margin-left: 2px;
 }
 
-input[type=checkbox].sheet-crewKitMultitoolDisrupterTargeter,
-span.sheet-crewKitMultitoolDisrupterTargeter
+input[type=checkbox].crewKitMultitoolDisrupterTargeter,
+span.crewKitMultitoolDisrupterTargeter
 {
     grid-row: 88;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitMultitoolTractorLifter,
-span.sheet-crewKitMultitoolTractorLifter
+input[type=checkbox].crewKitMultitoolTractorLifter,
+span.crewKitMultitoolTractorLifter
 {
     grid-row: 91;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitMultitoolUtilityManipulator,
-span.sheet-crewKitMultitoolUtilityManipulator
+input[type=checkbox].crewKitMultitoolUtilityManipulator,
+span.crewKitMultitoolUtilityManipulator
 {
     grid-row: 92;
     margin-top: 7px;
 }
 
 /*Shield*/
-input[type=checkbox].sheet-crewKitShieldMods,
-span.sheet-crewKitShieldMods
+input[type=checkbox].crewKitShieldMods,
+span.crewKitShieldMods
 {
     grid-column: 39;
     margin-left: 2px;
 }
 
-input[type=checkbox].sheet-crewKitShieldKineticDeflector,
-span.sheet-crewKitShieldKineticDeflector
+input[type=checkbox].crewKitShieldKineticDeflector,
+span.crewKitShieldKineticDeflector
 {
     grid-row: 88;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitShieldEnergyDissipater,
-span.sheet-crewKitShieldEnergyDissipater
+input[type=checkbox].crewKitShieldEnergyDissipater,
+span.crewKitShieldEnergyDissipater
 {
     grid-row: 89;
     margin-top: 7px;
 }
 
-input[type=checkbox].sheet-crewKitShieldHoloprojector,
-span.sheet-crewKitShieldHoloprojector
+input[type=checkbox].crewKitShieldHoloprojector,
+span.crewKitShieldHoloprojector
 {
     grid-row: 91;
     margin-top: 1px;
 }
 
-input[type=checkbox].sheet-crewKitShieldMultifield,
-span.sheet-crewKitShieldMultifield
+input[type=checkbox].crewKitShieldMultifield,
+span.crewKitShieldMultifield
 {
     grid-row: 92;
     margin-top: 7px;
 }
 
 /*Associations*/
-input[type=checkbox].sheet-crewKitAssociationCol1,
-span.sheet-crewKitAssociationCol1
+input[type=checkbox].crewKitAssociationCol1,
+span.crewKitAssociationCol1
 {
     grid-column: 3;
     margin-left: 8px;
 }
 
-input[type=checkbox].sheet-crewKitAssociationCol2,
-span.sheet-crewKitAssociationCol2
+input[type=checkbox].crewKitAssociationCol2,
+span.crewKitAssociationCol2
 {
     grid-column: 48;
     margin-left: 2px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation1,
-span.sheet-crewKitAssociation1,
-input[type=checkbox].sheet-crewKitAssociation11,
-span.sheet-crewKitAssociation11
+input[type=checkbox].crewKitAssociation1,
+span.crewKitAssociation1,
+input[type=checkbox].crewKitAssociation11,
+span.crewKitAssociation11
 {
     grid-row: 102;
     margin-top: 6px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation2,
-span.sheet-crewKitAssociation2,
-input[type=checkbox].sheet-crewKitAssociation12,
-span.sheet-crewKitAssociation12
+input[type=checkbox].crewKitAssociation2,
+span.crewKitAssociation2,
+input[type=checkbox].crewKitAssociation12,
+span.crewKitAssociation12
 {
     grid-row: 104;
     margin-top: 3px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation3,
-span.sheet-crewKitAssociation3,
-input[type=checkbox].sheet-crewKitAssociation13,
-span.sheet-crewKitAssociation13
+input[type=checkbox].crewKitAssociation3,
+span.crewKitAssociation3,
+input[type=checkbox].crewKitAssociation13,
+span.crewKitAssociation13
 {
     grid-row: 106;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation4,
-span.sheet-crewKitAssociation4,
-input[type=checkbox].sheet-crewKitAssociation14,
-span.sheet-crewKitAssociation14
+input[type=checkbox].crewKitAssociation4,
+span.crewKitAssociation4,
+input[type=checkbox].crewKitAssociation14,
+span.crewKitAssociation14
 {
     grid-row: 107;
     margin-top: 9px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation5,
-span.sheet-crewKitAssociation5,
-input[type=checkbox].sheet-crewKitAssociation15,
-span.sheet-crewKitAssociation15
+input[type=checkbox].crewKitAssociation5,
+span.crewKitAssociation5,
+input[type=checkbox].crewKitAssociation15,
+span.crewKitAssociation15
 {
     grid-row: 109;
     margin-top: 7px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation6,
-span.sheet-crewKitAssociation6,
-input[type=checkbox].sheet-crewKitAssociation16,
-span.sheet-crewKitAssociation16
+input[type=checkbox].crewKitAssociation6,
+span.crewKitAssociation6,
+input[type=checkbox].crewKitAssociation16,
+span.crewKitAssociation16
 {
     grid-row: 111;
     margin-top: 6px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation7,
-span.sheet-crewKitAssociation7,
-input[type=checkbox].sheet-crewKitAssociation17,
-span.sheet-crewKitAssociation17
+input[type=checkbox].crewKitAssociation7,
+span.crewKitAssociation7,
+input[type=checkbox].crewKitAssociation17,
+span.crewKitAssociation17
 {
     grid-row: 113;
     margin-top: 4px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation8,
-span.sheet-crewKitAssociation8,
-input[type=checkbox].sheet-crewKitAssociation18,
-span.sheet-crewKitAssociation18
+input[type=checkbox].crewKitAssociation8,
+span.crewKitAssociation8,
+input[type=checkbox].crewKitAssociation18,
+span.crewKitAssociation18
 {
     grid-row: 115;
     margin-top: 2px;
 }
 
-input[type=checkbox].sheet-crewKitAssociation9,
-span.sheet-crewKitAssociation9,
-input[type=checkbox].sheet-crewKitAssociation19,
-span.sheet-crewKitAssociation19
+input[type=checkbox].crewKitAssociation9,
+span.crewKitAssociation9,
+input[type=checkbox].crewKitAssociation19,
+span.crewKitAssociation19
 {
     grid-row: 117;
 }
 
-input[type=checkbox].sheet-crewKitAssociation10,
-span.sheet-crewKitAssociation10,
-input[type=checkbox].sheet-crewKitAssociation20,
-span.sheet-crewKitAssociation20
+input[type=checkbox].crewKitAssociation10,
+span.crewKitAssociation10,
+input[type=checkbox].crewKitAssociation20,
+span.crewKitAssociation20
 {
     grid-row: 119;
     margin-top: 0;
 }
 
 /*Ship System Mods Selectors*/
-.sheet-shipSystemMods
+.shipSystemMods
 {
     position: absolute;
     width: 180px;
     height: 13px;
 }
 
-.sheet-shipModuleMods,
-.sheet-shuttleMods
+.shipModuleMods,
+.shuttleMods
 {
     position: absolute;
     width: 130px;
     height: 13px;
 }
 
-input.sheet-shipSystemMods,
-input.sheet-shipModuleMods,
-input.sheet-shuttleMods
+input.shipSystemMods,
+input.shipModuleMods,
+input.shuttleMods
 {
     opacity: 0;
     border: none;
     z-index: 19;
 }
 
-    input.sheet-shipSystemMods + span.sheet-shipSystemMods
+    input.shipSystemMods + span.shipSystemMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitMod.png);
         background-repeat: no-repeat;
@@ -2972,7 +2945,7 @@ input.sheet-shuttleMods
         z-index: 18;
     }
 
-    input.sheet-shipSystemMods:checked + span.sheet-shipSystemMods
+    input.shipSystemMods:checked + span.shipSystemMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitModChecked.png);
         background-repeat: no-repeat;
@@ -2982,8 +2955,8 @@ input.sheet-shuttleMods
         z-index: 18;
     }
 
-    input.sheet-shuttleMods + span.sheet-shuttleMods,
-    input.sheet-shipModuleMods + span.sheet-shipModuleMods
+    input.shuttleMods + span.shuttleMods,
+    input.shipModuleMods + span.shipModuleMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/moduleMod.png);
         background-repeat: no-repeat;
@@ -2993,8 +2966,8 @@ input.sheet-shuttleMods
         z-index: 18;
     }
 
-    input.sheet-shuttleMods:checked + span.sheet-shuttleMods,
-    input.sheet-shipModuleMods:checked + span.sheet-shipModuleMods
+    input.shuttleMods:checked + span.shuttleMods,
+    input.shipModuleMods:checked + span.shipModuleMods
     {
         background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/moduleMod_Checked.png);
         background-repeat: no-repeat;
@@ -3006,187 +2979,187 @@ input.sheet-shuttleMods
 
 /*Ship System Mod Locations*/
 /*Scanner*/
-input.sheet-shipSensorsMods,
-span.sheet-shipSensorsMods
+input.shipSensorsMods,
+span.shipSensorsMods
 {
     grid-column: 21;
     margin-left: 3px;
 }
 
-input.sheet-shipSensorsSurveySensor,
-span.sheet-shipSensorsSurveySensor
+input.shipSensorsSurveySensor,
+span.shipSensorsSurveySensor
 {
     grid-row: 18;
     margin-top: 5px;
 }
 
-input.sheet-shipSensorsDepthAnalyser,
-span.sheet-shipSensorsDepthAnalyser
+input.shipSensorsDepthAnalyser,
+span.shipSensorsDepthAnalyser
 {
     grid-row: 19;
     margin-top: 9px;
 }
 
-input.sheet-shipSensorsAreaEffect,
-span.sheet-shipSensorsAreaEffect
+input.shipSensorsAreaEffect,
+span.shipSensorsAreaEffect
 {
     grid-row: 21;
     margin-top: 5px;
 }
 
-input.sheet-shipSensorsRangeCompensator,
-span.sheet-shipSensorsRangeCompensator
+input.shipSensorsRangeCompensator,
+span.shipSensorsRangeCompensator
 {
     grid-row: 23;
     margin-top: 1px;
 }
 
 /*Grav Drive*/
-input.sheet-shipGravDriveMods,
-span.sheet-shipGravDriveMods
+input.shipGravDriveMods,
+span.shipGravDriveMods
 {
     grid-column: 39;
     margin-left: 2px;
 }
 
-input.sheet-shipGravDriveAtmosphericThrusters,
-span.sheet-shipGravDriveAtmosphericThrusters
+input.shipGravDriveAtmosphericThrusters,
+span.shipGravDriveAtmosphericThrusters
 {
     grid-row: 18;
     margin-top: 7px;
 }
 
-input.sheet-shipGravDriveOrbitalInjector,
-span.sheet-shipGravDriveOrbitalInjector
+input.shipGravDriveOrbitalInjector,
+span.shipGravDriveOrbitalInjector
 {
     grid-row: 20;
     margin-top: 1px;
 }
 
-input.sheet-shipGravDriveFoldInducer,
-span.sheet-shipGravDriveFoldInducer
+input.shipGravDriveFoldInducer,
+span.shipGravDriveFoldInducer
 {
     grid-row: 21;
     margin-top: 7px;
 }
 
-input.sheet-shipGravDriveWakeGenerator,
-span.sheet-shipGravDriveWakeGenerator
+input.shipGravDriveWakeGenerator,
+span.shipGravDriveWakeGenerator
 {
     grid-row: 23;
     margin-top: 1px;
 }
 
 /*Pulse Array*/
-input.sheet-shipPulseArrayMods,
-span.sheet-shipPulseArrayMods
+input.shipPulseArrayMods,
+span.shipPulseArrayMods
 {
     grid-column: 21;
     margin-left: 3px;
 }
 
-input.sheet-shipPulseArraySpaceTargeter,
-span.sheet-shipPulseArraySpaceTargeter
+input.shipPulseArraySpaceTargeter,
+span.shipPulseArraySpaceTargeter
 {
     grid-row: 34;
     margin-top: 6px;
 }
 
-input.sheet-shipPulseArraySurfaceTargeter,
-span.sheet-shipPulseArraySurfaceTargeter
+input.shipPulseArraySurfaceTargeter,
+span.shipPulseArraySurfaceTargeter
 {
     grid-row: 36;
     margin-top: 0px;
 }
 
-input.sheet-shipPulseArrayTractorLifter,
-span.sheet-shipPulseArrayTractorLifter
+input.shipPulseArrayTractorLifter,
+span.shipPulseArrayTractorLifter
 {
     grid-row: 39;
     margin-top: 0px;
 }
 
 /*Shields*/
-input.sheet-shipShieldsMods,
-span.sheet-shipShieldsMods
+input.shipShieldsMods,
+span.shipShieldsMods
 {
     grid-column: 39;
     margin-left: 2px;
 }
 
-input.sheet-shipShieldsKineticDeflector,
-span.sheet-shipShieldsKineticDeflector
+input.shipShieldsKineticDeflector,
+span.shipShieldsKineticDeflector
 {
     grid-row: 34;
     margin-top: 6px;
 }
 
-input.sheet-shipShieldsEnergyDissipater,
-span.sheet-shipShieldsEnergyDissipater
+input.shipShieldsEnergyDissipater,
+span.shipShieldsEnergyDissipater
 {
     grid-row: 36;
     margin-top: 0px;
 }
 
-input.sheet-shipShieldsHoloprojector,
-span.sheet-shipShieldsHoloprojector
+input.shipShieldsHoloprojector,
+span.shipShieldsHoloprojector
 {
     grid-row: 37;
     margin-top: 5px;
 }
 
-input.sheet-shipShieldsMultifield,
-span.sheet-shipShieldsMultifield
+input.shipShieldsMultifield,
+span.shipShieldsMultifield
 {
     grid-row: 39;
     margin-top: 0px;
 }
 
 /*Ship Module Fitting Locations*/
-input.sheet-shipLauncherMods,
-span.sheet-shipLauncherMods
+input.shipLauncherMods,
+span.shipLauncherMods
 {
     grid-column: 42;
     margin-left: 0px;
 }
 
-input.sheet-shipLauncherChaff,
-span.sheet-shipLauncherChaff
+input.shipLauncherChaff,
+span.shipLauncherChaff
 {
     grid-row: 70;
     margin-top: 5px;
 }
 
-input.sheet-shipLauncherIndictorMines,
-span.sheet-shipLauncherIndictorMines
+input.shipLauncherIndictorMines,
+span.shipLauncherIndictorMines
 {
     grid-row: 71;
     margin-top: 9px;
 }
 
-input.sheet-shipLauncherPlasmaMines,
-span.sheet-shipLauncherPlasmaMines
+input.shipLauncherPlasmaMines,
+span.shipLauncherPlasmaMines
 {
     grid-row: 73;
     margin-top: 5px;
 }
 
-input.sheet-shipLauncherTorpedo,
-span.sheet-shipLauncherTorpedo
+input.shipLauncherTorpedo,
+span.shipLauncherTorpedo
 {
     grid-row: 74;
     margin-top: 9px;
 }
 
 /*Flow Lines*/
-.sheet-flowLine
+.flowLine
 {
     position: absolute;
     z-index: 12;
     display: inline-block;
 }
 
-.sheet-operatorDirection
+.operatorDirection
 {
     grid-row: 2 / span 5;
     grid-column: 8 / span 25;
@@ -3199,7 +3172,7 @@ span.sheet-shipLauncherTorpedo
     height: 42px;
 }
 
-.sheet-playerCasterSheet .sheet-skillDirection
+.playerCasterSheet .skillDirection
 {
     grid-row: 2 / span 17;
     grid-column: 8 / span 58;
@@ -3212,7 +3185,7 @@ span.sheet-shipLauncherTorpedo
     height: 170px;
 }
 
-.sheet-shipSheet .sheet-skillDirection
+.shipSheet .skillDirection
 {
     grid-row: 7 / span 2;
     grid-column: 20 / span 33;
@@ -3226,7 +3199,7 @@ span.sheet-shipLauncherTorpedo
     height: 13px;
 }
 
-.sheet-playerCasterSheet .sheet-specialtyDirection
+.playerCasterSheet .specialtyDirection
 {
     grid-row: 10 / span 2;
     grid-column: 21 / span 47;
@@ -3239,7 +3212,7 @@ span.sheet-shipLauncherTorpedo
     height: 11px;
 }
 
-.sheet-shipSheet .sheet-specialtyDirection
+.shipSheet .specialtyDirection
 {
     grid-row: 8 / span 12;
     grid-column: 73 / span 10;
@@ -3252,7 +3225,7 @@ span.sheet-shipLauncherTorpedo
     height: 120px;
 }
 
-.sheet-communicationsSpecialtyFlow1
+.communicationsSpecialtyFlow1
 {
     grid-area: 10/25/58/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow1.png);
@@ -3264,7 +3237,7 @@ span.sheet-shipLauncherTorpedo
     height: 200px;
 }
 
-.sheet-communicationsSpecialtyFlow2
+.communicationsSpecialtyFlow2
 {
     grid-area: 10/25/58/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow2.png);
@@ -3276,7 +3249,7 @@ span.sheet-shipLauncherTorpedo
     height: 270px;
 }
 
-.sheet-communicationsSpecialtyFlow3
+.communicationsSpecialtyFlow3
 {
     grid-area: 10/25/58/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow3.png);
@@ -3288,7 +3261,7 @@ span.sheet-shipLauncherTorpedo
     height: 340px;
 }
 
-.sheet-communicationsSpecialtyFlow4
+.communicationsSpecialtyFlow4
 {
     grid-area: 10/25/58/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow4.png);
@@ -3300,7 +3273,7 @@ span.sheet-shipLauncherTorpedo
     height: 410px;
 }
 
-.sheet-communicationsSpecialtyFlow5
+.communicationsSpecialtyFlow5
 {
     grid-area: 10/25/58/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow5.png);
@@ -3312,7 +3285,7 @@ span.sheet-shipLauncherTorpedo
     height: 480px;
 }
 
-.sheet-operationsSpecialtyFlow1
+.operationsSpecialtyFlow1
 {
     grid-area: 10/48/30/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow1.png);
@@ -3324,7 +3297,7 @@ span.sheet-shipLauncherTorpedo
     height: 200px;
 }
 
-.sheet-operationsSpecialtyFlow2
+.operationsSpecialtyFlow2
 {
     grid-area: 10/48/37/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow2.png);
@@ -3336,7 +3309,7 @@ span.sheet-shipLauncherTorpedo
     height: 270px;
 }
 
-.sheet-operationsSpecialtyFlow3
+.operationsSpecialtyFlow3
 {
     grid-area: 10/48/44/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow3.png);
@@ -3348,7 +3321,7 @@ span.sheet-shipLauncherTorpedo
     height: 340px;
 }
 
-.sheet-operationsSpecialtyFlow4
+.operationsSpecialtyFlow4
 {
     grid-area: 10/48/51/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow4.png);
@@ -3360,7 +3333,7 @@ span.sheet-shipLauncherTorpedo
     height: 410px;
 }
 
-.sheet-operationsSpecialtyFlow5
+.operationsSpecialtyFlow5
 {
     grid-area: 10/48/58/78;
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow5.png);
@@ -3372,7 +3345,7 @@ span.sheet-shipLauncherTorpedo
     height: 480px;
 }
 
-.sheet-engineeringSpecialtyFlow1
+.engineeringSpecialtyFlow1
 {
     grid-row: 10 / span 20;
     grid-column: 70 / span 8;
@@ -3385,7 +3358,7 @@ span.sheet-shipLauncherTorpedo
     height: 200px;
 }
 
-.sheet-engineeringSpecialtyFlow2
+.engineeringSpecialtyFlow2
 {
     grid-row: 10 / span 27;
     grid-column: 70 / span 8;
@@ -3398,7 +3371,7 @@ span.sheet-shipLauncherTorpedo
     height: 270px;
 }
 
-.sheet-engineeringSpecialtyFlow3
+.engineeringSpecialtyFlow3
 {
     grid-row: 10 / span 34;
     grid-column: 70 / span 8;
@@ -3411,7 +3384,7 @@ span.sheet-shipLauncherTorpedo
     height: 340px;
 }
 
-.sheet-engineeringSpecialtyFlow4
+.engineeringSpecialtyFlow4
 {
     grid-row: 10 / span 41;
     grid-column: 70 / span 8;
@@ -3424,7 +3397,7 @@ span.sheet-shipLauncherTorpedo
     height: 410px;
 }
 
-.sheet-engineeringSpecialtyFlow5
+.engineeringSpecialtyFlow5
 {
     grid-row: 10 / span 48;
     grid-column: 70 / span 8;
@@ -3437,7 +3410,7 @@ span.sheet-shipLauncherTorpedo
     height: 480px;
 }
 
-.sheet-toolCrewKitDirection
+.toolCrewKitDirection
 {
     grid-row: 10 / span 51;
     grid-column: 40 / span 27;
@@ -3450,7 +3423,7 @@ span.sheet-shipLauncherTorpedo
     height: 510px;
 }
 
-.sheet-toolShipDirection
+.toolShipDirection
 {
     grid-row: 26 / span 22;
     margin-top: 0;
@@ -3464,7 +3437,7 @@ span.sheet-shipLauncherTorpedo
     height: 220px;
 }
 
-.sheet-trailerDirection
+.trailerDirection
 {
     grid-row: 44 / span 20;
     margin-top: 0px;
@@ -3478,7 +3451,7 @@ span.sheet-shipLauncherTorpedo
     height: 200px;
 }
 
-.sheet-chargeCrewKitDirection
+.chargeCrewKitDirection
 {
     grid-row: 55 / span 9;
     grid-column: 13 / span 2;
@@ -3492,7 +3465,7 @@ span.sheet-shipLauncherTorpedo
     margin-top: 6px;
 }
 
-.sheet-chargeSystemDirection
+.chargeSystemDirection
 {
     grid-row: 25 / span 5;
     grid-column: 12 / span 2;
@@ -3506,7 +3479,7 @@ span.sheet-shipLauncherTorpedo
     margin-top: 3px;
 }
 
-.sheet-playerCasterSheet .sheet-advantageDirection
+.playerCasterSheet .advantageDirection
 {
     grid-row: 36 / span 9;
     grid-column: 70 / span 2;
@@ -3520,7 +3493,7 @@ span.sheet-shipLauncherTorpedo
     margin-left: 5px;
 }
 
-.sheet-shipSheet .sheet-advantageDirection
+.shipSheet .advantageDirection
 {
     grid-row: 64 / span 9;
     grid-column: 9 / span 2;
@@ -3534,7 +3507,7 @@ span.sheet-shipLauncherTorpedo
     margin-left: 5px;
 }
 
-.sheet-playerCasterSheet .sheet-threatDirection
+.playerCasterSheet .threatDirection
 {
     grid-row: 48 / span 2;
     grid-column: 75 / span 8;
@@ -3547,7 +3520,7 @@ span.sheet-shipLauncherTorpedo
     height: 13px;
 }
 
-.sheet-shipSheet .sheet-threatDirection
+.shipSheet .threatDirection
 {
     grid-row: 53 / span 2;
     grid-column: 14 / span 8;
@@ -3562,7 +3535,7 @@ span.sheet-shipLauncherTorpedo
 
 
 /*Ship*/
-.sheet-shipAspects
+.shipAspects
 {
     grid-area: aspects;
     width: 100%;
@@ -3574,7 +3547,7 @@ span.sheet-shipLauncherTorpedo
     z-index: 0;
 }
 
-.sheet-designation
+.designation
 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -3582,7 +3555,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 2;
 }
 
-.sheet-designationPrefix
+.designationPrefix
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -3594,7 +3567,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 2;
 }
 
-.sheet-designationName
+.designationName
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -3606,7 +3579,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 2;
 }
 
-.sheet-patron
+.patron
 {
     text-align: start;
     flex-flow: nowrap;
@@ -3617,7 +3590,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 3;
 }
 
-.sheet-patronName
+.patronName
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -3629,7 +3602,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 3;
 }
 
-.sheet-flag
+.flag
 {
     text-align: start;
     flex-flow: nowrap;
@@ -3640,7 +3613,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 4;
 }
 
-.sheet-flagType
+.flagType
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -3652,7 +3625,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 4;
 }
 
-.sheet-captain
+.captain
 {
     text-align: start;
     flex-flow: nowrap;
@@ -3663,7 +3636,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 3;
 }
 
-.sheet-captainName
+.captainName
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -3675,7 +3648,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 3;
 }
 
-.sheet-tactics
+.tactics
 {
     text-align: start;
     flex-flow: nowrap;
@@ -3686,7 +3659,7 @@ span.sheet-shipLauncherTorpedo
     grid-row-end: 4;
 }
 
-.sheet-tacticList
+.tacticList
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -3701,18 +3674,20 @@ span.sheet-shipLauncherTorpedo
 /* ************ */
 /* Medium Sheet */
 /* ************ */
-.sheet-spellcastingProcess
+.spellcastingProcess
 {
     grid-area: 1 / 1 / 2 / span 3;
 }
-    .sheet-spellcastingProcess > ol
+
+    .spellcastingProcess > ol
     {
         list-style: lower-roman;
         list-style-position: inside;
         font-weight: 600;
         font-size: 13px;
     }
-        .sheet-spellcastingProcess > ol > li > ol
+
+        .spellcastingProcess > ol > li > ol
         {
             list-style: none;
             text-indent: 1em;
@@ -3720,12 +3695,12 @@ span.sheet-shipLauncherTorpedo
             font-size: 11px;
         }
 
-.sheet-magicCircle
+.magicCircle
 {
     grid-area: 2 / 2 / span 2 / span 2;
 }
 
-.sheet-ripples
+.ripples
 {
     grid-area: 3 / -2 / 4 / -1;
     display: grid;
@@ -3735,74 +3710,90 @@ span.sheet-shipLauncherTorpedo
     grid-template-columns: auto repeat(2,45px) 16px;
     grid-template-rows: auto repeat(13,25px) 15px;
 }
- input[type="number"].sheet-rippleBox
-    {
-        height: 100%;
-        width: 100%;
-        font-size: 18px;
-    }
-    .sheet-ripples > .sheet-rippleHarmony
-    {
-        grid-column: 2 / 3;
-    }
-    .sheet-ripples > .sheet-rippleChaos
-    {
-        grid-column: 3 / 4;
-    }
-    .sheet-ripples > .sheet-ripple1
-    {
-        grid-row: 2 / 3;
-    }
-    .sheet-ripples > .sheet-ripple2
-    {
-        grid-row: 3 / 4;
-    }
-    .sheet-ripples > .sheet-ripple3
-    {
-        grid-row: 4 / 5;
-    }
-    .sheet-ripples > .sheet-ripple4
-    {
-        grid-row: 5 / 6;
-    }
-    .sheet-ripples > .sheet-ripple5
-    {
-        grid-row: 6 / 7;
-    }
-    .sheet-ripples > .sheet-ripple6
-    {
-        grid-row: 7 / 8;
-    }
-    .sheet-ripples > .sheet-ripple7
-    {
-        grid-row: 8 / 9;
-    }
-    .sheet-ripples > .sheet-ripple8
-    {
-        grid-row: 9 / 10;
-    }
-    .sheet-ripples > .sheet-ripple9
-    {
-        grid-row: 10 / 11;
-    }
-    .sheet-ripples > .sheet-ripple10
-    {
-        grid-row: 11 / 12;
-    }
-    .sheet-ripples > .sheet-ripple11
-    {
-        grid-row: 12 / 13;
-    }
-    .sheet-ripples > .sheet-ripple12
-    {
-        grid-row: 13 / 14;
-    }
-    .sheet-ripples > .sheet-ripple13
-    {
-        grid-row: 14 / 15;
-    }
 
-.sheet-resources
+input[type="number"].rippleBox
+{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+}
+
+.ripples > .rippleHarmony
+{
+    grid-column: 2 / 3;
+}
+
+.ripples > .rippleChaos
+{
+    grid-column: 3 / 4;
+}
+
+.ripples > .ripple1
+{
+    grid-row: 2 / 3;
+}
+
+.ripples > .ripple2
+{
+    grid-row: 3 / 4;
+}
+
+.ripples > .ripple3
+{
+    grid-row: 4 / 5;
+}
+
+.ripples > .ripple4
+{
+    grid-row: 5 / 6;
+}
+
+.ripples > .ripple5
+{
+    grid-row: 6 / 7;
+}
+
+.ripples > .ripple6
+{
+    grid-row: 7 / 8;
+}
+
+.ripples > .ripple7
+{
+    grid-row: 8 / 9;
+}
+
+.ripples > .ripple8
+{
+    grid-row: 9 / 10;
+}
+
+.ripples > .ripple9
+{
+    grid-row: 10 / 11;
+}
+
+.ripples > .ripple10
+{
+    grid-row: 11 / 12;
+}
+
+.ripples > .ripple11
+{
+    grid-row: 12 / 13;
+}
+
+.ripples > .ripple12
+{
+    grid-row: 13 / 14;
+}
+
+.ripples > .ripple13
+{
+    grid-row: 14 / 15;
+}
+
+.resources
 {
     grid-area: 3 / 2 / 4 / -2;
     display: grid;
@@ -3811,38 +3802,42 @@ span.sheet-shipLauncherTorpedo
     grid-template-columns: 149px repeat(21,10px) auto;
     grid-template-rows: 14px 118px 6px 118px 6px 118px auto;
 }
-    .sheet-resources > .sheet-resultResource
+
+    .resources > .resultResource
     {
         grid-area: 2 / 2 / 3 / span 12;
         height: 100%;
         width: 100%;
     }
-    .sheet-resources > .sheet-paradoxResource
+
+    .resources > .paradoxResource
     {
         grid-area: 4 / 6 / 5 / span 12;
         height: 100%;
         width: 100%;
     }
-    .sheet-resources > .sheet-aetherResource
+
+    .resources > .aetherResource
     {
         grid-area: 6 / 11 / 7 / span 12;
         height: 100%;
         width: 100%;
     }
-    input[type="number"].sheet-resourceBox
-    {
-        height: 100%;
-        width: 100%;
-        font-size: 30px;
-    }
 
-.sheet-disequilibriumWidget
+input[type="number"].resourceBox
+{
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+}
+
+.disequilibriumWidget
 {
     grid-area: 4 / 1 / 5 / -1;
 }
 
 /* Table Spread */
-.sheet-tableSpread
+.tableSpread
 {
     display: grid;
     width: 100%;
@@ -3852,25 +3847,29 @@ span.sheet-shipLauncherTorpedo
     align-items: center;
     justify-items: center;
 }
-    .sheet-tableSpread > .sheet-leftLeg
+
+    .tableSpread > .leftLeg
     {
         grid-area: 3 / 2 / span 2 / span 2;
         display: grid;
         z-index: 4;
     }
-    .sheet-tableSpread > .sheet-rightLeg
+
+    .tableSpread > .rightLeg
     {
         grid-area: 3 / 5 / span 2 / span 3;
         display: grid;
         z-index: 4;
     }
-    .sheet-tableSpread > .sheet-tabletop
+
+    .tableSpread > .tabletop
     {
         grid-area: 2 / 3 / span 2 / span 3;
         display: grid;
         z-index: 5;
     }
-    .sheet-tableSpread > .sheet-editTableSpread
+
+    .tableSpread > .editTableSpread
     {
         grid-area: 2 / 2 / -2 / -2;
         display: grid;
@@ -3881,21 +3880,21 @@ span.sheet-shipLauncherTorpedo
     }
 
 /* Edit Cards */
-.sheet-editCog
+.editCog
 {
     grid-area: 1 / 7 / 2 / 8;
     width: 25px;
     height: 25px;
-    
 }
-input.sheet-editCog
+
+input.editCog
 {
     opacity: 0;
     cursor: pointer;
     z-index: 13;
 }
 
-span.sheet-editCog
+span.editCog
 {
     background-repeat: no-repeat;
     background-position: center;
@@ -3905,11 +3904,12 @@ span.sheet-editCog
     z-index: 12;
 }
 
-input.sheet-editToggle[value="0"] + .sheet-editMenu
+input.editToggle[value="0"] + .editMenu
 {
     display: none;
 }
-input.sheet-editToggle[value="1"] + .sheet-editMenu
+
+input.editToggle[value="1"] + .editMenu
 {
     display: grid;
     background-size: 100%;
@@ -3918,7 +3918,7 @@ input.sheet-editToggle[value="1"] + .sheet-editMenu
 }
 
 /* Cards */
-.sheet-card
+.card
 {
     background-repeat: no-repeat;
     background-position: center;
@@ -3928,89 +3928,89 @@ input.sheet-editToggle[value="1"] + .sheet-editMenu
     height: 350px;
 }
 
-.sheet-landscapeCard
+.landscapeCard
 {
     transform: rotate(-90deg);
 }
 
 
-input.sheet-facingChoice[value="1"] + input.sheet-cardChoice + span.sheet-card
+input.facingChoice[value="1"] + input.cardChoice + span.card
 {
     transform: rotate(-180deg);
 }
 
-input.sheet-facingChoice[value="1"] + input.sheet-cardChoice + span.sheet-landscapeCard
+input.facingChoice[value="1"] + input.cardChoice + span.landscapeCard
 {
     transform: rotate(-270deg);
 }
 
 /* Arcana Card Background Image*/
-input[value="0"].sheet-cardChoice + span.sheet-card
+input[value="0"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_0.png);
 }
 
-input[value="1"].sheet-cardChoice + span.sheet-card
+input[value="1"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_1.png);
 }
 
-input[value="2"].sheet-cardChoice + span.sheet-card
+input[value="2"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_2.png);
 }
 
-input[value="3"].sheet-cardChoice + span.sheet-card
+input[value="3"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_3.png);
 }
 
-input[value="4"].sheet-cardChoice + span.sheet-card
+input[value="4"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_4.png);
 }
 
-input[value="5"].sheet-cardChoice + span.sheet-card
+input[value="5"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_5.png);
 }
 
-input[value="6"].sheet-cardChoice + span.sheet-card
+input[value="6"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_6.png);
 }
 
-input[value="7"].sheet-cardChoice + span.sheet-card
+input[value="7"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_7.png);
 }
 
-input[value="8"].sheet-cardChoice + span.sheet-card
+input[value="8"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_8.png);
 }
 
-input[value="9"].sheet-cardChoice + span.sheet-card
+input[value="9"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_9.png);
 }
 
-input[value="10"].sheet-cardChoice + span.sheet-card
+input[value="10"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_10.png);
 }
 
-input[value="11"].sheet-cardChoice + span.sheet-card
+input[value="11"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_11.png);
 }
 
-input[value="12"].sheet-cardChoice + span.sheet-card
+input[value="12"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_12.png);
 }
 
-input[value="13"].sheet-cardChoice + span.sheet-card
+input[value="13"].cardChoice + span.card
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/arcanaCard_13.png);
 }
@@ -4021,7 +4021,7 @@ input[value="13"].sheet-cardChoice + span.sheet-card
 /* ******************* */
 
 /* True Name */
-.sheet-trueNameWidget
+.trueNameWidget
 {
     grid-area: 1 / 1 / 2 / span 2;
     display: grid;
@@ -4032,34 +4032,34 @@ input[value="13"].sheet-cardChoice + span.sheet-card
     grid-gap: 0px;
 }
 
-    .sheet-trueNameWidget > div.sheet-trueNamePic
+    .trueNameWidget > div.trueNamePic
     {
         grid-area: 1 / 1 / 2 / 2;
         width: 100%;
         height: 100%;
     }
 
-    .sheet-trueNameWidget > textarea.sheet-trueNamePic
+    .trueNameWidget > textarea.trueNamePic
     {
         width: 100%;
         height: 100%;
     }
 
-    .sheet-trueNameWidget > div.sheet-trueNamePhrase
+    .trueNameWidget > div.trueNamePhrase
     {
         grid-area: 1 / 2 / 2 / 3;
         width: 100%;
         height: 100%;
     }
 
-    .sheet-trueNameWidget > textarea.sheet-trueNamePhrase
+    .trueNameWidget > textarea.trueNamePhrase
     {
         width: 100%;
         height: 100%;
     }
 
 /* Description */
-.sheet-descriptionWidget
+.descriptionWidget
 {
     grid-area: 2 / 1 / 3 / 2 span;
     display: grid;
@@ -4070,33 +4070,33 @@ input[value="13"].sheet-cardChoice + span.sheet-card
     width: 100%;
 }
 
-    .sheet-descriptionWidget > .sheet-wizardName
+    .descriptionWidget > .wizardName
     {
         grid-area: 1 / 2 / 2 / 3;
     }
 
-    .sheet-descriptionWidget > .sheet-pronouns
+    .descriptionWidget > .pronouns
     {
         grid-area: 2 / 2 / 3 / 3;
     }
 
-    .sheet-descriptionWidget > .sheet-apprenticeship
+    .descriptionWidget > .apprenticeship
     {
         grid-area: 3 / 2 / 4 / 3;
     }
 
-    .sheet-descriptionWidget > .sheet-characteristics
+    .descriptionWidget > .characteristics
     {
         grid-area: 4 / 2 / 5 / 3;
     }
 
-    .sheet-descriptionWidget > .sheet-description
+    .descriptionWidget > .description
     {
         grid-area: 5 / 2 / 6 / 3;
     }
 
 /* Aether */
-.sheet-aetherWidget
+.aetherWidget
 {
     grid-area: 1 / 3 / span 2 / 4;
     display: grid;
@@ -4106,7 +4106,8 @@ input[value="13"].sheet-cardChoice + span.sheet-card
     grid-template-rows: 227px 120px auto;
     grid-gap: 0px;
 }
-    .sheet-aetherWidget > .sheet-aetherTracker
+
+    .aetherWidget > .aetherTracker
     {
         grid-area: 2 / 1 / 3 / 2;
         width: 120px;
@@ -4115,7 +4116,7 @@ input[value="13"].sheet-cardChoice + span.sheet-card
     }
 
 /* Intentions */
-.sheet-intentionWidget
+.intentionWidget
 {
     grid-area: 3 / 1 / 4 / 2;
     display: grid;
@@ -4126,63 +4127,63 @@ input[value="13"].sheet-cardChoice + span.sheet-card
     grid-row-gap: 4px;
 }
 
-.sheet-conduitBox
+.conduitBox
 {
     grid-column: 2 / 3;
 }
 
-.sheet-conjureBox
+.conjureBox
 {
     grid-row: 2 / 3;
 }
 
-.sheet-decayBox
+.decayBox
 {
     grid-row: 3 / 4;
 }
 
-.sheet-dispelBox
+.dispelBox
 {
     grid-row: 4 / 5;
 }
 
-.sheet-enchantBox
+.enchantBox
 {
     grid-row: 5 / 6;
 }
 
-.sheet-manipulateBox
+.manipulateBox
 {
     grid-row: 6 / 7;
 }
 
-.sheet-sacrificeBox
+.sacrificeBox
 {
     grid-row: 7 / 8;
 }
 
-.sheet-scryBox
+.scryBox
 {
     grid-row: 8 / 9;
 }
 
-.sheet-summonBox
+.summonBox
 {
     grid-row: 9 / 10;
 }
 
-.sheet-transmuteBox
+.transmuteBox
 {
     grid-row: 10 / 11;
 }
 
-.sheet-wardBox
+.wardBox
 {
     grid-row: 11 / 12;
 }
 
 /* Arts */
-.sheet-artsWidget
+.artsWidget
 {
     grid-area: 3 / 2 / 2 span / 2 span;
     display: grid;
@@ -4193,7 +4194,7 @@ input[value="13"].sheet-cardChoice + span.sheet-card
     grid-row-gap: 10px;
 }
 
-.sheet-skilldice
+.skilldice
 {
     grid-column: 2 / 3;
     display: grid;
@@ -4205,118 +4206,118 @@ input[value="13"].sheet-cardChoice + span.sheet-card
     grid-column-gap: 3px;
 }
 
-    .sheet-skilldice.sheet-art1
+    .skilldice.art1
     {
         grid-row: 2 / 3;
     }
 
-    .sheet-skilldice.sheet-art2
+    .skilldice.art2
     {
         grid-row: 3 / 4;
     }
 
-    .sheet-skilldice.sheet-art3
+    .skilldice.art3
     {
         grid-row: 4 / 5;
     }
 
-    .sheet-skilldice.sheet-art4
+    .skilldice.art4
     {
         grid-row: 5 / 6;
     }
 
-    .sheet-skilldice.sheet-art5
+    .skilldice.art5
     {
         grid-row: 6 / 7;
     }
 
-    .sheet-skilldice.sheet-art6
+    .skilldice.art6
     {
         grid-row: 7 / 8;
     }
 
-    .sheet-skilldice.sheet-art7
+    .skilldice.art7
     {
         grid-row: 8 / 9;
     }
 
-    .sheet-skilldice.sheet-art8
+    .skilldice.art8
     {
         grid-row: 9 / 10;
     }
 
-    .sheet-skilldice.sheet-art9
+    .skilldice.art9
     {
         grid-row: 10 / 11;
     }
 
-    .sheet-skilldice.sheet-art10
+    .skilldice.art10
     {
         grid-row: 11 / 12;
     }
 
-    .sheet-skilldice.sheet-art11
+    .skilldice.art11
     {
         grid-row: 12 / 13;
     }
 
-    .sheet-skilldice.sheet-art12
+    .skilldice.art12
     {
         grid-row: 13 / 14;
     }
 
-    .sheet-skilldice.sheet-art13
+    .skilldice.art13
     {
         grid-row: 14 / 15;
     }
 
-    .sheet-skilldice.sheet-art14
+    .skilldice.art14
     {
         grid-row: 15 / 16;
     }
 
-    .sheet-skilldice > .sheet-diceCheckbox
+    .skilldice > .diceCheckbox
     {
         grid-row: 1 / 2;
     }
 
-    .sheet-skilldice > .sheet-studyCheckbox
+    .skilldice > .studyCheckbox
     {
         grid-row: 2 / 3;
     }
 
-    .sheet-skilldice > .sheet-diePip0
+    .skilldice > .diePip0
     {
         grid-column: 1 / 2;
     }
 
-    .sheet-skilldice > .sheet-diePip1
+    .skilldice > .diePip1
     {
         grid-column: 2 / 3;
     }
 
-    .sheet-skilldice > .sheet-diePip2
+    .skilldice > .diePip2
     {
         grid-column: 3 / 4;
     }
 
-    .sheet-skilldice > .sheet-diePip3
+    .skilldice > .diePip3
     {
         grid-column: 4 / 5;
     }
 
-    .sheet-skilldice > .sheet-diePip4
+    .skilldice > .diePip4
     {
         grid-column: 6 / 7;
     }
 
-    .sheet-skilldice > .sheet-diePip5
+    .skilldice > .diePip5
     {
         grid-column: 7 / 8;
     }
 
 /* Ascension */
-.sheet-ascensionWidget
+.ascensionWidget
 {
     grid-area: 4 / 1 / span 2 / 2;
     display: grid;
@@ -4328,7 +4329,7 @@ input[value="13"].sheet-cardChoice + span.sheet-card
 
 
 /* Fate */
-.sheet-fateWidget
+.fateWidget
 {
     grid-area: 6 / 1 / 7 / -1;
 }
@@ -4337,14 +4338,14 @@ input[value="13"].sheet-cardChoice + span.sheet-card
 /*           Graphics              */
 /* ******************************* */
 /* Hide Checkboxes and Radio boxes */
-input[type="checkbox"].sheet-hideCheckbox, input[type="radio"].sheet-hideCheckbox
+input[type="checkbox"].hideCheckbox, input[type="radio"].hideCheckbox
 {
     opacity: 0;
     cursor: pointer;
     z-index: 3;
 }
 /* Subgrid for Tug Conditions */
-.sheet-launch-bay-tug-conditions
+.launch-bay-tug-conditions
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -4359,7 +4360,7 @@ input[type="checkbox"].sheet-hideCheckbox, input[type="radio"].sheet-hideCheckbo
     margin-top: 10px;
 }
 
-    .sheet-launch-bay-tug-conditions > input
+    .launch-bay-tug-conditions > input
     {
         width: 100%;
         height: 100%;
@@ -4367,27 +4368,27 @@ input[type="checkbox"].sheet-hideCheckbox, input[type="radio"].sheet-hideCheckbo
         position: absolute;
     }
 
-    .sheet-launch-bay-tug-conditions > .sheet-resilience-slot-2
+    .launch-bay-tug-conditions > .resilience-slot-2
     {
         grid-area: resilience2;
     }
 
-    .sheet-launch-bay-tug-conditions > .sheet-resilience-slot-1
+    .launch-bay-tug-conditions > .resilience-slot-1
     {
         grid-area: resilience1;
     }
 
-    .sheet-launch-bay-tug-conditions > .sheet-integrity
+    .launch-bay-tug-conditions > .integrity
     {
         grid-area: integrity;
     }
 
-    .sheet-launch-bay-tug-conditions > .sheet-vital
+    .launch-bay-tug-conditions > .vital
     {
         grid-area: vitality;
     }
 /* Subgrid for Trailer Conditions */
-.sheet-launch-bay-trailer-conditions
+.launch-bay-trailer-conditions
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -4402,7 +4403,7 @@ input[type="checkbox"].sheet-hideCheckbox, input[type="radio"].sheet-hideCheckbo
     margin-top: 4px;
 }
 
-    .sheet-launch-bay-trailer-conditions > input
+    .launch-bay-trailer-conditions > input
     {
         width: 100%;
         height: 100%;
@@ -4410,22 +4411,22 @@ input[type="checkbox"].sheet-hideCheckbox, input[type="radio"].sheet-hideCheckbo
         position: absolute;
     }
 
-    .sheet-launch-bay-trailer-conditions > .sheet-resilience-slot
+    .launch-bay-trailer-conditions > .resilience-slot
     {
         grid-area: resilience;
     }
 
-    .sheet-launch-bay-trailer-conditions > .sheet-integrity
+    .launch-bay-trailer-conditions > .integrity
     {
         grid-area: integrity;
     }
 
-    .sheet-launch-bay-trailer-conditions > .sheet-vital
+    .launch-bay-trailer-conditions > .vital
     {
         grid-area: vitality;
     }
 /* Inline Checkbox Location */
-input[type="checkbox"].sheet-inlineCheckbox, input[type="radio"].sheet-inlineCheckbox
+input[type="checkbox"].inlineCheckbox, input[type="radio"].inlineCheckbox
 {
     width: 13px;
     height: 100%;
@@ -4434,7 +4435,7 @@ input[type="checkbox"].sheet-inlineCheckbox, input[type="radio"].sheet-inlineChe
     vertical-align: bottom;
 }
 
-input[type="checkbox"].sheet-inlineCheckboxSmall, input[type="radio"].sheet-inlineCheckboxSmall
+input[type="checkbox"].inlineCheckboxSmall, input[type="radio"].inlineCheckboxSmall
 {
     width: 8px;
     height: 100%;
@@ -4443,7 +4444,7 @@ input[type="checkbox"].sheet-inlineCheckboxSmall, input[type="radio"].sheet-inli
     vertical-align: bottom;
 }
 
-input[type="checkbox"].sheet-inlineCheckboxMedium, input[type="radio"].sheet-inlineCheckboxMedium
+input[type="checkbox"].inlineCheckboxMedium, input[type="radio"].inlineCheckboxMedium
 {
     width: 15px;
     height: 100%;
@@ -4452,7 +4453,7 @@ input[type="checkbox"].sheet-inlineCheckboxMedium, input[type="radio"].sheet-inl
     vertical-align: bottom;
 }
 
-input[type="radio"].sheet-inlineCapacityCheckbox
+input[type="radio"].inlineCapacityCheckbox
 {
     width: 10px;
     height: 100%;
@@ -4461,7 +4462,7 @@ input[type="radio"].sheet-inlineCapacityCheckbox
     vertical-align: middle;
 }
 
-input[type="radio"].sheet-inlinePipCheckbox
+input[type="radio"].inlinePipCheckbox
 {
     width: 10px;
     height: 100%;
@@ -4470,8 +4471,8 @@ input[type="radio"].sheet-inlinePipCheckbox
     vertical-align: middle;
 }
 
-input[type="radio"].sheet-studyCheckbox,
-span.sheet-studyCheckbox
+input[type="radio"].studyCheckbox,
+span.studyCheckbox
 {
     width: 12px;
     height: 6px;
@@ -4481,8 +4482,8 @@ span.sheet-studyCheckbox
     background-size: 12px 6px;
 }
 
-input[type="radio"].sheet-diceCheckbox,
-span.sheet-diceCheckbox
+input[type="radio"].diceCheckbox,
+span.diceCheckbox
 {
     width: 12px;
     height: 14px;
@@ -4493,7 +4494,7 @@ span.sheet-diceCheckbox
 }
 
 
-input[type="radio"].sheet-inlineCapacityCheckboxSmall
+input[type="radio"].inlineCapacityCheckboxSmall
 {
     width: 8px;
     height: 100%;
@@ -4502,7 +4503,7 @@ input[type="radio"].sheet-inlineCapacityCheckboxSmall
     vertical-align: middle;
 }
 
-input[type="checkbox"].sheet-inlineCheckboxLarge, input[type="radio"].sheet-inlineCheckboxLarge
+input[type="checkbox"].inlineCheckboxLarge, input[type="radio"].inlineCheckboxLarge
 {
     width: 25px;
     height: 100%;
@@ -4511,7 +4512,7 @@ input[type="checkbox"].sheet-inlineCheckboxLarge, input[type="radio"].sheet-inli
     vertical-align: bottom;
 }
 /* Inline Image Location */
-span.sheet-inlineArmour
+span.inlineArmour
 {
     display: inline-block;
     background-size: 14px 14px;
@@ -4520,7 +4521,7 @@ span.sheet-inlineArmour
     margin-left: -15px;
 }
 
-span.sheet-inlineArmourSelectors
+span.inlineArmourSelectors
 {
     display: inline-block;
     background-size: 8px 8px;
@@ -4529,7 +4530,7 @@ span.sheet-inlineArmourSelectors
     margin-left: -8px;
 }
 
-span.sheet-inlineCapacityPips
+span.inlineCapacityPips
 {
     display: inline-block;
     background-size: 10px 15px;
@@ -4539,7 +4540,7 @@ span.sheet-inlineCapacityPips
     vertical-align: middle;
 }
 
-span.sheet-inlineOvercharge
+span.inlineOvercharge
 {
     display: inline-block;
     background-size: 40px 40px;
@@ -4548,7 +4549,7 @@ span.sheet-inlineOvercharge
     margin-left: -40px;
 }
 
-span.sheet-inlineCapacityPipsSmall
+span.inlineCapacityPipsSmall
 {
     display: inline-block;
     background-size: 8px 12px;
@@ -4558,7 +4559,7 @@ span.sheet-inlineCapacityPipsSmall
     vertical-align: middle;
 }
 
-span.sheet-inlinePips
+span.inlinePips
 {
     display: inline-block;
     background-size: 10px 10px;
@@ -4568,7 +4569,7 @@ span.sheet-inlinePips
     vertical-align: middle;
 }
 
-span.sheet-inlinePipsLarge
+span.inlinePipsLarge
 {
     display: inline-block;
     background-size: 24px 24px;
@@ -4578,7 +4579,7 @@ span.sheet-inlinePipsLarge
     vertical-align: middle;
 }
 /* Grid Checkbox location */
-input[type="checkbox"].sheet-smallCheckbox, input[type="radio"].sheet-smallCheckbox
+input[type="checkbox"].smallCheckbox, input[type="radio"].smallCheckbox
 {
     width: 13px;
     height: 100%;
@@ -4588,7 +4589,7 @@ input[type="checkbox"].sheet-smallCheckbox, input[type="radio"].sheet-smallCheck
     vertical-align: middle;
 }
 
-input[type="checkbox"].sheet-largeCheckbox, input[type="radio"].sheet-largeCheckbox
+input[type="checkbox"].largeCheckbox, input[type="radio"].largeCheckbox
 {
     width: 25px;
     height: 100%;
@@ -4598,7 +4599,7 @@ input[type="checkbox"].sheet-largeCheckbox, input[type="radio"].sheet-largeCheck
     vertical-align: middle;
 }
 
-input[type="checkbox"].sheet-mediumCheckbox, input[type="radio"].sheet-mediumCheckbox
+input[type="checkbox"].mediumCheckbox, input[type="radio"].mediumCheckbox
 {
     width: 18px;
     height: 100%;
@@ -4608,9 +4609,9 @@ input[type="checkbox"].sheet-mediumCheckbox, input[type="radio"].sheet-mediumChe
     vertical-align: middle;
 }
 
-input[type="checkbox"].sheet-maxCheckbox,
-input[type="radio"].sheet-maxCheckbox,
-span.sheet-maxCheckbox
+input[type="checkbox"].maxCheckbox,
+input[type="radio"].maxCheckbox,
+span.maxCheckbox
 {
     width: 98%;
     height: 98%;
@@ -4621,7 +4622,7 @@ span.sheet-maxCheckbox
 }
 
 /*  Image Location  */
-span.sheet-largePips
+span.largePips
 {
     background-size: 24px 24px;
     height: 25px;
@@ -4629,7 +4630,7 @@ span.sheet-largePips
     vertical-align: middle;
 }
 
-span.sheet-mediumPips
+span.mediumPips
 {
     background-size: 18px 18px;
     height: 19px;
@@ -4637,7 +4638,7 @@ span.sheet-mediumPips
     vertical-align: middle;
 }
 
-span.sheet-mediumChecks
+span.mediumChecks
 {
     background-size: 19px 16px;
     height: 19px;
@@ -4645,7 +4646,7 @@ span.sheet-mediumChecks
     vertical-align: middle;
 }
 
-span.sheet-smallPips
+span.smallPips
 {
     background-size: 10px 10px;
     height: 13px;
@@ -4655,7 +4656,7 @@ span.sheet-smallPips
 /* Graphics */
 
 /* Dice */
-input[type="radio"] + span.sheet-ZeroDie
+input[type="radio"] + span.ZeroDie
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D10ZeroPip.png);
     background-repeat: no-repeat;
@@ -4664,7 +4665,7 @@ input[type="radio"] + span.sheet-ZeroDie
     z-index: 2;
 }
 
-input[type="radio"] + span.sheet-D10, span.sheet-FittingD10
+input[type="radio"] + span.D10, span.FittingD10
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D10PipFilled.png);
     background-repeat: no-repeat;
@@ -4673,7 +4674,7 @@ input[type="radio"] + span.sheet-D10, span.sheet-FittingD10
     z-index: 2;
 }
 
-input[type="radio"]:checked + span.sheet-D10 ~ input[type="radio"] + span.sheet-D10, input[type="radio"]:checked + span.sheet-ZeroDie ~ input[type="radio"] + span.sheet-D10
+input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10, input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D10Pip.png);
     background-repeat: no-repeat;
@@ -4682,7 +4683,7 @@ input[type="radio"]:checked + span.sheet-D10 ~ input[type="radio"] + span.sheet-
     z-index: 2;
 }
 
-input[type="radio"] + span.sheet-Boost, span.sheet-FittingBoost
+input[type="radio"] + span.Boost, span.FittingBoost
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/BoostFilled.png);
     background-repeat: no-repeat;
@@ -4691,7 +4692,7 @@ input[type="radio"] + span.sheet-Boost, span.sheet-FittingBoost
     z-index: 2;
 }
 
-input[type="radio"]:checked + span.sheet-Boost ~ input[type="radio"] + span.sheet-Boost, input[type="radio"]:checked + span.sheet-ZeroDie ~ input[type="radio"] + span.sheet-Boost
+input[type="radio"]:checked + span.Boost ~ input[type="radio"] + span.Boost, input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.Boost
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Boost.png);
     background-repeat: no-repeat;
@@ -4700,7 +4701,7 @@ input[type="radio"]:checked + span.sheet-Boost ~ input[type="radio"] + span.shee
     z-index: 2;
 }
 
-input[type="radio"] + span.sheet-capacityPips
+input[type="radio"] + span.capacityPips
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPipsFilled.png);
     background-repeat: no-repeat;
@@ -4709,7 +4710,7 @@ input[type="radio"] + span.sheet-capacityPips
     z-index: 2;
 }
 
-input[type="radio"]:checked + span.sheet-capacityPips ~ input[type="radio"] + span.sheet-capacityPips
+input[type="radio"]:checked + span.capacityPips ~ input[type="radio"] + span.capacityPips
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPips.png);
     background-repeat: no-repeat;
@@ -4718,7 +4719,7 @@ input[type="radio"]:checked + span.sheet-capacityPips ~ input[type="radio"] + sp
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-overcharge
+input[type="checkbox"] + span.overcharge
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/overchargeEmpty.png);
     background-repeat: no-repeat;
@@ -4727,7 +4728,7 @@ input[type="checkbox"] + span.sheet-overcharge
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-overcharge
+input[type="checkbox"]:checked + span.overcharge
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/overcharge.png);
     background-repeat: no-repeat;
@@ -4736,7 +4737,7 @@ input[type="checkbox"]:checked + span.sheet-overcharge
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-conduit
+input[type="checkbox"] + span.conduit
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPips.png);
     background-repeat: no-repeat;
@@ -4745,7 +4746,7 @@ input[type="checkbox"] + span.sheet-conduit
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-conduit
+input[type="checkbox"]:checked + span.conduit
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPipsFilled.png);
     background-repeat: no-repeat;
@@ -4754,7 +4755,7 @@ input[type="checkbox"]:checked + span.sheet-conduit
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-hexSelector
+input[type="checkbox"] + span.hexSelector
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/HexPip.png);
     background-repeat: no-repeat;
@@ -4763,8 +4764,8 @@ input[type="checkbox"] + span.sheet-hexSelector
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-hexSelector,
-span.sheet-hexselectorChecked
+input[type="checkbox"]:checked + span.hexSelector,
+span.hexselectorChecked
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/HexPipFilled.png);
     background-repeat: no-repeat;
@@ -4773,7 +4774,7 @@ span.sheet-hexselectorChecked
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-armour
+input[type="checkbox"] + span.armour
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/armor.png);
     background-repeat: no-repeat;
@@ -4782,7 +4783,7 @@ input[type="checkbox"] + span.sheet-armour
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-armour
+input[type="checkbox"]:checked + span.armour
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/armor2.png);
     background-repeat: no-repeat;
@@ -4791,7 +4792,7 @@ input[type="checkbox"]:checked + span.sheet-armour
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-resilience
+input[type="checkbox"] + span.resilience
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resiliance.png);
     background-repeat: no-repeat;
@@ -4800,7 +4801,7 @@ input[type="checkbox"] + span.sheet-resilience
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-resilience
+input[type="checkbox"]:checked + span.resilience
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resiliance2.png);
     background-repeat: no-repeat;
@@ -4809,7 +4810,7 @@ input[type="checkbox"]:checked + span.sheet-resilience
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-resilienceThreat
+input[type="checkbox"] + span.resilienceThreat
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resilianceThreat.png);
     background-repeat: no-repeat;
@@ -4818,7 +4819,7 @@ input[type="checkbox"] + span.sheet-resilienceThreat
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-resilienceThreat
+input[type="checkbox"]:checked + span.resilienceThreat
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/resilianceThreatFilled.png);
     background-repeat: no-repeat;
@@ -4827,7 +4828,7 @@ input[type="checkbox"]:checked + span.sheet-resilienceThreat
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-integrity
+input[type="checkbox"] + span.integrity
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/sys-int.png);
     background-repeat: no-repeat;
@@ -4836,7 +4837,7 @@ input[type="checkbox"] + span.sheet-integrity
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-integrity
+input[type="checkbox"]:checked + span.integrity
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/sys-int2.png);
     background-repeat: no-repeat;
@@ -4845,7 +4846,7 @@ input[type="checkbox"]:checked + span.sheet-integrity
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-integrityThreat
+input[type="checkbox"] + span.integrityThreat
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/IntegrityThreat.png);
     background-repeat: no-repeat;
@@ -4854,7 +4855,7 @@ input[type="checkbox"] + span.sheet-integrityThreat
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-integrityThreat
+input[type="checkbox"]:checked + span.integrityThreat
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/IntegrityThreatFilled.png);
     background-repeat: no-repeat;
@@ -4863,7 +4864,7 @@ input[type="checkbox"]:checked + span.sheet-integrityThreat
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-crewIntegrity
+input[type="checkbox"] + span.crewIntegrity
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewIntegrity.png);
     background-repeat: no-repeat;
@@ -4872,7 +4873,7 @@ input[type="checkbox"] + span.sheet-crewIntegrity
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-crewIntegrity
+input[type="checkbox"]:checked + span.crewIntegrity
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewIntegrity2.png);
     background-repeat: no-repeat;
@@ -4881,7 +4882,7 @@ input[type="checkbox"]:checked + span.sheet-crewIntegrity
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-vital
+input[type="checkbox"] + span.vital
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/vital.png);
     background-repeat: no-repeat;
@@ -4890,7 +4891,7 @@ input[type="checkbox"] + span.sheet-vital
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-vital
+input[type="checkbox"]:checked + span.vital
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/vital2.png);
     background-repeat: no-repeat;
@@ -4899,7 +4900,7 @@ input[type="checkbox"]:checked + span.sheet-vital
     z-index: 2;
 }
 
-input[type="checkbox"] + span.sheet-patch
+input[type="checkbox"] + span.patch
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Patches.png);
     background-repeat: no-repeat;
@@ -4908,7 +4909,7 @@ input[type="checkbox"] + span.sheet-patch
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.sheet-patch
+input[type="checkbox"]:checked + span.patch
 {
     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/PatchesFilled.png);
     background-repeat: no-repeat;
@@ -4919,7 +4920,7 @@ input[type="checkbox"]:checked + span.sheet-patch
 /* ***************************************** */
 /*               SHIP SYSTEMS                */
 /* ***************************************** */
-.sheet-systemsAmenities
+.systemsAmenities
 {
     grid-area: systemsAmenities;
     display: grid;
@@ -4931,7 +4932,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-gap: 4px;
 }
 
-.sheet-systemWidget
+.systemWidget
 {
     grid-area: systems;
     display: grid;
@@ -4944,12 +4945,12 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-column-gap: 4px;
 }
 
-.sheet-systemWidegetTitle
+.systemWidegetTitle
 {
     grid-area: title;
 }
 
-.sheet-system
+.system
 {
     display: grid;
     grid-template-columns: minmax(6px,10px) 4fr 3fr 5fr;
@@ -4962,7 +4963,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     z-index: 0;
 }
 
-.sheet-flex-systemRow
+.flex-systemRow
 {
     display: flex;
     flex-flow: nowrap;
@@ -4970,7 +4971,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     justify-content: space-evenly;
 }
 /* Ship system text*/
-.sheet-systemTitle
+.systemTitle
 {
     font-variant: small-caps;
     font-weight: 500;
@@ -4983,7 +4984,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-row-end: 2;
 }
 
-.sheet-systemDetail
+.systemDetail
 {
     font-size: 10px;
     grid-column-start: 2;
@@ -4992,7 +4993,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-row-end: 3;
 }
 
-.sheet-systemDamage
+.systemDamage
 {
     font-size: 14px;
     text-align: end;
@@ -5004,7 +5005,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-row-end: 2;
 }
 
-.sheet-systemRange
+.systemRange
 {
     font-size: 10px;
     text-align: end;
@@ -5016,7 +5017,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-row-end: 4;
 }
 
-.sheet-systemDivide
+.systemDivide
 {
     text-align: end;
     grid-column-start: 3;
@@ -5025,7 +5026,7 @@ input[type="checkbox"]:checked + span.sheet-patch
     grid-row-end: 5;
 }
 
-.sheet-systemChargeTitle
+.systemChargeTitle
 {
     font-variant: small-caps;
     font-size: 11px;
@@ -5037,14 +5038,14 @@ input[type="checkbox"]:checked + span.sheet-patch
     padding-top: 6px;
 }
 
-input[type="number"].sheet-currentCharge
+input[type="number"].currentCharge
 {
     height: 70px;
     width: 80px;
     font-size: 18px;
 }
 
-.sheet-systemChargeBox
+.systemChargeBox
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -5054,7 +5055,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 0px;
 }
 
-.sheet-systemOverchargeTitle
+.systemOverchargeTitle
 {
     font-variant: small-caps;
     font-size: 10px;
@@ -5067,7 +5068,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 7;
 }
 
-.sheet-systemOverchargeSymbol
+.systemOverchargeSymbol
 {
     text-align: center;
     grid-column-start: 4;
@@ -5076,7 +5077,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 10;
 }
 
-.sheet-systemDataBox
+.systemDataBox
 {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -5086,7 +5087,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 6px;
 }
 
-.sheet-systemAIName
+.systemAIName
 {
     font-size: 12px;
     grid-column-start: 1;
@@ -5097,7 +5098,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 2px;
 }
 
-.sheet-systemListTitle
+.systemListTitle
 {
     font-variant: small-caps;
     font-size: 12px;
@@ -5107,7 +5108,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 6;
 }
 
-.sheet-systemListMod1
+.systemListMod1
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5117,7 +5118,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 0px;
 }
 
-.sheet-systemListPips1
+.systemListPips1
 {
     text-align: end;
     grid-column-start: 4;
@@ -5127,7 +5128,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 8px;
 }
 
-.sheet-systemListMod2
+.systemListMod2
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5137,7 +5138,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 0px;
 }
 
-.sheet-systemListPips2
+.systemListPips2
 {
     text-align: end;
     grid-column-start: 4;
@@ -5147,7 +5148,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 8px;
 }
 
-.sheet-systemListMod3
+.systemListMod3
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5157,7 +5158,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 0px;
 }
 
-.sheet-systemListPips3
+.systemListPips3
 {
     text-align: end;
     grid-column-start: 4;
@@ -5167,7 +5168,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 8px;
 }
 
-.sheet-systemListMod4
+.systemListMod4
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5177,7 +5178,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 0px;
 }
 
-.sheet-systemListPips4
+.systemListPips4
 {
     text-align: end;
     grid-column-start: 4;
@@ -5189,7 +5190,7 @@ input[type="number"].sheet-currentCharge
 /* ***************************************** */
 /*				AMENITIES					 */
 /* ***************************************** */
-.sheet-amenitiesWidget
+.amenitiesWidget
 {
     grid-area: amenities;
     display: grid;
@@ -5201,7 +5202,7 @@ input[type="number"].sheet-currentCharge
     width: 100%;
 }
 
-.sheet-amenities
+.amenities
 {
     grid-area: amenities;
     display: grid;
@@ -5213,12 +5214,12 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-amenitiesTitle
+.amenitiesTitle
 {
     grid-area: title;
 }
 
-.sheet-amenityList1
+.amenityList1
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5229,7 +5230,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-amenityDetails1
+.amenityDetails1
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5240,7 +5241,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-amenityList2
+.amenityList2
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5251,7 +5252,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 3;
 }
 
-.sheet-amenityDetails2
+.amenityDetails2
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5262,7 +5263,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 3;
 }
 
-.sheet-amenityList3
+.amenityList3
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5273,7 +5274,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 4;
 }
 
-.sheet-amenityDetails3
+.amenityDetails3
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5284,7 +5285,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 4;
 }
 
-.sheet-amenityList4
+.amenityList4
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5295,7 +5296,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 5;
 }
 
-.sheet-amenityDetails4
+.amenityDetails4
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5306,7 +5307,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 5;
 }
 
-.sheet-amenityList5
+.amenityList5
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5317,7 +5318,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 6;
 }
 
-.sheet-amenityDetails5
+.amenityDetails5
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5328,7 +5329,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 6;
 }
 
-.sheet-amenityList6
+.amenityList6
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5339,7 +5340,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 7;
 }
 
-.sheet-amenityDetails6
+.amenityDetails6
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5350,7 +5351,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 7;
 }
 
-.sheet-amenityComponent
+.amenityComponent
 {
     text-align: start;
     flex-flow: nowrap;
@@ -5359,7 +5360,7 @@ input[type="number"].sheet-currentCharge
 /* ***************************************** */
 /*				SHIP MODULES				 */
 /* ***************************************** */
-.sheet-moduleWidget
+.moduleWidget
 {
     grid-area: modules;
     display: grid;
@@ -5371,12 +5372,12 @@ input[type="number"].sheet-currentCharge
     grid-gap: 4px;
 }
 
-.sheet-moduleWidgetTitle
+.moduleWidgetTitle
 {
     grid-area: title;
 }
 
-.sheet-module
+.module
 {
     display: grid;
     grid-template-columns: minmax(6px,14px) minmax(20px,50px) 1fr 40px;
@@ -5390,7 +5391,7 @@ input[type="number"].sheet-currentCharge
 }
 
 /* Ship system text*/
-.sheet-moduleTitle
+.moduleTitle
 {
     font-variant: small-caps;
     font-weight: 500;
@@ -5404,7 +5405,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 0px;
 }
 
-.sheet-moduleOptionalTitle
+.moduleOptionalTitle
 {
     font-variant: small-caps;
     font-weight: 500;
@@ -5418,7 +5419,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 2px;
 }
 
-.sheet-moduleOptionalCheckbox
+.moduleOptionalCheckbox
 {
     grid-column-start: 1;
     grid-row-start: 1;
@@ -5428,7 +5429,7 @@ input[type="number"].sheet-currentCharge
     align-self: center;
 }
 
-.sheet-moduleDetail
+.moduleDetail
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -5438,7 +5439,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 2px;
 }
 
-.sheet-moduleDamage
+.moduleDamage
 {
     font-size: 14px;
     text-align: end;
@@ -5450,7 +5451,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-moduleRange
+.moduleRange
 {
     font-size: 10px;
     text-align: end;
@@ -5462,7 +5463,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 2px;
 }
 
-.sheet-moduleListTitle
+.moduleListTitle
 {
     font-variant: small-caps;
     font-size: 12px;
@@ -5474,7 +5475,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 2px;
 }
 
-.sheet-moduleListLabCheckbox1
+.moduleListLabCheckbox1
 {
     grid-column-start: 1;
     grid-row-start: 4;
@@ -5484,7 +5485,7 @@ input[type="number"].sheet-currentCharge
     text-align: end;
 }
 
-.sheet-moduleListLabTitle1
+.moduleListLabTitle1
 {
     font-variant: small-caps;
     font-size: 11px;
@@ -5495,7 +5496,7 @@ input[type="number"].sheet-currentCharge
     padding-top: 2px;
 }
 
-.sheet-moduleListLabCheckbox2
+.moduleListLabCheckbox2
 {
     grid-column-start: 1;
     grid-row-start: 6;
@@ -5505,7 +5506,7 @@ input[type="number"].sheet-currentCharge
     text-align: end;
 }
 
-.sheet-moduleListLabTitle2
+.moduleListLabTitle2
 {
     font-variant: small-caps;
     font-size: 11px;
@@ -5516,7 +5517,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 0px;
 }
 
-.sheet-moduleListLabCheckbox3
+.moduleListLabCheckbox3
 {
     grid-column-start: 1;
     grid-row-start: 8;
@@ -5526,7 +5527,7 @@ input[type="number"].sheet-currentCharge
     text-align: end;
 }
 
-.sheet-moduleListLabTitle3
+.moduleListLabTitle3
 {
     font-variant: small-caps;
     font-size: 11px;
@@ -5537,7 +5538,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 0px;
 }
 
-.sheet-moduleListCost1
+.moduleListCost1
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5548,7 +5549,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListFitting1
+.moduleListFitting1
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -5558,7 +5559,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListPips1
+.moduleListPips1
 {
     text-align: end;
     grid-column-start: 4;
@@ -5568,7 +5569,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 4px;
 }
 
-.sheet-moduleListCost2
+.moduleListCost2
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -5579,7 +5580,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListFitting2
+.moduleListFitting2
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -5589,7 +5590,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListPips2
+.moduleListPips2
 {
     text-align: end;
     grid-column-start: 4;
@@ -5599,7 +5600,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 4px;
 }
 
-.sheet-moduleListCost3
+.moduleListCost3
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -5610,7 +5611,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListFitting3
+.moduleListFitting3
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -5620,7 +5621,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListPips3
+.moduleListPips3
 {
     text-align: end;
     grid-column-start: 4;
@@ -5630,7 +5631,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 4px;
 }
 
-.sheet-moduleListCost4
+.moduleListCost4
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5641,7 +5642,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListFitting4
+.moduleListFitting4
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -5651,7 +5652,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListPips4
+.moduleListPips4
 {
     text-align: end;
     grid-column-start: 4;
@@ -5661,7 +5662,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 4px;
 }
 
-.sheet-moduleListCost5
+.moduleListCost5
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5672,7 +5673,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListFitting5
+.moduleListFitting5
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -5682,7 +5683,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListPips5
+.moduleListPips5
 {
     text-align: end;
     grid-column-start: 4;
@@ -5692,7 +5693,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 4px;
 }
 
-.sheet-moduleListCost6
+.moduleListCost6
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5703,7 +5704,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListFitting6
+.moduleListFitting6
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -5713,7 +5714,7 @@ input[type="number"].sheet-currentCharge
     align-self: end;
 }
 
-.sheet-moduleListArmour6
+.moduleListArmour6
 {
     text-align: end;
     grid-column-start: 4;
@@ -5723,7 +5724,7 @@ input[type="number"].sheet-currentCharge
     padding-right: 4px;
 }
 /* ************ Launch Bay ************* */
-.sheet-launchBay
+.launchBay
 {
     grid-area: launchbay;
     display: grid;
@@ -5738,7 +5739,7 @@ input[type="number"].sheet-currentCharge
     z-index: 0;
 }
 /* Launch Bay text*/
-.sheet-launchBayTitle
+.launchBayTitle
 {
     font-variant: small-caps;
     font-weight: 500;
@@ -5751,7 +5752,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 6px;
 }
 
-.sheet-launchBayDetail
+.launchBayDetail
 {
     font-size: 10px;
     grid-column-start: 2;
@@ -5760,7 +5761,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 3;
 }
 
-.sheet-launchBayTugTitle
+.launchBayTugTitle
 {
     font-variant: small-caps;
     font-size: 12px;
@@ -5770,7 +5771,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 5;
 }
 
-.sheet-launchBayTugSystem1
+.launchBayTugSystem1
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5779,7 +5780,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 6;
 }
 
-.sheet-launchBayTugDetails1
+.launchBayTugDetails1
 {
     font-size: 10px;
     grid-column-start: 3;
@@ -5788,7 +5789,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 6;
 }
 
-.sheet-launchBayTugSystem2
+.launchBayTugSystem2
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5797,7 +5798,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 7;
 }
 
-.sheet-launchBayTugDetails2
+.launchBayTugDetails2
 {
     font-size: 10px;
     grid-column-start: 3;
@@ -5806,7 +5807,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 7;
 }
 
-.sheet-launchBayArmourPrinterTitle
+.launchBayArmourPrinterTitle
 {
     font-variant: small-caps;
     font-size: 12px;
@@ -5816,7 +5817,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 9;
 }
 
-.sheet-launchBayArmourCost
+.launchBayArmourCost
 {
     font-size: 10px;
     grid-column-start: 1;
@@ -5826,7 +5827,7 @@ input[type="number"].sheet-currentCharge
     text-align: center;
 }
 
-.sheet-launchBayArmourFitting
+.launchBayArmourFitting
 {
     font-size: 10px;
     grid-column-start: 2;
@@ -5836,7 +5837,7 @@ input[type="number"].sheet-currentCharge
     text-align: center;
 }
 
-.sheet-launchBayArmourPips
+.launchBayArmourPips
 {
     font-size: 8px;
     grid-column-start: 3;
@@ -5851,7 +5852,7 @@ input[type="number"].sheet-currentCharge
     grid-template-rows: 25px;
 }
 
-.sheet-launchBayArmourPip1
+.launchBayArmourPip1
 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -5859,7 +5860,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-launchBayArmourPip2
+.launchBayArmourPip2
 {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -5867,7 +5868,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-launchBayArmourPip3
+.launchBayArmourPip3
 {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -5875,7 +5876,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-launchBayArmourPip4
+.launchBayArmourPip4
 {
     grid-column-start: 4;
     grid-column-end: 5;
@@ -5883,7 +5884,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-launchBayArmourPip5
+.launchBayArmourPip5
 {
     grid-column-start: 5;
     grid-column-end: 6;
@@ -5891,7 +5892,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-launchBayArmourPip6
+.launchBayArmourPip6
 {
     grid-column-start: 6;
     grid-column-end: 7;
@@ -5899,7 +5900,7 @@ input[type="number"].sheet-currentCharge
     grid-row-end: 2;
 }
 
-.sheet-launchBaycapacityPips
+.launchBaycapacityPips
 {
     grid-column-start: 8;
     grid-column-end: 9;
@@ -5911,7 +5912,7 @@ input[type="number"].sheet-currentCharge
     font-size: 8px;
 }
 
-.sheet-launchBayChargeTitle
+.launchBayChargeTitle
 {
     grid-column-start: 7;
     grid-column-end: 8;
@@ -5923,7 +5924,7 @@ input[type="number"].sheet-currentCharge
     padding-left: 2px;
 }
 
-input[type="number"].sheet-tugReactorCharge
+input[type="number"].tugReactorCharge
 {
     height: 40px;
     width: 45px;
@@ -5931,7 +5932,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayChargeBox
+.launchBayChargeBox
 {
     grid-column-start: 6;
     grid-column-end: 8;
@@ -5941,7 +5942,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 8px;
 }
 
-.sheet-launchBayOverchargeSymbol
+.launchBayOverchargeSymbol
 {
     grid-column-start: 8;
     grid-column-end: 9;
@@ -5951,7 +5952,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 10px;
 }
 
-.sheet-launchBayTugConditionTitle
+.launchBayTugConditionTitle
 {
     grid-column-start: 8;
     grid-column-end: 11;
@@ -5964,7 +5965,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-right: 6px;
 }
 
-.sheet-launchBayTugConditionResilience1
+.launchBayTugConditionResilience1
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -5974,7 +5975,7 @@ input[type="number"].sheet-tugReactorCharge
     justify-self: center;
 }
 
-.sheet-launchBayTugConditionResilience2
+.launchBayTugConditionResilience2
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -5984,7 +5985,7 @@ input[type="number"].sheet-tugReactorCharge
     justify-self: center;
 }
 
-.sheet-launchBayTugConditionIntegrity
+.launchBayTugConditionIntegrity
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -5994,7 +5995,7 @@ input[type="number"].sheet-tugReactorCharge
     justify-self: center;
 }
 
-.sheet-launchBayTugConditionVital
+.launchBayTugConditionVital
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -6004,7 +6005,7 @@ input[type="number"].sheet-tugReactorCharge
     justify-self: center;
 }
 
-.sheet-launchBayTrailerTitle
+.launchBayTrailerTitle
 {
     font-variant: small-caps;
     font-size: 12px;
@@ -6015,7 +6016,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 2px;
 }
 
-.sheet-launchBayTrailerCost1
+.launchBayTrailerCost1
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6025,7 +6026,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType1
+.launchBayTrailerType1
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6034,7 +6035,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 14;
 }
 
-.sheet-launchBayTrailerDetails1
+.launchBayTrailerDetails1
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6043,7 +6044,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 14;
 }
 
-.sheet-launchBayTrailerArmour1
+.launchBayTrailerArmour1
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6053,7 +6054,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 14;
 }
 
-.sheet-launchBayTrailerCost2
+.launchBayTrailerCost2
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6063,7 +6064,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType2
+.launchBayTrailerType2
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6072,7 +6073,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 15;
 }
 
-.sheet-launchBayTrailerDetails2
+.launchBayTrailerDetails2
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6081,7 +6082,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 15;
 }
 
-.sheet-launchBayTrailerArmour2
+.launchBayTrailerArmour2
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6091,7 +6092,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 15;
 }
 
-.sheet-launchBayTrailerCost3
+.launchBayTrailerCost3
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6101,7 +6102,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType3
+.launchBayTrailerType3
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6110,7 +6111,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 16;
 }
 
-.sheet-launchBayTrailerDetails3
+.launchBayTrailerDetails3
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6119,7 +6120,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 16;
 }
 
-.sheet-launchBayTrailerArmour3
+.launchBayTrailerArmour3
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6129,7 +6130,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 16;
 }
 
-.sheet-launchBayTrailerCost4
+.launchBayTrailerCost4
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6139,7 +6140,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType4
+.launchBayTrailerType4
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6148,7 +6149,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 17;
 }
 
-.sheet-launchBayTrailerDetails4
+.launchBayTrailerDetails4
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6157,7 +6158,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 17;
 }
 
-.sheet-launchBayTrailerArmour4
+.launchBayTrailerArmour4
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6167,7 +6168,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 17;
 }
 
-.sheet-launchBayTrailerCost5
+.launchBayTrailerCost5
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6177,7 +6178,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType5
+.launchBayTrailerType5
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6186,7 +6187,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 18;
 }
 
-.sheet-launchBayTrailerDetails5
+.launchBayTrailerDetails5
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6195,7 +6196,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 18;
 }
 
-.sheet-launchBayTrailerArmour5
+.launchBayTrailerArmour5
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6205,7 +6206,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 18;
 }
 
-.sheet-launchBayTrailerCost6
+.launchBayTrailerCost6
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6215,7 +6216,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType6
+.launchBayTrailerType6
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6224,7 +6225,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 19;
 }
 
-.sheet-launchBayTrailerDetails6
+.launchBayTrailerDetails6
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6233,7 +6234,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 19;
 }
 
-.sheet-launchBayTrailerArmour6
+.launchBayTrailerArmour6
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6243,7 +6244,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 19;
 }
 
-.sheet-launchBayTrailerCost7
+.launchBayTrailerCost7
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6253,7 +6254,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType7
+.launchBayTrailerType7
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6262,7 +6263,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 20;
 }
 
-.sheet-launchBayTrailerDetails7
+.launchBayTrailerDetails7
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6271,7 +6272,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 20;
 }
 
-.sheet-launchBayTrailerArmour7
+.launchBayTrailerArmour7
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6281,7 +6282,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 20;
 }
 
-.sheet-launchBayTrailerCost8
+.launchBayTrailerCost8
 {
     font-size: 9px;
     grid-column-start: 1;
@@ -6291,7 +6292,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerType8
+.launchBayTrailerType8
 {
     font-size: 9px;
     grid-column-start: 2;
@@ -6300,7 +6301,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 21;
 }
 
-.sheet-launchBayTrailerDetails8
+.launchBayTrailerDetails8
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6309,7 +6310,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 21;
 }
 
-.sheet-launchBayTrailerDetails9
+.launchBayTrailerDetails9
 {
     font-size: 9px;
     grid-column-start: 3;
@@ -6318,7 +6319,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 22;
 }
 
-.sheet-launchBayTrailerArmour8
+.launchBayTrailerArmour8
 {
     flex-wrap: nowrap;
     font-size: 9px;
@@ -6328,7 +6329,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 21;
 }
 
-.sheet-launchBayTrailerConditionTitle
+.launchBayTrailerConditionTitle
 {
     grid-column-start: 8;
     grid-column-end: 11;
@@ -6341,7 +6342,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-right: 6px;
 }
 
-.sheet-launchBayTrailerConditionResilience
+.launchBayTrailerConditionResilience
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -6350,7 +6351,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerConditionIntegrity
+.launchBayTrailerConditionIntegrity
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -6359,7 +6360,7 @@ input[type="number"].sheet-tugReactorCharge
     text-align: center;
 }
 
-.sheet-launchBayTrailerConditionVital
+.launchBayTrailerConditionVital
 {
     grid-column-start: 10;
     grid-column-end: 11;
@@ -6371,7 +6372,7 @@ input[type="number"].sheet-tugReactorCharge
 /* ***************************************** */
 /*				Ship Page Two				 */
 /* ***************************************** */
-.sheet-shipPG2
+.shipPG2
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -6381,7 +6382,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-template-areas: "resources letter" "cargo letter" "cargo notes";
 }
 
-.sheet-resourceWidget
+.resourceWidget
 {
     grid-area: resources;
     display: flex;
@@ -6390,7 +6391,7 @@ input[type="number"].sheet-tugReactorCharge
     justify-content: space-evenly;
 }
 
-.sheet-resource
+.resource
 {
     display: grid;
     grid-template-columns: 1fr 50px;
@@ -6405,12 +6406,12 @@ input[type="number"].sheet-tugReactorCharge
 
 
 /*Change Colour of Total Cargo when overloaded*/
-.sheet-colorChanger[value="1"] + .sheet-resourceBox
+.colorChanger[value="1"] + .resourceBox
 {
     color: red;
 }
 
-.sheet-resourceBoxPlace
+.resourceBoxPlace
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -6420,7 +6421,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 2px;
 }
 
-.sheet-resourceTitle
+.resourceTitle
 {
     font-variant: small-caps;
     font-size: 10px;
@@ -6432,7 +6433,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 2px;
 }
 
-.sheet-resourceTonnes
+.resourceTonnes
 {
     font-variant: small-caps;
     font-size: 9px;
@@ -6445,7 +6446,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-bottom: 8px;
 }
 /* Letter of Marque */
-.sheet-letterOfMarque
+.letterOfMarque
 {
     grid-area: letter;
     display: grid;
@@ -6459,7 +6460,7 @@ input[type="number"].sheet-tugReactorCharge
     z-index: 0;
 }
 
-.sheet-letterOfMarqueTitle
+.letterOfMarqueTitle
 {
     font-size: 14px;
     text-align: left;
@@ -6473,7 +6474,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 2px;
 }
 
-.sheet-letterOfMarqueGreeting
+.letterOfMarqueGreeting
 {
     font-size: 13px;
     text-align: left;
@@ -6485,7 +6486,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 2px;
 }
 
-.sheet-letterOfMarqueBoxPlace
+.letterOfMarqueBoxPlace
 {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -6495,7 +6496,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 4px;
 }
 
-.sheet-letterOfMarquePatron
+.letterOfMarquePatron
 {
     font-size: 13px;
     font-style: italic;
@@ -6507,7 +6508,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 0px;
 }
 
-.sheet-letterOfMarquePatronTitle
+.letterOfMarquePatronTitle
 {
     font-size: 10px;
     text-align: center;
@@ -6519,7 +6520,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 0px;
 }
 
-.sheet-letterOfMarqueBody
+.letterOfMarqueBody
 {
     font-size: 13px;
     line-height: 1.5em;
@@ -6529,7 +6530,7 @@ input[type="number"].sheet-tugReactorCharge
 }
 
 /*			Cargo			*/
-.sheet-cargo
+.cargo
 {
     grid-area: cargo;
     display: grid;
@@ -6544,7 +6545,7 @@ input[type="number"].sheet-tugReactorCharge
     z-index: 0;
 }
 
-.sheet-cargoTitle
+.cargoTitle
 {
     font-size: 14px;
     text-align: left;
@@ -6559,7 +6560,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 2px;
 }
 
-.sheet-cargoBox
+.cargoBox
 {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -6567,7 +6568,7 @@ input[type="number"].sheet-tugReactorCharge
     grid-row-end: 3;
 }
 
-.sheet-cargoWorth
+.cargoWorth
 {
     font-size: 11px;
     text-align: center;
@@ -6581,7 +6582,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 6px;
 }
 
-.sheet-cargoTonnage
+.cargoTonnage
 {
     font-size: 11px;
     text-align: center;
@@ -6595,7 +6596,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-top: 6px;
 }
 /*			Notes			*/
-.sheet-notes
+.notes
 {
     grid-area: notes;
     display: grid;
@@ -6607,7 +6608,7 @@ input[type="number"].sheet-tugReactorCharge
     z-index: 0;
 }
 
-.sheet-noteBox
+.noteBox
 {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -6618,7 +6619,7 @@ input[type="number"].sheet-tugReactorCharge
 /* ************* */
 /* Threat Sheets */
 /* ************* */
-.sheet-topLineText
+.topLineText
 {
     text-align: start;
     font-variant: small-caps;
@@ -6627,7 +6628,7 @@ input[type="number"].sheet-tugReactorCharge
     font-size: 15px;
 }
 
-.sheet-topLineTextSpaceScale
+.topLineTextSpaceScale
 {
     text-align: start;
     font-variant: small-caps;
@@ -6637,7 +6638,7 @@ input[type="number"].sheet-tugReactorCharge
     padding-left: 10px;
 }
 
-.sheet-threatTextBox
+.threatTextBox
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -6648,7 +6649,7 @@ input[type="number"].sheet-tugReactorCharge
     justify-self: center;
 }
 
-input[type=number].sheet-threatNumberBox
+input[type=number].threatNumberBox
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -6660,7 +6661,7 @@ input[type=number].sheet-threatNumberBox
     text-align: left;
 }
 
-input[type=number].sheet-shipTonnageNumberBox
+input[type=number].shipTonnageNumberBox
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -6672,7 +6673,7 @@ input[type=number].sheet-shipTonnageNumberBox
     text-align: left;
 }
 
-input[type=number].sheet-behemothLengthNumberBox
+input[type=number].behemothLengthNumberBox
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -6684,84 +6685,84 @@ input[type=number].sheet-behemothLengthNumberBox
     text-align: left;
 }
 
-textarea.sheet-sophontTagBox
+textarea.sophontTagBox
 {
     margin-top: 3px;
     height: 40px;
     width: 95%;
 }
 
-textarea.sheet-swarmTagBox
+textarea.swarmTagBox
 {
     margin-top: 3px;
     height: 170px;
     width: 95%;
 }
 
-textarea.sheet-creatureTagBox
+textarea.creatureTagBox
 {
     margin-top: 3px;
     height: 80px;
     width: 95%;
 }
 
-textarea.sheet-droneTagBox
+textarea.droneTagBox
 {
     margin-top: 3px;
     height: 150px;
     width: 95%;
 }
 
-textarea.sheet-sophontAugmentBox
+textarea.sophontAugmentBox
 {
     margin-top: 3px;
     height: 80px;
     width: 95%;
 }
 
-textarea.sheet-shuttleTagBox
+textarea.shuttleTagBox
 {
     margin-top: 3px;
     height: 130px;
     width: 95%;
 }
 
-textarea.sheet-shipNoteBox
+textarea.shipNoteBox
 {
     margin-top: 3px;
     height: 100px;
     width: 95%;
 }
 
-textarea.sheet-behemothNoteBox
+textarea.behemothNoteBox
 {
     margin-top: 3px;
     height: 35px;
     width: 95%;
 }
 
-textarea.sheet-capitalShipNoteBox
+textarea.capitalShipNoteBox
 {
     margin-top: 3px;
     height: 54px;
     width: 95%;
 }
 
-textarea.sheet-sectionTagBox
+textarea.sectionTagBox
 {
     margin-top: 3px;
     height: 65px;
     width: 95%;
 }
 
-textarea.sheet-sectionShipTagBox
+textarea.sectionShipTagBox
 {
     margin-top: 3px;
     height: 74px;
     width: 95%;
 }
 
-.sheet-aliasThreat
+.aliasThreat
 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -6769,7 +6770,7 @@ textarea.sheet-sectionShipTagBox
     grid-row-end: 2;
 }
 
-.sheet-aliasThreatName
+.aliasThreatName
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -6781,7 +6782,7 @@ textarea.sheet-sectionShipTagBox
     grid-row-end: 2;
 }
 
-.sheet-aliasThreatNameLong
+.aliasThreatNameLong
 {
     align-self: stretch;
     flex-flow: nowrap;
@@ -6793,7 +6794,7 @@ textarea.sheet-sectionShipTagBox
     grid-row-end: 2;
 }
 
-.sheet-pronounThreat
+.pronounThreat
 {
     grid-column-start: 4;
     grid-column-end: 5;
@@ -6801,7 +6802,7 @@ textarea.sheet-sectionShipTagBox
     grid-row-end: 2;
 }
 
-.sheet-pronounThreatName
+.pronounThreatName
 {
     grid-column-start: 5;
     grid-column-end: 7;
@@ -6809,101 +6810,101 @@ textarea.sheet-sectionShipTagBox
     grid-row-end: 2;
 }
 
-.sheet-sophontAspectColumnA
+.sophontAspectColumnA
 {
     justify-self: end;
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-.sheet-sophontTextColumnA
+.sophontTextColumnA
 {
     grid-column-start: 3;
     grid-column-end: 4;
 }
 
-.sheet-sophontTextColumnFull
+.sophontTextColumnFull
 {
     grid-column-start: 3;
     grid-column-end: 6;
 }
 
-.sheet-sophontAspectColumnB
+.sophontAspectColumnB
 {
     justify-self: end;
     grid-column-start: 4;
     grid-column-end: 5;
 }
 
-.sheet-sophontTextColumnB
+.sophontTextColumnB
 {
     grid-column-start: 5;
     grid-column-end: 6;
 }
 
-.sheet-sophontNotes
+.sophontNotes
 {
     grid-row-start: 15;
     grid-row-end: 16;
 }
 
-.sheet-droneNotes
+.droneNotes
 {
     grid-row-start: 17;
     grid-row-end: 18;
 }
 
-.sheet-sophontTagList
+.sophontTagList
 {
     grid-row-start: 12;
     grid-row-end: 15;
 }
 
-.sheet-swarmTagList
+.swarmTagList
 {
     grid-row-start: 8;
     grid-row-end: 15;
 }
 
-.sheet-sophontAugmentList
+.sophontAugmentList
 {
     grid-row-start: 10;
     grid-row-end: 15;
 }
 
-.sheet-capitalShipAspectColumnA
+.capitalShipAspectColumnA
 {
     grid-column-start: 1;
     grid-column-end: 2;
     justify-self: end;
 }
 
-.sheet-capitalShipTextColumnA
+.capitalShipTextColumnA
 {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-.sheet-capitalShipTextColumnFull
+.capitalShipTextColumnFull
 {
     grid-column-start: 2;
     grid-column-end: 5;
 }
 
-.sheet-capitalShipAspectColumnB
+.capitalShipAspectColumnB
 {
     grid-column-start: 3;
     grid-column-end: 4;
     justify-self: end;
 }
 
-.sheet-capitalShipTextColumnB
+.capitalShipTextColumnB
 {
     grid-column-start: 4;
     grid-column-end: 5;
 }
 
-span.sheet-threatDamageBoxBG
+span.threatDamageBoxBG
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -6921,7 +6922,7 @@ span.sheet-threatDamageBoxBG
     margin-top: -10px;
 }
 
-span.sheet-creatureDamageBoxBG
+span.creatureDamageBoxBG
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -6939,7 +6940,7 @@ span.sheet-creatureDamageBoxBG
     margin-top: -10px;
 }
 
-span.sheet-droneDamageBoxBG
+span.droneDamageBoxBG
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -6957,7 +6958,7 @@ span.sheet-droneDamageBoxBG
     margin-top: -10px;
 }
 
-span.sheet-sectionDamageBoxBG
+span.sectionDamageBoxBG
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -6974,7 +6975,7 @@ span.sheet-sectionDamageBoxBG
     margin-top: -10px;
 }
 
-span.sheet-sectionShipDamageBoxBG
+span.sectionShipDamageBoxBG
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -6992,7 +6993,7 @@ span.sheet-sectionShipDamageBoxBG
     margin-top: -10px;
 }
 
-span.sheet-sectionBehemothDamageBoxBG
+span.sectionBehemothDamageBoxBG
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -7010,7 +7011,7 @@ span.sheet-sectionBehemothDamageBoxBG
     margin-top: -10px;
 }
 
-input.sheet-threatDamageBox
+input.threatDamageBox
 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -7027,7 +7028,7 @@ input.sheet-threatDamageBox
 }
 
 /* Threat Armour & Conditions */
-.sheet-sophontConditionWidget
+.sophontConditionWidget
 {
     grid-column-start: 6;
     grid-column-end: 7;
@@ -7044,7 +7045,7 @@ input.sheet-threatDamageBox
     justify-self: end;
 }
 
-.sheet-compositeSophontConditionWidget
+.compositeSophontConditionWidget
 {
     grid-column-start: 6;
     grid-column-end: 7;
@@ -7061,7 +7062,7 @@ input.sheet-threatDamageBox
     justify-self: end;
 }
 
-.sheet-swarmConditionWidget
+.swarmConditionWidget
 {
     grid-column-start: 4;
     grid-column-end: 5;
@@ -7078,7 +7079,7 @@ input.sheet-threatDamageBox
     justify-self: end;
 }
 
-.sheet-creatureConditionWidget
+.creatureConditionWidget
 {
     grid-column-start: 6;
     grid-column-end: 7;
@@ -7097,7 +7098,7 @@ input.sheet-threatDamageBox
 
 
 
-.sheet-additionalCreatureConditionWidget
+.additionalCreatureConditionWidget
 {
     grid-row-start: 1;
     grid-row-end: 14;
@@ -7112,7 +7113,7 @@ input.sheet-threatDamageBox
     justify-self: end;
 }
 
-.sheet-sophontConditionTitle
+.sophontConditionTitle
 {
     text-align: start;
     font-variant: small-caps;
@@ -7125,7 +7126,7 @@ input.sheet-threatDamageBox
     grid-row-end: 2;
 }
 
-.sheet-sophontConditionNumber
+.sophontConditionNumber
 {
     text-align: center;
     font-weight: 500;
@@ -7136,106 +7137,106 @@ input.sheet-threatDamageBox
     align-self: center;
 }
 
-input[type=number].sheet-sophontConditionNumber
+input[type=number].sophontConditionNumber
 {
     width: 1.5em;
     height: 1.5em;
 }
 
-    input[type=number].sheet-sophontConditionNumber::-webkit-inner-spin-button
+    input[type=number].sophontConditionNumber::-webkit-inner-spin-button
     {
         -webkit-appearance: none;
     }
 
-.sheet-sophontConditionCheckbox
+.sophontConditionCheckbox
 {
     grid-column-start: 1;
     grid-column-end: 2;
     justify-self: baseline;
 }
 
-.sheet-sophontConditionText
+.sophontConditionText
 {
     grid-column-start: 2;
     grid-column-end: 3;
     align-self: center;
 }
 
-.sheet-sophontConditionArmour
+.sophontConditionArmour
 {
     grid-column-start: 3;
     grid-column-end: 4;
     align-self: center;
 }
 
-.sheet-additionalSophontColumn
+.additionalSophontColumn
 {
     grid-column-start: 1;
     grid-column-end: 2;
     align-self: center;
 }
 
-.sheet-sophontCondition1
+.sophontCondition1
 {
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
-.sheet-sophontCondition2
+.sophontCondition2
 {
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
-.sheet-sophontCondition3
+.sophontCondition3
 {
     grid-row-start: 4;
     grid-row-end: 5;
 }
 
-.sheet-sophontCondition4
+.sophontCondition4
 {
     grid-row-start: 5;
     grid-row-end: 6;
 }
 
-.sheet-sophontCondition5
+.sophontCondition5
 {
     grid-row-start: 6;
     grid-row-end: 7;
 }
 
-.sheet-sophontCondition6
+.sophontCondition6
 {
     grid-row-start: 7;
     grid-row-end: 8;
 }
 
-.sheet-sophontCondition7
+.sophontCondition7
 {
     grid-row-start: 8;
     grid-row-end: 9;
 }
 
-.sheet-sophontCondition8
+.sophontCondition8
 {
     grid-row-start: 9;
     grid-row-end: 10;
 }
 
-.sheet-sophontCondition9
+.sophontCondition9
 {
     grid-row-start: 10;
     grid-row-end: 11;
 }
 
-.sheet-sophontCondition10
+.sophontCondition10
 {
     grid-row-start: 11;
     grid-row-end: 12;
 }
 
-.sheet-sophontCondition11
+.sophontCondition11
 {
     grid-row-start: 12;
     grid-row-end: 13;
