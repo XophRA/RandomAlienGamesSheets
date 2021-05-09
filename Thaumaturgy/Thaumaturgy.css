@@ -3848,9 +3848,42 @@ input[type="number"].resourceBox
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: repeat(5,1fr);
-        grid-template-rows: repeat(5,1fr);
+        grid-template-columns: repeat(2,1fr) 100px repeat(2,1fr);
+        grid-template-rows: 75px 175px auto;
     }
+
+        .tableSpread > .editTableSpread > .leftLegEdit
+        {
+            grid-area: 2 / 1 / -1 / span 2;
+            display: grid;
+            width: 100%;
+            height: 30%;
+            align-self: end;
+        }
+
+        .tableSpread > .editTableSpread > .rightLegEdit
+        {
+            grid-area: 2 / -3 / -1 / -1;
+            display: grid;
+            width: 100%;
+            height: 30%;
+            align-self: end;
+        }
+
+        .tableSpread > .editTableSpread > .tabletopEdit
+        {
+            grid-area: 1 / 2 / span 2 / -2;
+            display: grid;
+            width: 100%;
+            height: 40%;
+            align-self: start;
+        }
+
+        .tableSpread > .editTableSpread > arcanaEdit
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: 30px repeat(2, 20px);
+        }
 
 /* Edit Cards */
 .editCog
