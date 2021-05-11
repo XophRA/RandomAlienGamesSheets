@@ -857,7 +857,7 @@
     <!-- ------ -->
     <!-- Medium -->
     <!-- ------------------------- -->
-    <article class="sheetType mediumSheet">       
+    <article class="sheetType mediumSheet">
         <!--Medium Sheet-->
         <div class="mediumSheetGrid">
             <!--Spellcasting Process-->
@@ -953,23 +953,64 @@
             </section>
             <!-- Magic Circle-->
             <section class="magicCircle">
-                    <!--Spell Dice-->
-                    <div class="castingSpellDice">
-                        <input type="number" class="salvoRating" name="attr_castSpellDice" min="0" value="0" />
-                        <div class="salvoAttr">Spell</div>
-                    </div>
-                    <!--Tangle Dice-->
-                    <div class="castingTangleDice">
-                        <input type="number" class="salvoThreatRating" name="attr_salvoThreat" value="0" />
-                        <div class="salvoThreatAttr">Tangle</div>
-                    </div>
-                    <!--Salvo Roll Button-->
-                    <input type="hidden" name="attr_salvoMacro" readonly />
-                    <button type="roll" class="rollSalvoButton" name="roll_rollSalvo" value="@{salvoMacro}"></button><span class="rollSalvoButton"></span><span class="rollSalvoButton">Roll</span>
-                    <!--Spend Charge & Close SalvoMode-->
-                    <input type="checkbox" class="spendChargeCloseSalvoMode" name="attr_spendChargeCloseSalvo" value="1" /><span class="spendChargeCloseSalvoMode">Spend &amp; Close</span>
-
-
+                <input type="checkbox" class="editCog" name="attr_EditCircle" value="1" /><span class="editCog"></span>
+                <input type="hidden" class="editToggle" name="attr_EditCircle" />
+                <div class="editMenu editCircle">
+                    <!--1 Folk-->
+                    <div class="rippleHarmony ripple1"><input type="number" name="attr_result1Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple1"><input type="number" name="attr_result1Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--2 Apprentice-->
+                    <div class="rippleHarmony ripple2"><input type="number" name="attr_result2Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple2"><input type="number" name="attr_result2Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--3 Wilds-->
+                    <div class="rippleHarmony ripple3"><input type="number" name="attr_result3Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple3"><input type="number" name="attr_result3Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--4 Passions-->
+                    <div class="rippleHarmony ripple4"><input type="number" name="attr_result4Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple4"><input type="number" name="attr_result4Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--5 Coin-->
+                    <div class="rippleHarmony ripple5"><input type="number" name="attr_result5Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple5"><input type="number" name="attr_result5Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--6 Judge-->
+                    <div class="rippleHarmony ripple6"><input type="number" name="attr_result6Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple6"><input type="number" name="attr_result6Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--7 Crown-->
+                    <div class="rippleHarmony ripple7"><input type="number" name="attr_result7Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple7"><input type="number" name="attr_result7Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--8 Master-->
+                    <div class="rippleHarmony ripple8"><input type="number" name="attr_result8Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple8"><input type="number" name="attr_result8Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--9 Rival-->
+                    <div class="rippleHarmony ripple9"><input type="number" name="attr_result9Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple9"><input type="number" name="attr_result9Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--10 Divine-->
+                    <div class="rippleHarmony ripple10"><input type="number" name="attr_result10Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple10"><input type="number" name="attr_result10Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--11 Trickster-->
+                    <div class="rippleHarmony ripple11"><input type="number" name="attr_result11Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple11"><input type="number" name="attr_result11Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--12 Destroyer-->
+                    <div class="rippleHarmony ripple12"><input type="number" name="attr_result12Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple12"><input type="number" name="attr_result12Chaos" value="0" min="0" class="rippleBox" /></div>
+                    <!--13 Forgotton-->
+                    <div class="rippleHarmony ripple13"><input type="number" name="attr_result13Harmony" value="0" min="0" class="rippleBox" /></div>
+                    <div class="rippleChaos ripple13"><input type="number" name="attr_result13Chaos" value="0" min="0" class="rippleBox" /></div>
+                </div>
+                <!--Spell Dice-->
+                <div class="castingSpellDice">
+                    <input type="number" class="resourceBox" name="attr_castSpellDice" min="0" value="0" />
+                    <div class="">Spell</div>
+                </div>
+                <!--Tangle Dice-->
+                <div class="castingTangleDice">
+                    <input type="number" class="resourceBox" name="attr_castTangleDice" value="0" />
+                    <div class="">Tangle</div>
+                </div>
+                <!--Casting Button-->
+                <div class="castingButton">
+                    <input type="hidden" name="attr_castingMacro" readonly />
+                    <button type="roll" class="rollSalvoButton" name="roll_rollSalvo" value="@{castingMacro}"></button><span class="rollSalvoButton"></span><span class="rollSalvoButton">Cast</span>
+                </div>
             </section>
             <!--Ripples-->
             <section class="ripples">
@@ -1020,6 +1061,7 @@
                 <div class="paradoxResource"><input type="number" name="attr_paradoxResource" min="0" value="0" class="resourceBox" /></div>
                 <div class="aetherResource"><input type="number" name="attr_aetherResource" min="0" value="0" class="resourceBox" /></div>
             </section>
+
             <!--Disequilibrium-->
             <section class="disequilibriumWidget tableSpread">
                 <input type="checkbox" class="editCog" name="attr_EditDisequilbrium" value="1" /><span class="editCog"></span>
@@ -1035,7 +1077,7 @@
                         <div>Arcana: <input type="number" class="rightLegChoice" name="attr_Danger" min="0" max="13" value="0" /></div>
                         <div>Facing: <input type="checkbox" class="facingChoice" name="attr_DangerFacing" value="1" /></div>
                     </div>
-                    <div class="tabletop arcanaEdit">
+                    <div class="tabletopEdit arcanaEdit">
                         <h2>Divergence</h2>
                         <div>Arcana: <input type="number" class="tabletopChoice" name="attr_Divergence" min="0" max="13" value="0" /></div>
                         <div>Facing: <input type="checkbox" class="facingChoice" name="attr_DivergenceFacing" value="1" /></div>
@@ -1697,1372 +1739,67 @@
 <!-- ------- -->
 <script type="text/worker">
 <!--<script type="text/javascript">-->
-    /*** Salvo Mode ***/
-
-        //Close Salvo Mode and spend Charge after roll
-        on("change:spendchargeclosesalvo", (event) =>
+    //Generate Spell Casting Macro
+    on("change:castSpellDice change:castTangleDice", (event) =>
+    {
+        getAttrs(["castSpellDice", "castTangleDice", "salvoCharge"], function (values)
         {
-            getAttrs(["ReactorCharge", "ReactorOvercharge", "salvoCharge"], function (values)
+
+            //Spell dice
+            let spellDice = parseInt(values.castSpellDice) || 0;
+
+            //Calculate automatic hits from excess spell dice
+            let excessspellDice = 0;
+            let autoHits = '';
+            if (spellDice > 10)
             {
-                const setObj = {};
+                excessSpellDice = spellDice - 10;
+                spellDice = 10;
+                autoHits = `{{autoHits=[[${excessSpellDice}]]}}`;
+            }
 
-                //Spend Charge from Personal Reactor
-                let adjustedReactorCharge = parseInt(values.ReactorCharge) || 0;
-                adjustedReactorCharge += parseInt(values.ReactorOvercharge) || 0;
-                adjustedReactorCharge -= parseInt(values.salvoCharge) || 0;
-                setObj.ReactorCharge = adjustedReactorCharge;
-                setObj.ReactorOvercharge = 0;
+            //Tangle dice
+            let tangleDice = parseInt(values.castTangleDice) || 0;
 
-                //Close Salvo Mode
-                setObj.salvoMode = 0;
-                console.log("Close/Charge", setObj);
-                setAttrs(setObj);
-            });
-        });
-
-        //Reset Salvo Mode when Salvo mode opened
-        on("change:salvomode", (event) =>
-        {
-            getAttrs(["ReactorCharge", "ReactorOvercharge"], function (values)
+            //Calculate automatic hits from excess threat dice
+            let excessTangleDice = 0;
+            let autoMisses = '';
+            if (tangleDice > 10)
             {
-                const setObj = {};
-                //Reset all the salvo basic attributes
-                setObj.salvoSkill = "Choose a Skill";
-                setObj.salvoSpecialty = "Choose a Specialty";
-                setObj.salvoTool = "Choose a Tool";
-                setObj.salvoAdvantage = 0;
-                setObj.salvoCharge = 0;
+                excessTangleDice = tangleDice - 10;
+                tangleDice = 10;
+                autoMisses = `{{autoMisses=[[${excessTangleDice}]]}}`;
+            }
 
-                //Reset the basic Reactor settings
-                setObj.salvoChargeDirection = "Charged";
+            //Make the Casting Macro
+            console.log(spellDice, "vs", tangleDice);
+            const setObj = {};
 
-                if (values.ReactorOvercharge == "1")
-                {
-                    setObj.salvoChargeDirection = "Overcharged";
-                }
-                else if (values.ReactorCharge <= 0)
-                {
-                    setObj.salvoChargeDirection = "Uncharged";
-                }
-
-                console.log("Reset", setObj);
-                setAttrs(setObj);
-            });
-        });
-
-        //Reset salvoMods
-        on("change:salvotool", (event) =>
-        {
-            getAttrs(["ReactorCharge", "ReactorOvercharge"], function (values)
+            let spellRoll = `${_.range(spellDice).map((num) =>
             {
-                const setObj = {};
-
-                setObj.salvoMod1 = 0;
-                setObj.salvoMod2 = 0;
-                setObj.salvoMod3 = 0;
-                setObj.salvoMod4 = 0;
-                setObj.salvoMod5 = 0;
-                setObj.salvoMod6 = 0;
-                setObj.salvoMod7 = 0;
-                setObj.salvoMod8 = 0;
-                setObj.salvoMod9 = 0;
-                setObj.salvoMod10 = 0;
-                setObj.salvoMod11 = 0;
-                setObj.salvoMod12 = 0;
-                setObj.salvoMod13 = 0;
-                setObj.salvoMod14 = 0;
-                setObj.salvoMod15 = 0;
-                setObj.salvoMod16 = 0;
-                setObj.salvoMod17 = 0;
-                setObj.salvoMod18 = 0;
-                setObj.salvoMod19 = 0;
-                setObj.salvoMod20 = 0;
-
-                setObj.salvoCharge = 0;
-
-                setObj.salvoChargeDirection = "Charged";
-
-                if (values.ReactorOvercharge == "1")
-                {
-                    setObj.salvoChargeDirection = "Overcharged";
-                }
-                else if (values.ReactorCharge <= 0)
-                {
-                    setObj.salvoChargeDirection = "Uncharged";
-                }
-
-                setAttrs(setObj);
-            });
-        });
-
-        //Set the Salvo Tool Rating, track Charge spent, and limit spending to current ReactorCharge
-        on("change:salvomod1 change:salvomod2 change:salvomod3 change:salvomod4 change:salvomod5 change:salvomod6 change:salvomod7 change:salvomod8 change:salvomod9 change:salvomod10 change:salvomod11 change:salvomod12 change:salvomod13 change:salvomod14 change:salvomod15 change:salvomod16 change:salvomod17 change:salvomod18 change:salvomod19 change:salvomod20", (event) =>
-        {
-            getAttrs(["salvoTool", "ReactorCharge", "ReactorOvercharge",
-                "salvoMod1", "salvoMod2", "salvoMod3", "salvoMod4", "salvoMod5",
-                "salvoMod6", "salvoMod7", "salvoMod8", "salvoMod9", "salvoMod10",
-                "salvoMod11", "salvoMod12", "salvoMod13", "salvoMod14", "salvoMod15",
-                "salvoMod16", "salvoMod17", "salvoMod18", "salvoMod19", "salvoMod20",
-                "ScannerSurveySensor", "ScannerDepthAnalyser", "ScannerAreaEffect", "ScannerRangeCompensator",
-                "BioChemKitMedtool", "BioChemKitSampler", "BioChemKitIncubator",
-                "Trait_1", "Trait_2", "Trait_3", "Trait_4", "Trait_5",
-                "LinkCommBrowser", "LinkDevelopmentKit", "LinkHardening",
-                "MultitoolDisruptorTargeter", "MultitoolTractorLifter", "MultitoolUtilityManipulator",
-                "ShieldKineticDeflector", "ShieldEnergyDissipater", "ShieldHolographMode", "ShieldMultifield",
-                "AssociationsSpecies", "AssociationsWartimeFaction", "AssociationsFactionRating", "AssociationsFactionRatingA4", "AssociationsFactionRatingA5", "AssociationsFactionRatingA6", "AssociationsFactionRatingA7", "AssociationsFactionRatingA8", "AssociationsFactionRatingA9", "AssociationsFactionRatingA0", "AssociationsFactionRatingB1", "AssociationsFactionRatingB2", "AssociationsFactionRatingB3", "AssociationsFactionRatingB4", "AssociationsFactionRatingB5", "AssociationsFactionRatingB6", "AssociationsFactionRatingB7", "AssociationsFactionRatingB8", "AssociationsFactionRatingB9", "AssociationsFactionRatingB0"], function (values)
+                return `[[floor([[1d10cf<4cs10]] /5)]]`;
+            }).join(' + ')} + ${excessspellDice}[auto hits]`;
+            let tangleRoll = `${_.range(tangleDice).map((num) =>
             {
-                const setObj = {};
-
-                //console.log("Tool: ", values.salvoTool);
-
-                let charge = 0;
-                let rating = 0;
-                let maxCharge = parseInt(values.ReactorCharge) || 0;
-                maxCharge += parseInt(values.ReactorOvercharge) || 0;
-                //console.log("Max Charge: ", maxCharge);
-
-                //Set the status of the Reactor
-                setObj.salvoChargeDirection = "Charged";
-                if (values.ReactorOvercharge == "1" && charge <= 0)
-                {
-                    setObj.salvoChargeDirection = "Overcharged";
-                }
-                else if (values.ReactorCharge <= 0)
-                {
-                    setObj.salvoChargeDirection = "Uncharged";
-                }
-
-                //Scanner
-                if (values.salvoTool == "Scanner")
-                {
-                    let mod1 = 0;
-                    let mod2 = 0;
-                    let mod3 = 0;
-                    let mod4 = 0;
-
-                    if (values.salvoMod1 == "1")
-                    {
-                        mod1 = parseInt(values.ScannerSurveySensor) || 0;
-                        if (mod1 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-
-                        }
-                        else
-                        {
-                            rating += mod1;
-                            charge++;
-                            setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod1 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod2 == "1")
-                    {
-                        mod2 = parseInt(values.ScannerDepthAnalyser) || 0;
-                        if (mod2 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod2;
-                            charge++;
-                            setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod2 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod3 == "1")
-                    {
-                        mod3 = parseInt(values.ScannerAreaEffect) || 0;
-                        if (mod3 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod3;
-                            charge++;
-                            setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod3 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod4 == "1")
-                    {
-                        mod4 = parseInt(values.ScannerRangeCompensator) || 0;
-                        if (mod4 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod4;
-                            charge++;
-                            setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod4 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                }
-                //BioChemKit
-                else if (values.salvoTool == "BioChem Kit")
-                {
-                    let mod1 = 0;
-                    let mod2 = 0;
-                    let mod3 = 0;
-
-                    if (values.salvoMod1 == "1")
-                    {
-                        mod1 = parseInt(values.BioChemKitMedtool) || 0;
-                        if (mod1 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod1;
-                            charge++;
-                            setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod1 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod2 == "1")
-                    {
-                        mod2 = parseInt(values.BioChemKitSampler) || 0;
-                        if (mod2 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod2;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod2 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod3 == "1")
-                    {
-                        mod3 = parseInt(values.BioChemKitIncubator) || 0;
-                        if (mod3 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod3;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod3 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                }
-                //Augmentation
-                else if (values.salvoTool == "Augmentation")
-                {
-                    let mod1 = 0;
-                    let mod2 = 0;
-                    let mod3 = 0;
-                    let mod4 = 0;
-                    let mod5 = 0;
-
-                    if (values.salvoMod1 == "1")
-                    {
-                        mod1 = 2;
-                        if (values.Trait_1 == "")
-                        {
-                            charge += 2;
-                            rating += 2;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod1;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod1 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod2 == "1")
-                    {
-                        mod2 = 2;
-                        if (values.Trait_2 == "")
-                        {
-                            charge += 2;
-                            rating += 2;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod2;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod2 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod3 == "1")
-                    {
-                        mod3 = 2;
-                        if (values.Trait_3 == "")
-                        {
-                            charge += 2;
-                            rating += 2;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod3;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod3 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod4 == "1")
-                    {
-                        mod4 = 2;
-                        if (values.Trait_4 == "")
-                        {
-                            charge += 2;
-                            rating += 2;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod4;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod4 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod5 == "1")
-                    {
-                        mod5 = 2;
-                        if (values.Trait_5 == "")
-                        {
-                            charge += 2;
-                            rating += 2;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod5;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod5 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                }
-                //Link
-                else if (values.salvoTool == "Link")
-                {
-                    let mod1 = 0;
-                    let mod2 = 0;
-                    let mod3 = 0;
-
-                    if (values.salvoMod1 == "1")
-                    {
-                        mod1 = parseInt(values.LinkCommBrowser) || 0;
-                        if (mod1 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod1;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod1 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod2 == "1")
-                    {
-                        mod2 = parseInt(values.LinkDevelopmentKit) || 0;
-                        if (mod2 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod2;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod2 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod3 == "1")
-                    {
-                        mod3 = parseInt(values.LinkHardening) || 0;
-                        if (mod3 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod3;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod3 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                }
-                //Multitool
-                else if (values.salvoTool == "Multitool")
-                {
-                    let mod1 = 0;
-                    let mod2 = 0;
-                    let mod3 = 0;
-
-                    if (values.salvoMod1 == "1")
-                    {
-                        mod1 = parseInt(values.MultitoolDisruptorTargeter) || 0;
-                        if (mod1 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod1;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod1 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod2 == "1")
-                    {
-                        mod2 = parseInt(values.MultitoolTractorLifter) || 0;
-                        if (mod2 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod2;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod2 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod3 == "1")
-                    {
-                        mod3 = parseInt(values.MultitoolUtilityManipulator) || 0;
-                        if (mod3 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-
-                        }
-                        else
-                        {
-                            rating += mod3;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod3 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                }
-                //Shield
-                else if (values.salvoTool == "Shield")
-                {
-                    let mod1 = 0;
-                    let mod2 = 0;
-                    let mod3 = 0;
-                    let mod4 = 0;
-
-                    if (values.salvoMod1 == "1")
-                    {
-                        mod1 = parseInt(values.ShieldKineticDeflector) || 0;
-                        if (mod1 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-
-                        }
-                        else
-                        {
-                            rating += mod1;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod1 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod2 == "1")
-                    {
-                        mod2 = parseInt(values.ShieldEnergyDissipater) || 0;
-                        if (mod2 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod2;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod2 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod3 == "1")
-                    {
-                        mod3 = parseInt(values.ShieldHolographMode) || 0;
-                        if (mod3 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod3;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod3 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod4 == "1")
-                    {
-                        mod4 = parseInt(values.ShieldMultifield) || 0;
-                        if (mod4 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod4;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        //Unclick the Mod if insuficient charge
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod4 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                }
-                //Associations
-                else if (values.salvoTool == "Associations")
-                {
-                    let mod1 = 0;
-                    let mod2 = 0;
-                    let mod3 = 0;
-                    let mod4 = 0;
-                    let mod5 = 0;
-                    let mod6 = 0;
-                    let mod7 = 0;
-                    let mod8 = 0;
-                    let mod9 = 0;
-                    let mod10 = 0;
-                    let mod11 = 0;
-                    let mod12 = 0;
-                    let mod13 = 0;
-                    let mod14 = 0;
-                    let mod15 = 0;
-                    let mod16 = 0;
-                    let mod17 = 0;
-                    let mod18 = 0;
-                    let mod19 = 0;
-                    let mod20 = 0;
-
-                    if (values.salvoMod1 == "1")
-                    {
-                        mod1 = parseInt(values.AssociationsSpecies) || 0;
-                        if (mod1 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod1;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod1 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod2 == "1")
-                    {
-                        mod2 = parseInt(values.AssociationsWartimeFaction) || 0;
-                        if (mod2 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod2;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod2 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod3 == "1")
-                    {
-                        mod3 = parseInt(values.AssociationsFactionRating) || 0;
-                        if (mod3 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod3;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod3 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod4 == "1")
-                    {
-                        mod4 = parseInt(values.AssociationsFactionRatingA4) || 0;
-                        if (mod4 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod4;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod4 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod5 == "1")
-                    {
-                        mod5 = parseInt(values.AssociationsFactionRatingA5) || 0;
-                        if (mod5 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod5;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod5 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod6 == "1")
-                    {
-                        mod6 = parseInt(values.AssociationsFactionRatingA6) || 0;
-                        if (mod6 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod6;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod6 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod7 == "1")
-                    {
-                        mod7 = parseInt(values.AssociationsFactionRatingA7) || 0;
-                        if (mod7 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod7;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod7 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod8 == "1")
-                    {
-                        mod8 = parseInt(values.AssociationsFactionRatingA8) || 0;
-                        if (mod8 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod8;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod8 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod9 == "1")
-                    {
-                        mod9 = parseInt(values.AssociationsFactionRatingA9) || 0;
-                        if (mod9 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod9;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod9 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod10 == "1")
-                    {
-                        mod10 = parseInt(values.AssociationsFactionRatingA0) || 0;
-                        if (mod10 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod10;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod10 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod11 == "1")
-                    {
-                        mod11 = parseInt(values.AssociationsFactionRatingB1) || 0;
-                        if (mod11 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod11;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod11 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod12 == "1")
-                    {
-                        mod12 = parseInt(values.AssociationsFactionRatingB2) || 0;
-                        if (mod12 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod12;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod12 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod13 == "1")
-                    {
-                        mod13 = parseInt(values.AssociationsFactionRatingB3) || 0;
-                        if (mod13 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod13;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod13 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod14 == "1")
-                    {
-                        mod14 = parseInt(values.AssociationsFactionRatingB4) || 0;
-                        if (mod14 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod14;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod14 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod15 == "1")
-                    {
-                        mod15 = parseInt(values.AssociationsFactionRatingB5) || 0;
-                        if (mod15 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod15;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod15 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod16 == "1")
-                    {
-                        mod16 = parseInt(values.AssociationsFactionRatingB6) || 0;
-                        if (mod16 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod16;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod16 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod17 == "1")
-                    {
-                        mod17 = parseInt(values.AssociationsFactionRatingB7) || 0;
-                        if (mod17 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod17;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod17 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod18 == "1")
-                    {
-                        mod18 = parseInt(values.AssociationsFactionRatingB8) || 0;
-                        if (mod18 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod18;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod18 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod19 == "1")
-                    {
-                        mod19 = parseInt(values.AssociationsFactionRatingB9) || 0;
-                        if (mod19 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod19;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod19 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                    if (values.salvoMod20 == "1")
-                    {
-                        mod20 = parseInt(values.AssociationsFactionRatingB0) || 0;
-                        if (mod20 == 0)
-                        {
-                            charge += 2;
-                            rating += 1;
-                            setObj.salvoChargeDirection = "NF 2 Charge";
-                        }
-                        else
-                        {
-                            rating += mod20;
-                            charge++; setObj.salvoChargeDirection = "Charged";
-                        }
-                        if (charge > maxCharge)
-                        {
-                            setObj.salvoMod20 = 0;
-                            setObj.salvoChargeDirection = "Insufficient Charge";
-                        }
-                        else if (charge == maxCharge)
-                        {
-                            setObj.salvoChargeDirection = "Expended";
-                        }
-                    }
-
-                }
-                else
-                {
-                    let rating = 0;
-
-                }
-
-                setObj.salvoToolRating = rating;
-                setObj.salvoCharge = charge;
-                //console.log(setObj);
-                setAttrs(setObj);
-            });
-        });
-
-        //Generate Crewmember Salvo Macro
-    on("change:castSpellDice change:salvothreat", (event) =>
-        {
-            getAttrs(["castSpellDice", "salvoThreat", "salvoCharge"], function (values)
+                return `[[floor([[1d6cf<3cs10]] /4)-1]]`;
+            }).join(' + ')} - ${excessTangleDice}[auto misses]`;
+            let wholeRoll = `[[${spellRoll}+${tangleRoll}]]`;
+            let spellFields = _.range(spellDice).map((num) =>
             {
-                
-                //Sum the task dice
-                let spellDice = parseInt(values.castSpellDice) || 0;
-                
-                //Calculate automatic hits from excess task dice
-                let excessspellDice = 0;
-                let autoHits = '';
-                if (spellDice > 10)
-                {
-                    excessSpellDice = spellDice - 10;
-                    spellDice = 10;
-                    autoHits = `{{autoHits=[[${excessSpellDice}]]}}`;
-                }
+                return `{{spell${num}=$[[${num * 2}]]}}`;
+            }).join(' ');
 
-                //Threat dice
-                let tangleDice = parseInt(values.salvoThreat) || 0;
+            let tangleFields = _.range(tangleDice).map((num) =>
+            {
+                return `{{tangle${num}=$[[${(num + spellDice) * 2}]]}}`;
+            }).join(' ');
 
-                //Calculate automatic hits from excess task dice
-                let excessTangleDice = 0;
-                let autoMisses = '';
-                if (tangleDice > 10)
-                {
-                    excessTangleDice = tangleDice - 10;
-                    tangleDice = 10;
-                    autoMisses = `{{autoMisses=[[${excessTangleDice}]]}}`;
-                }
+            setObj.castingMacro = `&{template:FS} {{salvoCharge=${values.salvoCharge}}} {{spellDice=${spellDice}}} {{tangleDice=${tangleDice}}} {{total=${wholeRoll}}} ${spellFields} ${tangleFields} ${autoHits} ${autoMisses}`;
 
-                //Make the Salvo Roll Macro
-                console.log(spellDice, "vs", tangleDice);
-                const setObj = {};
-
-                let spellRoll = `${_.range(spellDice).map((num) =>
-                {
-                    return `[[floor([[1d10cf<4cs10]] /5)]]`;
-                }).join(' + ')} + ${excessspellDice}[auto hits]`;
-                let tangleRoll = `${_.range(tangleDice).map((num) =>
-                {
-                    return `[[floor([[1d6cf<3cs10]] /4)-1]]`;
-                }).join(' + ')} - ${excessTangleDice}[auto misses]`;
-                let wholeRoll = `[[${spellRoll}+${tangleRoll}]]`;
-                let spellFields = _.range(spellDice).map((num) =>
-                {
-                    return `{{spell${num}=$[[${num * 2}]]}}`;
-                }).join(' ');
-
-                let tangleFields = _.range(tangleDice).map((num) =>
-                {
-                    return `{{tangle${num}=$[[${(num + spellDice) * 2}]]}}`;
-                }).join(' ');
-
-                setObj.salvoMacro = `&{template:FS} {{salvoCharge=${values.salvoCharge}}} {{spellDice=${spellDice}}} {{tangleDice=${tangleDice}}} {{total=${wholeRoll}}} ${spellFields} ${tangleFields} ${autoHits} ${autoMisses}`;
-
-                console.log(setObj);
-                setAttrs(setObj);
-            })
-        });
+            console.log(setObj);
+            setAttrs(setObj);
+        })
+    });
 
         /*Sheet Totals*/
         //Reactor Overcharge control

@@ -297,7 +297,7 @@ main.masterGrid
     width: 100%;
     display: grid;
     grid-row-gap: 0px;
-    grid-template-columns: 151px 1fr 300px;
+    grid-template-columns: 175px 1fr 300px;
     grid-template-rows: 17px 703px 385px 490px 50px;
     justify-items: start;
     align-items: start;
@@ -334,13 +334,11 @@ main.masterGrid
 }
 
 /* Roll Template */
-.sheet-rolltemplate-FS,
-.sheet-rolltemplate-FSShip
+.sheet-rolltemplate-FS
 {
 }
 
-    .sheet-rolltemplate-FS .sheet-rolltemplateContainer,
-    .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer
+    .sheet-rolltemplate-FS .sheet-rolltemplateContainer
     {
         display: grid;
         grid-template-columns: repeat(12, 20px);
@@ -354,8 +352,7 @@ main.masterGrid
         font-size: 12px;
     }
         /*Template Header*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateHeader,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-rolltemplateHeader
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateHeader
         {
             grid-row: 1/2;
             grid-column: 1/-1;
@@ -369,41 +366,35 @@ main.masterGrid
             padding-top: 3px;
         }
         /*Rows & Columns*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateTextRows,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-rolltemplateTextRows
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateTextRows
         {
             padding-left: 2px;
             padding-top: 3px;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateCol1,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-rolltemplateCol1
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateCol1
         {
             grid-column: 1/7;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateCol2,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-rolltemplateCol2
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateCol2
         {
             grid-column: 7/-1;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateRow1,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-rolltemplateRow1
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateRow1
         {
             grid-row: 2/3;
             background-color: #414241;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateRow2,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-rolltemplateRow2
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateRow2
         {
             grid-row: 3/4;
             background-color: #353635;
         }
         /*Subheaders*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSubheader,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateSubheader
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSubheader
         {
             grid-column: 1/-1;
             color: #d87d29;
@@ -414,23 +405,20 @@ main.masterGrid
             padding-top: 3px;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDiceSubheader,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-taskDiceSubheader
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDiceSubheader
         {
             grid-row: 4/6;
             background-color: #414241;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDiceSubheader,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-threatDiceSubheader
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDiceSubheader
         {
             grid-row: 6/8;
             background-color: #353635;
         }
 
         /*Dice*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-dice,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-dice
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-dice
         {
             justify-content: stretch;
             align-content: stretch;
@@ -438,8 +426,7 @@ main.masterGrid
             height: 20px;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .inlinerollresult,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .inlinerollresult
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .inlinerollresult
         {
             background-color: transparent;
             border-color: transparent;
@@ -447,14 +434,12 @@ main.masterGrid
             text-align: center;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-taskDice
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice
         {
             grid-row: 5/6;
         }
 
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult,
-            .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult
+            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult
             {
                 background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
                 background-repeat: no-repeat;
@@ -465,8 +450,7 @@ main.masterGrid
                 height: 20px;
             }
 
-                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullfail,
-                .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullfail
+                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullfail
                 {
                     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieNull.png);
                     background-repeat: no-repeat;
@@ -477,8 +461,7 @@ main.masterGrid
                     height: 20px;
                 }
 
-                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullcrit,
-                .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullcrit
+                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullcrit
                 {
                     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
                     background-repeat: no-repeat;
@@ -490,14 +473,12 @@ main.masterGrid
                     padding: 0;
                 }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-threatDice
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice
         {
             grid-row: 7/8;
         }
 
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult,
-            .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult
+            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult
             {
                 background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieNull.png);
                 background-repeat: no-repeat;
@@ -508,8 +489,7 @@ main.masterGrid
                 height: 20px;
             }
 
-                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult.fullfail,
-                .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult.fullfail
+                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult.fullfail
                 {
                     background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
                     background-repeat: no-repeat;
@@ -520,89 +500,75 @@ main.masterGrid
                     height: 20px;
                 }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die0,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die0
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die0
         {
             grid-column: 2/3;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die1,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die1
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die1
         {
             grid-column: 3/4;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die2,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die2
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die2
         {
             grid-column: 4/5;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die3,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die3
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die3
         {
             grid-column: 5/6;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die4,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die4
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die4
         {
             grid-column: 6/7;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die5,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die5
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die5
         {
             grid-column: 7/8;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die6,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die6
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die6
         {
             grid-column: 8/9;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die7,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die7
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die7
         {
             grid-column: 9/10;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die8,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die8
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die8
         {
             grid-column: 10/11;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die9,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-die9
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die9
         {
             grid-column: 11/12;
         }
 
         /*Dice Count*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateDiceCount .inlinerollresult,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateDiceCount .inlinerollresult
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateDiceCount .inlinerollresult
         {
             border: none;
             font-weight: 400;
             padding: 0;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDiceCount,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-threatDiceCount
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDiceCount
         {
             grid-row: 6/7;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDiceCount,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-taskDiceCount
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDiceCount
         {
             grid-row: 4/5;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateExcessDice,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateExcessDice
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateExcessDice
         {
             grid-column: 5/-1;
             padding-top: 2px;
@@ -610,15 +576,13 @@ main.masterGrid
         }
 
         /*Charge*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateCharge,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateCharge
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateCharge
         {
             grid-row: 8/9;
             background-color: #414241;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateChargeTotal,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateChargeTotal
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateChargeTotal
         {
             grid-column: 4/5;
             padding: 2px 0 0 5px;
@@ -626,36 +590,31 @@ main.masterGrid
             text-align: end;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSupplyHeader,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateSupplyHeader
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSupplyHeader
         {
             grid-column: 7/-1;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSupplyTotal,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateSupplyTotal
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSupplyTotal
         {
             grid-column: 10/11;
         }
 
         /*Results*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResults,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateResults
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResults
         {
             grid-row: 9/10;
             background-color: #353635;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResultTotal,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateResultTotal
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResultTotal
         {
             grid-column: 4/5;
             padding: 2px 0 0 5px;
             text-align: end;
         }
 
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResultTotal > .inlinerollresult,
-            .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateResultTotal > .inlinerollresult
+            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResultTotal > .inlinerollresult
             {
                 border: none;
                 font-weight: 400;
@@ -663,15 +622,13 @@ main.masterGrid
             }
 
         /*Outcome*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcome,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateOutcome
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcome
         {
             grid-row: 10/11;
             background-color: #414241;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay,
-        .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay
+        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay
         {
             grid-column: 4/-1;
             padding-left: 5px;
@@ -679,2832 +636,12 @@ main.masterGrid
             font-weight: 400;
         }
 
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay .inlinerollresult,
-            .sheet-rolltemplate-FSShip .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay .inlinerollresult
+            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay .inlinerollresult
             {
                 border: none;
                 font-weight: 400;
                 padding: 0;
             }
-
-
-/* Salvo Mode  */
-
-/*Salvo Mode Button*/
-.salvoRollButton
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-input[type="checkbox"].hideSalvoModeCheckbox
-{
-    opacity: 0;
-    cursor: pointer;
-    z-index: 19;
-    margin: 0;
-    padding: 0;
-    vertical-align: central;
-}
-
-span.salvoMode
-{
-    z-index: 18;
-    vertical-align: central;
-}
-
-/* Open Salvo Mode Button*/
-input.salvoRollButton + span.salvoRollButton
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/salvo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1;
-    background-size: 60px 44px;
-}
-
-.playerCasterSheet input.salvoRollButton + span.salvoRollButton,
-.playerCasterSheet input.salvoRollButton
-{
-    width: 60px;
-    height: 44px;
-    top: 336px;
-    left: 640px;
-}
-
-    .playerCasterSheet input.salvoRollButton ~ div.salvoRollTag
-    {
-        position: absolute;
-        top: 345px;
-        left: 600px;
-        display: grid;
-        font-weight: bold;
-        font-variant: small-caps;
-        height: 32px;
-        width: 40px;
-        overflow-wrap: break-word;
-        z-index: 18;
-        line-height: 1em;
-    }
-
-.shipSheet input.salvoRollButton + span.salvoRollButton,
-.shipSheet input.salvoRollButton,
-.mediumSheet input.salvoRollButton + span.salvoRollButton,
-.mediumSheet input.salvoRollButton
-{
-    width: 60px;
-    height: 44px;
-    top: 222px;
-    left: 505px;
-}
-
-    .shipSheet input.salvoRollButton ~ div.salvoRollTag,
-    .mediumSheet input.salvoRollButton ~ div.salvoRollTag
-    {
-        position: absolute;
-        top: 231px;
-        left: 465px;
-        display: grid;
-        font-weight: bold;
-        font-variant: small-caps;
-        height: 32px;
-        width: 40px;
-        overflow-wrap: break-word;
-        z-index: 18;
-        line-height: 1em;
-    }
-
-
-/* Close Salvo Mode Button*/
-input.salvoRollButton:checked + span.salvoRollButton
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/salvoDeactivate.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1;
-    background-size: 24px 20px;
-}
-
-input.salvoRollButton:checked + span.salvoRollButton, input.salvoRollButton:checked
-{
-    width: 24px;
-    height: 20px;
-    top: 172px;
-    left: 900px;
-}
-
-    input.salvoRollButton:checked ~ div.salvoRollTag
-    {
-        display: none;
-    }
-
-/* ************* */
-/* Salvo Widget */
-/***************/
-.salvo
-{
-    position: absolute;
-    z-index: 10;
-    display: grid;
-    left: 0;
-    grid-template-columns: repeat(93, 10px) 70px;
-    grid-template-rows: repeat(120, 10px) 1200px;
-    background-color: transparent;
-    background-size: 1000px 2400px;
-    width: 850px;
-    height: 2400px;
-}
-    /*Blinds stop hade parts color-profile thead sheet*/
-    .salvo .blinds
-    {
-        position: absolute;
-        z-index: 11;
-        display: grid;
-        background: rgba(255,255,255,0.8) no-repeat fixed top;
-    }
-
-.playerCasterSheet .salvo .blinds.topBlind
-{
-    grid-row: 1;
-    grid-column: 1;
-    width: 950px;
-    height: 170px;
-}
-
-.shipSheet .salvo .blinds.topBlind
-{
-    grid-row: 1;
-    grid-column: 1;
-    width: 950px;
-    height: 90px;
-}
-
-.playerCasterSheet .salvo .blinds.pg2Blind
-{
-    grid-row: -2;
-    grid-column: 1;
-    top: 6px;
-    width: 950px;
-    height: 1200px;
-}
-
-.shipSheet .salvo .blinds.pg2Blind
-{
-    grid-row: -42;
-    grid-column: 1;
-    width: 950px;
-    height: 1600px;
-}
-
-.playerCasterSheet .salvo .blinds.rightSideBlind
-{
-    grid-row: 17;
-    grid-column: -24;
-    width: 250px;
-    height: 430px;
-}
-
-.shipSheet .salvo .blinds.rightSideBlind
-{
-    grid-row: 10;
-    left: 6px;
-    grid-column: -39;
-    width: 390px;
-    height: 325px;
-}
-
-.shipSheet .salvo .blinds.reactorBlind
-{
-    grid-row: 10;
-    grid-column: 1;
-    width: 210px;
-    height: 160px;
-}
-
-.shipSheet .salvo .blinds.leftSideBlind
-{
-    grid-row: 26;
-    grid-column: 1;
-    width: 210px;
-    height: 165px;
-}
-
-.playerCasterSheet .salvo .blinds.skillsBlind
-{
-    grid-row: 17;
-    grid-column: 1;
-    width: 710px;
-    height: 430px;
-}
-
-.playerCasterSheet .salvo .blinds.crewKitBlind
-{
-    grid-row: 60;
-    grid-column: 1;
-    width: 950px;
-    height: 616px;
-}
-
-.shipSheet .salvo .blinds.systemsBlind
-{
-    grid-row: 10;
-    grid-column: 22;
-    width: 355px;
-    height: 325px;
-}
-
-.shipSheet .salvo .blinds.moduleBlind
-{
-    grid-row: 63;
-    margin-top: 6px;
-    grid-column: 42;
-    width: 130px;
-    height: 170px;
-}
-
-.shipSheet .salvo .blinds.moduleTopBlind
-{
-    grid-row: 42;
-    grid-column: 1;
-    width: 540px;
-    height: 215px;
-}
-
-.shipSheet .salvo .blinds.moduleBottomBlind
-{
-    grid-row: 63;
-    margin-top: 6px;
-    grid-column: 1;
-    width: 410px;
-    height: 170px;
-}
-
-.shipSheet .salvo .blinds.rightSideBottomBlind
-{
-    grid-row: 42;
-    grid-column: -41;
-    width: 410px;
-    height: 45px;
-}
-
-.shipSheet .salvo .blinds.launchbayBlind
-{
-    grid-row: 46;
-    margin-top: 5px;
-    grid-column: -41;
-    width: 410px;
-    height: 350px;
-}
-
-/* Crewmember Blinds functionality*/
-.playerCasterSheet .colorChanger[value="Choose a Specialty"] + .skillsBlind,
-.playerCasterSheet .colorChanger:not([value="Choose a Specialty"]) + .skillsBlind + .crewKitBlind
-{
-    display: none;
-}
-
-/* Ship Blinds functionality - Tool Not Selected*/
-.shipSheet input.colorChanger:not([value="Select Specialty"]) + input.colorChanger[value="Choose a Tool"] + div.systemsBlind,
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Choose a Tool"] + .systemsBlind + .reactorBlind,
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Choose a Tool"] + .systemsBlind + .reactorBlind + .moduleBlind,
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Choose a Tool"] + .systemsBlind + .reactorBlind + .moduleBlind + .launchbayBlind
-{
-    display: none;
-}
-
-/* Ship Blinds functionality and flow - Launcher Selected*/
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launcher"] + .systemsBlind + .reactorBlind + .moduleBlind,
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launcher"] ~ .chargeSystemDirection
-{
-    display: none;
-}
-/* Ship Blinds functionality, flow, and trailer - Launch Bay Selected*/
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launch Bay"] + .systemsBlind + .reactorBlind + .moduleBlind + .launchbayBlind,
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value="Launch Bay"] ~ .chargeSystemDirection
-{
-    display: none;
-}
-/* Ship Blinds functionality - A Ship System Selected*/
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value^="Launch"] + .systemsBlind,
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger[value^="Launch"] + .systemsBlind + .reactorBlind
-{
-    display: grid;
-}
-
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger:not([value^="Launch"]) + .systemsBlind,
-.shipSheet .colorChanger:not([value="Select Specialty"]) + .colorChanger:not([value^="Launch"]) + .systemsBlind + .reactorBlind
-{
-    display: none;
-}
-
-/*Salvo Mode title Box*/
-.salvoTitle
-{
-    grid-row: 1;
-    grid-column: 42;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/terminal.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px 32px;
-    padding-top: 2px;
-    justify-self: center;
-    text-align: center;
-    vertical-align: central;
-    font-size: 20px;
-    color: white;
-    font-variant: small-caps;
-    font-weight: 600;
-    width: 200px;
-    height: 32px;
-    z-index: 16;
-    line-height: 32px;
-}
-
-/*Overlay Box Grids*/
-.salvoOverlayBox
-{
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 1fr 4fr 2fr 5fr;
-}
-
-.shuttleSystemBox
-{
-    position: absolute;
-    display: none;
-    grid-row: 50;
-    grid-column: 37;
-    grid-template-columns: 10px 20px 1fr 10px;
-    grid-template-rows: 10px 20px 26px 20px 20px 20px 1fr 1fr;
-}
-
-span.shuttleModText
-{
-    font-size: 10px;
-    color: black;
-    grid-column: 3;
-}
-
-span.shuttleSystemDetails
-{
-    font-size: 10px;
-    color: black;
-    grid-row: 3;
-    grid-column: 2 / span 2;
-    line-height: 14px;
-    margin: 0 0 2px 10px;
-}
-
-
-span.shuttleMods,
-input.shuttleMods
-{
-    grid-column: 2;
-}
-
-span.shuttleMod1,
-input.shuttleMod1
-{
-    grid-row: 4;
-}
-
-span.shuttleMod2,
-input.shuttleMod2
-{
-    grid-row: 5;
-}
-
-span.shuttleMod3,
-input.shuttleMod3
-{
-    grid-row: 6;
-}
-
-/*Crewmember Overlay Box Locations*/
-.playerCasterSheet .salvoSkillBox
-{
-    grid-row: 5;
-    grid-column: 4;
-}
-
-.playerCasterSheet .salvoSpecialtyBox
-{
-    grid-row: 5;
-    grid-column: 62;
-}
-
-.playerCasterSheet .salvoToolBox
-{
-    grid-row: 26;
-    grid-column: 31;
-}
-
-.playerCasterSheet .salvoChargeBox
-{
-    grid-row: 45;
-    grid-column: 4;
-}
-
-.playerCasterSheet .salvoAdvantageBox
-{
-    grid-row: 26;
-    grid-column: 62;
-}
-
-.playerCasterSheet .salvoThreatBox
-{
-    grid-row: 45;
-    grid-column: 83;
-}
-
-/*Ship Overlay Box Locations*/
-.shipSheet .salvoOperatorBox
-{
-    grid-row: 6;
-    margin-top: 4px;
-    grid-column: 4;
-}
-
-.shipSheet .salvoSkillBox
-{
-    grid-row: 6;
-    grid-column: 57;
-    margin-left: 4px;
-}
-
-.shipSheet .salvoSpecialtyBox
-{
-    grid-row: 20;
-    grid-column: 74;
-    margin-left: 4px;
-}
-
-.shipSheet .salvoToolBox
-{
-    grid-row: 35;
-    grid-column: 55;
-    margin-left: 4px;
-}
-
-.shipSheet .salvoTrailer
-{
-    grid-row: 35;
-    grid-column: 37;
-    display: none;
-}
-
-.shipSheet .salvoChargeBox
-{
-    grid-row: 30;
-    grid-column: 3;
-}
-
-.shipSheet .salvoSupplyBox
-{
-    grid-row: 70;
-    grid-column: 20;
-}
-
-.shipSheet .salvoAdvantageBox
-{
-    grid-row: 70;
-    grid-column: 1;
-}
-
-.shipSheet .salvoThreatBox
-{
-    grid-row: 50;
-    grid-column: 22;
-}
-
-input[type=number].salvoRating
-{
-    grid-row: 2;
-    grid-column: 2;
-    align-self: start;
-    justify-self: center;
-    height: 80px;
-    width: 100%;
-    font-size: 28px;
-    color: black;
-    font-weight: 500;
-    border: none;
-}
-
-input[type=text].salvoRating
-{
-    grid-row: 2;
-    grid-column: 2;
-    align-self: start;
-    justify-self: end;
-    height: 80px;
-    width: 45%;
-    font-size: 28px;
-    color: red;
-    font-weight: 400;
-    border: none;
-}
-
-.salvoTrailerCheckboxGrid
-{
-    grid-row: 2;
-    grid-column: 2;
-    height: 80px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    grid-template-areas: "checkbox text";
-}
-
-input.salvoTrailerCheckbox,
-span.salvoTrailerCheckbox
-{
-    grid-area: checkbox;
-    justify-self: center;
-    align-self: start;
-    margin: 7px 0 0 10px;
-    height: 20px;
-    width: 20px;
-}
-
-input.salvoTrailerCheckbox
-{
-    opacity: 0;
-    z-index: 19;
-}
-
-    input.salvoTrailerCheckbox + span.salvoTrailerCheckbox
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/HexPip.png);
-        background-repeat: no-repeat;
-        background-position: left bottom;
-        background-size: 16px 16px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.salvoTrailerCheckbox:checked + span.salvoTrailerCheckbox
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/HexPipFilled.png);
-        background-repeat: no-repeat;
-        background-position: left bottom;
-        background-size: 16px 16px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-.salvoTrailerCheckboxText
-{
-    grid-area: text;
-    justify-self: start;
-    align-self: start;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #404040;
-    line-height: 20px;
-}
-
-select.salvoTrailerChoice
-{
-    grid-row: 2;
-    grid-column: 2 / span 2;
-    align-self: center;
-    justify-self: start;
-    height: 18px;
-    width: 100%;
-    font-size: 16px;
-    color: black;
-    font-weight: 500;
-    text-align: start;
-    border: none;
-    font-variant: small-caps;
-    font-size: 14px;
-    color: black;
-    margin: 6px 0 0 5px;
-}
-
-
-
-input[type=text].salvoAttr,
-div.salvoAttr,
-select.salvoAttr
-{
-    grid-row: 3;
-    grid-column: 2;
-    align-self: center;
-    justify-self: center;
-    height: 18px;
-    width: 100%;
-    font-size: 14px;
-    color: black;
-    font-weight: 500;
-    text-align: center;
-    border: none;
-}
-
-    input[type=text].salvoAttr.salvoOperator,
-    div.salvoAttr.salvoOperator,
-    select.salvoAttr.salvoOperator
-    {
-        margin-top: 8px;
-    }
-/*Change the colour of the Charge text*/
-.salvoChargeBox .colorChanger[value="Uncharged"] + input,
-.salvoChargeBox .colorChanger[value="Uncharged"] + input + input,
-.salvoChargeBox .colorChanger[value="Expended"] + input,
-.salvoChargeBox .colorChanger[value="Expended"] + input + input,
-.salvoSupplyBox .colorChanger[value="Expended"] + input,
-.salvoSupplyBox .colorChanger[value="Expended"] + input + input
-{
-    color: white;
-}
-
-.salvoChargeBox .colorChanger[value="Overcharged"] + input,
-.salvoChargeBox .colorChanger[value="Overcharged"] + input + input,
-.salvoChargeBox .colorChanger[value="NF 2 Charge"] + input,
-.salvoChargeBox .colorChanger[value="NF 2 Charge"] + input + input
-{
-    color: #a8611f;
-}
-
-.salvoChargeBox .colorChanger[value="Insufficient Charge"] + input,
-.salvoChargeBox .colorChanger[value="Insufficient Charge"] + input + input,
-.salvoSupplyBox .colorChanger[value="Insufficient Supply"] + input,
-.salvoSupplyBox .colorChanger[value="Insufficient Supply"] + input + input
-{
-    color: #8a0a00;
-}
-
-input[type=number].salvoThreatRating
-{
-    grid-row: 2;
-    grid-column: 2;
-    align-self: start;
-    justify-self: center;
-    height: 60px;
-    width: 100%;
-    font-size: 28px;
-    color: black;
-    font-weight: 500;
-    border: none;
-}
-
-div.salvoThreatAttr
-{
-    grid-row: 3;
-    grid-column: 2;
-    align-self: end;
-    justify-self: center;
-    height: 18px;
-    width: 100%;
-    font-size: 16px;
-    color: black;
-    font-weight: 500;
-    text-align: center;
-    border: none;
-}
-
-.inputBox
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Input_blue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px 110px;
-    width: 200px;
-    height: 110px;
-    z-index: 16;
-}
-
-.colorChanger[value="Choose a Skill"] + .inputBox,
-.colorChanger[value="Choose a Specialty"] + .inputBox,
-.colorChanger[value="Choose a Tool"] + .inputBox,
-.colorChanger[value="Select Operator"] + .inputBox,
-.colorChanger[value="Choose a Trailer"] + .inputBox
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Input_orange.png);
-}
-
-.processBox
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Process_blue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px 110px;
-    width: 200px;
-    height: 110px;
-    z-index: 16;
-}
-
-.offPage
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/offPage_blue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 110px 110px;
-    width: 110px;
-    height: 110px;
-    z-index: 16;
-}
-
-.offPageBig
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/offPageBig_blue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 165px 165px;
-    width: 165px;
-    height: 165px;
-    z-index: 16;
-}
-
-.colorChanger[value="Select Skill"] + .offPageBig,
-.colorChanger[value="Select Specialty"] + .offPageBig
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/offPageBig_orange.png);
-}
-
-
-.preparationBox
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/preperation_blue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px 34px;
-    width: 200px;
-    height: 34px;
-    z-index: 16;
-}
-
-.colorChanger[value="Choose Operator"] + .preparationBox
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/preperation_orange.png);
-}
-
-.selectionBox
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Selection_blue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px 238px;
-    width: 200px;
-    height: 238px;
-    z-index: 16;
-}
-
-.colorChanger[value="Select System"] + .selectionBox
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/Selection_orange.png);
-}
-
-/*Roll Button*/
-.playerCasterSheet .rollSalvoButton
-{
-    position: absolute;
-    grid-row: 45;
-    grid-column: 67;
-}
-
-.shipSheet .rollSalvoButton
-{
-    position: absolute;
-    grid-row: 50;
-    grid-column: 6;
-}
-
-button.rollSalvoButton
-{
-    margin-top: 5px;
-    border: none;
-    border-radius: 60%;
-    padding: 0px;
-    z-index: 19;
-    opacity: 0;
-    width: 80px;
-    height: 85px;
-}
-
-    button.rollSalvoButton + span.rollSalvoButton
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHex.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 80px 92px;
-        z-index: 17;
-        width: 80px;
-        height: 92px;
-    }
-
-        button.rollSalvoButton + span.rollSalvoButton + span.rollSalvoButton
-        {
-            z-index: 18;
-            width: 40px;
-            height: 20px;
-            padding: 69px 0 0 31px;
-            line-height: 20px;
-            text-align: left;
-            font-size: 20px;
-            color: white;
-            font-weight: 800;
-            font-variant: small-caps;
-        }
-
-    button.rollSalvoButton:hover + span.rollSalvoButton
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHexHover.png);
-        font-weight: 600;
-    }
-
-/* Spend Charge and Close Salvo Mode Button*/
-.playerCasterSheet .spendChargeCloseSalvoMode
-{
-    position: absolute;
-    grid-row: 55;
-    grid-column: 62;
-}
-
-.shipSheet .spendChargeCloseSalvoMode
-{
-    position: absolute;
-    grid-row: 60;
-    grid-column: 1;
-}
-
-input.spendChargeCloseSalvoMode
-{
-    z-index: 19;
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-}
-
-span.spendChargeCloseSalvoMode
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/terminal_orange.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px 32px;
-    z-index: 18;
-    width: 200px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-}
-
-
-/* Salvo Mode Hiding Functionality */
-div.salvo
-{
-    display: none;
-}
-
-input[type="checkbox"].salvoRollButton:checked ~ div.salvo
-{
-    display: grid;
-}
-
-/*Deselect buttons*/
-.skillDeselect,
-.specialtyDeselect,
-.toolDeselect,
-.operatorDeselect,
-.trailerDeselect
-{
-    position: absolute;
-    width: 12px;
-    height: 10px;
-}
-
-input.skillDeselect,
-input.specialtyDeselect,
-input.toolDeselect,
-input.operatorDeselect,
-input.trailerDeselect
-{
-    opacity: 0;
-    z-index: 19;
-}
-
-    input.skillDeselect:not(:checked) + span.skillDeselect,
-    input.specialtyDeselect:not(:checked) + span.specialtyDeselect,
-    input.toolDeselect:not(:checked) + span.toolDeselect,
-    input.operatorDeselect:not(:checked) + span.operatorDeselect,
-    input.trailerDeselect:not(:checked) + span.trailerDeselect
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/salvoDeactivate.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 1;
-        background-size: 12px 10px;
-        z-index: 18;
-    }
-
-.playerCasterSheet .skillDeselect
-{
-    grid-row: 5;
-    grid-column: 23;
-}
-
-.shipSheet .skillDeselect
-{
-    grid-row: 5;
-    margin-top: 8px;
-    grid-column: 74;
-}
-
-.playerCasterSheet .specialtyDeselect
-{
-    grid-row: 5;
-    grid-column: 81;
-}
-
-.shipSheet .specialtyDeselect
-{
-    grid-row: 19;
-    margin-top: 8px;
-    grid-column: -5;
-}
-
-.playerCasterSheet .toolDeselect
-{
-    grid-row: 26;
-    grid-column: 50;
-}
-
-.shipSheet .toolDeselect
-{
-    grid-row: 35;
-    grid-column: 74;
-    margin-left: 3px;
-}
-
-.shipSheet .trailerDeselect
-{
-    grid-row: 35;
-    grid-column: 56;
-}
-
-.shipSheet .operatorDeselect
-{
-    grid-row: 6;
-    margin-top: 2px;
-    grid-column: 24;
-}
-
-/*Skill  on/off functionality - Skill not Selected*/
-input.skillDeselect:checked + span.skillDeselect,
-input.skillDeselect:checked,
-input.skillDeselect:checked ~ .specialtyFlow,
-input.skillDeselect:checked ~ .salvoSpecialtyBox,
-input.skillDeselect:checked ~ .specialtySelector,
-input.skillDeselect:checked ~ .specialtyDeselect,
-input.skillDeselect:checked ~ .salvoToolBox,
-input.skillDeselect:checked ~ .salvoChargeBox,
-input.skillDeselect:checked ~ .salvoSupplyBox,
-input.skillDeselect:checked ~ .chargeCrewKitDirection,
-input.skillDeselect:checked ~ .chargeSystemDirection,
-input.skillDeselect:checked ~ .toolDeselect,
-input.skillDeselect:checked ~ .toolSelector,
-input.skillDeselect:checked ~ .crewKitMods
-{
-    display: none;
-}
-/*Skill  on/off functionality - Skill Selected*/
-input.skillDeselect:not(:checked) ~ div.skillDirection,
-input.skillDeselect:not(:checked) ~ .skillSelector
-{
-    display: none;
-}
-/*Operator on/off functionality - Operator NOT Selected*/
-input.operatorDeselect:checked + span.operatorDeselect,
-input.operatorDeselect:checked,
-input.operatorDeselect:checked ~ div.skillDirection,
-input.operatorDeselect:checked ~ div.salvoSkillBox,
-input.operatorDeselect:checked ~ .specialtyFlow,
-input.operatorDeselect:checked ~ .salvoSpecialtyBox,
-input.operatorDeselect:checked ~ .specialtySelector,
-input.operatorDeselect:checked ~ .specialtyDeselect,
-input.operatorDeselect:checked ~ .salvoToolBox,
-input.operatorDeselect:checked ~ .salvoChargeBox,
-input.operatorDeselect:checked ~ .salvoSupplyBox,
-input.operatorDeselect:checked ~ .chargeSystemDirection,
-input.operatorDeselect:checked ~ .toolDeselect,
-input.operatorDeselect:checked ~ .toolSelector,
-input.operatorDeselect:checked ~ .crewKitMods
-{
-    display: none;
-}
-/*Operator on/off functionality - Operator Selected*/
-input.operatorDeselect:not(:checked) ~ div.operatorDirection,
-input.operatorDeselect:not(:checked) ~ div.salvoOperatorBG,
-input.operatorDeselect:not(:checked) ~ .operatorSelector
-{
-    display: none;
-}
-/*Operator on/off functionality - No Operator Found*/
-input.colorChanger[value="No Operator Found"] ~ .operatorSelector
-{
-    display: none;
-}
-/*Specialty on/off functionalty*/
-input.specialtyDeselect:checked + span.specialtyDeselect,
-input.specialtyDeselect:checked,
-input.specialtyDeselect:not(:checked) ~ div.specialtyFlow,
-input.specialtyDeselect:not(:checked) ~ .specialtySelector,
-input.specialtyDeselect:checked ~ .salvoSpecialtyBox,
-input.specialtyDeselect:checked ~ .salvoToolBox,
-input.specialtyDeselect:checked ~ .salvoChargeBox,
-input.specialtyDeselect:checked ~ .salvoSupplyBox,
-input.specialtyDeselect:checked ~ .chargeCrewKitDirection,
-input.specialtyDeselect:checked ~ .chargeSystemDirection,
-input.specialtyDeselect:checked ~ .toolDeselect,
-input.specialtyDeselect:checked ~ .toolSelector,
-input.specialtyDeselect:checked ~ .crewKitMods,
-.playerCasterSheet input.specialtyDeselect:checked ~ .toolCrewKitDirection,
-.shipSheet input.specialtyDeselect:checked ~ .toolShipDirection
-{
-    display: none;
-}
-
-/*A Tool Selected*/
-.playerCasterSheet input.toolDeselect:not(:checked) ~ .toolCrewKitDirection,
-.shipSheet input.toolDeselect:not(:checked) ~ .toolShipDirection,
-input.toolDeselect:not(:checked) ~ .toolSelector
-{
-    display: none;
-}
-
-/*No tool selected*/
-input.toolDeselect:checked + span.toolDeselect,
-input.toolDeselect:checked,
-input.toolDeselect:checked ~ .salvoAdvantageBox,
-input.toolDeselect:checked ~ .advantageDirection,
-input.toolDeselect:checked ~ .rollSalvoButton,
-input.toolDeselect:checked ~ .spendChargeCloseSalvoMode,
-input.toolDeselect:checked ~ .salvoChargeBox,
-input.toolDeselect:checked ~ .salvoSupplyBox,
-input.toolDeselect:checked ~ .chargeCrewKitDirection,
-input.toolDeselect:checked ~ .chargeSystemDirection,
-input.toolDeselect:checked ~ .salvoTrailer,
-input.toolDeselect:checked ~ .salvoThreatBox,
-input.toolDeselect:checked ~ .threatDirection
-{
-    display: none;
-}
-
-/*Hide Charge or Supply box by tool*/
-.shipSheet input.colorChanger[value="Launcher"] + div.salvoChargeBox,
-.shipSheet input.colorChanger[value="Sensors"] + div.salvoSupplyBox,
-.shipSheet input.colorChanger[value="Grav Drive"] + div.salvoSupplyBox,
-.shipSheet input.colorChanger[value="Pulse Array"] + div.salvoSupplyBox,
-.shipSheet input.colorChanger[value="Shields"] + div.salvoSupplyBox
-{
-    display: none;
-}
-
-/*Reveal Trailer*/
-.shipSheet input.colorChanger[value="Launch Bay"] ~ .salvoTrailer
-{
-    display: grid;
-}
-
-/*Hide Trailers once selected*/
-input.trailerDeselect:checked + span.trailerDeselect,
-input.trailerDeselect:checked,
-input.trailerDeselect:not(:checked) ~ .shuttleTrailers,
-input.trailerDeselect:not(:checked) ~ .trailerDirection
-{
-    display: none;
-}
-
-/*Skill Selectors*/
-.skillSelector
-{
-    position: absolute;
-    width: 162px;
-    height: 13px;
-}
-
-input.skillSelector
-{
-    opacity: 0;
-    border: none;
-    z-index: 19;
-    line-height: 13px;
-}
-
-span.skillSelector
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/skillSelector.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 162px 13px;
-    opacity: 1;
-    z-index: 18;
-}
-
-/* Specialty Hiding Functionality */
-input.cultureSkill:not(:checked) ~ .cultureSpecialties,
-input.economySkill:not(:checked) ~ .economySpecialties,
-input.interfaceSkill:not(:checked) ~ .interfaceSpecialties,
-input.politicSkill:not(:checked) ~ .politicSpecialties,
-input.sophontologySkill:not(:checked) ~ .sophontologySpecialties,
-input.athleticsSkill:not(:checked) ~ .athleticsSpecialties,
-input.fitnessSkill:not(:checked) ~ .fitnessSpecialties,
-input.geosciencesSkill:not(:checked) ~ .geosciencesSpecialties,
-input.perceptionSkill:not(:checked) ~ .perceptionSpecialties,
-input.pilotSkill:not(:checked) ~ .pilotSpecialties,
-input.biosciencesSkill:not(:checked) ~ .biosciencesSpecialties,
-input.fieldDynamicsSkill:not(:checked) ~ .fieldDynamicsSpecialties,
-input.pulseProjectionSkill:not(:checked) ~ .pulseProjectionSpecialties,
-input.inscriptionSkill:not(:checked) ~ .inscriptionSpecialties,
-input.mechatronicsSkill:not(:checked) ~ .mechatronicsSpecialties
-{
-    display: none;
-}
-
-/*Specialty Selectors*/
-.specialtySelector
-{
-    position: absolute;
-    width: 204px;
-    height: 13px;
-}
-
-input.specialtySelector
-{
-    opacity: 0;
-    border: none;
-    z-index: 19;
-}
-
-span.specialtySelector
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/specialtySelector.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 204px 13px;
-    opacity: 1;
-    z-index: 18;
-}
-
-/*Department Button Coloumns*/
-input[type=radio].communicationsSelect,
-span.communicationsSelect
-{
-    grid-column: 3;
-    margin-left: 3px;
-}
-
-    input[type=radio].communicationsSelect.specialtySelector,
-    span.communicationsSelect.specialtySelector
-    {
-        grid-column: 4;
-        margin-left: 3px;
-    }
-
-input[type=radio].operationsSelect,
-span.operationsSelect
-{
-    grid-column: 26;
-    margin-left: 0px;
-}
-
-    input[type=radio].operationsSelect.specialtySelector,
-    span.operationsSelect.specialtySelector
-    {
-        grid-column: 27;
-        margin-left: 0px;
-    }
-
-input[type=radio].engineeringSelect,
-span.engineeringSelect
-{
-    grid-column: 48;
-    margin-left: 7px;
-}
-
-    input[type=radio].engineeringSelect.specialtySelector,
-    span.engineeringSelect.specialtySelector
-    {
-        grid-column: 49;
-        margin-left: 7px;
-    }
-
-/*Skill button Row Locations*/
-input[type=radio].skill1Select,
-span.skill1Select
-{
-    grid-row: 24;
-    margin-top: 8px;
-}
-
-input[type=radio].skill2Select,
-span.skill2Select
-{
-    grid-row: 31;
-    margin-top: 5px;
-}
-
-input[type=radio].skill3Select,
-span.skill3Select
-{
-    grid-row: 38;
-    margin-top: 2px;
-}
-
-input[type=radio].skill4Select,
-span.skill4Select
-{
-    grid-row: 44;
-    margin-top: 9px;
-}
-
-input[type=radio].skill5Select,
-span.skill5Select
-{
-    grid-row: 51;
-    margin-top: 6px;
-}
-
-/*Specialty button Row Location*/
-input[type=radio].specialty1Select,
-span.specialty1Select
-{
-    grid-row: 26;
-    margin-top: 7px;
-}
-
-input[type=radio].specialty2Select,
-span.specialty2Select
-{
-    grid-row: 28;
-    margin-top: 2px;
-}
-
-input[type=radio].specialty3Select,
-span.specialty3Select
-{
-    grid-row: 29;
-    margin-top: 6px;
-}
-
-input[type=radio].specialty4Select,
-span.specialty4Select
-{
-    grid-row: 33;
-    margin-top: 4px;
-}
-
-input[type=radio].specialty5Select,
-span.specialty5Select
-{
-    grid-row: 34;
-    margin-top: 8px;
-}
-
-input[type=radio].specialty6Select,
-span.specialty6Select
-{
-    grid-row: 36;
-    margin-top: 3px;
-}
-
-input[type=radio].specialty7Select,
-span.specialty7Select
-{
-    grid-row: 40;
-    margin-top: 2px;
-}
-
-input[type=radio].specialty8Select,
-span.specialty8Select
-{
-    grid-row: 41;
-    margin-top: 5px;
-}
-
-input[type=radio].specialty9Select,
-span.specialty9Select
-{
-    grid-row: 43;
-    margin-top: 0px;
-}
-
-input[type=radio].specialty10Select,
-span.specialty10Select
-{
-    grid-row: 46;
-    margin-top: 8px;
-}
-
-input[type=radio].specialty11Select,
-span.specialty11Select
-{
-    grid-row: 48;
-    margin-top: 2px;
-}
-
-input[type=radio].specialty12Select,
-span.specialty12Select
-{
-    grid-row: 49;
-    margin-top: 7px;
-}
-
-input[type=radio].specialty13Select,
-span.specialty13Select
-{
-    grid-row: 53;
-    margin-top: 6px;
-}
-
-input[type=radio].specialty14Select,
-span.specialty14Select
-{
-    grid-row: 55;
-    margin-top: 0px;
-}
-
-input[type=radio].specialty15Select,
-span.specialty15Select
-{
-    grid-row: 56;
-    margin-top: 4px;
-}
-
-/*Operator Selector*/
-div.salvoOperatorBG
-{
-    position: absolute;
-    width: 250px;
-    height: 40px;
-    z-index: 16;
-    margin-left: 16px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20px 20px;
-    grid-template-areas: "name name" "stationA stationZ";
-}
-
-input.salvoOperatorName
-{
-    grid-area: name;
-    align-self: end;
-    justify-self: start;
-    height: 100%;
-    width: 100%;
-    font-size: 16px;
-    color: black;
-    font-weight: 500;
-    text-align: left;
-    border: none;
-}
-
-input.salvoOperatorStationA
-{
-    grid-area: stationA;
-    align-self: start;
-    justify-self: start;
-    height: 100%;
-    width: 100%;
-    font-size: 14px;
-    color: black;
-    font-weight: 500;
-    text-align: left;
-    border: none;
-}
-
-input.salvoOperatorStationZ
-{
-    grid-area: stationZ;
-    align-self: start;
-    justify-self: start;
-    height: 100%;
-    width: 100%;
-    font-size: 14px;
-    color: black;
-    font-weight: 500;
-    text-align: left;
-    border: none;
-}
-
-div.salvoOperatorCol1,
-input[type=radio].salvoOperatorCol1,
-span.salvoOperatorCol1
-{
-    grid-column: 3;
-}
-
-div.salvoOperatorCol2,
-input[type=radio].salvoOperatorCol2,
-span.salvoOperatorCol2
-{
-    grid-column: 35;
-}
-
-div.salvoOperatorCol3,
-input[type=radio].salvoOperatorCol3,
-span.salvoOperatorCol3
-{
-    grid-column: 65;
-}
-
-div.salvoOperatorRow1,
-input[type=radio].salvoOperatorRow1,
-span.salvoOperatorRow1
-{
-    grid-row: 12;
-    margin-top: 0px;
-}
-
-div.salvoOperatorRow2,
-input[type=radio].salvoOperatorRow2,
-span.salvoOperatorRow2
-{
-    grid-row: 22;
-    margin-top: 0px;
-}
-
-div.salvoOperatorRow3,
-input[type=radio].salvoOperatorRow3,
-span.salvoOperatorRow3
-{
-    grid-row: 32;
-    margin-top: 0px;
-}
-
-/*Operator Selector On/Off Functionality*/
-input.colorChanger[value=""] + div.salvoOperatorBG,
-input.colorChanger[value=""] + div.salvoOperatorBG + input,
-input.colorChanger[value=""] + div.salvoOperatorBG + input + span
-{
-    display: none;
-}
-
-/*Tool Selectors*/
-.toolSelector,
-.operatorSelector,
-.shuttleTrailers
-{
-    position: absolute;
-    width: 170px;
-    height: 15px;
-}
-
-input.toolSelector,
-input.shuttleTrailers
-{
-    opacity: 0;
-    border: none;
-    z-index: 19;
-    line-height: 15px;
-    width: 170px;
-    height: 15px;
-}
-
-input.operatorSelector
-{
-    opacity: 0;
-    border: none;
-    z-index: 19;
-    line-height: 15px;
-    width: 267px;
-    height: 40px;
-}
-
-span.toolSelector,
-span.operatorSelector,
-span.shuttleTrailers
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitToolSelector.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 13px 13px;
-    opacity: 1;
-    z-index: 18;
-    justify-self: start;
-}
-
-span.otherToolLocation
-{
-    grid-row: 64;
-    grid-column: 76;
-}
-
-span.otherToolBackground,
-div.otherToolBackground
-{
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/otherTool.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 169px 149px;
-    opacity: 1;
-    z-index: 12;
-    width: 169px;
-    height: 149px;
-    margin: 2px 0 0 3px;
-}
-
-span.otherToolBlind
-{
-    position: absolute;
-    z-index: 11;
-    display: grid;
-    background: rgba(255,255,255,1) no-repeat fixed top;
-    background-size: 185px 315px;
-    opacity: 1;
-    width: 185px;
-    height: 315px;
-    margin: 2px 0 0 3px;
-}
-
-span.otherToolTitle
-{
-    background-image: none;
-    opacity: 1;
-    z-index: 13;
-    font-variant: small-caps;
-    font-size: 14px;
-    color: black;
-    grid-row: 64;
-    grid-column: 77;
-    margin: 6px 0 0 5px;
-}
-
-span.otherToolDetails
-{
-    background-image: none;
-    opacity: 1;
-    z-index: 13;
-    font-size: 10px;
-    color: black;
-    grid-row: 66;
-    grid-column: 78;
-    margin: 2px 0 0 0px;
-}
-
-/*Other Tool Selected*/
-input.otherTool:checked ~ .salvoToolBox,
-input.otherTool:checked ~ .salvoChargeBox,
-input.otherTool:checked ~ .spendChargeCloseSalvoMode,
-input.otherTool:checked ~ .chargeCrewKitDirection
-{
-    display: none;
-}
-
-input.otherTool:checked ~ .salvoAdvantageBox,
-input.otherTool:checked ~ .advantageDirection,
-input.otherTool:checked ~ .spendChargeCloseSalvoMode,
-input.otherTool:checked ~ .rollSalvoButton,
-input.otherTool:checked ~ .salvoThreatBox,
-input.otherTool:checked ~ .threatDirection
-{
-    display: block;
-}
-
-/*Crew Kit Tool Locations*/
-input[type=radio].crewKitTop,
-span.crewKitTop
-{
-    grid-row: 64;
-    margin-top: 7px;
-}
-
-input[type=radio].crewKitMiddle,
-span.crewKitMiddle
-{
-    grid-row: 80;
-    margin-top: 7px;
-}
-
-input[type=radio].crewKitBottom,
-span.crewKitBottom
-{
-    grid-row: 96;
-    margin-top: 7px;
-}
-
-input[type=radio].crewKit0,
-span.crewKit0
-{
-    grid-column: 3;
-    margin-left: 5px;
-}
-
-input[type=radio].crewKit1,
-span.crewKit1
-{
-    grid-column: 21;
-    margin-left: 4px;
-}
-
-input[type=radio].crewKit2,
-span.crewKit2
-{
-    grid-column: 39;
-    margin-left: 3px;
-}
-
-input[type=radio].crewKit3,
-span.crewKit3
-{
-    grid-column: 57;
-    margin-left: 4px;
-}
-
-input[type=radio].crewKit4,
-span.crewKit4
-{
-    grid-column: 75;
-    margin-left: 8px;
-}
-
-/*Ship System Tool Locations*/
-input[type=radio].systemTop,
-span.systemTop
-{
-    grid-row: 11;
-    margin-top: 0px;
-}
-
-input[type=radio].systemBottom,
-span.systemBottom
-{
-    grid-row: 27;
-    margin-top: 0px;
-}
-
-input[type=radio].system1,
-span.system1
-{
-    grid-column: 21;
-    margin-left: 6px;
-}
-
-input[type=radio].system2,
-span.system2
-{
-    grid-column: 39;
-    margin-left: 6px;
-}
-
-/*Ship Module Launcher Location*/
-input[type=radio].shipLauncher,
-span.shipLauncher
-{
-    grid-row: 64;
-    grid-column: 42;
-    margin: 2px 0 0 3px;
-}
-
-/*Shuttle Launch Bay Locations*/
-input[type=radio].shipLaunchBay,
-span.shipLaunchBay
-{
-    grid-row: 47;
-    grid-column: 55;
-    margin: 2px 0 0 1px;
-}
-
-/*Trailers*/
-input[type=radio].shuttleTrailers,
-span.shuttleTrailers
-{
-    grid-column: 54;
-    margin-left: 6px;
-}
-
-input[type=radio].trailerNone,
-span.trailerNone
-{
-    grid-row: 51;
-    margin-top: 1px;
-}
-
-input[type=radio].trailerCargo,
-span.trailerCargo
-{
-    grid-row: 64;
-    margin-top: 3px;
-}
-
-input[type=radio].trailerTransport,
-span.trailerTransport
-{
-    grid-row: 65;
-    margin-top: 7px;
-}
-
-input[type=radio].trailerFlight,
-span.trailerFlight
-{
-    grid-row: 67;
-    margin-top: 2px;
-}
-
-input[type=radio].trailerDrop,
-span.trailerDrop
-{
-    grid-row: 68;
-    margin-top: 7px;
-}
-
-input[type=radio].trailerBoarding,
-span.trailerBoarding
-{
-    grid-row: 70;
-    margin-top: 2px;
-}
-
-input[type=radio].trailerTractor,
-span.trailerTractor
-{
-    grid-row: 71;
-    margin-top: 8px;
-}
-
-input[type=radio].trailerSurvey,
-span.trailerSurvey
-{
-    grid-row: 73;
-    margin-top: 4px;
-}
-
-input[type=radio].trailerFighter,
-span.trailerFighter
-{
-    grid-row: 74;
-    margin-top: 8px;
-}
-
-/*Shuttle Systems Selection On/Off Functionality*/
-input.shuttleSystemChanger[value="None"] + div.tugTrailer,
-input.shuttleSystemChanger[value="Cargo"] + div.tugTrailer,
-input.shuttleSystemChanger[value="Transport"] + div.tugTrailer,
-input.shuttleSystemChanger[value="Drop"] + div.tugTrailer,
-input.shuttleSystemChanger[value="Flight"] + div.flightTrailer,
-input.shuttleSystemChanger[value="Boarding"] + div.boardingTrailer,
-input.shuttleSystemChanger[value="Tractor"] + div.tractorTrailer,
-input.shuttleSystemChanger[value="Survey"] + div.surveyTrailer,
-input.shuttleSystemChanger[value="Fighter"] + div.fighterTrailer
-{
-    display: grid;
-}
-
-/*Shuttle System Mods Select On/Off Functionality*/
-div.shuttleSystemBox > input.shuttleModChanger:not([value="Pulse Drive"]) ~ .salvoShuttlePulseDrive,
-div.shuttleSystemBox > input.shuttleModChanger:not([value="Shields"]) ~ .salvoShuttleShields,
-div.shuttleSystemBox > input.shuttleModChanger:not([value="Pulse Array"]) ~ .salvoShuttlePulseArray,
-div.shuttleSystemBox > input.shuttleModChanger:not([value="Sensors"]) ~ .salvoShuttleSensors
-{
-    display: none;
-}
-
-/*Crew Kit Tool Selected*/
-input.crewKitScanner:not(:checked) ~ .crewKitScannerMods,
-input.crewKitBioChemKit:not(:checked) ~ .crewKitBioChemKitMods,
-input.crewKitAugmentation:not(:checked) ~ .crewKitAugmentationMods,
-input.crewKitLink:not(:checked) ~ .crewKitLinkMods,
-input.crewKitMultitool:not(:checked) ~ .crewKitMultitoolMods,
-input.crewKitShield:not(:checked) ~ .crewKitShieldMods,
-input.crewKitAssociations:not(:checked) ~ .crewKitAssociationMods
-{
-    display: none;
-}
-
-/*Ship Tool Selected*/
-input.shipSensors:not(:checked) ~ .shipSensorsMods,
-input.shipGravDrive:not(:checked) ~ .shipGravDriveMods,
-input.shipPulseArray:not(:checked) ~ .shipPulseArrayMods,
-input.shipShields:not(:checked) ~ .shipShieldsMods,
-input.shipLauncher:not(:checked) ~ .shipLauncherMods,
-input.shipLaunchBay:not(:checked) ~ .shuttleTrailers,
-input.shipLaunchBay:not(:checked) ~ .trailerDirection
-{
-    display: none;
-}
-
-/*Crew Kit Mods Selectors*/
-.crewKitMods
-{
-    position: absolute;
-    width: 180px;
-    height: 13px;
-}
-
-.crewKitAssociationMods
-{
-    width: 430px;
-}
-
-.crewKitAugmentationMods
-{
-    width: 190px;
-}
-
-input.crewKitMods
-{
-    opacity: 0;
-    border: none;
-    z-index: 19;
-}
-
-    input.crewKitMods + span.crewKitMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitMod.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 180px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.crewKitMods:checked + span.crewKitMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitModChecked.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 180px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.crewKitMods + span.crewKitAugmentationMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAugmentationMod.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 190px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.crewKitMods:checked + span.crewKitAugmentationMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAugmentationModChecked.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 190px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.crewKitMods + span.crewKitAssociationMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAssociationMod.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 430px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.crewKitMods:checked + span.crewKitAssociationMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitAssociationModChecked.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 430px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-
-/*Crew Kit Mod Locations*/
-/*Scanner*/
-input[type=checkbox].crewKitScannerMods,
-span.crewKitScannerMods
-{
-    grid-column: 21;
-    margin-left: 2px;
-}
-
-input[type=checkbox].crewKitScannerSurveySensor,
-span.crewKitScannerSurveySensor
-{
-    grid-row: 72;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitScannerDepthAnalyser,
-span.crewKitScannerDepthAnalyser
-{
-    grid-row: 73;
-    margin-top: 8px;
-}
-
-input[type=checkbox].crewKitScannerAreaEffect,
-span.crewKitScannerAreaEffect
-{
-    grid-row: 75;
-    margin-top: 3px;
-}
-
-input[type=checkbox].crewKitScannerRangeCompensator,
-span.crewKitScannerRangeCompensator
-{
-    grid-row: 76;
-    margin-top: 8px;
-}
-
-/*BioChemKit*/
-input[type=checkbox].crewKitBioChemKitMods,
-span.crewKitBioChemKitMods
-{
-    grid-column: 39;
-    margin-left: 2px;
-}
-
-input[type=checkbox].crewKitBioChemKitMedtool,
-span.crewKitBioChemKitMedtool
-{
-    grid-row: 72;
-    margin-top: 3px;
-}
-
-input[type=checkbox].crewKitBioChemKitSampler,
-span.crewKitBioChemKitSampler
-{
-    grid-row: 73;
-    margin-top: 8px;
-}
-
-input[type=checkbox].crewKitBioChemKitIncubator,
-span.crewKitBioChemKitIncubator
-{
-    grid-row: 75;
-    margin-top: 4px;
-}
-
-/*Augmentation*/
-input[type=checkbox].crewKitAugmentationMods,
-span.crewKitAugmentationMods
-{
-    grid-column: 57;
-    margin-left: 4px;
-}
-
-input[type=checkbox].crewKitAugmentation1,
-span.crewKitAugmentation1
-{
-    grid-row: 72;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitAugmentation2,
-span.crewKitAugmentation2
-{
-    grid-row: 74;
-    margin-top: 6px;
-}
-
-input[type=checkbox].crewKitAugmentation3,
-span.crewKitAugmentation3
-{
-    grid-row: 77;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitAugmentation4,
-span.crewKitAugmentation4
-{
-    grid-row: 79;
-    margin-top: 6px;
-}
-
-input[type=checkbox].crewKitAugmentation5,
-span.crewKitAugmentation5
-{
-    grid-row: 81;
-    margin-top: 8px;
-}
-
-/*Link*/
-input[type=checkbox].crewKitLinkMods,
-span.crewKitLinkMods
-{
-    grid-column: 3;
-    margin-left: 4px;
-}
-
-input[type=checkbox].crewKitLinkCommBrowser,
-span.crewKitLinkCommBrowser
-{
-    grid-row: 88;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitLinkDevelopmentKit,
-span.crewKitLinkDevelopmentKit
-{
-    grid-row: 89;
-    margin-top: 6px;
-}
-
-input[type=checkbox].crewKitFireWall,
-span.crewKitFireWall
-{
-    grid-row: 92;
-    margin-top: 7px;
-}
-
-/*Multitool*/
-input[type=checkbox].crewKitMultitoolMods,
-span.crewKitMultitoolMods
-{
-    grid-column: 21;
-    margin-left: 2px;
-}
-
-input[type=checkbox].crewKitMultitoolDisrupterTargeter,
-span.crewKitMultitoolDisrupterTargeter
-{
-    grid-row: 88;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitMultitoolTractorLifter,
-span.crewKitMultitoolTractorLifter
-{
-    grid-row: 91;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitMultitoolUtilityManipulator,
-span.crewKitMultitoolUtilityManipulator
-{
-    grid-row: 92;
-    margin-top: 7px;
-}
-
-/*Shield*/
-input[type=checkbox].crewKitShieldMods,
-span.crewKitShieldMods
-{
-    grid-column: 39;
-    margin-left: 2px;
-}
-
-input[type=checkbox].crewKitShieldKineticDeflector,
-span.crewKitShieldKineticDeflector
-{
-    grid-row: 88;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitShieldEnergyDissipater,
-span.crewKitShieldEnergyDissipater
-{
-    grid-row: 89;
-    margin-top: 7px;
-}
-
-input[type=checkbox].crewKitShieldHoloprojector,
-span.crewKitShieldHoloprojector
-{
-    grid-row: 91;
-    margin-top: 1px;
-}
-
-input[type=checkbox].crewKitShieldMultifield,
-span.crewKitShieldMultifield
-{
-    grid-row: 92;
-    margin-top: 7px;
-}
-
-/*Associations*/
-input[type=checkbox].crewKitAssociationCol1,
-span.crewKitAssociationCol1
-{
-    grid-column: 3;
-    margin-left: 8px;
-}
-
-input[type=checkbox].crewKitAssociationCol2,
-span.crewKitAssociationCol2
-{
-    grid-column: 48;
-    margin-left: 2px;
-}
-
-input[type=checkbox].crewKitAssociation1,
-span.crewKitAssociation1,
-input[type=checkbox].crewKitAssociation11,
-span.crewKitAssociation11
-{
-    grid-row: 102;
-    margin-top: 6px;
-}
-
-input[type=checkbox].crewKitAssociation2,
-span.crewKitAssociation2,
-input[type=checkbox].crewKitAssociation12,
-span.crewKitAssociation12
-{
-    grid-row: 104;
-    margin-top: 3px;
-}
-
-input[type=checkbox].crewKitAssociation3,
-span.crewKitAssociation3,
-input[type=checkbox].crewKitAssociation13,
-span.crewKitAssociation13
-{
-    grid-row: 106;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitAssociation4,
-span.crewKitAssociation4,
-input[type=checkbox].crewKitAssociation14,
-span.crewKitAssociation14
-{
-    grid-row: 107;
-    margin-top: 9px;
-}
-
-input[type=checkbox].crewKitAssociation5,
-span.crewKitAssociation5,
-input[type=checkbox].crewKitAssociation15,
-span.crewKitAssociation15
-{
-    grid-row: 109;
-    margin-top: 7px;
-}
-
-input[type=checkbox].crewKitAssociation6,
-span.crewKitAssociation6,
-input[type=checkbox].crewKitAssociation16,
-span.crewKitAssociation16
-{
-    grid-row: 111;
-    margin-top: 6px;
-}
-
-input[type=checkbox].crewKitAssociation7,
-span.crewKitAssociation7,
-input[type=checkbox].crewKitAssociation17,
-span.crewKitAssociation17
-{
-    grid-row: 113;
-    margin-top: 4px;
-}
-
-input[type=checkbox].crewKitAssociation8,
-span.crewKitAssociation8,
-input[type=checkbox].crewKitAssociation18,
-span.crewKitAssociation18
-{
-    grid-row: 115;
-    margin-top: 2px;
-}
-
-input[type=checkbox].crewKitAssociation9,
-span.crewKitAssociation9,
-input[type=checkbox].crewKitAssociation19,
-span.crewKitAssociation19
-{
-    grid-row: 117;
-}
-
-input[type=checkbox].crewKitAssociation10,
-span.crewKitAssociation10,
-input[type=checkbox].crewKitAssociation20,
-span.crewKitAssociation20
-{
-    grid-row: 119;
-    margin-top: 0;
-}
-
-/*Ship System Mods Selectors*/
-.shipSystemMods
-{
-    position: absolute;
-    width: 180px;
-    height: 13px;
-}
-
-.shipModuleMods,
-.shuttleMods
-{
-    position: absolute;
-    width: 130px;
-    height: 13px;
-}
-
-input.shipSystemMods,
-input.shipModuleMods,
-input.shuttleMods
-{
-    opacity: 0;
-    border: none;
-    z-index: 19;
-}
-
-    input.shipSystemMods + span.shipSystemMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitMod.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 180px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.shipSystemMods:checked + span.shipSystemMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/crewKitModChecked.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 180px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.shuttleMods + span.shuttleMods,
-    input.shipModuleMods + span.shipModuleMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/moduleMod.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 13px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-    input.shuttleMods:checked + span.shuttleMods,
-    input.shipModuleMods:checked + span.shipModuleMods
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/moduleMod_Checked.png);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: 13px 13px;
-        opacity: 1;
-        z-index: 18;
-    }
-
-/*Ship System Mod Locations*/
-/*Scanner*/
-input.shipSensorsMods,
-span.shipSensorsMods
-{
-    grid-column: 21;
-    margin-left: 3px;
-}
-
-input.shipSensorsSurveySensor,
-span.shipSensorsSurveySensor
-{
-    grid-row: 18;
-    margin-top: 5px;
-}
-
-input.shipSensorsDepthAnalyser,
-span.shipSensorsDepthAnalyser
-{
-    grid-row: 19;
-    margin-top: 9px;
-}
-
-input.shipSensorsAreaEffect,
-span.shipSensorsAreaEffect
-{
-    grid-row: 21;
-    margin-top: 5px;
-}
-
-input.shipSensorsRangeCompensator,
-span.shipSensorsRangeCompensator
-{
-    grid-row: 23;
-    margin-top: 1px;
-}
-
-/*Grav Drive*/
-input.shipGravDriveMods,
-span.shipGravDriveMods
-{
-    grid-column: 39;
-    margin-left: 2px;
-}
-
-input.shipGravDriveAtmosphericThrusters,
-span.shipGravDriveAtmosphericThrusters
-{
-    grid-row: 18;
-    margin-top: 7px;
-}
-
-input.shipGravDriveOrbitalInjector,
-span.shipGravDriveOrbitalInjector
-{
-    grid-row: 20;
-    margin-top: 1px;
-}
-
-input.shipGravDriveFoldInducer,
-span.shipGravDriveFoldInducer
-{
-    grid-row: 21;
-    margin-top: 7px;
-}
-
-input.shipGravDriveWakeGenerator,
-span.shipGravDriveWakeGenerator
-{
-    grid-row: 23;
-    margin-top: 1px;
-}
-
-/*Pulse Array*/
-input.shipPulseArrayMods,
-span.shipPulseArrayMods
-{
-    grid-column: 21;
-    margin-left: 3px;
-}
-
-input.shipPulseArraySpaceTargeter,
-span.shipPulseArraySpaceTargeter
-{
-    grid-row: 34;
-    margin-top: 6px;
-}
-
-input.shipPulseArraySurfaceTargeter,
-span.shipPulseArraySurfaceTargeter
-{
-    grid-row: 36;
-    margin-top: 0px;
-}
-
-input.shipPulseArrayTractorLifter,
-span.shipPulseArrayTractorLifter
-{
-    grid-row: 39;
-    margin-top: 0px;
-}
-
-/*Shields*/
-input.shipShieldsMods,
-span.shipShieldsMods
-{
-    grid-column: 39;
-    margin-left: 2px;
-}
-
-input.shipShieldsKineticDeflector,
-span.shipShieldsKineticDeflector
-{
-    grid-row: 34;
-    margin-top: 6px;
-}
-
-input.shipShieldsEnergyDissipater,
-span.shipShieldsEnergyDissipater
-{
-    grid-row: 36;
-    margin-top: 0px;
-}
-
-input.shipShieldsHoloprojector,
-span.shipShieldsHoloprojector
-{
-    grid-row: 37;
-    margin-top: 5px;
-}
-
-input.shipShieldsMultifield,
-span.shipShieldsMultifield
-{
-    grid-row: 39;
-    margin-top: 0px;
-}
-
-/*Ship Module Fitting Locations*/
-input.shipLauncherMods,
-span.shipLauncherMods
-{
-    grid-column: 42;
-    margin-left: 0px;
-}
-
-input.shipLauncherChaff,
-span.shipLauncherChaff
-{
-    grid-row: 70;
-    margin-top: 5px;
-}
-
-input.shipLauncherIndictorMines,
-span.shipLauncherIndictorMines
-{
-    grid-row: 71;
-    margin-top: 9px;
-}
-
-input.shipLauncherPlasmaMines,
-span.shipLauncherPlasmaMines
-{
-    grid-row: 73;
-    margin-top: 5px;
-}
-
-input.shipLauncherTorpedo,
-span.shipLauncherTorpedo
-{
-    grid-row: 74;
-    margin-top: 9px;
-}
-
-/*Flow Lines*/
-.flowLine
-{
-    position: absolute;
-    z-index: 12;
-    display: inline-block;
-}
-
-.operatorDirection
-{
-    grid-row: 2 / span 5;
-    grid-column: 8 / span 25;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operatorFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 250px 42px;
-    opacity: 1;
-    width: 250px;
-    height: 42px;
-}
-
-.playerCasterSheet .skillDirection
-{
-    grid-row: 2 / span 17;
-    grid-column: 8 / span 58;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/skillFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 580px 170px;
-    opacity: 1;
-    width: 580px;
-    height: 170px;
-}
-
-.shipSheet .skillDirection
-{
-    grid-row: 7 / span 2;
-    grid-column: 20 / span 33;
-    margin-top: 6px;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/skillShipFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 370px 13px;
-    opacity: 1;
-    width: 370px;
-    height: 13px;
-}
-
-.playerCasterSheet .specialtyDirection
-{
-    grid-row: 10 / span 2;
-    grid-column: 21 / span 47;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/specialtyFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 470px 11px;
-    opacity: 1;
-    width: 470px;
-    height: 11px;
-}
-
-.shipSheet .specialtyDirection
-{
-    grid-row: 8 / span 12;
-    grid-column: 73 / span 10;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/specialtyShipFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100px 120px;
-    opacity: 1;
-    width: 100px;
-    height: 120px;
-}
-
-.communicationsSpecialtyFlow1
-{
-    grid-area: 10/25/58/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 520px 200px;
-    opacity: 1;
-    width: 520px;
-    height: 200px;
-}
-
-.communicationsSpecialtyFlow2
-{
-    grid-area: 10/25/58/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 520px 270px;
-    opacity: 1;
-    width: 520px;
-    height: 270px;
-}
-
-.communicationsSpecialtyFlow3
-{
-    grid-area: 10/25/58/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 520px 340px;
-    opacity: 1;
-    width: 520px;
-    height: 340px;
-}
-
-.communicationsSpecialtyFlow4
-{
-    grid-area: 10/25/58/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow4.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 520px 410px;
-    opacity: 1;
-    width: 520px;
-    height: 410px;
-}
-
-.communicationsSpecialtyFlow5
-{
-    grid-area: 10/25/58/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/communicationsSpecialtyFlow5.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 520px 480px;
-    opacity: 1;
-    width: 520px;
-    height: 480px;
-}
-
-.operationsSpecialtyFlow1
-{
-    grid-area: 10/48/30/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 300px 200px;
-    opacity: 1;
-    width: 300px;
-    height: 200px;
-}
-
-.operationsSpecialtyFlow2
-{
-    grid-area: 10/48/37/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 300px 270px;
-    opacity: 1;
-    width: 300px;
-    height: 270px;
-}
-
-.operationsSpecialtyFlow3
-{
-    grid-area: 10/48/44/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 300px 340px;
-    opacity: 1;
-    width: 300px;
-    height: 340px;
-}
-
-.operationsSpecialtyFlow4
-{
-    grid-area: 10/48/51/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow4.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 300px 410px;
-    opacity: 1;
-    width: 300px;
-    height: 410px;
-}
-
-.operationsSpecialtyFlow5
-{
-    grid-area: 10/48/58/78;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/operationsSpecialtyFlow5.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 300px 480px;
-    opacity: 1;
-    width: 300px;
-    height: 480px;
-}
-
-.engineeringSpecialtyFlow1
-{
-    grid-row: 10 / span 20;
-    grid-column: 70 / span 8;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/engineeringSpecialtyFlow1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 75px 200px;
-    opacity: 1;
-    width: 75px;
-    height: 200px;
-}
-
-.engineeringSpecialtyFlow2
-{
-    grid-row: 10 / span 27;
-    grid-column: 70 / span 8;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/engineeringSpecialtyFlow2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 75px 270px;
-    opacity: 1;
-    width: 75px;
-    height: 270px;
-}
-
-.engineeringSpecialtyFlow3
-{
-    grid-row: 10 / span 34;
-    grid-column: 70 / span 8;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/engineeringSpecialtyFlow3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 75px 340px;
-    opacity: 1;
-    width: 75px;
-    height: 340px;
-}
-
-.engineeringSpecialtyFlow4
-{
-    grid-row: 10 / span 41;
-    grid-column: 70 / span 8;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/engineeringSpecialtyFlow4.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 75px 410px;
-    opacity: 1;
-    width: 75px;
-    height: 410px;
-}
-
-.engineeringSpecialtyFlow5
-{
-    grid-row: 10 / span 48;
-    grid-column: 70 / span 8;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/engineeringSpecialtyFlow5.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 75px 480px;
-    opacity: 1;
-    width: 75px;
-    height: 480px;
-}
-
-.toolCrewKitDirection
-{
-    grid-row: 10 / span 51;
-    grid-column: 40 / span 27;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/toolCrewKitDirection.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 270px 510px;
-    opacity: 1;
-    width: 270px;
-    height: 510px;
-}
-
-.toolShipDirection
-{
-    grid-row: 26 / span 22;
-    margin-top: 0;
-    grid-column: 50 / span 25;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/toolShipDirection.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 250px 220px;
-    opacity: 1;
-    width: 250px;
-    height: 220px;
-}
-
-.trailerDirection
-{
-    grid-row: 44 / span 20;
-    margin-top: 0px;
-    grid-column: 45 / span 5;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/trailerDirection.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50px 200px;
-    opacity: 1;
-    width: 50px;
-    height: 200px;
-}
-
-.chargeCrewKitDirection
-{
-    grid-row: 55 / span 9;
-    grid-column: 13 / span 2;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/upFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 13px 90px;
-    opacity: 1;
-    width: 13px;
-    height: 90px;
-    margin-top: 6px;
-}
-
-.chargeSystemDirection
-{
-    grid-row: 25 / span 5;
-    grid-column: 12 / span 2;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/downFlow.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 13px 90px;
-    opacity: 1;
-    width: 13px;
-    height: 50px;
-    margin-top: 3px;
-}
-
-.playerCasterSheet .advantageDirection
-{
-    grid-row: 36 / span 9;
-    grid-column: 70 / span 2;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/downFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 13px 90px;
-    opacity: 1;
-    width: 13px;
-    height: 90px;
-    margin-left: 5px;
-}
-
-.shipSheet .advantageDirection
-{
-    grid-row: 64 / span 9;
-    grid-column: 9 / span 2;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/upFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 13px 90px;
-    opacity: 1;
-    width: 13px;
-    height: 90px;
-    margin-left: 5px;
-}
-
-.playerCasterSheet .threatDirection
-{
-    grid-row: 48 / span 2;
-    grid-column: 75 / span 8;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/threatFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80px 13px;
-    opacity: 1;
-    width: 80px;
-    height: 13px;
-}
-
-.shipSheet .threatDirection
-{
-    grid-row: 53 / span 2;
-    grid-column: 14 / span 8;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/threatFlow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80px 13px;
-    opacity: 1;
-    width: 80px;
-    height: 13px;
-}
 
 
 /*Ship*/
@@ -3675,9 +812,10 @@ section.magicCircle
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 100px auto;
+    grid-template-columns: 100px 100px auto 25px 100px;
+    grid-template-rows: 100px 25px auto;
 }
+
     section.magicCircle > .castingSpellDice
     {
         grid-area: 1 / 1 / 2 / 2;
@@ -3687,6 +825,7 @@ section.magicCircle
         width: 100%;
         height: 100%;
     }
+
     section.magicCircle > .castingTangleDice
     {
         grid-area: 1 / -2 / 2 / -1;
@@ -3697,6 +836,152 @@ section.magicCircle
         height: 100%;
     }
 
+    section.magicCircle > .castingButton
+    {
+        grid-area: 1 / 2 / 2 / 3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+        height: 100%;
+    }
+
+        section.magicCircle > .castingButton > .rollSalvoButton
+        {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+    section.magicCircle > .editCircle
+    {
+        grid-area: 1 / 1 / -1 / -1;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr 65px 65px 100px;
+        grid-template-rows: 125px repeat(13,25px) auto;
+    }
+.editCircle > .rippleHarmony
+{
+    grid-column: 2 / 3;
+}
+
+.editCircle > .rippleChaos
+{
+    grid-column: 3 / 4;
+}
+
+.editCircle > .ripple1
+{
+    grid-row: 2 / 3;
+}
+
+.editCircle > .ripple2
+{
+    grid-row: 3 / 4;
+}
+
+.editCircle > .ripple3
+{
+    grid-row: 4 / 5;
+}
+
+.editCircle > .ripple4
+{
+    grid-row: 5 / 6;
+}
+
+.editCircle > .ripple5
+{
+    grid-row: 6 / 7;
+}
+
+.editCircle > .ripple6
+{
+    grid-row: 7 / 8;
+}
+
+.editCircle > .ripple7
+{
+    grid-row: 8 / 9;
+}
+
+.editCircle > .ripple8
+{
+    grid-row: 9 / 10;
+}
+
+.editCircle > .ripple9
+{
+    grid-row: 10 / 11;
+}
+
+.editCircle > .ripple10
+{
+    grid-row: 11 / 12;
+}
+
+.editCircle > .ripple11
+{
+    grid-row: 12 / 13;
+}
+
+.editCircle > .ripple12
+{
+    grid-row: 13 / 14;
+}
+
+.editCircle > .ripple13
+{
+    grid-row: 14 / 15;
+}
+
+
+
+button.rollSalvoButton
+{
+    margin-top: 5px;
+    border: none;
+    border-radius: 60%;
+    padding: 0px;
+    z-index: 9;
+    opacity: 0;
+    width: 80px;
+    height: 85px;
+}
+
+    button.rollSalvoButton + span.rollSalvoButton
+    {
+        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHex.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80px 92px;
+        z-index: 7;
+        width: 80px;
+        height: 92px;
+    }
+
+        button.rollSalvoButton + span.rollSalvoButton + span.rollSalvoButton
+        {
+            z-index: 8;
+            width: 40px;
+            height: 20px;
+            padding: 69px 0 0 31px;
+            line-height: 20px;
+            text-align: left;
+            font-size: 20px;
+            color: white;
+            font-weight: 800;
+            font-variant: small-caps;
+        }
+
+    button.rollSalvoButton:hover + span.rollSalvoButton
+    {
+        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHexHover.png);
+        font-weight: 600;
+    }
+
+
+/* Ripples */
     .ripples
     {
         grid-area: 3 / -2 / 4 / -1;
@@ -3909,28 +1194,34 @@ input[type="number"].resourceBox
             grid-template-rows: 30px repeat(2, 20px);
         }
 
-/* Edit Cards */
-.editCog
+/* Edit Mode */
+.tableSpread > .editCog
 {
     grid-area: 1 / 7 / 2 / 8;
-    width: 25px;
-    height: 25px;
+}
+.magicCircle > .editCog
+{
+    grid-area: 2 / -3 / 3 / -2;
 }
 
 input.editCog
 {
     opacity: 0;
     cursor: pointer;
+    width: 25px;
+    height: 25px;
     z-index: 13;
 }
 
 span.editCog
 {
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/editCog.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
     background-size: 24px 24px;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img05/editCog.png);
+    width: 25px;
+    height: 25px;
     z-index: 12;
 }
 
