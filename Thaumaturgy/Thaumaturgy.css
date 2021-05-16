@@ -334,315 +334,287 @@ main.masterGrid
 }
 
 /* Roll Template */
-.sheet-rolltemplate-FS
+.sheet-rolltemplate-Thaumaturgy
 {
 }
 
-    .sheet-rolltemplate-FS .sheet-rolltemplateContainer
+    .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer
     {
         display: grid;
-        grid-template-columns: repeat(12, 20px);
-        grid-template-rows: repeat(10,21px);
-        background-color: #353635;
+        grid-template-columns: 1fr;
+        grid-template-rows: 23px 45px auto;
+        background-color: #1a1a1a;
+        width: 100%;
         border: none;
-        font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font-family: "Open Sans", sans-serif;
         color: white;
         margin-left: -5px;
         font-weight: 400;
         font-size: 12px;
     }
         /*Template Header*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateHeader
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateHeader
         {
             grid-row: 1/2;
             grid-column: 1/-1;
-            background-color: #d87d29;
-            font-variant-caps: small-caps;
-            font-weight: 700;
+            background-color: #FAF9F6;
+            font-family: "Fredericka the Great", cursive;
+            font-weight: 600;
             font-size: 17px;
-            color: black;
+            color: #E34234;
             margin-left: -5px;
             padding-left: 2px;
-            padding-top: 3px;
+            padding-top: 1px;
+            width: 100%;
+            z-index: 5;
         }
-        /*Rows & Columns*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateTextRows
-        {
-            padding-left: 2px;
-            padding-top: 3px;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateCol1
-        {
-            grid-column: 1/7;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateCol2
-        {
-            grid-column: 7/-1;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateRow1
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals
         {
             grid-row: 2/3;
-            background-color: #414241;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-rolltemplateRow2
-        {
-            grid-row: 3/4;
-            background-color: #353635;
-        }
-        /*Subheaders*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSubheader
-        {
             grid-column: 1/-1;
-            color: #d87d29;
-            font-variant-caps: small-caps;
-            font-weight: 600;
-            font-size: 14px;
-            padding-left: 2px;
-            padding-top: 3px;
+            display: grid;
+            grid-template-columns: 80px 16px 10px 82px 16px auto;
+            grid-template-rows: repeat(2,21px);
+            width: 100%;
         }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDiceSubheader
-        {
-            grid-row: 4/6;
-            background-color: #414241;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDiceSubheader
-        {
-            grid-row: 6/8;
-            background-color: #353635;
-        }
-
-        /*Dice*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-dice
-        {
-            justify-content: stretch;
-            align-content: stretch;
-            width: 20px;
-            height: 20px;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .inlinerollresult
-        {
-            background-color: transparent;
-            border-color: transparent;
-            font-size: 1em;
-            text-align: center;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice
-        {
-            grid-row: 5/6;
-        }
-
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult
+            /*Dice Count*/
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-tangleDiceCount
             {
-                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                opacity: 1;
-                background-size: 20px 20px;
-                width: 20px;
-                height: 20px;
+                grid-row: 1/2;
+                grid-column: 4/5;
             }
 
-                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullfail
-                {
-                    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieNull.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    opacity: 1;
-                    background-size: 20px 20px;
-                    width: 20px;
-                    height: 20px;
-                }
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-tangleDiceNum
+            {
+                grid-row: 1/2;
+                grid-column: 5/6;
+                padding: 3px 0 0 5px;
+            }
 
-                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDice .inlinerollresult.fullcrit
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-spellDiceCount
+            {
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-spellDiceNum
+            {
+                grid-row: 1/2;
+                grid-column: 2/3;
+                padding: 3px 0 0 5px;
+            }
+
+            /*.sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateExcessDice
+            {
+                grid-column: 2/-1;
+                font-weight: 400;
+                padding: 3px 0 0 5px;
+            }*/
+
+            /*Results*/
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateResults
+            {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateResultTotal
+            {
+                grid-column: 2/3;
+                padding: 3px 0 0 5px;
+                text-align: start;
+            }
+
+                .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateResultTotal .inlinerollresult
                 {
-                    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    opacity: 1;
-                    background-size: 20px 20px;
-                    width: 20px;
-                    height: 20px;
+                    border: none;
+                    font-weight: 400;
+                    padding: 0;
+                }
+            
+            /*Outcome*/
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateOutcome
+            {
+                grid-column: 4/5;
+                grid-row: 2/3;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateOutcomeDisplay
+            {
+                grid-column: 5/ -1;
+                padding: 3px 0 0 5px;
+                font-weight: 400;
+            }
+
+                .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateOutcomeDisplay .inlinerollresult
+                {
+                    border: none;
+                    font-weight: 400;
                     padding: 0;
                 }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice
+        /*Subheaders*/
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-templateSubheader
         {
-            grid-row: 7/8;
+            color: #FAF9F6;
+            font-family: "Fredericka the Great", cursive;
+            font-weight: 500;
+            font-size: 14px;
+            padding-left: 2px;
+            padding-top: 3px;
+            min-width: fit-content();
         }
 
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult
+        /*Arcana Table*/
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable
+        {
+            grid-row: 3/-1;
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: 30px auto;
+            grid-template-rows: repeat(13,21px);
+            width: 100%;
+        }
+           
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-diceRow
             {
-                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieNull.png);
+                grid-column: 2/-1;
+                display: inline-flex;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana1Row
+            {
+                grid-row: 1/2;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana2Row
+            {
+                grid-row: 2/3;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana3Row
+            {
+                grid-row: 3/4;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana4Row
+            {
+                grid-row: 4/5;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana5Row
+            {
+                grid-row: 5/6;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana6Row
+            {
+                grid-row: 6/7;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana7Row
+            {
+                grid-row: 7/8;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana8Row
+            {
+                grid-row: 8/9;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana9Row
+            {
+                grid-row: 9/10;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana10Row
+            {
+                grid-row: 10/11;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana11Row
+            {
+                grid-row: 11/12;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana12Row
+            {
+                grid-row: 12/13;
+            }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana13Row
+            {
+                grid-row: 13/-1;
+            }
+
+        
+
+        /*Dice*/
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .inlinerollresult
+        {
+            border: none;
+            background-color: transparent;
+            font-size: 1em;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            z-index: 5;
+        }
+
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-spellDice .inlinerollresult
+        {
+            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 1;
+            background-size: 20px 20px;
+            z-index: 5;
+        }
+
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-spellDice .inlinerollresult.fullfail
+            {
+                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieNull.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 opacity: 1;
                 background-size: 20px 20px;
-                width: 20px;
-                height: 20px;
+                z-index: 5;
             }
 
-                .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDice .inlinerollresult.fullfail
-                {
-                    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    opacity: 1;
-                    background-size: 20px 20px;
-                    width: 20px;
-                    height: 20px;
-                }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die0
-        {
-            grid-column: 2/3;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die1
-        {
-            grid-column: 3/4;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die2
-        {
-            grid-column: 4/5;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die3
-        {
-            grid-column: 5/6;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die4
-        {
-            grid-column: 6/7;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die5
-        {
-            grid-column: 7/8;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die6
-        {
-            grid-column: 8/9;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die7
-        {
-            grid-column: 9/10;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die8
-        {
-            grid-column: 10/11;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-die9
-        {
-            grid-column: 11/12;
-        }
-
-        /*Dice Count*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateDiceCount .inlinerollresult
-        {
-            border: none;
-            font-weight: 400;
-            padding: 0;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-threatDiceCount
-        {
-            grid-row: 6/7;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-taskDiceCount
-        {
-            grid-row: 4/5;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateExcessDice
-        {
-            grid-column: 5/-1;
-            padding-top: 2px;
-            font-weight: 400;
-        }
-
-        /*Charge*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateCharge
-        {
-            grid-row: 8/9;
-            background-color: #414241;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateChargeTotal
-        {
-            grid-column: 4/5;
-            padding: 2px 0 0 5px;
-            font-weight: 400;
-            text-align: end;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSupplyHeader
-        {
-            grid-column: 7/-1;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateSupplyTotal
-        {
-            grid-column: 10/11;
-        }
-
-        /*Results*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResults
-        {
-            grid-row: 9/10;
-            background-color: #353635;
-        }
-
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResultTotal
-        {
-            grid-column: 4/5;
-            padding: 2px 0 0 5px;
-            text-align: end;
-        }
-
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateResultTotal > .inlinerollresult
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-spellDice .inlinerollresult.fullcrit
             {
-                border: none;
-                font-weight: 400;
-                padding: 0;
+                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 1;
+                background-size: 20px 20px;
+                z-index: 5;
             }
 
-        /*Outcome*/
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcome
+
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-tangleDice .inlinerollresult
         {
-            grid-row: 10/11;
-            background-color: #414241;
+            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieNull.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 1;
+            background-size: 20px 20px;
+            z-index: 5;
         }
 
-        .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay
-        {
-            grid-column: 4/-1;
-            padding-left: 5px;
-            padding-top: 3px;
-            font-weight: 400;
-        }
-
-            .sheet-rolltemplate-FS .sheet-rolltemplateContainer .sheet-templateOutcomeDisplay .inlinerollresult
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-tangleDice .inlinerollresult.fullfail
             {
-                border: none;
-                font-weight: 400;
-                padding: 0;
+                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 1;
+                background-size: 20px 20px;
+                z-index: 5;
             }
-
 
 /*Ship*/
 .shipAspects

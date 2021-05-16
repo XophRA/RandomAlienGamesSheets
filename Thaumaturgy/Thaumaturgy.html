@@ -1634,102 +1634,1327 @@
 <!-- ------------- -->
 <!-- Roll Template -->
 <!-- ------------- -->
-<rolltemplate class="sheet-rolltemplate-FS">
+<rolltemplate class="sheet-rolltemplate-Thaumaturgy">
     <div class="sheet-rolltemplateContainer">
-        <div class="sheet-rolltemplateHeader">Casting</div>
+        <div class="sheet-rolltemplateHeader">Spellcasting</div>
+        <div class="sheet-rolltemplateTotals">
+            <!--Dice Count-->
+            <div class="sheet-spellDiceCount sheet-templateSubheader">Spell Dice</div>
+            <div class="sheet-spellDiceNum"> {{spellDice}}</div>
+            <div class="sheet-tangleDiceCount sheet-templateSubheader">Tangle Dice</div>
+            <div class="sheet-tangleDiceNum">{{tangleDice}}</div>
+            
+            <!--Results-->
+            <div class="sheet-templateSubheader sheet-templateResults">Result</div>
+            <div class="sheet-templateResultTotal sheet-templateResults">{{total}}</div>
 
-        <!--Task Dice-->
-        <div class="sheet-taskDiceSubheader sheet-templateSubheader">Spell Dice//</div>
-        <div class="sheet-templateDiceCount sheet-taskDiceCount sheet-templateExcessDice">
-            {{spellDice}}
-            {{#rollGreater() autoHits 0}}
-            <span> + {{autoHits}} auto-hits</span>
-            {{/rollGreater() autoHits 0}}
+            <!--Outcome-->
+            <div class="sheet-templateSubheader sheet-templateOutcome">Outcome</div>
+            <div class="sheet-templateOutcomeDisplay sheet-templateOutcome">
+                <!--Critical Outcome-->
+                {{#rollGreater() total 1}}
+                <span>Critical(2+)</span>
+                {{/rollGreater() total 1}}
+
+                <!--Complete Outcome-->
+                {{#rollTotal() total 1}}
+                <span>Complete(1)</span>
+                {{/rollTotal() total 1}}
+
+                <!--Twisted Outcome-->
+                {{#rollTotal() total 0}}
+                <span>Twisted(0)</span>
+                {{/rollTotal() total 0}}
+
+                <!--Catastrophe Outcome-->
+                {{#rollLess() total -2}}
+                <span>Catastrophe(-3)</span>
+                {{/rollLess() total -2}}
+            </div>
         </div>
-        <div class="sheet-taskDice sheet-dice sheet-die0">{{spell0}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die1">{{spell1}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die2">{{spell2}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die3">{{spell3}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die4">{{spell4}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die5">{{spell5}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die6">{{spell6}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die7">{{spell7}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die8">{{spell8}}</div>
-        <div class="sheet-taskDice sheet-dice sheet-die9">{{spell9}}</div>
+        <div class="sheet-rolltemplateArcanaTable">
+            <!--1 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana1Row">1</div>
+            <div class="sheet-diceRow sheet-arcana1Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 1 15}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 1 15}}
 
-        <!--Threat Dice-->
-        <div class="sheet-threatDiceSubheader sheet-templateSubheader">Tangle Dice//</div>
-        <div class="sheet-templateDiceCount sheet-threatDiceCount sheet-templateExcessDice">
-            {{tangleDice}}
-            {{#rollGreater() autoMisses 0}}
-            <span> + {{autoMisses}} auto-misses</span>
-            {{/rollGreater() autoMisses 0}}
+                    {{#rollBetween() arcana1 1 15}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 1 15}}
+
+                    {{#rollBetween() arcana2 1 15}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 1 15}}
+
+                    {{#rollBetween() arcana3 1 15}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 1 15}}
+
+                    {{#rollBetween() arcana4 1 15}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 1 15}}
+
+                    {{#rollBetween() arcana5 1 15}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 1 15}}
+
+                    {{#rollBetween() arcana6 1 15}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 1 15}}
+
+                    {{#rollBetween() arcana7 1 15}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 1 15}}
+
+                    {{#rollBetween() arcana8 1 15}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 1 15}}
+
+                    {{#rollBetween() arcana9 1 15}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 1 15}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 1 15}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 1 15}}
+
+                    {{#rollBetween() arcana11 1 15}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 1 15}}
+
+                    {{#rollBetween() arcana12 1 15}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 1 15}}
+
+                    {{#rollBetween() arcana13 1 15}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 1 15}}
+
+                    {{#rollBetween() arcana14 1 15}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 1 15}}
+
+                    {{#rollBetween() arcana15 1 15}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 1 15}}
+
+                    {{#rollBetween() arcana16 1 15}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 1 15}}
+
+                    {{#rollBetween() arcana17 1 15}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 1 15}}
+
+                    {{#rollBetween() arcana18 1 15}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 1 15}}
+
+                    {{#rollBetween() arcana19 1 15}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 1 15}}
+                </div>
+            </div>
+
+            <!--2 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana2Row">2</div>
+            <div class="sheet-diceRow sheet-arcana2Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 16 20}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 16 20}}
+
+                    {{#rollBetween() arcana1 16 20}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 16 20}}
+
+                    {{#rollBetween() arcana2 16 20}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 16 20}}
+
+                    {{#rollBetween() arcana3 16 20}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 16 20}}
+
+                    {{#rollBetween() arcana4 16 20}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 16 20}}
+
+                    {{#rollBetween() arcana5 16 20}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 16 20}}
+
+                    {{#rollBetween() arcana6 16 20}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 16 20}}
+
+                    {{#rollBetween() arcana7 16 20}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 16 20}}
+
+                    {{#rollBetween() arcana8 16 20}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 16 20}}
+
+                    {{#rollBetween() arcana9 16 20}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 16 20}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 16 20}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 16 20}}
+
+                    {{#rollBetween() arcana11 16 20}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 16 20}}
+
+                    {{#rollBetween() arcana12 16 20}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 16 20}}
+
+                    {{#rollBetween() arcana13 16 20}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 16 20}}
+
+                    {{#rollBetween() arcana14 16 20}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 16 20}}
+
+                    {{#rollBetween() arcana15 16 20}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 16 20}}
+
+                    {{#rollBetween() arcana16 16 20}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 16 20}}
+
+                    {{#rollBetween() arcana17 16 20}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 16 20}}
+
+                    {{#rollBetween() arcana18 16 20}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 16 20}}
+
+                    {{#rollBetween() arcana19 16 20}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 16 20}}
+                </div>
+            </div>
+
+            <!--3 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana3Row">3</div>
+            <div class="sheet-diceRow sheet-arcana3Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 21 33}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 21 33}}
+
+
+                    {{#rollBetween() arcana1 21 33}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 21 33}}
+
+
+                    {{#rollBetween() arcana2 21 33}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 21 33}}
+
+
+                    {{#rollBetween() arcana3 21 33}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 21 33}}
+
+
+                    {{#rollBetween() arcana4 21 33}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 21 33}}
+
+
+                    {{#rollBetween() arcana5 21 33}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 21 33}}
+
+
+                    {{#rollBetween() arcana6 21 33}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 21 33}}
+
+
+                    {{#rollBetween() arcana7 21 33}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 21 33}}
+
+
+                    {{#rollBetween() arcana8 21 33}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 21 33}}
+
+
+                    {{#rollBetween() arcana9 21 33}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 21 33}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 21 33}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 21 33}}
+
+                    {{#rollBetween() arcana11 21 33}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 21 33}}
+
+                    {{#rollBetween() arcana12 21 33}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 21 33}}
+
+                    {{#rollBetween() arcana13 21 33}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 21 33}}
+
+                    {{#rollBetween() arcana14 21 33}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 21 33}}
+
+                    {{#rollBetween() arcana15 21 33}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 21 33}}
+
+                    {{#rollBetween() arcana16 21 33}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 21 33}}
+
+
+                    {{#rollBetween() arcana17 21 33}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 21 33}}
+
+                    {{#rollBetween() arcana18 21 33}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 21 33}}
+
+                    {{#rollBetween() arcana19 21 33}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 21 33}}
+                </div>
+            </div>
+
+            <!--4 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana4Row">4</div>
+            <div class="sheet-diceRow sheet-arcana4Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 34 48}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 34 48}}
+
+                    {{#rollBetween() arcana1 34 48}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 34 48}}
+
+                    {{#rollBetween() arcana2 34 48}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 34 48}}
+
+                    {{#rollBetween() arcana3 34 48}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 34 48}}
+
+                    {{#rollBetween() arcana4 34 48}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 34 48}}
+
+                    {{#rollBetween() arcana5 34 48}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 34 48}}
+
+                    {{#rollBetween() arcana6 34 48}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 34 48}}
+
+                    {{#rollBetween() arcana7 34 48}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 34 48}}
+
+                    {{#rollBetween() arcana8 34 48}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 34 48}}
+
+                    {{#rollBetween() arcana9 34 48}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 34 48}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 34 48}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 34 48}}
+
+                    {{#rollBetween() arcana11 34 48}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 34 48}}
+
+                    {{#rollBetween() arcana12 34 48}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 34 48}}
+
+                    {{#rollBetween() arcana13 34 48}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 34 48}}
+
+                    {{#rollBetween() arcana14 34 48}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 34 48}}
+
+                    {{#rollBetween() arcana15 34 48}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 34 48}}
+
+                    {{#rollBetween() arcana16 34 48}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 34 48}}
+
+                    {{#rollBetween() arcana17 34 48}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 34 48}}
+
+                    {{#rollBetween() arcana18 34 48}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 34 48}}
+
+                    {{#rollBetween() arcana19 34 48}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 34 48}}
+                </div>
+            </div>
+
+            <!--5 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana5Row">5</div>
+            <div class="sheet-diceRow sheet-arcana5Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 49 54}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 49 54}}
+
+                    {{#rollBetween() arcana1 49 54}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 49 54}}
+
+                    {{#rollBetween() arcana2 49 54}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 49 54}}
+
+                    {{#rollBetween() arcana3 49 54}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 49 54}}
+
+                    {{#rollBetween() arcana4 49 54}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 49 54}}
+
+                    {{#rollBetween() arcana5 49 54}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 49 54}}
+
+                    {{#rollBetween() arcana6 49 54}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 49 54}}
+
+                    {{#rollBetween() arcana7 49 54}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 49 54}}
+
+                    {{#rollBetween() arcana8 49 54}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 49 54}}
+
+                    {{#rollBetween() arcana9 49 54}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 49 54}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 49 54}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 49 54}}
+
+                    {{#rollBetween() arcana11 49 54}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 49 54}}
+
+                    {{#rollBetween() arcana12 49 54}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 49 54}}
+
+                    {{#rollBetween() arcana13 49 54}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 49 54}}
+
+                    {{#rollBetween() arcana14 49 54}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 49 54}}
+
+                    {{#rollBetween() arcana15 49 54}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 49 54}}
+
+                    {{#rollBetween() arcana16 49 54}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 49 54}}
+
+                    {{#rollBetween() arcana17 49 54}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 49 54}}
+
+                    {{#rollBetween() arcana18 49 54}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 49 54}}
+
+                    {{#rollBetween() arcana19 49 54}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 49 54}}
+                </div>
+            </div>
+
+            <!--6 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana6Row">6</div>
+            <div class="sheet-diceRow sheet-arcana6Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 55 69}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 55 69}}
+
+
+                    {{#rollBetween() arcana1 55 69}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 55 69}}
+
+
+                    {{#rollBetween() arcana2 55 69}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 55 69}}
+
+
+                    {{#rollBetween() arcana3 55 69}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 55 69}}
+
+
+                    {{#rollBetween() arcana4 55 69}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 55 69}}
+
+
+                    {{#rollBetween() arcana5 55 69}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 55 69}}
+
+
+                    {{#rollBetween() arcana6 55 69}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 55 69}}
+
+                    {{#rollBetween() arcana7 55 69}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 55 69}}
+
+                    {{#rollBetween() arcana8 55 69}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 55 69}}
+
+                    {{#rollBetween() arcana9 55 69}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 55 69}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 55 69}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 55 69}}
+
+
+                    {{#rollBetween() arcana11 55 69}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 55 69}}
+
+
+                    {{#rollBetween() arcana12 55 69}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 55 69}}
+
+
+                    {{#rollBetween() arcana13 55 69}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 55 69}}
+
+
+                    {{#rollBetween() arcana14 55 69}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 55 69}}
+
+
+                    {{#rollBetween() arcana15 55 69}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 55 69}}
+
+
+                    {{#rollBetween() arcana16 55 69}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 55 69}}
+
+
+                    {{#rollBetween() arcana17 55 69}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 55 69}}
+
+
+                    {{#rollBetween() arcana18 55 69}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 55 69}}
+
+
+                    {{#rollBetween() arcana19 55 69}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 55 69}}
+                </div>
+            </div>
+
+            <!--7 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana7Row">7</div>
+            <div class="sheet-diceRow sheet-arcana7Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 70 74}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 70 74}}
+
+
+                    {{#rollBetween() arcana1 70 74}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 70 74}}
+
+
+                    {{#rollBetween() arcana2 70 74}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 70 74}}
+
+
+                    {{#rollBetween() arcana3 70 74}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 70 74}}
+
+
+                    {{#rollBetween() arcana4 70 74}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 70 74}}
+
+
+                    {{#rollBetween() arcana5 70 74}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 70 74}}
+
+
+                    {{#rollBetween() arcana6 70 74}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 70 74}}
+
+
+                    {{#rollBetween() arcana7 70 74}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 70 74}}
+
+
+                    {{#rollBetween() arcana8 70 74}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 70 74}}
+
+
+                    {{#rollBetween() arcana9 70 74}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 70 74}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 70 74}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 70 74}}
+
+
+                    {{#rollBetween() arcana11 70 74}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 70 74}}
+
+
+                    {{#rollBetween() arcana12 70 74}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 70 74}}
+
+
+                    {{#rollBetween() arcana13 70 74}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 70 74}}
+
+
+                    {{#rollBetween() arcana14 70 74}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 70 74}}
+
+
+                    {{#rollBetween() arcana15 70 74}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 70 74}}
+
+
+                    {{#rollBetween() arcana16 70 74}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 70 74}}
+
+
+                    {{#rollBetween() arcana17 70 74}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 70 74}}
+
+
+                    {{#rollBetween() arcana18 70 74}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 70 74}}
+
+
+                    {{#rollBetween() arcana19 70 74}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 70 74}}
+                </div>
+            </div>
+
+            <!--8 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana8Row">8</div>
+            <div class="sheet-diceRow sheet-arcana8Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 75 81}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 75 81}}
+
+
+                    {{#rollBetween() arcana1 75 81}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 75 81}}
+
+
+                    {{#rollBetween() arcana2 75 81}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 75 81}}
+
+
+                    {{#rollBetween() arcana3 75 81}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 75 81}}
+
+
+                    {{#rollBetween() arcana4 75 81}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 75 81}}
+
+
+                    {{#rollBetween() arcana5 75 81}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 75 81}}
+
+
+                    {{#rollBetween() arcana6 75 81}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 75 81}}
+
+
+                    {{#rollBetween() arcana7 75 81}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 75 81}}
+
+
+                    {{#rollBetween() arcana8 75 81}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 75 81}}
+
+
+                    {{#rollBetween() arcana9 75 81}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 75 81}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 75 81}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 75 81}}
+
+
+                    {{#rollBetween() arcana11 75 81}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 75 81}}
+
+
+                    {{#rollBetween() arcana12 75 81}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 75 81}}
+
+
+                    {{#rollBetween() arcana13 75 81}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 75 81}}
+
+
+                    {{#rollBetween() arcana14 75 81}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 75 81}}
+
+
+                    {{#rollBetween() arcana15 75 81}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 75 81}}
+
+
+                    {{#rollBetween() arcana16 75 81}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 75 81}}
+
+
+                    {{#rollBetween() arcana17 75 81}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 75 81}}
+
+
+                    {{#rollBetween() arcana18 75 81}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 75 81}}
+
+
+                    {{#rollBetween() arcana19 75 81}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 75 81}}
+                </div>
+            </div>
+
+            <!--9 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana9Row">9</div>
+            <div class="sheet-diceRow sheet-arcana9Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 82 91}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 82 91}}
+
+
+                    {{#rollBetween() arcana1 82 91}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 82 91}}
+
+
+                    {{#rollBetween() arcana2 82 91}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 82 91}}
+
+
+                    {{#rollBetween() arcana3 82 91}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 82 91}}
+
+
+                    {{#rollBetween() arcana4 82 91}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 82 91}}
+
+
+                    {{#rollBetween() arcana5 82 91}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 82 91}}
+
+
+                    {{#rollBetween() arcana6 82 91}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 82 91}}
+
+
+                    {{#rollBetween() arcana7 82 91}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 82 91}}
+
+
+                    {{#rollBetween() arcana8 82 91}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 82 91}}
+
+
+                    {{#rollBetween() arcana9 82 91}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 82 91}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 82 91}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 82 91}}
+
+
+                    {{#rollBetween() arcana11 82 91}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 82 91}}
+
+
+                    {{#rollBetween() arcana12 82 91}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 82 91}}
+
+
+                    {{#rollBetween() arcana13 82 91}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 82 91}}
+
+
+                    {{#rollBetween() arcana14 82 91}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 82 91}}
+
+
+                    {{#rollBetween() arcana15 82 91}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 82 91}}
+
+
+                    {{#rollBetween() arcana16 82 91}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 82 91}}
+
+
+                    {{#rollBetween() arcana17 82 91}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 82 91}}
+
+
+                    {{#rollBetween() arcana18 82 91}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 82 91}}
+
+
+                    {{#rollBetween() arcana19 82 91}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 82 91}}
+                </div>
+            </div>
+
+            <!--10 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana10Row">10</div>
+            <div class="sheet-diceRow sheet-arcana10Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 92 94}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 92 94}}
+
+
+                    {{#rollBetween() arcana1 92 94}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 92 94}}
+
+
+                    {{#rollBetween() arcana2 92 94}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 92 94}}
+
+
+                    {{#rollBetween() arcana3 92 94}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 92 94}}
+
+
+                    {{#rollBetween() arcana4 92 94}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 92 94}}
+
+
+                    {{#rollBetween() arcana5 92 94}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 92 94}}
+
+
+                    {{#rollBetween() arcana6 92 94}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 92 94}}
+
+
+                    {{#rollBetween() arcana7 92 94}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 92 94}}
+
+
+                    {{#rollBetween() arcana8 92 94}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 92 94}}
+
+
+                    {{#rollBetween() arcana9 92 94}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 92 94}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 92 94}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 92 94}}
+
+
+                    {{#rollBetween() arcana11 92 94}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 92 94}}
+
+
+                    {{#rollBetween() arcana12 92 94}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 92 94}}
+
+
+                    {{#rollBetween() arcana13 92 94}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 92 94}}
+
+
+                    {{#rollBetween() arcana14 92 94}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 92 94}}
+
+
+                    {{#rollBetween() arcana15 92 94}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 92 94}}
+
+
+                    {{#rollBetween() arcana16 92 94}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 92 94}}
+
+
+                    {{#rollBetween() arcana17 92 94}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 92 94}}
+
+
+                    {{#rollBetween() arcana18 92 94}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 92 94}}
+
+                    {{#rollBetween() arcana19 92 94}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 92 94}}
+                </div>
+            </div>
+
+            <!--11 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana11Row">11</div>
+            <div class="sheet-diceRow sheet-arcana11Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 95 96}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 95 96}}
+
+
+                    {{#rollBetween() arcana1 95 96}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 95 96}}
+
+
+                    {{#rollBetween() arcana2 95 96}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 95 96}}
+
+
+                    {{#rollBetween() arcana3 95 96}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 95 96}}
+
+
+                    {{#rollBetween() arcana4 95 96}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 95 96}}
+
+
+                    {{#rollBetween() arcana5 95 96}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 95 96}}
+
+
+                    {{#rollBetween() arcana6 95 96}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 95 96}}
+
+
+                    {{#rollBetween() arcana7 95 96}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 95 96}}
+
+
+                    {{#rollBetween() arcana8 95 96}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 95 96}}
+
+
+                    {{#rollBetween() arcana9 95 96}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 95 96}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 95 96}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 95 96}}
+
+
+                    {{#rollBetween() arcana11 95 96}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 95 96}}
+
+
+                    {{#rollBetween() arcana12 95 96}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 95 96}}
+
+
+                    {{#rollBetween() arcana13 95 96}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 95 96}}
+
+
+                    {{#rollBetween() arcana14 95 96}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 95 96}}
+
+
+                    {{#rollBetween() arcana15 95 96}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 95 96}}
+
+
+                    {{#rollBetween() arcana16 95 96}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 95 96}}
+
+
+                    {{#rollBetween() arcana17 95 96}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 95 96}}
+
+
+                    {{#rollBetween() arcana18 95 96}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 95 96}}
+
+
+                    {{#rollBetween() arcana19 95 96}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 95 96}}
+                </div>
+            </div>
+
+            <!--12 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana12Row">12</div>
+            <div class="sheet-diceRow sheet-arcana12Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 97 97}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 97 97}}
+
+
+                    {{#rollBetween() arcana1 97 97}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 97 97}}
+
+
+                    {{#rollBetween() arcana2 97 97}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 97 97}}
+
+
+                    {{#rollBetween() arcana3 97 97}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 97 97}}
+
+
+                    {{#rollBetween() arcana4 97 97}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 97 97}}
+
+
+                    {{#rollBetween() arcana5 97 97}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 97 97}}
+
+
+                    {{#rollBetween() arcana6 97 97}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 97 97}}
+
+
+                    {{#rollBetween() arcana7 97 97}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 97 97}}
+
+
+                    {{#rollBetween() arcana8 97 97}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 97 97}}
+
+
+                    {{#rollBetween() arcana9 97 97}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 97 97}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 97 97}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 97 97}}
+
+
+                    {{#rollBetween() arcana11 97 97}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 97 97}}
+
+
+                    {{#rollBetween() arcana12 97 97}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 97 97}}
+
+
+                    {{#rollBetween() arcana13 97 97}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 97 97}}
+
+
+                    {{#rollBetween() arcana14 97 97}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 97 97}}
+
+
+                    {{#rollBetween() arcana15 97 97}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 97 97}}
+
+
+                    {{#rollBetween() arcana16 97 97}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 97 97}}
+
+
+                    {{#rollBetween() arcana17 97 97}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 97 97}}
+
+
+                    {{#rollBetween() arcana18 97 97}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 97 97}}
+
+
+                    {{#rollBetween() arcana19 97 97}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 97 97}}
+                </div>
+            </div>
+
+            <!--13 Arcana-->
+            <div class="sheet-templateSubheader sheet-arcana13Row">13</div>
+            <div class="sheet-diceRow sheet-arcana13Row">
+                <div class="sheet-spellDice sheet-dice">
+                    {{#rollBetween() arcana0 98 100}}
+                    {{spell0}}
+                    {{/rollBetween() arcana0 98 100}}
+
+
+                    {{#rollBetween() arcana1 98 100}}
+                    {{spell1}}
+                    {{/rollBetween() arcana1 98 100}}
+
+
+                    {{#rollBetween() arcana2 98 100}}
+                    {{spell2}}
+                    {{/rollBetween() arcana2 98 100}}
+
+
+                    {{#rollBetween() arcana3 98 100}}
+                    {{spell3}}
+                    {{/rollBetween() arcana3 98 100}}
+
+
+                    {{#rollBetween() arcana4 98 100}}
+                    {{spell4}}
+                    {{/rollBetween() arcana4 98 100}}
+
+
+                    {{#rollBetween() arcana5 98 100}}
+                    {{spell5}}
+                    {{/rollBetween() arcana5 98 100}}
+
+
+                    {{#rollBetween() arcana6 98 100}}
+                    {{spell6}}
+                    {{/rollBetween() arcana6 98 100}}
+
+
+                    {{#rollBetween() arcana7 98 100}}
+                    {{spell7}}
+                    {{/rollBetween() arcana7 98 100}}
+
+
+                    {{#rollBetween() arcana8 98 100}}
+                    {{spell8}}
+                    {{/rollBetween() arcana8 98 100}}
+
+
+                    {{#rollBetween() arcana9 98 100}}
+                    {{spell9}}
+                    {{/rollBetween() arcana9 98 100}}
+                </div>
+                <div class="sheet-tangleDice sheet-dice">
+                    {{#rollBetween() arcana10 98 100}}
+                    {{tangle0}}
+                    {{/rollBetween() arcana10 98 100}}
+
+
+                    {{#rollBetween() arcana11 98 100}}
+                    {{tangle1}}
+                    {{/rollBetween() arcana11 98 100}}
+
+
+                    {{#rollBetween() arcana12 98 100}}
+                    {{tangle2}}
+                    {{/rollBetween() arcana12 98 100}}
+
+
+                    {{#rollBetween() arcana13 98 100}}
+                    {{tangle3}}
+                    {{/rollBetween() arcana13 98 100}}
+
+
+                    {{#rollBetween() arcana14 98 100}}
+                    {{tangle4}}
+                    {{/rollBetween() arcana14 98 100}}
+
+
+                    {{#rollBetween() arcana15 98 100}}
+                    {{tangle5}}
+                    {{/rollBetween() arcana15 98 100}}
+
+
+                    {{#rollBetween() arcana16 98 100}}
+                    {{tangle6}}
+                    {{/rollBetween() arcana16 98 100}}
+
+
+                    {{#rollBetween() arcana17 98 100}}
+                    {{tangle7}}
+                    {{/rollBetween() arcana17 98 100}}
+
+
+                    {{#rollBetween() arcana18 98 100}}
+                    {{tangle8}}
+                    {{/rollBetween() arcana18 98 100}}
+
+
+                    {{#rollBetween() arcana19 98 100}}
+                    {{tangle9}}
+                    {{/rollBetween() arcana19 98 100}}
+                </div>
+            </div>
         </div>
-        <div class="sheet-threatDice sheet-dice sheet-die0">{{tangle0}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die1">{{tangle1}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die2">{{tangle2}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die3">{{tangle3}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die4">{{tangle4}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die5">{{tangle5}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die6">{{tangle6}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die7">{{tangle7}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die8">{{tangle8}}</div>
-        <div class="sheet-threatDice sheet-dice sheet-die9">{{tangle9}}</div>
 
-        <!--Charge-->
-        <div class="sheet-templateSubheader sheet-templateCharge">
-            <span>Charge//</span>
-        </div>
-        <div class="sheet-templateChargeTotal sheet-templateCharge">
-            <span>{{salvoCharge}}</span>
-        </div>
-
-        <!--Results-->
-        <div class="sheet-templateSubheader sheet-templateResults">Result//</div> <div class="sheet-templateResultTotal sheet-templateResults">{{total}} </div>
-
-        <!--Outcome-->
-        <div class="sheet-templateSubheader sheet-templateOutcome">Outcome//</div>
-        <div class="sheet-sheet-templateOutcome sheet-templateOutcomeDisplay">
-            <!--Double Critical Roll Outcome-->
-            {{#rollGreater() total 4}}
-            <span>Double Critical(5+)</span>
-            {{/rollGreater() total 4}}
-
-            <!--Critical Roll Outcome-->
-            {{#rollBetween() total 3 4}}
-            <span>Critical(3,4)</span>
-            {{/rollBetween() total 3 4}}
-
-            <!--Complete Outcome-->
-            {{#rollTotal() total 2}}
-            <span>Complete(</span>{{total}}<span>)</span>
-            {{/rollTotal() total 2}}
-
-            <!--Partial Outcome-->
-            {{#rollTotal() total 1}}
-            <span>Partial(</span>{{total}}<span>)</span>
-            {{/rollTotal() total 1}}
-
-            <!--Fail Outcome-->
-            {{#rollTotal() total 0}}
-            <span>Fail(0)</span>
-            {{/rollTotal() total 0}}
-
-            <!--Consequence Outcome-->
-            {{#rollTotal() total -3}}
-            <span>Consequence(-3)</span>
-            {{/rollTotal() total -3}}
-
-            <!--Complications Outcome Between-->
-            {{#rollBetween() total -3 -1}}
-            <span>Complications(</span>{{total}}<span>)</span>
-            {{/rollBetween() total -3 -1}}
-
-            <!--Complications Outcome Lower-->
-            {{#rollLess() total -3 }}
-            <span>Complications(</span>{{total}}<span>)</span>
-            {{/rollLess() total -3 }}
-        </div>
     </div>
 </rolltemplate>
 
@@ -1742,7 +2967,7 @@
     //Generate Spell Casting Macro
     on("change:castSpellDice change:castTangleDice", (event) =>
     {
-        getAttrs(["castSpellDice", "castTangleDice", "salvoCharge"], function (values)
+        getAttrs(["castSpellDice", "castTangleDice"], function (values)
         {
 
             //Spell dice
@@ -1771,19 +2996,35 @@
                 autoMisses = `{{autoMisses=[[${excessTangleDice}]]}}`;
             }
 
+            let arcanaLocations = spellDice + tangleDice;
+
             //Make the Casting Macro
             console.log(spellDice, "vs", tangleDice);
             const setObj = {};
+
+            let arcanaRoll = `${_.range(arcanaLocations).map((num) =>
+            {
+                return `[[1d100]]`;
+            }).join(' ')}`;
 
             let spellRoll = `${_.range(spellDice).map((num) =>
             {
                 return `[[floor([[1d10cf<4cs10]] /5)]]`;
             }).join(' + ')} + ${excessspellDice}[auto hits]`;
+
             let tangleRoll = `${_.range(tangleDice).map((num) =>
             {
                 return `[[floor([[1d6cf<3cs10]] /4)-1]]`;
             }).join(' + ')} - ${excessTangleDice}[auto misses]`;
+
+
             let wholeRoll = `[[${spellRoll}+${tangleRoll}]]`;
+
+            let arcanaFields = _.range(arcanaLocations).map((num) =>
+            {
+                return `{{arcana${num}=$[[${num * 2}]]}}`;
+            }).join(' ');
+
             let spellFields = _.range(spellDice).map((num) =>
             {
                 return `{{spell${num}=$[[${num * 2}]]}}`;
@@ -1794,7 +3035,7 @@
                 return `{{tangle${num}=$[[${(num + spellDice) * 2}]]}}`;
             }).join(' ');
 
-            setObj.castingMacro = `&{template:FS} {{salvoCharge=${values.salvoCharge}}} {{spellDice=${spellDice}}} {{tangleDice=${tangleDice}}} {{total=${wholeRoll}}} ${spellFields} ${tangleFields} ${autoHits} ${autoMisses}`;
+            setObj.castingMacro = `&{template:Thaumaturgy} {{arcanaLocations=${arcanaLocations}}} {{spellDice=${spellDice}}} {{tangleDice=${tangleDice}}} {{locations=${arcanaRoll}}} {{total=${wholeRoll}}} ${arcanaFields} ${spellFields} ${tangleFields} ${autoHits} ${autoMisses}`;
 
             console.log(setObj);
             setAttrs(setObj);
