@@ -3002,19 +3002,34 @@
             console.log(spellDice, "vs", tangleDice);
             const setObj = {};
 
+            //let arcanaRoll = `${_.range(arcanaLocations).map((num) =>
+            //{
+            //    return `[[1d100]]`;
+            //}).join(' ')}`;
+
+            //let spellRoll = `${_.range(spellDice).map((num) =>
+            //{
+            //    return `[[floor([[1d10cf<4cs10]] /5)]]`;
+            //}).join(' + ')} + ${excessspellDice}[auto hits]`;
+
+            //let tangleRoll = `${_.range(tangleDice).map((num) =>
+            //{
+            //    return `[[floor([[1d6cf<3cs10]] /4)-1]]`;
+            //}).join(' + ')} - ${excessTangleDice}[auto misses]`;
+
             let arcanaRoll = `${_.range(arcanaLocations).map((num) =>
             {
-                return `[[1d100]]`;
+                return `[[1d100[d100:${num}]]]`;
             }).join(' ')}`;
 
             let spellRoll = `${_.range(spellDice).map((num) =>
             {
-                return `[[floor([[1d10cf<4cs10]] /5)]]`;
+                return `[[floor([[1d10cf<4cs10[d10:${num}]]] /5)[d10 floor:${num}]]]`;
             }).join(' + ')} + ${excessspellDice}[auto hits]`;
 
             let tangleRoll = `${_.range(tangleDice).map((num) =>
             {
-                return `[[floor([[1d6cf<3cs10]] /4)-1]]`;
+                return `[[floor([[1d6cf<3cs10[d6:${num}]]] /4)-1[d6 floor:${num}]]]`;
             }).join(' + ')} - ${excessTangleDice}[auto misses]`;
 
 
@@ -3022,17 +3037,19 @@
 
             let arcanaFields = _.range(arcanaLocations).map((num) =>
             {
-                return `{{arcana${num}=$[[${num * 2}]]}}`;
+                return `{{arcana${num}=$[[${num}]]}}`;//your Arcana rolls are before the wholeRoll in your roll template, and they're only a single roll for each arcana roll. Additionally the entire set isn't wrapped in another set of inline rolls.
             }).join(' ');
 
             let spellFields = _.range(spellDice).map((num) =>
             {
-                return `{{spell${num}=$[[${num * 2}]]}}`;
+                return `{{spell${num}=$[[${arcanaLocations + num * 2}]]}}`;// Only the spell number needs to be multiplied by 2 because of how the roll is set up.
+                //Offset the code for the earlier arcanaLocations
             }).join(' ');
 
             let tangleFields = _.range(tangleDice).map((num) =>
             {
-                return `{{tangle${num}=$[[${(num + spellDice) * 2}]]}}`;
+                return `{{tangle${num}=$[[${arcanaLocations + (num + spellDice) * 2}]]}}`;//As with spellFields, but now the spellDice and the current index need to be multiplied by 2
+                //Offset the code for the earlier arcanaLocations and spellDice
             }).join(' ');
 
             setObj.castingMacro = `&{template:Thaumaturgy} {{arcanaLocations=${arcanaLocations}}} {{spellDice=${spellDice}}} {{tangleDice=${tangleDice}}} {{locations=${arcanaRoll}}} {{total=${wholeRoll}}} ${arcanaFields} ${spellFields} ${tangleFields} ${autoHits} ${autoMisses}`;
