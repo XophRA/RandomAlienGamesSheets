@@ -953,8 +953,8 @@
             </section>
             <!-- Magic Circle-->
             <section class="magicCircle">
-                <input type="checkbox" class="editCog" name="attr_EditCircle" value="1" /><span class="editCog"></span>
-                <input type="hidden" class="editToggle" name="attr_EditCircle" />
+                <input type="checkbox" class="editCog" name="attr_editCircle" value="1" /><span class="editCog"></span>
+                <input type="hidden" class="editToggle" name="attr_editCircle" />
                 <div class="editMenu editCircle">
                     <!--Table Header-->
                     <h3 class="arcanaList arcanaInputHeader">Arcana</h3>
@@ -2981,7 +2981,7 @@
 <!-- ------- -->
 <script type="text/worker">
 <!--<script type="text/javascript">-->
-    //Generate Spell Casting Macro
+    /* Generate Spellcasting Macro */
     on("change:castSpellDice change:castTangleDice", (event) =>
     {
         getAttrs(["castSpellDice", "castTangleDice"], function (values)
@@ -3074,6 +3074,113 @@
             console.log(setObj);
             setAttrs(setObj);
         })
+    });
+
+    /* Magic Circle */
+    on("change:editCircle", (event) =>
+    {
+        getAttrs(["position1d10", "position1d6",
+            "position2d10", "position2d6",
+            "position3d10", "position3d6",
+            "position4d10", "position4d6",
+            "position5d10", "position5d6",
+            "position6d10", "position6d6",
+            "position7d10", "position7d6",
+            "position8d10", "position8d6",
+            "position9d10", "position9d6",
+            "position10d10", "position10d6",
+            "position11d10", "position11d6",
+            "position12d10", "position12d6",
+            "position13d10", "position13d6",
+            "ripple1Harmony", "ripple1Chaos",
+            "ripple2Harmony", "ripple2Chaos",
+            "ripple3Harmony", "ripple3Chaos",
+            "ripple4Harmony", "ripple4Chaos",
+            "ripple5Harmony", "ripple5Chaos",
+            "ripple6Harmony", "ripple6Chaos",
+            "ripple7Harmony", "ripple7Chaos",
+            "ripple8Harmony", "ripple8Chaos",
+            "ripple9Harmony", "ripple9Chaos",
+            "ripple10Harmony", "ripple10Chaos",
+            "ripple11Harmony", "ripple11Chaos",
+            "ripple12Harmony", "ripple12Chaos",
+            "ripple13Harmony", "ripple13Chaos"], (positions) =>
+        {
+            const setObj = {};
+
+            //Make Array from the dice inputs
+            let arcanaOneD10 = positions.position1d10.match(/\d+/g);//will match all numbers and add the number array to arcanaOneD10
+            let arcanaOneD6 = positions.position1d6.match(/\d+/g);
+            let arcanaTwoD10 = positions.position2d10.match(/\d+/g);
+            let arcanaTwoD6 = positions.position2d6.match(/\d+/g);
+            let arcanaThreeD10 = positions.position3d10.match(/\d+/g);
+            let arcanaThreeD6 = positions.position3d6.match(/\d+/g);
+            let arcanaFourD10 = positions.position4d10.match(/\d+/g);
+            let arcanaFourD6 = positions.position4d6.match(/\d+/g);
+            let arcanaFiveD10 = positions.position5d10.match(/\d+/g);
+            let arcanaFiveD6 = positions.position5d6.match(/\d+/g);
+            let arcanaSixD10 = positions.position6d10.match(/\d+/g);
+            let arcanaSixD6 = positions.position6d6.match(/\d+/g);
+            let arcanaSevenD10 = positions.position7d10.match(/\d+/g);
+            let arcanaSevenD6 = positions.position7d6.match(/\d+/g);
+            let arcanaEightD10 = positions.position8d10.match(/\d+/g);
+            let arcanaEightD6 = positions.position8d6.match(/\d+/g);
+            let arcanaNineD10 = positions.position9d10.match(/\d+/g);
+            let arcanaNineD6 = positions.position9d6.match(/\d+/g);
+            let arcanaTenD10 = positions.position10d10.match(/\d+/g);
+            let arcanaTenD6 = positions.position10d6.match(/\d+/g);
+            let arcanaElevenD10 = positions.position11d10.match(/\d+/g);
+            let arcanaElevenD6 = positions.position11d6.match(/\d+/g);
+            let arcanaTwelveD10 = positions.position12d10.match(/\d+/g);
+            let arcanaTwelveD6 = positions.position12d6.match(/\d+/g);
+            let arcanaThirteeenD10 = positions.position13d10.match(/\d+/g);
+            let arcanaThirteenD6 = positions.position13d6.match(/\d+/g);
+
+            let ripple1Harmony = parseInt(positions.ripple1Harmony) || 0;
+            ripple1Harmony += arcanaOneD10.concat(arcanaOneD6).filter(function (number)
+            {
+                return number % 2 == 0;
+            }).length;
+            setObj.ripple1Harmony = ripple1Harmony;
+
+            let ripple1Chaos = parseInt(positions.ripple1Chaos) || 0;
+            ripple1Chaos += arcanaOneD10.concat(arcanaOneD6).filter(function (number)
+            {
+                return number % 2 == 1;
+            }).length;
+            setObj.ripple1Chaos = ripple1Chaos;
+
+            //blank the inputs
+            setObj.position1d10 = "";
+            setObj.position1d6 = "";
+            setObj.position2d10 = "";
+            setObj.position2d6 = "";
+            setObj.position3d10 = "";
+            setObj.position3d6 = "";
+            setObj.position4d10 = "";
+            setObj.position4d6 = "";
+            setObj.position5d10 = "";
+            setObj.position5d6 = "";
+            setObj.position6d10 = "";
+            setObj.position6d6 = "";
+            setObj.position7d10 = "";
+            setObj.position7d6 = "";
+            setObj.position8d10 = "";
+            setObj.position8d6 = "";
+            setObj.position9d10 = "";
+            setObj.position9d6 = "";
+            setObj.position10d10 = "";
+            setObj.position10d6 = "";
+            setObj.position11d10 = "";
+            setObj.position11d6 = "";
+            setObj.position12d10 = "";
+            setObj.position12d6 = "";
+            setObj.position13d10 = "";
+            setObj.position13d6 = "";
+
+            console.log(setObj);
+            setAttrs(setObj);
+        });
     });
 
         /*Sheet Totals*/
