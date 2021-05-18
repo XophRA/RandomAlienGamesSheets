@@ -31,11 +31,12 @@ input.creatureSelector:checked ~ article.creatureSheet
     background-color: #FFF;
 }
 
-.charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheet th
-{
-    text-align: left;
-    font-weight: 500;
-}
+    .charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheet th
+    {
+        font-family: "Fredericka the Great", cursive;
+        text-align: left;
+        font-weight: 500;
+    }
 
 .charsheet h1
 {
@@ -829,84 +830,126 @@ section.magicCircle
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: 1fr 65px 65px 100px;
+        grid-template-columns: 2fr 125px 150px 30px 150px 30px 3fr;
         grid-template-rows: 125px repeat(13,25px) auto;
     }
-.editCircle > .rippleHarmony
+
+.editCircle > h3.arcanaList
 {
-    grid-column: 2 / 3;
+    grid-column: 2/3;
+    color: black;
+}
+.editCircle > input.diceInputSpell
+{
+    grid-column: 3/4;
 }
 
-.editCircle > .rippleChaos
+    .editCircle > input.diceInputSpell + span
+    {
+        grid-column: 4/5;
+        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 20px 20px;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align:center;
+    }
+
+.editCircle > input.diceInputTangle
 {
-    grid-column: 3 / 4;
+    grid-column: 5/6;
 }
 
-.editCircle > .ripple1
+    .editCircle > input.diceInputTangle + span
+    {
+        grid-column: 6/7;
+        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 20px 20px;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center;
+    }
+
+input[type="text"].diceInputBox
+{
+    padding-top: 2px;
+    height: 90%;
+    width: 98%;
+    font-size: 11px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    border: medium, solid, white;
+}
+
+.editCircle > .arcanaInput1
 {
     grid-row: 2 / 3;
 }
 
-.editCircle > .ripple2
+.editCircle > .arcanaInput2
 {
     grid-row: 3 / 4;
 }
 
-.editCircle > .ripple3
+.editCircle > .arcanaInput3
 {
     grid-row: 4 / 5;
 }
 
-.editCircle > .ripple4
+.editCircle > .arcanaInput4
 {
     grid-row: 5 / 6;
 }
 
-.editCircle > .ripple5
+.editCircle > .arcanaInput5
 {
     grid-row: 6 / 7;
 }
 
-.editCircle > .ripple6
+.editCircle > .arcanaInput6
 {
     grid-row: 7 / 8;
 }
 
-.editCircle > .ripple7
+.editCircle > .arcanaInput7
 {
     grid-row: 8 / 9;
 }
 
-.editCircle > .ripple8
+.editCircle > .arcanaInput8
 {
     grid-row: 9 / 10;
 }
 
-.editCircle > .ripple9
+.editCircle > .arcanaInput9
 {
     grid-row: 10 / 11;
 }
 
-.editCircle > .ripple10
+.editCircle > .arcanaInput10
 {
     grid-row: 11 / 12;
 }
 
-.editCircle > .ripple11
+.editCircle > .arcanaInput11
 {
     grid-row: 12 / 13;
 }
 
-.editCircle > .ripple12
+.editCircle > .arcanaInput12
 {
     grid-row: 13 / 14;
 }
 
-.editCircle > .ripple13
+.editCircle > .arcanaInput13
 {
     grid-row: 14 / 15;
 }
-
 
 
 button.rollSalvoButton
