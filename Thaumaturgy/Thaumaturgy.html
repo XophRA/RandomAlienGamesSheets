@@ -1013,7 +1013,13 @@
                     <input type="text" name="attr_position13d10" class="diceInputBox diceInputSpell arcanaInput13" />
                     <input type="text" name="attr_position13d6" class="diceInputBox diceInputTangle arcanaInput13" />
                 </div>
-                <!--Spell Dice-->
+    <!--Dice Positions-->            
+    <div class="circlePositions">
+        <div class="arcana1">
+
+        </div>
+    </div>
+    <!--Spell Dice-->
                 <div class="castingSpellDice">
                     <input type="number" class="resourceBox" name="attr_castSpellDice" min="0" value="0" />
                     <div class="">Spell</div>
@@ -3110,47 +3116,175 @@
 
             //Make Array from the dice inputs
             let arcanaOneD10 = positions.position1d10.match(/\d+/g);//will match all numbers and add the number array to arcanaOneD10
+            if (arcanaOneD10 == null) { arcanaOneD10 = [] };//ensure its not a NULL array
             let arcanaOneD6 = positions.position1d6.match(/\d+/g);
+            if (arcanaOneD6 == null) { arcanaOneD6 = [] };
             let arcanaTwoD10 = positions.position2d10.match(/\d+/g);
+            if (arcanaTwoD10 == null) { arcanaTwoD10 = [] };
             let arcanaTwoD6 = positions.position2d6.match(/\d+/g);
+            if (arcanaTwoD6 == null) { arcanaTwoD6 = [] };
             let arcanaThreeD10 = positions.position3d10.match(/\d+/g);
+            if (arcanaThreeD10 == null) { arcanaThreeD10 = [] };
             let arcanaThreeD6 = positions.position3d6.match(/\d+/g);
+            if (arcanaThreeD6 == null) { arcanaThreeD6 = [] };
             let arcanaFourD10 = positions.position4d10.match(/\d+/g);
+            if (arcanaFourD10 == null) { arcanaFourD10 = [] };
             let arcanaFourD6 = positions.position4d6.match(/\d+/g);
+            if (arcanaFourD6 == null) { arcanaFourD6 = [] };
             let arcanaFiveD10 = positions.position5d10.match(/\d+/g);
+            if (arcanaFiveD10 == null) { arcanaFiveD10 = [] };
             let arcanaFiveD6 = positions.position5d6.match(/\d+/g);
+            if (arcanaFiveD6 == null) { arcanaFiveD6 = [] };
             let arcanaSixD10 = positions.position6d10.match(/\d+/g);
+            if (arcanaSixD10 == null) { arcanaSixD10 = [] };
             let arcanaSixD6 = positions.position6d6.match(/\d+/g);
+            if (arcanaSixD6 == null) { arcanaSixD6 = [] };
             let arcanaSevenD10 = positions.position7d10.match(/\d+/g);
+            if (arcanaSevenD10 == null) { arcanaSevenD10 = [] };
             let arcanaSevenD6 = positions.position7d6.match(/\d+/g);
+            if (arcanaSevenD6 == null) { arcanaSevenD6 = [] };
             let arcanaEightD10 = positions.position8d10.match(/\d+/g);
+            if (arcanaEightD10 == null) { arcanaEightD10 = [] };
             let arcanaEightD6 = positions.position8d6.match(/\d+/g);
+            if (arcanaEightD6 == null) { arcanaEightD6 = [] };
             let arcanaNineD10 = positions.position9d10.match(/\d+/g);
+            if (arcanaNineD10 == null) { arcanaNineD10 = [] };
             let arcanaNineD6 = positions.position9d6.match(/\d+/g);
+            if (arcanaNineD6 == null) { arcanaNineD6 = [] };
             let arcanaTenD10 = positions.position10d10.match(/\d+/g);
+            if (arcanaTenD10 == null) { arcanaTenD10 = [] };
             let arcanaTenD6 = positions.position10d6.match(/\d+/g);
+            if (arcanaTenD6 == null) { arcanaTenD6 = [] };
             let arcanaElevenD10 = positions.position11d10.match(/\d+/g);
+            if (arcanaElevenD10 == null) { arcanaElevenD10 = [] };
             let arcanaElevenD6 = positions.position11d6.match(/\d+/g);
+            if (arcanaElevenD6 == null) { arcanaElevenD6 = [] };
             let arcanaTwelveD10 = positions.position12d10.match(/\d+/g);
+            if (arcanaTwelveD10 == null) { arcanaTwelveD10 = [] };
             let arcanaTwelveD6 = positions.position12d6.match(/\d+/g);
+            if (arcanaTwelveD6 == null) { arcanaTwelveD6 = [] };
             let arcanaThirteeenD10 = positions.position13d10.match(/\d+/g);
+            if (arcanaThirteeenD10 == null) { arcanaThirteeenD10 = [] };
             let arcanaThirteenD6 = positions.position13d6.match(/\d+/g);
+            if (arcanaThirteenD6 == null) { arcanaThirteenD6 = [] };
 
+            //Make Joined Array form Dice typed Array
+            let arcanaOne = arcanaOneD10.concat(arcanaOneD6);
+            let arcanaTwo = arcanaTwoD10.concat(arcanaTwoD6);
+            let arcanaThree = arcanaThreeD10.concat(arcanaThreeD6);
+            let arcanaFour = arcanaFourD10.concat(arcanaFourD6);
+            let arcanaFive = arcanaFiveD10.concat(arcanaFiveD6);
+            let arcanaSix = arcanaSixD10.concat(arcanaSixD6);
+            let arcanaSeven = arcanaSevenD10.concat(arcanaSevenD6);
+            let arcanaEight = arcanaEightD10.concat(arcanaEightD6);
+            let arcanaNine = arcanaNineD10.concat(arcanaNineD6);
+            let arcanaTen = arcanaTenD10.concat(arcanaTenD6);
+            let arcanaEleven = arcanaElevenD10.concat(arcanaElevenD6);
+            let arcanaTwelve = arcanaTwelveD10.concat(arcanaTwelveD6);
+            let arcanaThirteeen = arcanaThirteeenD10.concat(arcanaThirteenD6);
+
+            //Store all Ripples
             let ripple1Harmony = parseInt(positions.ripple1Harmony) || 0;
-            ripple1Harmony += arcanaOneD10.concat(arcanaOneD6).filter(function (number)
-            {
-                return number % 2 == 0;
-            }).length;
-            setObj.ripple1Harmony = ripple1Harmony;
-
             let ripple1Chaos = parseInt(positions.ripple1Chaos) || 0;
-            ripple1Chaos += arcanaOneD10.concat(arcanaOneD6).filter(function (number)
-            {
-                return number % 2 == 1;
-            }).length;
-            setObj.ripple1Chaos = ripple1Chaos;
+            let ripple2Harmony = parseInt(positions.ripple2Harmony) || 0;
+            let ripple2Chaos = parseInt(positions.ripple2Chaos) || 0;
+            let ripple3Harmony = parseInt(positions.ripple3Harmony) || 0;
+            let ripple3Chaos = parseInt(positions.ripple3Chaos) || 0;
+            let ripple4Harmony = parseInt(positions.ripple4Harmony) || 0;
+            let ripple4Chaos = parseInt(positions.ripple4Chaos) || 0;
+            let ripple5Harmony = parseInt(positions.ripple5Harmony) || 0;
+            let ripple5Chaos = parseInt(positions.ripple5Chaos) || 0;
+            let ripple6Harmony = parseInt(positions.ripple6Harmony) || 0;
+            let ripple6Chaos = parseInt(positions.ripple6Chaos) || 0;
+            let ripple7Harmony = parseInt(positions.ripple7Harmony) || 0;
+            let ripple7Chaos = parseInt(positions.ripple7Chaos) || 0;
+            let ripple8Harmony = parseInt(positions.ripple8Harmony) || 0;
+            let ripple8Chaos = parseInt(positions.ripple8Chaos) || 0;
+            let ripple9Harmony = parseInt(positions.ripple9Harmony) || 0;
+            let ripple9Chaos = parseInt(positions.ripple9Chaos) || 0;
+            let ripple10Harmony = parseInt(positions.ripple10Harmony) || 0;
+            let ripple10Chaos = parseInt(positions.ripple10Chaos) || 0;
+            let ripple11Harmony = parseInt(positions.ripple11Harmony) || 0;
+            let ripple11Chaos = parseInt(positions.ripple11Chaos) || 0;
+            let ripple12Harmony = parseInt(positions.ripple12Harmony) || 0;
+            let ripple12Chaos = parseInt(positions.ripple12Chaos) || 0;
+            let ripple13Harmony = parseInt(positions.ripple13Harmony) || 0;
+            let ripple13Chaos = parseInt(positions.ripple13Chaos) || 0;
 
-            //blank the inputs
+            //Number of Evens and Odds Functions
+            function evenDiceRolled(diceArray)
+            {
+                return diceArray.filter(function (number)
+                {
+                    return number % 2 == 0;
+                }).length;
+            }
+
+            function oddDiceRolled(diceArray)
+            {
+                return diceArray.filter(function (number)
+                {
+                    return number % 2 == 1;
+                }).length;
+            }
+
+            //Add inputs to Ripple Table
+            ripple1Harmony += evenDiceRolled(arcanaOne);
+            ripple1Chaos += oddDiceRolled(arcanaOne);
+            ripple2Harmony += evenDiceRolled(arcanaTwo);
+            ripple2Chaos += oddDiceRolled(arcanaTwo);
+            ripple3Harmony += evenDiceRolled(arcanaThree);
+            ripple3Chaos += oddDiceRolled(arcanaThree);
+            ripple4Harmony += evenDiceRolled(arcanaFour);
+            ripple4Chaos += oddDiceRolled(arcanaFour);
+            ripple5Harmony += evenDiceRolled(arcanaFive);
+            ripple5Chaos += oddDiceRolled(arcanaFive);
+            ripple6Harmony += evenDiceRolled(arcanaSix);
+            ripple6Chaos += oddDiceRolled(arcanaSix);
+            ripple7Harmony += evenDiceRolled(arcanaSeven);
+            ripple7Chaos += oddDiceRolled(arcanaSeven);
+            ripple8Harmony += evenDiceRolled(arcanaEight);
+            ripple8Chaos += oddDiceRolled(arcanaEight);
+            ripple9Harmony += evenDiceRolled(arcanaNine);
+            ripple9Chaos += oddDiceRolled(arcanaNine);
+            ripple10Harmony += evenDiceRolled(arcanaTen);
+            ripple10Chaos += oddDiceRolled(arcanaTen);
+            ripple11Harmony += evenDiceRolled(arcanaEleven);
+            ripple11Chaos += oddDiceRolled(arcanaEleven);
+            ripple12Harmony += evenDiceRolled(arcanaTwelve);
+            ripple12Chaos += oddDiceRolled(arcanaTwelve);
+            ripple13Harmony += evenDiceRolled(arcanaThirteeen);
+            ripple13Chaos += oddDiceRolled(arcanaThirteeen);
+
+            //Set the Ripple Table
+            setObj.ripple1Harmony = ripple1Harmony;
+            setObj.ripple1Chaos = ripple1Chaos;
+            setObj.ripple2Harmony = ripple2Harmony;
+            setObj.ripple2Chaos = ripple2Chaos;
+            setObj.ripple3Harmony = ripple3Harmony;
+            setObj.ripple3Chaos = ripple3Chaos;
+            setObj.ripple4Harmony = ripple4Harmony;
+            setObj.ripple4Chaos = ripple4Chaos;
+            setObj.ripple5Harmony = ripple5Harmony;
+            setObj.ripple5Chaos = ripple5Chaos;
+            setObj.ripple6Harmony = ripple6Harmony;
+            setObj.ripple6Chaos = ripple6Chaos;
+            setObj.ripple7Harmony = ripple7Harmony;
+            setObj.ripple7Chaos = ripple7Chaos;
+            setObj.ripple8Harmony = ripple8Harmony;
+            setObj.ripple8Chaos = ripple8Chaos;
+            setObj.ripple9Harmony = ripple9Harmony;
+            setObj.ripple9Chaos = ripple9Chaos;
+            setObj.ripple10Harmony = ripple10Harmony;
+            setObj.ripple10Chaos = ripple10Chaos;
+            setObj.ripple11Harmony = ripple11Harmony;
+            setObj.ripple11Chaos = ripple11Chaos;
+            setObj.ripple12Harmony = ripple12Harmony;
+            setObj.ripple12Chaos = ripple12Chaos;
+            setObj.ripple13Harmony = ripple13Harmony;
+            setObj.ripple13Chaos = ripple13Chaos;
+
+            //Blank the Dice Inputs
             setObj.position1d10 = "";
             setObj.position1d6 = "";
             setObj.position2d10 = "";
