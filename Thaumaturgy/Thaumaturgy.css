@@ -830,6 +830,14 @@ section.magicCircle
             grid-area: 1 / 1 / 2 / 2;
         }
 
+    section.magicCircle > .circlePositions
+    {
+        grid-area: 1 / 1 / -1 / -1;
+        display: grid;
+        width: 100%;
+        height: 100%;
+    }
+
     section.magicCircle > .editCircle
     {
         grid-area: 1 / 1 / -1 / -1;
