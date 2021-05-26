@@ -375,6 +375,7 @@ main.masterGrid
             width: 100%;
             z-index: 5;
         }
+
         .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals
         {
             grid-row: 2/3;
@@ -438,7 +439,7 @@ main.masterGrid
                     font-weight: 400;
                     padding: 0;
                 }
-            
+
             /*Outcome*/
             .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateOutcome
             {
@@ -482,7 +483,7 @@ main.masterGrid
             grid-template-rows: repeat(13,21px);
             width: 100%;
         }
-           
+
             .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-diceRow
             {
                 grid-column: 2/-1;
@@ -557,7 +558,7 @@ main.masterGrid
                 grid-row: 13/-1;
             }
 
-        
+
 
         /*Dice*/
         .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .inlinerollresult
@@ -784,7 +785,7 @@ main.masterGrid
             font-size: 11px;
         }
 
- /* Magic Circle */
+/* Magic Circle */
 section.magicCircle
 {
     grid-area: 2 / 2 / span 2 / span 2;
@@ -911,7 +912,7 @@ section.magicCircle
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
             background-color: gold;
         }
-        
+
 
         /* Match Dice Checkbox invisiable */
         section.magicCircle > .circlePositions > input + input + input + input + input + input + input + input[type=checkbox]
@@ -928,7 +929,7 @@ section.magicCircle
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 18 / 12 / span 3 / span 3;
+            grid-area: 17 / 11 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input,
@@ -946,31 +947,31 @@ section.magicCircle
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 21 / 17 / span 3 / span 3;
+            grid-area: 20 / 17 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 15 / 15 / span 3 / span 3;
+            grid-area: 14 / 14 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 17 / 3 / span 3 / span 3;
+            grid-area: 15 / 3 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 21 / 9 / span 3 / span 3;
+            grid-area: 22 / 6 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 11 / 19 / span 3 / span 3;
+            grid-area: 10 / 17 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input,
@@ -988,13 +989,13 @@ section.magicCircle
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 20 / 8 / span 3 / span 3;
+            grid-area: 18 / 6 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 11 / 9 / span 3 / span 3;
+            grid-area: 14 / 7 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="13"].circleDieArcanaPosition + input + input + input + input + input,
@@ -1006,75 +1007,553 @@ section.magicCircle
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 12 / 14 / span 3 / span 3;
+            grid-area: 11 / 9 / span 3 / span 3;
         }
 
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 18 / 18 / span 3 / span 3;
+            grid-area: 16 / 18 / span 3 / span 3;
         }
 
-            section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input,
-            section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input + input
-            {
-                grid-area: 21 / 2 / span 3 / span 3;
-            }
-
-        /* Arcana 2 Positions */
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 3 / 7 / span 3 / span 3;
+            grid-area: 19 / 2 / span 3 / span 3;
         }
 
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 4 / 9/ span 3 / span 3;
+            grid-area: 22 / 1 / span 3 / span 3;
         }
 
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 5 / 8 / span 3 / span 3;
+            grid-area: 12 / 20 / span 3 / span 3;
         }
 
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 6 / 9 / span 3 / span 3;
+            grid-area: 25 / 3 / span 3 / span 3;
         }
 
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 7 / 6 / span 3 / span 3;
+            grid-area: 22 / 14 / span 3 / span 3;
         }
 
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 7 / 8 / span 3 / span 3;
+            grid-area: 18 / 6 / span 3 / span 3;
         }
 
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 8 / 8 / span 3 / span 3;
+            grid-area: 25 / 7 / span 3 / span 3;
         }
 
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input + input
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 6 / 10 / span 3 / span 3;
-        }
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input,
-        section.magicCircle > .circlePositions > input[value="2"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input + input
-        {
-            grid-area: 2 / 8 / span 3 / span 3;
+            grid-area: 10 / 13 / span 3 / span 3;
         }
 
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 20 / 10 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 18 / 14 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="1"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 16 / 8 / span 3 / span 3;
+        }
+
+        /* Arcana 3 Positions */
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 16 / 47 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 14 / 37 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 28 / 53 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 10 / 37 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 12 / 39 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 16 / 53 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 22 / 48 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 5 / 35 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 2 / 30 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="10"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="10"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 25 / 53 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 19 / 46 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 13 / 50 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="13"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="13"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 6 / 31 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 12 / 46 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 12 / 34 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 19 / 50 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 22 / 52 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 9 / 33 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 26 / 49 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 22 / 45 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 9 / 42 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 25 / 45 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 7 / 38 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 18 / 42 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 17 / 38 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="3"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 13 / 42 / span 3 / span 3;
+        }
+
+        /* Arcana 4 Positions */
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 49 / 47 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 57 / 33 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 34 / 53 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 56 / 36 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 53 / 37 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 40 / 40 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 40 / 49 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 48 / 35 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 46 / 52 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="10"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="10"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 37 / 52 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 42 / 37 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 43 / 42 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="13"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="13"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 59 / 30 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 46 / 45 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 51 / 34 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 45 / 49 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 42 / 52 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 54 / 32 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 36 / 48 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 42 / 46 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 50 / 39 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 39 / 44 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 53 / 41 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 46 / 40 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 45 / 36 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="4"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 51 / 44 / span 3 / span 3;
+        }
+
+        /* Arcana 6 Positions */
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="1"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 48 / 4 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="2"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 58 / 24 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="3"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 33 / 1 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="4"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 56 / 21 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="5"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 53 / -37 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="6"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 49 / 15 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="7"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 39 / 3 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="8"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 38 / 10 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="9"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 46 / 1 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="10"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="10"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 36 / 2 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="11"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 50 / 7 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="12"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 43 / 14 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="13"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="13"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 45 / 9 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="14"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 46 / -45 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="15"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 44 / 17 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="16"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 44 / 5 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="17"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 42 / 2 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="18"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 51 / 11 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="19"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 36 / 6 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="20"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 42 / 10 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="21"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 50 / -39 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="22"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 39 / 13 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="23"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 54 / 17 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="24"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 47 / 18 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="25"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 40 / 7 / span 3 / span 3;
+        }
+
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input[value="6"].circleDieArcana + input[value="26"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 53 / 14 / span 3 / span 3;
+        }
+
+    /* Edit menu form Magic circle */
     section.magicCircle > .editCircle
     {
         grid-area: 1 / 1 / -1 / -1;
@@ -1096,36 +1575,36 @@ section.magicCircle
     grid-column: 3/span 2;
 }
 
-    .editCircle > .diceInputSpellHeader
-    {
-        grid-column: 3/4;
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 20px 20px;
-        width: 100%;
-        height: 100%;
-        color: white;
-        text-align:center;
-    }
+.editCircle > .diceInputSpellHeader
+{
+    grid-column: 3/4;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 20px 20px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
 
 .editCircle > input.diceInputTangle
 {
     grid-column: 5/span 2;
 }
 
-    .editCircle > .diceInputTangleHeader
-    {
-        grid-column: 5/6;
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 20px 20px;
-        width: 100%;
-        height: 100%;
-        color: white;
-        text-align: center;
-    }
+.editCircle > .diceInputTangleHeader
+{
+    grid-column: 5/6;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 20px 20px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
 
 input[type="text"].diceInputBox
 {
@@ -1254,16 +1733,16 @@ button.rollSalvoButton
 
 
 /* Ripples */
-    .ripples
-    {
-        grid-area: 3 / -2 / span 2 / -1;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-column-gap: 3px;
-        grid-template-columns: auto repeat(2,45px) 16px;
-        grid-template-rows: auto repeat(13,25px) 15px;
-    }
+.ripples
+{
+    grid-area: 3 / -2 / span 2 / -1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 3px;
+    grid-template-columns: auto repeat(2,45px) 16px;
+    grid-template-rows: auto repeat(13,25px) 15px;
+}
 
 input[type="number"].rippleBox
 {
@@ -1466,11 +1945,12 @@ input[type="number"].resourceBox
             grid-template-rows: 30px repeat(2, 20px);
         }
 
-/* Edit Mode */
-.tableSpread > .editCog
-{
-    grid-area: 1 / 7 / 2 / 8;
-}
+    /* Edit Mode */
+    .tableSpread > .editCog
+    {
+        grid-area: 1 / 7 / 2 / 8;
+    }
+
 .magicCircle > .editCog
 {
     grid-area: 2 / -3 / 3 / -2;
