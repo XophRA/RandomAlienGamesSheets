@@ -349,7 +349,7 @@ main.masterGrid
     {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 23px 45px auto;
+        grid-template-rows: 23px 1fr 1fr;
         background-color: #1a1a1a;
         width: 99%;
         border: none;
@@ -375,190 +375,61 @@ main.masterGrid
             width: 100%;
             z-index: 5;
         }
-
-        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals
+                
+       /* Dice Container */
+        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer
         {
-            grid-row: 2/3;
             grid-column: 1/-1;
             display: grid;
-            grid-template-columns: 60px 16px 4px 72px 16px auto;
-            grid-template-rows: repeat(2,21px);
+            grid-template-columns: 75px 22px auto;
+            grid-template-rows: repeat(3,21px);
             width: 100%;
         }
-            /*Dice Count*/
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-tangleDiceCount
-            {
-                grid-row: 1/2;
-                grid-column: 4/5;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-tangleDiceNum
-            {
-                grid-row: 1/2;
-                grid-column: 5/6;
-                padding: 3px 0 0 5px;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-spellDiceCount
-            {
-                grid-row: 1/2;
-                grid-column: 1/2;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-spellDiceNum
-            {
-                grid-row: 1/2;
-                grid-column: 2/3;
-                padding: 3px 0 0 5px;
-            }
-
-            /*.sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateExcessDice
-            {
-                grid-column: 2/-1;
-                font-weight: 400;
-                padding: 3px 0 0 5px;
-            }*/
-
-            /*Results*/
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateResults
-            {
-                grid-column: 1/2;
-                grid-row: 2/3;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateResultTotal
-            {
-                grid-column: 2/3;
-                padding: 3px 0 0 5px;
-                text-align: start;
-            }
-
-                .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateResultTotal .inlinerollresult
-                {
-                    border: none;
-                    font-weight: 400;
-                    padding: 0;
-                }
-
-            /*Outcome*/
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateOutcome
-            {
-                grid-column: 4/5;
-                grid-row: 2/3;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateOutcomeDisplay
-            {
-                grid-column: 5/ -1;
-                padding: 3px 0 0 5px;
-                font-weight: 400;
-            }
-
-                .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateTotals .sheet-templateOutcomeDisplay .inlinerollresult
-                {
-                    border: none;
-                    font-weight: 400;
-                    padding: 0;
-                }
-
-        /*Subheaders*/
-        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-templateSubheader
-        {
-            color: #FAF9F6;
-            font-family: "Fredericka the Great", cursive;
-            font-weight: 500;
-            font-size: 12px;
-            padding-left: 2px;
-            padding-top: 3px;
-            min-width: fit-content();
-        }
-
-        /*Arcana Table*/
-        .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable
-        {
-            grid-row: 3/-1;
-            grid-column: 1/-1;
-            display: grid;
-            grid-template-columns: 30px auto;
-            grid-template-rows: repeat(13,21px);
-            width: 100%;
-        }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-diceRow
-            {
-                grid-column: 2/-1;
-                display: inline-flex;
-                width: 100%;
-                justify-content: flex-start;
-                align-items: center;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana1Row
-            {
-                grid-row: 1/2;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana2Row
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer .sheet-rolltemplateSpellDice
             {
                 grid-row: 2/3;
             }
 
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana3Row
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer .sheet-rolltemplateTangleDice
             {
                 grid-row: 3/4;
             }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana4Row
+            /*Subheaders*/
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer .sheet-templateSubheader
             {
-                grid-row: 4/5;
+                color: #FAF9F6;
+                font-family: "Fredericka the Great", cursive;
+                font-weight: 500;
+                font-size: 12px;
+                padding-left: 2px;
+                padding-top: 3px;
+                min-width: fit-content;
+            }
+            /*Dice Count*/
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer .sheet-templateSubheader
+            {
+                grid-row: 1/2;
+                grid-column: 1/2;
             }
 
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana5Row
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer .sheet-diceNum
             {
-                grid-row: 5/6;
+                grid-row: 1/2;
+                grid-column: 2/3;
+                padding: 3px 0 0 5px;
             }
 
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana6Row
+            /*Dice Row*/
+            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer .sheet-diceRow
             {
-                grid-row: 6/7;
+                grid-row: 2/4;
+                grid-column: 1/-1;
+                display: inline-flex;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
             }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana7Row
-            {
-                grid-row: 7/8;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana8Row
-            {
-                grid-row: 8/9;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana9Row
-            {
-                grid-row: 9/10;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana10Row
-            {
-                grid-row: 10/11;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana11Row
-            {
-                grid-row: 11/12;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana12Row
-            {
-                grid-row: 12/13;
-            }
-
-            .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateArcanaTable .sheet-arcana13Row
-            {
-                grid-row: 13/-1;
-            }
-
-
 
         /*Dice*/
         .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .inlinerollresult
@@ -602,7 +473,6 @@ main.masterGrid
                 background-size: 20px 20px;
                 z-index: 5;
             }
-
 
         .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-tangleDice .inlinerollresult
         {
