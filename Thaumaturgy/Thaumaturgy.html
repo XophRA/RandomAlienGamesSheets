@@ -956,62 +956,15 @@
                 <input type="checkbox" class="editCog" name="attr_editCircle" value="1" /><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_editCircle" />
                 <div class="editMenu editCircle">
-                    <!--Table Header-->
-                    <h3 class="arcanaList arcanaInputHeader">Arcana</h3>
-                    <div class="arcanaInputHeader diceInputSpellHeader">10</div>
-                    <div class="arcanaInputHeader diceInputTangleHeader">6</div>
-                    <!--1 Folk-->
-                    <h3 class="arcanaList arcanaInput1">1. Folk</h3>
-                    <input type="text" name="attr_position1d10" class="diceInputBox diceInputSpell arcanaInput1" />
-                    <input type="text" name="attr_position1d6" class="diceInputBox diceInputTangle arcanaInput1" />
-                    <!--2 Apprentice-->
-                    <h3 class="arcanaList arcanaInput2">2. Apprentice</h3>
-                    <input type="text" name="attr_position2d10" class="diceInputBox diceInputSpell arcanaInput2" />
-                    <input type="text" name="attr_position2d6" class="diceInputBox diceInputTangle arcanaInput2" />
-                    <!--3 Wilds-->
-                    <h3 class="arcanaList arcanaInput3">3. Wilds</h3>
-                    <input type="text" name="attr_position3d10" class="diceInputBox diceInputSpell arcanaInput3" />
-                    <input type="text" name="attr_position3d6" class="diceInputBox diceInputTangle arcanaInput3" />
-                    <!--4 Passions-->
-                    <h3 class="arcanaList arcanaInput4">4. Passions</h3>
-                    <input type="text" name="attr_position4d10" class="diceInputBox diceInputSpell arcanaInput4" />
-                    <input type="text" name="attr_position4d6" class="diceInputBox diceInputTangle arcanaInput4" />
-                    <!--5 Coin-->
-                    <h3 class="arcanaList arcanaInput5">5. Coin</h3>
-                    <input type="text" name="attr_position5d10" class="diceInputBox diceInputSpell arcanaInput5" />
-                    <input type="text" name="attr_position5d6" class="diceInputBox diceInputTangle arcanaInput5" />
-                    <!--6 Judge-->
-                    <h3 class="arcanaList arcanaInput6">6. Judge</h3>
-                    <input type="text" name="attr_position6d10" class="diceInputBox diceInputSpell arcanaInput6" />
-                    <input type="text" name="attr_position6d6" class="diceInputBox diceInputTangle arcanaInput6" />
-                    <!--7 Crown-->
-                    <h3 class="arcanaList arcanaInput7">7. Crown</h3>
-                    <input type="text" name="attr_position7d10" class="diceInputBox diceInputSpell arcanaInput7" />
-                    <input type="text" name="attr_position7d6" class="diceInputBox diceInputTangle arcanaInput7" />
-                    <!--8 Master-->
-                    <h3 class="arcanaList arcanaInput8">8. Master</h3>
-                    <input type="text" name="attr_position8d10" class="diceInputBox diceInputSpell arcanaInput8" />
-                    <input type="text" name="attr_position8d6" class="diceInputBox diceInputTangle arcanaInput8" />
-                    <!--9 Rival-->
-                    <h3 class="arcanaList arcanaInput9">9. Rival</h3>
-                    <input type="text" name="attr_position9d10" class="diceInputBox diceInputSpell arcanaInput9" />
-                    <input type="text" name="attr_position9d6" class="diceInputBox diceInputTangle arcanaInput9" />
-                    <!--10 Divine-->
-                    <h3 class="arcanaList arcanaInput10">10. Divine</h3>
-                    <input type="text" name="attr_position10d10" class="diceInputBox diceInputSpell arcanaInput10" />
-                    <input type="text" name="attr_position10d6" class="diceInputBox diceInputTangle arcanaInput10" />
-                    <!--11 Trickster-->
-                    <h3 class="arcanaList arcanaInput11">11. Trickster</h3>
-                    <input type="text" name="attr_position11d10" class="diceInputBox diceInputSpell arcanaInput11" />
-                    <input type="text" name="attr_position11d6" class="diceInputBox diceInputTangle arcanaInput11" />
-                    <!--12 Destroyer-->
-                    <h3 class="arcanaList arcanaInput12">12. Destroyer</h3>
-                    <input type="text" name="attr_position12d10" class="diceInputBox diceInputSpell arcanaInput12" />
-                    <input type="text" name="attr_position12d6" class="diceInputBox diceInputTangle arcanaInput12" />
-                    <!--13 Forgotton-->
-                    <h3 class="arcanaList arcanaInput13">13. Forgotton</h3>
-                    <input type="text" name="attr_position13d10" class="diceInputBox diceInputSpell arcanaInput13" />
-                    <input type="text" name="attr_position13d6" class="diceInputBox diceInputTangle arcanaInput13" />
+                   
+                    <!--Spell Dice-->
+                    <h3 class="arcanaList diceInputSpell">Spell Dice</h3>
+                    <input type="text" name="attr_position1d10" class="diceInputBox diceInputSpell" />
+                    
+                    <!--Tangle Dice-->
+                    <h3 class="arcanaList diceInputTangle">Tangle Dice</h3>
+                    <input type="text" name="attr_position1d6" class="diceInputBox diceInputTangle" />
+                    
                 </div>
                 <!--Dice Positions-->
                 <div class="circlePositions">
@@ -1021,9 +974,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition1" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize1" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth1" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue1" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue1" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch1" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue1" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue1" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch1" />
 
                     <!--circleDie2-->
@@ -1031,9 +984,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition2" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize2" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth2" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue2" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue2" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch2" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue2" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue2" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch2" />
 
                     <!--circleDie3-->
@@ -1041,9 +994,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition3" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize3" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth3" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue3" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue3" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch3" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue3" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue3" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch3" />
 
                     <!--circleDie4-->
@@ -1051,9 +1004,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition4" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize4" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth4" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue4" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue4" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch4" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue4" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue4" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch4" />
 
                     <!--circleDie5-->
@@ -1061,9 +1014,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition5" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize5" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth5" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue5" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue5" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch5" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue5" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue5" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch5" />
 
                     <!--circleDie6-->
@@ -1071,9 +1024,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition6" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize6" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth6" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue6" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue6" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch6" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue6" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue6" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch6" />
 
                     <!--circleDie7-->
@@ -1081,9 +1034,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition7" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize7" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth7" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue7" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue7" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch7" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue7" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue7" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch7" />
 
                     <!--circleDie8-->
@@ -1091,9 +1044,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition8" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize8" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth8" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue8" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue8" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch8" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue8" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue8" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch8" />
 
                     <!--circleDie9-->
@@ -1101,9 +1054,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition9" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize9" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth9" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue9" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue9" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch9" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue9" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue9" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch9" />
 
                     <!--circleDie10-->
@@ -1111,9 +1064,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition10" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize10" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth10" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue10" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue10" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch10" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue10" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue10" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch10" />
 
                     <!--circleDie11-->
@@ -1121,9 +1074,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition11" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize11" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth11" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue11" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue11" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch11" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue11" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue11" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch11" />
 
                     <!--circleDie12-->
@@ -1131,9 +1084,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition12" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize12" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth12" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue12" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue12" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch12" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue12" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue12" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch12" />
 
                     <!--circleDie13-->
@@ -1141,9 +1094,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition13" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize13" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth13" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue13" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue13" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch13" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue13" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue13" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch13" />
 
                     <!--circleDie14-->
@@ -1151,9 +1104,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition14" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize14" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth14" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue14" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue14" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch14" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue14" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue14" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch14" />
 
                     <!--circleDie15-->
@@ -1161,9 +1114,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition15" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize15" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth15" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue15" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue15" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch15" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue15" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue15" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch15" />
 
                     <!--circleDie16-->
@@ -1171,9 +1124,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition16" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize16" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth16" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue16" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue16" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch16" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue16" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue16" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch16" />
 
                     <!--circleDie17-->
@@ -1181,9 +1134,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition17" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize17" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth17" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue17" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue17" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch17" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue17" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue17" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch17" />
 
                     <!--circleDie18-->
@@ -1191,9 +1144,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition18" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize18" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth18" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue18" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue18" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch18" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue18" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue18" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch18" />
 
                     <!--circleDie19-->
@@ -1201,9 +1154,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition19" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize19" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth19" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue19" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue19" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch19" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue19" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue19" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch19" />
 
                     <!--circleDie20-->
@@ -1211,9 +1164,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition20" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize20" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth20" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue20" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue20" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch20" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue20" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue20" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch20" />
 
                     <!--circleDie21-->
@@ -1221,9 +1174,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition21" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize21" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth21" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue21" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue21" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch21" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue21" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue21" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch21" />
 
                     <!--circleDie22-->
@@ -1231,9 +1184,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition22" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize22" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth22" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue22" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue22" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch22" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue22" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue22" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch22" />
 
                     <!--circleDie23-->
@@ -1241,9 +1194,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition23" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize23" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth23" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue23" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue23" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch23" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue23" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue23" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch23" />
 
                     <!--circleDie24-->
@@ -1251,9 +1204,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition24" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize24" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth24" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue24" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue24" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch24" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue24" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue24" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch24" />
 
                     <!--circleDie25-->
@@ -1261,9 +1214,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition25" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize25" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth25" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue25" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue25" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch25" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue25" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue25" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch25" />
 
                     <!--circleDie26-->
@@ -1271,9 +1224,9 @@
                     <input type="hidden" class="circleDieArcanaPosition" name="attr_poolDieArcanaPosition26" />
                     <input type="hidden" class="circleDieSize" name="attr_poolDieSize26" />
                     <input type="hidden" class="circleDieWorth" name="attr_poolDieWorth26" />
-                    <input type="hidden" class="circleDieValue" name="attr_poolDieValue26" />
+                    <input type="hidden" class="circleDieSide" name="attr_poolDieValue26" />
                     <input type="hidden" class="circleDieMatch" name="attr_poolDieMatch26" />
-                    <input type="number" class="circleDieValue" name="attr_poolDieValue26" readonly />
+                    <input type="number" class="circleDieSide" name="attr_poolDieValue26" readonly />
                     <input type="checkbox" value="1" class="circleDieMatch" name="attr_poolDieMatch26" />
 
                 </div>
@@ -3506,99 +3459,25 @@
     /* Dice input to Magic Circle */
     on("change:editCircle", (event) =>
     {
-        getAttrs(["position1d10", "position1d6",
-            "position2d10", "position2d6",
-            "position3d10", "position3d6",
-            "position4d10", "position4d6",
-            "position5d10", "position5d6",
-            "position6d10", "position6d6",
-            "position7d10", "position7d6",
-            "position8d10", "position8d6",
-            "position9d10", "position9d6",
-            "position10d10", "position10d6",
-            "position11d10", "position11d6",
-            "position12d10", "position12d6",
-            "position13d10", "position13d6",], (positions) =>
+        getAttrs(["position1d10", "position1d6"], (positions) =>
         {
             const setObj = {};
 
             //Make Array from the dice inputs
-            let arcana1D10 = positions.position1d10.match(/1[0]?|[2-9]/g);//will match all numbers and add the number array to arcana1D10
+            let arcana1D10 = positions.position1d10.match(/1[0]?|[2-9]/g);//will match all numbers and add the number array to Spell Dice—D10s
             if (arcana1D10 == null) { arcana1D10 = [] };//ensure its not a NULL array
-                let arcana1D6 = positions.position1d6.match(/[1-6]/g);
+            let arcana1D6 = positions.position1d6.match(/[1-6]/g);//will match all numbers and add the number array to Tangle Dice—D6
             if (arcana1D6 == null) { arcana1D6 = [] };
-            let arcana2D10 = positions.position2d10.match(/1[0]?|[2-9]/g);
-            if (arcana2D10 == null) { arcana2D10 = [] };
-                let arcana2D6 = positions.position2d6.match(/[1-6]/g);
-            if (arcana2D6 == null) { arcana2D6 = [] };
-            let arcana3D10 = positions.position3d10.match(/1[0]?|[2-9]/g);
-            if (arcana3D10 == null) { arcana3D10 = [] };
-                let arcana3D6 = positions.position3d6.match(/[1-6]/g);
-            if (arcana3D6 == null) { arcana3D6 = [] };
-            let arcana4D10 = positions.position4d10.match(/1[0]?|[2-9]/g);
-            if (arcana4D10 == null) { arcana4D10 = [] };
-                let arcana4D6 = positions.position4d6.match(/[1-6]/g);
-            if (arcana4D6 == null) { arcana4D6 = [] };
-            let arcana5D10 = positions.position5d10.match(/1[0]?|[2-9]/g);
-            if (arcana5D10 == null) { arcana5D10 = [] };
-                let arcana5D6 = positions.position5d6.match(/[1-6]/g);
-            if (arcana5D6 == null) { arcana5D6 = [] };
-            let arcana6D10 = positions.position6d10.match(/1[0]?|[2-9]/g);
-            if (arcana6D10 == null) { arcana6D10 = [] };
-                let arcana6D6 = positions.position6d6.match(/[1-6]/g);
-            if (arcana6D6 == null) { arcana6D6 = [] };
-            let arcana7D10 = positions.position7d10.match(/1[0]?|[2-9]/g);
-            if (arcana7D10 == null) { arcana7D10 = [] };
-                let arcana7D6 = positions.position7d6.match(/[1-6]/g);
-            if (arcana7D6 == null) { arcana7D6 = [] };
-            let arcana8D10 = positions.position8d10.match(/1[0]?|[2-9]/g);
-            if (arcana8D10 == null) { arcana8D10 = [] };
-                let arcana8D6 = positions.position8d6.match(/[1-6]/g);
-            if (arcana8D6 == null) { arcana8D6 = [] };
-            let arcana9D10 = positions.position9d10.match(/1[0]?|[2-9]/g);
-            if (arcana9D10 == null) { arcana9D10 = [] };
-                let arcana9D6 = positions.position9d6.match(/[1-6]/g);
-            if (arcana9D6 == null) { arcana9D6 = [] };
-            let arcana10D10 = positions.position10d10.match(/1[0]?|[2-9]/g);
-            if (arcana10D10 == null) { arcana10D10 = [] };
-                let arcana10D6 = positions.position10d6.match(/[1-6]/g);
-            if (arcana10D6 == null) { arcana10D6 = [] };
-            let arcana11D10 = positions.position11d10.match(/1[0]?|[2-9]/g);
-            if (arcana11D10 == null) { arcana11D10 = [] };
-                let arcana11D6 = positions.position11d6.match(/[1-6]/g);
-            if (arcana11D6 == null) { arcana11D6 = [] };
-            let arcana12D10 = positions.position12d10.match(/1[0]?|[2-9]/g);
-            if (arcana12D10 == null) { arcana12D10 = [] };
-                let arcana12D6 = positions.position12d6.match(/[1-6]/g);
-            if (arcana12D6 == null) { arcana12D6 = [] };
-            let arcana13D10 = positions.position13d10.match(/1[0]?|[2-9]/g);
-            if (arcana13D10 == null) { arcana13D10 = [] };
-                let arcana13D6 = positions.position13d6.match(/[1-6]/g);
-            if (arcana13D6 == null) { arcana13D6 = [] };
+            
 
             //Number of dice and typo checker
-            let totalDice = arcana1D10.concat(arcana1D6, arcana2D10, arcana2D6, arcana3D10, arcana3D6, arcana4D10, arcana4D6, arcana5D10, arcana5D6, arcana6D10, arcana6D6, arcana7D10, arcana7D6, arcana8D10, arcana8D6, arcana9D10, arcana9D6, arcana10D10, arcana10D6, arcana11D10, arcana11D6, arcana12D10, arcana12D6, arcana13D10, arcana13D6).length;
+            let totalDice = arcana1D10.concat(arcana1D6).length;
 
             if (totalDice <= 26 && totalDice > 0)//Check to ensure between 26 and 0 dice inputed
             {
-                //Make Arcana Array with both spell dice and tangle dice
-                let arcana1 = [arcana1D10, arcana1D6];
-                let arcana2 = [arcana2D10, arcana2D6];
-                let arcana3 = [arcana3D10, arcana3D6];
-                let arcana4 = [arcana4D10, arcana4D6];
-                let arcana5 = [arcana5D10, arcana5D6];
-                let arcana6 = [arcana6D10, arcana6D6];
-                let arcana7 = [arcana7D10, arcana7D6];
-                let arcana8 = [arcana8D10, arcana8D6];
-                let arcana9 = [arcana9D10, arcana9D6];
-                let arcana10 = [arcana10D10, arcana10D6];
-                let arcana11 = [arcana11D10, arcana11D6];
-                let arcana12 = [arcana12D10, arcana12D6];
-                let arcana13 = [arcana13D10, arcana13D6];
-
-                //Make Circle Array with all Arcana Array
-                let circleArray = [arcana1, arcana2, arcana3, arcana4, arcana5, arcana6, arcana7, arcana8, arcana9, arcana10, arcana11, arcana12, arcana13];
-
+                //Make Array with both spell dice and tangle dice Array
+                let circleArray = [arcana1D10, arcana1D6];
+                
                 //Set all circle dice
                 const arcanaPools = {};
                 for (let num = 1; num <= 26; num++)
@@ -3610,25 +3489,47 @@
                     arcanaPools[`poolDieValue${num}`] = 0;
                 }
 
-                let attrNum = 1;
-                for (let i = 0; i < circleArray.length; i++)// Circle Array loop
+                //Generate Array of Random locations
+                let diePos = [];
+                for (let i = 0; i < 100; i++)//fill diePos with 100 numbers from 0-99
                 {
-                    let diePos = 1;
-                    for (let j = 0; j < circleArray[i].length; j++)//Arcana Array loop
-                    {
-                        for (let k = 0; k < circleArray[i][j].length; k++)//Dice list loop
+                    diePos[i] = i+1;
+                }
+
+                let currentIndex = diePos.length, temporaryValue, randomIndex;
+
+                while (0 !== currentIndex) // While there remain elements to shuffle
+                {
+                    randomIndex = Math.floor(Math.random() * currentIndex); // Pick a remaining element...
+                    currentIndex -= 1;
+
+                    temporaryValue = diePos[currentIndex];  // And swap it with the current element.
+                    diePos[currentIndex] = diePos[randomIndex];
+                    diePos[randomIndex] = temporaryValue;
+                }
+
+                diePos.length = totalDice;//Reduce the diePos Array to the number of dice rolled
+
+                //Loop through circleArray and assign to poolDie Attrs
+                let attrNum = 1;
+                let diePosIndex = 0;
+
+                for (let i = 0; i < circleArray.length; i++)// Circle Array loop
+                {                    
+                        for (let k = 0; k < circleArray[i].length; k++)//Dice Input loop
                         {
-                            arcanaPools[`poolDieArcana${attrNum}`] = i + 1;
-                            arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePos;
-                            arcanaPools[`poolDieSize${attrNum}`] = j;
-                            arcanaPools[`poolDieValue${attrNum}`] = circleArray[i][j][k];
-                            if (j == 0)
+                            arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePos[diePosIndex];
+                            arcanaPools[`poolDieSize${attrNum}`] = i;
+                            arcanaPools[`poolDieValue${attrNum}`] = circleArray[i][k];
+
+                            //Assign the Die Worth based on Die Value
+                            if (i == 0)
                             {
-                                if (circleArray[i][j][k] == 10)
+                                if (circleArray[i][k] == 10)
                                 {
                                     arcanaPools[`poolDieWorth${attrNum}`] = 2;
                                 }
-                                else if (circleArray[i][j][k] > 4 && circleArray[i][j][k] < 10)
+                                else if (circleArray[i][k] > 4 && circleArray[i][k] < 10)
                                 {
                                     arcanaPools[`poolDieWorth${attrNum}`] = 1;
                                 }
@@ -3639,7 +3540,7 @@
                             }
                             else
                             {
-                                if (circleArray[i][j][k] < 4)
+                                if (circleArray[i][k] < 4)
                                 {
                                     arcanaPools[`poolDieWorth${attrNum}`] = -1;
                                 }
@@ -3648,10 +3549,65 @@
                                     arcanaPools[`poolDieWorth${attrNum}`] = 0;
                                 }
                             }
+
+                            //Assign the Arcana based on the Die Position
+                            if (diePos[diePosIndex] <= 15)
+                            {
+
+                                arcanaPools[`poolDieArcana${attrNum}`] = 1;
+                            }
+                            else if (diePos[diePosIndex] >= 16 && diePos[diePosIndex] <= 20)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 2;
+                            }
+                            else if (diePos[diePosIndex] >= 21 && diePos[diePosIndex] <= 33)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 3;
+                            }
+                            else if (diePos[diePosIndex] >= 34 && diePos[diePosIndex] <= 48)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 4;
+                            }
+                            else if (diePos[diePosIndex] >= 49 && diePos[diePosIndex] <= 54)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 5;
+                            }
+                            else if (diePos[diePosIndex] >= 55 && diePos[diePosIndex] <= 69)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 6;
+                            }
+                            else if (diePos[diePosIndex] >= 70 && diePos[diePosIndex] <= 74)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 7;
+                            }
+                            else if (diePos[diePosIndex] >= 75 && diePos[diePosIndex] <= 81)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 8;
+                            }
+                            else if (diePos[diePosIndex] >= 82 && diePos[diePosIndex] <= 91)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 9;
+                            }
+                            else if (diePos[diePosIndex] >= 92 && diePos[diePosIndex] <= 94)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 10;
+                            }
+                            else if (diePos[diePosIndex] == 95 && diePos[diePosIndex] == 96)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 11;
+                            }
+                            else if (diePos[diePosIndex] == 97)
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 12;
+                            }
+                            else
+                            {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 13;
+                            }
+                            
                             attrNum++;
-                            diePos++;
+                            diePosIndex++;
                         }
-                    }
                 }
 
                 //Set all poolDie
