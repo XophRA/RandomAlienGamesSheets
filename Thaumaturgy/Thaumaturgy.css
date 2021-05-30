@@ -440,10 +440,9 @@ main.masterGrid
             background-color: transparent;
             font-size: 1em;
             text-align: center;
-            width: 20px;
+            width: 14px;
             height: 20px;
-            min-width: 20px;
-            z-index: 5;
+            padding: 4px 3px 0px 3px;
         }
 
         .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-spellDice .inlinerollresult
@@ -1682,6 +1681,11 @@ input.resourceBox
     margin: 0;
     -moz-appearance: textfield;
     text-align: center;
+}
+input.resourceText
+{
+    font-size: 16px;
+    text-wrap: normal;
 }
 
 .disequilibriumWidget
