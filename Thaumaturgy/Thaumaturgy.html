@@ -1232,19 +1232,22 @@
                 </div>
 
                 <!--Spell Dice-->
-                <div class="castingSpellDice">
-                    <input type="number" class="resourceBox" name="attr_castSpellDice" min="0" max="13" />
-                    <div class="">Spell</div>
+                <div class="castingDice castingSpellDice">
+                    <input type="number" class="resourceBox" name="attr_castSpellDice" min="0" max="13" value="3"/>
+                    <div class="dieType">Spell Dice</div>
                 </div>
                 <!--Tangle Dice-->
-                <div class="castingTangleDice">
-                    <input type="number" class="resourceBox" name="attr_castTangleDice" min="0" max="13" />
-                    <div class="">Tangle</div>
+                <div class="castingDice castingTangleDice">
+                    <input type="number" class="resourceBox" name="attr_castTangleDice" min="0" max="13" value="0"/>
+                    <div class="dieType">Tangle Dice</div>
                 </div>
                 <!--Casting Button-->
                 <div class="castingButton">
                     <input type="hidden" name="attr_castingMacro" readonly />
                     <button type="roll" class="rollSalvoButton" name="roll_rollSalvo" value="@{castingMacro}"></button><span class="rollSalvoButton"></span><span class="rollSalvoButton">Cast</span>
+                </div>
+                <div class="resultsButton">
+                        <button type="action"  class="calculateResultsButton" name="act_calculatResults">Count</button>             
                 </div>
             </section>
             <!--Ripples-->
@@ -1292,9 +1295,9 @@
 
             <!--Resources-->
             <section class="resources">
-                <div class="resultResource"><input type="number" name="attr_resultResource" min="0"  class="resourceBox" /></div>
+                <div class="resultResource"><input type="number" name="attr_resultResource" min="0"  class="resourceBox" readonly/></div>
                 <div class="paradoxResource"><input type="number" name="attr_paradoxResource" min="0"  class="resourceBox" /></div>
-                <div class="aetherResource"><input type="number" name="attr_aetherResource" min="0"  class="resourceBox" /></div>
+                <div class="aetherResource"><input type="text" name="attr_aetherResource" min="0"  class="resourceBox" readonly/></div>
             </section>
 
             <!--Disequilibrium-->
@@ -1896,6 +1899,7 @@
 <!-- ------- -->
 <script type="text/worker">
 <!--<script type="text/javascript">-->
+
     /* Generate Spellcasting Macro */
     on("change:castSpellDice change:castTangleDice", (event) =>
     {
@@ -1951,7 +1955,7 @@
                 let circleArray = [arcana1D10, arcana1D6];
 
                 //Set all circle dice
-                const arcanaPools = {};
+                const arcanaPools = [];
                 for (let num = 1; num <= 26; num++)
                 {
                     arcanaPools[`poolDieArcana${num}`] = 0;
@@ -2123,36 +2127,104 @@
         });
     });
 
+    /* Count Dice in Magic Circle and add to Resources and Ripples */
+    on("clicked:calculatResults", (event) =>
+    {
+        let getArray = []; //An Array for all attr to get
+
+        //Get all poolDice
+        for (let num = 1; num <= 26; num++)
+        {
+            getArray = [...getArray, ...
+                [`poolDieArcana${num}`, `poolDieArcanaPosition${num}`, `poolDieSize${num}`, `poolDieWorth${num}`, `poolDieValue${num}`]];// the ... is a javascript symbol for the spread operator which expands the object or array out into it's discrete parts
+        }
+        //Get all RippleDice
+        for (let num = 1; num <= 13; num++)
+        {
+            getArray = [...getArray, ...
+                [`ripple${num}Harmony`, `ripple${num}Chaos`]];
+        }
+
+        getAttrs(getArray, (attrs) =>
+        {
+            console.log(attrs);
+            const setObj = {};
+
+
+            //Make an Array of Dice Worth
+            let results = 0;
+            for (let num = 1; num <= 26; num++)
+            {
+                results += parseInt(attrs[`poolDieWorth${num}`]) || 0;
+            }
+            setObj.resultResource = results;
+
+
+            //Calculate Results
+            for (let num = 1; num <= 26; num++)
+            {
+
+            }
+
+            //Add Dice to Ripple Table
+            //        ripple1Harmony += evenDiceRolled(arcanaOne);
+            //        ripple1Chaos += oddDiceRolled(arcanaOne);
+            //        ripple2Harmony += evenDiceRolled(arcanaTwo);
+            //        ripple2Chaos += oddDiceRolled(arcanaTwo);
+            //        ripple3Harmony += evenDiceRolled(arcanaThree);
+            //        ripple3Chaos += oddDiceRolled(arcanaThree);
+            //        ripple4Harmony += evenDiceRolled(arcanaFour);
+            //        ripple4Chaos += oddDiceRolled(arcanaFour);
+            //        ripple5Harmony += evenDiceRolled(arcanaFive);
+            //        ripple5Chaos += oddDiceRolled(arcanaFive);
+            //        ripple6Harmony += evenDiceRolled(arcanaSix);
+            //        ripple6Chaos += oddDiceRolled(arcanaSix);
+            //        ripple7Harmony += evenDiceRolled(arcanaSeven);
+            //        ripple7Chaos += oddDiceRolled(arcanaSeven);
+            //        ripple8Harmony += evenDiceRolled(arcanaEight);
+            //        ripple8Chaos += oddDiceRolled(arcanaEight);
+            //        ripple9Harmony += evenDiceRolled(arcanaNine);
+            //        ripple9Chaos += oddDiceRolled(arcanaNine);
+            //        ripple10Harmony += evenDiceRolled(arcanaTen);
+            //        ripple10Chaos += oddDiceRolled(arcanaTen);
+            //        ripple11Harmony += evenDiceRolled(arcanaEleven);
+            //        ripple11Chaos += oddDiceRolled(arcanaEleven);
+            //        ripple12Harmony += evenDiceRolled(arcanaTwelve);
+            //        ripple12Chaos += oddDiceRolled(arcanaTwelve);
+            //        ripple13Harmony += evenDiceRolled(arcanaThirteeen);
+            //        ripple13Chaos += oddDiceRolled(arcanaThirteeen);
+
+            //Add Odd dice to Paradox Resource
+
+            //Calculate Aether to be returned to the Player Caster
+
+
+            //Number of Evens and Odds Functions
+            function evenDiceRolled(diceArray)
+            {
+                return diceArray.filter(function (number)
+                {
+                    return number % 2 == 0;
+                }).length;
+            }
+
+            function oddDiceRolled(diceArray)
+            {
+                return diceArray.filter(function (number)
+                {
+                    return number % 2 == 1;
+                }).length;
+            }
+
+            console.log(setObj);
+            setAttrs(setObj);
+        });
+    });
+
+
     //on("change:editCircle", (event) =>
     //{
-    //    getAttrs(["position1d10", "position1d6",
-    //        "position2d10", "position2d6",
-    //        "position3d10", "position3d6",
-    //        "position4d10", "position4d6",
-    //        "position5d10", "position5d6",
-    //        "position6d10", "position6d6",
-    //        "position7d10", "position7d6",
-    //        "position8d10", "position8d6",
-    //        "position9d10", "position9d6",
-    //        "position10d10", "position10d6",
-    //        "position11d10", "position11d6",
-    //        "position12d10", "position12d6",
-    //        "position13d10", "position13d6",
-    //        "ripple1Harmony", "ripple1Chaos",
-    //        "ripple2Harmony", "ripple2Chaos",
-    //        "ripple3Harmony", "ripple3Chaos",
-    //        "ripple4Harmony", "ripple4Chaos",
-    //        "ripple5Harmony", "ripple5Chaos",
-    //        "ripple6Harmony", "ripple6Chaos",
-    //        "ripple7Harmony", "ripple7Chaos",
-    //        "ripple8Harmony", "ripple8Chaos",
-    //        "ripple9Harmony", "ripple9Chaos",
-    //        "ripple10Harmony", "ripple10Chaos",
-    //        "ripple11Harmony", "ripple11Chaos",
-    //        "ripple12Harmony", "ripple12Chaos",
-    //        "ripple13Harmony", "ripple13Chaos"], (positions) =>
-    //    {
-    //        const setObj = {};
+    //    
 
     //        //Make Array from the dice inputs
     //        let arcana1D10 = positions.position1d10.match(/\d+/g);//will match all numbers and add the number array to arcana1D10
@@ -2251,50 +2323,9 @@
     //        let ripple13Harmony = parseInt(positions.ripple13Harmony) || 0;
     //        let ripple13Chaos = parseInt(positions.ripple13Chaos) || 0;
 
-    //        //Number of Evens and Odds Functions
-    //        function evenDiceRolled(diceArray)
-    //        {
-    //            return diceArray.filter(function (number)
-    //            {
-    //                return number % 2 == 0;
-    //            }).length;
-    //        }
+    //        
 
-    //        function oddDiceRolled(diceArray)
-    //        {
-    //            return diceArray.filter(function (number)
-    //            {
-    //                return number % 2 == 1;
-    //            }).length;
-    //        }
 
-    //        //Add inputs to Ripple Table
-    //        ripple1Harmony += evenDiceRolled(arcanaOne);
-    //        ripple1Chaos += oddDiceRolled(arcanaOne);
-    //        ripple2Harmony += evenDiceRolled(arcanaTwo);
-    //        ripple2Chaos += oddDiceRolled(arcanaTwo);
-    //        ripple3Harmony += evenDiceRolled(arcanaThree);
-    //        ripple3Chaos += oddDiceRolled(arcanaThree);
-    //        ripple4Harmony += evenDiceRolled(arcanaFour);
-    //        ripple4Chaos += oddDiceRolled(arcanaFour);
-    //        ripple5Harmony += evenDiceRolled(arcanaFive);
-    //        ripple5Chaos += oddDiceRolled(arcanaFive);
-    //        ripple6Harmony += evenDiceRolled(arcanaSix);
-    //        ripple6Chaos += oddDiceRolled(arcanaSix);
-    //        ripple7Harmony += evenDiceRolled(arcanaSeven);
-    //        ripple7Chaos += oddDiceRolled(arcanaSeven);
-    //        ripple8Harmony += evenDiceRolled(arcanaEight);
-    //        ripple8Chaos += oddDiceRolled(arcanaEight);
-    //        ripple9Harmony += evenDiceRolled(arcanaNine);
-    //        ripple9Chaos += oddDiceRolled(arcanaNine);
-    //        ripple10Harmony += evenDiceRolled(arcanaTen);
-    //        ripple10Chaos += oddDiceRolled(arcanaTen);
-    //        ripple11Harmony += evenDiceRolled(arcanaEleven);
-    //        ripple11Chaos += oddDiceRolled(arcanaEleven);
-    //        ripple12Harmony += evenDiceRolled(arcanaTwelve);
-    //        ripple12Chaos += oddDiceRolled(arcanaTwelve);
-    //        ripple13Harmony += evenDiceRolled(arcanaThirteeen);
-    //        ripple13Chaos += oddDiceRolled(arcanaThirteeen);
 
     //        //Set the Ripple Table
     //        setObj.ripple1Harmony = ripple1Harmony;
@@ -2356,6 +2387,7 @@
     //        setAttrs(setObj);
     //    });
     //});
+
         /*Sheet Totals*/
         //Reactor Overcharge control
         on("change:reactorcharge change:reactorovercharge change:shipreactorcharge change:shipreactorovercharge change:tugreactorcharge change:tugreactorovercharge", (event) =>
