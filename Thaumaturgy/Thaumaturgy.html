@@ -1880,14 +1880,14 @@
             <div class="sheet-templateSubheader">Spell Dice</div>
             <div class="sheet-diceNum"> {{spellDice}}</div>
             <div class="sheet-diceRow sheet-spellDice sheet-dice">
-                {{spell0}}{{spell1}}{{spell2}}{{spell3}}{{spell4}}{{spell5}}{{spell6}}{{spell7}}{{spell8}}{{spell9}}{{spell10}}{{spell11}}{{spell2}}{{spell3}}
+                {{spell0}}{{spell1}}{{spell2}}{{spell3}}{{spell4}}{{spell5}}{{spell6}}{{spell7}}{{spell8}}{{spell9}}{{spell10}}{{spell11}}{{spell12}}
             </div>
         </div>
         <div class="sheet-rolltemplateTangleDice sheet-rolltemplateDiceContainer">
             <div class="sheet-templateSubheader">Tangle Dice</div>
             <div class="sheet-diceNum">{{tangleDice}}</div>
             <div class="sheet-diceRow sheet-tangleDice sheet-dice">
-                {{tangle0}} {{tangle1}} {{tangle2}} {{tangle3}} {{tangle4}} {{tangle5}} {{tangle6}}{{tangle7}} {{tangle8}} {{tangle9}} {{tangle10}} {{tangle11}} {{tangle12}} {{tangle13}}
+                {{tangle0}} {{tangle1}} {{tangle2}} {{tangle3}} {{tangle4}} {{tangle5}} {{tangle6}}{{tangle7}} {{tangle8}} {{tangle9}} {{tangle10}} {{tangle11}} {{tangle12}}
             </div>
         </div>
     </div>
@@ -2164,32 +2164,48 @@
             for (let i = 0; i < 13; i++)
             {
                 allValue[i] = [];
+                let arcanaNum = i + 1;
+
                 for (let j = 1; j <= 26; j++)
                 {
-                    let match = parseInt(attrs[`poolDieMatch${j}`]) || 0
-                    let arcana = parseInt(attrs[`poolDieArcana${i + 1}`]) || 0
-                    if (match == 0 && arcana == i + 1)
+                    let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
+                    let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
+
+                    if (match != 1 && arcana == arcanaNum)
                     {
-                        allValue[i].push(attrs[`poolDieSide${j}`]);
+                        let dieSide = parseInt(attrs[`poolDieSide${j}`]) || 0;
+                        if (dieSide > 0)
+                        {
+                            allValue[i].push(dieSide);
+                        }
                     }
                 }
             }
+            console.log(allValue);            
 
-            //Add Odd dice that didn't match to Paradox Resource
+            //Add Dice that didn't match to the Ripple Table, total odds to the Paradox Resource, & Calculate Aether to be returned to the Player Caster from the total evens
             let paradoxResource = parseInt(attrs[`paradoxResource`]) || 0;
-            for (let num = 0; num < allValue.length; num++)
-            {
-                paradoxResource += oddDiceRolled(allValue[num]);
-            }
-            setObj.paradoxResource = paradoxResource;
-
-            //Calculate Aether to be returned to the Player Caster
-            let evens = 0;
             let aetherResource = "Burn All";
-            for (let num = 0; num < allValue.length; num++)
+            let evens = 0;
+
+            for (let num = 0; num < allValue.length; num++) //loop through allValue 
             {
-                evens += oddDiceRolled(allValue[num]);
+                let harmony = parseInt(attrs[`ripple${num + 1}Harmony`]) || 0;
+                evens += evenDiceRolled(allValue[num]);
+
+                harmony += evens;
+                setObj[`ripple${num + 1}Harmony`] = harmony;
+
+
+                let chaos = parseInt(attrs[`ripple${num + 1}Chaos`]) || 0;
+                chaos += oddDiceRolled(allValue[num]);
+
+                paradoxResource += chaos;
+                setObj[`ripple${num + 1}Chaos`] = chaos;
             }
+
+            setObj.paradoxResource = paradoxResource; //Set paradoxResource
+
 
             if (evens == 1)
             {
@@ -2201,23 +2217,9 @@
             }
             else if (evens > 2)
             {
-                aetherResource = "Restore All + " + evens;
+                aetherResource = "Restore All + " + evens-2;
             }
-            setObj.aetherResource = aetherResource;
-
-
-            //Add Dice to Ripple Table
-            for(let num = 0; num < 13; num++)
-            {
-                let harmony = parseInt(attrs[`ripple${num + 1}Harmony`]) || 0;
-                harmony += evenDiceRolled(allValue[num]);
-                setObj[`ripple${num + 1}Harmony`] = harmony;
-
-
-                let chaos = parseInt(attrs[`ripple${num + 1}Chaos`]) || 0;
-                chaos += oddDiceRolled(allValue[num]);
-                setObj[`ripple${num + 1}Chaos`] = chaos;
-            }
+            setObj.aetherResource = aetherResource; //Set aetherResource
 
             //Number of Evens and Odds Functions
             function evenDiceRolled(diceArray)
