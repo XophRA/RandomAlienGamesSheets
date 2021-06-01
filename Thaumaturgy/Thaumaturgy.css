@@ -646,6 +646,7 @@ main.masterGrid
         list-style-position: inside;
         font-weight: 600;
         font-size: 13px;
+        margin: 0 0 0px 5px;
     }
 
         .spellcastingProcess > ol > li > ol
@@ -654,6 +655,7 @@ main.masterGrid
             text-indent: 1em;
             font-weight: 400;
             font-size: 11px;
+            margin: 0 0 0 10px;
         }
 
 /* Magic Circle */
@@ -1497,8 +1499,6 @@ section.magicCircle
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 20px 20px;
-    width: 100%;
-    height: 100%;
     color: white;
     text-align: center;
 }
@@ -1659,7 +1659,7 @@ input[type="number"].rippleBox
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 123px repeat(21,10px) auto;
+    grid-template-columns: 153px repeat(22,10px) auto;
     grid-template-rows: 14px 118px 6px 118px 6px 118px auto;
 }
 
@@ -1672,7 +1672,7 @@ input[type="number"].rippleBox
 
     .resources > .paradoxResource
     {
-        grid-area: 4 / 6 / 5 / span 12;
+        grid-area: 4 / 7 / 5 / span 12;
         height: 100%;
         width: 100%;
     }
@@ -1682,6 +1682,7 @@ input[type="number"].rippleBox
         grid-area: 6 / 11 / 7 / span 12;
         height: 100%;
         width: 100%;
+        padding-left: 5px;
     }
 
 input.resourceBox
@@ -1696,8 +1697,8 @@ input.resourceBox
 }
 input.resourceText
 {
-    font-size: 16px;
-    text-wrap: normal;
+    font-size: 15px;
+    overflow-wrap: break-word;
 }
 
 .disequilibriumWidget
@@ -1742,8 +1743,6 @@ input.resourceText
     {
         grid-area: 2 / 2 / -2 / -2;
         display: grid;
-        width: 100%;
-        height: 100%;
         grid-template-columns: repeat(2,1fr) 100px repeat(2,1fr);
         grid-template-rows: 75px 175px auto;
     }
@@ -1824,6 +1823,8 @@ input.editToggle[value="1"] + .editMenu
     background-size: 100%;
     background: rgba(255,255,255,0.8) no-repeat fixed top;
     z-index: 10;
+    width: 100%;
+    height: 100%;
 }
 
 /* Cards */
@@ -1948,11 +1949,12 @@ input[value="13"].cardChoice + span.card
         height: 100%;
     }
 
-    .trueNameWidget > textarea.trueNamePic
-    {
-        width: 100%;
-        height: 100%;
-    }
+        .trueNameWidget > div.trueNamePic textarea.trueNamePic
+        {
+            width: 405px;
+            height: 285px;
+            padding: 20px 0px 0px 20px;
+        }
 
     .trueNameWidget > div.trueNamePhrase
     {
@@ -1961,11 +1963,12 @@ input[value="13"].cardChoice + span.card
         height: 100%;
     }
 
-    .trueNameWidget > textarea.trueNamePhrase
-    {
-        width: 100%;
-        height: 100%;
-    }
+        .trueNameWidget > div.trueNamePhrase textarea.trueNamePhrase
+        {
+            width: 220px;
+            height: 200px;
+            padding: 50px 0px 0px 10px;
+        }
 
 /* Description */
 .descriptionWidget
@@ -2012,7 +2015,7 @@ input[value="13"].cardChoice + span.card
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 227px 120px auto;
+    grid-template-rows: 265px 120px auto;
     grid-gap: 0px;
 }
 
@@ -2232,10 +2235,33 @@ input[value="13"].cardChoice + span.card
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 15px repeat(16, 1fr) 15px;
-    grid-template-rows: 42px 15px repeat(16, 1fr) 78px;
+    grid-template-columns: repeat(15, 25px) 1fr;
+    grid-template-rows: 42px repeat(18, 25px) 1fr;
 }
 
+    .ascensionWidget .editCog
+    {
+        grid-area: 1/-3/2/-2;
+    }
+
+    .ascensionWidget .editAscension
+    {
+        grid-area: 1/1/-1/-1;
+        display: grid;
+    }
+
+    .ascensionWidget .level
+    {
+        font-family: "Fredericka the Great", cursive;
+        font-weight: 600;
+        font-size: 42px;
+        text-align: end;
+    }
+
+    .ascensionWidget .level.lvl1
+    {
+        grid-area: 2/-4/span 2/-3;
+    }
 
 /* Fate */
 .fateWidget
