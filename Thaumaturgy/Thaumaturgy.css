@@ -2235,8 +2235,8 @@ input[value="13"].cardChoice + span.card
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(15, 25px) 1fr;
-    grid-template-rows: 42px repeat(18, 25px) 1fr;
+    grid-template-columns: repeat(19, 20px) 1fr;
+    grid-template-rows: 42px repeat(22, 20px) 1fr;
 }
 
     .ascensionWidget .editCog
@@ -2248,19 +2248,201 @@ input[value="13"].cardChoice + span.card
     {
         grid-area: 1/1/-1/-1;
         display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 42px repeat(4, 1fr) 1fr;
     }
 
+    /* Level Numbers */
     .ascensionWidget .level
     {
+        display: none; /* Intially Level Number off*/
         font-family: "Fredericka the Great", cursive;
         font-weight: 600;
-        font-size: 42px;
-        text-align: end;
+        font-size: 40px;
+        text-align: center;
+        line-height: 40px;
     }
 
-    .ascensionWidget .level.lvl1
+        .ascensionWidget .level.lvl1
+        {
+            grid-area: 2/-4/span 2/auto;
+        }
+        .ascensionWidget .level.lvl2
+        {
+            grid-area: 5/-3/span 2/auto;
+        }
+        .ascensionWidget .level.lvl3
+        {
+            grid-area: 8/-3/span 2/auto;
+        }
+        .ascensionWidget .level.lvl4
+        {
+            grid-area: 14/-4/span 2/auto;
+        }
+        .ascensionWidget .level.lvl5
+        {
+            grid-area: 17/-3/span 2/auto;
+        }
+        .ascensionWidget .level.lvl6
+        {
+            grid-area: 20/-4/span 2/auto;
+        }
+        .ascensionWidget .level.lvl7
+        {
+            grid-area: 22/-6/span 2/auto;
+        }
+        .ascensionWidget .level.lvl8
+        {
+            grid-area: 22/7/span 2/auto;
+        }
+        .ascensionWidget .level.lvl9
+        {
+            grid-area: 22/4/span 2/auto;
+        }
+        .ascensionWidget .level.lvl10
+        {
+            grid-area: 18/2/span 2/span 2;
+        }
+        .ascensionWidget .level.lvl11
+        {
+            grid-area: 11/2/span 2/span 2;
+        }
+        .ascensionWidget .level.lvl12
+        {
+            grid-area: 8/2/span 2/span 2;
+        }
+        .ascensionWidget .level.lvl13
+        {
+            grid-area: 4/3/span 2/span 2;
+        }
+    /* Visability lavel 1*/
+    .ascensionWidget input[value="1"].levelControl ~ .lvl1,
+    /* Visability lavel 2*/
+    .ascensionWidget input[value="2"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="2"].levelControl ~ .lvl2,
+    /* Visability lavel 3*/
+    .ascensionWidget input[value="3"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="3"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="3"].levelControl ~ .lvl3,
+    /* Visability lavel 4*/
+    .ascensionWidget input[value="4"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="4"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="4"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="4"].levelControl ~ .lvl4,
+    /* Visability lavel 5*/
+    .ascensionWidget input[value="5"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl5,
+    /* Visability lavel 6*/
+    .ascensionWidget input[value="6"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl6,
+    /* Visability lavel 7*/
+    .ascensionWidget input[value="7"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl7,
+    /* Visability lavel 8*/
+    .ascensionWidget input[value="8"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl8,
+    /* Visability lavel 9*/
+    .ascensionWidget input[value="9"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl9,
+    /* Visability lavel 10*/
+    .ascensionWidget input[value="10"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl10,
+    /* Visability lavel 11*/
+    .ascensionWidget input[value="11"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl10,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl11,
+    /* Visability lavel 12*/
+    .ascensionWidget input[value="12"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl10,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl11,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl12,
+    /* Visability lavel 13*/
+    .ascensionWidget input[value="13"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl10,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl11,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl12,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl13
     {
-        grid-area: 2/-4/span 2/-3;
+        display: initial;
+    }
+    
+/* Curses */
+.curseWidget
+{
+    grid-area: 5/2/auto/span 2;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr) 20px;
+    grid-template-rows: 42px repeat(4, 1fr) 1fr;
+}
+    .curseWidget .editCog
+    {
+        grid-area: 1/-2;
+    }
+    .curseWidget .editCurse
+    {
+        grid-area: 1/1/-1/-1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 42px repeat(4, 1fr) 1fr;
     }
 
 /* Fate */
