@@ -81,10 +81,10 @@ input.creatureSelector:checked ~ article.creatureSheet
     }
 
 /*All Hidden styles*/
-.hidden
-{
-    display: none;
-}
+    .charsheet .hidden
+    {
+        display: none;
+    }
 
 /*select & text boxes*/
 .charsheet select, .charsheet textarea, .charsheet input[type="text"], .charsheet input[type="number"]
@@ -92,11 +92,14 @@ input.creatureSelector:checked ~ article.creatureSheet
     border: none;
     font-family: "Open Sans", sans-serif;
     color: #000;
-    height: 100%;
-    width: 100%;
+    height: 98%;
+    width: 98%;
     line-height: 100%;
     font-variant: normal;
     background: transparent;
+    overflow: hidden;
+    resize: none;
+    padding: 0;
 }
 
 .ui-dialog .charsheet input[type="number"]
@@ -180,15 +183,6 @@ input[type="text"].sixth,
 input[type="number"].sixth
 {
     width: 12%;
-}
-
-.charsheet textarea
-{
-    border: none;
-    font-variant: normal;
-    width: 92%;
-    overflow: hidden;
-    resize: none;
 }
 
 textarea.description
@@ -1769,16 +1763,36 @@ input.resourceText
         {
             grid-area: 1 / 2 / span 2 / -2;
             display: grid;
-            width: 100%;
+            margin: 0 10px 0 10px;
+            width: 94%;
             height: 40%;
             align-self: start;
         }
 
-        .tableSpread > .editTableSpread > arcanaEdit
+        .tableSpread > .editTableSpread > .arcanaEdit
         {
-            grid-template-columns: 1fr;
-            grid-template-rows: 30px repeat(2, 20px);
+            grid-template-columns: 50px 40px 1fr;
+            grid-template-rows: 30px repeat(2, 22px);
         }
+
+            .tableSpread > .editTableSpread > .arcanaEdit h2
+            {
+                grid-area: 1/1/2/-1;
+            }
+
+            .tableSpread > .editTableSpread > .arcanaEdit .arcanaChoice
+            {
+                grid-row: 2/3;
+            }
+
+            .tableSpread > .editTableSpread > .arcanaEdit .arcanaFacing
+            {
+                grid-row: 3/4;
+            }
+            .tableSpread > .editTableSpread > .arcanaEdit input
+            {
+                grid-column: 2/3;
+            }
 
     /* Edit Mode */
     .tableSpread > .editCog
@@ -2267,50 +2281,62 @@ input[value="13"].cardChoice + span.card
         {
             grid-area: 2/-4/span 2/auto;
         }
+
         .ascensionWidget .level.lvl2
         {
             grid-area: 5/-3/span 2/auto;
         }
+
         .ascensionWidget .level.lvl3
         {
             grid-area: 8/-3/span 2/auto;
         }
+
         .ascensionWidget .level.lvl4
         {
             grid-area: 14/-4/span 2/auto;
         }
+
         .ascensionWidget .level.lvl5
         {
             grid-area: 17/-3/span 2/auto;
         }
+
         .ascensionWidget .level.lvl6
         {
             grid-area: 20/-4/span 2/auto;
         }
+
         .ascensionWidget .level.lvl7
         {
             grid-area: 22/-6/span 2/auto;
         }
+
         .ascensionWidget .level.lvl8
         {
             grid-area: 22/7/span 2/auto;
         }
+
         .ascensionWidget .level.lvl9
         {
             grid-area: 22/4/span 2/auto;
         }
+
         .ascensionWidget .level.lvl10
         {
             grid-area: 18/2/span 2/span 2;
         }
+
         .ascensionWidget .level.lvl11
         {
             grid-area: 11/2/span 2/span 2;
         }
+
         .ascensionWidget .level.lvl12
         {
             grid-area: 8/2/span 2/span 2;
         }
+
         .ascensionWidget .level.lvl13
         {
             grid-area: 4/3/span 2/span 2;
@@ -2422,17 +2448,59 @@ input[value="13"].cardChoice + span.card
     {
         display: initial;
     }
-    
-/* Curses */
-.curseWidget
-{
-    grid-area: 5/2/auto/span 2;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(4, 1fr) 20px;
-    grid-template-rows: 42px repeat(4, 1fr) 1fr;
-}
+
+    /* Ascension Card */
+    .ascensionWidget .ascensionCard
+    {
+        grid-area: 3/5/span 18/span 13;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(15,17px) 1fr;
+        grid-row-gap: 2px;
+    }
+
+        .ascensionWidget .ascensionCard h4
+        {
+            grid-column: 1/2;
+            padding-left: 10px;
+        }
+
+        .ascensionWidget .ascensionCard input[type=text],
+        .ascensionWidget .ascensionCard textarea
+        {
+            grid-column: 2/-1;
+        }
+        .ascensionWidget .ascensionCard .ascensionObjective
+        {
+            grid-row: 2/auto;
+        }
+        .ascensionWidget .ascensionCard h4.ascensionMilestones
+        {
+            grid-row: 3/auto;
+        }
+        .ascensionWidget .ascensionCard textarea.ascensionMilestones
+        {
+            grid-row: 3/10;
+        }
+        .ascensionWidget .ascensionCard .ascensionRite
+        {
+            grid-row: 10/auto;
+        }
+        .ascensionWidget .ascensionCard .ascensionFateDrag
+        {
+            grid-row: 11/auto;
+        }
+
+    /* Curses */
+    .curseWidget
+    {
+        grid-area: 5/2/auto/span 2;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr) 20px;
+        grid-template-rows: 42px repeat(4, 1fr) 1fr;
+    }
     .curseWidget .editCog
     {
         grid-area: 1/-2;
@@ -2451,9 +2519,9 @@ input[value="13"].cardChoice + span.card
     grid-area: 6 / 1 / 7 / -1;
 }
 
-/* ******************************* */
-/*           Graphics              */
-/* ******************************* */
+
+/* Graphics */
+
 /* Hide Checkboxes and Radio boxes */
 input[type="checkbox"].hideCheckbox, input[type="radio"].hideCheckbox
 {
@@ -3474,9 +3542,8 @@ input[type="number"].currentCharge
     flex-flow: nowrap;
     font-size: 12px;
 }
-/* ***************************************** */
-/*				SHIP MODULES				 */
-/* ***************************************** */
+
+/*	SHIP MODULES */
 .moduleWidget
 {
     grid-area: modules;
@@ -3840,7 +3907,7 @@ input[type="number"].currentCharge
     grid-row-end: 11;
     padding-right: 4px;
 }
-/* ************ Launch Bay ************* */
+/* Launch Bay */
 .launchBay
 {
     grid-area: launchbay;
@@ -4486,9 +4553,8 @@ input[type="number"].tugReactorCharge
     text-align: center;
 }
 
-/* ***************************************** */
-/*				Ship Page Two				 */
-/* ***************************************** */
+
+/*	Ship Page Two */
 .shipPG2
 {
     display: grid;

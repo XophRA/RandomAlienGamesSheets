@@ -24,9 +24,7 @@
     <input type="radio" name="attr_selectedSheet" class="hidden sophontSelector" value="4">
     <input type="radio" name="attr_selectedSheet" class="hidden creatureSelector" value="5">
 
-    <!-- -------------- -->
     <!-- Player Caster -->
-    <!-- -------------- -->
     <article class="sheetType playerCasterSheet">
 
         <!--PC Sheet-->
@@ -48,7 +46,7 @@
                 <div class="characteristics"><input type="text" name="attr_characteristic" class="full aspect" /></div>
                 <div class="description"><input type="text" name="attr_description" class="full aspect" /></div>
             </section>
-            <!--Intentions-->
+            <!-- Intentions -->
             <section class="intentionWidget">
                 <input type="checkbox" class="conduitBox conjureBox hideCheckbox maxCheckbox" name="attr_Conjure" /><span class="conduitBox conjureBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox decayBox hideCheckbox maxCheckbox" name="attr_Decay" /><span class="conduitBox decayBox maxCheckbox conduit"></span>
@@ -61,7 +59,7 @@
                 <input type="checkbox" class="conduitBox transmuteBox hideCheckbox maxCheckbox" name="attr_Transmute" /><span class="conduitBox transmuteBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox wardBox hideCheckbox maxCheckbox" name="attr_Ward" /><span class="conduitBox wardBox maxCheckbox conduit"></span>
             </section>
-            <!--Arts -->
+            <!-- Arts -->
             <section class="artsWidget">
                 <!--Animaturgy-->
                 <div class="skilldice art1">
@@ -265,7 +263,10 @@
                 <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditAscension" />
                 <div class="editMenu editAscension">
+                    <div>Level</div>
                     <input type="number" class="levelControl" name="attr_level" value="0" min="0" max="13" />
+                    <div>Fate Drag</div>
+                    <input type="number" class="fateDrag" name="attr_level" value="0" min="0" max="3" />
                 </div>
                 <input type="hidden" class="levelControl" name="attr_level" />
                 <span class="level lvl1">1</span>
@@ -281,7 +282,19 @@
                 <span class="level lvl11">11</span>
                 <span class="level lvl12">12</span>
                 <span class="level lvl13">13</span>
+                <div class="card ascensionCard">
+                    <h4 class="ascensionObjective">Objective</h4>
+                    <input type="text" class="ascensionObjective" name="attr_ascensionObjective" />
+                    <h4 class="ascensionMilestones">Milestones</h4>
+                    <textarea class="ascensionMilestones" name="attr_ascensionMilestones" />
+                    <h4 class="ascensionRite">Rite</h4>
+                    <input type="text" class="ascensionRite" name="attr_ascensionRite" />
+                    <h4 class="ascensionFateDrag">Fate Drag</h4>
+                    <input type="hidden" name="attr_fateDrag" /><span></span><span></span><span></span>
+
+                </div>
             </section>
+            <!-- Curses -->
             <section class="curseWidget">
                 <input type="checkbox" class="editCog" name="attr_EditCurse" value="1" /><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditCurse" />
@@ -289,25 +302,25 @@
                 </div>
                 <input type="hidden" class="levelControl" name="attr_level" />
             </section>
-            <!--Fate-->
+            <!-- Fate -->
             <section class="fateWidget tableSpread">
                 <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditFate" />
                 <div class="editMenu editTableSpread">
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Consequences</h2>
-                        <div>Arcana: <input type="number" class="leftLegChoice" name="attr_Consequences" min="0" max="13"  /></div>
-                        <div>Facing: <input type="checkbox" class="facingChoice" name="attr_ConsequencesFacing" value="1" /></div>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" />
+                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ConsequencesFacing" value="1" />
                     </div>
                     <div class="rightLegEdit arcanaEdit">
                         <h2>Destiny</h2>
-                        <div>Arcana: <input type="number" class="rightLegChoice" name="attr_Destiny" min="0" max="13"  /></div>
-                        <div>Facing: <input type="checkbox" class="facingChoice" name="attr_DestinyFacing" value="1" /></div>
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="0" max="13" />
+                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_DestinyFacing" value="1" />
                     </div>
                     <div class="tabletopEdit arcanaEdit">
                         <h2>Obstacle</h2>
-                        <div>Arcana: <input type="number" class="tabletopChoice" name="attr_Obstacle" min="0" max="13"  /></div>
-                        <div>Facing: <input type="checkbox" class="facingChoice" name="attr_ObstacleFacing" value="1" /></div>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13"  />
+                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ObstacleFacing" value="1" />
                     </div>
                 </div>
                 <div class="leftLeg">
@@ -329,9 +342,7 @@
         </div>
     </article>
 
-    <!-- ------------------------- -->
     <!-- Sanctum -->
-    <!-- ------------------------- -->
     <article class="sheetType shipSheet">
 
         <!--Ship Sheet-->
@@ -879,9 +890,7 @@
         </div>
     </article>
 
-    <!-- ------ -->
     <!-- Medium -->
-    <!-- ------------------------- -->
     <article class="sheetType mediumSheet">
         <!--Medium Sheet-->
         <div class="mediumSheetGrid">
@@ -1335,18 +1344,18 @@
                 <div class="editMenu editTableSpread">
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Disruption</h2>
-                        <div>Arcana: <input type="number" class="leftLegChoice" name="attr_Disruption" min="0" max="13"  /></div>
-                        <div>Facing: <input type="checkbox" class="facingChoice" name="attr_DisruptionFacing" value="1" /></div>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Disruption" min="0" max="13"  />
+                        <div class="arcanaFacing">Facing:</div><input type="checkbox" class="arcanaFacing" name="attr_DisruptionFacing" value="1" />
                     </div>
                     <div class="rightLegEdit arcanaEdit">
                         <h2>Danger</h2>
-                        <div>Arcana: <input type="number" class="rightLegChoice" name="attr_Danger" min="0" max="13"  /></div>
-                        <div>Facing: <input type="checkbox" class="facingChoice" name="attr_DangerFacing" value="1" /></div>
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Danger" min="0" max="13"  />
+                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_DangerFacing" value="1" />
                     </div>
                     <div class="tabletopEdit arcanaEdit">
                         <h2>Divergence</h2>
-                        <div>Arcana: <input type="number" class="tabletopChoice" name="attr_Divergence" min="0" max="13"  /></div>
-                        <div>Facing: <input type="checkbox" class="facingChoice" name="attr_DivergenceFacing" value="1" /></div>
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Divergence" min="0" max="13"  />
+                        <div class="arcanaFacing">Facing:</div><input type="checkbox" class="arcanaFacing" name="attr_DivergenceFacing" value="1" />
                     </div>
                 </div>
                 <div class="leftLeg">
