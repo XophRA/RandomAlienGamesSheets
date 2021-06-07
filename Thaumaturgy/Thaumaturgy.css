@@ -1798,18 +1798,36 @@ input.resourceText
 /* Clocks */
 .clockWidget
 {
-    display: inline-block;
+    grid-area: -2/-2/-1/-1;
+    display: grid;
+    grid-template-columns: 70px 15px;
+    grid-template-rows: 1fr;
+    width: 80px;
+    height: 70px;
 }
 
     .clockWidget > .clock
     {
-        grid-area: 1/3/auto/auto;
-        width: 5em;
-        height: 5em;
+        grid-area: 1/1/auto/auto;
+        width: 60px;
+        height: 60px;
         display: inline-block;
         border-radius: 50%;
         background: black;
         border: 2px solid black;
+    }
+
+    .clockWidget > input[type=number].clockControl::-webkit-inner-spin-button,
+    .clockWidget > input[type=number].clockControl::-webkit-outer-spin-button
+    {
+        opacity: 1;
+    }
+    .clockWidget > input[type=number].clockControl
+    {
+        grid-area: 1/-2/auto/auto;
+        width: 15px;
+        font-size: 25px;
+        color: transparent;
     }
 
 input[value="0"].clockSegment ~ .clock
@@ -1819,55 +1837,55 @@ input[value="0"].clockSegment ~ .clock
 
 input[value="1"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(117deg, red 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(116deg, red 50%, white 50% ) ;
 }
 
 input[value="2"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(144deg, red 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(142deg, red 50%, white 50%);
 }
 
 input[value="3"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(171deg, red 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(168deg, red 50%, white 50%);
 }
 
 input[value="4"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(198deg, red 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(194deg, red 50%, white 50%);
 }
 
 input[value="5"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(225deg, red 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, red 50%, white 50%);
 }
 input[value="6"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(252deg, red 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(246deg, red 50%, white 50%);
 }
 input[value="7"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(117deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
+    background-image: linear-gradient(121deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
 }
 input[value="8"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(144deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
+    background-image: linear-gradient(147deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
 }
 input[value="9"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(171deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
+    background-image: linear-gradient(169deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
 }
 input[value="10"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(198deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
+    background-image: linear-gradient(195deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
 }
 input[value="11"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(225deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
+    background-image: linear-gradient(221deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
 }
 input[value="12"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(252deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
+    background-image: linear-gradient(247deg, transparent 50%, red 50%), linear-gradient(90deg, white 50%, red 50%);
 }
 
 input[value="13"].clockSegment ~ .clock
@@ -1875,12 +1893,51 @@ input[value="13"].clockSegment ~ .clock
     background-color: red;
 }
 
-
-    /* Edit Mode */
-    .tableSpread > .editCog
+.clockWidget > .clockSpoke
+{
+    grid-area: 1/1/auto/auto;
+    height: 62px;
+    width: 2px;
+    display: block;
+    left: 0;
+    top: 0;
+    background: black;
+}
+    .clockWidget > .clockSpoke.clockSpoke0
     {
-        grid-area: 1 / 7 / 2 / 8;
+        transform: translateX(30px);
+        height: 30px;
     }
+    .clockWidget > .clockSpoke.clockSpoke1
+    {
+        transform: translateX(30px) rotate(26deg);
+    }
+    .clockWidget > .clockSpoke.clockSpoke2
+    {
+        transform: translateX(30px) rotate(52deg);
+    }
+    .clockWidget > .clockSpoke.clockSpoke3
+    {
+        transform: translateX(30px) rotate(78deg);
+    }
+    .clockWidget > .clockSpoke.clockSpoke4
+    {
+        transform: translateX(30px) rotate(104deg);
+    }
+    .clockWidget > .clockSpoke.clockSpoke5
+    {
+        transform: translateX(30px) rotate(130deg);
+    }
+    .clockWidget > .clockSpoke.clockSpoke6
+    {
+        transform: translateX(30px) rotate(156deg);
+    }
+
+/* Edit Mode */
+.tableSpread > .editCog
+{
+    grid-area: 1 / 7 / 2 / 8;
+}
 
 .magicCircle > .editCog
 {
@@ -2619,14 +2676,27 @@ input[value="13"].cardChoice + span.card
         grid-template-rows: 42px repeat(4, 1fr) 1fr;
     }
 
-    /* Graphics */
-    /* Hide Checkboxes and Radio boxes */
-    input[type="checkbox"].hideCheckbox, input[type="radio"].hideCheckbox
+    .grimoireWidget > roteSpellCard
     {
-        opacity: 0;
-        cursor: pointer;
-        z-index: 3;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(15,17px) 1fr;
+        grid-row-gap: 2px;
     }
+        .grimoireWidget > roteSpellCard > .clockWidget
+        {
+            grid-area: -2/2/-1/-1;
+        }
+/* Graphics */
+/* Hide Checkboxes and Radio boxes */
+input [type="checkbox"].hideCheckbox, input[type="radio"].hideCheckbox
+{
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
 /* Subgrid for Tug Conditions */
 .launch-bay-tug-conditions
 {
