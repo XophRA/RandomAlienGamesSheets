@@ -347,20 +347,38 @@
                 <div class="editMenu grimoireEdit">
 
                 </div>
-                <div class="card roteSpellCard">
-                    <div class="clockWidget">
-                        <input type="number" min="0" max="13" value="0" name="attr_clockTest" class="clockControl" />
-                        <input type="hidden" name="attr_clockTest" class="clockSegment" />
-                        <span class="clock"></span>
-                        <span class="clockSpoke clockSpoke0"></span>
-                        <span class="clockSpoke clockSpoke1"></span>
-                        <span class="clockSpoke clockSpoke2"></span>
-                        <span class="clockSpoke clockSpoke3"></span>
-                        <span class="clockSpoke clockSpoke4"></span>
-                        <span class="clockSpoke clockSpoke5"></span>
-                        <span class="clockSpoke clockSpoke6"></span>
+                <div class="deck deck1">
+                    <div class="card roteSpellCard">
+                        <h4 class="spell">Spell</h4>
+                        <input type="text" class="spell" name="attr_spell" />
+                        <h4 class="spellEffect">Spell Effect</h4>
+                        <textarea class="spellEffect" name="attr_spellEffect" />
+                        <h4 class="arts">Arts</h4>
+                        <input type="text" class="ascensionRite" name="attr_ascensionRite" />
+                        <h4 class="components">Components</h4>
+                        <textarea class="components" name="attr_components" />
+                        <h4 class="rote">Rote</h4>
+                        <input type="checkbox" name="attr_rote" class="rote" value="1" />
+                        <h4 class="scroll">Rote</h4>
+                        <input type="checkbox" name="attr_scroll" class="scroll" value="1" />
+
+                        <div class="clockWidget">
+                            <input type="text" name="attr_spellComponetClock" class="clockControl" readonly />
+                            <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
+                            <input type="hidden" name="attr_spellComponetClock" class="clockSegment" />
+                            <span class="clock"></span>
+                            <span class="clockSpoke clockSpoke0"></span>
+                            <span class="clockSpoke clockSpoke1"></span>
+                            <span class="clockSpoke clockSpoke2"></span>
+                            <span class="clockSpoke clockSpoke3"></span>
+                            <span class="clockSpoke clockSpoke4"></span>
+                            <span class="clockSpoke clockSpoke5"></span>
+                            <span class="clockSpoke clockSpoke6"></span>
+                        </div>
                     </div>
                 </div>
+                <div class="deck deck2">
+                    </div>
             </section>
         </div>
     </article>
