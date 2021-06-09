@@ -26,8 +26,7 @@
 
     <!-- Player Caster -->
     <article class="sheetType playerCasterSheet">
-
-        <!--PC Sheet-->
+        <!--PC Sheet Grid-->
         <div class="playerCasterSheetGrid">
             <!-- True Name -->
             <section class="trueNameWidget">
@@ -258,41 +257,7 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Viviomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
             </section>
-            <!--Ascension-->
-            <section class="ascensionWidget">
-                <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
-                <input type="hidden" class="editToggle" name="attr_EditAscension" />
-                <div class="editMenu editAscension">
-                    <div>Level</div>
-                    <input type="number" class="levelControl" name="attr_level" value="0" min="0" max="13" />
-                    <div>Fate Drag</div>
-                    <input type="number" class="fateDrag" name="attr_level" value="0" min="0" max="3" />
-                </div>
-                <input type="hidden" class="levelControl" name="attr_level" />
-                <span class="level lvl1">1</span>
-                <span class="level lvl2">2</span>
-                <span class="level lvl3">3</span>
-                <span class="level lvl4">4</span>
-                <span class="level lvl5">5</span>
-                <span class="level lvl6">6</span>
-                <span class="level lvl7">7</span>
-                <span class="level lvl8">8</span>
-                <span class="level lvl9">9</span>
-                <span class="level lvl10">10</span>
-                <span class="level lvl11">11</span>
-                <span class="level lvl12">12</span>
-                <span class="level lvl13">13</span>
-                <div class="card ascensionCard">
-                    <h4 class="ascensionObjective">Objective</h4>
-                    <input type="text" class="ascensionObjective" name="attr_ascensionObjective" />
-                    <h4 class="ascensionMilestones">Milestones</h4>
-                    <textarea class="ascensionMilestones" name="attr_ascensionMilestones" />
-                    <h4 class="ascensionRite">Rite</h4>
-                    <input type="text" class="ascensionRite" name="attr_ascensionRite" />
-                    <h4 class="ascensionFateDrag">Fate Drag</h4>
-                    <input type="hidden" name="attr_fateDrag" /><span></span><span></span><span></span>
-                </div>
-            </section>
+            
             <!-- Curses -->
             <section class="curseWidget">
                 <input type="checkbox" class="editCog" name="attr_EditCurse" value="1" /><span class="editCog"></span>
@@ -343,11 +308,10 @@
             </section>
             <!-- Grimoire -->
             <section class="grimoireWidget">
-                <input type="checkbox" class="editCog" name="attr_EditGrimoire" value="1" /><span class="editCog"></span>
-                <input type="hidden" class="editToggle" name="attr_EditGrimoire" />
-                <div class="editMenu grimoireEdit">
-
-                </div>
+                <!--<input type="checkbox" class="editCog" name="attr_EditGrimoire" value="1" /><span class="editCog"></span>
+    <input type="hidden" class="editToggle" name="attr_EditGrimoire" />
+    <div class="editMenu grimoireEdit">-->
+                <!--</div>-->
                 <div class="deck deck1">
                     <fieldset class="repeating_rotespellcard">
                         <div class="card roteSpellCard">
@@ -382,6 +346,8 @@
                 </div>
                 <div class="deck deck2">
                 </div>
+                <div class="deck deck3">
+                </div>
             </section>
         </div>
     </article>
@@ -405,6 +371,41 @@
                 <div class="captain">Captain:</div>
                 <div class="captainName"><input type="text" name="attr_Captain" class="full" /></div>
             </div>
+            <!--Ascension-->
+            <section class="ascensionWidget">
+                <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
+                <input type="hidden" class="editToggle" name="attr_EditAscension" />
+                <div class="editMenu editAscension">
+                    <div>Level</div>
+                    <input type="number" class="levelControl" name="attr_level" value="0" min="0" max="13" />
+                    <div>Fate Drag</div>
+                    <input type="number" class="fateDrag" name="attr_level" value="0" min="0" max="3" />
+                </div>
+                <input type="hidden" class="levelControl" name="attr_level" />
+                <span class="level lvl1">1</span>
+                <span class="level lvl2">2</span>
+                <span class="level lvl3">3</span>
+                <span class="level lvl4">4</span>
+                <span class="level lvl5">5</span>
+                <span class="level lvl6">6</span>
+                <span class="level lvl7">7</span>
+                <span class="level lvl8">8</span>
+                <span class="level lvl9">9</span>
+                <span class="level lvl10">10</span>
+                <span class="level lvl11">11</span>
+                <span class="level lvl12">12</span>
+                <span class="level lvl13">13</span>
+                <div class="card ascensionCard">
+                    <h4 class="ascensionObjective">Objective</h4>
+                    <input type="text" class="ascensionObjective" name="attr_ascensionObjective" />
+                    <h4 class="ascensionMilestones">Milestones</h4>
+                    <textarea class="ascensionMilestones" name="attr_ascensionMilestones" />
+                    <h4 class="ascensionRite">Rite</h4>
+                    <input type="text" class="ascensionRite" name="attr_ascensionRite" />
+                    <h4 class="ascensionFateDrag">Fate Drag</h4>
+                    <input type="hidden" name="attr_fateDrag" /><span></span><span></span><span></span>
+                </div>
+            </section>
             <!-- Systems & Amenities-->
             <div class="systemsAmenities">
                 <!--Ship Systems-->
