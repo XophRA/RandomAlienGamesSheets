@@ -2700,13 +2700,65 @@ input[value="13"].cardChoice + span.card
     {
         grid-area: 2/4/auto/span 2;
     }
-.deck > .card.roteSpellCard
+
+
+.card.roteSpellCard
 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(15,17px) 1fr;
     grid-row-gap: 2px;
 }
+
+    .card.roteSpellCard h4
+    {
+        grid-column: 1/2;
+        padding-left: 10px;
+    }
+
+    .card.roteSpellCard input[type=text],
+    .card.roteSpellCard textarea,
+    .card.roteSpellCard input[type=checkbox]
+    {
+        grid-column: 2/-1;
+    }
+
+    .card.roteSpellCard .spellEquation
+    {
+        grid-row: 2/auto;
+    }
+
+    .card.roteSpellCard h4.spellEffect
+    {
+        grid-row: 3/auto;
+    }
+
+    .card.roteSpellCard textarea.spellEffect
+    {
+        grid-row: 3/span 5;
+    }
+
+    .card.roteSpellCard .spellArts
+    {
+        grid-row: 8/auto;
+    }
+
+    .card.roteSpellCard h4.spellComponents
+    {
+        grid-row: 9/auto;
+    }
+    .card.roteSpellCard textarea.spellComponents
+    {
+        grid-row: 9/span 5;
+    }
+    .card.roteSpellCard .spellRote
+    {
+        grid-row: 14/auto;
+    }
+    .card.roteSpellCard .spellScroll
+    {
+        grid-row: 15/auto;
+    }
         .card.roteSpellCard > .clockWidget
         {
             grid-area: -2/-2/-1/-1;
