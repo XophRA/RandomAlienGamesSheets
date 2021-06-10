@@ -330,9 +330,9 @@
                             <input type="checkbox" name="attr_spellScroll" class="spellScroll" value="1" />
 
                             <div class="clockWidget">
-                                <input type="text" name="attr_spellComponetClock" class="clockControl" readonly />
+                                <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
                                 <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
-                                <input type="hidden" name="attr_spellComponetClock" class="clockSegment" />
+                                <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment" />
                                 <span class="clock"></span>
                                 <span class="clockSpoke clockSpoke0"></span>
                                 <span class="clockSpoke clockSpoke1"></span>
@@ -1952,9 +1952,7 @@
 
 </main>
 
-<!-- ------------- -->
 <!-- Roll Template -->
-<!-- ------------- -->
 <rolltemplate class="sheet-rolltemplate-Thaumaturgy">
     <div class="sheet-rolltemplateContainer">
         <div class="sheet-rolltemplateHeader">Spellcasting</div>
@@ -1976,10 +1974,7 @@
     </div>
 </rolltemplate>
 
-
-<!-- ------- -->
 <!-- Scripts -->
-<!-- ------- -->
 <script type="text/worker">
 <!--<script type="text/javascript">-->
 
