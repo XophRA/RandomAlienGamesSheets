@@ -2736,73 +2736,122 @@ input[value="13"].cardChoice + span.card
         grid-column: 6/auto;
     }
 
+/* Collapse & Expand Deck Functionality */
 input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 {
     height: 50px;
 }
-.card.roteSpellCard
+
+/* Custom Cards */
+.customCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img10/SpellCard.png);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 102px repeat(2,1fr);
     grid-template-rows: 10px repeat(14,17px) 65px 1fr;
     grid-gap: 2px;
 }
 
-    .card.roteSpellCard h4
+    .customCard h4
     {
         grid-column: 1/2;
         padding-left: 10px;
     }
 
-    .card.roteSpellCard input[type=text],
-    .card.roteSpellCard textarea,
-    .card.roteSpellCard input[type=checkbox]
+    .customCard input[type=text],
+    .customCard textarea,
+    .customCard input[type=checkbox]
     {
         grid-column: 2/-1;
     }
 
-    .card.roteSpellCard .spellEquation
+/* Rote Spell Cards */
+.roteSpellCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img10/SpellCard.png);
+}
+
+    .roteSpellCard .spellEquation
     {
         grid-row: 2/auto;
     }
 
-    .card.roteSpellCard h4.spellEffect
+    .roteSpellCard .spellArts
     {
         grid-row: 3/auto;
     }
 
-    .card.roteSpellCard textarea.spellEffect
+    .roteSpellCard h4.spellEffect
     {
-        grid-row: 3/span 5;
+        grid-row: 4/auto;
     }
 
-    .card.roteSpellCard .spellArts
+    .roteSpellCard textarea.spellEffect
     {
-        grid-row: 8/auto;
+        grid-row: 4/span 7;
     }
 
-    .card.roteSpellCard h4.spellComponents
+    .roteSpellCard h4.spellComponents
     {
-        grid-row: 9/auto;
+        grid-row: 11/auto;
     }
 
-    .card.roteSpellCard textarea.spellComponents
+    .roteSpellCard textarea.spellComponents
     {
-        grid-row: 9/span 3;
+        grid-row: 11/span 3;
     }
 
-    .card.roteSpellCard .spellRote
+    .roteSpellCard .spellRote
     {
-        grid-row: 12/auto;
+        grid-row: 14/auto;
     }
 
-    .card.roteSpellCard .spellScroll
+    .roteSpellCard .spellScroll
     {
-        grid-row: 13/auto;
+        grid-row: 15/auto;
     }
 
-    .card.roteSpellCard > .clockWidget
+    .roteSpellCard > .clockWidget
+    {
+        grid-area: -3/-2/-1/-2;
+    }
+
+/* Enchantment Card */
+.enchantmentCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img10/EnchantmentCard.png);
+}
+
+    .enchantmentCard .formula
+    {
+        grid-row: 2/auto;
+    }
+
+    .enchantmentCard h4.spellEffect
+    {
+        grid-row: 3/auto;
+    }
+
+    .enchantmentCard textarea.spellEffect
+    {
+        grid-row: 3/span 12;
+    }
+
+    .enchantmentCard .potency
+    {
+        grid-row: 15/auto;
+    }
+
+    .enchantmentCard div.potency
+    {
+        grid-column: 2/span 2;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .enchantmentCard > .clockWidget
     {
         grid-area: -3/-2/-1/-2;
     }
