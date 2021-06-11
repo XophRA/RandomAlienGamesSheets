@@ -1992,11 +1992,12 @@ input.editToggle[value="1"] + .editMenu
 .card
 {
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     opacity: 1;
     background-size: 250px 350px;
     width: 250px;
     height: 350px;
+    overflow: hidden;
 }
 
 .landscapeCard
@@ -2677,36 +2678,68 @@ input[value="13"].cardChoice + span.card
     width: 100%;
     height: 100%;
 }
-    .grimoireWidget > .editCog
+    .grimoireWidget > .deckHeader
     {
-        grid-area: 1/-3/2/-2;
-    }
-    .grimoireWidget > .grimoireEdit
-    {
-        grid-area: 1/1/-1/-1;
+        grid-row: 1/auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 42px repeat(4, 1fr) 1fr;
+        grid-template-columns: 1fr 25px 16px;
+        grid-template-rows: 50px 1fr;
     }
+
+        .grimoireWidget > .deckHeader > .collapseDeck
+        {
+            grid-area: 2/2/auto/auto;
+        }
+
+        .grimoireWidget > .deckHeader > input.collapseDeck
+        {
+            opacity: 0;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            z-index: 13;
+        }
+
+            .grimoireWidget > .deckHeader > input.collapseDeck + span.collapseDeck
+            {
+                background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img09/ExpandDeck.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 1;
+                background-size: 25px 35px;
+                width: 25px;
+                height: 35px;
+                z-index: 12;
+            }
+            .grimoireWidget > .deckHeader > input.collapseDeck:checked + span.collapseDeck
+            {
+                background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img09/CollapseDeck.png);
+            }
+
     .grimoireWidget > .deck
     {
         display: flex;
         flex-direction:column;
+        grid-row: 2/auto;
 
     }
     .grimoireWidget > .deck1
     {
-        grid-area: 2/2/auto/auto;
+        grid-column: 2/auto;
     }
     .grimoireWidget > .deck2
     {
-        grid-area: 2/4/auto/span 2;
+        grid-column: 4/auto;
     }
     .grimoireWidget > .deck3
     {
-        grid-area: 2/4/auto/span 2;
+        grid-column: 6/auto;
     }
 
+input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
+{
+    height: 50px;
+}
 .card.roteSpellCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img09/SpellCard.png);
