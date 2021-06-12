@@ -35,11 +35,12 @@
             </section>
             <!-- Aether -->
             <section class="aetherWidget">
-                <div class="aetherTracker"><input type="number" name="attr_aether" min="0" class="resourceBox" /></div>
+                <div class="aetherTracker"><input type="number" name="attr_aether" min="0" value="0" class="resourceBox" /></div>
             </section>
             <!-- Description -->
             <section class="descriptionWidget">
                 <div class="scholarlyName"><input type="text" name="attr_character_name" class="full aspect" /></div>
+                <input type="hidden" name="attr_level" />
                 <div class="rankLevel"><input type="text" name="attr_rankLevel" class="full aspect" readonly /></div>
                 <div class="pronouns"><input type="text" name="attr_pronouns" class="full aspect" /></div>
                 <div class="apprenticeship"><input type="text" name="attr_apprenticeship" class="full aspect" /></div>
@@ -261,13 +262,78 @@
             
             <!-- Curses -->
             <section class="curseWidget">
-                <input type="checkbox" class="editCog" name="attr_EditCurse" value="1" /><span class="editCog"></span>
-                <input type="hidden" class="editToggle" name="attr_EditCurse" />
-                <div class="editMenu editCurse">
+                <input type="number" class="sortCurses" name="attr_sortCurses" value="1" />
+                <input type="hidden" class="curseToggle" name="attr_sortCurses" value="1" />
+                <input type="hidden" class="levelControl" name="attr_curseNumber" value="3"/>
+                <div class="card customCard curseCard curse1">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName1" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect1" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse1" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents1" />
                 </div>
-                <input type="hidden" class="levelControl" name="attr_level" />
-                <div class="landscapeCard curseCard">
-
+                <div class="card customCard curseCard curse2">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName2" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect2" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse2" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents2" />
+                </div>
+                <div class="card customCard curseCard curse3">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName3" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect3" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse3" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents3" />
+                </div>
+                <div class="card customCard curseCard curse4">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName4" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect4" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse4" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents4" />
+                </div>
+                <div class="card customCard curseCard curse5">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName5" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect5" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse5" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents5" />
                 </div>
             </section>
             <!-- Fate -->
@@ -449,11 +515,9 @@
                 <input type="hidden" class="editToggle" name="attr_EditAscension" />
                 <div class="editMenu editAscension">
                     <div>Level</div>
-                    <input type="number" class="levelControl" name="attr_level" value="0" min="0" max="13" />
-                    <div>Fate Drag</div>
-                    <input type="number" class="fateDrag" name="attr_level" value="0" min="0" max="3" />
+                    <input type="number" class="levelControl" name="attr_covenLevel" value="0" min="0" max="13" />
                 </div>
-                <input type="hidden" class="levelControl" name="attr_level" />
+                <input type="hidden" class="levelControl" name="attr_covenLevel" />
                 <span class="level lvl1">1</span>
                 <span class="level lvl2">2</span>
                 <span class="level lvl3">3</span>
@@ -2047,9 +2111,58 @@
 <!-- Scripts -->
 <script type="text/worker">
 <!--<script type="text/javascript">-->
+    /* Global Attributes */
+    var globalAttributes = [];//Global Array for Storage of Player Caster Level
+
+    /* Store Player Caster Level from Ascension Widget */
+    on("change:covenlevel", (event) =>
+    {
+        getAttrs(["covenlevel"], function (values)
+        {           
+                globalAttributes.covenlevel = parseInt(values.covenlevel) || 0;
+                console.log(globalAttributes);
+        });
+    });
+
+    /* Set Player Caster Level to Coven Level */
+    on("sheet:opened", (event) =>
+    {
+        const setObj = {};
+
+        //Set RankLevel
+        let level = parseInt(globalAttributes.covenlevel) || 0;
+        let rankLevel = "Initiate";
+        let curseNumber = 3;
+
+        if (level > 0 && level < 4)
+        {
+            rankLevel = "Apprentice, level " + level;
+        }
+        else if (level < 8)
+        {
+            rankLevel = "Keeper, level " + level;
+            curseNumber = 4;
+        }
+        else if (level < 11)
+        {
+            rankLevel = "Graduate, level " + level;
+            curseNumber = 5;
+        }
+        else
+        {
+            rankLevel = "Scholar, level " + level;
+        }
+        setObj.rankLevel = rankLevel;
+        setObj.curseNumber = curseNumber;
+
+        setObj.level = level;
+
+        console.log(setObj);
+        setAttrs(setObj);
+    });
 
     /* Generate Spellcasting Macro */
-    on("change:castSpellDice change:castTangleDice", (event) =>
+    on("change:castspelldice change:casttangledice", (event) =>
     {
         getAttrs(["castSpellDice", "castTangleDice"], function (values)
         {
@@ -2061,6 +2174,7 @@
 
             //Make the Casting Macro
             console.log(spellDice, "vs", tangleDice);
+
             const setObj = {};
 
             let spellRoll = `${_.range(spellDice).map((num) =>
@@ -2081,7 +2195,7 @@
     });
 
     /* Dice input to Magic Circle */
-    on("change:editCircle", (event) =>
+    on("change:editcircle", (event) =>
     {
         getAttrs(["position1d10", "position1d6"], (positions) =>
         {
@@ -2277,7 +2391,7 @@
     });
 
     /* Count Dice in Magic Circle and add to Resources and Ripples */
-    on("clicked:calculatResults", (event) =>
+    on("clicked:calculatresults", (event) =>
     {
         let getArray = []; //An Array for all attr to get
 
@@ -2389,6 +2503,27 @@
             console.log(setObj);
             setAttrs(setObj);
         });
+    });
+
+    /* Wrap Around for Sort Curse*/
+    on("change:sortcurses", (event) =>
+    {
+        getAttrs(["sortCurses","curseNumber"], function (values)
+        {
+            const setObj = {};
+            //Sort Curse
+            let sortCurse = parseInt(values.sortCurses) || 0;
+
+            //Number of Curses
+            let curseNumber = parseInt(values.curseNumber) || 0;
+
+            if (sortCurse > curseNumber)
+            {
+                setObj.sortCurse = 1;
+            }
+            console.log(setObj);
+            setAttrs(setObj);
+        })
     });
 
 

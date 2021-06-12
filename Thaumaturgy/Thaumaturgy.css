@@ -491,7 +491,7 @@ main.masterGrid
                 z-index: 5;
             }
 
-/*Ship*/
+/* Sancurary Sheet */
 .shipAspects
 {
     grid-area: aspects;
@@ -627,6 +627,244 @@ main.masterGrid
     grid-row-start: 3;
     grid-row-end: 4;
 }
+
+/* Ascension */
+.ascensionWidget
+{
+    grid-area: 4 / 1 / span 2 / 2;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(19, 20px) 1fr;
+    grid-template-rows: 42px repeat(22, 20px) 1fr;
+}
+
+    .ascensionWidget .editCog
+    {
+        grid-area: 1/-3/2/-2;
+    }
+
+    .ascensionWidget .editAscension
+    {
+        grid-area: 1/1/-1/-1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 42px repeat(4, 1fr) 1fr;
+    }
+
+    /* Level Numbers */
+    .ascensionWidget .level
+    {
+        display: none; /* Intially Level Number off*/
+        font-family: "Fredericka the Great", cursive;
+        font-weight: 600;
+        font-size: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+        .ascensionWidget .level.lvl1
+        {
+            grid-area: 2/-4/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl2
+        {
+            grid-area: 5/-3/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl3
+        {
+            grid-area: 8/-3/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl4
+        {
+            grid-area: 14/-4/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl5
+        {
+            grid-area: 17/-3/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl6
+        {
+            grid-area: 20/-4/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl7
+        {
+            grid-area: 22/-6/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl8
+        {
+            grid-area: 22/7/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl9
+        {
+            grid-area: 22/4/span 2/auto;
+        }
+
+        .ascensionWidget .level.lvl10
+        {
+            grid-area: 18/2/span 2/span 2;
+        }
+
+        .ascensionWidget .level.lvl11
+        {
+            grid-area: 11/2/span 2/span 2;
+        }
+
+        .ascensionWidget .level.lvl12
+        {
+            grid-area: 8/2/span 2/span 2;
+        }
+
+        .ascensionWidget .level.lvl13
+        {
+            grid-area: 4/3/span 2/span 2;
+        }
+    /* Visability lavel 1*/
+    .ascensionWidget input[value="1"].levelControl ~ .lvl1,
+    /* Visability lavel 2*/
+    .ascensionWidget input[value="2"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="2"].levelControl ~ .lvl2,
+    /* Visability lavel 3*/
+    .ascensionWidget input[value="3"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="3"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="3"].levelControl ~ .lvl3,
+    /* Visability lavel 4*/
+    .ascensionWidget input[value="4"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="4"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="4"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="4"].levelControl ~ .lvl4,
+    /* Visability lavel 5*/
+    .ascensionWidget input[value="5"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="5"].levelControl ~ .lvl5,
+    /* Visability lavel 6*/
+    .ascensionWidget input[value="6"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="6"].levelControl ~ .lvl6,
+    /* Visability lavel 7*/
+    .ascensionWidget input[value="7"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="7"].levelControl ~ .lvl7,
+    /* Visability lavel 8*/
+    .ascensionWidget input[value="8"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="8"].levelControl ~ .lvl8,
+    /* Visability lavel 9*/
+    .ascensionWidget input[value="9"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="9"].levelControl ~ .lvl9,
+    /* Visability lavel 10*/
+    .ascensionWidget input[value="10"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="10"].levelControl ~ .lvl10,
+    /* Visability lavel 11*/
+    .ascensionWidget input[value="11"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl10,
+    .ascensionWidget input[value="11"].levelControl ~ .lvl11,
+    /* Visability lavel 12*/
+    .ascensionWidget input[value="12"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl10,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl11,
+    .ascensionWidget input[value="12"].levelControl ~ .lvl12,
+    /* Visability lavel 13*/
+    .ascensionWidget input[value="13"].levelControl ~ .lvl1,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl2,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl3,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl4,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl5,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl6,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl7,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl8,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl9,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl10,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl11,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl12,
+    .ascensionWidget input[value="13"].levelControl ~ .lvl13
+    {
+        display: initial;
+    }
+
+    /* Ascension Card */
+    .ascensionWidget .ascensionCard
+    {
+        grid-area: 3/5/span 18/span 13;
+    }
+
+        .ascensionWidget .ascensionCard .ascensionObjective
+        {
+            grid-row: 2/auto;
+        }
+
+        .ascensionWidget .ascensionCard h4.ascensionMilestones
+        {
+            grid-row: 3/auto;
+        }
+
+        .ascensionWidget .ascensionCard textarea.ascensionMilestones
+        {
+            grid-row: 3/10;
+        }
+
+        .ascensionWidget .ascensionCard .ascensionRite
+        {
+            grid-row: 10/auto;
+        }
+
+        .ascensionWidget .ascensionCard .ascensionFateDrag
+        {
+            grid-row: 11/auto;
+        }
 
 /* ************ */
 /* Medium Sheet */
@@ -1796,6 +2034,93 @@ input[type=number].resourceBox
                 grid-column: 2/3;
             }
 
+    .tableSpread > div > .landscapeCard
+    {
+        transform: rotate(-90deg);
+    }
+
+
+    .tableSpread > div > input.facingChoice[value="1"] + input.cardChoice + span.card
+    {
+        transform: rotate(-180deg);
+    }
+
+    .tableSpread > div > input.facingChoice[value="1"] + input.cardChoice + span.landscapeCard
+    {
+        transform: rotate(-270deg);
+    }
+
+    /* Arcana Card Background Image*/
+    .tableSpread > div > input[value="0"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_0.png);
+    }
+
+    .tableSpread > div > input[value="1"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_1.png);
+    }
+
+    .tableSpread > div > input[value="2"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_2.png);
+    }
+
+    .tableSpread > div > input[value="3"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_3.png);
+    }
+
+    .tableSpread > div > input[value="4"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_4.png);
+    }
+
+    .tableSpread > div > input[value="5"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_5.png);
+    }
+
+    .tableSpread > div > input[value="6"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_6.png);
+    }
+
+    .tableSpread > div > input[value="7"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_7.png);
+    }
+
+    .tableSpread > div > input[value="8"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_8.png);
+    }
+
+    .tableSpread > div > input[value="9"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_9.png);
+    }
+
+    .tableSpread > div > input[value="10"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_10.png);
+    }
+
+    .tableSpread > div > input[value="11"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_11.png);
+    }
+
+    .tableSpread > div > input[value="12"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_12.png);
+    }
+
+    .tableSpread > div > input[value="13"].cardChoice + span.card
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_13.png);
+    }
+
 /* Clocks */
 .clockWidget
 {
@@ -2000,94 +2325,6 @@ input.editToggle[value="1"] + .editMenu
     overflow: hidden;
 }
 
-.landscapeCard
-{
-    transform: rotate(-90deg);
-}
-
-
-input.facingChoice[value="1"] + input.cardChoice + span.card
-{
-    transform: rotate(-180deg);
-}
-
-input.facingChoice[value="1"] + input.cardChoice + span.landscapeCard
-{
-    transform: rotate(-270deg);
-}
-
-/* Arcana Card Background Image*/
-input[value="0"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_0.png);
-}
-
-input[value="1"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_1.png);
-}
-
-input[value="2"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_2.png);
-}
-
-input[value="3"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_3.png);
-}
-
-input[value="4"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_4.png);
-}
-
-input[value="5"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_5.png);
-}
-
-input[value="6"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_6.png);
-}
-
-input[value="7"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_7.png);
-}
-
-input[value="8"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_8.png);
-}
-
-input[value="9"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_9.png);
-}
-
-input[value="10"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_10.png);
-}
-
-input[value="11"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_11.png);
-}
-
-input[value="12"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_12.png);
-}
-
-input[value="13"].cardChoice + span.card
-{
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/arcanaCard_13.png);
-}
-
-
 /* Player Caster Sheet */
 
 /* True Name */
@@ -2178,7 +2415,7 @@ input[value="13"].cardChoice + span.card
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 265px 120px auto;
+    grid-template-rows: 269px 120px auto;
     grid-gap: 0px;
 }
 
@@ -2187,7 +2424,7 @@ input[value="13"].cardChoice + span.card
         grid-area: 2 / 1 / 3 / 2;
         width: 120px;
         height: 100%;
-        padding-left: 17%;
+        padding-left: 20%;
     }
 
 /* Intentions */
@@ -2391,260 +2628,6 @@ input[value="13"].cardChoice + span.card
         grid-column: 7 / 8;
     }
 
-/* Ascension */
-.ascensionWidget
-{
-    grid-area: 4 / 1 / span 2 / 2;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(19, 20px) 1fr;
-    grid-template-rows: 42px repeat(22, 20px) 1fr;
-}
-
-    .ascensionWidget .editCog
-    {
-        grid-area: 1/-3/2/-2;
-    }
-
-    .ascensionWidget .editAscension
-    {
-        grid-area: 1/1/-1/-1;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 42px repeat(4, 1fr) 1fr;
-    }
-
-    /* Level Numbers */
-    .ascensionWidget .level
-    {
-        display: none; /* Intially Level Number off*/
-        font-family: "Fredericka the Great", cursive;
-        font-weight: 600;
-        font-size: 40px;
-        text-align: center;
-        line-height: 40px;
-    }
-
-        .ascensionWidget .level.lvl1
-        {
-            grid-area: 2/-4/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl2
-        {
-            grid-area: 5/-3/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl3
-        {
-            grid-area: 8/-3/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl4
-        {
-            grid-area: 14/-4/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl5
-        {
-            grid-area: 17/-3/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl6
-        {
-            grid-area: 20/-4/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl7
-        {
-            grid-area: 22/-6/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl8
-        {
-            grid-area: 22/7/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl9
-        {
-            grid-area: 22/4/span 2/auto;
-        }
-
-        .ascensionWidget .level.lvl10
-        {
-            grid-area: 18/2/span 2/span 2;
-        }
-
-        .ascensionWidget .level.lvl11
-        {
-            grid-area: 11/2/span 2/span 2;
-        }
-
-        .ascensionWidget .level.lvl12
-        {
-            grid-area: 8/2/span 2/span 2;
-        }
-
-        .ascensionWidget .level.lvl13
-        {
-            grid-area: 4/3/span 2/span 2;
-        }
-    /* Visability lavel 1*/
-    .ascensionWidget input[value="1"].levelControl ~ .lvl1,
-    /* Visability lavel 2*/
-    .ascensionWidget input[value="2"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="2"].levelControl ~ .lvl2,
-    /* Visability lavel 3*/
-    .ascensionWidget input[value="3"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="3"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="3"].levelControl ~ .lvl3,
-    /* Visability lavel 4*/
-    .ascensionWidget input[value="4"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="4"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="4"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="4"].levelControl ~ .lvl4,
-    /* Visability lavel 5*/
-    .ascensionWidget input[value="5"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl5,
-    /* Visability lavel 6*/
-    .ascensionWidget input[value="6"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl6,
-    /* Visability lavel 7*/
-    .ascensionWidget input[value="7"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl7,
-    /* Visability lavel 8*/
-    .ascensionWidget input[value="8"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl8,
-    /* Visability lavel 9*/
-    .ascensionWidget input[value="9"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl9,
-    /* Visability lavel 10*/
-    .ascensionWidget input[value="10"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl10,
-    /* Visability lavel 11*/
-    .ascensionWidget input[value="11"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl10,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl11,
-    /* Visability lavel 12*/
-    .ascensionWidget input[value="12"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl10,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl11,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl12,
-    /* Visability lavel 13*/
-    .ascensionWidget input[value="13"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl10,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl11,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl12,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl13
-    {
-        display: initial;
-    }
-
-    /* Ascension Card */
-    .ascensionWidget .ascensionCard
-    {
-        grid-area: 3/5/span 18/span 13;
-    }
-        .ascensionWidget .ascensionCard .ascensionObjective
-        {
-            grid-row: 2/auto;
-        }
-        .ascensionWidget .ascensionCard h4.ascensionMilestones
-        {
-            grid-row: 3/auto;
-        }
-        .ascensionWidget .ascensionCard textarea.ascensionMilestones
-        {
-            grid-row: 3/10;
-        }
-        .ascensionWidget .ascensionCard .ascensionRite
-        {
-            grid-row: 10/auto;
-        }
-        .ascensionWidget .ascensionCard .ascensionFateDrag
-        {
-            grid-row: 11/auto;
-        }
-
-    /* Curses */
-    .curseWidget
-    {
-        grid-area: 4/1/span 2/auto;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(4, 1fr) 20px;
-        grid-template-rows: 42px repeat(4, 1fr) 1fr;
-    }
-    .curseWidget .editCog
-    {
-        grid-area: 1/-2;
-    }
-    .curseWidget .editCurse
-    {
-        grid-area: 1/1/-1/-1;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 42px repeat(4, 1fr) 1fr;
-    }
 
 /* Fate */
 .fateWidget
@@ -2662,6 +2645,26 @@ input[value="13"].cardChoice + span.card
     width: 100%;
     height: 100%;
 }
+
+    .grimoireWidget > .deck > .repcontrol
+    {
+        margin: 6px;
+    }
+
+        .grimoireWidget > .deck > .repcontrol > button
+        {
+            margin: 6px;
+            background-image: none;
+            background-color: white;
+            border: 2px solid black;
+            font-weight:600;
+        }
+
+    .grimoireWidget > input[value="1"].collapseToggle ~ .deck > .repcontrol
+    {
+
+    }
+
     .grimoireWidget > .deckHeader
     {
         grid-row: 1/auto;
@@ -2695,6 +2698,7 @@ input[value="13"].cardChoice + span.card
                 height: 28px;
                 z-index: 12;
             }
+
             .grimoireWidget > .deckHeader > input.collapseDeck:checked + span.collapseDeck
             {
                 background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/ExpandDeck.png);
@@ -2749,11 +2753,187 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-column: 2/-1;
     }
 
-
-
     .customCard textarea
     {
         padding-top: 4px;
+    }
+
+/* Curses */
+.curseWidget
+{
+    grid-area: 4/1/span 2/auto;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 20px 350px 15px 20px;
+    grid-template-rows: 45px repeat(8, 40px) 1fr;
+}
+    /* Enable curse4 & curse5 */
+    .curseWidget > input[value="4"].levelControl ~ .curse4,
+    .curseWidget > input[value="5"].levelControl ~ .curse4,
+    .curseWidget > input[value="6"].levelControl ~ .curse4,
+    .curseWidget > input[value="7"].levelControl ~ .curse4,
+    .curseWidget > input[value="8"].levelControl ~ .curse4,
+    .curseWidget > input[value="9"].levelControl ~ .curse4,
+    .curseWidget > input[value="10"].levelControl ~ .curse4,
+    .curseWidget > input[value="11"].levelControl ~ .curse4,
+    .curseWidget > input[value="12"].levelControl ~ .curse4,
+    .curseWidget > input[value="13"].levelControl ~ .curse4,
+    .curseWidget > input[value="8"].levelControl ~ .curse5,
+    .curseWidget > input[value="9"].levelControl ~ .curse5,
+    .curseWidget > input[value="10"].levelControl ~ .curse5,
+    .curseWidget > input[value="11"].levelControl ~ .curse5,
+    .curseWidget > input[value="12"].levelControl ~ .curse5,
+    .curseWidget > input[value="13"].levelControl ~ .curse5
+    {
+        display: grid;
+    }
+    /* Curse Card Layout */
+    .curseWidget > .curse1
+    {
+        grid-area: 2/2/span 5/-2;
+    }
+
+    .curseWidget > .curse2
+    {
+        grid-area: 3/2/span 5/-2;
+    }
+
+    .curseWidget > .curse3
+    {
+        grid-area: 4/2/span 5/-2;
+    }
+
+    .curseWidget > .curse4
+    {
+        grid-area: 5/2/span 5/-2;
+        display: none;
+    }
+
+    .curseWidget > .curse5
+    {
+        grid-area: 6/2/span 5/-2;
+        display: none;
+    }
+
+    /* Sort the curses to be able to look at them all */
+    .curseWidget > .sortCurses
+    {
+        grid-area: 1/-3/auto/auto;
+        width: 15px;
+        font-size: 25px;
+        color: transparent;
+        text-align: left;
+    }
+
+    .curseWidget > input[type=number].sortCurses::-webkit-inner-spin-button,
+    .curseWidget > input[type=number].sortCurses::-webkit-outer-spin-button
+    {
+        opacity: 1;
+    }
+    /* Top Card */
+    .curseWidget > input[value="1"].curseToggle ~ .curse1,
+    .curseWidget > input[value="2"].curseToggle ~ .curse2,
+    .curseWidget > input[value="3"].curseToggle ~ .curse3,
+    .curseWidget > input[value="4"].curseToggle ~ .curse4,
+    .curseWidget > input[value="5"].curseToggle ~ .curse5
+    {
+        z-index: 6;
+    }
+    /* Card 1 */
+    .curseWidget > input[value="2"].curseToggle ~ .curse1,
+    .curseWidget > input[value="3"].curseToggle ~ .curse1,
+    .curseWidget > input[value="4"].curseToggle ~ .curse1,
+    .curseWidget > input[value="5"].curseToggle ~ .curse1
+    {
+        z-index: 1;
+    }
+    /* Card 2 */
+    .curseWidget > input[value="1"].curseToggle ~ .curse2,
+    .curseWidget > input[value="3"].curseToggle ~ .curse2,
+    .curseWidget > input[value="4"].curseToggle ~ .curse2,
+    .curseWidget > input[value="5"].curseToggle ~ .curse2
+    {
+        z-index: 2;
+    }
+    /* Card 3 */
+    .curseWidget > input[value="1"].curseToggle ~ .curse3,
+    .curseWidget > input[value="2"].curseToggle ~ .curse3,
+    .curseWidget > input[value="4"].curseToggle ~ .curse3,
+    .curseWidget > input[value="5"].curseToggle ~ .curse3
+    {
+        z-index: 3;
+    }
+    /* Card 4 */
+    .curseWidget > input[value="1"].curseToggle ~ .curse4,
+    .curseWidget > input[value="2"].curseToggle ~ .curse4,
+    .curseWidget > input[value="3"].curseToggle ~ .curse4,
+    .curseWidget > input[value="5"].curseToggle ~ .curse4
+    {
+        z-index: 4;
+    }
+    /* Card 5 */
+    .curseWidget > input[value="1"].curseToggle ~ .curse5,
+    .curseWidget > input[value="2"].curseToggle ~ .curse5,
+    .curseWidget > input[value="3"].curseToggle ~ .curse5,
+    .curseWidget > input[value="4"].curseToggle ~ .curse5
+    {
+        z-index: 5;
+    }
+
+.curseCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img11/CurseCard.png);
+    background-size: 350px 250px;
+    width: 350px;
+    height: 250px;
+    grid-template-rows: 10px repeat(13,17px) 1fr;
+    margin: 0;
+}
+
+    .curseCard > .curseName
+    {
+        grid-row: 2/auto;
+    }
+
+    .curseCard > .curseSeverity
+    {
+        grid-row: 3/auto;
+    }
+
+    .curseCard > h4.statusEffect
+    {
+        grid-row: 4/auto;
+    }
+
+    .curseCard > textarea.statusEffect
+    {
+        grid-row: 4/span 3;
+    }
+
+    .curseCard > h4.channelCurse
+    {
+        grid-row: 7/auto;
+    }
+
+    .curseCard > textarea.channelCurse
+    {
+        grid-row: 7/span 3;
+    }
+
+    .curseCard > .curseRestoration
+    {
+        grid-row: 10/auto;
+    }
+
+    .curseCard > h4.restorationComponents
+    {
+        grid-row: 11/auto;
+    }
+
+    .curseCard > textarea.restorationComponents
+    {
+        grid-row: 11/span 3;
     }
 
 /* Rote Spell Cards */
