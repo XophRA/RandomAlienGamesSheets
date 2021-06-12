@@ -354,19 +354,20 @@
                         <div class="card customCard enchantmentCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
-                            <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_spellEffectEnchantment" />
                             <h4 class="potency">Potency</h4>
                             <div class="potency">
-                                <input type="radio" name="attr_potency" class="potency" value="1" />
-                                <input type="radio" name="attr_potency" class="potency" value="2" />
-                                <input type="radio" name="attr_potency" class="potency" value="3" checked/>
-                                <input type="radio" name="attr_potency" class="potency" value="4" />
-                                <input type="radio" name="attr_potency" class="potency" value="5" />
-                                <input type="radio" name="attr_potency" class="potency" value="6" />
-                                <input type="radio" name="attr_potency" class="potency" value="7" />
-                                <input type="radio" name="attr_potency" class="potency" value="8" />
+                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" /><span class="potency1 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" checked /><span class="potency3 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency4 diceCheckbox hideCheckbox" value="4" /><span class="potency4 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency5 diceCheckbox hideCheckbox" value="5" /><span class="potency5 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency6 diceCheckbox hideCheckbox" value="6" /><span class="potency6 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency7 diceCheckbox hideCheckbox" value="7" /><span class="potency7 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency8 diceCheckbox hideCheckbox" value="8" /><span class="potency8 diceCheckbox D10"></span>
                             </div>
+                            <h4 class="spellEffect">Spell Effect</h4>
+                            <textarea class="spellEffect" name="attr_spellEffectEnchantment" />
+
                             <div class="clockWidget">
                                 <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
                                 <input type="number" min="0" max="13" value="0" name="attr_chargeClock" class="clockControl" />
@@ -389,24 +390,24 @@
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                 <div class="deck deck3">
                     <fieldset class="repeating_duelingfocuscard">
-                        <div class="card customCard roteSpellCard">
-                            <h4 class="spellEquation">Equation</h4>
-                            <input type="text" class="spellEquation" name="attr_spellEquation" />
-                            <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_spellEffect" />
-                            <h4 class="spellArts">Arts</h4>
-                            <input type="text" class="spellArts" name="attr_spellArts" />
-                            <h4 class="spellComponents">Components</h4>
-                            <textarea class="spellComponents" name="attr_spellComponents" />
-                            <h4 class="spellRote">Rote</h4>
-                            <input type="checkbox" name="attr_spellRote" class="spellRote" value="1" />
-                            <h4 class="spellScroll">Scroll</h4>
-                            <input type="checkbox" name="attr_spellScroll" class="spellScroll" value="1" />
+                        <div class="card customCard duelingFocusCard">
+                            <h4 class="formulaDuelingFocus">Formula</h4>
+                            <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
+                            <h4 class="manoeuvre">Manoeuvre</h4>
+                            <input type="text" class="manoeuvre" name="attr_manoeuvre" />
+                            <h4 class="potency">Potency</h4>
+                            <div class="potency">
+                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked/><span class="potency1 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
+                            </div>
+                            <h4 class="form">Form</h4>
+                            <textarea class="form" name="attr_formDuelingFocus" />
 
                             <div class="clockWidget">
-                                <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
-                                <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment" />
+                                <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
+                                <input type="number" min="0" max="13" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
+                                <input type="hidden" name="attr_duelingFocusStressClock" value="0" class="clockSegment" />
                                 <span class="clock"></span>
                                 <span class="clockSpoke clockSpoke0"></span>
                                 <span class="clockSpoke clockSpoke1"></span>
@@ -1449,7 +1450,7 @@
             <section class="resources">
                 <div class="resultResource"><input type="number" name="attr_resultResource" min="0" class="resourceBox" readonly /></div>
                 <div class="paradoxResource"><input type="number" name="attr_paradoxResource" min="0" class="resourceBox" /></div>
-                <div class="aetherResource"><input type="text" name="attr_aetherResource" min="0" class="resourceBox resourceText" readonly /></div>
+                <div class="aetherResource"><input type="text" name="attr_aetherResource" min="0" class="resourceBox" readonly /></div>
             </section>
 
             <!--Disequilibrium-->
