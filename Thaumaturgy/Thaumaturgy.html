@@ -33,10 +33,12 @@
                 <div class="trueNamePic"><textarea name="attr_trueName" class="trueNamePic"></textarea></div>
                 <div class="trueNamePhrase"><textarea name="attr_trueNamePhrase" class="trueNamePhrase"></textarea></div>
             </section>
+
             <!-- Aether -->
             <section class="aetherWidget">
                 <div class="aetherTracker"><input type="number" name="attr_aether" min="0" value="0" class="resourceBox" /></div>
             </section>
+
             <!-- Description -->
             <section class="descriptionWidget">
                 <div class="scholarlyName"><input type="text" name="attr_character_name" class="full aspect" /></div>
@@ -47,6 +49,7 @@
                 <div class="characteristics"><textarea name="attr_characteristic" class="full aspect" /></div>
                 <div class="description"><textarea name="attr_description" class="full aspect" /></div>
             </section>
+
             <!-- Intentions -->
             <section class="intentionWidget">
                 <input type="checkbox" class="conduitBox conjureBox hideCheckbox maxCheckbox" name="attr_Conjure" /><span class="conduitBox conjureBox maxCheckbox conduit"></span>
@@ -60,6 +63,7 @@
                 <input type="checkbox" class="conduitBox transmuteBox hideCheckbox maxCheckbox" name="attr_Transmute" /><span class="conduitBox transmuteBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox wardBox hideCheckbox maxCheckbox" name="attr_Ward" /><span class="conduitBox wardBox maxCheckbox conduit"></span>
             </section>
+
             <!-- Arts -->
             <section class="artsWidget">
                 <!--Animaturgy-->
@@ -259,12 +263,12 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Viviomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
             </section>
-            
+
             <!-- Curses -->
             <section class="curseWidget">
-                <input type="number" class="sortCurses" name="attr_sortCurses" value="1" />
-                <input type="hidden" class="curseToggle" name="attr_sortCurses" value="1" />
-                <input type="hidden" class="levelControl" name="attr_curseNumber" value="3"/>
+                <button type="action" class="sortCurses" name="act_sortCurses"></button>
+                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="3" />
+                <input type="hidden" class="curseNumber" name="attr_curseNumber" value="3" />
                 <div class="card customCard curseCard curse1">
                     <h4 class="curseName">Name</h4>
                     <input type="text" class="curseName" name="attr_curseName1" />
@@ -336,6 +340,12 @@
                     <textarea class="restorationComponents" name="attr_restorationComponents5" />
                 </div>
             </section>
+
+            <!-- Notes -->
+            <section class="notesWidget">
+                <textarea class="notes" name="attr_notes"></textarea>
+            </section>
+
             <!-- Fate -->
             <section class="fateWidget tableSpread">
                 <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
@@ -343,17 +353,17 @@
                 <div class="editMenu editTableSpread">
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Consequences</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" value="0"/>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ConsequencesFacing" value="1" />
                     </div>
                     <div class="rightLegEdit arcanaEdit">
                         <h2>Destiny</h2>
-                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="0" max="13" value="0"/>
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_DestinyFacing" value="1" />
                     </div>
                     <div class="tabletopEdit arcanaEdit">
                         <h2>Obstacle</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13" value="0"/>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ObstacleFacing" value="1" />
                     </div>
                 </div>
@@ -372,6 +382,7 @@
                     <input type="hidden" class="cardChoice" name="attr_Obstacle" />
                     <span class="card landscapeCard"></span>
                 </div>
+                <textarea class="speculation" name="attr_fateSpeculation"></textarea>
             </section>
             <!-- Grimoire -->
             <section class="grimoireWidget">
@@ -463,7 +474,7 @@
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" />
                             <h4 class="potency">Potency</h4>
                             <div class="potency">
-                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked/><span class="potency1 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
                                 <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
                                 <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
                             </div>
@@ -490,7 +501,7 @@
         </div>
     </article>
 
-    <!-- Sanctum -->
+    <!-- Sanctuary -->
     <article class="sheetType shipSheet">
 
         <!--Ship Sheet-->
@@ -1553,15 +1564,14 @@
                     <input type="hidden" class="cardChoice" name="attr_Divergence" />
                     <span class="card landscapeCard"></span>
                 </div>
+                <textarea class="speculation" name="attr_disequilibriumSpeculation"></textarea>
             </section>
 
         </div>
     </article>
 
 
-    <!-- ------------------- -->
     <!--    Sophont Log      -->
-    <!-- ------------------- -->
     <article class="sheetType sophontSheet">
         <div class="sophontSheetGrid">
             <div class="topLineText">Alias:</div>
@@ -1754,9 +1764,7 @@
     </article>
 
 
-    <!-- ----------------------- -->
     <!--	  Creature Log   	 -->
-    <!-- ----------------------- -->
     <article class="sheetType creatureSheet">
         <div class="creatureSheetGrid">
             <div class="topLineText">Species:</div>
@@ -2114,51 +2122,58 @@
     /* Global Attributes */
     var globalAttributes = [];//Global Array for Storage of Player Caster Level
 
-    /* Store Player Caster Level from Ascension Widget */
-    on("change:covenlevel", (event) =>
-    {
-        getAttrs(["covenlevel"], function (values)
-        {           
-                globalAttributes.covenlevel = parseInt(values.covenlevel) || 0;
-                console.log(globalAttributes);
-        });
-    });
-
     /* Set Player Caster Level to Coven Level */
-    on("sheet:opened", (event) =>
+    on("sheet:opened change:covenlevel", (event) =>
     {
-        const setObj = {};
-
-        //Set RankLevel
-        let level = parseInt(globalAttributes.covenlevel) || 0;
-        let rankLevel = "Initiate";
-        let curseNumber = 3;
-
-        if (level > 0 && level < 4)
+        getAttrs(["covenLevel", "level", "selectedSheet"], function (values)
         {
-            rankLevel = "Apprentice, level " + level;
-        }
-        else if (level < 8)
-        {
-            rankLevel = "Keeper, level " + level;
-            curseNumber = 4;
-        }
-        else if (level < 11)
-        {
-            rankLevel = "Graduate, level " + level;
-            curseNumber = 5;
-        }
-        else
-        {
-            rankLevel = "Scholar, level " + level;
-        }
-        setObj.rankLevel = rankLevel;
-        setObj.curseNumber = curseNumber;
+            let selectedSheet = parseInt(values.selectedSheet)
+            /* Globally Store Coven Level from Ascension Widget on Sancturay Sheet*/
+            if (selectedSheet == 2)
+            {
+                globalAttributes.covenlevel = parseInt(values.covenLevel) || 0;
+                console.log(globalAttributes);
+            }
+            /* Set Level elements on Player Caster Sheets*/
+            else if (globalAttributes.covenlevel && selectedSheet == 1)
+            {
+                //Set RankLevel
+                let level = parseInt(globalAttributes.covenlevel) || 0;
+                let rankLevel = "Initiate";
+                let curseNumber = 3;
 
-        setObj.level = level;
+                if (level == 0)
+                {
+                    rankLevel = "Initiate";
+                }
+                else if (level < 4)
+                {
+                    rankLevel = "Apprentice, level " + level;
+                }
+                else if (level < 8)
+                {
+                    rankLevel = "Keeper, level " + level;
+                    curseNumber = 4;
+                }
+                else if (level < 11)
+                {
+                    rankLevel = "Graduate, level " + level;
+                    curseNumber = 5;
+                }
+                else
+                {
+                    rankLevel = "Scholar, level " + level;
+                }
 
-        console.log(setObj);
-        setAttrs(setObj);
+                const setObj = {};
+                setObj.rankLevel = rankLevel;
+                setObj.curseNumber = curseNumber;
+                setObj.level = level;
+
+                console.log(setObj);
+                setAttrs(setObj);
+            }
+        });
     });
 
     /* Generate Spellcasting Macro */
@@ -2506,20 +2521,25 @@
     });
 
     /* Wrap Around for Sort Curse*/
-    on("change:sortcurses", (event) =>
+    on("clicked:sortcurses", (event) =>
     {
-        getAttrs(["sortCurses","curseNumber"], function (values)
+        getAttrs(["curseFocus", "curseNumber"], function (values)
         {
             const setObj = {};
-            //Sort Curse
-            let sortCurse = parseInt(values.sortCurses) || 0;
+            //Curse on top
+            let curseFocus = parseInt(values.curseFocus) || 0;
 
             //Number of Curses
             let curseNumber = parseInt(values.curseNumber) || 0;
+            curseFocus++;
 
-            if (sortCurse > curseNumber)
+            if (curseFocus > curseNumber)
             {
-                setObj.sortCurse = 1;
+                setObj.curseFocus = 1;
+            }
+            else
+            {
+                setObj.curseFocus = curseFocus;
             }
             console.log(setObj);
             setAttrs(setObj);
