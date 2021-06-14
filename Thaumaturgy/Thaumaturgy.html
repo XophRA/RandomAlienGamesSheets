@@ -18,8 +18,8 @@
         <div class="version">Version 0.1</div>
     </header>
     <!--Hidden Sheet Selection Radio switch-->
-    <input type="radio" name="attr_selectedSheet" class="hidden crewmemberSelector" value="1" checked>
-    <input type="radio" name="attr_selectedSheet" class="hidden shipSelector" value="2">
+    <input type="radio" name="attr_selectedSheet" class="hidden playerCasterSelector" value="1" checked>
+    <input type="radio" name="attr_selectedSheet" class="hidden sanctumSelector" value="2">
     <input type="radio" name="attr_selectedSheet" class="hidden mediumSelector" value="3">
     <input type="radio" name="attr_selectedSheet" class="hidden sophontSelector" value="4">
     <input type="radio" name="attr_selectedSheet" class="hidden creatureSelector" value="5">
@@ -41,13 +41,13 @@
 
             <!-- Description -->
             <section class="descriptionWidget">
-                <div class="scholarlyName"><input type="text" name="attr_character_name" class="full aspect" /></div>
+                <div class="scholarlyName"><input type="text" name="attr_character_name" /></div>
                 <input type="hidden" name="attr_level" />
-                <div class="rankLevel"><input type="text" name="attr_rankLevel" class="full aspect" readonly /></div>
-                <div class="pronouns"><input type="text" name="attr_pronouns" class="full aspect" /></div>
-                <div class="apprenticeship"><input type="text" name="attr_apprenticeship" class="full aspect" /></div>
-                <div class="characteristics"><textarea name="attr_characteristic" class="full aspect" /></div>
-                <div class="description"><textarea name="attr_description" class="full aspect" /></div>
+                <div class="rankLevel"><input type="text" name="attr_rankLevel" readonly /></div>
+                <div class="pronouns"><input type="text" name="attr_pronouns" /></div>
+                <div class="apprenticeship"><input type="text" name="attr_apprenticeship" /></div>
+                <div class="characteristics"><textarea name="attr_characteristic" /></div>
+                <div class="description"><textarea name="attr_description" /></div>
             </section>
 
             <!-- Intentions -->
@@ -384,6 +384,7 @@
                 </div>
                 <textarea class="speculation" name="attr_fateSpeculation"></textarea>
             </section>
+
             <!-- Grimoire -->
             <section class="grimoireWidget">
                 <div class="deckHeader deck1">
@@ -501,24 +502,23 @@
         </div>
     </article>
 
-    <!-- Sanctuary -->
-    <article class="sheetType shipSheet">
-
-        <!--Ship Sheet-->
-        <div class="shipSheetGrid">
+    <!-- Sanctum -->
+    <article class="sheetType SanctumSheet">
+        <!-- Sanctum Sheet Grid -->
+        <div class="sanctumSheetGrid">
             <!--Ship Aspects-->
             <div class="shipAspects">
                 <div class="topLineText designation">Designation:</div>
-                <div class="designationPrefix"><input type="text" name="attr_designationPrefix" class="full" /></div>
-                <div class="designationName"><input type="text" name="attr_character_name" class="full" /></div>
+                <div class="designationPrefix"><input type="text" name="attr_designationPrefix" /></div>
+                <div class="designationName"><input type="text" name="attr_character_name" /></div>
                 <div class="patron">Patron:</div>
-                <div class="patronName"><input type="text" name="attr_PatronFaction" class="full" /></div>
+                <div class="patronName"><input type="text" name="attr_PatronFaction" /></div>
                 <div class="flag">Flag:</div>
-                <div class="flagType"><input type="text" name="attr_Flag" class="full"></div>
+                <div class="flagType"><input type="text" name="attr_Flag"></div>
                 <div class="tactics">Tactics:</div>
-                <div class="tacticList"><input type="text" name="attr_Tactics" class="full" /></div>
+                <div class="tacticList"><input type="text" name="attr_Tactics" /></div>
                 <div class="captain">Captain:</div>
-                <div class="captainName"><input type="text" name="attr_Captain" class="full" /></div>
+                <div class="captainName"><input type="text" name="attr_Captain" /></div>
             </div>
             <!--Ascension-->
             <section class="ascensionWidget">
@@ -542,548 +542,66 @@
                 <span class="level lvl11">11</span>
                 <span class="level lvl12">12</span>
                 <span class="level lvl13">13</span>
-                <div class="card customCard ascensionCard">
-                    <h4 class="ascensionObjective">Objective</h4>
-                    <input type="text" class="ascensionObjective" name="attr_ascensionObjective" />
-                    <h4 class="ascensionMilestones">Milestones</h4>
-                    <textarea class="ascensionMilestones" name="attr_ascensionMilestones" />
-                    <h4 class="ascensionRite">Rite</h4>
-                    <input type="text" class="ascensionRite" name="attr_ascensionRite" />
-
+                <div class="card customCard ascensionCard ritualCard">
+                    <h4 class="ritualObjective">Objective</h4>
+                    <input type="text" class="ritualObjective" name="attr_ascensionObjective" />
+                    <h4 class="ritualMilestones">Milestones</h4>
+                    <textarea class="ritualMilestones" name="attr_ascensionMilestones" />
+                    <h4 class="ritualWorkings">Workings</h4>
+                    <textarea class="ritualWorkings" name="attr_ascensionWorkings" />
+                    <div class="clockWidget">
+                        <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
+                        <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
+                        <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment" />
+                        <span class="clock"></span>
+                        <span class="clockSpoke clockSpoke0"></span>
+                        <span class="clockSpoke clockSpoke1"></span>
+                        <span class="clockSpoke clockSpoke2"></span>
+                        <span class="clockSpoke clockSpoke3"></span>
+                        <span class="clockSpoke clockSpoke4"></span>
+                        <span class="clockSpoke clockSpoke5"></span>
+                        <span class="clockSpoke clockSpoke6"></span>
+                    </div>
                 </div>
             </section>
-            <!-- Systems & Amenities-->
-            <div class="systemsAmenities">
-                <!--Ship Systems-->
-                <div class="systemWidget">
-                    <h2 class=" systemWidegetTitle">Ship Systems</h2>
-                    <!--Reactor-->
-                    <div class="reactorSystem system">
-                        <div class="systemTitle">Reactor</div>
-                        <div class="systemDetail">Power Supply</div>
-                        <div class="systemRange">Rng: Zone</div>
-                        <div class="systemDivide">
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="1" /><span class="inlineCapacityPips capacityPips"></span>
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="2" /><span class="inlineCapacityPips capacityPips"></span>
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="3" checked /><span class="inlineCapacityPips capacityPips"></span>
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="4" /><span class="inlineCapacityPips capacityPips"></span>
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="5" /><span class="inlineCapacityPips capacityPips"></span>
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="6" /><span class="inlineCapacityPips capacityPips"></span>
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="7" /><span class="inlineCapacityPips capacityPips"></span>
-                            <input type="radio" class="hideCheckbox inlineCapacityCheckbox" name="attr_shipReactor" value="8" /><span class="inlineCapacityPips capacityPips"></span>
-                        </div>
-                        <div class="systemChargeTitle">Charge:</div>
-                        <div class="systemChargeBox"><input type="number" name="attr_shipReactorCharge" min="0" max="9" class="currentCharge" /></div>
-                        <div class="systemOverchargeTitle">Overcharge:</div>
-                        <div class="systemOverchargeSymbol"><input type="checkbox" class="hideCheckbox inlineCheckboxLarge" name="attr_shipReactorOvercharge" value="1" /><span class="inlineOvercharge overcharge"></span></div>
-                    </div>
-                    <!--Sensors-->
-                    <div class="shipSystem system">
-                        <div class="systemTitle">Sensors</div>
-                        <div class="systemDetail">Detection</div>
-                        <div class="systemRange">Rng: Long</div>
-                        <div class="systemListTitle">Mods</div>
-                        <div class="systemListMod1">Survey Sensor:</div>
-                        <div class="systemListPips1">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsSurveySensor" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsSurveySensor" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsSurveySensor" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsSurveySensor" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod2">Depth Analyser:</div>
-                        <div class="systemListPips2">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsDepthAnalyser" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsDepthAnalyser" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsDepthAnalyser" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsDepthAnalyser" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod3">Area Effect:</div>
-                        <div class="systemListPips3">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsAreaEffect" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsAreaEffect" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsAreaEffect" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsAreaEffect" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod4">Range Compensator:</div>
-                        <div class="systemListPips4">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsRangeCompensator" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsRangeCompensator" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsRangeCompensator" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_SensorsRangeCompensator" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                    </div>
-                    <!--Grav Drive-->
-                    <div class="shipSystem system">
-                        <div class="systemTitle">Grav Drive</div>
-                        <div class="systemDetail">Travel / Movement</div>
-                        <div class="systemRange">Rng: Zone</div>
-                        <div class="systemListTitle">Mods</div>
-                        <div class="systemListMod1">Atmospheric Thrusters:</div>
-                        <div class="systemListPips1">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveAtmosphericThrusters" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveAtmosphericThrusters" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveAtmosphericThrusters" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveAtmosphericThrusters" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod2">Orbital Injector:</div>
-                        <div class="systemListPips2">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveOrbitalInjectors" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveOrbitalInjectors" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveOrbitalInjectors" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveOrbitalInjectors" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod3">Fold Inducer:</div>
-                        <div class="systemListPips3">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveFoldInducer" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveFoldInducer" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveFoldInducer" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveFoldInducer" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod4">Wake Generator:</div>
-                        <div class="systemListPips4">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveWakeGenerator" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveWakeGenerator" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveWakeGenerator" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_gravDriveWakeGenerator" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                    </div>
-                    <!--Data Storage-->
-                    <div class="dataStorage system">
-                        <div class="systemTitle">Data Storage</div>
-                        <div class="systemAIName">AI:&nbsp;<input type="text" name="attr_AI" class="most" /></div>
-                        <div class="systemDataBox"><textarea name="attr_data" class="data"></textarea></div>
-                    </div>
-                    <!--Pulse Array-->
-                    <div class="weaponSystem system">
-                        <div class="systemTitle">Pulse Array</div>
-                        <div class="systemDetail">Tractor / Weapon</div>
-                        <div class="systemDamage">2</div>
-                        <div class="systemRange">Rng: Region</div>
-                        <div class="systemListTitle">Mods</div>
-                        <div class="systemListMod1">Space Targeter:</div>
-                        <div class="systemListPips1">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySpaceTargeter" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySpaceTargeter" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySpaceTargeter" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySpaceTargeter" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod2">Surface Targeter:</div>
-                        <div class="systemListPips2">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySurfaceTargeter" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySurfaceTargeter" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySurfaceTargeter" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArraySurfaceTargeter" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod3">Damage Boost:</div>
-                        <div class="systemListPips3">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayChargedPulse" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayChargedPulse" value="1" /><span class="inlinePips Boost"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayChargedPulse" value="2" /><span class="inlinePips Boost"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayChargedPulse" value="3" /><span class="inlinePips Boost"></span>
-                        </div>
-                        <div class="systemListMod4">Tractor Lifter:</div>
-                        <div class="systemListPips4">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayTractorLifter" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayTractorLifter" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayTractorLifter" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_PulseArrayTractorLifter" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                    </div>
-                    <!--Shields-->
-                    <div class="shipSystem system">
-                        <div class="systemTitle">Shields</div>
-                        <div class="systemDetail">Defend / Cloak</div>
-                        <div class="systemRange">Rng: Zone</div>
-                        <div class="systemListTitle">Mods</div>
-                        <div class="systemListMod1">Kinetic Deflector:</div>
-                        <div class="systemListPips1">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsKineticDeflector" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsKineticDeflector" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsKineticDeflector" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsKineticDeflector" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod2">Energy Dissipater:</div>
-                        <div class="systemListPips2">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsEnergyDissipater" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsEnergyDissipater" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsEnergyDissipater" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsEnergyDissipater" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod3">Holoprojector:</div>
-                        <div class="systemListPips3">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsHoloprojector" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsHoloprojector" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsHoloprojector" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsHoloprojector" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                        <div class="systemListMod4">Multi-field:</div>
-                        <div class="systemListPips4">
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsMultifield" checked /><span class="inlinePips ZeroDie"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsMultifield" value="1" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsMultifield" value="2" /><span class="inlinePips D10"></span>
-                            <input type="radio" class="inlinePipCheckbox hideCheckbox" name="attr_shipShieldsMultifield" value="3" /><span class="inlinePips D10"></span>
-                        </div>
-                    </div>
+            <!-- Rituals -->
+            <section class="ritualWidget">
+                <div class="deckHeader deck1">
+                    <input type="checkbox" class="collapseDeck" name="attr_collapseRitualDeck" value="1" /><span class="collapseDeck"></span>
                 </div>
-                <!--Ship Amenities-->
-                <div class="amenitiesWidget">
-                    <h2 class=" amenitiesTitle">Amenities</h2>
-                    <div class="amenities">
-                        <div class="amenityList1">Artery</div>
-                        <div class="amenityDetails1">Life support arterial system</div>
-                        <div class="amenityList2">Bridge</div>
-                        <div class="amenityDetails2">Command and control</div>
-                        <div class="amenityList3">Galley</div>
-                        <div class="amenityDetails3">Kitchen and dining room</div>
-                        <div class="amenityList4">Lounge</div>
-                        <div class="amenityDetails4">Recreational space for rest and relaxation</div>
-                        <div class="amenityList5">Quarters</div>
-                        <div class="amenityDetails5">Sleeps six</div>
-                        <div class="amenityList6">Cargo Hold</div>
-                        <div class="amenityDetails6">Two-story cargo space;<input type="number" min="0" value="660" name="attr_CargoTonnage">tonnes</div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent01" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails01" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent02" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails02" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent03" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails03" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent04" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails04" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent05" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails05" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent06" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails06" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent07" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails07" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent08" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails08" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent09" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails09" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent10" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails10" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent11" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails11" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent12" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails12" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent13" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails13" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent14" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails14" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponent15" class="full"></div>
-                        <div class="amenityComponent"><input type="text" name="attr_amenityComponentDetails15" class="full"></div>
-
-                    </div>
+                <input type="hidden" class="collapseToggle" name="attr_collapseRitualDeck" />
+                <div class="deck deck1">
+                    <fieldset class="repeating_ritualcard">
+                        <div class="card customCard ritualCard">
+                            <h4 class="ritualObjective">Objective</h4>
+                            <input type="text" class="ritualObjective" name="attr_ritualObjective" />
+                            <h4 class="ritualMilestones">Milestones</h4>
+                            <textarea class="ritualMilestones" name="attr_ritualMilestones" />
+                            <h4 class="ritualWorkings">Workings</h4>
+                            <textarea class="ritualWorkings" name="attr_ritualWorkings" />
+                            <div class="clockWidget">
+                                <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
+                                <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
+                                <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment" />
+                                <span class="clock"></span>
+                                <span class="clockSpoke clockSpoke0"></span>
+                                <span class="clockSpoke clockSpoke1"></span>
+                                <span class="clockSpoke clockSpoke2"></span>
+                                <span class="clockSpoke clockSpoke3"></span>
+                                <span class="clockSpoke clockSpoke4"></span>
+                                <span class="clockSpoke clockSpoke5"></span>
+                                <span class="clockSpoke clockSpoke6"></span>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
-            </div>
-            <!--Ship Modules-->
-            <div class="moduleWidget">
-                <h2 class=" moduleWidgetTitle">Ship Modules</h2>
-                <!--Laboratories-->
-                <div class="basicModule module">
-                    <div class="moduleTitle">Laboratories</div>
-                    <div class="moduleDetail">Projects/Vignettes</div>
-                    <!--BioLab-->
-                    <input type="checkbox" name="attr_BioLabFittings" class="hideCheckbox smallCheckbox moduleListLabCheckbox1" value="1" />
-                    <span class="smallPips hexSelector moduleListLabCheckbox1"></span>
-                    <div class="moduleListLabTitle1">BioLab Fittings</div>
-                    <div class="moduleListCost1">1</div>
-                    <div class="moduleListFitting1">BioTank</div>
-                    <div class="moduleListPips1"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                    <!--GravLab-->
-                    <input type="checkbox" name="attr_advancedGravLab" class="hideCheckbox smallCheckbox moduleListLabCheckbox2" value="1" />
-                    <span class="smallPips hexSelector moduleListLabCheckbox2"></span>
-                    <div class="moduleListLabTitle2">GravLab Fittings</div>
-                    <div class="moduleListCost3">1</div>
-                    <div class="moduleListFitting3">Data core</div>
-                    <div class="moduleListPips3"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                    <!--MechLab-->
-                    <input type="checkbox" name="attr_advancedMechLab" class="hideCheckbox smallCheckbox moduleListLabCheckbox3" value="1" />
-                    <span class="smallPips hexSelector moduleListLabCheckbox3"></span>
-                    <div class="moduleListLabTitle3">MechLab Fittings</div>
-                    <div class="moduleListCost5">1</div>
-                    <div class="moduleListFitting5">Suspension Bench</div>
-                    <div class="moduleListPips5"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                </div>
-                <!--Hydroponics-->
-                <div class="basicModule module">
-                    <div class="moduleTitle">Hydroponics</div>
-                    <div class="moduleDetail">Life Support/Food (6)</div>
-                    <div class="moduleListTitle">Fittings</div>
-                    <div class="moduleListCost1">1</div>
-                    <div class="moduleListFitting1">Support a Person/Day</div>
-                </div>
-                <!--Ready Room-->
-                <div class="basicModule module">
-                    <div class="moduleTitle">Ready Room</div>
-                    <div class="moduleDetail">Airlock/EVA Filters</div>
-                    <div class="moduleRange">Rng: Zone</div>
-                    <div class="moduleListTitle">EVA Suit Fittings</div>
-                    <div class="moduleListCost1">1</div>
-                    <div class="moduleListFitting1">Caustics</div>
-                    <div class="moduleListCost2">1</div>
-                    <div class="moduleListFitting2">Pathogen</div>
-                    <div class="moduleListCost3">1</div>
-                    <div class="moduleListFitting3">Plasma</div>
-                    <div class="moduleListCost4">1</div>
-                    <div class="moduleListFitting4">Pressure</div>
-                    <div class="moduleListCost5">1</div>
-                    <div class="moduleListFitting5">Radiation</div>
-                    <div class="moduleListCost6">1</div>
-                    <div class="moduleListFitting6">Combat</div>
-                </div>
-                <!--InSec-->
-                <div class="weaponModule module">
-                    <div class="moduleTitle">InSec</div>
-                    <div class="moduleDamage">1</div>
-                    <div class="moduleDetail">Internal Security</div>
-                    <div class="moduleRange">Rng: SDV</div>
-                    <div class="moduleListTitle">Fittings</div>
-                    <div class="moduleListCost1">1</div>
-                    <div class="moduleListFitting1">Lockdown</div>
-                    <div class="moduleListCost2">1</div>
-                    <div class="moduleListFitting2">Search drones</div>
-                    <div class="moduleListPips2"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                    <div class="moduleListCost3">5</div>
-                    <div class="moduleListFitting3">Indictor foam</div>
-                    <div class="moduleListPips3"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                </div>
-                <!--Brig-->
-                <div class="basicModule module">
-                    <input type="checkbox" name="attr_brig" class="hideCheckbox smallCheckbox moduleOptionalCheckbox" value="1" />
-                    <span class="smallPips hexSelector moduleOptionalCheckbox"></span>
-                    <div class="moduleOptionalTitle">Brig</div>
-                    <div class="moduleDetail">Holding Cells</div>
-                    <div class="moduleListTitle">Fittings</div>
-                    <div class="moduleListCost1">1</div>
-                    <div class="moduleListFitting1">Restraints</div>
-                    <div class="moduleListPips1"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                    <div class="moduleListCost2">2</div>
-                    <div class="moduleListFitting2">Secure Prisoner/Day</div>
-                    <div class="moduleListCost3">3</div>
-                    <div class="moduleListFitting3">Cell Stunner</div>
-                    <div class="moduleListPips3"><span class="inlinePips FittingBoost"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingBoost"></span></div>
-                </div>
-                <!--Compartments-->
-                <div class="basicModule module">
-                    <input type="checkbox" name="attr_compartments" class="hideCheckbox smallCheckbox moduleOptionalCheckbox" value="1" />
-                    <span class="smallPips hexSelector moduleOptionalCheckbox"></span>
-                    <div class="moduleOptionalTitle"> Compartments</div>
-                    <div class="moduleDetail">Concealed Hold [10t]</div>
-                    <div class="moduleListTitle">Fittings</div>
-                    <div class="moduleListCost1">2</div>
-                    <div class="moduleListFitting1">Feed Passenger/Day</div>
-                    <div class="moduleListCost2">3</div>
-                    <div class="moduleListFitting2">Scan blockers</div>
-                    <div class="moduleListPips2"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                    <div class="moduleListCost3">5</div>
-                    <div class="moduleListFitting3">Holoprojector</div>
-                    <div class="moduleListPips3"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                </div>
-                <!--Ram-->
-                <div class="weaponModule module">
-                    <input type="checkbox" name="attr_ram" class="hideCheckbox smallCheckbox moduleOptionalCheckbox" value="1" />
-                    <span class="smallPips hexSelector moduleOptionalCheckbox"></span>
-                    <div class="moduleOptionalTitle">Ram</div>
-                    <div class="moduleDetail">Breaching Lock</div>
-                    <div class="moduleDamage">1</div>
-                    <div class="moduleRange">Rng: Zone</div>
-                    <div class="moduleListTitle">Fittings</div>
-                    <div class="moduleListCost1">5</div>
-                    <div class="moduleListFitting1">Inflate boarding lock</div>
-                </div>
-                <!--Launcher-->
-                <div class="weaponModule module">
-                    <input type="checkbox" name="attr_launcher" class="hideCheckbox smallCheckbox moduleOptionalCheckbox" value="1" />
-                    <span class="smallPips hexSelector moduleOptionalCheckbox"></span>
-                    <div class="moduleOptionalTitle">Launcher</div>
-                    <div class="moduleDetail">Projectiles</div>
-                    <div class="moduleDamage">1</div>
-                    <div class="moduleRange">Rng: Long</div>
-                    <div class="moduleListTitle">Projectiles</div>
-                    <div class="moduleListCost1">3</div>
-                    <div class="moduleListFitting1">Chaff</div>
-                    <div class="moduleListCost2">5</div>
-                    <div class="moduleListFitting2">Indictor Mines</div>
-                    <div class="moduleListPips2"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span></div>
-                    <div class="moduleListCost3">7</div>
-                    <div class="moduleListFitting3">Plasma Mines</div>
-                    <div class="moduleListPips3"><span class="inlinePips FittingBoost"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingBoost"></span></div>
-                    <div class="moduleListCost4">9</div>
-                    <div class="moduleListFitting4">Torpedo</div>
-                    <div class="moduleListPips4"><span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingD10"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingBoost"></span>&nbsp;&nbsp;&nbsp;<span class="inlinePips FittingBoost"></span></div>
-                </div>
-                <!--Launch Bay-->
-                <div class="launchBay">
-                    <div class="launchBayTitle">Launch Bay</div>
-                    <div class="launchBayDetail">Garage / Trailer Printer</div>
-                    <div class="launchBayTugTitle">Tug</div>
-                    <div class="launchBayTugSystem1">Pulse Drive</div>
-                    <div class="launchBayTugDetails1">Atmospheric Thrusters: 2, Orbital Injector: 1</div>
-                    <div class="launchBayTugSystem2">Shields</div>
-                    <div class="launchBayTugDetails2">Kinetic Deflector: 2 Energy Dissipater: 2</div>
-                    <div class="launchBayArmourPrinterTitle">Armour Printer</div>
-                    <div class="launchBayArmourCost">2</div>
-                    <div class="launchBayArmourFitting">Armour</div>
-                    <div class="launchBayArmourPips">
-                        <input type="checkbox" name="attr_tugArmour3Slot" class="hideCheckbox smallCheckbox launchBayArmourPip1" value="1" />
-                        <span class="smallPips hexSelector launchBayArmourPip1"></span>
-                        <input name="attr_tugArmour3Condition" type="checkbox" class="hideCheckbox mediumCheckbox launchBayArmourPip2" value="1" />
-                        <span class="mediumPips armour launchBayArmourPip2"></span>
-                        <input type="checkbox" name="attr_tugArmour2Slot" class="hideCheckbox smallCheckbox launchBayArmourPip3" value="1" />
-                        <span class="smallPips hexSelector launchBayArmourPip3"></span>
-                        <input name="attr_tugArmour2Condition" type="checkbox" class="hideCheckbox mediumCheckbox launchBayArmourPip4" value="1" />
-                        <span class="mediumPips armour launchBayArmourPip4"></span>
-                        <input type="checkbox" name="attr_portArmour1Slot" class="hideCheckbox smallCheckbox launchBayArmourPip5" value="1" />
-                        <span class="smallPips hexSelector launchBayArmourPip5"></span>
-                        <input name="attr_tugArmour1Condition" type="checkbox" class="hideCheckbox mediumCheckbox launchBayArmourPip6" value="1" />
-                        <span class="mediumPips armour launchBayArmourPip6"></span>
-                    </div>
-                    <div class="launchBaycapacityPips">
-                        <input type="radio" class="hideCheckbox inlineCapacityCheckboxSmall" name="attr_tugReactor" value="1" /><span class="inlineCapacityPipsSmall capacityPips"></span>
-                        <input type="radio" class="hideCheckbox inlineCapacityCheckboxSmall" name="attr_tugReactor" value="2" /><span class="inlineCapacityPipsSmall capacityPips"></span>
-                        <input type="radio" class="hideCheckbox inlineCapacityCheckboxSmall" name="attr_tugReactor" value="3" checked /><span class="inlineCapacityPipsSmall capacityPips"></span>
-                    </div>
-                    <div class="launchBayChargeTitle">Charge:</div>
-                    <div class="launchBayChargeBox"><input type="number" name="attr_tugReactorCharge" min="0" max="4" class="tugReactorCharge" /></div>
-                    <div class="launchBayOverchargeSymbol"><input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_tugReactorOvercharge" value="1" /><span class="inlineArmour overcharge"></span></div>
-
-                    <!--Condition Slots-->
-                    <div class="launchBayTugConditionTitle">Conditions</div>
-                    <div class="launch-bay-tug-conditions">
-                        <input class="resilience-slot-2 hideCheckbox largeCheckbox" type="checkbox" name="attr_tugResilienceSlot2Condition" value="1" />
-                        <span class="resilience resilience-slot-2 largePips "></span>
-                        <input class='resilience-slot-1 hideCheckbox largeCheckbox' type="checkbox" name="attr_tugResilienceSlot1Condition" />
-                        <span class="resilience resilience-slot-1 largePips"></span>
-                        <input class='integrity hideCheckbox largeCheckbox' type="checkbox" name="attr_tugIntegrityCondition" value="1" />
-                        <span class="integrity largePips"></span>
-                        <input class='vital hideCheckbox largeCheckbox' type="checkbox" name="attr_tugVitalityCondition" value="1" />
-                        <span class="vital largePips"></span>
-                    </div>
-                    <!--Trailer Printer-->
-                    <div class="launchBayTrailerTitle">Trailer Printer</div>
-                    <div class="launchBayTrailerCost1">0</div>
-                    <div class="launchBayTrailerType1">Cargo</div>
-                    <div class="launchBayTrailerCost2">6</div>
-                    <div class="launchBayTrailerType2">Transport</div>
-                    <div class="launchBayTrailerArmour2">
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_transportArmour2Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_transportArmour1Condition" value="1" /><span class="inlineArmour armour"></span>
-                    </div>
-                    <div class="launchBayTrailerCost3">9</div>
-                    <div class="launchBayTrailerType3">Flight</div>
-                    <div class="launchBayTrailerDetails3">Atmospheric Thrusters: +2, Orbital Injector: +2</div>
-                    <div class="launchBayTrailerArmour3">
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_flightArmour1Condition" value="1" /><span class="inlineArmour armour"></span>
-                    </div>
-                    <div class="launchBayTrailerCost4">12</div>
-                    <div class="launchBayTrailerType4">Drop</div>
-                    <div class="launchBayTrailerDetails4">3 drop pods, drop craft: 3</div>
-                    <div class="launchBayTrailerArmour4">
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_dropArmour3Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_dropArmour2Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_dropArmour1Condition" value="1" /><span class="inlineArmour armour"></span>
-                    </div>
-                    <div class="launchBayTrailerCost5">12</div>
-                    <div class="launchBayTrailerType5">Boarding</div>
-                    <div class="launchBayTrailerDetails5">Holoprojector: 3, Boarding lock</div>
-                    <div class="launchBayTrailerArmour5">
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_boardingArmour3Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_boardingArmour2Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_boardingArmour1Condition" value="1" /><span class="inlineArmour armour"></span>
-                    </div>
-                    <div class="launchBayTrailerCost6">12</div>
-                    <div class="launchBayTrailerType6">Tractor</div>
-                    <div class="launchBayTrailerDetails6">Orbital Injector: +2, Wake Generator: 3, Tractor Lifter: 3</div>
-                    <div class="launchBayTrailerArmour6">
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_tractorArmour2Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_tractorArmour1Condition" value="1" /><span class="inlineArmour armour"></span>
-                    </div>
-                    <div class="launchBayTrailerCost7">15</div>
-                    <div class="launchBayTrailerType7">Survey</div>
-                    <div class="launchBayTrailerDetails7">Survey Sensors: 4, Depth Analyser: 3, BioLab</div>
-                    <div class="launchBayTrailerArmour7">
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_surveyArmour1Condition" value="1" /><span class="inlineArmour armour"></span>
-                    </div>
-                    <div class="launchBayTrailerCost8">18</div>
-                    <div class="launchBayTrailerType8">Fighter</div>
-                    <div class="launchBayTrailerDetails8">Orbital Injector: +2, Kenetic Deflector, Energy Dissipater</div>
-                    <div class="launchBayTrailerDetails9">Pulse Array&mdash;Space Target: 2, Surface Targetor: 3</div>
-                    <div class="launchBayTrailerArmour8">
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_fighterArmour3Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_fighterArmour2Condition" value="1" /><span class="inlineArmour armour"></span>
-                        <input type="checkbox" class="hideCheckbox inlineCheckboxMedium" name="attr_fighterArmour1Condition" value="1" /><span class="inlineArmour armour"></span>
-                    </div>
-                    <!--Condition Slots-->
-                    <div class="launchBayTrailerConditionTitle">Conditions</div>
-                    <div class="launch-bay-trailer-conditions">
-                        <input class="resilience-slot hideCheckbox largeCheckbox" type="checkbox" name="attr_trailerResilienceSlotCondition" value="1" />
-                        <span class="resilience resilience-slot largePips"></span>
-                        <input class="integrity hideCheckbox largeCheckbox" type="checkbox" name="attr_trailerIntegrityCondition" value="1" />
-                        <span class="integrity largePips"></span>
-                        <input class="vital hideCheckbox largeCheckbox" type="checkbox" name="attr_trailerVitalityCondition" value="1" />
-                        <span class="vital largePips"></span>
-                    </div>
-                </div>
-            </div>
-
-            <!--Page 2-->
-            <div class="shipPG2">
-                <div class="resourceWidget">
-                    <!--Resources-->
-                    <div class="resource">
-                        <div class="resourceTitle">Complex Materials</div>
-                        <div class="resourceBoxPlace"><input type="number" name="attr_complexMaterials" min="0" class="resourceBox" /></div>
-                        <div class="resourceTonnes">tonnes</div>
-                    </div>
-                    <div class="resource">
-                        <div class="resourceTitle">Supply</div>
-                        <div class="resourceBoxPlace"><input type="number" name="attr_supply" min="0" class="resourceBox" /></div>
-                        <div class="resourceTonnes">tonnes</div>
-                    </div>
-                    <div class="resource">
-                        <div class="resourceTitle">Total</div>
-
-                        <div class="resourceBoxPlace"><input type="hidden" name="attr_totalResourceOverload" class="colorChanger" /><input type="number" name="attr_totalResource" min="0" class="resourceBox" readonly /></div>
-                        <div class="resourceTonnes">tonnes</div>
-                    </div>
-                </div>
-                <!--Cargo-->
-                <div class="cargo">
-                    <div class="cargoTitle">Assets & Trade Goods</div>
-                    <div class="cargoWorth">Worth</div>
-                    <div class="cargoTonnage">Tonnage</div>
-                    <div class="cargoBox">
-                        <fieldset class="repeating_shipCargo" name="repeating_shipCargo">
-                            <input type="text" name="attr_shipCargo" class="fourFifths" />
-                            <input type="number" min="0" name="attr_shipCargoRV" />
-                            <input type="number" min="0" name="attr_shipCargoTonnage" />
-                        </fieldset>
-                    </div>
-                </div>
-                <!--Letter of Marque-->
-                <div class="letterOfMarque">
-                    <div class="letterOfMarqueTitle">Letter of Marque</div>
-                    <div class="letterOfMarqueGreeting">Attention: Local Port Authority,</div>
-                    <div class="letterOfMarqueBoxPlace"><textarea class="letterOfMarqueBody" name="attr_statementContract"></textarea></div>
-                    <div class="letterOfMarquePatron"><input type="text" class="full" name="attr_patronCommissionaire" /> </div>
-                    <div class="letterOfMarquePatronTitle">Patron Commissionaire</div>
-                </div>
-                <!--Notes-->
-                <div class="notes">
-                    <div class="cargoTitle">Notes</div>
-                    <div class="noteBox">
-                        <fieldset class="repeating_notes">
-                            <input type="text" name="attr_shipNotes" class="full" />
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
     </article>
 
     <!-- Medium -->
     <article class="sheetType mediumSheet">
-        <!--Medium Sheet-->
+        <!-- Medium Sheet Grid -->
         <div class="mediumSheetGrid">
             <!--Spellcasting Process-->
             <section class="spellcastingProcess">
@@ -1570,8 +1088,7 @@
         </div>
     </article>
 
-
-    <!--    Sophont Log      -->
+    <!-- Folk -->
     <article class="sheetType sophontSheet">
         <div class="sophontSheetGrid">
             <div class="topLineText">Alias:</div>
@@ -1655,116 +1172,11 @@
             <div class="sophontTextColumnA threatTextBox sophontTagBox sophontTagList"><textarea name="attr_tags" class="threatTextBox sophontTagBox"></textarea></div>
             <div class="sophontAspectColumnA sophontNotes">Notes:</div>
             <div class="sophontTextColumnFull threatTextBox sophontNotes"><input type="text" name="attr_notes" /></div>
-            <!--Condition Slots-->
-            <div class="sophontConditionWidget">
-                <div class="sophontConditionTitle">Conditions Slots</div>
-                <!--Armour 1-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontConditionCheckbox sophontCondition1" name="attr_armourSlot1" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition1"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition1">
-                    <select name="attr_sophontArmourSlot1">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontConditionArmour sophontCondition1" name="attr_armourCondition1" value="1" />
-                <span class="largePips armour sophontConditionArmour sophontCondition1"></span>
-                <!--Armour 2-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontConditionCheckbox sophontCondition2" name="attr_armourSlot2" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition2"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition2">
-                    <select name="attr_sophontArmourSlot2">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontConditionArmour sophontCondition2" name="attr_armourCondition2" value="1" />
-                <span class="largePips armour sophontConditionArmour sophontCondition2"></span>
-                <!--Armour 3-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontCondition3 sophontConditionCheckbox" name="attr_armourSlot3" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition3"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition3">
-                    <select name="attr_sophontArmourSlot3">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition3 sophontConditionArmour" name="attr_armourCondition3" value="1" />
-                <span class="largePips armour sophontCondition3 sophontConditionArmour"></span>
-                <!--Armour 4-->
-                <input type="checkbox" class="smallCheckbox hideCheckbox sophontCondition4 sophontConditionCheckbox" name="attr_armourSlot4" value="1" />
-                <span class="smallPips hexSelector sophontCondition4 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText sophontCondition4 threatTextBox">
-                    <select name="attr_sophontArmourSlot4">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition4 sophontConditionArmour" name="attr_armourCondition4" value="1" />
-                <span class="largePips armour sophontCondition4 sophontConditionArmour"></span>
-                <!--Armour 5-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontConditionCheckbox sophontCondition5" name="attr_armourSlot5" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition5"></span>
-                <div class="sophontConditionText threatTextBox">
-                    <select name="attr_sophontArmourSlot5">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition5 sophontConditionArmour" name="attr_armourCondition5" value="1" />
-                <span class="largePips armour sophontCondition5 sophontConditionArmour"></span>
-                <!--Resilience 1-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontCondition6 sophontConditionCheckbox" name="attr_resilienceAugmentationSlot" value="1" />
-                <span class="smallPips hexSelector sophontCondition6 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition6">Resilience[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition6 sophontConditionArmour" name="attr_resilienceAugmentationCondition" value="1" />
-                <span class="resilienceThreat largePips sophontCondition6 sophontConditionArmour"></span>
-                <!--Resilience 2-->
-                <span class="smallPips hexselectorChecked sophontCondition7 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition7">Resilience[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition7 sophontConditionArmour" name="attr_resilienceCondition" value="1" />
-                <span class="resilienceThreat largePips sophontCondition7 sophontConditionArmour"></span>
-                <!--Integrity-->
-                <span class="smallPips hexselectorChecked sophontCondition8 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition8">Integrity[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition8 sophontConditionArmour" name="attr_IntegrityCondition" value="1" />
-                <span class="integrityThreat largePips sophontCondition8 sophontConditionArmour"></span>
-                <!--Vitality-->
-                <span class="smallPips hexselectorChecked sophontCondition9 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox">Vitality[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontConditionArmour sophontCondition9" name="attr_vitalityCondition" value="1" />
-                <span class="vital largePips sophontConditionArmour sophontCondition9"></span>
-            </div>
+
         </div>
     </article>
 
-
-    <!--	  Creature Log   	 -->
+    <!-- Magical Creatures -->
     <article class="sheetType creatureSheet">
         <div class="creatureSheetGrid">
             <div class="topLineText">Species:</div>
@@ -1835,260 +1247,10 @@
             <div class="sophontTextColumnB threatTextBox"><input type="text" name="attr_length" /></div>
             <div class="sophontAspectColumnA">Tags:</div>
             <div class="sophontTextColumnA threatTextBox creatureTagBox"><textarea name="attr_tags" class="threatTextBox creatureTagBox"></textarea></div>
-            <div class="sophontAspectColumnB">Notes:</div>
+            <div class="sophontColumnB">Notes:</div>
             <div class="sophontTextColumnB threatTextBox creatureTagBox"><textarea name="attr_notes" class="threatTextBox creatureTagBox"></textarea></div>
             <input type="number" name="attr_damageTotal" min="0" max="10" class="threatDamageBox" /><span class="creatureDamageBoxBG"></span>
-            <!--Condition Slots-->
-            <div class="creatureConditionWidget">
-                <div class="sophontConditionTitle">Conditions Slots</div>
-                <div class="sophontConditionNumber"><input type="text" name="attr_additionalCompositeSophont1" class="sophontConditionNumber" /></div>
-                <!--Armour 1-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontConditionCheckbox sophontCondition1" name="attr_armourSlot1" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition1"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition1">
-                    <select name="attr_sophontArmourSlot1">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontConditionArmour sophontCondition1" name="attr_armourCondition1" value="1" />
-                <span class="largePips armour sophontConditionArmour sophontCondition1"></span>
-                <!--Armour 2-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontConditionCheckbox sophontCondition2" name="attr_armourSlot2" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition2"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition2">
-                    <select name="attr_sophontArmourSlot2">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontConditionArmour sophontCondition2" name="attr_armourCondition2" value="1" />
-                <span class="largePips armour sophontConditionArmour sophontCondition2"></span>
-                <!--Armour 3-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontCondition3 sophontConditionCheckbox" name="attr_armourSlot3" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition3"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition3">
-                    <select name="attr_sophontArmourSlot3">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition3 sophontConditionArmour" name="attr_armourCondition3" value="1" />
-                <span class="largePips armour sophontCondition3 sophontConditionArmour"></span>
-                <!--Armour 4-->
-                <input type="checkbox" class="smallCheckbox hideCheckbox sophontCondition4 sophontConditionCheckbox" name="attr_armourSlot4" value="1" />
-                <span class="smallPips hexSelector sophontCondition4 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText sophontCondition4 threatTextBox">
-                    <select name="attr_sophontArmourSlot4">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition4 sophontConditionArmour" name="attr_armourCondition4" value="1" />
-                <span class="largePips armour sophontCondition4 sophontConditionArmour"></span>
-                <!--Armour 5-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontConditionCheckbox sophontCondition5" name="attr_armourSlot5" value="1" />
-                <span class="smallPips hexSelector sophontConditionCheckbox sophontCondition5"></span>
-                <div class="sophontConditionText threatTextBox">
-                    <select name="attr_sophontArmourSlot5">
-                        <option></option>
-                        <option>pathogen[3]</option>
-                        <option>plasma[3]</option>
-                        <option>radiation[3]</option>
-                        <option>pressure[3]</option>
-                        <option>caustics[3]</option>
-                        <option>combat[3]</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition5 sophontConditionArmour" name="attr_armourCondition5" value="1" />
-                <span class="largePips armour sophontCondition5 sophontConditionArmour"></span>
-                <!--Resilience 1-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontCondition6 sophontConditionCheckbox" name="attr_resilienceAugmentationSlot" value="1" />
-                <span class="smallPips hexSelector sophontCondition6 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition6">Resilience[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition6 sophontConditionArmour" name="attr_resilienceAugmentationCondition" value="1" />
-                <span class="resilienceThreat largePips sophontCondition6 sophontConditionArmour"></span>
-                <!--Resilience 2-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontCondition7 sophontConditionCheckbox" name="attr_resilienceSlot" value="1" />
-                <span class="smallPips hexSelector sophontCondition7 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition7">Resilience[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition7 sophontConditionArmour" name="attr_resilienceCondition" value="1" />
-                <span class="resilienceThreat largePips sophontCondition7 sophontConditionArmour"></span>
-                <!--Resilience 3-->
-                <input type="checkbox" class="hideCheckbox smallCheckbox sophontCondition8 sophontConditionCheckbox" name="attr_resilienceSlot3" value="1" />
-                <span class="smallPips hexSelector sophontCondition8 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition8">Resilience[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition8 sophontConditionArmour" name="attr_resilienceCondition3" value="1" />
-                <span class="resilienceThreat largePips sophontCondition8 sophontConditionArmour"></span>
-                <!--Integrity-->
-                <span class="smallPips hexselectorChecked sophontCondition9 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox sophontCondition9">Integrity[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition9 sophontConditionArmour" name="attr_IntegrityCondition" value="1" />
-                <span class="integrityThreat largePips sophontCondition9 sophontConditionArmour"></span>
-                <!--Vitality-->
-                <span class="smallPips hexselectorChecked sophontCondition10 sophontConditionCheckbox"></span>
-                <div class="sophontConditionText threatTextBox">Vitality[5]</div>
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontConditionArmour sophontCondition10" name="attr_vitalityCondition" value="1" />
-                <span class="vital largePips sophontConditionArmour sophontCondition10"></span>
-            </div>
 
-            <!--Additional Condition Slots-->
-            <!--Slots 2-->
-            <div class="additionalCreatureConditionWidget additionalCompositeSophontCondition2">
-                <div class="sophontConditionNumber additionalSophontColumn"><input type="text" name="attr_additionalCompositeSophont2" class="sophontConditionNumber" /></div>
-                <!--Armour 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition1 additionalSophontColumn" name="attr_armourCondition1Threat2" value="1" />
-                <span class="largePips armour sophontCondition1 additionalSophontColumn"></span>
-                <!--Armour 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition2 additionalSophontColumn" name="attr_armourCondition2Threat2" value="1" />
-                <span class="largePips armour sophontCondition2 additionalSophontColumn"></span>
-                <!--Armour 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition3 additionalSophontColumn" name="attr_armourCondition3Threat2" value="1" />
-                <span class="largePips armour sophontCondition3 additionalSophontColumn"></span>
-                <!--Armour 4-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition4 additionalSophontColumn" name="attr_armourCondition4Threat2" value="1" />
-                <span class="largePips armour sophontCondition4 additionalSophontColumn"></span>
-                <!--Armour 5-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition5 additionalSophontColumn" name="attr_armourCondition5Threat2" value="1" />
-                <span class="largePips armour sophontCondition5 additionalSophontColumn"></span>
-                <!--Resilience 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition6 additionalSophontColumn" name="attr_resilienceAugmentationConditionThreat2" value="1" />
-                <span class="resilienceThreat largePips sophontCondition6 additionalSophontColumn"></span>
-                <!--Resilience 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition7 additionalSophontColumn" name="attr_resilienceConditionThreat2" value="1" />
-                <span class="resilienceThreat largePips sophontCondition7 additionalSophontColumn"></span>
-                <!--Resilience 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition8 additionalSophontColumn" name="attr_resilienceCondition3Threat2" value="1" />
-                <span class="resilienceThreat largePips sophontCondition8 additionalSophontColumn"></span>
-                <!--Integrity-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition9 additionalSophontColumn" name="attr_IntegrityConditionThreat2" value="1" />
-                <span class="integrityThreat largePips sophontCondition9 additionalSophontColumn"></span>
-                <!--Vitality-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition10 additionalSophontColumn" name="attr_vitalityConditionThreat2" value="1" />
-                <span class="vital largePips sophontCondition10 additionalSophontColumn"></span>
-            </div>
-            <!--Slots 3-->
-            <div class="additionalCreatureConditionWidget additionalCompositeSophontCondition3">
-                <div class="sophontConditionNumber additionalSophontColumn"><input type="text" name="attr_additionalCompositeSophont3" class="sophontConditionNumber" /></div>
-                <!--Armour 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition1 additionalSophontColumn" name="attr_armourCondition1Threat3" value="1" />
-                <span class="largePips armour sophontCondition1 additionalSophontColumn"></span>
-                <!--Armour 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition2 additionalSophontColumn" name="attr_armourCondition2Threat3" value="1" />
-                <span class="largePips armour sophontCondition2 additionalSophontColumn"></span>
-                <!--Armour 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition3 additionalSophontColumn" name="attr_armourCondition3Threat3" value="1" />
-                <span class="largePips armour sophontCondition3 additionalSophontColumn"></span>
-                <!--Armour 4-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition4 additionalSophontColumn" name="attr_armourCondition4Threat3" value="1" />
-                <span class="largePips armour sophontCondition4 additionalSophontColumn"></span>
-                <!--Armour 5-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition5 additionalSophontColumn" name="attr_armourCondition5Threat3" value="1" />
-                <span class="largePips armour sophontCondition5 additionalSophontColumn"></span>
-                <!--Resilience 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition6 additionalSophontColumn" name="attr_resilienceAugmentationConditionThreat3" value="1" />
-                <span class="resilienceThreat largePips sophontCondition6 additionalSophontColumn"></span>
-                <!--Resilience 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition7 additionalSophontColumn" name="attr_resilienceConditionThreat3" value="1" />
-                <span class="resilienceThreat largePips sophontCondition7 additionalSophontColumn"></span>
-                <!--Resilience 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition8 additionalSophontColumn" name="attr_resilienceCondition3Threat3" value="1" />
-                <span class="resilienceThreat largePips sophontCondition8 additionalSophontColumn"></span>
-                <!--Integrity-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition9 additionalSophontColumn" name="attr_IntegrityConditionThreat3" value="1" />
-                <span class="integrityThreat largePips sophontCondition9 additionalSophontColumn"></span>
-                <!--Vitality-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition10 additionalSophontColumn" name="attr_vitalityConditionThreat3" value="1" />
-                <span class="vital largePips sophontCondition10 additionalSophontColumn"></span>
-            </div>
-            <!--Slots 4-->
-            <div class="additionalCreatureConditionWidget additionalCompositeSophontCondition4">
-                <div class="sophontConditionNumber additionalSophontColumn"><input type="text" name="attr_additionalCompositeSophont4" class="sophontConditionNumber" /></div>
-                <!--Armour 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition1 additionalSophontColumn" name="attr_armourCondition1Threat4" value="1" />
-                <span class="largePips armour sophontCondition1 additionalSophontColumn"></span>
-                <!--Armour 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition2 additionalSophontColumn" name="attr_armourCondition2Threat4" value="1" />
-                <span class="largePips armour sophontCondition2 additionalSophontColumn"></span>
-                <!--Armour 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition3 additionalSophontColumn" name="attr_armourCondition3Threat4" value="1" />
-                <span class="largePips armour sophontCondition3 additionalSophontColumn"></span>
-                <!--Armour 4-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition4 additionalSophontColumn" name="attr_armourCondition4Threat4" value="1" />
-                <span class="largePips armour sophontCondition4 additionalSophontColumn"></span>
-                <!--Armour 5-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition5 additionalSophontColumn" name="attr_armourCondition5Threat4" value="1" />
-                <span class="largePips armour sophontCondition5 additionalSophontColumn"></span>
-                <!--Resilience 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition6 additionalSophontColumn" name="attr_resilienceAugmentationConditionThreat4" value="1" />
-                <span class="resilienceThreat largePips sophontCondition6 additionalSophontColumn"></span>
-                <!--Resilience 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition7 additionalSophontColumn" name="attr_resilienceConditionThreat4" value="1" />
-                <span class="resilienceThreat largePips sophontCondition7 additionalSophontColumn"></span>
-                <!--Resilience 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition8 additionalSophontColumn" name="attr_resilienceCondition3Threat4" value="1" />
-                <span class="resilienceThreat largePips sophontCondition8 additionalSophontColumn"></span>
-                <!--Integrity-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition9 additionalSophontColumn" name="attr_IntegrityConditionThreat4" value="1" />
-                <span class="integrityThreat largePips sophontCondition9 additionalSophontColumn"></span>
-                <!--Vitality-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition10 additionalSophontColumn" name="attr_vitalityConditionThreat4" value="1" />
-                <span class="vital largePips sophontCondition10 additionalSophontColumn"></span>
-            </div>
-            <!--Slots 5-->
-            <div class="additionalCreatureConditionWidget additionalCompositeSophontCondition5">
-                <div class="sophontConditionNumber additionalSophontColumn"><input type="text" name="attr_additionalCompositeSophont5" class="sophontConditionNumber" /></div>
-                <!--Armour 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition1 additionalSophontColumn" name="attr_armourCondition1Threat5" value="1" />
-                <span class="largePips armour sophontCondition1 additionalSophontColumn"></span>
-                <!--Armour 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition2 additionalSophontColumn" name="attr_armourCondition2Threat5" value="1" />
-                <span class="largePips armour sophontCondition2 additionalSophontColumn"></span>
-                <!--Armour 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition3 additionalSophontColumn" name="attr_armourCondition3Threat5" value="1" />
-                <span class="largePips armour sophontCondition3 additionalSophontColumn"></span>
-                <!--Armour 4-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition4 additionalSophontColumn" name="attr_armourCondition4Threat5" value="1" />
-                <span class="largePips armour sophontCondition4 additionalSophontColumn"></span>
-                <!--Armour 5-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition5 additionalSophontColumn" name="attr_armourCondition5Threat5" value="1" />
-                <span class="largePips armour sophontCondition5 additionalSophontColumn"></span>
-                <!--Resilience 1-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition6 additionalSophontColumn" name="attr_resilienceAugmentationConditionThreat5" value="1" />
-                <span class="resilienceThreat largePips sophontCondition6 additionalSophontColumn"></span>
-                <!--Resilience 2-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition7 additionalSophontColumn" name="attr_resilienceConditionThreat5" value="1" />
-                <span class="resilienceThreat largePips sophontCondition7 additionalSophontColumn"></span>
-                <!--Resilience 3-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition8 additionalSophontColumn" name="attr_resilienceCondition3Threat5" value="1" />
-                <span class="resilienceThreat largePips sophontCondition8 additionalSophontColumn"></span>
-                <!--Integrity-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition9 additionalSophontColumn" name="attr_IntegrityConditionThreat5" value="1" />
-                <span class="integrityThreat largePips sophontCondition9 additionalSophontColumn"></span>
-                <!--Vitality-->
-                <input type="checkbox" class="hideCheckbox largeCheckbox sophontCondition10 additionalSophontColumn" name="attr_vitalityConditionThreat5" value="1" />
-                <span class="vital largePips sophontCondition10 additionalSophontColumn"></span>
-            </div>
         </div>
     </article>
 

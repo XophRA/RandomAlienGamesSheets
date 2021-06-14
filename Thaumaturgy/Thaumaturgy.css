@@ -10,8 +10,8 @@ article.sheetType
     display: none;
 }
 
-input.crewmemberSelector:checked ~ article.playerCasterSheet,
-input.shipSelector:checked ~ article.shipSheet,
+input.playerCasterSelector:checked ~ article.playerCasterSheet,
+input.sanctumSelector:checked ~ article.SanctumSheet,
 input.mediumSelector:checked ~ article.mediumSheet,
 input.sophontSelector:checked ~ article.sophontSheet,
 input.compositeSophontSelector:checked ~ article.compositeSophontSheet,
@@ -80,127 +80,35 @@ input.creatureSelector:checked ~ article.creatureSheet
         height: 100%;
     }
 
-/*All Hidden styles*/
-    .charsheet .hidden
-    {
-        display: none;
-    }
-
-    /*select & text boxes*/
-    .charsheet select, .charsheet textarea, .charsheet input[type="text"], .charsheet input[type="number"]
-    {
-        border: none;
-        font-family: "Open Sans", sans-serif;
-        font-size: 13px;
-        color: #000;
-        height: 98%;
-        width: 98%;
-        line-height: 100%;
-        font-variant: normal;
-        background: transparent;
-        overflow: hidden;
-        resize: none;
-        padding: 0;
-        outline: none;
-    }
-
 .ui-dialog .charsheet input[type="number"]
 {
     width: 100%;
     text-align: center;
 }
 
-select.start
+
+/*All Hidden styles*/
+.charsheet .hidden
 {
-    border-style: hidden;
+    display: none;
+}
+
+/*select & text boxes*/
+.charsheet select, .charsheet textarea, .charsheet input[type="text"], .charsheet input[type="number"]
+{
     border: none;
-    font-weight: normal;
-}
-
-select.full,
-input[type="text"].full,
-input[type="number"].full
-{
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: #000;
+    height: 98%;
     width: 98%;
-}
-
-input[type="text"].aspect,
-select.aspect
-{
-    font-weight: 500;
-}
-
-select.most,
-input[type="text"].most,
-input[type="number"].most
-{
-    width: 80%;
-}
-
-select.fourFifths,
-input[type="text"].fourFifths,
-input[type="number"].fourFifths
-{
-    width: 70%;
-}
-
-select.threeQuarters,
-input[type="text"].threeQuarters,
-input[type="number"].threeQuarters
-{
-    width: 60%;
-}
-
-select.half,
-input[type="text"].half,
-input[type="number"].half,
-p.half
-{
-    width: 47%;
-}
-
-select.third,
-input[type="text"].third,
-input[type="number"].third
-{
-    width: 32%;
-}
-
-select.quarter,
-input[type="text"].quarter,
-input[type="number"].quarter
-{
-    width: 28%;
-}
-
-select.fifth,
-input[type="text"].fifth,
-input[type="number"].fifth
-{
-    width: 21%;
-}
-
-select.sixth,
-input[type="text"].sixth,
-input[type="number"].sixth
-{
-    width: 12%;
-}
-
-textarea.description
-{
-    height: 2.5em;
-}
-
-textarea.data
-{
-    height: 100px;
-}
-
-textarea.letter
-{
-    height: 95%;
-    width: 95%;
+    line-height: 100%;
+    font-variant: normal;
+    background: transparent;
+    overflow: hidden;
+    resize: none;
+    padding: 0;
+    outline: none;
 }
 
 /* Sheet header */
@@ -279,15 +187,14 @@ main.masterGrid
     align-items: start;
 }
 
-.shipSheetGrid
+.sanctumSheetGrid
 {
     grid-area: sheet;
     width: 100%;
     display: grid;
     grid-row-gap: 6px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 360px 375px 375px 1200px;
-    grid-template-areas: "aspects" "systemsAmenities" "modules" "shipConfig" "pg2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
     justify-items: start;
     align-items: start;
 }
@@ -494,144 +401,143 @@ main.masterGrid
 /* Sancurary Sheet */
 .shipAspects
 {
-    grid-area: aspects;
+    grid-area: 1/1/auto/-1;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2,90px 30px 1fr);
     grid-template-rows: 18px 15px 15px;
     grid-column-gap: 4px;
     height: 50px;
-    z-index: 0;
 }
 
-.designation
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
+    .shipAspects > .designation
+    {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
 
-.designationPrefix
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
+    .shipAspects > .designationPrefix
+    {
+        align-self: stretch;
+        flex-flow: nowrap;
+        font-size: 13px;
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
 
-.designationName
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    width: 100%;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
+    .shipAspects > .designationName
+    {
+        align-self: stretch;
+        flex-flow: nowrap;
+        font-size: 13px;
+        width: 100%;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
 
-.patron
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 13px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
+    .shipAspects > .patron
+    {
+        text-align: start;
+        flex-flow: nowrap;
+        font-size: 13px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
 
-.patronName
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 12px;
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
+    .shipAspects > .patronName
+    {
+        align-self: stretch;
+        flex-flow: nowrap;
+        font-size: 12px;
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
 
-.flag
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 13px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
+    .shipAspects > .flag
+    {
+        text-align: start;
+        flex-flow: nowrap;
+        font-size: 13px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
 
-.flagType
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 12px;
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
+    .shipAspects > .flagType
+    {
+        align-self: stretch;
+        flex-flow: nowrap;
+        font-size: 12px;
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
 
-.captain
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 13px;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
+    .shipAspects > .captain
+    {
+        text-align: start;
+        flex-flow: nowrap;
+        font-size: 13px;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
 
-.captainName
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 12px;
-    width: 100%;
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
+    .shipAspects > .captainName
+    {
+        align-self: stretch;
+        flex-flow: nowrap;
+        font-size: 12px;
+        width: 100%;
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
 
-.tactics
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 13px;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
+    .shipAspects > .tactics
+    {
+        text-align: start;
+        flex-flow: nowrap;
+        font-size: 13px;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
 
-.tacticList
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 12px;
-    width: 100%;
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
+    .shipAspects > .tacticList
+    {
+        align-self: stretch;
+        flex-flow: nowrap;
+        font-size: 12px;
+        width: 100%;
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
 
 /* Ascension */
 .ascensionWidget
 {
-    grid-area: 4 / 1 / span 2 / 2;
+    grid-area: 2/1/auto/auto;
     display: grid;
     width: 100%;
     height: 100%;
@@ -841,30 +747,42 @@ main.masterGrid
         grid-area: 3/5/span 18/span 13;
     }
 
-        .ascensionWidget .ascensionCard .ascensionObjective
-        {
-            grid-row: 2/auto;
-        }
 
-        .ascensionWidget .ascensionCard h4.ascensionMilestones
-        {
-            grid-row: 3/auto;
-        }
+/* Ritual Card */
+.ritualCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img12/RitualCard.png);
+}
 
-        .ascensionWidget .ascensionCard textarea.ascensionMilestones
-        {
-            grid-row: 3/10;
-        }
+    .ritualCard .ritualObjective
+    {
+        grid-row: 2/auto;
+    }
 
-        .ascensionWidget .ascensionCard .ascensionRite
-        {
-            grid-row: 10/auto;
-        }
+    .ritualCard h4.ritualMilestones
+    {
+        grid-row: 3/auto;
+    }
 
-        .ascensionWidget .ascensionCard .ascensionFateDrag
-        {
-            grid-row: 11/auto;
-        }
+    .ritualCard textarea.ritualMilestones
+    {
+        grid-row: 3/span 6;
+    }
+
+    .ritualCard h4.ritualWorkings
+    {
+        grid-row: 9/auto;
+    }
+
+    .ritualCard textarea.ritualWorkings
+    {
+        grid-row: 9/span 7;
+    }
+
+    .ritualCard .clockWidget
+    {
+        grid-area: -3/-2/-1/-2;
+    }
 
 /* ************ */
 /* Medium Sheet */
@@ -1449,11 +1367,11 @@ section.magicCircle
             grid-area: 41 / 13 / span 3 / span 3;
         }
 
-            section.magicCircle > .circlePositions > input.circleDieArcana + input[value="63"].circleDieArcanaPosition + input + input + input + input + input,
-            section.magicCircle > .circlePositions > input.circleDieArcana + input[value="63"].circleDieArcanaPosition + input + input + input + input + input + input
-            {
-                grid-area: 42 / 4 / span 3 / span 3;
-            }
+        section.magicCircle > .circlePositions > input.circleDieArcana + input[value="63"].circleDieArcanaPosition + input + input + input + input + input,
+        section.magicCircle > .circlePositions > input.circleDieArcana + input[value="63"].circleDieArcanaPosition + input + input + input + input + input + input
+        {
+            grid-area: 42 / 4 / span 3 / span 3;
+        }
 
         section.magicCircle > .circlePositions > input.circleDieArcana + input[value="64"].circleDieArcanaPosition + input + input + input + input + input,
         section.magicCircle > .circlePositions > input.circleDieArcana + input[value="64"].circleDieArcanaPosition + input + input + input + input + input + input
@@ -2124,7 +2042,6 @@ input[type=number].resourceBox
 /* Clocks */
 .clockWidget
 {
-    grid-area: -2/-2/-1/-1;
     display: grid;
     grid-template-columns: 64px 16px;
     grid-template-rows: 20px 1fr;
@@ -2148,6 +2065,7 @@ input[type=number].resourceBox
     {
         opacity: 1;
     }
+
     .clockWidget > input[type=number].clockControl
     {
         grid-area: 2/-2/auto/auto;
@@ -2156,6 +2074,7 @@ input[type=number].resourceBox
         color: transparent;
         text-align: left;
     }
+
     .clockWidget > input[type=text].clockControl
     {
         grid-area: 1/-2/auto/auto;
@@ -2170,7 +2089,7 @@ input[value="0"].clockSegment ~ .clock
 
 input[value="1"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(112deg, #555 50%, white 50% ) ;
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(112deg, #555 50%, white 50% );
 }
 
 input[value="2"].clockSegment ~ .clock
@@ -2192,30 +2111,37 @@ input[value="5"].clockSegment ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, #555 50%, white 50%);
 }
+
 input[value="6"].clockSegment ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(246deg, #555 50%, white 50%);
 }
+
 input[value="7"].clockSegment ~ .clock
 {
     background-image: linear-gradient(117deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
+
 input[value="8"].clockSegment ~ .clock
 {
     background-image: linear-gradient(147deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
+
 input[value="9"].clockSegment ~ .clock
 {
     background-image: linear-gradient(169deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
+
 input[value="10"].clockSegment ~ .clock
 {
     background-image: linear-gradient(195deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
+
 input[value="11"].clockSegment ~ .clock
 {
     background-image: linear-gradient(221deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
+
 input[value="12"].clockSegment ~ .clock
 {
     background-image: linear-gradient(247deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
@@ -2236,31 +2162,38 @@ input[value="13"].clockSegment ~ .clock
     top: 0;
     background: black;
 }
+
     .clockWidget > .clockSpoke.clockSpoke0
     {
         transform: translateX(30px);
         height: 30px;
     }
+
     .clockWidget > .clockSpoke.clockSpoke1
     {
         transform: translateX(30px) rotate(22deg);
     }
+
     .clockWidget > .clockSpoke.clockSpoke2
     {
         transform: translateX(30px) rotate(50deg);
     }
+
     .clockWidget > .clockSpoke.clockSpoke3
     {
         transform: translateX(30px) rotate(75deg);
     }
+
     .clockWidget > .clockSpoke.clockSpoke4
     {
         transform: translateX(30px) rotate(104deg);
     }
+
     .clockWidget > .clockSpoke.clockSpoke5
     {
         transform: translateX(30px) rotate(130deg);
     }
+
     .clockWidget > .clockSpoke.clockSpoke6
     {
         transform: translateX(30px) rotate(156deg);
@@ -2312,6 +2245,7 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
 }
+
 textarea.speculation
 {
     grid-area: 2/-2/-2/-1;
@@ -2390,10 +2324,12 @@ textarea.speculation
     {
         grid-area: 1/2/auto/auto;
     }
+
     .descriptionWidget > .rankLevel
     {
         grid-area: 2/2/auto/auto;
     }
+
     .descriptionWidget > .pronouns
     {
         grid-area: 3/2/auto/auto;
@@ -2446,60 +2382,60 @@ textarea.speculation
     grid-row-gap: 4px;
 }
 
-.conduitBox
-{
-    grid-column: 2 / 3;
-}
+    .intentionWidget > .conduitBox
+    {
+        grid-column: 2 / 3;
+    }
 
-.conjureBox
-{
-    grid-row: 2 / 3;
-}
+    .intentionWidget > .conjureBox
+    {
+        grid-row: 2 / 3;
+    }
 
-.decayBox
-{
-    grid-row: 3 / 4;
-}
+    .intentionWidget > .decayBox
+    {
+        grid-row: 3 / 4;
+    }
 
-.dispelBox
-{
-    grid-row: 4 / 5;
-}
+    .intentionWidget > .dispelBox
+    {
+        grid-row: 4 / 5;
+    }
 
-.enchantBox
-{
-    grid-row: 5 / 6;
-}
+    .intentionWidget > .enchantBox
+    {
+        grid-row: 5 / 6;
+    }
 
-.manipulateBox
-{
-    grid-row: 6 / 7;
-}
+    .intentionWidget > .manipulateBox
+    {
+        grid-row: 6 / 7;
+    }
 
-.sacrificeBox
-{
-    grid-row: 7 / 8;
-}
+    .intentionWidget > .sacrificeBox
+    {
+        grid-row: 7 / 8;
+    }
 
-.scryBox
-{
-    grid-row: 8 / 9;
-}
+    .intentionWidget > .scryBox
+    {
+        grid-row: 8 / 9;
+    }
 
-.summonBox
-{
-    grid-row: 9 / 10;
-}
+    .intentionWidget > .summonBox
+    {
+        grid-row: 9 / 10;
+    }
 
-.transmuteBox
-{
-    grid-row: 10 / 11;
-}
+    .intentionWidget > .transmuteBox
+    {
+        grid-row: 10 / 11;
+    }
 
-.wardBox
-{
-    grid-row: 11 / 12;
-}
+    .intentionWidget > .wardBox
+    {
+        grid-row: 11 / 12;
+    }
 
 /* Arts */
 .artsWidget
@@ -2645,12 +2581,14 @@ textarea.speculation
     width: 100%;
     height: 100%;
 }
+
     .notesWidget > textarea.notes
     {
         grid-area: 2/1/-1/-1;
         width: 100%;
         height: 100%;
     }
+
 /* Fate */
 .fateWidget
 {
@@ -2679,12 +2617,11 @@ textarea.speculation
             background-image: none;
             background-color: white;
             border: 2px solid black;
-            font-weight:600;
+            font-weight: 600;
         }
 
     .grimoireWidget > input[value="1"].collapseToggle ~ .deck > .repcontrol
     {
-
     }
 
     .grimoireWidget > .deckHeader
@@ -2729,18 +2666,20 @@ textarea.speculation
     .grimoireWidget > .deck
     {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         grid-row: 2/auto;
-
     }
+
     .grimoireWidget > .deck1
     {
         grid-column: 2/auto;
     }
+
     .grimoireWidget > .deck2
     {
         grid-column: 4/auto;
     }
+
     .grimoireWidget > .deck3
     {
         grid-column: 6/auto;
@@ -2834,8 +2773,8 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         background-color: white;
         border-color: #555555;
         border-radius: 12%;
-        align-self:center;
-        padding:0;
+        align-self: center;
+        padding: 0;
     }
 
     /* Top Card */
@@ -3002,6 +2941,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-template-columns: repeat(8,13px) 1fr;
         grid-template-rows: 1fr;
     }
+
         .enchantmentCard div.potency > .diceCheckbox
         {
             grid-row: 1/auto;
@@ -3011,30 +2951,37 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         {
             grid-column: 1/auto;
         }
+
         .enchantmentCard div.potency > .potency2
         {
             grid-column: 2/auto;
         }
+
         .enchantmentCard div.potency > .potency3
         {
             grid-column: 3/auto;
         }
+
         .enchantmentCard div.potency > .potency4
         {
             grid-column: 4/auto;
         }
+
         .enchantmentCard div.potency > .potency5
         {
             grid-column: 5/auto;
         }
+
         .enchantmentCard div.potency > .potency6
         {
             grid-column: 6/auto;
         }
+
         .enchantmentCard div.potency > .potency7
         {
             grid-column: 7/auto;
         }
+
         .enchantmentCard div.potency > .potency8
         {
             grid-column: 8/auto;
@@ -3122,140 +3069,13 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     }
 
 
-/* Graphics */
-/* Hide Checkboxes and Radio boxes */
+/* Checkboxes */
 input[type="checkbox"].hideCheckbox,
 input[type="radio"].hideCheckbox
 {
     opacity: 0;
     cursor: pointer;
     z-index: 3;
-}
-/* Subgrid for Tug Conditions */
-.launch-bay-tug-conditions
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 3;
-    grid-row-end: 11;
-    display: grid;
-    grid-template-columns: 25px;
-    grid-template-rows: repeat(4,25px);
-    grid-template-areas: "resilience2" "resilience1" "integrity" "vitality";
-    position: relative;
-    justify-self: end;
-    margin-top: 10px;
-}
-
-    .launch-bay-tug-conditions > input
-    {
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        position: absolute;
-    }
-
-    .launch-bay-tug-conditions > .resilience-slot-2
-    {
-        grid-area: resilience2;
-    }
-
-    .launch-bay-tug-conditions > .resilience-slot-1
-    {
-        grid-area: resilience1;
-    }
-
-    .launch-bay-tug-conditions > .integrity
-    {
-        grid-area: integrity;
-    }
-
-    .launch-bay-tug-conditions > .vital
-    {
-        grid-area: vitality;
-    }
-/* Subgrid for Trailer Conditions */
-.launch-bay-trailer-conditions
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 14;
-    grid-row-end: 20;
-    display: grid;
-    grid-template-columns: 25px;
-    grid-template-rows: repeat(3,25px);
-    grid-template-areas: "resilience" "integrity" "vitality";
-    position: relative;
-    justify-self: end;
-    margin-top: 4px;
-}
-
-    .launch-bay-trailer-conditions > input
-    {
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        position: absolute;
-    }
-
-    .launch-bay-trailer-conditions > .resilience-slot
-    {
-        grid-area: resilience;
-    }
-
-    .launch-bay-trailer-conditions > .integrity
-    {
-        grid-area: integrity;
-    }
-
-    .launch-bay-trailer-conditions > .vital
-    {
-        grid-area: vitality;
-    }
-/* Inline Checkbox Location */
-input[type="checkbox"].inlineCheckbox, input[type="radio"].inlineCheckbox
-{
-    width: 13px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: bottom;
-}
-
-input[type="checkbox"].inlineCheckboxSmall, input[type="radio"].inlineCheckboxSmall
-{
-    width: 8px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: bottom;
-}
-
-input[type="checkbox"].inlineCheckboxMedium, input[type="radio"].inlineCheckboxMedium
-{
-    width: 15px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: bottom;
-}
-
-input[type="radio"].inlineCapacityCheckbox
-{
-    width: 10px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-}
-
-input[type="radio"].inlinePipCheckbox
-{
-    width: 10px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
 }
 
 input[type="radio"].studyCheckbox,
@@ -3278,122 +3098,7 @@ span.diceCheckbox
     padding: 0;
     vertical-align: middle;
     background-size: 12px 14px;
-}
 
-
-input[type="radio"].inlineCapacityCheckboxSmall
-{
-    width: 8px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-}
-
-input[type="checkbox"].inlineCheckboxLarge, input[type="radio"].inlineCheckboxLarge
-{
-    width: 25px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: bottom;
-}
-/* Inline Image Location */
-span.inlineArmour
-{
-    display: inline-block;
-    background-size: 14px 14px;
-    height: 15px;
-    width: 15px;
-    margin-left: -15px;
-}
-
-span.inlineArmourSelectors
-{
-    display: inline-block;
-    background-size: 8px 8px;
-    height: 8px;
-    width: 8px;
-    margin-left: -8px;
-}
-
-span.inlineCapacityPips
-{
-    display: inline-block;
-    background-size: 10px 15px;
-    height: 15px;
-    width: 10px;
-    margin-left: -10px;
-    vertical-align: middle;
-}
-
-span.inlineOvercharge
-{
-    display: inline-block;
-    background-size: 40px 40px;
-    height: 40px;
-    width: 40px;
-    margin-left: -40px;
-}
-
-span.inlineCapacityPipsSmall
-{
-    display: inline-block;
-    background-size: 8px 12px;
-    height: 12px;
-    width: 8px;
-    margin-left: -8px;
-    vertical-align: middle;
-}
-
-span.inlinePips
-{
-    display: inline-block;
-    background-size: 10px 10px;
-    height: 12px;
-    width: 10px;
-    margin-left: -10px;
-    vertical-align: middle;
-}
-
-span.inlinePipsLarge
-{
-    display: inline-block;
-    background-size: 24px 24px;
-    height: 25px;
-    width: 25px;
-    margin-left: -25px;
-    vertical-align: middle;
-}
-/* Grid Checkbox location */
-input[type="checkbox"].smallCheckbox, input[type="radio"].smallCheckbox
-{
-    width: 13px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    vertical-align: middle;
-}
-
-input[type="checkbox"].largeCheckbox, input[type="radio"].largeCheckbox
-{
-    width: 25px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 25px;
-    vertical-align: middle;
-}
-
-input[type="checkbox"].mediumCheckbox, input[type="radio"].mediumCheckbox
-{
-    width: 18px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    vertical-align: middle;
 }
 
 input[type="checkbox"].maxCheckbox,
@@ -3407,40 +3112,6 @@ span.maxCheckbox
     padding: 0;
     vertical-align: middle;
 }
-
-/*  Image Location  */
-span.largePips
-{
-    background-size: 24px 24px;
-    height: 25px;
-    width: 25px;
-    vertical-align: middle;
-}
-
-span.mediumPips
-{
-    background-size: 18px 18px;
-    height: 19px;
-    width: 19px;
-    vertical-align: middle;
-}
-
-span.mediumChecks
-{
-    background-size: 19px 16px;
-    height: 19px;
-    width: 16px;
-    vertical-align: middle;
-}
-
-span.smallPips
-{
-    background-size: 10px 10px;
-    height: 13px;
-    width: 13px;
-    vertical-align: middle;
-}
-/* Graphics */
 
 /* Dice */
 input[type="radio"] + span.ZeroDie
@@ -3704,1491 +3375,6 @@ input[type="checkbox"]:checked + span.patch
     opacity: 1;
     z-index: 2;
 }
-/* ***************************************** */
-/*               SHIP SYSTEMS                */
-/* ***************************************** */
-.systemsAmenities
-{
-    grid-area: systemsAmenities;
-    display: grid;
-    width: 100%;
-    height: 360px;
-    grid-template-columns: 535px 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "systems amenities";
-    grid-gap: 4px;
-}
-
-.systemWidget
-{
-    grid-area: systems;
-    display: grid;
-    width: 100%;
-    height: 352px;
-    grid-template-columns: repeat(3,175px);
-    grid-template-rows: 32px 154px 154px;
-    grid-template-areas: "title title title";
-    grid-row-gap: 7px;
-    grid-column-gap: 4px;
-}
-
-.systemWidegetTitle
-{
-    grid-area: title;
-}
-
-.system
-{
-    display: grid;
-    grid-template-columns: minmax(6px,10px) 4fr 3fr 5fr;
-    grid-template-rows: repeat(10,15px);
-    grid-gap: 0px;
-    height: 150px;
-    width: 33%;
-    padding-top: 5px;
-    padding-left: 5px;
-    z-index: 0;
-}
-
-.flex-systemRow
-{
-    display: flex;
-    flex-flow: nowrap;
-    width: 100%;
-    justify-content: space-evenly;
-}
-/* Ship system text*/
-.systemTitle
-{
-    font-variant: small-caps;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 13px;
-    padding-left: 6px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.systemDetail
-{
-    font-size: 10px;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.systemDamage
-{
-    font-size: 14px;
-    text-align: end;
-    padding-top: 6px;
-    padding-right: 7px;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.systemRange
-{
-    font-size: 10px;
-    text-align: end;
-    padding-right: 12px;
-    padding-top: 2px;
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.systemDivide
-{
-    text-align: end;
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.systemChargeTitle
-{
-    font-variant: small-caps;
-    font-size: 11px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    padding-left: 6px;
-    padding-top: 6px;
-}
-
-input[type="number"].currentCharge
-{
-    height: 70px;
-    width: 80px;
-    font-size: 18px;
-}
-
-.systemChargeBox
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 11;
-    padding-left: 0px;
-    padding-top: 0px;
-}
-
-.systemOverchargeTitle
-{
-    font-variant: small-caps;
-    font-size: 10px;
-    text-align: end;
-    padding-right: 2px;
-    padding-top: 6px;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 7;
-}
-
-.systemOverchargeSymbol
-{
-    text-align: center;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 7;
-    grid-row-end: 10;
-}
-
-.systemDataBox
-{
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 11;
-    padding-left: 2px;
-    padding-top: 6px;
-}
-
-.systemAIName
-{
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    padding-left: 13px;
-    padding-top: 2px;
-}
-
-.systemListTitle
-{
-    font-variant: small-caps;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.systemListMod1
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    padding-left: 0px;
-}
-
-.systemListPips1
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    padding-right: 8px;
-}
-
-.systemListMod2
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    padding-left: 0px;
-}
-
-.systemListPips2
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    padding-right: 8px;
-}
-
-.systemListMod3
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    padding-left: 0px;
-}
-
-.systemListPips3
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    padding-right: 8px;
-}
-
-.systemListMod4
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    padding-left: 0px;
-}
-
-.systemListPips4
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    padding-right: 8px;
-}
-/* ***************************************** */
-/*				AMENITIES					 */
-/* ***************************************** */
-.amenitiesWidget
-{
-    grid-area: amenities;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 32px 1fr;
-    grid-template-areas: "title" "amenities";
-    grid-gap: 4px;
-    height: 350px;
-    width: 100%;
-}
-
-.amenities
-{
-    grid-area: amenities;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: repeat(20,minmax(12px,15px));
-    grid-gap: 0px;
-    height: 315px;
-    width: 100%;
-    align-self: end;
-}
-
-.amenitiesTitle
-{
-    grid-area: title;
-}
-
-.amenityList1
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.amenityDetails1
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.amenityList2
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.amenityDetails2
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.amenityList3
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.amenityDetails3
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.amenityList4
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.amenityDetails4
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.amenityList5
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.amenityDetails5
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.amenityList6
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.amenityDetails6
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.amenityComponent
-{
-    text-align: start;
-    flex-flow: nowrap;
-    font-size: 12px;
-}
-
-/*	SHIP MODULES */
-.moduleWidget
-{
-    grid-area: modules;
-    display: grid;
-    width: 100%;
-    height: 375px;
-    grid-template-columns: repeat(4,1fr) 3fr;
-    grid-template-rows: 32px 166px 166px;
-    grid-template-areas: "title title title title title" ". . . . launchbay" ". . . . launchbay";
-    grid-gap: 4px;
-}
-
-.moduleWidgetTitle
-{
-    grid-area: title;
-}
-
-.module
-{
-    display: grid;
-    grid-template-columns: minmax(6px,14px) minmax(20px,50px) 1fr 40px;
-    grid-template-rows: repeat(11,15px);
-    grid-gap: 0px;
-    height: 162px;
-    width: 100%;
-    padding-top: 4px;
-    padding-left: 5px;
-    z-index: 0;
-}
-
-/* Ship system text*/
-.moduleTitle
-{
-    font-variant: small-caps;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-column-end: 5;
-    grid-row-end: 2;
-    padding-left: 6px;
-    padding-top: 0px;
-}
-
-.moduleOptionalTitle
-{
-    font-variant: small-caps;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 12px;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-column-end: 5;
-    grid-row-end: 2;
-    padding-left: 0px;
-    padding-top: 2px;
-}
-
-.moduleOptionalCheckbox
-{
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-column-end: 2;
-    grid-row-end: 2;
-    justify-self: center;
-    align-self: center;
-}
-
-.moduleDetail
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-column-end: 5;
-    grid-row-end: 3;
-    padding-top: 2px;
-}
-
-.moduleDamage
-{
-    font-size: 14px;
-    text-align: end;
-    padding-top: 7px;
-    padding-right: 8px;
-    grid-column-start: 4;
-    grid-row-start: 1;
-    grid-column-end: 5;
-    grid-row-end: 2;
-}
-
-.moduleRange
-{
-    font-size: 10px;
-    text-align: end;
-    grid-column-start: 2;
-    grid-row-start: 3;
-    grid-column-end: 5;
-    grid-row-end: 4;
-    padding-right: 12px;
-    padding-top: 2px;
-}
-
-.moduleListTitle
-{
-    font-variant: small-caps;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-row-start: 4;
-    grid-column-end: 5;
-    grid-row-end: 5;
-    padding-left: 4px;
-    padding-top: 2px;
-}
-
-.moduleListLabCheckbox1
-{
-    grid-column-start: 1;
-    grid-row-start: 4;
-    grid-column-end: 2;
-    grid-row-end: 5;
-    padding-left: 0px;
-    text-align: end;
-}
-
-.moduleListLabTitle1
-{
-    font-variant: small-caps;
-    font-size: 11px;
-    grid-column-start: 2;
-    grid-row-start: 4;
-    grid-column-end: 5;
-    grid-row-end: 5;
-    padding-top: 2px;
-}
-
-.moduleListLabCheckbox2
-{
-    grid-column-start: 1;
-    grid-row-start: 6;
-    grid-column-end: 2;
-    grid-row-end: 7;
-    padding-left: 0px;
-    text-align: end;
-}
-
-.moduleListLabTitle2
-{
-    font-variant: small-caps;
-    font-size: 11px;
-    grid-column-start: 2;
-    grid-row-start: 6;
-    grid-column-end: 5;
-    grid-row-end: 7;
-    padding-left: 0px;
-}
-
-.moduleListLabCheckbox3
-{
-    grid-column-start: 1;
-    grid-row-start: 8;
-    grid-column-end: 2;
-    grid-row-end: 9;
-    padding-left: 0px;
-    text-align: end;
-}
-
-.moduleListLabTitle3
-{
-    font-variant: small-caps;
-    font-size: 11px;
-    grid-column-start: 2;
-    grid-row-start: 8;
-    grid-column-end: 5;
-    grid-row-end: 9;
-    padding-left: 0px;
-}
-
-.moduleListCost1
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-row-start: 5;
-    grid-column-end: 2;
-    grid-row-end: 6;
-    justify-self: center;
-    align-self: end;
-}
-
-.moduleListFitting1
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 6;
-    align-self: end;
-}
-
-.moduleListPips1
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-row-start: 5;
-    grid-column-end: 5;
-    grid-row-end: 6;
-    padding-right: 4px;
-}
-
-.moduleListCost2
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-row-start: 6;
-    grid-column-end: 2;
-    grid-row-end: 7;
-    justify-self: center;
-    align-self: end;
-}
-
-.moduleListFitting2
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    align-self: end;
-}
-
-.moduleListPips2
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-row-start: 6;
-    grid-column-end: 5;
-    grid-row-end: 7;
-    padding-right: 4px;
-}
-
-.moduleListCost3
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-row-start: 7;
-    grid-column-end: 2;
-    grid-row-end: 8;
-    justify-self: center;
-    align-self: end;
-}
-
-.moduleListFitting3
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    align-self: end;
-}
-
-.moduleListPips3
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-row-start: 7;
-    grid-column-end: 5;
-    grid-row-end: 8;
-    padding-right: 4px;
-}
-
-.moduleListCost4
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-row-start: 8;
-    grid-column-end: 2;
-    grid-row-end: 9;
-    justify-self: center;
-    align-self: end;
-}
-
-.moduleListFitting4
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    align-self: end;
-}
-
-.moduleListPips4
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-row-start: 8;
-    grid-column-end: 5;
-    grid-row-end: 9;
-    padding-right: 4px;
-}
-
-.moduleListCost5
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-row-start: 9;
-    grid-column-end: 2;
-    grid-row-end: 10;
-    justify-self: center;
-    align-self: end;
-}
-
-.moduleListFitting5
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    align-self: end;
-}
-
-.moduleListPips5
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-row-start: 9;
-    grid-column-end: 5;
-    grid-row-end: 10;
-    padding-right: 4px;
-}
-
-.moduleListCost6
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-row-start: 10;
-    grid-column-end: 2;
-    grid-row-end: 11;
-    justify-self: center;
-    align-self: end;
-}
-
-.moduleListFitting6
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 10;
-    grid-row-end: 11;
-    align-self: end;
-}
-
-.moduleListArmour6
-{
-    text-align: end;
-    grid-column-start: 4;
-    grid-row-start: 10;
-    grid-column-end: 5;
-    grid-row-end: 11;
-    padding-right: 4px;
-}
-/* Launch Bay */
-.launchBay
-{
-    grid-area: launchbay;
-    display: grid;
-    grid-template-columns: 14px 40px 60px 60px 60px 15px 41px 45px 21px 25px;
-    grid-template-rows: 15px repeat(2,12px) 15px repeat(2,12px) repeat(5,minmax(12px, 15px)) 20px repeat(9,minmax(12px,15px))1fr;
-    grid-gap: 0px;
-    height: 335px;
-    width: 100%;
-    padding-left: 6px;
-    padding-right: 12px;
-    padding-top: 4px;
-    z-index: 0;
-}
-/* Launch Bay text*/
-.launchBayTitle
-{
-    font-variant: small-caps;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 13px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    padding-left: 6px;
-}
-
-.launchBayDetail
-{
-    font-size: 10px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.launchBayTugTitle
-{
-    font-variant: small-caps;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.launchBayTugSystem1
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.launchBayTugDetails1
-{
-    font-size: 10px;
-    grid-column-start: 3;
-    grid-column-end: 9;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.launchBayTugSystem2
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.launchBayTugDetails2
-{
-    font-size: 10px;
-    grid-column-start: 3;
-    grid-column-end: 9;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.launchBayArmourPrinterTitle
-{
-    font-variant: small-caps;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 8;
-    grid-row-end: 9;
-}
-
-.launchBayArmourCost
-{
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    text-align: center;
-}
-
-.launchBayArmourFitting
-{
-    font-size: 10px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    text-align: center;
-}
-
-.launchBayArmourPips
-{
-    font-size: 8px;
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    flex-flow: nowrap;
-    justify-self: start;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-template-columns: repeat(3,10px 18px);
-    grid-template-rows: 25px;
-}
-
-.launchBayArmourPip1
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.launchBayArmourPip2
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.launchBayArmourPip3
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.launchBayArmourPip4
-{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.launchBayArmourPip5
-{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.launchBayArmourPip6
-{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.launchBaycapacityPips
-{
-    grid-column-start: 8;
-    grid-column-end: 9;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    align-self: start;
-    justify-self: center;
-    flex-wrap: nowrap;
-    font-size: 8px;
-}
-
-.launchBayChargeTitle
-{
-    grid-column-start: 7;
-    grid-column-end: 8;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    font-variant: small-caps;
-    font-size: 11px;
-    padding-top: 6px;
-    padding-left: 2px;
-}
-
-input[type="number"].tugReactorCharge
-{
-    height: 40px;
-    width: 45px;
-    font-size: 18px;
-    text-align: center;
-}
-
-.launchBayChargeBox
-{
-    grid-column-start: 6;
-    grid-column-end: 8;
-    grid-row-start: 8;
-    grid-row-end: 11;
-    padding-left: 8px;
-    padding-top: 8px;
-}
-
-.launchBayOverchargeSymbol
-{
-    grid-column-start: 8;
-    grid-column-end: 9;
-    grid-row-start: 9;
-    grid-row-end: 11;
-    text-align: center;
-    padding-top: 10px;
-}
-
-.launchBayTugConditionTitle
-{
-    grid-column-start: 8;
-    grid-column-end: 11;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    font-variant: small-caps;
-    flex-flow: nowrap;
-    font-size: 11px;
-    text-align: end;
-    padding-right: 6px;
-}
-
-.launchBayTugConditionResilience1
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 4;
-    grid-row-end: 6;
-    align-self: center;
-    justify-self: center;
-}
-
-.launchBayTugConditionResilience2
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 6;
-    grid-row-end: 8;
-    align-self: center;
-    justify-self: center;
-}
-
-.launchBayTugConditionIntegrity
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 8;
-    grid-row-end: 10;
-    align-self: center;
-    justify-self: center;
-}
-
-.launchBayTugConditionVital
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 10;
-    grid-row-end: 12;
-    align-self: center;
-    justify-self: center;
-}
-
-.launchBayTrailerTitle
-{
-    font-variant: small-caps;
-    font-size: 12px;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 12;
-    grid-row-end: 13;
-    padding-top: 2px;
-}
-
-.launchBayTrailerCost1
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 13;
-    grid-row-end: 14;
-    text-align: center;
-}
-
-.launchBayTrailerType1
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 13;
-    grid-row-end: 14;
-}
-
-.launchBayTrailerDetails1
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 13;
-    grid-row-end: 14;
-}
-
-.launchBayTrailerArmour1
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 13;
-    grid-row-end: 14;
-}
-
-.launchBayTrailerCost2
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 14;
-    grid-row-end: 15;
-    text-align: center;
-}
-
-.launchBayTrailerType2
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 14;
-    grid-row-end: 15;
-}
-
-.launchBayTrailerDetails2
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 14;
-    grid-row-end: 15;
-}
-
-.launchBayTrailerArmour2
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 14;
-    grid-row-end: 15;
-}
-
-.launchBayTrailerCost3
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 15;
-    grid-row-end: 16;
-    text-align: center;
-}
-
-.launchBayTrailerType3
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 15;
-    grid-row-end: 16;
-}
-
-.launchBayTrailerDetails3
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 15;
-    grid-row-end: 16;
-}
-
-.launchBayTrailerArmour3
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 15;
-    grid-row-end: 16;
-}
-
-.launchBayTrailerCost4
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 16;
-    grid-row-end: 17;
-    text-align: center;
-}
-
-.launchBayTrailerType4
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 16;
-    grid-row-end: 17;
-}
-
-.launchBayTrailerDetails4
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 16;
-    grid-row-end: 17;
-}
-
-.launchBayTrailerArmour4
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 16;
-    grid-row-end: 17;
-}
-
-.launchBayTrailerCost5
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 17;
-    grid-row-end: 18;
-    text-align: center;
-}
-
-.launchBayTrailerType5
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 17;
-    grid-row-end: 18;
-}
-
-.launchBayTrailerDetails5
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 17;
-    grid-row-end: 18;
-}
-
-.launchBayTrailerArmour5
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 17;
-    grid-row-end: 18;
-}
-
-.launchBayTrailerCost6
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 18;
-    grid-row-end: 19;
-    text-align: center;
-}
-
-.launchBayTrailerType6
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 18;
-    grid-row-end: 19;
-}
-
-.launchBayTrailerDetails6
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 18;
-    grid-row-end: 19;
-}
-
-.launchBayTrailerArmour6
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 18;
-    grid-row-end: 19;
-}
-
-.launchBayTrailerCost7
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 19;
-    grid-row-end: 20;
-    text-align: center;
-}
-
-.launchBayTrailerType7
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 19;
-    grid-row-end: 20;
-}
-
-.launchBayTrailerDetails7
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 19;
-    grid-row-end: 20;
-}
-
-.launchBayTrailerArmour7
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 19;
-    grid-row-end: 20;
-}
-
-.launchBayTrailerCost8
-{
-    font-size: 9px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 20;
-    grid-row-end: 21;
-    text-align: center;
-}
-
-.launchBayTrailerType8
-{
-    font-size: 9px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 20;
-    grid-row-end: 21;
-}
-
-.launchBayTrailerDetails8
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 20;
-    grid-row-end: 21;
-}
-
-.launchBayTrailerDetails9
-{
-    font-size: 9px;
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 21;
-    grid-row-end: 22;
-}
-
-.launchBayTrailerArmour8
-{
-    flex-wrap: nowrap;
-    font-size: 9px;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 20;
-    grid-row-end: 21;
-}
-
-.launchBayTrailerConditionTitle
-{
-    grid-column-start: 8;
-    grid-column-end: 11;
-    grid-row-start: 13;
-    grid-row-end: 14;
-    font-variant: small-caps;
-    flex-flow: nowrap;
-    font-size: 11px;
-    text-align: end;
-    padding-right: 6px;
-}
-
-.launchBayTrailerConditionResilience
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 14;
-    grid-row-end: 16;
-    text-align: center;
-}
-
-.launchBayTrailerConditionIntegrity
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 16;
-    grid-row-end: 18;
-    text-align: center;
-}
-
-.launchBayTrailerConditionVital
-{
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 18;
-    grid-row-end: 20;
-    text-align: center;
-}
-
-
-/*	Ship Page Two */
-.shipPG2
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 320px 750px;
-    width: 850px;
-    grid-gap: 4px;
-    grid-template-areas: "resources letter" "cargo letter" "cargo notes";
-}
-
-.resourceWidget
-{
-    grid-area: resources;
-    display: flex;
-    flex-flow: nowrap;
-    width: 440px;
-    justify-content: space-evenly;
-}
-
-.resource
-{
-    display: grid;
-    grid-template-columns: 1fr 50px;
-    grid-template-rows: 15px 1fr 12px;
-    grid-gap: 0px;
-    height: 93px;
-    width: 140px;
-    padding-top: 2px;
-    padding-left: 2px;
-    z-index: 0;
-}
-
 
 /*Change Colour of Total Cargo when overloaded*/
 .colorChanger[value="1"] + .resourceBox
@@ -5196,214 +3382,8 @@ input[type="number"].tugReactorCharge
     color: red;
 }
 
-.resourceBoxPlace
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    padding-left: 6px;
-    padding-top: 2px;
-}
 
-.resourceTitle
-{
-    font-variant: small-caps;
-    font-size: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    padding-left: 4px;
-    padding-top: 2px;
-}
-
-.resourceTonnes
-{
-    font-variant: small-caps;
-    font-size: 9px;
-    text-align: end;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    padding-right: 4px;
-    padding-bottom: 8px;
-}
-/* Letter of Marque */
-.letterOfMarque
-{
-    grid-area: letter;
-    display: grid;
-    grid-template-columns: 30px 1fr 150px;
-    grid-template-rows: 24px 17px 1fr 12px 12px 15px;
-    grid-gap: 0px;
-    height: 412px;
-    width: 100%;
-    padding-top: 8px;
-    padding-left: 2px;
-    z-index: 0;
-}
-
-.letterOfMarqueTitle
-{
-    font-size: 14px;
-    text-align: left;
-    font-variant: small-caps;
-    font-weight: 500;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    padding-left: 4px;
-    padding-top: 2px;
-}
-
-.letterOfMarqueGreeting
-{
-    font-size: 13px;
-    text-align: left;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    padding-left: 14px;
-    padding-top: 2px;
-}
-
-.letterOfMarqueBoxPlace
-{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    padding-left: 18px;
-    padding-top: 4px;
-}
-
-.letterOfMarquePatron
-{
-    font-size: 13px;
-    font-style: italic;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    padding-left: 0px;
-    padding-top: 0px;
-}
-
-.letterOfMarquePatronTitle
-{
-    font-size: 10px;
-    text-align: center;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 6;
-    padding-left: 0px;
-    padding-top: 0px;
-}
-
-.letterOfMarqueBody
-{
-    font-size: 13px;
-    line-height: 1.5em;
-    height: 95%;
-    width: 95%;
-    text-align: justify;
-}
-
-/*			Cargo			*/
-.cargo
-{
-    grid-area: cargo;
-    display: grid;
-    grid-template-columns: 70% 45px 45px 1fr;
-    grid-template-rows: 24px 1fr;
-    grid-gap: 0px;
-    height: 1066px;
-    width: 100%;
-    padding-top: 0px;
-    padding-left: 4px;
-    padding-right: 8px;
-    z-index: 0;
-}
-
-.cargoTitle
-{
-    font-size: 14px;
-    text-align: left;
-    vertical-align: baseline;
-    font-variant: small-caps;
-    font-weight: 500;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    padding-left: 4px;
-    padding-top: 2px;
-}
-
-.cargoBox
-{
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.cargoWorth
-{
-    font-size: 11px;
-    text-align: center;
-    vertical-align: baseline;
-    font-variant: small-caps;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    padding-left: 0px;
-    padding-top: 6px;
-}
-
-.cargoTonnage
-{
-    font-size: 11px;
-    text-align: center;
-    vertical-align: baseline;
-    font-variant: small-caps;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    padding-left: 0px;
-    padding-top: 6px;
-}
-/*			Notes			*/
-.notes
-{
-    grid-area: notes;
-    display: grid;
-    grid-template-columns: 5px 1fr 15px;
-    grid-template-rows: 24px 1fr;
-    grid-gap: 0px;
-    height: 750px;
-    width: 100%;
-    z-index: 0;
-}
-
-.noteBox
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-/* ************* */
 /* Threat Sheets */
-/* ************* */
 .topLineText
 {
     text-align: start;
@@ -5411,16 +3391,6 @@ input[type="number"].tugReactorCharge
     font-weight: 500;
     flex-flow: nowrap;
     font-size: 15px;
-}
-
-.topLineTextSpaceScale
-{
-    text-align: start;
-    font-variant: small-caps;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 15px;
-    padding-left: 10px;
 }
 
 .threatTextBox
@@ -5434,42 +3404,6 @@ input[type="number"].tugReactorCharge
     justify-self: center;
 }
 
-input[type=number].threatNumberBox
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    font-weight: 500;
-    width: 185px;
-    vertical-align: baseline;
-    justify-self: start;
-    text-align: left;
-}
-
-input[type=number].shipTonnageNumberBox
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    font-weight: 500;
-    width: 306px;
-    vertical-align: baseline;
-    justify-self: start;
-    text-align: left;
-}
-
-input[type=number].behemothLengthNumberBox
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    font-weight: 500;
-    width: 340px;
-    vertical-align: baseline;
-    justify-self: start;
-    text-align: left;
-}
-
 textarea.sophontTagBox
 {
     margin-top: 3px;
@@ -5477,73 +3411,10 @@ textarea.sophontTagBox
     width: 95%;
 }
 
-textarea.swarmTagBox
-{
-    margin-top: 3px;
-    height: 170px;
-    width: 95%;
-}
-
-textarea.creatureTagBox
-{
-    margin-top: 3px;
-    height: 80px;
-    width: 95%;
-}
-
-textarea.droneTagBox
-{
-    margin-top: 3px;
-    height: 150px;
-    width: 95%;
-}
-
 textarea.sophontAugmentBox
 {
     margin-top: 3px;
     height: 80px;
-    width: 95%;
-}
-
-textarea.shuttleTagBox
-{
-    margin-top: 3px;
-    height: 130px;
-    width: 95%;
-}
-
-textarea.shipNoteBox
-{
-    margin-top: 3px;
-    height: 100px;
-    width: 95%;
-}
-
-textarea.behemothNoteBox
-{
-    margin-top: 3px;
-    height: 35px;
-    width: 95%;
-}
-
-textarea.capitalShipNoteBox
-{
-    margin-top: 3px;
-    height: 54px;
-    width: 95%;
-}
-
-textarea.sectionTagBox
-{
-    margin-top: 3px;
-    height: 65px;
-    width: 95%;
-}
-
-textarea.sectionShipTagBox
-{
-    margin-top: 3px;
-    height: 74px;
     width: 95%;
 }
 
@@ -5633,21 +3504,9 @@ textarea.sectionShipTagBox
     grid-row-end: 16;
 }
 
-.droneNotes
-{
-    grid-row-start: 17;
-    grid-row-end: 18;
-}
-
 .sophontTagList
 {
     grid-row-start: 12;
-    grid-row-end: 15;
-}
-
-.swarmTagList
-{
-    grid-row-start: 8;
     grid-row-end: 15;
 }
 
@@ -5655,38 +3514,6 @@ textarea.sectionShipTagBox
 {
     grid-row-start: 10;
     grid-row-end: 15;
-}
-
-.capitalShipAspectColumnA
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: end;
-}
-
-.capitalShipTextColumnA
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.capitalShipTextColumnFull
-{
-    grid-column-start: 2;
-    grid-column-end: 5;
-}
-
-.capitalShipAspectColumnB
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    justify-self: end;
-}
-
-.capitalShipTextColumnB
-{
-    grid-column-start: 4;
-    grid-column-end: 5;
 }
 
 span.threatDamageBoxBG
@@ -5725,76 +3552,6 @@ span.creatureDamageBoxBG
     margin-top: -10px;
 }
 
-span.droneDamageBoxBG
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 11;
-    grid-row-end: 13;
-    align-self: center;
-    justify-self: start;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/damage.png);
-    background-size: 44px 44px;
-    background-repeat: no-repeat;
-    width: 44px;
-    height: 44px;
-    z-index: 2;
-    margin-left: 50px;
-    margin-top: -10px;
-}
-
-span.sectionDamageBoxBG
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: -2;
-    grid-row-end: -1;
-    align-self: center;
-    justify-self: start;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/damage.png);
-    background-size: 44px 44px;
-    background-repeat: no-repeat;
-    width: 44px;
-    height: 44px;
-    z-index: 2;
-    margin-top: -10px;
-}
-
-span.sectionShipDamageBoxBG
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: -2;
-    grid-row-end: -1;
-    align-self: center;
-    justify-self: start;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/damage.png);
-    background-size: 44px 44px;
-    background-repeat: no-repeat;
-    width: 44px;
-    height: 44px;
-    z-index: 2;
-    margin-left: 0px;
-    margin-top: -10px;
-}
-
-span.sectionBehemothDamageBoxBG
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: -2;
-    grid-row-end: -1;
-    align-self: center;
-    justify-self: start;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/damage.png);
-    background-size: 44px 44px;
-    background-repeat: no-repeat;
-    width: 44px;
-    height: 44px;
-    z-index: 2;
-    margin-left: 28px;
-    margin-top: -10px;
-}
 
 input.threatDamageBox
 {
@@ -5810,219 +3567,4 @@ input.threatDamageBox
     z-index: 3;
     border: none;
     text-align: center;
-}
-
-/* Threat Armour & Conditions */
-.sophontConditionWidget
-{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 14;
-    width: 170px;
-    height: 250px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 18px 1fr 25px;
-    grid-template-rows: 20px repeat(9,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.compositeSophontConditionWidget
-{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 14;
-    width: 150px;
-    height: 250px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 18px auto 25px;
-    grid-template-rows: 20px repeat(9,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.swarmConditionWidget
-{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 14;
-    width: 150px;
-    height: 300px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 25px auto 25px;
-    grid-template-rows: 20px repeat(11,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.creatureConditionWidget
-{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 14;
-    width: 150px;
-    height: 275px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 18px auto 25px;
-    grid-template-rows: 20px repeat(10,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-
-
-.additionalCreatureConditionWidget
-{
-    grid-row-start: 1;
-    grid-row-end: 14;
-    width: 25px;
-    height: 275px;
-    display: grid;
-    grid-column-gap: 2px;
-    grid-template-columns: 25px;
-    grid-template-rows: 20px repeat(10,25px) 1fr;
-    justify-items: start;
-    align-items: start;
-    justify-self: end;
-}
-
-.sophontConditionTitle
-{
-    text-align: start;
-    font-variant: small-caps;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 14px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.sophontConditionNumber
-{
-    text-align: center;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 13px;
-    height: 15px;
-    width: 95%;
-    align-self: center;
-}
-
-input[type=number].sophontConditionNumber
-{
-    width: 1.5em;
-    height: 1.5em;
-}
-
-    input[type=number].sophontConditionNumber::-webkit-inner-spin-button
-    {
-        -webkit-appearance: none;
-    }
-
-.sophontConditionCheckbox
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: baseline;
-}
-
-.sophontConditionText
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    align-self: center;
-}
-
-.sophontConditionArmour
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    align-self: center;
-}
-
-.additionalSophontColumn
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    align-self: center;
-}
-
-.sophontCondition1
-{
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.sophontCondition2
-{
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.sophontCondition3
-{
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.sophontCondition4
-{
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.sophontCondition5
-{
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.sophontCondition6
-{
-    grid-row-start: 7;
-    grid-row-end: 8;
-}
-
-.sophontCondition7
-{
-    grid-row-start: 8;
-    grid-row-end: 9;
-}
-
-.sophontCondition8
-{
-    grid-row-start: 9;
-    grid-row-end: 10;
-}
-
-.sophontCondition9
-{
-    grid-row-start: 10;
-    grid-row-end: 11;
-}
-
-.sophontCondition10
-{
-    grid-row-start: 11;
-    grid-row-end: 12;
-}
-
-.sophontCondition11
-{
-    grid-row-start: 12;
-    grid-row-end: 13;
 }
