@@ -1345,8 +1345,8 @@
 </rolltemplate>
 
 <!-- Scripts -->
-<!--<script type="text/worker">-->
-<script type="text/javascript">
+<script type="text/worker">
+<!--<script type="text/javascript">-->
     /* Global Attributes */
     var globalAttributes = [];//Global Array for Storage of Player Caster Level
 
@@ -1774,19 +1774,23 @@
         })
     });
 
-    /* Sigil Segment Clicks Advance Attribute One-step then Wrap Around*/
-    /* "repeating_ritualcard:ritualsigilsegment1" */
+    /* Button list for the Ascension Sigil Segments */
     const buttons = ['ascensionsigilsegment1', 'ascensionsigilsegment2', 'ascensionsigilsegment3', 'ascensionsigilsegment4', 'ascensionsigilsegment5', 'ascensionsigilsegment6',
-        'ascensionsigilsegment7', 'ascensionsigilsegment8', 'ascensionsigilsegment9', 'ascensionsigilsegment10', 'ascensionsigilsegment11'];
+        'ascensionsigilsegment7', 'ascensionsigilsegment8', 'ascensionsigilsegment9', 'ascensionsigilsegment10', 'ascensionsigilsegment11',
+        'repeating_ritualcard:ritualsigilsegment1', 'repeating_ritualcard:ritualsigilsegment2', 'repeating_ritualcard:ritualsigilsegment3', 'repeating_ritualcard:ritualsigilsegment4',
+        'repeating_ritualcard:ritualsigilsegment5', 'repeating_ritualcard:ritualsigilsegment6', 'repeating_ritualcard:ritualsigilsegment7', 'repeating_ritualcard:ritualsigilsegment8',
+        'repeating_ritualcard:ritualsigilsegment9', 'repeating_ritualcard:ritualsigilsegment10', 'repeating_ritualcard:ritualsigilsegment11'].forEach((string) =>
+        {
+            on(`clicked:${string}`, () => { handleclick(string) });
+        });
 
-    buttons.forEach(id => on(`clicked:${id}`, () =>
-        handleClick(id)));
-
-    const handleClick = (attr) =>
+    /* Advance Attribute One-step then Wrap Around */
+    const handleclick = function (attr)
     {
+        attr = attr.replace(':', '_');
         console.log(attr)
-        // create a hash
-        const updateAttrs = {};
+        
+        const updateAttrs = {}; // create a hash
         getAttrs([attr], (values) =>
         {
             var segmentState = parseInt(values[attr]) || 0;
@@ -1795,12 +1799,10 @@
             {
                 segmentState = 0;
             }
-            // add new key-value-pair in the hash
-            // for the attribute to update:
-            // in this case, the attr that was changed.
-            updateAttrs[attr] = segmentState;
-            // set all attributes to their value from the hash
-            setAttrs(updateAttrs);
+            
+            updateAttrs[attr] = segmentState; // add new key-value-pair in the hash for the attribute to update: in this case, the attr that was changed.
+            
+            setAttrs(updateAttrs);// set all attributes to their value from the hash
         })
     };
 
