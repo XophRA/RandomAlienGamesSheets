@@ -801,6 +801,20 @@ main.masterGrid
             height: 8px;
         }
 
+        .ritualCard .ritualSigil > input[value="1"].sigilSegment + button.sigilSegment + span
+        {
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/EX.png);
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 1;
+        }
+
+        .ritualCard .ritualSigil > input[value="2"].sigilSegment + button.sigilSegment
+        {
+            background-color: #606060;
+        }
+
         .ritualCard .ritualSigil > .sigilSegment1
         {
             grid-area: 7/2/auto/auto;
