@@ -798,17 +798,13 @@ main.masterGrid
             border-radius: 0;
             background-repeat: no-repeat;
             background-position: center;
+            background-size: 14px 14px;
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment0.png);
             opacity: 1;
             border: none;
             background-color: transparent;
-            width: 8px;
-            height: 8px;
-            background-size: 14px 14px;
-        }
-
-        .ritualCard .ritualSigil > input[value="0"].sigilSegment + button.sigilSegment
-        {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment0.png);
+            width: 12px;
+            height: 12px;
         }
 
         .ritualCard .ritualSigil > input[value="1"].sigilSegment + button.sigilSegment
@@ -823,11 +819,17 @@ main.masterGrid
 
         .ritualCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment2.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment3.png);
         }
 
+            .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink
+            {
+                display: none;
+            }
             .ritualCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment + span.sigilLink
             {
+                display: block;
+
             }
 
         .ritualCard .ritualSigil > .sigilSegment1
