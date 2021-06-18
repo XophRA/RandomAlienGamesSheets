@@ -861,7 +861,7 @@ main.masterGrid
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink3
         {
             grid-area: 5/6/span 3/span 2;
-            margin: 0 0px 0 0px;
+            margin: 3px -2px -3px 2px;
             width: 26px;
             height: 16px;
             background-repeat: no-repeat;
@@ -873,7 +873,7 @@ main.masterGrid
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink4
         {
             grid-area: 5/8/span 3/span 3;
-            margin: 0 0px 0 0px;
+            margin: 3px -2px -3px 2px;
             width: 24px;
             height: 26px;
             background-repeat: no-repeat;
