@@ -796,29 +796,39 @@ main.masterGrid
         {
             padding: 0;
             border-radius: 0;
-            border: 2px solid black;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 1;
+            border: none;
+            background-color: transparent;
             width: 8px;
             height: 8px;
+            background-size: 14px 14px;
+        }
+
+        .ritualCard .ritualSigil > input[value="0"].sigilSegment + button.sigilSegment
+        {
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment0.png);
         }
 
         .ritualCard .ritualSigil > input[value="1"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/EX.png); /*change to include box? on all of them?*/
-            background-size: 14px 14px;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 1;
-            padding: -4px;
-            width: 14px;
-            height: 14px;
-            border: none;
-            background-color: transparent;
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment1.png);
         }
 
         .ritualCard .ritualSigil > input[value="2"].sigilSegment + button.sigilSegment
         {
-            background-color: #606060;
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment2.png);
         }
+
+        .ritualCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment
+        {
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img15/SigilSegment2.png);
+        }
+
+            .ritualCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment + span.sigilLink
+            {
+            }
 
         .ritualCard .ritualSigil > .sigilSegment1
         {
@@ -826,57 +836,67 @@ main.masterGrid
             margin: -2px -2px 2px 2px;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment2
         {
             grid-area: 2/4/auto/auto;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment3
         {
             grid-area: 5/6/auto/auto;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment4
         {
             grid-area: 6/8/auto/auto;
             margin: 0 3px 0 -3px;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment5
         {
             grid-area: 7/10/auto/auto;
             margin: 0 4px 0 -4px;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment6
         {
             grid-area: 3/11/auto/auto;
             margin: 0 3px 0 -3px;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment7
         {
             grid-area: 4/12/auto/auto;
             margin: 0 -6px 0 6px;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment8
         {
             grid-area: 8/14/auto/auto;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment9
         {
             grid-area: 6/16/auto/auto;
             margin: 5px 3px -5px -3px;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment10
         {
             grid-area: 7/18/auto/auto;
             margin: -1px -2px 1px 2px;
             display: none;
         }
+
         .ritualCard .ritualSigil > .sigilSegment11
         {
             grid-area: 2/20/auto/auto;
