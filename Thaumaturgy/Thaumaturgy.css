@@ -191,11 +191,13 @@ main.masterGrid
 {
     grid-area: sheet;
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/CovenSheet.png);
+    background-size: 850px 2362px;
+    background-repeat: no-repeat;
     width: 100%;
     display: grid;
-    grid-row-gap: 6px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 1fr 1fr 1fr;
+    grid-row-gap: 0px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 180px 645px 1020px 1fr;
     justify-items: start;
     align-items: start;
 }
@@ -538,7 +540,7 @@ main.masterGrid
 /* Ascension */
 .ascensionWidget
 {
-    grid-area: 2/1/auto/auto;
+    grid-area: 4/1/auto/auto;
     display: grid;
     width: 100%;
     height: 100%;
@@ -750,6 +752,25 @@ main.masterGrid
 
 
 /* Ritual Card */
+.ritualWidget
+{
+    grid-area: 4/2/auto/-1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 114px 250px 1fr;
+    grid-template-rows: 85px 1fr;
+}
+
+    .ritualWidget .deckHeader
+    {
+        grid-area: 1/2/auto/auto;
+    }
+    .ritualWidget .deck
+    {
+        grid-area: 2/2/auto/auto;
+    }
+
 .ritualCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/RitualCard.png);
@@ -954,15 +975,16 @@ main.masterGrid
             background-size: 18px 55px;
             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/SigilLink10.png);
         }
+
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink11
         {
-            grid-area: 2/20/span 5/span 2;
-            margin: 0px 0px 0px 0px;
-            width: 24px;
-            height: 24px;
+            grid-area: 1/18/span 3/span 5;
+            margin: 2px 3px -2px -3px;
+            width: 46px;
+            height: 36px;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 24px 24px;
+            background-size: 46px 36px;
             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/SigilLink11.png);
         }
 
@@ -2888,70 +2910,6 @@ textarea.speculation
     height: 100%;
 }
 
-    .grimoireWidget > .deck > .repcontrol
-    {
-        margin: 6px;
-    }
-
-        .grimoireWidget > .deck > .repcontrol > button
-        {
-            margin: 6px;
-            background-image: none;
-            background-color: white;
-            border: 2px solid black;
-            font-weight: 600;
-        }
-
-    .grimoireWidget > input[value="1"].collapseToggle ~ .deck > .repcontrol
-    {
-    }
-
-    .grimoireWidget > .deckHeader
-    {
-        grid-row: 1/auto;
-        display: grid;
-        grid-template-columns: 1fr 20px 18px;
-        grid-template-rows: 54px 28px 1fr;
-    }
-
-        .grimoireWidget > .deckHeader > .collapseDeck
-        {
-            grid-area: 2/2/auto/auto;
-        }
-
-        .grimoireWidget > .deckHeader > input.collapseDeck
-        {
-            opacity: 0;
-            cursor: pointer;
-            width: 20px;
-            height: 28px;
-            z-index: 13;
-        }
-
-            .grimoireWidget > .deckHeader > input.collapseDeck + span.collapseDeck
-            {
-                background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/CollapseDeck.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                opacity: 1;
-                background-size: 20px 28px;
-                width: 20px;
-                height: 28px;
-                z-index: 12;
-            }
-
-            .grimoireWidget > .deckHeader > input.collapseDeck:checked + span.collapseDeck
-            {
-                background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/ExpandDeck.png);
-            }
-
-    .grimoireWidget > .deck
-    {
-        display: flex;
-        flex-direction: column;
-        grid-row: 2/auto;
-    }
-
     .grimoireWidget > .deck1
     {
         grid-column: 2/auto;
@@ -2966,6 +2924,74 @@ textarea.speculation
     {
         grid-column: 6/auto;
     }
+
+/* Repeating Deck */
+section > .deck
+{
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/auto;
+    width: 250px;
+}
+
+    section > .deck > .repcontrol
+    {
+        margin: 6px;
+    }
+
+        section > .deck > .repcontrol > button
+        {
+            margin: 6px;
+            background-image: none;
+            background-color: white;
+            border: 2px solid black;
+            font-weight: 600;
+        }
+
+section > input[value="1"].collapseToggle ~ .deck > .repcontrol
+{
+}
+
+section > .deckHeader
+{
+    grid-row: 1/auto;
+    display: grid;
+    grid-template-columns: 1fr 20px 18px;
+    grid-template-rows: 54px 28px 1fr;
+    width: 250px;
+}
+
+    section > .deckHeader > .collapseDeck
+    {
+        grid-area: 2/2/auto/auto;
+    }
+
+    section > .deckHeader > input.collapseDeck
+    {
+        opacity: 0;
+        cursor: pointer;
+        width: 20px;
+        height: 28px;
+        z-index: 13;
+    }
+
+        section > .deckHeader > input.collapseDeck + span.collapseDeck
+        {
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/CollapseDeck.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 1;
+            background-size: 20px 28px;
+            width: 20px;
+            height: 28px;
+            z-index: 12;
+        }
+
+        section > .deckHeader > input.collapseDeck:checked + span.collapseDeck
+        {
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img16/ExpandDeck.png);
+        }
+
 
 /* Collapse & Expand Deck Functionality */
 input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
