@@ -266,7 +266,7 @@
 
             <!-- Curses -->
             <section class="curseWidget">
-                <button type="action"type="action" class="sortCurses" name="act_sortCurses"></button>
+                <button type="action" type="action" class="sortCurses" name="act_sortCurses"></button>
                 <input type="hidden" class="curseToggle" name="attr_curseFocus" value="3" />
                 <input type="hidden" class="curseNumber" name="attr_curseNumber" value="3" />
                 <div class="card customCard curseCard curse1">
@@ -502,24 +502,56 @@
         </div>
     </article>
 
-    <!-- Sanctum -->
+    <!-- Coven -->
     <article class="sheetType covenSheet">
-        <!-- Sanctum Sheet Grid -->
+        <!-- Coven Sheet Grid -->
         <div class="covenSheetGrid">
-            <!--Ship Aspects-->
-            <div class="shipAspects">
-                <div class="topLineText designation">Designation:</div>
-                <div class="designationPrefix"><input type="text" name="attr_designationPrefix" /></div>
-                <div class="designationName"><input type="text" name="attr_character_name" /></div>
-                <div class="patron">Patron:</div>
-                <div class="patronName"><input type="text" name="attr_PatronFaction" /></div>
-                <div class="flag">Flag:</div>
-                <div class="flagType"><input type="text" name="attr_Flag"></div>
-                <div class="tactics">Tactics:</div>
-                <div class="tacticList"><input type="text" name="attr_Tactics" /></div>
-                <div class="captain">Captain:</div>
-                <div class="captainName"><input type="text" name="attr_Captain" /></div>
-            </div>
+            <!--Coven Aspects-->
+            <section class="covenAspects">
+                <input type="text" name="attr_character_name" class="covenName" />
+                <input type="text" name="attr_academy" class="academyName" />
+                <input type="text" name="attr_sanctum" class="sanctumName">
+                <textarea name="attr_seniorCovens" class="seniorCovens" />
+            </section>
+
+            <!-- Integrity -->
+            <section class="academyIntegrity">
+                <div class="clockWidget">
+                    <input type="text" name="attr_academyIntegrityClock" class="clockControl" value="0" readonly />
+                    <input type="number" min="0" max="13" value="0" name="attr_academyIntegrityClock" class="clockControl" />
+                    <input type="hidden" name="attr_academyIntegrityClock" value="0" class="clockSegment" />
+                    <span class="clock"></span>
+                    <span class="clockSpoke clockSpoke0"></span>
+                    <span class="clockSpoke clockSpoke1"></span>
+                    <span class="clockSpoke clockSpoke2"></span>
+                    <span class="clockSpoke clockSpoke3"></span>
+                    <span class="clockSpoke clockSpoke4"></span>
+                    <span class="clockSpoke clockSpoke5"></span>
+                    <span class="clockSpoke clockSpoke6"></span>
+                </div>
+            </section>
+            <!-- Amenities -->
+            <section class="amenitiesWidget">
+                <textarea name="attr_amenities1" class="amenities1"></textarea>
+                <textarea name="attr_amenities2" class="amenities2"></textarea>
+            </section>
+            <!-- Arcane Anagoge -->
+            <section class="arcaneAnagogeWidget">
+                <textarea name="attr_anagoge1" class="anagoge1"></textarea>
+                <textarea name="attr_anagoge2" class="anagoge2"></textarea>
+                <textarea name="attr_anagoge3" class="anagoge3"></textarea>
+                <textarea name="attr_anagoge4" class="anagoge4"></textarea>
+                <textarea name="attr_anagoge5" class="anagoge5"></textarea>
+                <textarea name="attr_anagoge6" class="anagoge6"></textarea>
+                <textarea name="attr_anagoge7" class="anagoge7"></textarea>
+                <textarea name="attr_anagoge8" class="anagoge8"></textarea>
+                <textarea name="attr_anagoge9" class="anagoge9"></textarea>
+                <textarea name="attr_anagoge10" class="anagoge10"></textarea>
+                <textarea name="attr_anagoge11" class="anagoge11"></textarea>
+                <textarea name="attr_anagoge12" class="anagoge12"></textarea>
+                <textarea name="attr_anagoge13" class="anagoge13"></textarea>
+            </section>
+
             <!--Ascension-->
             <section class="ascensionWidget">
                 <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
@@ -608,6 +640,7 @@
                     </div>
                 </div>
             </section>
+
             <!-- Rituals -->
             <section class="ritualWidget">
                 <div class="deckHeader">
@@ -784,6 +817,7 @@
                     </li>
                 </ol>
             </section>
+
             <!-- Magic Circle-->
             <section class="magicCircle">
                 <input type="hidden" name="attr_diceInputTypo" />
@@ -1078,12 +1112,13 @@
                 <!--Casting Button-->
                 <div class="castingButton">
                     <input type="hidden" name="attr_castingMacro" readonly />
-                    <button type="action"type="roll" class="rollSalvoButton" name="roll_rollSalvo" value="@{castingMacro}"></button><span class="rollSalvoButton"></span><span class="rollSalvoButton">Cast</span>
+                    <button type="action" type="roll" class="rollSalvoButton" name="roll_rollSalvo" value="@{castingMacro}"></button><span class="rollSalvoButton"></span><span class="rollSalvoButton">Cast</span>
                 </div>
                 <div class="resultsButton">
-                    <button type="action"type="action" class="calculateResultsButton" name="act_calculatResults">Count</button>
+                    <button type="action" type="action" class="calculateResultsButton" name="act_calculatResults">Count</button>
                 </div>
             </section>
+
             <!--Ripples-->
             <section class="ripples">
                 <!--1 Folk-->

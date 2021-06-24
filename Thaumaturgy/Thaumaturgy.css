@@ -196,7 +196,7 @@ main.masterGrid
     width: 100%;
     display: grid;
     grid-row-gap: 0px;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 200px;
     grid-template-rows: 180px 645px 1020px 1fr;
     justify-items: start;
     align-items: start;
@@ -401,142 +401,102 @@ main.masterGrid
                 z-index: 5;
             }
 
-/* Sancurary Sheet */
-.shipAspects
+/* Coven Sheet */
+.covenAspects
 {
-    grid-area: 1/1/auto/-1;
-    width: 100%;
+    grid-area: 1/1/auto/span 2;
     display: grid;
-    grid-template-columns: repeat(2,90px 30px 1fr);
-    grid-template-rows: 18px 15px 15px;
-    grid-column-gap: 4px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 36px repeat(3, 24px) 1fr;
 }
 
-    .shipAspects > .designation
+    .covenAspects > input,
+    .covenAspects > textarea
     {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-column: 2/-1;
     }
 
-    .shipAspects > .designationPrefix
+    .covenAspects > .covenName
     {
-        align-self: stretch;
-        flex-flow: nowrap;
-        font-size: 13px;
+        grid-row: 2/auto;
+    }
+
+    .covenAspects > .academyName
+    {
+        grid-row: 3/auto;
+    }
+
+    .covenAspects > .sanctumName
+    {
+        grid-row: 4/auto;
+    }
+
+    .covenAspects > .seniorCovens
+    {
+        grid-row: -2/auto;
+    }
+
+.academyIntegrity
+{
+    grid-area: 1/-2/auto/auto;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 22px 1fr;
+    grid-template-rows: 1fr 162px;
+}
+
+    .academyIntegrity > .clockWidget
+    {
+        grid-area: 2/2/auto/auto;
+        grid-template-columns: 160px 16px;
         width: 100%;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        height: 100%;
+        --clockcentre: 78px;
+        --clockheight: 155px;
+        --spokeheight: 157px;
+        --spokewidth: 3px;
     }
 
-    .shipAspects > .designationName
+/* Amenities */
+.amenitiesWidget
+{
+    grid-area: 2/1/auto/-1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 20px repeat(2, 1fr);
+    grid-template-rows: 42px 1fr;
+    column-gap:6px;
+}
+
+    .amenitiesWidget > textarea
     {
-        align-self: stretch;
-        flex-flow: nowrap;
-        font-size: 13px;
-        width: 100%;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row: 2/-1;
     }
 
-    .shipAspects > .patron
+    .amenitiesWidget > .amenities1
     {
-        text-align: start;
-        flex-flow: nowrap;
-        font-size: 13px;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-column: 2/auto;
     }
 
-    .shipAspects > .patronName
+    .amenitiesWidget > .amenities2
     {
-        align-self: stretch;
-        flex-flow: nowrap;
-        font-size: 12px;
-        width: 100%;
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-column: 3/auto;
     }
 
-    .shipAspects > .flag
-    {
-        text-align: start;
-        flex-flow: nowrap;
-        font-size: 13px;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .shipAspects > .flagType
-    {
-        align-self: stretch;
-        flex-flow: nowrap;
-        font-size: 12px;
-        width: 100%;
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .shipAspects > .captain
-    {
-        text-align: start;
-        flex-flow: nowrap;
-        font-size: 13px;
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .shipAspects > .captainName
-    {
-        align-self: stretch;
-        flex-flow: nowrap;
-        font-size: 12px;
-        width: 100%;
-        grid-column-start: 5;
-        grid-column-end: 7;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .shipAspects > .tactics
-    {
-        text-align: start;
-        flex-flow: nowrap;
-        font-size: 13px;
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .shipAspects > .tacticList
-    {
-        align-self: stretch;
-        flex-flow: nowrap;
-        font-size: 12px;
-        width: 100%;
-        grid-column-start: 5;
-        grid-column-end: 7;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
+/* Arcane Anagoge */
+.arcaneAnagogeWidget
+{
+    grid-area: 3/1/auto/-1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: 42px repeat(13,1fr) 1fr;
+}
 /* Ascension */
 .ascensionWidget
 {
@@ -766,6 +726,7 @@ main.masterGrid
     {
         grid-area: 1/2/auto/auto;
     }
+
     .ritualWidget .deck
     {
         grid-area: 2/2/auto/auto;
@@ -2351,13 +2312,17 @@ input[type=number].resourceBox
     grid-template-rows: 20px 1fr;
     width: 80px;
     height: 64px;
+    --clockcentre: 30px;
+    --clockheight: 60px;
+    --spokeheight: 62px;
+    --spokewidth: 2px;
 }
 
     .clockWidget > .clock
     {
         grid-area: 1/1/span 2/auto;
-        width: 60px;
-        height: 60px;
+        width: var(--clockheight);
+        height: var(--clockheight);
         display: inline-block;
         border-radius: 50%;
         background: black;
@@ -2398,12 +2363,12 @@ input[value="1"].clockSegment ~ .clock
 
 input[value="2"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(138deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, #555 50%, white 50%);
 }
 
 input[value="3"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(163deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(164deg, #555 50%, white 50%);
 }
 
 input[value="4"].clockSegment ~ .clock
@@ -2423,17 +2388,17 @@ input[value="6"].clockSegment ~ .clock
 
 input[value="7"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(117deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(114deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
 input[value="8"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(147deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(143deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
 input[value="9"].clockSegment ~ .clock
 {
-    background-image: linear-gradient(169deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(168deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
 input[value="10"].clockSegment ~ .clock
@@ -2459,8 +2424,8 @@ input[value="13"].clockSegment ~ .clock
 .clockWidget > .clockSpoke
 {
     grid-area: 1/1/auto/auto;
-    height: 62px;
-    width: 2px;
+    height: var(--spokeheight);
+    width: var(--spokewidth);
     display: block;
     left: 0;
     top: 0;
@@ -2469,38 +2434,38 @@ input[value="13"].clockSegment ~ .clock
 
     .clockWidget > .clockSpoke.clockSpoke0
     {
-        transform: translateX(30px);
-        height: 30px;
+        transform: translateX(var(--clockcentre));
+        height: var(--clockcentre);
     }
 
     .clockWidget > .clockSpoke.clockSpoke1
     {
-        transform: translateX(30px) rotate(22deg);
+        transform: translateX(var(--clockcentre)) rotate(22deg);
     }
 
     .clockWidget > .clockSpoke.clockSpoke2
     {
-        transform: translateX(30px) rotate(50deg);
+        transform: translateX(var(--clockcentre)) rotate(50deg);
     }
 
     .clockWidget > .clockSpoke.clockSpoke3
     {
-        transform: translateX(30px) rotate(75deg);
+        transform: translateX(var(--clockcentre)) rotate(75deg);
     }
 
     .clockWidget > .clockSpoke.clockSpoke4
     {
-        transform: translateX(30px) rotate(104deg);
+        transform: translateX(var(--clockcentre)) rotate(104deg);
     }
 
     .clockWidget > .clockSpoke.clockSpoke5
     {
-        transform: translateX(30px) rotate(130deg);
+        transform: translateX(var(--clockcentre)) rotate(130deg);
     }
 
     .clockWidget > .clockSpoke.clockSpoke6
     {
-        transform: translateX(30px) rotate(156deg);
+        transform: translateX(var(--clockcentre)) rotate(156deg);
     }
 
 /* Edit Mode */
@@ -3691,188 +3656,3 @@ input[type="checkbox"]:checked + span.patch
 }
 
 
-/* Threat Sheets */
-.topLineText
-{
-    text-align: start;
-    font-variant: small-caps;
-    font-weight: 500;
-    flex-flow: nowrap;
-    font-size: 15px;
-}
-
-.threatTextBox
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    font-weight: 500;
-    width: 100%;
-    vertical-align: baseline;
-    justify-self: center;
-}
-
-textarea.sophontTagBox
-{
-    margin-top: 3px;
-    height: 40px;
-    width: 95%;
-}
-
-textarea.sophontAugmentBox
-{
-    margin-top: 3px;
-    height: 80px;
-    width: 95%;
-}
-
-.aliasThreat
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.aliasThreatName
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.aliasThreatNameLong
-{
-    align-self: stretch;
-    flex-flow: nowrap;
-    font-size: 13px;
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.pronounThreat
-{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.pronounThreatName
-{
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.sophontAspectColumnA
-{
-    justify-self: end;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.sophontTextColumnA
-{
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-
-.sophontTextColumnFull
-{
-    grid-column-start: 3;
-    grid-column-end: 6;
-}
-
-.sophontAspectColumnB
-{
-    justify-self: end;
-    grid-column-start: 4;
-    grid-column-end: 5;
-}
-
-.sophontTextColumnB
-{
-    grid-column-start: 5;
-    grid-column-end: 6;
-}
-
-.sophontNotes
-{
-    grid-row-start: 15;
-    grid-row-end: 16;
-}
-
-.sophontTagList
-{
-    grid-row-start: 12;
-    grid-row-end: 15;
-}
-
-.sophontAugmentList
-{
-    grid-row-start: 10;
-    grid-row-end: 15;
-}
-
-span.threatDamageBoxBG
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 11;
-    grid-row-end: 13;
-    align-self: center;
-    justify-self: start;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/damage.png);
-    background-size: 44px 44px;
-    background-repeat: no-repeat;
-    width: 44px;
-    height: 44px;
-    z-index: 2;
-    margin-left: 38px;
-    margin-top: -10px;
-}
-
-span.creatureDamageBoxBG
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 11;
-    grid-row-end: 13;
-    align-self: center;
-    justify-self: start;
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/damage.png);
-    background-size: 44px 44px;
-    background-repeat: no-repeat;
-    width: 44px;
-    height: 44px;
-    z-index: 2;
-    margin-left: 42px;
-    margin-top: -10px;
-}
-
-
-input.threatDamageBox
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 11;
-    grid-row-end: 13;
-    align-self: center;
-    justify-self: center;
-    font-size: 16px;
-    width: 2.5em;
-    height: 2em;
-    z-index: 3;
-    border: none;
-    text-align: center;
-}
