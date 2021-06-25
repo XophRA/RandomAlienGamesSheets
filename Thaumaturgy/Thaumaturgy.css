@@ -599,10 +599,13 @@ main.masterGrid
     {
         grid-area: 1/1/-1/-1;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 90px repeat(2,1fr) 100px;
         grid-template-rows: 42px repeat(4, 1fr) 1fr;
     }
+    .ascensionWidget .editAscension > levelControl
+    {
 
+    }
     /* Level Numbers */
     .ascensionWidget .level
     {
@@ -800,8 +803,9 @@ main.masterGrid
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 110px 250px 1fr;
+    grid-template-columns: 106px 250px 1fr;
     grid-template-rows: 85px 1fr;
+    margin-top: 5px;
 }
 
     .ritualWidget .deckHeader
