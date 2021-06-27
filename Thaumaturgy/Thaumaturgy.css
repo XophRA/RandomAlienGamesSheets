@@ -105,6 +105,12 @@ input.magicalCreatureSelector:checked ~ article.creatureSheet
     text-align: center;
 }
 
+.ui-dialog .charsheet button[type="roll"]
+{
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
 
 /*All Hidden styles*/
 .charsheet .hidden
@@ -1240,26 +1246,20 @@ section.magicCircle
     section.magicCircle > .castingButton
     {
         grid-area: 1 / 2 / 2 / 3;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        width: 100%;
-        height: 100%;
     }
-
-        section.magicCircle > .castingButton > .rollSalvoButton
-        {
-            grid-area: 1 / 1 / 2 / 2;
-        }
 
     section.magicCircle > .resultsButton
     {
         grid-area: -3 / 2 / -2 / 3;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        width: 100%;
-        height: 100%;
+        margin-top: 24px;
+    }
+
+    section.magicCircle > button
+    {
+        z-index: 9;
+        width: 60px;
+        height: 30px;
+        align-self: center;
     }
 
     /* Dice Positions on the Magic Circle */
@@ -2039,44 +2039,6 @@ input[type="text"].diceInputBox
     background-color: rgba(0,0,0,0.8);
     border: medium, solid, white;
 }
-
-
-button.rollSalvoButton
-{
-    margin-top: 5px;
-    border: none;
-    border-radius: 60%;
-    padding: 0px;
-    z-index: 9;
-    opacity: 0;
-    width: 56px;
-    height: 60px;
-}
-
-    button.rollSalvoButton + span.rollSalvoButton
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHex.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 56px 60px;
-        z-index: 7;
-        width: 56px;
-        height: 60px;
-    }
-
-        button.rollSalvoButton + span.rollSalvoButton + span.rollSalvoButton
-        {
-            z-index: 8;
-            width: 40px;
-            height: 20px;
-            padding: 42px 0 0 20px;
-            line-height: 13px;
-            text-align: left;
-            font-size: 13px;
-            color: white;
-            font-family: "Fredericka the Great", cursive;
-            font-weight: 500;
-        }
 
 
 /* Ripples */

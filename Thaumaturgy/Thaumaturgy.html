@@ -771,6 +771,7 @@
                             <li>Scroll</li>
                             <li>Channel</li>
                             <li>Restoration</li>
+                            <li>Tradition</li>
                             <li>Rites</li>
                         </ol>
                     </li>
@@ -1128,13 +1129,10 @@
                     <div class="dieType">Tangle Dice</div>
                 </div>
                 <!--Casting Button-->
-                <div class="castingButton">
                     <input type="hidden" name="attr_castingMacro" readonly />
-                    <button type="roll" class="rollSalvoButton" name="roll_rollSalvo" value="@{castingMacro}"></button><span class="rollSalvoButton"></span><span class="rollSalvoButton">Cast</span>
-                </div>
-                <div class="resultsButton">
-                    <button type="action" class="calculateResultsButton" name="act_calculatResults">Count</button>
-                </div>
+                    <button type="roll" class="castingButton" name="roll_rollSalvo" value="@{castingMacro}"> Cast</button>
+                <!-- Calculate Results Button-->
+                    <button type="action" class="resultsButton" name="act_calculatResults">Count</button>
             </section>
 
             <!--Ripples-->
