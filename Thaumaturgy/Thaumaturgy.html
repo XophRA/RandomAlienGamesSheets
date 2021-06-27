@@ -1802,14 +1802,14 @@
                     }
                 }
             }
-            console.log(allValue);            
+            console.log(allValue);
 
             //Add Dice that didn't match to the Ripple Table, total odds to the Paradox Resource, & Calculate Aether to be returned to the Player Caster from the total evens
             let paradoxResource = parseInt(attrs[`paradoxResource`]) || 0;
             let aetherResource = "Burn All";
             let evens = 0;
 
-            for (let num = 0; num < allValue.length; num++) //loop through allValue 
+            for (let num = 0; num < allValue.length; num++) //loop through allValue
             {
                 let harmony = parseInt(attrs[`ripple${num + 1}Harmony`]) || 0;
                 evens += evenDiceRolled(allValue[num]);
@@ -1894,7 +1894,7 @@
     on("clicked:ascensionClear", (event) =>
     {
         const setObj = {};
-        /* Set the sigil Segments to 0 */ 
+        /* Set the sigil Segments to 0 */
         setObj.ascensionsigilsegment1 = 0;
         setObj.ascensionsigilsegment2 = 0;
         setObj.ascensionsigilsegment3 = 0;
@@ -1934,7 +1934,7 @@
     {
         attr = attr.replace(':', '_');
         console.log(attr)
-        
+
         const updateAttrs = {}; // create a hash
         getAttrs([attr], (values) =>
         {
@@ -1944,48 +1944,48 @@
             {
                 segmentState = 0;
             }
-            
+
             updateAttrs[attr] = segmentState; // add new key-value-pair in the hash for the attribute to update: in this case, the attr that was changed.
-            
+
             setAttrs(updateAttrs);// set all attributes to their value from the hash
         })
     };
 
         //Ripple Amplitude Trigger Surge (In process) Turns numbers red when equal to 5
-        on("change:reactorcharge change:reactorovercharge change:shipreactorcharge change:shipreactorovercharge change:tugreactorcharge change:tugreactorovercharge", (event) =>
-        {
-            let getArray = []; //An Array for all ripples to get
+        //on("change:reactorcharge change:reactorovercharge change:shipreactorcharge change:shipreactorovercharge change:tugreactorcharge change:tugreactorovercharge", (event) =>
+        //{
+        //    let getArray = []; //An Array for all ripples to get
 
-            //Get all Ripple Totals
-            for (let num = 1; num <= 13; num++)
-            {
-                getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
-            }
+        //    //Get all Ripple Totals
+        //    for (let num = 1; num <= 13; num++)
+        //    {
+        //        getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
+        //    }
 
-            getAttrs(getArray, function (values)
-            {
-                const setObj = {};
+        //    getAttrs(getArray, function (values)
+        //    {
+        //        const setObj = {};
 
-                //Portable Reactor
-                let portableReactorCapacity = parseInt(values.portableReactor) || 3;
-                let portableReactorCharge = parseInt(values.ReactorCharge) || 0;
-                let portableReactorOvercharge = parseInt(values.ReactorOvercharge) || 0;
- 
-                if (portableReactorCharge > portableReactorCapacity)
-                {
-                    setObj.ReactorCharge = portableReactorCapacity;
-                    setObj.ReactorOvercharge = 1;
-                }
-                else if (portableReactorOvercharge == 1 && (portableReactorCharge < portableReactorCapacity))
-                {
-                    setObj.ReactorCharge = portableReactorCharge + 1;
-                    setObj.ReactorOvercharge = 0;
-                }
+        //        //Portable Reactor
+        //        let portableReactorCapacity = parseInt(values.portableReactor) || 3;
+        //        let portableReactorCharge = parseInt(values.ReactorCharge) || 0;
+        //        let portableReactorOvercharge = parseInt(values.ReactorOvercharge) || 0;
 
-                              
+        //        if (portableReactorCharge > portableReactorCapacity)
+        //        {
+        //            setObj.ReactorCharge = portableReactorCapacity;
+        //            setObj.ReactorOvercharge = 1;
+        //        }
+        //        else if (portableReactorOvercharge == 1 && (portableReactorCharge < portableReactorCapacity))
+        //        {
+        //            setObj.ReactorCharge = portableReactorCharge + 1;
+        //            setObj.ReactorOvercharge = 0;
+        //        }
 
-                setAttrs(setObj);
-            });
-        });
+
+
+        //        setAttrs(setObj);
+        //    });
+        //});
 
 </script>
