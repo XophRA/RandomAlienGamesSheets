@@ -595,7 +595,7 @@
                 <span class="level lvl13">13</span>
                 <div class="card customCard ascensionCard ritualCard">
                     <h4 class="ritualObjective">Objective</h4>
-                    <input type="text" class="ritualObjective" name="attr_ascensionObjective" />
+                    <input type="text" class="ritualObjective" name="attr_ascensionObjective" readonly/>
                     <input type="text" class="ritualObjectiveDetail" name="attr_ascensionObjectiveDetail" />
                     <h4 class="ritualMilestones">Milestones</h4>
                     <textarea class="ritualMilestones" name="attr_ascensionMilestones" />
@@ -669,7 +669,14 @@
                     <fieldset class="repeating_ritualcard">
                         <div class="card customCard ritualCard">
                             <h4 class="ritualObjective">Objective</h4>
-                            <input type="text" class="ritualObjective" name="attr_ritualObjective" />
+                            <input type="text" class="ritualObjective" list="ritual" name="attr_ritualObjective" />
+                            <datalist id="ritual">
+                                <option>Artifice</option>
+                                <option>Petition</option>
+                                <option>investigation</option>
+                                <option>Resolution</option>
+                                <option>Travel</option>
+                            </datalist>
                             <input type="text" class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
                             <h4 class="ritualMilestones">Milestones</h4>
                             <textarea class="ritualMilestones" name="attr_ritualMilestones" />
@@ -1229,7 +1236,7 @@
 
     <!-- Folk -->
     <article class="sheetType sophontSheet">
-        <div class="sophontSheetGrid">
+        <div class="folkSheetGrid">
             <div class="topLineText">Alias:</div>
             <div class="aliasThreatName threatTextBox"><input type="text" name="attr_character_name" class="threatTextBox" /></div>
             <div class="topLineText pronounThreat">Pronouns:</div>
@@ -1426,54 +1433,90 @@
     /* Set Player Caster Level to Coven Level */
     on("sheet:opened change:covenlevel", (event) =>
     {
-        getAttrs(["covenLevel", "level", "selectedSheet"], function (values)
+        getAttrs(["covenLevel", "selectedSheet"], function (values)
         {
-            let selectedSheet = parseInt(values.selectedSheet)
-            /* Globally Store Coven Level from Ascension Widget on Sancturay Sheet*/
+            const setObj = {};
+            let selectedSheet = parseInt(values.selectedSheet) || 0;
+            let covenLevel = 0;
+
+            /* Set Level elements on Coven Sheet*/
             if (selectedSheet == 2)
             {
-                globalAttributes.covenlevel = parseInt(values.covenLevel) || 0;
+                //Set Ascension Objective
+                covenLevel = parseInt(values.covenLevel) || 0;
+                let nextLevel = covenLevel + 1;
+                let ascensionObjective = "";
+
+                if (nextLevel >= 13)
+                {
+                    ascensionObjective = "Final Ascension";
+                }
+                else if (nextLevel < 4)
+                {
+                    ascensionObjective = "Apprentice, level " + nextLevel;
+                }
+                else if (nextLevel < 8)
+                {
+                    ascensionObjective = "Keeper, level " + nextLevel;
+                }
+                else if (nextLevel < 11)
+                {
+                    ascensionObjective = "Graduate, level " + nextLevel;
+                }
+                else
+                {
+                    ascensionObjective = "Scholar, level " + nextLevel;
+                }
+
+                setObj.ascensionObjective = ascensionObjective;
+
+                // Globally Store Coven Level from Ascension Widget on Coven Sheet
+                globalAttributes.covenlevel = covenLevel;
                 console.log(globalAttributes);
+
+                console.log(setObj);
+                setAttrs(setObj);
             }
             /* Set Level elements on Player Caster Sheets*/
             else if (globalAttributes.covenlevel && selectedSheet == 1)
             {
                 //Set RankLevel
-                let level = parseInt(globalAttributes.covenlevel) || 0;
                 let rankLevel = "Initiate";
                 let curseNumber = 3;
+                covenLevel = parseInt(globalAttributes.covenlevel) || 0;
 
-                if (level == 0)
+                if (covenLevel == 0)
                 {
                     rankLevel = "Initiate";
                 }
-                else if (level < 4)
+                else if (covenLevel < 4)
                 {
-                    rankLevel = "Apprentice, level " + level;
+                    rankLevel = "Apprentice, level " + covenLevel;
                 }
-                else if (level < 8)
+                else if (covenLevel < 8)
                 {
-                    rankLevel = "Keeper, level " + level;
+                    rankLevel = "Keeper, level " + covenLevel;
                     curseNumber = 4;
                 }
-                else if (level < 11)
+                else if (covenLevel < 11)
                 {
-                    rankLevel = "Graduate, level " + level;
+                    rankLevel = "Graduate, level " + covenLevel;
                     curseNumber = 5;
                 }
                 else
                 {
-                    rankLevel = "Scholar, level " + level;
+                    rankLevel = "Scholar, level " + covenLevel;
+                    curseNumber = 5;
                 }
 
-                const setObj = {};
                 setObj.rankLevel = rankLevel;
                 setObj.curseNumber = curseNumber;
-                setObj.level = level;
+                setObj.level = covenLevel;
 
                 console.log(setObj);
                 setAttrs(setObj);
             }
+
         });
     });
 

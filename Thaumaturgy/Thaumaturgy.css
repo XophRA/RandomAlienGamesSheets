@@ -243,7 +243,7 @@ main.masterGrid
     align-items: start;
 }
 
-.sophontSheetGrid
+.folkSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -2562,9 +2562,11 @@ span.editCog
     background-position: center;
     opacity: 1;
     background-size: 24px 24px;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 32px;
     z-index: 12;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 input.editToggle[value="0"] + .editMenu
