@@ -80,6 +80,25 @@ input.magicalCreatureSelector:checked ~ article.creatureSheet
         height: 100%;
     }
 
+    .charsheet button
+    {
+        margin: 0;
+        background-image: none;
+        background-color: white;
+        border: 2px solid black;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+        .charsheet button:hover
+        {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
+            background-color: white;
+        }
+
 .ui-dialog .charsheet input[type="number"]
 {
     width: 100%;
@@ -130,7 +149,6 @@ div.title
     font-size: 5em;
     color: #000;
     background-color: #FFF;
-    /* background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/title.png);*/
     background-size: 450px 100px;
     background-repeat: no-repeat;
     background-position: center;
@@ -599,13 +617,27 @@ main.masterGrid
     {
         grid-area: 1/1/-1/-1;
         display: grid;
-        grid-template-columns: 90px repeat(2,1fr) 100px;
-        grid-template-rows: 42px repeat(4, 1fr) 1fr;
+        grid-template-columns: 100px repeat(3,1fr) 120px;
+        grid-template-rows: 78px repeat(12, 30px) 1fr;
     }
-    .ascensionWidget .editAscension > levelControl
+    .ascensionWidget .editAscension > .levelControl
     {
-
+        grid-row: 2/auto;
+        align-self: center;
     }
+        .ascensionWidget .editAscension > div.levelControl
+        {
+            grid-column: 2/auto;
+        }
+        .ascensionWidget .editAscension > input.levelControl
+        {
+            grid-column: 3/auto;
+        }
+        .ascensionWidget .editAscension > .ascensionClear
+        {
+            grid-area: -4/4/auto/auto;
+        }
+
     /* Level Numbers */
     .ascensionWidget .level
     {
@@ -1229,21 +1261,6 @@ section.magicCircle
         width: 100%;
         height: 100%;
     }
-
-        section.magicCircle > .resultsButton .calculateResultsButton
-        {
-            border-radius: 50%;
-            background-color: #555555;
-            border-color: #555555;
-            color: white;
-            font-size: 14px;
-            font-family: "Fredericka the Great", cursive;
-        }
-
-            section.magicCircle > .resultsButton .calculateResultsButton:hover
-            {
-                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
-            }
 
     /* Dice Positions on the Magic Circle */
     section.magicCircle > .circlePositions
@@ -2060,11 +2077,6 @@ button.rollSalvoButton
             font-family: "Fredericka the Great", cursive;
             font-weight: 500;
         }
-
-    button.rollSalvoButton:hover + span.rollSalvoButton
-    {
-        background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/rollHexHover.png);
-    }
 
 
 /* Ripples */
@@ -2994,15 +3006,6 @@ section > .deck
     {
         margin: 6px;
     }
-
-        section > .deck > .repcontrol > button
-        {
-            margin: 6px;
-            background-image: none;
-            background-color: white;
-            border: 2px solid black;
-            font-weight: 600;
-        }
 
 section > input[value="1"].collapseToggle ~ .deck > .repcontrol
 {
