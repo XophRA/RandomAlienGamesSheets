@@ -1188,8 +1188,8 @@
             <!--Resources-->
             <section class="resources">
                 <div class="resultResource"><input type="number" name="attr_resultResource" min="0" class="resourceBox" readonly /></div>
-                <div class="paradoxResource"><input type="number" name="attr_paradoxResource" min="0" class="resourceBox" /></div>
                 <div class="aetherResource"><input type="text" name="attr_aetherResource" min="0" class="resourceBox" readonly /></div>
+                <div class="fateResource"><input type="number" name="attr_fateResource" min="0" class="resourceBox" /></div>
             </section>
 
             <!--Disequilibrium-->
@@ -1235,90 +1235,23 @@
     </article>
 
     <!-- Folk -->
-    <article class="sheetType sophontSheet">
+    <article class="sheetType folkSheet">
         <div class="folkSheetGrid">
-            <div class="topLineText">Alias:</div>
-            <div class="aliasThreatName threatTextBox"><input type="text" name="attr_character_name" class="threatTextBox" /></div>
-            <div class="topLineText pronounThreat">Pronouns:</div>
-            <div class="pronounThreatName threatTextBox"><input type="text" name="attr_GenderIndentity" /></div>
-            <div class="sophontAspectColumnA">Concept:</div>
-            <div class="sophontTextColumnFull threatTextBox"><input type="text" name="attr_concept" /></div>
-            <div class="sophontAspectColumnA">Description:</div>
-            <div class="sophontTextColumnFull threatTextBox"><input type="text" name="attr_description" /></div>
-            <div class="sophontAspectColumnA">Behaviour:</div>
-            <div class="sophontTextColumnFull threatTextBox"><input type="text" name="attr_behaviour" /></div>
-            <div class="sophontAspectColumnA">Agenda:</div>
-            <div class="sophontTextColumnFull threatTextBox"><input type="text" name="attr_agenda" /></div>
-            <div class="sophontAspectColumnA">Faction:</div>
-            <div class="sophontTextColumnA threatTextBox"><input type="text" name="attr_faction" /></div>
-            <div class="sophontAspectColumnB">Languages:</div>
-            <div class="sophontTextColumnB threatTextBox"><input type="text" name="attr_langages" /></div>
-            <div class="sophontAspectColumnA">Significance:</div>
-            <div class="sophontTextColumnA threatTextBox">
-                <select name="attr_significance">
-                    <option></option>
-                    <option>Untrained</option>
-                    <option>Regular</option>
-                    <option>Veteran</option>
-                    <option>Boss</option>
-                </select>
-            </div>
-            <div class="sophontAspectColumnB">Difficulty:</div>
-            <div class="sophontTextColumnB threatTextBox">
-                <select name="attr_difficulty">
-                    <option></option>
-                    <option>Ordinary(2)</option>
-                    <option>Regular(3)</option>
-                    <option>Hard(4)</option>
-                    <option>Ambitious(5)</option>
-                </select>
-            </div>
-            <div class="sophontAspectColumnA">Tech Level:</div>
-            <div class="sophontTextColumnA threatTextBox">
-                <select name="attr_techLevel">
-                    <option></option>
-                    <option>Primitive</option>
-                    <option>Machine</option>
-                    <option>Information</option>
-                    <option>Biotech</option>
-                    <option>Rim</option>
-                    <option>Core</option>
-                </select>
-            </div>
-            <div class="sophontAspectColumnB">Damage:</div>
-            <div class="sophontTextColumnB threatTextBox">
-                <select name="attr_damage">
-                    <option></option>
-                    <option>Unarmed[0]</option>
-                    <option>Archaic[1]</option>
-                    <option>Common[2]</option>
-                </select>
-            </div>
-            <div class="sophontAspectColumnA">Gear:</div>
-            <div class="sophontTextColumnA threatTextBox">
-                <select name="attr_gear">
-                    <option></option>
-                    <option>Resident[0]</option>
-                    <option>Secure[1]</option>
-                    <option>Combat[2]</option>
-                    <option>Heavy[3]</option>
-                    <option>Exosuit[4]</option>
-                    <option>Space marine[5]</option>
-                </select>
-            </div>
-            <div class="sophontAspectColumnB">Species:</div>
-            <div class="sophontTextColumnB threatTextBox"><input type="text" name="attr_species" /></div>
-            <div class="sophontAspectColumnA">Class:</div>
-            <div class="sophontTextColumnA threatTextBox"><input type="text" name="attr_class" /></div>
-            <div class="sophontAspectColumnB">Augments:</div>
-            <div class="sophontTextColumnB threatTextBox sophontAugmentBox sophontAugmentList"><textarea name="attr_augments" class="threatTextBox sophontAugmentBox"></textarea></div>
-            <div class="sophontAspectColumnA">Archetype:</div>
-            <div class="sophontTextColumnA threatTextBox"><input type="text" name="attr_archetype" /></div>
-            <div class="sophontAspectColumnA">Tags:</div>
-            <div class="sophontTextColumnA threatTextBox sophontTagBox sophontTagList"><textarea name="attr_tags" class="threatTextBox sophontTagBox"></textarea></div>
-            <div class="sophontAspectColumnA sophontNotes">Notes:</div>
-            <div class="sophontTextColumnFull threatTextBox sophontNotes"><input type="text" name="attr_notes" /></div>
+            <section class="folkAspects">
+                <div class="name">Name:</div>
+                <input type="text" name="attr_character_name" class="name" />
+                <div class="concept">Concept:</div>
+                <input type="text" class="concept" name="attr_concept" />
+                <div class="fate">Fate:</div>
+                <input type="text" name="attr_fate" />
+                <div class="willpower">Willpower:</div>
+                <input type="text" name="attr_willpower" />
+                <div class="charateristics">Charateristics:</div>
+                <textarea class="charateristics" name="attr_charateristics" />
+            </section>
+            <section class="folkCards">
 
+            </section>
         </div>
     </article>
 
@@ -1766,7 +1699,7 @@
             getArray = [...getArray, ... [`ripple${num}Harmony`, `ripple${num}Chaos`]];
         }
         //Get Paradox Resource
-        getArray = [...getArray, ...[`paradoxResource`]];
+        getArray = [...getArray, ...[`fateResource`]];
 
         getAttrs(getArray, (attrs) =>
         {
@@ -1805,7 +1738,7 @@
             console.log(allValue);
 
             //Add Dice that didn't match to the Ripple Table, total odds to the Paradox Resource, & Calculate Aether to be returned to the Player Caster from the total evens
-            let paradoxResource = parseInt(attrs[`paradoxResource`]) || 0;
+            let fateResource = parseInt(attrs[`fateResource`]) || 0;
             let aetherResource = "Burn All";
             let evens = 0;
 
@@ -1821,11 +1754,11 @@
                 let chaos = parseInt(attrs[`ripple${num + 1}Chaos`]) || 0;
                 chaos += oddDiceRolled(allValue[num]);
 
-                paradoxResource += chaos;
+                fateResource += chaos;
                 setObj[`ripple${num + 1}Chaos`] = chaos;
             }
 
-            setObj.paradoxResource = paradoxResource; //Set paradoxResource
+            setObj.fateResource = fateResource; //Set fateResource
 
 
             if (evens == 1)
