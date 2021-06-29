@@ -206,7 +206,7 @@ main.masterGrid
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 400px 250px 1fr;
-    grid-template-rows: 312px 220px 280px 160px 310px 490px 500px auto;
+    grid-template-rows: 312px 225px 280px 160px 310px 490px 500px auto;
     justify-items: start;
     align-items: start;
 }
