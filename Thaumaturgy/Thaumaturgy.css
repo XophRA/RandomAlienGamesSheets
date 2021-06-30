@@ -857,6 +857,7 @@ main.masterGrid
     .ritualWidget .deckHeader
     {
         grid-area: 1/2/auto/auto;
+        grid-template-rows: 62px 28px 1fr;
     }
 
     .ritualWidget .deck
