@@ -849,8 +849,8 @@ main.masterGrid
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 106px 250px 1fr;
-    grid-template-rows: 85px 1fr;
+    grid-template-columns: 81px 250px 1fr;
+    grid-template-rows: 89px 1fr;
     margin-top: 5px;
 }
 
@@ -2788,135 +2788,135 @@ textarea.speculation
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 115px;
+    grid-template-columns: 1fr 138px;
     grid-template-rows: 32px repeat(14, 18px) auto;
     grid-row-gap: 10px;
 }
 
-.skilldice
+.artDice
 {
     grid-column: 2 / 3;
     display: grid;
     width: 96px;
-    height: 12px;
+    height: 24px;
     text-align: start;
-    grid-template-columns: 6px repeat(6,12px);
-    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 9px repeat(3,18px) 6px repeat(2,18px);
+    grid-template-rows: 18px 1fr;
     grid-column-gap: 3px;
 }
 
-    .skilldice.art1
+    .artDice.art1
     {
         grid-row: 2 / 3;
     }
 
-    .skilldice.art2
+    .artDice.art2
     {
         grid-row: 3 / 4;
     }
 
-    .skilldice.art3
+    .artDice.art3
     {
         grid-row: 4 / 5;
     }
 
-    .skilldice.art4
+    .artDice.art4
     {
         grid-row: 5 / 6;
     }
 
-    .skilldice.art5
+    .artDice.art5
     {
         grid-row: 6 / 7;
     }
 
-    .skilldice.art6
+    .artDice.art6
     {
         grid-row: 7 / 8;
     }
 
-    .skilldice.art7
+    .artDice.art7
     {
         grid-row: 8 / 9;
     }
 
-    .skilldice.art8
+    .artDice.art8
     {
         grid-row: 9 / 10;
     }
 
-    .skilldice.art9
+    .artDice.art9
     {
         grid-row: 10 / 11;
     }
 
-    .skilldice.art10
+    .artDice.art10
     {
         grid-row: 11 / 12;
     }
 
-    .skilldice.art11
+    .artDice.art11
     {
         grid-row: 12 / 13;
     }
 
-    .skilldice.art12
+    .artDice.art12
     {
         grid-row: 13 / 14;
     }
 
-    .skilldice.art13
+    .artDice.art13
     {
         grid-row: 14 / 15;
     }
 
-    .skilldice.art14
+    .artDice.art14
     {
         grid-row: 15 / 16;
     }
 
-    .skilldice > .diceCheckbox
+    .artDice > .diceCheckbox
     {
         grid-row: 1 / 2;
     }
 
-    .skilldice > .studyCheckbox
+    .artDice > .studyCheckbox
     {
         grid-row: 2 / 3;
     }
 
-    .skilldice > .diePip0
+    .artDice > .zeroCheckbox
     {
-        grid-column: 1 / 2;
+        grid-area: 1/1/span 2/auto;
     }
 
-    .skilldice > .diePip1
+    .artDice > .diePip1
     {
         grid-column: 2 / 3;
     }
 
-    .skilldice > .diePip2
+    .artDice > .diePip2
     {
         grid-column: 3 / 4;
     }
 
-    .skilldice > .diePip3
+    .artDice > .diePip3
     {
         grid-column: 4 / 5;
     }
 
-    .skilldice > .diePip4
+    .artDice > .diePip4
     {
         grid-column: 6 / 7;
     }
 
-    .skilldice > .diePip5
+    .artDice > .diePip5
     {
         grid-column: 7 / 8;
     }
 
 /* Notes */
-.notesWidget
+.tagWidget
 {
     grid-area: 5/2/auto/-1;
     display: grid;
@@ -2926,7 +2926,7 @@ textarea.speculation
     height: 100%;
 }
 
-    .notesWidget > textarea.notes
+    .tagWidget > textarea.tags
     {
         grid-area: 2/1/-1/-1;
         width: 100%;
@@ -3421,24 +3421,34 @@ input[type="radio"].hideCheckbox
 input[type="radio"].studyCheckbox,
 span.studyCheckbox
 {
-    width: 12px;
+    width: 18px;
     height: 6px;
     margin: 0;
     padding: 0;
     vertical-align: middle;
-    background-size: 12px 6px;
+    background-size: 18px 6px;
 }
 
 input[type="radio"].diceCheckbox,
 span.diceCheckbox
 {
-    width: 12px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     margin: 0;
     padding: 0;
     vertical-align: middle;
-    background-size: 12px 14px;
+    background-size: 18px 18px;
+}
 
+input[type="radio"].zeroCheckbox,
+span.zeroCheckbox
+{
+    width: 9px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    background-size: 18px 18px;
 }
 
 input[type="checkbox"].maxCheckbox,
@@ -3473,6 +3483,7 @@ input[type="radio"] + span.D10
 }
 
 input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10,
+input[type="radio"]:checked + span.study ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img24/D10Pip.png);
@@ -3492,6 +3503,7 @@ input[type="radio"] + span.study
 }
 
 input[type="radio"]:checked + span.study ~ input[type="radio"] + span.study,
+input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.study,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img24/studyBox.png);
