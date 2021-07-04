@@ -2703,17 +2703,17 @@ textarea.speculation
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 120px;
+    grid-template-rows: 1fr 120px 6px;
     grid-gap: 0px;
 }
 
     .aetherWidget > .aetherTracker
     {
-        grid-area: 2/1/-1/-1;
+        grid-area: 2/1/3/-1;
         width: 120px;
         height: 100%;
         place-self: end;
-        padding-right: 8%;
+        padding-right: 9%;
     }
 
 /* Study Credits */
@@ -2724,17 +2724,17 @@ textarea.speculation
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 120px;
+    grid-template-rows: 1fr 120px 2px;
     grid-gap: 0px;
 }
 
     .studyCreditWidget > .creditTracker
     {
-        grid-area: 2/1/-1/-1;
+        grid-area: 2/1/3/-1;
         width: 120px;
         height: 100%;
         place-self: end;
-        padding-right: 8%;
+        padding-right: 9%;
     }
 
 
