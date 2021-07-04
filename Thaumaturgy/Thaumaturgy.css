@@ -78,7 +78,8 @@ input.magicalCreatureSelector:checked ~ article.creatureSheet
         height: 100%;
     }
 
-    .charsheet button
+    .charsheet button,
+    .charsheet .btn
     {
         margin: 0;
         background-image: none;
@@ -3003,9 +3004,29 @@ section > .deck
         margin: 6px;
     }
 
-section > input[value="1"].collapseToggle ~ .deck > .repcontrol
-{
-}
+    section > .deck > .repcontainer > .repitem > .itemcontrol
+    {
+        max-width: 90%;
+        padding: 12px;
+    }
+
+        section > .deck > .repcontainer > .repitem > .itemcontrol > .repcontrol_del
+        {
+            color: red;
+        }
+
+            section > .deck > .repcontainer > .repitem > .itemcontrol > .repcontrol_del:hover
+            {
+                background-color: red;
+                color: black;
+            }
+
+        section > .deck > .repcontainer > .repitem > .itemcontrol > .repcontrol_move:hover
+        {
+            background-color: slategrey;
+            color: white;
+        }
+
 
 section > .deckHeader
 {
