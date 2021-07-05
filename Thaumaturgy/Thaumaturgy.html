@@ -1257,38 +1257,14 @@
     <!-- Folk -->
     <article class="sheetType folkSheet">
         <div class="folkSheetGrid">
-            <section class="folkAspects">
-                <div class="name">Name:</div>
-                <input type="text" name="attr_character_name" class="name" />
-                <div class="concept">Concept:</div>
-                <input type="text" class="concept" name="attr_concept" />
-                <div class="fate">Fate:</div>
-                <input type="text" name="attr_fate" />
-                <div class="willpower">Willpower:</div>
-                <input type="text" name="attr_willpower" />
-                <div class="charateristics">Charateristics:</div>
-                <textarea class="charateristics" name="attr_charateristics" />
-            </section>
-            <section class="folkCards">
-                <!-- Curses -->
-                <section class="curseWidget">
-                    <div class="card customCard curseCard">
-                        <h4 class="curseName">Name</h4>
-                        <input type="text" class="curseName" name="attr_curseName1" />
-                        <h4 class="curseSeverity">Severity</h4>
-                        <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
-                        <h4 class="statusEffect">Status Effect</h4>
-                        <textarea class="statusEffect" name="attr_statusEffect1" />
-                        <h4 class="channelCurse">Channel</h4>
-                        <textarea class="channelCurse" name="attr_channelCurse1" />
-                        <h4 class="curseRestoration">Restoration</h4>
-                        <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
-                        <h4 class="restorationComponents">Components</h4>
-                        <textarea class="restorationComponents" name="attr_restorationComponents1" />
-                    </div>
-
+            <fieldset class="repeating_folk">
+                <section class="folkAspects">
+                    <div class="name">Name (pronouns):</div>
+                    <input type="text" name="attr_character_name" class="name" />
+                    <div class="charateristics">Charateristics:</div>
+                    <input type="text" class="charateristics" name="attr_charateristics" />
                 </section>
-            </section>
+            </fieldset>
         </div>
     </article>
 
@@ -1306,6 +1282,24 @@
                 <textarea class="charateristics" name="attr_charateristics" />
             </section>
             <section class="creatureCards">
+                <!-- Curses -->
+                <div class="curseWidget">
+                    <div class="card customCard curseCard">
+                        <h4 class="curseName">Name</h4>
+                        <input type="text" class="curseName" name="attr_curseName1" />
+                        <h4 class="curseSeverity">Severity</h4>
+                        <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                        <h4 class="statusEffect">Status Effect</h4>
+                        <textarea class="statusEffect" name="attr_statusEffect1" />
+                        <h4 class="channelCurse">Channel</h4>
+                        <textarea class="channelCurse" name="attr_channelCurse1" />
+                        <h4 class="curseRestoration">Restoration</h4>
+                        <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                        <h4 class="restorationComponents">Components</h4>
+                        <textarea class="restorationComponents" name="attr_restorationComponents1" />
+                    </div>
+
+                </div>
             </section>
 
         </div>

@@ -90,6 +90,7 @@ input.magicalCreatureSelector:checked ~ article.creatureSheet
         line-height: 18px;
         text-align: center;
         border-radius: 4px;
+        padding: 2px 6px;
     }
 
         .charsheet button:hover,
@@ -136,6 +137,25 @@ input.magicalCreatureSelector:checked ~ article.creatureSheet
     padding: 0;
     outline: none;
 }
+
+/* Repeating Items */
+.repcontainer > .repitem > .itemcontrol > .repcontrol_del
+{
+    color: red;
+}
+
+    .repcontainer > .repitem > .itemcontrol > .repcontrol_del:hover
+    {
+        background-color: red;
+        color: black;
+    }
+
+.repcontainer > .repitem > .itemcontrol > .repcontrol_move:hover
+{
+    background-color: slategrey;
+    color: white;
+}
+
 
 /* Sheet header */
 .charsheet header
@@ -248,8 +268,8 @@ main.masterGrid
     width: 100%;
     display: grid;
     grid-row-gap: 0px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 96px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     justify-items: start;
     align-items: start;
 }
@@ -3004,30 +3024,6 @@ section > .deck
         margin: 6px;
     }
 
-    section > .deck > .repcontainer > .repitem > .itemcontrol
-    {
-        max-width: 90%;
-        padding: 12px;
-    }
-
-        section > .deck > .repcontainer > .repitem > .itemcontrol > .repcontrol_del
-        {
-            color: red;
-        }
-
-            section > .deck > .repcontainer > .repitem > .itemcontrol > .repcontrol_del:hover
-            {
-                background-color: red;
-                color: black;
-            }
-
-        section > .deck > .repcontainer > .repitem > .itemcontrol > .repcontrol_move:hover
-        {
-            background-color: slategrey;
-            color: white;
-        }
-
-
 section > .deckHeader
 {
     grid-row: 1/auto;
@@ -3588,28 +3584,25 @@ input[type="checkbox"]:checked + span.conduit
 .folkAspects
 {
     display: grid;
-    width: 100%;
-    height: 100%;
-    grid-area: 1/1/auto/-1;
-    grid-template-columns: repeat(2, 1fr 3fr);
-    grid-template-rows: repeat(4, 24px);
+    width: 850px;
+    height: 24px;
+    grid-area: 1/1/-1/-1;
+    grid-template-columns: 112px 1fr 90px 1fr;
+    grid-template-rows: 24px;
+    margin: 5px 0;
     justify-items: start;
     align-items: start;
 }
 
-    .folkAspects > div
+    .folkAspects > div.name
     {
-        grid-column: 1/auto;
+        grid-area: 1/1/auto/auto;
     }
 
-    .folkAspects > input[type="text"]
+    .folkAspects > input[type="text"].name
     {
-        grid-column: 2/auto;
-    }
-
-    .folkAspects > .name
-    {
-        grid-row: 1/auto;
+        grid-area: 1/2/auto/auto;
+        padding-bottom: 5px;
     }
 
     .folkAspects > div.charateristics
@@ -3617,30 +3610,10 @@ input[type="checkbox"]:checked + span.conduit
         grid-area: 1/3/auto/auto;
     }
 
-    .folkAspects > textarea.charateristics
+    .folkAspects > input[type="text"].charateristics
     {
         grid-area: 1/4/-1/-1;
-    }
-
-.folkCards
-{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-area: 2/1/auto/-1;
-    grid-template-columns: 350px repeat(2,250px);
-    grid-template-rows: 1fr;
-    justify-items: start;
-    align-items: start;
-}
-    .folkCards > .curseWidget
-    {
-        grid-area: 1/1/auto/auto;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        padding-bottom: 5px;
     }
 
 /* Magical Creauture Sheet */
@@ -3692,3 +3665,12 @@ input[type="checkbox"]:checked + span.conduit
     justify-items: start;
     align-items: start;
 }
+    .creatureCards > .curseWidget
+    {
+        grid-area: 1/1/auto/auto;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
