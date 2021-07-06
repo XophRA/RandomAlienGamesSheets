@@ -1359,6 +1359,10 @@
                 {
                     ascensionObjective = "Final Ascension";
                 }
+                else if (nextLevel <= 0)
+                {
+                    ascensionObjective = "Initiate";
+                }
                 else if (nextLevel < 4)
                 {
                     ascensionObjective = "Apprentice, level " + nextLevel;
@@ -1393,7 +1397,11 @@
                 let curseNumber = 3;
                 covenLevel = parseInt(globalAttributes.covenlevel) || 0;
 
-                if (covenLevel <= 0)
+                if (covenLevel < 0)
+                {
+                    rankLevel = "—";
+                }
+                else if (covenLevel == 0)
                 {
                     rankLevel = "Initiate";
                 }
