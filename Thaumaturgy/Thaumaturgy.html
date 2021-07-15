@@ -1557,11 +1557,14 @@
                 let attrNum = 1;
                 let diePosIndex = 0;
 
+
                 for (let i = 0; i < circleArray.length; i++)// Circle Array loop
                 {
                         for (let k = 0; k < circleArray[i].length; k++)//Dice Input loop
                         {
-                            arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePos[diePosIndex];
+                            let diePosition = diePos[diePosIndex];
+
+                            arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePosition;
                             arcanaPools[`poolDieSize${attrNum}`] = i;
                             arcanaPools[`poolDieSide${attrNum}`] = circleArray[i][k];
 
@@ -1594,52 +1597,52 @@
                             }
 
                             //Assign the Arcana based on the Die Position
-                            if (diePos[diePosIndex] <= 15)
+                            if (diePosition <= 15)
                             {
 
                                 arcanaPools[`poolDieArcana${attrNum}`] = 1;
                             }
-                            else if (diePos[diePosIndex] >= 16 && diePos[diePosIndex] <= 20)
+                            else if (diePosition >= 16 && diePosition <= 20)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 2;
                             }
-                            else if (diePos[diePosIndex] >= 21 && diePos[diePosIndex] <= 33)
+                            else if (diePosition >= 21 && diePosition <= 33)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 3;
                             }
-                            else if (diePos[diePosIndex] >= 34 && diePos[diePosIndex] <= 48)
+                            else if (diePosition >= 34 && diePosition <= 48)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 4;
                             }
-                            else if (diePos[diePosIndex] >= 49 && diePos[diePosIndex] <= 54)
+                            else if (diePosition >= 49 && diePosition <= 54)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 5;
                             }
-                            else if (diePos[diePosIndex] >= 55 && diePos[diePosIndex] <= 69)
+                            else if (diePosition >= 55 && diePosition <= 69)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 6;
                             }
-                            else if (diePos[diePosIndex] >= 70 && diePos[diePosIndex] <= 74)
+                            else if (diePosition >= 70 && diePosition <= 74)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 7;
                             }
-                            else if (diePos[diePosIndex] >= 75 && diePos[diePosIndex] <= 81)
+                            else if (diePosition >= 75 && diePosition <= 81)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 8;
                             }
-                            else if (diePos[diePosIndex] >= 82 && diePos[diePosIndex] <= 91)
+                            else if (diePosition >= 82 && diePosition <= 91)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 9;
                             }
-                            else if (diePos[diePosIndex] >= 92 && diePos[diePosIndex] <= 94)
+                            else if (diePosition >= 92 && diePosition <= 94)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 10;
                             }
-                            else if (diePos[diePosIndex] == 95 && diePos[diePosIndex] == 96)
+                            else if (diePosition == 95 || diePosition == 96)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 11;
                             }
-                            else if (diePos[diePosIndex] == 97)
+                            else if (diePosition == 97)
                             {
                                 arcanaPools[`poolDieArcana${attrNum}`] = 12;
                             }
