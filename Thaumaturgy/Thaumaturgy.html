@@ -5,7 +5,7 @@
         <h3 class="selectorTitle">Sheet Type:</h3>
         <select name="attr_selectedSheet" class="typeSelector">
             <optgroup label="Player">
-                <option value="1" selected>Player Caster</option>
+                <option value="1" selected>Caster</option>
                 <option value="2">Coven</option>
             </optgroup>
             <optgroup label="Gamemaster Characters">
@@ -361,45 +361,6 @@
                 <textarea class="tags" name="attr_tags"></textarea>
             </section>
 
-            <!-- Fate -->
-            <section class="fateWidget tableSpread">
-                <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
-                <input type="hidden" class="editToggle" name="attr_EditFate" />
-                <div class="editMenu editTableSpread">
-                    <div class="leftLegEdit arcanaEdit">
-                        <h2>Consequences</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ConsequencesFacing" value="1" />
-                    </div>
-                    <div class="rightLegEdit arcanaEdit">
-                        <h2>Destiny</h2>
-                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_DestinyFacing" value="1" />
-                    </div>
-                    <div class="tabletopEdit arcanaEdit">
-                        <h2>Obstacle</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ObstacleFacing" value="1" />
-                    </div>
-                </div>
-                <div class="leftLeg">
-                    <input type="hidden" class="facingChoice" name="attr_ConsequencesFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Consequences" />
-                    <span class="card"></span>
-                </div>
-                <div class="rightLeg">
-                    <input type="hidden" class="facingChoice" name="attr_DestinyFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Destiny" />
-                    <span class="card"></span>
-                </div>
-                <div class="tabletop">
-                    <input type="hidden" class="facingChoice" name="attr_ObstacleFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Obstacle" />
-                    <span class="card landscapeCard"></span>
-                </div>
-                <textarea class="speculation" name="attr_fateSpeculation"></textarea>
-            </section>
-
             <!-- Grimoire -->
             <section class="grimoireWidget">
                 <div class="deckHeader deck1">
@@ -514,6 +475,46 @@
                     </fieldset>
                 </div>
             </section>
+
+            <!-- Fate -->
+            <section class="fateWidget tableSpread">
+                <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
+                <input type="hidden" class="editToggle" name="attr_EditFate" />
+                <div class="editMenu editTableSpread">
+                    <div class="leftLegEdit arcanaEdit">
+                        <h2>Consequences</h2>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" value="0" />
+                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ConsequencesFacing" value="1" />
+                    </div>
+                    <div class="rightLegEdit arcanaEdit">
+                        <h2>Destiny</h2>
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="0" max="13" value="0" />
+                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_DestinyFacing" value="1" />
+                    </div>
+                    <div class="tabletopEdit arcanaEdit">
+                        <h2>Obstacle</h2>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13" value="0" />
+                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ObstacleFacing" value="1" />
+                    </div>
+                </div>
+                <div class="leftLeg">
+                    <input type="hidden" class="facingChoice" name="attr_ConsequencesFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Consequences" />
+                    <span class="card"></span>
+                </div>
+                <div class="rightLeg">
+                    <input type="hidden" class="facingChoice" name="attr_DestinyFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Destiny" />
+                    <span class="card"></span>
+                </div>
+                <div class="tabletop">
+                    <input type="hidden" class="facingChoice" name="attr_ObstacleFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Obstacle" />
+                    <span class="card landscapeCard"></span>
+                </div>
+                <textarea class="speculation" name="attr_fateSpeculation"></textarea>
+            </section>
+
         </div>
     </article>
 
