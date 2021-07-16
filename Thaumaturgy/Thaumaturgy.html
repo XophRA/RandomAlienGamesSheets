@@ -363,6 +363,20 @@
 
             <!-- Grimoire -->
             <section class="grimoireWidget">
+                <div class="clockWidget">
+                    <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
+                    <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
+                    <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment" />
+                    <span class="clock"></span>
+                    <span class="clockSpoke clockSpoke0"></span>
+                    <span class="clockSpoke clockSpoke1"></span>
+                    <span class="clockSpoke clockSpoke2"></span>
+                    <span class="clockSpoke clockSpoke3"></span>
+                    <span class="clockSpoke clockSpoke4"></span>
+                    <span class="clockSpoke clockSpoke5"></span>
+                    <span class="clockSpoke clockSpoke6"></span>
+                </div>
+
                 <div class="deckHeader deck1">
                     <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
                 </div>
@@ -383,19 +397,7 @@
                             <h4 class="spellScroll">Scroll</h4>
                             <input type="checkbox" name="attr_spellScroll" class="spellScroll" value="1" />
 
-                            <div class="clockWidget">
-                                <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
-                                <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment" />
-                                <span class="clock"></span>
-                                <span class="clockSpoke clockSpoke0"></span>
-                                <span class="clockSpoke clockSpoke1"></span>
-                                <span class="clockSpoke clockSpoke2"></span>
-                                <span class="clockSpoke clockSpoke3"></span>
-                                <span class="clockSpoke clockSpoke4"></span>
-                                <span class="clockSpoke clockSpoke5"></span>
-                                <span class="clockSpoke clockSpoke6"></span>
-                            </div>
+
                         </div>
                     </fieldset>
                 </div>
