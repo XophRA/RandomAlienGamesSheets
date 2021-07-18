@@ -800,7 +800,6 @@
                             <li>Improvised</li>
                             <li>Scroll</li>
                             <li>Channel</li>
-                            <li>Restoration</li>
                             <li>Solution</li>
                             <li>Rites</li>
                         </ol>
@@ -1211,7 +1210,7 @@
             <!--Resources-->
             <section class="resources">
                 <div class="resultResource"><input type="number" name="attr_resultResource" min="0" class="resourceBox" readonly value="0" /></div>
-                <div class="aetherResource"><input type="text" name="attr_aetherResource" class="resourceBox" readonly value="" /></div>
+                <div class="aetherResource"><input type="number" name="attr_aetherResource" class="resourceBox" value="0" /></div>
                 <div class="fateResource"><input type="number" name="attr_fateResource" min="0" class="resourceBox" value="0" /></div>
             </section>
 
@@ -1717,8 +1716,8 @@
         {
             getArray = [...getArray, ... [`ripple${num}Harmony`, `ripple${num}Chaos`]];
         }
-        //Get Fate Resource
-        getArray = [...getArray, ...[`fateResource`]];
+        //Get current Fate and risked Aether
+        getArray = [...getArray, ...[`fateResource`,`aetherResource`]];
 
         getAttrs(getArray, (attrs) =>
         {
@@ -1783,27 +1782,30 @@
             setObj.fateResource = fateResource; //Set fateResource
 
             //Calculate aetherResource
-            let aetherResource = "";
-            if (evenDice == 1)
+            let aetherResource = parseInt(attrs[`aetherResource`]) || 0;
+            let aether = 0;
+            let greaterAether = 0;
+
+            if (evenDice == 1 && aetherResource > 0)
             {
-                aetherResource = "Restore 1 or 1/2";
+                aether = Math.round(aetherResource / 2) || 1;
             }
             else if (evenDice == 2)
             {
-                aetherResource = "Restore All";
+                aether = aetherResource;
             }
             else if (evenDice > 2)
             {
-                let greaterAether = evenDice - 2;
-                aetherResource = "Restore All + " + greaterAether;
+                greaterAether = evenDice - 2;
+                aether = aetherResource + greaterAether;
             }
             else
             {
-                aetherResource = "Burn All";
+                aether = 0;
             }
 
-            console.log("Aether:", aetherResource,"Even Dice:",evenDice);
-            setObj.aetherResource = aetherResource; //Set aetherResource
+            console.log("Even Dice:", evenDice, "Risked Aether:", aetherResource, "increase: ", greaterAether, "Returned Aether:", aether,);
+            setObj.aetherResource = aether; //Set aetherResource
 
             //Number of Evens and Odds Functions
             function evenDiceRolled(diceArray)

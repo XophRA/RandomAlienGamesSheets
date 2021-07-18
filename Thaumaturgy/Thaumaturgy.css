@@ -2989,7 +2989,7 @@ textarea.speculation
 {
     grid-area: 6/1/auto/-1;
     display: grid;
-    grid-template-rows: 8px 64px 28px 1fr;
+    grid-template-rows: 4px 64px 28px 1fr;
     grid-template-columns: 20px 250px 30px 250px 30px 250px 1fr;
     width: 100%;
     height: 100%;
@@ -3038,6 +3038,7 @@ section > .deckHeader
     grid-template-columns: 1fr 20px 18px;
     grid-template-rows: 28px;
     width: 250px;
+    margin-top: 4px;
 }
 
     section > .deckHeader > .collapseDeck
