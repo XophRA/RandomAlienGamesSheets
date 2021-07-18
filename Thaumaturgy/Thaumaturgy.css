@@ -139,6 +139,10 @@ input.magicalCreatureSelector:checked ~ article.creatureSheet
     outline: none;
 }
 
+.charsheet textarea
+{
+    padding-top: 4px;
+}
 /* Repeating Items */
 .repcontainer > .repitem > .itemcontrol > .repcontrol_del
 {
@@ -449,8 +453,9 @@ main.masterGrid
     width: 100%;
     height: 100%;
     grid-template-columns: 110px 1fr;
-    grid-template-rows: 36px repeat(3,24px 1fr) 1fr;
+    grid-template-rows: 22px repeat(3,24px 1fr) 1fr;
     grid-row-gap: 4px;
+    margin-left: 25px;
 }
 
     .covenAspects > input,
@@ -459,8 +464,7 @@ main.masterGrid
         grid-column: 2/-1;
     }
 
-    .covenAspects > h1,
-    .covenAspects > h3
+    .covenAspects > h4
     {
         grid-column: 1/auto;
     }
@@ -2229,6 +2233,34 @@ input[type=number].resourceBox
     justify-items: center;
 }
 
+    .tableSpread > h1,
+    .tableSpread > h2,
+    .tableSpread > h3
+    {
+        align-self: end;
+        justify-self: start;
+    }
+
+    .tableSpread > .tableTitle
+    {
+        grid-column: 1/auto;
+    }
+
+    .tableSpread > .speculation
+    {
+        grid-column: -2/auto;
+        padding-left: 20px;
+    }
+
+    .tableSpread > textarea.speculation
+    {
+        grid-row: 2/-2;
+        margin: 0;
+        width: 96%;
+        height: 100%;
+        padding-left: 30px;
+    }
+
     .tableSpread > .leftLeg
     {
         grid-area: 3 / 2 / span 2 / span 2;
@@ -2613,14 +2645,6 @@ input.editToggle[value="1"] + .editMenu
     height: 100%;
 }
 
-textarea.speculation
-{
-    grid-area: 2/-2/-2/-1;
-    margin: 0;
-    width: 96%;
-    height: 100%;
-    padding-left: 30px;
-}
 /* Cards */
 .card
 {
