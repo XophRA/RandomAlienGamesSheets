@@ -10,8 +10,8 @@
             </optgroup>
             <optgroup label="Gamemaster Characters">
                 <option value="3">Medium</option>
-                <option value="4">Folk</option>
-                <option value="5">Magical Creature</option>
+                <option value="4">Dramatis Personae</option>
+                <option value="5">Pawn of Fate</option>
                 <option value="6">Non-Player Caster</option>
                 <option value="7">Devotee</option>
                 <option value="8">Patron</option>
@@ -526,27 +526,96 @@
         <div class="covenSheetGrid">
             <!--Coven Aspects-->
             <section class="covenAspects">
+                <h1 class="covenName">Coven</h1>
                 <input type="text" name="attr_character_name" class="covenName" />
-                <textarea name="attr_description" class="description" />
+                <h3 class="covenDescription">Description</h3>
+                <textarea name="attr_covendescription" class="covenDescription" />
+                <h3 class="academyName">Academy</h3>
                 <input type="text" name="attr_academy" class="academyName" />
+                <h3 class="academyDescription">Description</h3>
+                <textarea name="attr_academydescription" class="academyDescription" />
+                <h3 class="sanctumName">Sanctum</h3>
                 <input type="text" name="attr_sanctum" class="sanctumName">
+                <h3 class="sanctumDescription">Description</h3>
+                <textarea name="attr_sanctumdescription" class="sanctumDescription" />
+                <h3 class="seniorCovens">Senior Covens</h3>
                 <textarea name="attr_seniorCovens" class="seniorCovens" />
             </section>
 
-            <!-- Integrity -->
-            <section class="academyIntegrity">
-                <div class="clockWidget">
-                    <input type="text" name="attr_academyIntegrityClock" class="clockControl" value="0" readonly />
-                    <input type="number" min="0" max="13" value="0" name="attr_academyIntegrityClock" class="clockControl" />
-                    <input type="hidden" name="attr_academyIntegrityClock" value="0" class="clockSegment" />
-                    <span class="clock"></span>
-                    <span class="clockSpoke clockSpoke0"></span>
-                    <span class="clockSpoke clockSpoke1"></span>
-                    <span class="clockSpoke clockSpoke2"></span>
-                    <span class="clockSpoke clockSpoke3"></span>
-                    <span class="clockSpoke clockSpoke4"></span>
-                    <span class="clockSpoke clockSpoke5"></span>
-                    <span class="clockSpoke clockSpoke6"></span>
+            <!-- Curses -->
+            <section class="curseWidget">
+                <button type="action" class="sortCurses" name="act_sortCurses"> v </button>
+                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="3" />
+                <input type="hidden" class="curseNumber" name="attr_curseNumber" value="5" />
+                <div class="card customCard curseCard curse1">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName1" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect1" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse1" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents1" />
+                </div>
+                <div class="card customCard curseCard curse2">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName2" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect2" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse2" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents2" />
+                </div>
+                <div class="card customCard curseCard curse3">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName3" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect3" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse3" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents3" />
+                </div>
+                <div class="card customCard curseCard curse4">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName4" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect4" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse4" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents4" />
+                </div>
+                <div class="card customCard curseCard curse5">
+                    <h4 class="curseName">Name</h4>
+                    <input type="text" class="curseName" name="attr_curseName5" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect5" />
+                    <h4 class="channelCurse">Channel</h4>
+                    <textarea class="channelCurse" name="attr_channelCurse5" />
+                    <h4 class="curseRestoration">Restoration</h4>
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" />
+                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents5" />
                 </div>
             </section>
 
@@ -1257,7 +1326,7 @@
         </div>
     </article>
 
-    <!-- Folk -->
+    <!-- Dramatis Personae -->
     <article class="sheetType folkSheet">
         <div class="folkSheetGrid">
             <fieldset class="repeating_folk">
