@@ -2478,72 +2478,95 @@ input[type=number].resourceBox
         font-weight: 600;
     }
 
-input[value="0"].clockSegment ~ .clock
+ /* Clock Segments for 13 Segment Clock */
+input[value="0"].clockSegment13 ~ .clock
 {
     background: white;
 }
 
-input[value="1"].clockSegment ~ .clock
+input[value="1"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(112deg, #555 50%, white 50% );
 }
 
-input[value="2"].clockSegment ~ .clock
+input[value="2"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, #555 50%, white 50%);
 }
 
-input[value="3"].clockSegment ~ .clock
+input[value="3"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(164deg, #555 50%, white 50%);
 }
 
-input[value="4"].clockSegment ~ .clock
+input[value="4"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(194deg, #555 50%, white 50%);
 }
 
-input[value="5"].clockSegment ~ .clock
+input[value="5"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, #555 50%, white 50%);
 }
 
-input[value="6"].clockSegment ~ .clock
+input[value="6"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(246deg, #555 50%, white 50%);
 }
 
-input[value="7"].clockSegment ~ .clock
+input[value="7"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(114deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
-input[value="8"].clockSegment ~ .clock
+input[value="8"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(143deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
-input[value="9"].clockSegment ~ .clock
+input[value="9"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(168deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
-input[value="10"].clockSegment ~ .clock
+input[value="10"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(195deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
-input[value="11"].clockSegment ~ .clock
+input[value="11"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(221deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
-input[value="12"].clockSegment ~ .clock
+input[value="12"].clockSegment13 ~ .clock
 {
     background-image: linear-gradient(247deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
-input[value="13"].clockSegment ~ .clock
+input[value="13"].clockSegment13 ~ .clock
+{
+    background-color: #555;
+}
+
+
+/* Clock Segments for 3 Segment Clock */
+input[value="0"].clockSegment3 ~ .clock
+{
+    background: white;
+}
+
+input[value="1"].clockSegment3 ~ .clock
+{
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(210deg, #555 50%, white 50%);
+}
+
+input[value="2"].clockSegment3 ~ .clock
+{
+    background-image: linear-gradient(150deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+}
+
+input[value="3"].clockSegment3 ~ .clock
 {
     background-color: #555;
 }
@@ -2559,40 +2582,59 @@ input[value="13"].clockSegment ~ .clock
     background: black;
 }
 
-    .clockWidget > .clockSpoke.clockSpoke0
+    /* Clock Spokes for 13 Segment Clock */
+    .clockWidget > .clockSpoke.clockSpoke130
     {
         transform: translateX(var(--clockcentre));
         height: var(--clockcentre);
     }
 
-    .clockWidget > .clockSpoke.clockSpoke1
+    .clockWidget > .clockSpoke.clockSpoke131
     {
         transform: translateX(var(--clockcentre)) rotate(22deg);
     }
 
-    .clockWidget > .clockSpoke.clockSpoke2
+    .clockWidget > .clockSpoke.clockSpoke132
     {
         transform: translateX(var(--clockcentre)) rotate(50deg);
     }
 
-    .clockWidget > .clockSpoke.clockSpoke3
+    .clockWidget > .clockSpoke.clockSpoke133
     {
         transform: translateX(var(--clockcentre)) rotate(75deg);
     }
 
-    .clockWidget > .clockSpoke.clockSpoke4
+    .clockWidget > .clockSpoke.clockSpoke134
     {
         transform: translateX(var(--clockcentre)) rotate(104deg);
     }
 
-    .clockWidget > .clockSpoke.clockSpoke5
+    .clockWidget > .clockSpoke.clockSpoke135
     {
         transform: translateX(var(--clockcentre)) rotate(130deg);
     }
 
-    .clockWidget > .clockSpoke.clockSpoke6
+    .clockWidget > .clockSpoke.clockSpoke136
     {
         transform: translateX(var(--clockcentre)) rotate(156deg);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke30
+    {
+        transform: translateX(var(--clockcentre));
+        height: var(--clockcentre);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke31
+    {
+        transform: translateX(var(--clockcentre)) rotate(120deg);
+        height: var(--clockcentre);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke32
+    {
+        transform: translateX(var(--clockcentre)) rotate(240deg);
+        height: var(--clockcentre);
     }
 
 /* Edit Mode */
@@ -3297,7 +3339,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 2/auto;
     }
 
-    .roteSpellCard .spellArts
+    .roteSpellCard .spellArt
     {
         grid-row: 3/auto;
     }
@@ -3306,26 +3348,86 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 4/auto;
     }
 
-    .roteSpellCard h4.spellEffect
+    .roteSpellCard .spellTechnique
     {
         grid-row: 5/auto;
     }
 
-    .roteSpellCard textarea.spellEffect
+    .roteSpellCard .spellTechniqueSpecific
     {
-        grid-row: 5/span 7;
+        grid-row: 6/auto;
     }
-
+    
     .roteSpellCard h4.spellComponents
     {
-        grid-row: 12/auto;
+        grid-row: 7/auto;
     }
 
     .roteSpellCard textarea.spellComponents
     {
-        grid-row: 10/span 7;
+        grid-row: 7/12;
     }
 
+    .roteSpellCard h4.spellEffect
+    {
+        grid-row: 13/auto;
+    }
+
+    .roteSpellCard textarea.spellEffect
+    {
+        grid-row: 13/-1;
+    }
+
+/* Scroll Cards */
+.scrollCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet//Thaumaturgy/img34/SpellCard.png);
+}
+
+    .scrollCard .spellEquation
+    {
+        grid-row: 2/auto;
+    }
+
+    .scrollCard .spellArt
+    {
+        grid-row: 3/auto;
+    }
+
+    .scrollCard .spellArtSynergy
+    {
+        grid-row: 4/auto;
+    }
+
+    .scrollCard .spellTechnique
+    {
+        grid-row: 5/auto;
+    }
+
+    .scrollCard .spellTechniqueSpecific
+    {
+        grid-row: 6/auto;
+    }
+
+    .scrollCard h4.spellComponents
+    {
+        grid-row: 7/auto;
+    }
+
+    .scrollCard .clockWidget
+    {
+        grid-row: 7/12;
+    }
+
+    .scrollCard h4.spellEffect
+    {
+        grid-row: 13/auto;
+    }
+
+    .scrollCard textarea.spellEffect
+    {
+        grid-row: 13/-1;
+    }
 
 /* Enchantment Card */
 .enchantmentCard
@@ -3396,16 +3498,36 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         .enchantmentCard div.potency > .potency8
         {
             grid-column: 8/auto;
-        }
+        }    
 
-    .enchantmentCard h4.spellEffect
+    .enchantmentCard .spellTechnique
     {
         grid-row: 4/auto;
     }
 
+    .enchantmentCard .spellTechniqueSpecific
+    {
+        grid-row: 5/auto;
+    }
+
+    .enchantmentCard h4.form
+    {
+        grid-row: 6/auto;
+    }
+
+    .enchantmentCard textarea.form
+    {
+        grid-row: 6/span 4;
+    }
+
+    .enchantmentCard h4.spellEffect
+    {
+        grid-row: 10/auto;
+    }
+
     .enchantmentCard textarea.spellEffect
     {
-        grid-row: 4/span 12;
+        grid-row: 10/16;
     }
 
     .enchantmentCard > .clockWidget
@@ -3464,14 +3586,24 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
             grid-column: 3/auto;
         }
 
-    .duelingFocusCard h4.form
+    .duelingFocusCard .spellTechnique
     {
         grid-row: 5/auto;
     }
 
+    .duelingFocusCard .spellTechniqueSpecific
+    {
+        grid-row: 6/auto;
+    }
+
+    .duelingFocusCard h4.form
+    {
+        grid-row: 7/auto;
+    }
+
     .duelingFocusCard textarea.form
     {
-        grid-row: 5/span 11;
+        grid-row: 7/span 16;
     }
 
     .duelingFocusCard > .clockWidget
