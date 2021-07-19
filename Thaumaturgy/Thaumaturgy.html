@@ -621,8 +621,7 @@
             <!-- Curses -->
             <section class="curseWidget">
                 <button type="action" class="sortCurses" name="act_sortCurses"> v </button>
-                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="3" />
-                <input type="hidden" class="curseNumber" name="attr_curseNumber" value="5" />
+                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="5" />
                 <div class="card customCard curseCard curse1">
                     <h4 class="curseName">Name</h4>
                     <input type="text" class="curseName" name="attr_curseName1" />
@@ -1509,14 +1508,28 @@
     /* Global Attributes */
     var globalAttributes = [];//Global Array for Storage of Player Caster Level
 
-    /* Set Player Caster Level to Coven Level */
+    /* Set Defaults and Player Caster Level to Coven Level */
     on("sheet:opened change:covenlevel", (event) =>
     {
-        getAttrs(["covenLevel", "selectedSheet"], function (values)
+        getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Disruption", "Danger","Divergence"], function (values)
         {
             const setObj = {};
             let selectedSheet = parseInt(values.selectedSheet) || 0;
             let covenLevel = 0;
+            /* Set Defaults */
+            setObj.EditAscension = 0;
+            setObj.EditFate = 0;
+            setObj.EditDisequilbrium = 0;
+            setObj.EditCircle = 0;
+
+            /* Ensure Fate is set */
+            setObj.Consequences = parseInt(values.Consequences) || 0;
+            setObj.Destiny = parseInt(values.Destiny) || 0;
+            setObj.Obstacle = parseInt(values.Obstacle) || 0;
+            /* Ensure Disequilibrium is set */
+            setObj.Disruption = parseInt(values.Disruption) || 0;
+            setObj.Danger = parseInt(values.Danger) || 0;
+            setObj.Divergence = parseInt(values.Divergence) || 0;
 
             /* Set Level elements on Coven Sheet*/
             if (selectedSheet == 2)
@@ -1556,9 +1569,6 @@
                 // Globally Store Coven Level from Ascension Widget on Coven Sheet
                 globalAttributes.covenlevel = covenLevel;
                 console.log(globalAttributes);
-
-                console.log(setObj);
-                setAttrs(setObj);
             }
             /* Set Level elements on Player Caster Sheets*/
             else if (globalAttributes.covenlevel && selectedSheet == 1)
@@ -1599,11 +1609,9 @@
                 setObj.rankLevel = rankLevel;
                 setObj.curseNumber = curseNumber;
                 setObj.level = covenLevel;
-
-                console.log(setObj);
-                setAttrs(setObj);
             }
-
+            console.log(setObj);
+            setAttrs(setObj);
         });
     });
 
@@ -1994,7 +2002,7 @@
     /* Wrap Around for Sort Curse*/
     on("clicked:sortcurses", (event) =>
     {
-        getAttrs(["curseFocus", "curseNumber"], function (values)
+        getAttrs(["curseFocus", "curseNumber", "selectedSheet"], function (values)
         {
             const setObj = {};
             //Curse on top
@@ -2002,6 +2010,14 @@
 
             //Number of Curses
             let curseNumber = parseInt(values.curseNumber) || 0;
+
+            //Coven Sheet is always 5 curses
+            let selectedSheet = parseInt(values.selectedSheet) || 0;
+            if (selectedSheet == 2)
+            {
+                curseNumber = 5;
+            }
+
             curseFocus++;
 
             if (curseFocus > curseNumber)
