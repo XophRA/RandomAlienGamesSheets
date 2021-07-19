@@ -2439,7 +2439,7 @@ input[type=number].resourceBox
     grid-template-rows: 20px 1fr;
     width: 80px;
     height: 64px;
-    --clockcentre: 30px;
+    --clockcentre: 31px;
     --clockheight: 60px;
     --spokeheight: 62px;
     --spokewidth: 2px;
@@ -2580,6 +2580,7 @@ input[value="3"].clockSegment3 ~ .clock
     left: 0;
     top: 0;
     background: black;
+
 }
 
     /* Clock Spokes for 13 Segment Clock */
@@ -2629,12 +2630,14 @@ input[value="3"].clockSegment3 ~ .clock
     {
         transform: translateX(var(--clockcentre)) rotate(120deg);
         height: var(--clockcentre);
+        transform-origin: bottom;
     }
 
     .clockWidget > .clockSpoke.clockSpoke32
     {
         transform: translateX(var(--clockcentre)) rotate(240deg);
         height: var(--clockcentre);
+        transform-origin: bottom;
     }
 
 /* Edit Mode */
