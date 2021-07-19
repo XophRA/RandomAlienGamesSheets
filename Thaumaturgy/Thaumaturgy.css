@@ -3361,19 +3361,19 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 5/auto;
     }
 
-    .roteSpellCard .spellTechniqueSpecific
+    .roteSpellCard textarea.spellTechniqueSpecific
     {
-        grid-row: 6/auto;
+        grid-row: 6/span 2;
     }
     
     .roteSpellCard h4.spellComponents
     {
-        grid-row: 7/auto;
+        grid-row: 8/auto;
     }
 
     .roteSpellCard textarea.spellComponents
     {
-        grid-row: 7/12;
+        grid-row: 8/12;
     }
 
     .roteSpellCard h4.spellEffect
@@ -3412,29 +3412,29 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 5/auto;
     }
 
-    .scrollCard .spellTechniqueSpecific
+    .scrollCard textarea.spellTechniqueSpecific
     {
-        grid-row: 6/auto;
+        grid-row: 6/span 2;
     }
 
     .scrollCard h4.spellComponents
     {
-        grid-row: 7/auto;
+        grid-row: 8/auto;
     }
 
     .scrollCard .clockWidget
     {
-        grid-row: 7/span 4;
+        grid-row: 8/span 4;
     }
 
     .scrollCard h4.spellEffect
     {
-        grid-row: 11/auto;
+        grid-row: 12/auto;
     }
 
     .scrollCard textarea.spellEffect
     {
-        grid-row: 11/-1;
+        grid-row: 12/-1;
     }
 
 /* Enchantment Card */
@@ -3513,29 +3513,29 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 4/auto;
     }
 
-    .enchantmentCard .spellTechniqueSpecific
+    .enchantmentCard textarea.spellTechniqueSpecific
     {
-        grid-row: 5/auto;
+        grid-row: 5/span 2;
     }
 
     .enchantmentCard h4.form
     {
-        grid-row: 6/auto;
+        grid-row: 7/auto;
     }
 
     .enchantmentCard textarea.form
     {
-        grid-row: 6/span 4;
+        grid-row: 7/span 4;
     }
 
     .enchantmentCard h4.spellEffect
     {
-        grid-row: 10/auto;
+        grid-row: 11/auto;
     }
 
     .enchantmentCard textarea.spellEffect
     {
-        grid-row: 10/16;
+        grid-row: 11/16;
     }
 
     .enchantmentCard > .clockWidget
@@ -3599,19 +3599,19 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 5/auto;
     }
 
-    .duelingFocusCard .spellTechniqueSpecific
+    .duelingFocusCard textarea.spellTechniqueSpecific
     {
-        grid-row: 6/auto;
+        grid-row: 6/span 2;
     }
 
     .duelingFocusCard h4.form
     {
-        grid-row: 7/auto;
+        grid-row: 8/auto;
     }
 
     .duelingFocusCard textarea.form
     {
-        grid-row: 7/span 16;
+        grid-row: 8/span 15;
     }
 
     .duelingFocusCard > .clockWidget

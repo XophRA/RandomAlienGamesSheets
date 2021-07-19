@@ -64,10 +64,10 @@
 
     <!-- Techniques -->
     <datalist id="techniques">
+        <option>Action</option>
         <option>Arrangement</option>
         <option>Collaborator</option>
         <option>Effigy</option>
-        <option>Form</option>
         <option>Gestures</option>
         <option>Incant</option>
         <option>Inscription</option>
@@ -437,7 +437,7 @@
                             <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
                             <h4 class="spellTechnique">Technique</h4>
                             <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
-                            <input type="text" class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
+                            <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
                             <h4 class="spellComponents">Components</h4>
                             <textarea class="spellComponents" name="attr_spellComponents" />
                             <h4 class="spellEffect">Spell Effect</h4>
@@ -459,7 +459,7 @@
                             <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
                             <h4 class="spellTechnique">Technique</h4>
                             <input type="text" class="spellTechnique" name="attr_scrollTechnique" list="techniques" />
-                            <input type="text" class="spellTechniqueSpecific" name="attr_scrollTechniqueSpecific" />
+                            <textarea class="spellTechniqueSpecific" name="attr_scrollTechniqueSpecific" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
@@ -499,7 +499,7 @@
                             <textarea class="form" name="attr_enchantmentForm" />
                             <h4 class="spellTechnique">Technique</h4>
                             <input type="text" class="spellTechnique" name="attr_enchantmentTechnique" list="techniques" />
-                            <input type="text" class="spellTechniqueSpecific" name="attr_enchantmentTechniqueSpecific" />
+                            <textarea class="spellTechniqueSpecific" name="attr_enchantmentTechniqueSpecific" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_enchantmentEffect" />
 
@@ -534,7 +534,7 @@
                             <textarea class="form" name="attr_formDuelingFocus" />
                             <h4 class="spellTechnique">Technique</h4>
                             <input type="text" class="spellTechnique" name="attr_focusTechnique" list="techniques" />
-                            <input type="text" class="spellTechniqueSpecific" name="attr_focusTechniqueSpecific" />
+                            <textarea class="spellTechniqueSpecific" name="attr_focusTechniqueSpecific" />
                             <div class="clockWidget">
                                 <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
                                 <input type="number" min="0" max="13" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
