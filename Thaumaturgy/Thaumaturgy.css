@@ -2501,7 +2501,7 @@ input[value="3"].clockSegment13 ~ .clock
 
 input[value="4"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(194deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(190deg, #555 50%, white 50%);
 }
 
 input[value="5"].clockSegment13 ~ .clock
@@ -2516,17 +2516,17 @@ input[value="6"].clockSegment13 ~ .clock
 
 input[value="7"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(114deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(112deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
 input[value="8"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(143deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(140deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
 input[value="9"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(168deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(165deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
 }
 
 input[value="10"].clockSegment13 ~ .clock
@@ -2550,6 +2550,82 @@ input[value="13"].clockSegment13 ~ .clock
 }
 
 
+/* Clock Segments for 7 Segment Clock */
+input[value="0"].clockSegment7 ~ .clock
+{
+    background: white;
+}
+
+input[value="1"].clockSegment7 ~ .clock
+{
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(130deg, #555 50%, white 50% );
+}
+
+input[value="2"].clockSegment7 ~ .clock
+{
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(180deg, #555 50%, white 50%);
+}
+
+
+input[value="3"].clockSegment7 ~ .clock
+{
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(240deg, #555 50%, white 50%);
+}
+
+
+input[value="4"].clockSegment7 ~ .clock
+{
+    background-image: linear-gradient(130deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+}
+
+input[value="5"].clockSegment7 ~ .clock
+{
+    background-image: linear-gradient(180deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+}
+
+
+input[value="6"].clockSegment7 ~ .clock
+{
+    background-image: linear-gradient(240deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+}
+
+input[value="7"].clockSegment7 ~ .clock
+{
+    background-color: #555;
+}
+
+/* Clock Segments for 5 Segment Clock */
+input[value="0"].clockSegment5 ~ .clock
+{
+    background: white;
+}
+
+input[value="1"].clockSegment5 ~ .clock
+{
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, #555 50%, white 50%);
+}
+
+input[value="2"].clockSegment5 ~ .clock
+{
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, #555 50%, white 50%);
+}
+
+input[value="3"].clockSegment5 ~ .clock
+{
+    background-image: linear-gradient(142deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+}
+
+
+input[value="4"].clockSegment5 ~ .clock
+{
+    background-image: linear-gradient(220deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+}
+
+input[value="5"].clockSegment5 ~ .clock
+{
+    background-color: #555;
+}
+
 /* Clock Segments for 3 Segment Clock */
 input[value="0"].clockSegment3 ~ .clock
 {
@@ -2571,6 +2647,7 @@ input[value="3"].clockSegment3 ~ .clock
     background-color: #555;
 }
 
+/* Clock Spokes */
 .clockWidget > .clockSpoke
 {
     grid-area: 1/1/auto/auto;
@@ -2620,6 +2697,48 @@ input[value="3"].clockSegment3 ~ .clock
         transform: translateX(var(--clockcentre)) rotate(156deg);
     }
 
+    /* Clock Spokes for 7 Segment Clock */
+    .clockWidget > .clockSpoke.clockSpoke70
+    {
+        transform: translateX(var(--clockcentre));
+        height: var(--clockcentre);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke71
+    {
+        transform: translateX(var(--clockcentre)) rotate(40deg);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke72
+    {
+        transform: translateX(var(--clockcentre)) rotate(90deg);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke73
+    {
+        transform: translateX(var(--clockcentre)) rotate(150deg);
+    }
+
+
+    /* Clock Spokes for 5 Segment Clock */
+    .clockWidget > .clockSpoke.clockSpoke50
+    {
+        transform: translateX(var(--clockcentre));
+        height: var(--clockcentre);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke51
+    {
+        transform: translateX(var(--clockcentre)) rotate(52deg);
+    }
+
+    .clockWidget > .clockSpoke.clockSpoke52
+    {
+        transform: translateX(var(--clockcentre)) rotate(130deg);
+    }
+
+
+    /* Clock Spokes for 3 Segment Clock */
     .clockWidget > .clockSpoke.clockSpoke30
     {
         transform: translateX(var(--clockcentre));
@@ -3459,7 +3578,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: repeat(8,13px) 1fr;
+        grid-template-columns: repeat(3,20px) 1fr;
         grid-template-rows: 1fr;
     }
 
@@ -3559,49 +3678,14 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 3/auto;
     }
 
-    .duelingFocusCard .potency
+    .duelingFocusCard .spellTechnique
     {
         grid-row: 4/auto;
     }
 
-    .duelingFocusCard div.potency
-    {
-        grid-column: 2/span 2;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(3,13px) 1fr;
-        grid-template-rows: 1fr;
-    }
-
-        .duelingFocusCard div.potency > .diceCheckbox
-        {
-            grid-row: 1/auto;
-        }
-
-        .duelingFocusCard div.potency > .potency1
-        {
-            grid-column: 1/auto;
-        }
-
-        .duelingFocusCard div.potency > .potency2
-        {
-            grid-column: 2/auto;
-        }
-
-        .duelingFocusCard div.potency > .potency3
-        {
-            grid-column: 3/auto;
-        }
-
-    .duelingFocusCard .spellTechnique
-    {
-        grid-row: 5/auto;
-    }
-
     .duelingFocusCard textarea.spellTechniqueSpecific
     {
-        grid-row: 6/span 2;
+        grid-row: 5/span 3;
     }
 
     .duelingFocusCard h4.form
