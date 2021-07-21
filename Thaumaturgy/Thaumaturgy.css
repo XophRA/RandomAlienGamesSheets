@@ -539,8 +539,9 @@ main.masterGrid
     height: 100%;
     grid-template-columns: 20px repeat(2, 1fr);
     grid-template-rows: 42px 1fr;
-    column-gap:6px;
+    column-gap: 6px;
 }
+
     .amenitiesWidget > .amenitiesTitle
     {
         grid-area: 1/2/auto/-1;
@@ -681,19 +682,23 @@ main.masterGrid
         grid-template-columns: 100px repeat(3,1fr) 120px;
         grid-template-rows: 78px repeat(12, 30px) 1fr;
     }
-    .ascensionWidget .editAscension > .levelControl
-    {
-        grid-row: 2/auto;
-        align-self: center;
-    }
+
+        .ascensionWidget .editAscension > .levelControl
+        {
+            grid-row: 2/auto;
+            align-self: center;
+        }
+
         .ascensionWidget .editAscension > div.levelControl
         {
             grid-column: 2/auto;
         }
+
         .ascensionWidget .editAscension > input.levelControl
         {
             grid-column: 3/auto;
         }
+
         .ascensionWidget .editAscension > .ascensionClear
         {
             grid-area: -4/4/auto/auto;
@@ -2504,7 +2509,7 @@ input[type=number].resourceBox
         font-weight: 600;
     }
 
- /* Clock Segments for 13 Segment Clock */
+/* Clock Segments for 13 Segment Clock */
 input[value="0"].clockSegment13 ~ .clock
 {
     background: white;
@@ -2683,7 +2688,6 @@ input[value="3"].clockSegment3 ~ .clock
     left: 0;
     top: 0;
     background: black;
-
 }
 
     /* Clock Spokes for 13 Segment Clock */
@@ -3332,6 +3336,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 {
     grid-area: 1/2/auto/auto;
 }
+
     .covenSheetGrid > .curseWidget > .curse4,
     .covenSheetGrid > .curseWidget > .curse5
     {
@@ -3496,6 +3501,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     {
         grid-row: 3/auto;
     }
+
     .roteSpellCard .spellArtSynergy
     {
         grid-row: 4/auto;
@@ -3510,7 +3516,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     {
         grid-row: 6/span 2;
     }
-    
+
     .roteSpellCard h4.spellComponents
     {
         grid-row: 8/auto;
@@ -3651,7 +3657,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         .enchantmentCard div.potency > .potency8
         {
             grid-column: 8/auto;
-        }    
+        }
 
     .enchantmentCard .spellTechnique
     {
@@ -3769,6 +3775,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     {
         grid-row: 12/auto;
     }
+
     .puzzleCard .solutionComponents
     {
         grid-row: 13/auto;
@@ -4036,6 +4043,7 @@ input[type="checkbox"]:checked + span.conduit
     justify-items: start;
     align-items: start;
 }
+
     .creatureCards > .curseWidget
     {
         grid-area: 1/1/auto/auto;
@@ -4044,18 +4052,22 @@ input[type="checkbox"]:checked + span.conduit
         height: 100%;
         grid-template-columns: 1fr 30px;
     }
+
         .creatureCards > .curseWidget > .curse1
         {
             grid-area: 2/1/span 5/span 2;
         }
+
         .creatureCards > .curseWidget > .curse2
         {
             grid-area: 3/1/span 5/span 2;
         }
+
         .creatureCards > .curseWidget > .curse3
         {
             grid-area: 4/1/span 5/span 2;
         }
+
         .creatureCards > .curseWidget > button.sortCurses
         {
             grid-area: 1/-2/auto/auto;
