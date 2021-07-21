@@ -4,21 +4,13 @@
 
         <h3 class="selectorTitle">Sheet Type:</h3>
         <select name="attr_selectedSheet" class="typeSelector">
-            <optgroup label="Player">
-                <option value="1" selected>Caster</option>
-                <option value="2">Coven</option>
-            </optgroup>
-            <optgroup label="Gamemaster Characters">
-                <option value="3">Medium</option>
-                <option value="4">Dramatis Personae</option>
-                <option value="5">Pawn of Fate</option>
-                <option value="6">Non-Player Caster</option>
-                <option value="7">Devotee</option>
-                <option value="8">Patron</option>
-            </optgroup>
-            <optgroup label="Cards">
-                <option value="9">Font</option>
-            </optgroup>
+            <option value="1" selected>Caster</option>
+            <option value="2">Coven</option>
+            <option value="3">Medium</option>
+            <option value="4">Dramatis Personae</option>
+            <option value="5">Pawn of Fate</option>
+            <option value="6">Fatekeeper's Grimoire</option>
+            <option value="7">Fatekeeper's Deck</option>
         </select>
 
         <div class="version">Version 0.2</div>
@@ -27,12 +19,10 @@
     <input type="radio" name="attr_selectedSheet" class="hidden playerCasterSelector" value="1" checked>
     <input type="radio" name="attr_selectedSheet" class="hidden covenSelector" value="2">
     <input type="radio" name="attr_selectedSheet" class="hidden mediumSelector" value="3">
-    <input type="radio" name="attr_selectedSheet" class="hidden folkSelector" value="4">
-    <input type="radio" name="attr_selectedSheet" class="hidden magicalCreatureSelector" value="5">
-    <input type="radio" name="attr_selectedSheet" class="hidden nonPlayerCasterSelector" value="6">
-    <input type="radio" name="attr_selectedSheet" class="hidden devoteeSelector" value="7">
-    <input type="radio" name="attr_selectedSheet" class="hidden patronSelector" value="8">
-    <input type="radio" name="attr_selectedSheet" class="hidden fontSelector" value="9">
+    <input type="radio" name="attr_selectedSheet" class="hidden dramatisPersonaeSelector" value="4">
+    <input type="radio" name="attr_selectedSheet" class="hidden pawnofFateSelector" value="5">
+    <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersGrimoireSelector" value="6">
+    <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersDeckSelector" value="7">
 
     <!--Data Lists-->
     <!-- Rituals -->
@@ -486,7 +476,7 @@
                             <input type="text" class="formula" name="attr_formula" />
                             <h4 class="potency">Potency</h4>
                             <div class="potency">
-                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked/><span class="potency1 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
                                 <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
                                 <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
                             </div>
@@ -515,7 +505,7 @@
                             <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
                             <h4 class="manoeuvre">Manoeuvre</h4>
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
-                            
+
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_formDuelingFocus" />
                             <h4 class="spellTechnique">Technique</h4>
@@ -1378,8 +1368,8 @@
     </article>
 
     <!-- Dramatis Personae -->
-    <article class="sheetType folkSheet">
-        <div class="folkSheetGrid">
+    <article class="sheetType dramatisPersonaeSheet">
+        <div class="dramatisPersonaeGridGrid">
             <fieldset class="repeating_folk">
                 <section class="folkAspects">
                     <div class="name">Name (pronouns):</div>
@@ -1391,9 +1381,9 @@
         </div>
     </article>
 
-    <!-- Magical Creatures -->
-    <article class="sheetType creatureSheet">
-        <div class="creatureSheetGrid">
+    <!-- Pawn of Fate -->
+    <article class="sheetType pawnofFateSheet">
+        <div class="pawnofFateSheetGrid">
             <section class="creatureAspects">
                 <div class="name">Name:</div>
                 <input type="text" name="attr_character_name" class="name" />
@@ -1458,8 +1448,223 @@
         </div>
     </article>
 
-    <!-- Cards -->
-    <article class="sheetType fontCard">
+    <!-- Fatekeeper's Grimoire -->
+    <article class="sheetType fatekeepersGrimoireSheet">
+        <div class="fatekeepersGrimoireSheetGrid">
+            <!-- Grimoire -->
+            <section class="grimoireWidget">
+                <div class="clockWidget">
+                    <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
+                    <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
+                    <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment13" />
+                    <span class="clock"></span>
+                    <span class="clockSpoke clockSpoke130"></span>
+                    <span class="clockSpoke clockSpoke131"></span>
+                    <span class="clockSpoke clockSpoke132"></span>
+                    <span class="clockSpoke clockSpoke133"></span>
+                    <span class="clockSpoke clockSpoke134"></span>
+                    <span class="clockSpoke clockSpoke135"></span>
+                    <span class="clockSpoke clockSpoke136"></span>
+                </div>
+
+                <div class="deckHeader deck1">
+                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
+                </div>
+                <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
+                <div class="deck deck1">
+                    <fieldset class="repeating_rotespellcard">
+                        <div class="card customCard roteSpellCard">
+                            <h4 class="spellEquation">Equation</h4>
+                            <input type="text" class="spellEquation" name="attr_spellEquation" />
+                            <h4 class="spellArt">Arts</h4>
+                            <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
+                            <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
+                            <h4 class="spellTechnique">Technique</h4>
+                            <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
+                            <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
+                            <h4 class="spellComponents">Components</h4>
+                            <textarea class="spellComponents" name="attr_spellComponents" />
+                            <h4 class="spellEffect">Spell Effect</h4>
+                            <textarea class="spellEffect" name="attr_spellEffect" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="deckHeader deck2">
+                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                </div>
+                <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                <div class="deck deck2">
+                    <fieldset class="repeating_scrollcard">
+                        <div class="card customCard scrollCard">
+                            <h4 class="spellEquation">Equation</h4>
+                            <input type="text" class="spellEquation" name="attr_scrollEquation" />
+                            <h4 class="spellArt">Arts</h4>
+                            <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
+                            <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
+                            <h4 class="spellTechnique">Technique</h4>
+                            <input type="text" class="spellTechnique" name="attr_scrollTechnique" list="techniques" />
+                            <textarea class="spellTechniqueSpecific" name="attr_scrollTechniqueSpecific" />
+                            <h4 class="spellComponents">Charges</h4>
+                            <div class="clockWidget">
+                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
+                                <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
+                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
+                                <span class="clock"></span>
+                                <span class="clockSpoke clockSpoke30"></span>
+                                <span class="clockSpoke clockSpoke31"></span>
+                                <span class="clockSpoke clockSpoke32"></span>
+                            </div>
+                            <h4 class="spellEffect">Spell Effect</h4>
+                            <textarea class="spellEffect" name="attr_spellEffect" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="deckHeader deck3">
+                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
+                </div>
+                <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
+                <div class="deck deck3">
+                    <fieldset class="repeating_enchantmentcard">
+                        <div class="card customCard enchantmentCard">
+                            <h4 class="formula">Formula</h4>
+                            <input type="text" class="formula" name="attr_formula" />
+                            <h4 class="potency">Potency</h4>
+                            <div class="potency">
+                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
+                                <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
+                            </div>
+                            <h4 class="form">Form</h4>
+                            <textarea class="form" name="attr_enchantmentForm" />
+                            <h4 class="spellTechnique">Technique</h4>
+                            <input type="text" class="spellTechnique" name="attr_enchantmentTechnique" list="techniques" />
+                            <textarea class="spellTechniqueSpecific" name="attr_enchantmentTechniqueSpecific" />
+                            <h4 class="spellEffect">Spell Effect</h4>
+                            <textarea class="spellEffect" name="attr_enchantmentEffect" />
+
+                            <div class="clockWidget">
+                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
+                                <input type="number" min="0" max="5" value="0" name="attr_chargeClock" class="clockControl" />
+                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment5" />
+                                <span class="clock"></span>
+                                <span class="clockSpoke clockSpoke50"></span>
+                                <span class="clockSpoke clockSpoke51"></span>
+                                <span class="clockSpoke clockSpoke52"></span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="repeating_duelingfocuscard">
+                        <div class="card customCard duelingFocusCard">
+                            <h4 class="formulaDuelingFocus">Formula</h4>
+                            <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
+                            <h4 class="manoeuvre">Manoeuvre</h4>
+                            <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
+
+                            <h4 class="form">Form</h4>
+                            <textarea class="form" name="attr_formDuelingFocus" />
+                            <h4 class="spellTechnique">Technique</h4>
+                            <input type="text" class="spellTechnique" name="attr_focusTechnique" list="techniques" />
+                            <textarea class="spellTechniqueSpecific" name="attr_focusTechniqueSpecific" />
+                            <div class="clockWidget">
+                                <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
+                                <input type="number" min="0" max="7" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
+                                <input type="hidden" name="attr_duelingFocusStressClock" value="0" class="clockSegment7" />
+                                <span class="clock"></span>
+                                <span class="clockSpoke clockSpoke70"></span>
+                                <span class="clockSpoke clockSpoke71"></span>
+                                <span class="clockSpoke clockSpoke72"></span>
+                                <span class="clockSpoke clockSpoke73"></span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </section>
+        </div>
+    </article>
+    <!-- Fatekeeper's Deck -->
+    <article class="sheetType fatekeepersDeckSheet">
+        <div class="fatekeepersDeckSheetGrid">            
+            <section class="fatekeeperDeck">
+                <div class="fatekeeperDeckAspects">
+                    <h1 class="">Level:</h1>
+                    <input type="text" name="attr_character_name" class="" />
+                </div>
+                <div class="deckHeader deck1">
+                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
+                </div>
+                <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
+                <div class="deck deck1">
+                    <fieldset class="repeating_rotespellcard">
+                        <div class="card customCard roteSpellCard">
+                            <h4 class="spellEquation">Equation</h4>
+                            <input type="text" class="spellEquation" name="attr_spellEquation" />
+                            <h4 class="spellArt">Arts</h4>
+                            <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
+                            <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
+                            <h4 class="spellTechnique">Technique</h4>
+                            <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
+                            <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
+                            <h4 class="spellComponents">Components</h4>
+                            <textarea class="spellComponents" name="attr_spellComponents" />
+                            <h4 class="spellEffect">Spell Effect</h4>
+                            <textarea class="spellEffect" name="attr_spellEffect" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="deckHeader deck2">
+                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                </div>
+                <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                <div class="deck deck2">
+                    <fieldset class="repeating_scrollcard">
+                        <div class="card customCard scrollCard">
+                            <h4 class="spellEquation">Equation</h4>
+                            <input type="text" class="spellEquation" name="attr_scrollEquation" />
+                            <h4 class="spellArt">Arts</h4>
+                            <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
+                            <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
+                            <h4 class="spellTechnique">Technique</h4>
+                            <input type="text" class="spellTechnique" name="attr_scrollTechnique" list="techniques" />
+                            <textarea class="spellTechniqueSpecific" name="attr_scrollTechniqueSpecific" />
+                            <h4 class="spellComponents">Charges</h4>
+                            <div class="clockWidget">
+                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
+                                <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
+                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
+                                <span class="clock"></span>
+                                <span class="clockSpoke clockSpoke30"></span>
+                                <span class="clockSpoke clockSpoke31"></span>
+                                <span class="clockSpoke clockSpoke32"></span>
+                            </div>
+                            <h4 class="spellEffect">Spell Effect</h4>
+                            <textarea class="spellEffect" name="attr_spellEffect" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="deckHeader deck3">
+                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
+                </div>
+                <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
+                <div class="deck deck3">
+                    <fieldset class="repeating_curseCard">
+                        <div class="card customCard curseCard">
+                            <h4 class="curseName">Name</h4>
+                            <input type="text" class="curseName" name="attr_curseName1" />
+                            <h4 class="curseSeverity">Severity</h4>
+                            <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                            <h4 class="statusEffect">Status Effect</h4>
+                            <textarea class="statusEffect" name="attr_statusEffect1" />
+                            <h4 class="channelCurse">Channel</h4>
+                            <textarea class="channelCurse" name="attr_channelCurse1" />
+                            <h4 class="curseRestoration">Solution</h4>
+                            <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                            <h4 class="restorationComponents">Components</h4>
+                            <textarea class="restorationComponents" name="attr_restorationComponents1" />
+                        </div>
+                    </fieldset>
+                </div>
+            </section>
+        </div>
     </article>
 </main>
 
