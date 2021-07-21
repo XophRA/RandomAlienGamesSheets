@@ -3798,7 +3798,17 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .fontCard textarea.description
     {
-        grid-row: 3/span 10;
+        grid-row: 3/span 5;
+    }
+
+    .fontCard .fontResource
+    {
+        grid-row: 8/auto;
+    }
+
+    .fontCard textarea.fontResource
+    {
+        grid-row: 8/span 5;
     }
 
     .fontCard .quanity
