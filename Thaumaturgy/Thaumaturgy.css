@@ -3729,6 +3729,87 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-area: -3/-2/-1/-2;
     }
 
+/* Puzzle Cards */
+.puzzleCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet//Thaumaturgy/img34/PuzzleCard.png);
+}
+
+    .puzzleCard .puzzleName
+    {
+        grid-row: 2/auto;
+    }
+
+    .puzzleCard .puzzleObstacle
+    {
+        grid-row: 3/auto;
+    }
+
+    .puzzleCard textarea.puzzleObstacle
+    {
+        grid-row: 3/span 4;
+    }
+
+    .puzzleCard .puzzlePeril
+    {
+        grid-row: 7/auto;
+    }
+
+    .puzzleCard textarea.puzzlePeril
+    {
+        grid-row: 7/span 4;
+    }
+
+    .puzzleCard .solution
+    {
+        grid-row: 11/auto;
+    }
+
+    .puzzleCard .solutionSynergy
+    {
+        grid-row: 12/auto;
+    }
+    .puzzleCard .solutionComponents
+    {
+        grid-row: 13/auto;
+    }
+
+    .puzzleCard textarea.solutionComponents
+    {
+        grid-row: 13/span 4;
+    }
+
+
+/* Font Cards */
+.fontCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet//Thaumaturgy/img34/FontCard.png);
+}
+
+    .fontCard .source
+    {
+        grid-row: 2/auto;
+    }
+
+    .fontCard .description
+    {
+        grid-row: 3/auto;
+    }
+
+    .fontCard textarea.description
+    {
+        grid-row: 3/span 10;
+    }
+
+    .fontCard .quanity
+    {
+        grid-row: -3/auto;
+    }
+
+    .fontCard .clockWidget
+    {
+        grid-area: -3/-2/-1/-2;
+    }
 
 /* Checkboxes */
 input[type="checkbox"].hideCheckbox,

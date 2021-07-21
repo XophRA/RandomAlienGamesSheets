@@ -1594,20 +1594,19 @@
                 </div>
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
                 <div class="deck deck1">
-                    <fieldset class="repeating_rotespellcard">
-                        <div class="card customCard roteSpellCard">
-                            <h4 class="spellEquation">Equation</h4>
-                            <input type="text" class="spellEquation" name="attr_spellEquation" />
-                            <h4 class="spellArt">Arts</h4>
-                            <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
-                            <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
-                            <h4 class="spellComponents">Components</h4>
-                            <textarea class="spellComponents" name="attr_spellComponents" />
-                            <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_spellEffect" />
+                    <fieldset class="repeating_puzzleCard">
+                        <div class="card customCard puzzleCard">
+                            <h4 class="puzzleName">Name</h4>
+                            <input type="text" class="puzzleName" name="attr_puzzleName" />
+                            <h4 class="puzzleObstacle">Obstacle</h4>
+                            <textarea class="puzzleObstacle" name="attr_puzzleObstacle" />
+                            <h4 class="puzzlePeril">Peril</h4>
+                            <textarea class="puzzlePeril" name="attr_puzzlePeril" />
+                            <h4 class="solution">Solution</h4>
+                            <input type="text" class="solution" name="attr_puzzleSolution" list="arts" />
+                            <input type="text" class="solutionSynergy" name="attr_puzzleSolutionSynergy" list="arts" />
+                            <h4 class="solutionComponents">Components</h4>
+                            <textarea class="solutionComponents" name="attr_solutionComponents" />
                         </div>
                     </fieldset>
                 </div>
@@ -1616,17 +1615,13 @@
                 </div>
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
                 <div class="deck deck2">
-                    <fieldset class="repeating_scrollcard">
-                        <div class="card customCard scrollCard">
-                            <h4 class="spellEquation">Equation</h4>
-                            <input type="text" class="spellEquation" name="attr_scrollEquation" />
-                            <h4 class="spellArt">Arts</h4>
-                            <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
-                            <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_scrollTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_scrollTechniqueSpecific" />
-                            <h4 class="spellComponents">Charges</h4>
+                    <fieldset class="repeating_fontCard">
+                        <div class="card customCard fontCard">
+                            <h4 class="source">Source</h4>
+                            <input type="text" class="source" name="attr_fontSource" />                            
+                            <h4 class="description">Description</h4>
+                            <textarea class="description" name="attr_fontDescription" />
+                            <h4 class="quanity">Quantity</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
                                 <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
