@@ -288,7 +288,7 @@ main.masterGrid
     display: grid;
     grid-row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 70px 250px 1fr;
+    grid-template-rows: 90px 250px 1fr;
     justify-items: start;
     align-items: start;
 }
@@ -4084,12 +4084,13 @@ input[type="checkbox"]:checked + span.conduit
     height: 100%;
     grid-area: 1/1/auto/-1;
     grid-template-columns: repeat(2, 1fr 3fr);
-    grid-template-rows: repeat(3, 22px);
+    grid-template-rows: repeat(4, 22px);
     justify-items: start;
     align-items: start;
 }
 
-    .pawnAspects > h4
+    .pawnAspects > h4,
+    .pawnAspects > h1
     {
         grid-column: 1/auto;
     }
@@ -4103,13 +4104,34 @@ input[type="checkbox"]:checked + span.conduit
     {
         grid-row: 1/auto;
     }
-    .pawnAspects > .nature
+    .pawnAspects > .pronouns
     {
         grid-row: 2/auto;
     }
-    .pawnAspects > .willpower
+    .pawnAspects > .relationship
     {
         grid-row: 3/auto;
+    }
+    .pawnAspects > .relationshipFacing
+    {
+        grid-row: 4/auto;
+    }
+    .pawnAspects > h4.nature
+    {
+        grid-area: 3/3/auto/auto;
+    }
+    
+    .pawnAspects > input.nature
+    {
+        grid-area: 3/4/auto/auto;
+    }
+    .pawnAspects > h4.willpower
+    {
+        grid-area: 4/3/auto/auto;
+    }
+    .pawnAspects > input.willpower
+    {
+        grid-area: 4/4/auto/auto;
     }
     .pawnAspects > h4.concept
     {
@@ -4117,7 +4139,7 @@ input[type="checkbox"]:checked + span.conduit
     }
     .pawnAspects > textarea.concept
     {
-        grid-area: 1/4/auto/-1;
+        grid-area: 1/4/auto/span 2;
     }
 
 .charateristicWidget
