@@ -2351,7 +2351,7 @@ input[type=number].resourceBox
 
         .tableSpread > .editTableSpread > .arcanaEdit
         {
-            grid-template-columns: 50px 40px 1fr;
+            grid-template-columns: 50px 80px 1fr;
             grid-template-rows: 30px repeat(2, 22px);
         }
 
@@ -2370,7 +2370,8 @@ input[type=number].resourceBox
                 grid-row: 3/4;
             }
 
-            .tableSpread > .editTableSpread > .arcanaEdit input
+            .tableSpread > .editTableSpread > .arcanaEdit input,
+            .tableSpread > .editTableSpread > .arcanaEdit select
             {
                 grid-column: 2/3;
             }
@@ -3733,41 +3734,41 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .puzzleCard textarea.puzzleDescription
     {
-        grid-row: 3/span 4;
+        grid-row: 3/span 3;
     }
 
     .puzzleCard .puzzlePeril
     {
-        grid-row: 7/auto;
+        grid-row: 6/auto;
     }
 
     .puzzleCard textarea.puzzlePeril
     {
-        grid-row: 7/span 4;
+        grid-row: 6/span 3;
     }
 
     .puzzleCard .solution
     {
-        grid-row: 11/auto;
+        grid-row: 9/auto;
     }
 
     .puzzleCard .solutionSynergy
     {
-        grid-row: 12/auto;
+        grid-row: 10/auto;
     }
 
     .puzzleCard .puzzleTechnique
     {
-        grid-row: 13/auto;
+        grid-row: 11/auto;
     }
 
     .puzzleCard textarea.puzzleTechnique
     {
-        grid-row: 13/span 2;
+        grid-row: 12/span 2;
     }
     .puzzleCard .solutionRewards
     {
-        grid-row: 15/span 3;
+        grid-row: 14/-1;
     }
 
 
@@ -4022,38 +4023,47 @@ input[type="checkbox"]:checked + span.conduit
 }
 
 
-/* Folk Sheet */
+/* Dramatis Personae */
 .tagCharacterAspects
 {
     display: grid;
     width: 850px;
-    height: 50px;
+    height: 100px;
     grid-area: 1/1/-1/-1;
-    grid-template-columns: 135px 2fr 105px 3fr;
-    grid-template-rows: repeat(2,24px);
+    grid-template-columns: 95px 2fr 105px 3fr;
+    grid-template-rows: 30px repeat(3,22px);
     margin: 5px 0;
     justify-items: start;
     align-items: start;
 }
 
-    .tagCharacterAspects > h4.name
+    .tagCharacterAspects > h1,
+    .tagCharacterAspects > h4
     {
-        grid-area: 1/1/auto/auto;
+        grid-column: 1/auto;
     }
-    .tagCharacterAspects > h4.pronouns
+    .tagCharacterAspects > input[type="text"],
+    .tagCharacterAspects > select
     {
-        grid-area: 2/1/auto/auto;
+        grid-column: 2/auto;
+    }
+    .tagCharacterAspects > .name
+    {
+        grid-row: 1/auto;
     }
 
-    .tagCharacterAspects > input[type="text"].name
+    .tagCharacterAspects > .pronouns
     {
-        grid-area: 1/2/auto/auto;
-        padding-bottom: 5px;
+        grid-row: 2/auto;
     }
-    .tagCharacterAspects > input[type="text"].pronouns
+
+    .tagCharacterAspects > .relationship
     {
-        grid-area: 2/2/auto/auto;
-        padding-bottom: 5px;
+        grid-row: 3/auto;
+    }
+    .tagCharacterAspects > .relationshipFacing
+    {
+        grid-row: 4/auto;
     }
 
     .tagCharacterAspects > h4.charateristics

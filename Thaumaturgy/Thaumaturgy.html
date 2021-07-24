@@ -549,17 +549,29 @@
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Consequences</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ConsequencesFacing" value="1" />
+                        <div class="arcanaFacing">Facing:</div> 
+                        <select name="attr_ConsequencesFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
                     </div>
                     <div class="rightLegEdit arcanaEdit">
                         <h2>Destiny</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_DestinyFacing" value="1" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DestinyFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
                     </div>
                     <div class="tabletopEdit arcanaEdit">
                         <h2>Obstacle</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_ObstacleFacing" value="1" />
+                        <div class="arcanaFacing">Facing:</div> 
+                        <select name="attr_ObstacleFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
                     </div>
                 </div>
                 <div class="leftLeg">
@@ -1347,17 +1359,29 @@
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Disruption</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Disruption" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div><input type="checkbox" class="arcanaFacing" name="attr_DisruptionFacing" value="1" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DisruptionFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
                     </div>
                     <div class="rightLegEdit arcanaEdit">
                         <h2>Danger</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Danger" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> <input type="checkbox" class="arcanaFacing" name="attr_DangerFacing" value="1" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DangerFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
                     </div>
                     <div class="tabletopEdit arcanaEdit">
                         <h2>Divergence</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Divergence" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div><input type="checkbox" class="arcanaFacing" name="attr_DivergenceFacing" value="1" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DivergenceFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
                     </div>
                 </div>
                 <div class="leftLeg">
@@ -1386,10 +1410,17 @@
         <div class="dramatisPersonaeGridGrid">
             <fieldset class="repeating_folk">
                 <section class="tagCharacterAspects">
-                    <h4 class="name">Name</h4>
+                    <h1 class="name">Name</h1>
                     <input type="text" name="attr_character_name" class="name" />
                     <h4 class="pronouns">pronouns</h4>
                     <input type="text" name="attr_character_pronouns" class="pronouns" />
+                    <h4 class="relationship">Relationship</h4>
+                    <input type="text" name="attr_relationship" class="relationship" />
+                    <h4 class="relationshipFacing">Facing</h4>
+                    <select name="attr_relationshipFacing" class="relationshipFacing">
+                        <option value="0">Chaos</option>
+                        <option value="1">Harmony</option>
+                    </select>
                     <h4 class="charateristics">Charateristics</h4>
                     <textarea class="charateristics" name="attr_charateristics" />
                 </section>
