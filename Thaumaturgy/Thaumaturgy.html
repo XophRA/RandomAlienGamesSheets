@@ -56,11 +56,22 @@
     <datalist id="techniques">
         <option>Action</option>
         <option>Arrange</option>
-        <option>Choreograph</option>
         <option>Collaborate</option>
         <option>Gesture</option>
         <option>Incant</option>
         <option>Inscribe</option>
+        <option>Mime</option>
+    </datalist>
+
+    <!-- Components -->
+    <datalist id="components">
+        <option>Apparel</option>
+        <option>Botanicals</option>
+        <option>Debris</option>
+        <option>Effigy</option>
+        <option>Items</option>
+        <option>Minerals</option>
+        <option>Remains</option>
     </datalist>
 
     <!-- Manoeuvres -->
@@ -82,7 +93,7 @@
     </datalist>
 
 
-    <!-- Player Caster -->
+    <!-- Caster -->
     <article class="sheetType playerCasterSheet">
         <!--PC Sheet Grid-->
         <div class="playerCasterSheetGrid">
@@ -441,6 +452,7 @@
                             <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
                             <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
                             <h4 class="spellComponents">Components</h4>
+                            <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
                             <textarea class="spellComponents" name="attr_spellComponents" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_spellEffect" />
@@ -549,7 +561,7 @@
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Consequences</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> 
+                        <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ConsequencesFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
                             <option value="1">Harmony</option>
@@ -567,7 +579,7 @@
                     <div class="tabletopEdit arcanaEdit">
                         <h2>Obstacle</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13" value="0" />
-                        <div class="arcanaFacing">Facing:</div> 
+                        <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ObstacleFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
                             <option value="1">Harmony</option>
@@ -1448,7 +1460,7 @@
                     <option value="1">Harmony</option>
                 </select>
                 <h4 class="willpower">Willpower</h4>
-                <input type="text" name="attr_willpower" />
+                <input type="text" class="willpower" name="attr_willpower" />
             </section>
             <!-- Charateristics -->
             <section class="charateristicWidget tagbox">
@@ -1473,25 +1485,11 @@
                             <input type="text" class="miracleFate" name="attr_miracleName" />
                             <h4 class="miracleDomain">Domain</h4>
                             <input type="text" class="miracleDomain" name="attr_miracleDomain" />
-                            <h4 class="potency">Potency</h4>
-                            <div class="potency">
-                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
-                                <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
-                                <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
-                            </div>
+                            
                             <h4 class="spellTechnique">Technique</h4>
                             <input type="text" class="spellTechnique" name="attr_miracleTechnique" list="techniques" />
                             <textarea class="spellTechniqueSpecific" name="attr_miracleTechniqueSpecific" />
-                            <h4 class="spellComponents">Charges</h4>
-                            <div class="clockWidget">
-                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
-                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
-                                <span class="clock"></span>
-                                <span class="clockSpoke clockSpoke30"></span>
-                                <span class="clockSpoke clockSpoke31"></span>
-                                <span class="clockSpoke clockSpoke32"></span>
-                            </div>
+                            
                             <h4 class="miracleEffect">Effect</h4>
                             <textarea class="miracleEffect" name="attr_miracleEffect" />
                         </div>
@@ -1507,12 +1505,7 @@
                         <div class="card customCard enchantmentCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
-                            <h4 class="potency">Potency</h4>
-                            <div class="potency">
-                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
-                                <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
-                                <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
-                            </div>
+                            
                             <h4 class="manoeuvre">Manoeuvre</h4>
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
@@ -1522,16 +1515,7 @@
                             <textarea class="spellTechniqueSpecific" name="attr_enchantmentTechniqueSpecific" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_enchantmentEffect" />
-
-                            <div class="clockWidget">
-                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="5" value="0" name="attr_chargeClock" class="clockControl" />
-                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment5" />
-                                <span class="clock"></span>
-                                <span class="clockSpoke clockSpoke50"></span>
-                                <span class="clockSpoke clockSpoke51"></span>
-                                <span class="clockSpoke clockSpoke52"></span>
-                            </div>
+                            
                         </div>
                     </fieldset>
                 </div>
@@ -1583,6 +1567,7 @@
                             <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
                             <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
                             <h4 class="spellComponents">Components</h4>
+                            <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
                             <textarea class="spellComponents" name="attr_spellComponents" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_spellEffect" />
