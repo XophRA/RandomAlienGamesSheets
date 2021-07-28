@@ -14,7 +14,7 @@ input.playerCasterSelector:checked ~ article.playerCasterSheet,
 input.covenSelector:checked ~ article.covenSheet,
 input.mediumSelector:checked ~ article.mediumSheet,
 input.dramatisPersonaeSelector:checked ~ article.dramatisPersonaeSheet,
-input.pawnofFateSelector:checked ~ article.pawnofFateSheet,
+input.pawnSelector:checked ~ article.pawnSheet,
 input.fatekeepersGrimoireSelector:checked ~ article.fatekeepersGrimoireSheet,
 input.fatekeepersDeckSelector:checked ~ article.fatekeepersDeckSheet
 {
@@ -281,7 +281,7 @@ main.masterGrid
     align-items: start;
 }
 
-.pawnofFateSheetGrid
+.pawnSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -3181,9 +3181,13 @@ input.editToggle[value="1"] + .editMenu
     }
 
 /* Notes */
-.tagWidget
+.playerCasterSheetGrid > .tagWidget
 {
     grid-area: 5/2/auto/-1;
+}
+
+    .tagWidget
+{
     display: grid;
     grid-template-rows: 45px 1fr;
     grid-template-columns: 1fr;
@@ -4099,12 +4103,12 @@ input[type="checkbox"]:checked + span.conduit
         grid-area: 1/4/auto/span 2;
     }
 
-.charateristicWidget
+.pawnSheetGrid > .charateristicWidget
 {
     grid-area: 2/1/auto/auto;
 }
 
-.tagWidget
+.pawnSheetGrid > .tagWidget
 {
     grid-area: 2/2/auto/auto;
 }
