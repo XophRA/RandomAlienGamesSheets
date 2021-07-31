@@ -16,7 +16,8 @@ input.mediumSelector:checked ~ article.mediumSheet,
 input.dramatisPersonaeSelector:checked ~ article.dramatisPersonaeSheet,
 input.pawnSelector:checked ~ article.pawnSheet,
 input.fatekeepersGrimoireSelector:checked ~ article.fatekeepersGrimoireSheet,
-input.fatekeepersDeckSelector:checked ~ article.fatekeepersDeckSheet
+input.fatekeepersDeckSelector:checked ~ article.fatekeepersDeckSheet,
+input.noteSelector:checked ~ article.noteSheet
 {
     display: initial;
 }
@@ -139,6 +140,11 @@ input.fatekeepersDeckSelector:checked ~ article.fatekeepersDeckSheet
     resize: none;
     padding: 0;
     outline: none;
+}
+
+.charsheet textarea, .charsheet input[type="text"]
+{
+    background-image: linear-gradient(to right, rgba(240,240,240,0.4), rgba(240,240,240,0.1), rgba(240,240,240,0), rgba(240,240,240,0) );
 }
 
 .charsheet textarea
@@ -306,6 +312,18 @@ main.masterGrid
 }
 
 .fatekeepersDeckSheetGrid
+{
+    grid-area: sheet;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: start;
+    align-items: start;
+}
+
+.noteSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -2289,7 +2307,7 @@ input[type=number].resourceBox
         margin: 0;
         width: 96%;
         height: 100%;
-        padding-left: 30px;
+        margin-left: 30px;
     }
 
     .tableSpread > .leftLeg
@@ -2873,11 +2891,11 @@ input.editToggle[value="1"] + .editMenu
         height: 100%;
     }
 
-        .trueNameWidget > div.trueNamePic textarea.trueNamePic
+        .trueNameWidget > div.trueNamePic img.trueNamePic
         {
             width: 405px;
             height: 285px;
-            padding: 20px 0px 0px 20px;
+            margin: 20px 0px 0px 20px;
         }
 
     .trueNameWidget > div.trueNamePhrase
@@ -2891,7 +2909,7 @@ input.editToggle[value="1"] + .editMenu
         {
             width: 220px;
             height: 255px;
-            padding: 50px 0px 0px 10px;
+            margin: 50px 0px 0px 10px;
         }
 
 /* Description */
@@ -4200,3 +4218,32 @@ input[type="checkbox"]:checked + span.conduit
             width: 100%;
             height: 100%;
         }
+
+/* Note Cards */
+.noteCard
+{
+    grid-area: 1/1/-1/-1;
+    display: grid;
+    width: 850px;
+    height: fit-content;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 30px 1fr;
+    grid-gap: 0px;
+    justify-items: start;
+    align-items: start;
+}
+    .noteCard > h1.notesTitle
+    {
+        grid-area: 1/1/auto/auto;
+    }
+    .noteCard > input[type=text].notesTitle
+    {
+        grid-area: 1/2/auto/-1;
+        height: 16px;
+        margin-top: 10px;
+    }
+    .noteCard > textarea.notes
+    {
+        grid-area: 2/2/-1/-1;
+        min-height: 150px;
+    }
