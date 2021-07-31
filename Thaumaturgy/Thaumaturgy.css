@@ -3342,6 +3342,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     grid-area: 1/2/auto/auto;
 }
 
+    .covenSheetGrid > .curseWidget > .curse3, 
     .covenSheetGrid > .curseWidget > .curse4,
     .covenSheetGrid > .curseWidget > .curse5
     {
@@ -3356,8 +3357,10 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     grid-template-columns: 20px 1fr 26px 30px;
     grid-template-rows: 50px repeat(8, 40px) 1fr;
 }
-    /* Enable curse4 & curse5 */
-    .curseWidget > input[value="4"].curseNumber ~ .curse4, .curseWidget > input[value="5"].curseNumber ~ .curse4, .curseWidget > input[value="5"].curseNumber ~ .curse5
+    /* Enable curse3, curse4, & curse5 */
+    .curseWidget > input[value="3"].curseNumber ~ .curse3,
+    .curseWidget > input[value="4"].curseNumber ~ .curse3, .curseWidget > input[value="4"].curseNumber ~ .curse4,
+    .curseWidget > input[value="5"].curseNumber ~ .curse3, .curseWidget > input[value="5"].curseNumber ~ .curse4, .curseWidget > input[value="5"].curseNumber ~ .curse5
     {
         display: grid;
     }
@@ -3375,6 +3378,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     .curseWidget > .curse3
     {
         grid-area: 4/2/span 5/-2;
+        display: none;
     }
 
     .curseWidget > .curse4
@@ -3463,32 +3467,32 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .curseCard > textarea.statusEffect
     {
-        grid-row: 4/span 3;
+        grid-row: 4/span 5;
     }
 
-    .curseCard > h4.channelCurse
+    .curseCard > h4.curseRestoration
     {
-        grid-row: 7/auto;
+        grid-area: 9/1/auto/auto;
     }
 
-    .curseCard > textarea.channelCurse
+    .curseCard > input[type=text].curseRestoration
     {
-        grid-row: 7/span 3;
+        grid-area: 9/2/auto/auto;
     }
 
-    .curseCard > .curseRestoration
+    .curseCard > input[type=text].curseRestorationSynergy
     {
-        grid-row: 10/auto;
+        grid-area: 9/3/auto/auto;
     }
 
     .curseCard > h4.restorationComponents
     {
-        grid-row: 11/auto;
+        grid-row: 10/auto;
     }
 
     .curseCard > textarea.restorationComponents
     {
-        grid-row: 11/span 3;
+        grid-row: 10/-1;
     }
 
 /* Rote Spell Cards */

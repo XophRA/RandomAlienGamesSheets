@@ -92,6 +92,12 @@
         <option>Patron</option>
     </datalist>
 
+    <!-- Curse Severity -->
+    <datalist id="curseSeverity">
+        <option>Twisted</option>
+        <option>Catastrophic</option>
+    </datalist>
+
 
     <!-- Caster -->
     <article class="sheetType playerCasterSheet">
@@ -341,75 +347,70 @@
             <!-- Curses -->
             <section class="curseWidget">
                 <button type="action" class="sortCurses" name="act_sortCurses"> v </button>
-                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="3" />
-                <input type="hidden" class="curseNumber" name="attr_curseNumber" value="3" />
+                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="1" />
+                <input type="hidden" class="curseNumber" name="attr_curseNumber" value="2" />
                 <div class="card customCard curseCard curse1">
-                    <h4 class="curseName">Name</h4>
+                    <h4 class="curseName">Affliction</h4>
                     <input type="text" class="curseName" name="attr_curseName1" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect1" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse1" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents1" />
                 </div>
                 <div class="card customCard curseCard curse2">
-                    <h4 class="curseName">Name</h4>
+                    <h4 class="curseName">Affliction</h4>
                     <input type="text" class="curseName" name="attr_curseName2" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect2" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse2" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy2" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents2" />
                 </div>
                 <div class="card customCard curseCard curse3">
-                    <h4 class="curseName">Name</h4>
+                    <h4 class="curseName">Affliction</h4>
                     <input type="text" class="curseName" name="attr_curseName3" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect3" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse3" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy3" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents3" />
                 </div>
                 <div class="card customCard curseCard curse4">
-                    <h4 class="curseName">Name</h4>
+                    <h4 class="curseName">Affliction</h4>
                     <input type="text" class="curseName" name="attr_curseName4" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect4" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse4" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy4" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents4" />
                 </div>
                 <div class="card customCard curseCard curse5">
-                    <h4 class="curseName">Name</h4>
+                    <h4 class="curseName">Affliction</h4>
                     <input type="text" class="curseName" name="attr_curseName5" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect5" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse5" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy5" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents5" />
                 </div>
@@ -637,13 +638,12 @@
                     <h4 class="curseName">Name</h4>
                     <input type="text" class="curseName" name="attr_curseName1" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect1" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse1" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents1" />
                 </div>
@@ -651,13 +651,12 @@
                     <h4 class="curseName">Name</h4>
                     <input type="text" class="curseName" name="attr_curseName2" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" list="curseSeverity"/>
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect2" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse2" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy2" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents2" />
                 </div>
@@ -665,13 +664,12 @@
                     <h4 class="curseName">Name</h4>
                     <input type="text" class="curseName" name="attr_curseName3" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect3" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse3" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy3" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents3" />
                 </div>
@@ -679,13 +677,12 @@
                     <h4 class="curseName">Name</h4>
                     <input type="text" class="curseName" name="attr_curseName4" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect4" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse4" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy4" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents4" />
                 </div>
@@ -693,13 +690,12 @@
                     <h4 class="curseName">Name</h4>
                     <input type="text" class="curseName" name="attr_curseName5" />
                     <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" />
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect5" />
-                    <h4 class="channelCurse">Channel</h4>
-                    <textarea class="channelCurse" name="attr_channelCurse5" />
                     <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" />
+                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" list="arts"/>
+                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy5" list="arts"/>
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents5" />
                 </div>
@@ -1485,11 +1481,11 @@
                             <input type="text" class="miracleFate" name="attr_miracleName" />
                             <h4 class="miracleDomain">Domain</h4>
                             <input type="text" class="miracleDomain" name="attr_miracleDomain" />
-                            
+
                             <h4 class="spellTechnique">Technique</h4>
                             <input type="text" class="spellTechnique" name="attr_miracleTechnique" list="techniques" />
                             <textarea class="spellTechniqueSpecific" name="attr_miracleTechniqueSpecific" />
-                            
+
                             <h4 class="miracleEffect">Effect</h4>
                             <textarea class="miracleEffect" name="attr_miracleEffect" />
                         </div>
@@ -1505,7 +1501,7 @@
                         <div class="card customCard enchantmentCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
-                            
+
                             <h4 class="manoeuvre">Manoeuvre</h4>
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
@@ -1515,7 +1511,7 @@
                             <textarea class="spellTechniqueSpecific" name="attr_enchantmentTechniqueSpecific" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_enchantmentEffect" />
-                            
+
                         </div>
                     </fieldset>
                 </div>
@@ -1529,13 +1525,14 @@
                             <h4 class="curseName">Name</h4>
                             <input type="text" class="curseName" name="attr_curseName1" />
                             <h4 class="curseSeverity">Severity</h4>
-                            <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                            <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity"/>
                             <h4 class="statusEffect">Status Effect</h4>
                             <textarea class="statusEffect" name="attr_statusEffect1" />
                             <h4 class="channelCurse">Channel</h4>
                             <textarea class="channelCurse" name="attr_channelCurse1" />
                             <h4 class="curseRestoration">Solution</h4>
                             <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                            <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" />
                             <h4 class="restorationComponents">Components</h4>
                             <textarea class="restorationComponents" name="attr_restorationComponents1" />
                         </div>
@@ -1734,13 +1731,12 @@
                             <h4 class="curseName">Name</h4>
                             <input type="text" class="curseName" name="attr_curseName1" />
                             <h4 class="curseSeverity">Severity</h4>
-                            <input type="text" class="curseSeverity" name="attr_curseSeverity1" />
+                            <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
                             <h4 class="statusEffect">Status Effect</h4>
                             <textarea class="statusEffect" name="attr_statusEffect1" />
-                            <h4 class="channelCurse">Channel</h4>
-                            <textarea class="channelCurse" name="attr_channelCurse1" />
                             <h4 class="curseRestoration">Solution</h4>
-                            <input type="text" class="curseRestoration" name="attr_curseRestoration1" />
+                            <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts" />
+                            <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
                             <h4 class="restorationComponents">Components</h4>
                             <textarea class="restorationComponents" name="attr_restorationComponents1" />
                         </div>
@@ -1846,7 +1842,7 @@
             {
                 //Set RankLevel
                 let rankLevel = "Initiate";
-                let curseNumber = 3;
+                let curseNumber = 2;
                 covenLevel = parseInt(globalAttributes.covenlevel) || 0;
 
                 if (covenLevel < 0)
@@ -1864,12 +1860,12 @@
                 else if (covenLevel < 8)
                 {
                     rankLevel = "Keeper, level " + covenLevel;
-                    curseNumber = 4;
+                    curseNumber = 3;
                 }
                 else if (covenLevel < 11)
                 {
                     rankLevel = "Graduate, level " + covenLevel;
-                    curseNumber = 5;
+                    curseNumber = 4;
                 }
                 else
                 {
@@ -1954,7 +1950,7 @@
 
                 //Generate Array of Random locations
                 let diePos = [];
-                for (let i = 0; i < 100; i++)//fill diePos with 100 numbers from 0-99
+                for (let i = 1; i < 101; i++)//fill diePos with 100 numbers from 1-100
                 {
                     diePos[i] = i + 1;
                 }
