@@ -3307,7 +3307,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 .customCard
 {
     display: grid;
-    grid-template-columns: 102px repeat(2,1fr);
+    grid-template-columns: 105px repeat(2,1fr);
     grid-template-rows: 10px repeat(14,17px) 65px 1fr;
     grid-gap: 2px;
     margin: 4px 0 4px 0;

@@ -4,7 +4,7 @@
 
         <h3 class="selectorTitle">Sheet Type:</h3>
         <select name="attr_selectedSheet" class="typeSelector">
-            <option value="1" selected>Caster</option>
+            <option value="1" selected>Player Caster</option>
             <option value="2">Coven</option>
             <option value="3">Medium</option>
             <option value="4">Dramatis Personae</option>
@@ -1770,7 +1770,7 @@
 </rolltemplate>
 
 <!-- Scripts -->
-<!--<script type="text/worker">-->
+<script type="text/worker">
 <!--<script type="text/javascript">-->
     /* Global Attributes */
     var globalAttributes = [];//Global Array for Storage of Player Caster Level
@@ -2244,6 +2244,12 @@
 
         //Blank Result
         setObj.resultResource = 0;
+
+        //Blank Spell Dice
+        setObj.castSpellDice = 0;
+
+        //Blank Tangle Dice
+        setObj.castTangleDice = 0;
 
         //Blank all circle dice
         for (let num = 1; num <= 26; num++)
