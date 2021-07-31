@@ -3659,30 +3659,36 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 6/span 2;
     }
 
-    .enchantmentCard h4.form
+    .enchantmentCard h4.spellComponents
     {
         grid-row: 8/auto;
     }
 
-    .enchantmentCard textarea.form
+    .enchantmentCard .clockWidget
     {
         grid-row: 8/span 4;
     }
 
-    .enchantmentCard h4.spellEffect
+    .enchantmentCard h4.form
     {
         grid-row: 12/auto;
     }
 
-    .enchantmentCard textarea.spellEffect
+    .enchantmentCard textarea.form
     {
-        grid-row: 12/16;
+        grid-row: 12/span 4;
     }
 
-    .enchantmentCard > .clockWidget
+    .enchantmentCard h4.spellEffect
     {
-        grid-area: -3/-2/-1/-2;
+        grid-row: 16/auto;
     }
+
+    .enchantmentCard textarea.spellEffect
+    {
+        grid-row: 16/-1;
+    }
+
 
 /* Dueling Focus Card */
 .duelingFocusCard
@@ -3710,20 +3716,26 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 5/span 3;
     }
 
-    .duelingFocusCard h4.form
+    .duelingFocusCard h4.spellComponents
     {
         grid-row: 8/auto;
     }
 
-    .duelingFocusCard textarea.form
+    .duelingFocusCard .clockWidget
     {
-        grid-row: 8/span 15;
+        grid-row: 8/span 4;
     }
 
-    .duelingFocusCard > .clockWidget
+    .duelingFocusCard h4.form
     {
-        grid-area: -3/-2/-1/-2;
+        grid-row: 12/auto;
     }
+
+    .duelingFocusCard textarea.form
+    {
+        grid-row: 12/-1;
+    }
+
 
 /* Puzzle Cards */
 .puzzleCard
