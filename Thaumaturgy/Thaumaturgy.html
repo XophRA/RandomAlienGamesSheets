@@ -1304,7 +1304,7 @@
                 </div>
                 <!--Casting Button-->
                 <input type="hidden" name="attr_castingMacro" readonly />
-                <button type="roll" class="castingButton" name="roll_rollSalvo" value="@{castingMacro}"> Cast</button>
+                <button type="action" class="castingButton" name="act_rollCast">Cast</button>
                 <!-- Calculate Results Button-->
                 <button type="action" class="resultsButton" name="act_calculateResults">Count</button>
                 <!-- Clear Circle & Results Button-->
@@ -1770,16 +1770,16 @@
         <div class="sheet-rolltemplateSpellDice sheet-rolltemplateDiceContainer">
             <!--Dice Count-->
             <div class="sheet-templateSubheader">Spell Dice</div>
-            <div class="sheet-diceNum"> {{spellDice}}</div>
-            <div class="sheet-diceRow sheet-spellDice sheet-dice">
-                {{spell0}}{{spell1}}{{spell2}}{{spell3}}{{spell4}}{{spell5}}{{spell6}}{{spell7}}{{spell8}}{{spell9}}{{spell10}}{{spell11}}{{spell12}}
+            <div class="sheet-diceNum"> {{computed::spellCast}}</div>
+            <div class="sheet-diceRow sheet-spellDice sheet-dice">Look at the Magic circle
+                {{computed::spell0}}{{computed::spell1}}{{computed::spell2}}{{computed::spell3}}{{computed::spell4}}{{computed::spell5}}{{computed::spell6}}{{computed::spell7}}{{computed::spell8}}{{computed::spell9}}{{computed::spell10}}{{computed::spell11}}{{computed::spell12}}
             </div>
         </div>
         <div class="sheet-rolltemplateTangleDice sheet-rolltemplateDiceContainer">
             <div class="sheet-templateSubheader">Tangle Dice</div>
-            <div class="sheet-diceNum">{{tangleDice}}</div>
+            <div class="sheet-diceNum">{{computed::tangleCast}}</div>
             <div class="sheet-diceRow sheet-tangleDice sheet-dice">
-                {{tangle0}} {{tangle1}} {{tangle2}} {{tangle3}} {{tangle4}} {{tangle5}} {{tangle6}}{{tangle7}} {{tangle8}} {{tangle9}} {{tangle10}} {{tangle11}} {{tangle12}}
+                {{computed::tangle0}} {{computed::tangle1}} {{computed::tangle2}} {{computed::tangle3}} {{computed::tangle4}} {{computed::tangle5}} {{computed::tangle6}}{{computed::tangle7}} {{computed::tangle8}} {{computed::tangle9}} {{computed::tangle10}} {{computed::tangle11}} {{computed::tangle12}}
             </div>
         </div>
     </div>
@@ -1898,8 +1898,8 @@
         });
     });
 
-    /* Generate Spellcasting Macro */
-    on("change:castspelldice change:casttangledice", (event) =>
+    /* Roll dice for the Casting and input into the Magic Cicle before returning an Array of all results to rolltemplate */
+    on("clicked:rollcast", (event) =>
     {
         getAttrs(["castSpellDice", "castTangleDice"], function (values)
         {
@@ -1909,220 +1909,188 @@
             //Tangle dice
             let tangleDice = parseInt(values.castTangleDice) || 0;
 
-            //Make the Casting Macro
-            console.log(spellDice, "vs", tangleDice);
+            //Position
+            let position = spellDice + tangleDice;
+
+            console.log(spellDice, "vs", tangleDice, "in", position);
 
             const setObj = {};
 
-            let spellRoll = `${_.range(spellDice).map((num) =>
-            {
-                return `{{spell${num}=[[1d10cf<4cs10]]}}`;
-            }).join(' ')}`;
 
-            let tangleRoll = `${_.range(tangleDice).map((num) =>
-            {
-                return `{{tangle${num}=[[1d6cf<3cs10]]}}`;
-            }).join(' ')}`;
+            //Dummies Rolls not working: {{spell0=[[1]]}} {{spell1=[[1]]}} {{spell2=[[1]]}} {{spell3=[[1]]}} {{spell4=[[1]]}} {{spell5=[[1]]}} {{spell6=[[1]]}} {{spell7=[[1]]}} {{spell8=[[1]]}} {{spell9=[[1]]}} {{spell10=[[1]]}} {{spell11=[[1]]}} {{spell12=[[1]]}} {{tangle0=[[1]]}} {{tangle1=[[1]]}} {{tangle2=[[1]]}} {{tangle3=[[1]]}} {{tangle4=[[1]]}} {{tangle5=[[1]]}} {{tangle6=[[1]]}} {{tangle7=[[1]]}} {{tangle8=[[1]]}} {{tangle9=[[1]]}} {{tangle10=[[1]]}} {{tangle11=[[1]]}} {{tangle12=[[1]]}}
+            //Dummy finishRoll: spell0: spelld10Results[0], spell1: spelld10Results[1], spell2: spelld10Results[2], spell3: spelld10Results[3], spell4: spelld10Results[4], spell5: spelld10Results[5], spell6: spelld10Results[6], spell7: spelld10Results[7], spell8: spelld10Results[8], spell9: spelld10Results[9], spell10: spelld10Results[10], spell11: spelld10Results[11], spell12: spelld10Results[12],             tangle0: tangled6Results[0], tangle1: tangled6Results[1], tangle2: tangled6Results[2], tangle3: tangled6Results[3], tangle4: tangled6Results[4], tangle5: tangled6Results[5], tangle6: tangled6Results[6], tangle7: tangled6Results[7], tangle8: tangled6Results[8], tangle9: tangled6Results[9], tangle10: tangled6Results[10], tangle11: tangled6Results[11], tangle12: tangled6Results[12],
 
-            setObj.castingMacro = `&{template:Thaumaturgy} {{spellDice=${spellDice}}} {{tangleDice=${tangleDice}}} ${spellRoll} ${tangleRoll}`;
+            //Start the Roll
+            startRoll(`&{template:Thaumaturgy} {{name=Casting}} {{spellCast=[[${spellDice}d10]]}} {{tangleCast=[[${tangleDice}d6]]}} {{diePosition=[[${position}d100]]}}`, (rollResults) =>
+                {
+                    console.log(rollResults);
 
-            console.log(setObj);
-            setAttrs(setObj);
+                    //Let Arrays from the dice roll
+                    let spelld10Results = rollResults.results.spellCast.dice;//Array of d10 spell dice from the startRoll
+                    if (spelld10Results == null) { spelld10Results = [] };//ensure its not a NULL array
+                    console.log(spelld10Results);
+
+                    let tangled6Results = rollResults.results.tangleCast.dice;//Array of d6 tangle dice from the startRoll
+                    if (tangled6Results == null) { tangled6Results = [] };
+                    console.log(tangled6Results);
+
+                    let diePosResults = rollResults.results.diePosition.dice;//Array of d100 dice positions from the startRoll
+                    if (diePosResults == null) { diePosResults = [] };
+                    console.log(diePosResults);
+
+
+                    //Number of dice and typo checker
+                    let totalDice = spelld10Results.concat(tangled6Results).length;
+
+                    const arcanaPools = [];
+
+                    if (totalDice <= 26 && totalDice > 0)//Check to ensure between 26 and 0 dice inputed
+                    {
+                        //Make Array with both spell dice and tangle dice Array
+                        let circleArray = [spelld10Results, tangled6Results];
+
+                        //Set all circle dice
+                        for (let num = 1; num <= 26; num++)
+                        {
+                            arcanaPools[`poolDieArcana${num}`] = 0;
+                            arcanaPools[`poolDieArcanaPosition${num}`] = 0;
+                            arcanaPools[`poolDieSize${num}`] = 0;
+                            arcanaPools[`poolDieWorth${num}`] = 0;
+                            arcanaPools[`poolDieSide${num}`] = 0;
+                        }
+
+                        diePosResults.length = totalDice;//Reduce the diePosResults Array to the number of dice rolled
+
+                        //Loop through circleArray and assign to poolDie Attrs
+                        let attrNum = 1;
+                        let diePosResultsIndex = 0;
+
+
+                        for (let i = 0; i < circleArray.length; i++)// Circle Array loop
+                        {
+                            for (let k = 0; k < circleArray[i].length; k++)//Dice Input loop
+                            {
+                                let diePosition = diePosResults[diePosResultsIndex];
+
+                                arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePosition;
+                                arcanaPools[`poolDieSize${attrNum}`] = i;
+                                arcanaPools[`poolDieSide${attrNum}`] = circleArray[i][k];
+
+                                //Assign the Die Worth based on Die Value
+                                if (i == 0)
+                                {
+                                    if (circleArray[i][k] == 10)
+                                    {
+                                        arcanaPools[`poolDieWorth${attrNum}`] = 2;
+                                    }
+                                    else if (circleArray[i][k] > 4 && circleArray[i][k] < 10)
+                                    {
+                                        arcanaPools[`poolDieWorth${attrNum}`] = 1;
+                                    }
+                                    else
+                                    {
+                                        arcanaPools[`poolDieWorth${attrNum}`] = 0;
+                                    }
+                                }
+                                else
+                                {
+                                    if (circleArray[i][k] < 4)
+                                    {
+                                        arcanaPools[`poolDieWorth${attrNum}`] = -1;
+                                    }
+                                    else
+                                    {
+                                        arcanaPools[`poolDieWorth${attrNum}`] = 0;
+                                    }
+                                }
+
+                                //Assign the Arcana based on the Die Position
+                                if (diePosition <= 15)
+                                {
+
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 1;
+                                }
+                                else if (diePosition >= 16 && diePosition <= 20)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 2;
+                                }
+                                else if (diePosition >= 21 && diePosition <= 33)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 3;
+                                }
+                                else if (diePosition >= 34 && diePosition <= 48)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 4;
+                                }
+                                else if (diePosition >= 49 && diePosition <= 54)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 5;
+                                }
+                                else if (diePosition >= 55 && diePosition <= 69)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 6;
+                                }
+                                else if (diePosition >= 70 && diePosition <= 74)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 7;
+                                }
+                                else if (diePosition >= 75 && diePosition <= 81)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 8;
+                                }
+                                else if (diePosition >= 82 && diePosition <= 91)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 9;
+                                }
+                                else if (diePosition >= 92 && diePosition <= 94)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 10;
+                                }
+                                else if (diePosition == 95 || diePosition == 96)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 11;
+                                }
+                                else if (diePosition == 97)
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 12;
+                                }
+                                else
+                                {
+                                    arcanaPools[`poolDieArcana${attrNum}`] = 13;
+                                }
+
+                                attrNum++;
+                                diePosResultsIndex++;
+                            }
+                        }
+
+                        //Set all poolDie
+                        for (let num = 1; num <= 26; num++)
+                        {
+                            setObj[`poolDieArcana${num}`] = arcanaPools[`poolDieArcana${num}`];
+                            setObj[`poolDieArcanaPosition${num}`] = arcanaPools[`poolDieArcanaPosition${num}`];
+                            setObj[`poolDieSize${num}`] = arcanaPools[`poolDieSize${num}`];
+                            setObj[`poolDieWorth${num}`] = arcanaPools[`poolDieWorth${num}`];
+                            setObj[`poolDieSide${num}`] = arcanaPools[`poolDieSide${num}`];
+                            setObj[`poolDieMatch${num}`] = 0;
+                        }
+                    }
+
+                    console.log(setObj);
+                    setAttrs(setObj);
+
+                    finishRoll(
+                        rollResults.rollId,
+                        {
+                            spellCast: spellDice, tangleCast: tangleDice,                            
+                        }
+                    );
+                });
         })
     });
 
-    /* Dice input to Magic Circle */
-    on("change:editcircle", (event) =>
-    {
-        getAttrs(["position1d10", "position1d6"], (positions) =>
-        {
-            const setObj = {};
-
-            //Make Array from the dice inputs
-            let arcana1D10 = positions.position1d10.match(/1[0]?|[2-9]/g);//will match all numbers and add the number array to Spell Dice—D10s
-            if (arcana1D10 == null) { arcana1D10 = [] };//ensure its not a NULL array
-            let arcana1D6 = positions.position1d6.match(/[1-6]/g);//will match all numbers and add the number array to Tangle Dice—D6
-            if (arcana1D6 == null) { arcana1D6 = [] };
-
-
-            //Number of dice and typo checker
-            let totalDice = arcana1D10.concat(arcana1D6).length;
-
-            if (totalDice <= 26 && totalDice > 0)//Check to ensure between 26 and 0 dice inputed
-            {
-                //Make Array with both spell dice and tangle dice Array
-                let circleArray = [arcana1D10, arcana1D6];
-
-                //Set all circle dice
-                const arcanaPools = [];
-                for (let num = 1; num <= 26; num++)
-                {
-                    arcanaPools[`poolDieArcana${num}`] = 0;
-                    arcanaPools[`poolDieArcanaPosition${num}`] = 0;
-                    arcanaPools[`poolDieSize${num}`] = 0;
-                    arcanaPools[`poolDieWorth${num}`] = 0;
-                    arcanaPools[`poolDieSide${num}`] = 0;
-                }
-
-                //Generate Array of Random locations
-                let diePos = [];
-                for (let i = 1; i < 101; i++)//fill diePos with 100 numbers from 1-100
-                {
-                    diePos[i] = i + 1;
-                }
-
-                let currentIndex = diePos.length, temporaryValue, randomIndex;
-
-                while (0 !== currentIndex) // While there remain elements to shuffle
-                {
-                    randomIndex = Math.floor(Math.random() * currentIndex); // Pick a remaining element...
-                    currentIndex -= 1;
-
-                    temporaryValue = diePos[currentIndex];  // And swap it with the current element.
-                    diePos[currentIndex] = diePos[randomIndex];
-                    diePos[randomIndex] = temporaryValue;
-                }
-
-                diePos.length = totalDice;//Reduce the diePos Array to the number of dice rolled
-
-                //Loop through circleArray and assign to poolDie Attrs
-                let attrNum = 1;
-                let diePosIndex = 0;
-
-
-                for (let i = 0; i < circleArray.length; i++)// Circle Array loop
-                {
-                        for (let k = 0; k < circleArray[i].length; k++)//Dice Input loop
-                        {
-                            let diePosition = diePos[diePosIndex];
-
-                            arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePosition;
-                            arcanaPools[`poolDieSize${attrNum}`] = i;
-                            arcanaPools[`poolDieSide${attrNum}`] = circleArray[i][k];
-
-                            //Assign the Die Worth based on Die Value
-                            if (i == 0)
-                            {
-                                if (circleArray[i][k] == 10)
-                                {
-                                    arcanaPools[`poolDieWorth${attrNum}`] = 2;
-                                }
-                                else if (circleArray[i][k] > 4 && circleArray[i][k] < 10)
-                                {
-                                    arcanaPools[`poolDieWorth${attrNum}`] = 1;
-                                }
-                                else
-                                {
-                                    arcanaPools[`poolDieWorth${attrNum}`] = 0;
-                                }
-                            }
-                            else
-                            {
-                                if (circleArray[i][k] < 4)
-                                {
-                                    arcanaPools[`poolDieWorth${attrNum}`] = -1;
-                                }
-                                else
-                                {
-                                    arcanaPools[`poolDieWorth${attrNum}`] = 0;
-                                }
-                            }
-
-                            //Assign the Arcana based on the Die Position
-                            if (diePosition <= 15)
-                            {
-
-                                arcanaPools[`poolDieArcana${attrNum}`] = 1;
-                            }
-                            else if (diePosition >= 16 && diePosition <= 20)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 2;
-                            }
-                            else if (diePosition >= 21 && diePosition <= 33)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 3;
-                            }
-                            else if (diePosition >= 34 && diePosition <= 48)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 4;
-                            }
-                            else if (diePosition >= 49 && diePosition <= 54)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 5;
-                            }
-                            else if (diePosition >= 55 && diePosition <= 69)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 6;
-                            }
-                            else if (diePosition >= 70 && diePosition <= 74)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 7;
-                            }
-                            else if (diePosition >= 75 && diePosition <= 81)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 8;
-                            }
-                            else if (diePosition >= 82 && diePosition <= 91)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 9;
-                            }
-                            else if (diePosition >= 92 && diePosition <= 94)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 10;
-                            }
-                            else if (diePosition == 95 || diePosition == 96)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 11;
-                            }
-                            else if (diePosition == 97)
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 12;
-                            }
-                            else
-                            {
-                                arcanaPools[`poolDieArcana${attrNum}`] = 13;
-                            }
-
-                            attrNum++;
-                            diePosIndex++;
-                        }
-                }
-
-                //Set all poolDie
-                for (let num = 1; num <= 26; num++)
-                {
-                    setObj[`poolDieArcana${num}`] = arcanaPools[`poolDieArcana${num}`];
-                    setObj[`poolDieArcanaPosition${num}`] = arcanaPools[`poolDieArcanaPosition${num}`];
-                    setObj[`poolDieSize${num}`] = arcanaPools[`poolDieSize${num}`];
-                    setObj[`poolDieWorth${num}`] = arcanaPools[`poolDieWorth${num}`];
-                    setObj[`poolDieSide${num}`] = arcanaPools[`poolDieSide${num}`];
-                    setObj[`poolDieMatch${num}`] = 0;
-                }
-
-                //Blank the Dice Inputs
-                for (let num = 1; num <= 13; num++)
-                {
-                    setObj[`position${num}d10`] = "";
-                    setObj[`position${num}d6`] = "";
-                }
-            }
-            else
-            {
-                //Ensure dice Dice Inputs are empty
-                for (let num = 1; num <= 13; num++)
-                {
-                    setObj[`position${num}d10`] = "";
-                    setObj[`position${num}d6`] = "";
-                }
-            }
-            
-            console.log(setObj, "Total Dice: ", totalDice);
-            setAttrs(setObj);
-        });
-    });
-
     /* Count Dice in Magic Circle and add to Resources and Ripples */
-    on("clicked:calculateResults", (event) =>
+    on("clicked:calculateresults", (event) =>
     {
         let getArray = []; //An Array for all attr to get
 
@@ -2251,7 +2219,7 @@
     });
 
     /* Clear Magic Circle, Results, & Aether */
-    on("clicked:clearCircleResults", (event) =>
+    on("clicked:clearcircleresults", (event) =>
     {
         const setObj = {};
 
@@ -2323,7 +2291,7 @@
     });
 
     /* Clear Ascension Card */
-    on("clicked:ascensionClear", (event) =>
+    on("clicked:ascensionclear", (event) =>
     {
         const setObj = {};
         /* Set the sigil Segments to 0 */
