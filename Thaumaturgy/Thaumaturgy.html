@@ -1014,19 +1014,7 @@
 
             <!-- Magic Circle-->
             <section class="magicCircle">
-                <input type="checkbox" class="editCog" name="attr_editCircle" value="1" /><span class="editCog"></span>
-                <input type="hidden" class="editToggle" name="attr_editCircle" />
-                <div class="editMenu editCircle">
-
-                    <!--Spell Dice-->
-                    <h3 class="arcanaList diceInputSpell">Spell Dice</h3>
-                    <input type="text" name="attr_position1d10" class="diceInputBox diceInputSpell" />
-
-                    <!--Tangle Dice-->
-                    <h3 class="arcanaList diceInputTangle">Tangle Dice</h3>
-                    <input type="text" name="attr_position1d6" class="diceInputBox diceInputTangle" />
-
-                </div>
+                
                 <!--Dice Positions-->
                 <div class="circlePositions">
 
@@ -1921,7 +1909,7 @@
             //Dummy finishRoll: spell0: spelld10Results[0], spell1: spelld10Results[1], spell2: spelld10Results[2], spell3: spelld10Results[3], spell4: spelld10Results[4], spell5: spelld10Results[5], spell6: spelld10Results[6], spell7: spelld10Results[7], spell8: spelld10Results[8], spell9: spelld10Results[9], spell10: spelld10Results[10], spell11: spelld10Results[11], spell12: spelld10Results[12],             tangle0: tangled6Results[0], tangle1: tangled6Results[1], tangle2: tangled6Results[2], tangle3: tangled6Results[3], tangle4: tangled6Results[4], tangle5: tangled6Results[5], tangle6: tangled6Results[6], tangle7: tangled6Results[7], tangle8: tangled6Results[8], tangle9: tangled6Results[9], tangle10: tangled6Results[10], tangle11: tangled6Results[11], tangle12: tangled6Results[12],
 
             //Start the Roll
-            startRoll(`&{template:Thaumaturgy} {{name=Casting}} {{spellCast=[[${spellDice}d10]]}} {{tangleCast=[[${tangleDice}d6]]}} {{diePosition=[[${position}d100]]}}`, (rollResults) =>
+            startRoll(`&{template:Thaumaturgy} {{name=Casting}} {{spellCast=[[${spellDice}d10cf<4cs10]]}} {{tangleCast=[[${tangleDice}d6cf<3cs10]]}} {{diePosition=[[${position}d100]]}}`, (rollResults) =>
                 {
                     console.log(rollResults);
 
