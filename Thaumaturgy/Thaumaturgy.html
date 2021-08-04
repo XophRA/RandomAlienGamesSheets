@@ -8,10 +8,12 @@
             <option value="2">Coven</option>
             <option value="3">Medium</option>
             <option value="4">Dramatis Personae</option>
-            <option value="5">NPC</option>
-            <option value="6">Fatekeeper's Grimoire</option>
-            <option value="7">Fatekeeper's Deck</option>
-            <option value="8">Notes</option>
+            <option value="5">Pawn</option>
+            <option value="6">NPC</option>
+            <option value="7">Patron</option>
+            <option value="8">Fatekeeper's Grimoire</option>
+            <option value="9">Fatekeeper's Deck</option>
+
         </select>
 
         <div class="version">Version 0.3</div>
@@ -22,9 +24,11 @@
     <input type="radio" name="attr_selectedSheet" class="hidden mediumSelector" value="3">
     <input type="radio" name="attr_selectedSheet" class="hidden dramatisPersonaeSelector" value="4">
     <input type="radio" name="attr_selectedSheet" class="hidden pawnSelector" value="5">
-    <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersGrimoireSelector" value="6">
-    <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersDeckSelector" value="7">
-    <input type="radio" name="attr_selectedSheet" class="hidden noteSelector" value="8">
+    <input type="radio" name="attr_selectedSheet" class="hidden npcSelector" value="6">
+    <input type="radio" name="attr_selectedSheet" class="hidden patronSelector" value="7">
+    <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersGrimoireSelector" value="8">
+    <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersDeckSelector" value="9">
+
 
     <!--Data Lists-->
     <!-- Rituals -->
@@ -101,15 +105,14 @@
     </datalist>
 
     <!-- SHEETS -->
-
     <!-- Caster -->
     <article class="sheetType playerCasterSheet">
         <!--PC Sheet Grid-->
         <div class="playerCasterSheetGrid">
             <!-- True Name -->
             <section class="trueNameWidget">
-                <div class="trueNamePic"><img name="attr_trueName" class="trueNamePic"></img></div>
-                <div class="trueNamePhrase"><textarea name="attr_trueNamePhrase" class="trueNamePhrase"></textarea></div>
+                <div class="trueNamePic"><img name="attr_trueName" class="trueNamePic"/></div>
+                <div class="trueNamePhrase"><textarea name="attr_trueNamePhrase" class="trueNamePhrase" placeholder="write a phrase summarising your true name"></textarea></div>
             </section>
 
             <!-- Aether -->
@@ -127,10 +130,10 @@
                 <div class="scholarlyName"><input type="text" name="attr_character_name" /></div>
                 <input type="hidden" name="attr_level" />
                 <div class="rankLevel"><input type="text" name="attr_rankLevel" readonly /></div>
-                <div class="pronouns"><input type="text" name="attr_pronouns" /></div>
+                <div class="pronouns"><input type="text" name="attr_pronouns"/> </div>
                 <div class="apprenticeship"><input type="text" name="attr_apprenticeship" /></div>
-                <div class="characteristics"><textarea name="attr_characteristic" /></div>
-                <div class="description"><textarea name="attr_description" /></div>
+                <div class="characteristics"><textarea name="attr_characteristic" placeholder="One aspect that indicates your abilities"/></div>
+                <div class="description"><textarea name="attr_description" placeholder="Three things that describe you" /></div>
             </section>
 
             <!-- Intentions -->
@@ -609,6 +612,16 @@
                 <textarea class="speculation" name="attr_fateSpeculation"></textarea>
             </section>
 
+            <!-- Notes -->
+            <div class="noteWidget">
+                <h1 class="notesTitle">Notes</h1>
+                <fieldset class="repeating_noteCards">
+                    <div class="noteCard">
+                        <input type="text" class="notesTitle" name="attr_notesTitle" placeholder="a note" />
+                        <textarea class="notes" name="attr_notes" placeholder="something noteworthy"></textarea>
+                    </div>
+                </fieldset>
+            </div>
         </div>
     </article>
 
@@ -1025,7 +1038,7 @@
 
             <!-- Magic Circle-->
             <section class="magicCircle">
-                
+
                 <!--Dice Positions-->
                 <div class="circlePositions">
 
@@ -1437,7 +1450,7 @@
         </div>
     </article>
 
-    <!-- NPC -->
+    <!-- Pawn -->
     <article class="sheetType pawnSheet">
         <div class="pawnSheetGrid">
             <section class="pawnAspects">
@@ -1495,6 +1508,20 @@
                     </div>
                 </fieldset>
             </section>
+        </div>
+    </article>
+
+    <!-- NPC -->
+    <article class="sheetType npcSheet">
+        <div class="npcSheetGrid">
+ 
+        </div>
+    </article>
+
+    <!-- Patron -->
+    <article class="sheetType patronSheet">
+        <div class="patronSheetGrid">
+
         </div>
     </article>
 
@@ -1619,7 +1646,7 @@
             </section>
         </div>
     </article>
-    
+
     <!-- Fatekeeper's Deck -->
     <article class="sheetType fatekeepersDeckSheet">
         <div class="fatekeepersDeckSheetGrid">
@@ -1703,18 +1730,7 @@
         </div>
     </article>
 
-    <!-- Notes -->
-    <article class="sheetType noteSheet">
-        <div class="noteSheetGrid">
-            <fieldset class="repeating_noteCards">
-                <div class="noteCard">
-                    <h1 class="notesTitle">Notes</h1>
-                    <input type="text" class="notesTitle" name="attr_notesTitle" />
-                    <textarea class="notes" name="attr_notes"></textarea>
-                </div>
-            </fieldset>
-        </div>
-    </article>
+
 </main>
 
 <!-- Roll Template -->

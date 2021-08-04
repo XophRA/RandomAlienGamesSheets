@@ -15,9 +15,10 @@ input.covenSelector:checked ~ article.covenSheet,
 input.mediumSelector:checked ~ article.mediumSheet,
 input.dramatisPersonaeSelector:checked ~ article.dramatisPersonaeSheet,
 input.pawnSelector:checked ~ article.pawnSheet,
+input.npcSelector:checked ~ article.npcSheet,
+input.patronSelector:checked ~ article.patronSheet,
 input.fatekeepersGrimoireSelector:checked ~ article.fatekeepersGrimoireSheet,
-input.fatekeepersDeckSelector:checked ~ article.fatekeepersDeckSheet,
-input.noteSelector:checked ~ article.noteSheet
+input.fatekeepersDeckSelector:checked ~ article.fatekeepersDeckSheet
 {
     display: initial;
 }
@@ -169,6 +170,12 @@ input.noteSelector:checked ~ article.noteSheet
     color: white;
 }
 
+.repcontrol
+{
+    width: 95%;
+    justify-self:center;
+    margin: 6px;
+}
 
 /* Sheet header */
 .charsheet header
@@ -299,6 +306,30 @@ main.masterGrid
     align-items: start;
 }
 
+.npcSheetGrid
+{
+    grid-area: sheet;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 250px 1fr;
+    justify-items: start;
+    align-items: start;
+}
+
+.patronSheetGrid
+{
+    grid-area: sheet;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 250px 1fr;
+    justify-items: start;
+    align-items: start;
+}
+
 .fatekeepersGrimoireSheetGrid
 {
     grid-area: sheet;
@@ -312,18 +343,6 @@ main.masterGrid
 }
 
 .fatekeepersDeckSheetGrid
-{
-    grid-area: sheet;
-    width: 100%;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: start;
-    align-items: start;
-}
-
-.noteSheetGrid
 {
     grid-area: sheet;
     width: 100%;
@@ -3132,13 +3151,13 @@ input.editToggle[value="1"] + .editMenu
         grid-column: 7 / 8;
     }
 
-/* Notes */
+/* Tags */
 .playerCasterSheetGrid > .tagWidget
 {
     grid-area: 5/2/auto/-1;
 }
 
-    .tagWidget
+.tagWidget
 {
     display: grid;
     grid-template-rows: 45px 1fr;
@@ -3155,10 +3174,54 @@ input.editToggle[value="1"] + .editMenu
     }
 
 /* Fate */
-.fateWidget
+.playerCasterSheetGrid > .fateWidget
 {
     grid-area: 7/1/auto/-1;
 }
+
+.playerCasterSheetGrid > .noteWidget
+{
+    grid-area: 8/1/auto/-1;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr;
+    justify-items: start;
+    align-items: start;
+}
+
+.playerCasterSheetGrid > .noteWidget > h1.notesTitle
+{
+    grid-area: 1/1/auto/auto;
+}
+
+ .noteCard
+{
+    grid-area: 2/1/-1/-1;
+    display: grid;
+    width: 850px;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr;
+    grid-gap: 0px;
+    justify-items: start;
+    align-items: start;
+}
+
+ .noteCard > input[type=text].notesTitle
+    {
+        grid-area: 1/1/auto/-1;
+        height: 16px;
+        margin-top: 10px;
+    }
+
+ .noteCard > textarea.notes
+    {
+        grid-area: 2/1/-1/-1;
+        min-height: 150px;
+    }
+
 
 /* Grimoire */
 .grimoireWidget
@@ -3201,11 +3264,6 @@ section > .deck
     grid-row: 4/auto;
     width: 250px;
 }
-
-    section > .deck > .repcontrol
-    {
-        margin: 6px;
-    }
 
 section > .deckHeader
 {
@@ -4243,32 +4301,3 @@ input[type="checkbox"]:checked + span.conduit
             width: 100%;
             height: 100%;
         }
-
-/* Note Cards */
-.noteCard
-{
-    grid-area: 1/1/-1/-1;
-    display: grid;
-    width: 850px;
-    height: fit-content;
-    grid-template-columns: 75px 1fr;
-    grid-template-rows: 30px 1fr;
-    grid-gap: 0px;
-    justify-items: start;
-    align-items: start;
-}
-    .noteCard > h1.notesTitle
-    {
-        grid-area: 1/1/auto/auto;
-    }
-    .noteCard > input[type=text].notesTitle
-    {
-        grid-area: 1/2/auto/-1;
-        height: 16px;
-        margin-top: 10px;
-    }
-    .noteCard > textarea.notes
-    {
-        grid-area: 2/2/-1/-1;
-        min-height: 150px;
-    }
