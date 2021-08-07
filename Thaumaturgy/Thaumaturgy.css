@@ -4179,7 +4179,7 @@ input[type="checkbox"]:checked + span.conduit
             grid-column: 5/auto;
         }
 
-.ability
+.power
 {
     display: grid;
     width: 419px;
@@ -4192,12 +4192,12 @@ input[type="checkbox"]:checked + span.conduit
     margin: 3px;
 }
 
-    .ability .abilityName
+    .power .powerName
     {
         grid-area: 1/1/auto/auto;
     }
 
-    .ability .abilityDescription
+    .power .powerDescription
     {
         grid-area: 1/2/-1/auto;
     }
@@ -4213,6 +4213,7 @@ div.key
     justify-items: start;
     align-items: start;
     margin: 3px;
+    grid-gap: 3px;
 }
 
 .keyTellWidget .keyDamage
@@ -4304,8 +4305,6 @@ div.key
     grid-area: 2/2/auto/auto;
 }
 
-
-
 /* NPC Sheet */
 .npcAspects
 {
@@ -4370,7 +4369,6 @@ div.key
         grid-row: 2/-1;
     }
 
-
 .npcSheetGrid > .charateristicWidget
 {
     grid-area: 2/1/auto/auto;
@@ -4380,7 +4378,6 @@ div.key
 {
     grid-area: 2/2/auto/auto;
 }
-
 
 div.npckey
 {
@@ -4400,6 +4397,74 @@ div.npckey
     {
         grid-area: 1/2/-1/-1;
     }
+
+/* Patron */
+.patronAspects
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-area: 1/1/auto/-1;
+    grid-template-columns: 80px 1fr 85px 1fr;
+    grid-template-rows: 30px repeat(3, 22px);
+    justify-items: start;
+    align-items: start;
+}
+
+    .patronAspects > h4.concept,
+    .patronAspects > h1.name
+    {
+        grid-column: 1/auto;
+    }
+
+    .patronAspects > input[type="text"].name,
+    .patronAspects > textarea.concept
+    {
+        grid-column: 2/auto;
+    }
+
+    .patronAspects > .name,
+    .patronAspects > .nature
+    {
+        grid-row: 1/auto;
+    }
+
+    .patronAspects > h4.nature,
+    .patronAspects > h4.domain
+    {
+        grid-column: 3/auto;
+    }
+
+    .patronAspects > h4.domain
+    {
+        grid-column: 3/auto;
+    }
+
+    .patronAspects > input[type="text"].nature
+    {
+        grid-column: 4/auto;
+    }
+
+    .patronAspects > textarea.domain
+    {
+        grid-column: 4/-1;
+    }
+
+    .patronAspects > textarea.concept,
+    .patronAspects > textarea.domain
+    {
+        grid-row: 2/-1;
+    }
+
+.patronSheetGrid > .formsWidget
+{
+    grid-area: 2/1/auto/auto;
+}
+
+.patronSheetGrid > .etiquetteWidget
+{
+    grid-area: 2/2/auto/auto;
+}
 
 /* Fatekeeper Deck */
 .fatekeeperDeck
