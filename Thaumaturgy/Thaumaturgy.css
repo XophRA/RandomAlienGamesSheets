@@ -301,7 +301,7 @@ main.masterGrid
     display: grid;
     grid-row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 250px 1fr;
+    grid-template-rows: 100px 250px auto auto;
     justify-items: start;
     align-items: start;
 }
@@ -313,7 +313,7 @@ main.masterGrid
     display: grid;
     grid-row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 250px 1fr;
+    grid-template-rows: 100px 250px auto auto;
     justify-items: start;
     align-items: start;
 }
@@ -325,7 +325,7 @@ main.masterGrid
     display: grid;
     grid-row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 250px 1fr;
+    grid-template-rows: 100px 250px auto auto;
     justify-items: start;
     align-items: start;
 }
@@ -4009,7 +4009,6 @@ input[type="checkbox"]:checked + span.conduit
     color: red;
 }
 
-
 /* Dramatis Personae */
 .tagCharacterAspects
 {
@@ -4063,82 +4062,7 @@ input[type="checkbox"]:checked + span.conduit
         grid-area: 1/4/-1/-1;
     }
 
-/* Pawn of Fate Sheet */
-.pawnAspects
-{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-area: 1/1/auto/-1;
-    grid-template-columns: repeat(2, 100px 1fr);
-    grid-template-rows: 36px repeat(3, 22px);
-    justify-items: start;
-    align-items: start;
-}
-
-    .pawnAspects > h4,
-    .pawnAspects > h1
-    {
-        grid-column: 1/auto;
-    }
-
-    .pawnAspects > input[type="text"]
-    {
-        grid-column: 2/auto;
-    }
-
-    .pawnAspects > .name
-    {
-        grid-row: 1/auto;
-    }
-    .pawnAspects > .pronouns
-    {
-        grid-row: 2/auto;
-    }
-    .pawnAspects > .relationship
-    {
-        grid-row: 3/auto;
-    }
-    .pawnAspects > .relationshipFacing
-    {
-        grid-row: 4/auto;
-    }
-    .pawnAspects > h4.nature
-    {
-        grid-area: 3/3/auto/auto;
-    }
-    
-    .pawnAspects > input.nature
-    {
-        grid-area: 3/4/auto/auto;
-    }
-    .pawnAspects > h4.willpower
-    {
-        grid-area: 4/3/auto/auto;
-    }
-    .pawnAspects > input.willpower
-    {
-        grid-area: 4/4/auto/auto;
-    }
-    .pawnAspects > h4.concept
-    {
-        grid-area: 1/3/auto/auto;
-    }
-    .pawnAspects > textarea.concept
-    {
-        grid-area: 1/4/auto/span 2;
-    }
-
-.pawnSheetGrid > .charateristicWidget
-{
-    grid-area: 2/1/auto/auto;
-}
-
-.pawnSheetGrid > .tagWidget
-{
-    grid-area: 2/2/auto/auto;
-}
-
+/* Fatekeeper Character Common Elements */
 .tagbox
 {
     display: grid;
@@ -4160,7 +4084,7 @@ input[type="checkbox"]:checked + span.conduit
         grid-area: 2/1/auto/auto;
     }
 
-.npcTangle
+.resistancesWidget
 {
     display: grid;
     width: 100%;
@@ -4172,7 +4096,7 @@ input[type="checkbox"]:checked + span.conduit
     align-items: start;
 }
 
-.npcPowers
+.powersWidget
 {
     display: grid;
     width: 100%;
@@ -4184,12 +4108,25 @@ input[type="checkbox"]:checked + span.conduit
     align-items: start;
 }
 
-.npcDifficulty
+.keyTellWidget
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-area: 4/1/auto/-1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 36px 1fr;
+    justify-items: start;
+    align-items: start;
+}
+
+
+.resistance
 {
     display: grid;
     width: 419px;
     height: 100%;
-    grid-area: 3/2/auto/auto;
+    grid-area: 2/1/auto/auto;
     grid-template-columns: 1fr 100px;
     grid-template-rows: 1fr;
     justify-items: start;
@@ -4197,12 +4134,12 @@ input[type="checkbox"]:checked + span.conduit
     margin: 3px;
 }
 
-    .npcDifficulty .npcDifficultyName
+    .resistance .resistanceName
     {
         grid-area: 1/1/auto/auto;
     }
 
-    .npcDifficulty div.potency
+    .resistance div.potency
     {
         grid-area: 1/2/auto/auto;
         display: grid;
@@ -4212,57 +4149,257 @@ input[type="checkbox"]:checked + span.conduit
         grid-template-rows: 1fr;
     }
 
-        .npcDifficulty div.potency > .diceCheckbox
+        .resistance div.potency > .diceCheckbox
         {
             grid-row: 1/auto;
         }
 
-        .npcDifficulty div.potency > .potency1
+        .resistance div.potency > .potency1
         {
             grid-column: 1/auto;
         }
 
-        .npcDifficulty div.potency > .potency2
+        .resistance div.potency > .potency2
         {
             grid-column: 2/auto;
         }
 
-        .npcDifficulty div.potency > .potency3
+        .resistance div.potency > .potency3
         {
             grid-column: 3/auto;
         }
-        .npcDifficulty div.potency > .potency4
+
+        .resistance div.potency > .potency4
         {
             grid-column: 4/auto;
         }
-        .npcDifficulty div.potency > .potency5
+
+        .resistance div.potency > .potency5
         {
             grid-column: 5/auto;
         }
 
-.npcAbility
+.ability
 {
     display: grid;
     width: 419px;
     height: 100%;
-    grid-area: 3/2/auto/auto;
+    grid-area: 2/1/auto/auto;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2,22px);
     justify-items: start;
     align-items: start;
     margin: 3px;
 }
 
-    .npcAbility .npcAbilityName
+    .ability .abilityName
     {
         grid-area: 1/1/auto/auto;
     }
-    .npcAbility .npcAbilityDescription
+
+    .ability .abilityDescription
     {
-        grid-area: 1/2/auto/auto;
+        grid-area: 1/2/-1/auto;
     }
 
-    
+div.key
+{
+    display: grid;
+    width: 842px;
+    height: 100%;
+    grid-area: 2/1/auto/auto;
+    grid-template-columns: 12px 1fr 1fr;
+    grid-template-rows: repeat(3,22px);
+    justify-items: start;
+    align-items: start;
+    margin: 3px;
+}
+
+.keyTellWidget .keyDamage
+{
+    grid-area: 1/1/auto/auto;
+}
+
+.keyTellWidget textarea.key
+{
+    grid-area: 1/2/-1/auto;
+}
+
+.keyTellWidget .tell
+{
+    grid-area: 1/3/-1/auto;
+}
+
+/* Pawn of Fate Sheet */
+.pawnAspects
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-area: 1/1/auto/-1;
+    grid-template-columns: 80px 3fr 85px 125px 2fr;
+    grid-template-rows: 30px repeat(3, 22px);
+    justify-items: start;
+    align-items: start;
+}
+
+    .pawnAspects > h4.concept,
+    .pawnAspects > h1.name
+    {
+        grid-column: 1/auto;
+    }
+
+    .pawnAspects > input[type="text"].name,
+    .pawnAspects > textarea.concept
+    {
+        grid-column: 2/auto;
+    }
+
+    .pawnAspects > .name,
+    .pawnAspects > .nature,
+    .pawnAspects > .natureSpecific
+    {
+        grid-row: 1/auto;
+    }
+
+    .pawnAspects > h4.nature,
+    .pawnAspects > h4.description
+    {
+        grid-column: 3/auto;
+    }
+
+    .pawnAspects > h4.description
+    {
+        grid-column: 3/auto;
+    }
+
+    .pawnAspects > input[type="text"].nature
+    {
+        grid-column: 4/auto;
+    }
+
+    .pawnAspects > input[type="text"].natureSpecific
+    {
+        grid-column: 5/auto;
+    }
+
+    .pawnAspects > textarea.description
+    {
+        grid-column: 4/-1;
+    }
+
+    .pawnAspects > textarea.concept,
+    .pawnAspects > textarea.description
+    {
+        grid-row: 2/-1;
+    }
+
+.pawnSheetGrid > .charateristicWidget
+{
+    grid-area: 2/1/auto/auto;
+}
+
+.pawnSheetGrid > .tagWidget
+{
+    grid-area: 2/2/auto/auto;
+}
+
+
+
+/* NPC Sheet */
+.npcAspects
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-area: 1/1/auto/-1;
+    grid-template-columns: 80px 3fr 85px 125px 2fr;
+    grid-template-rows: 30px repeat(3, 22px);
+    justify-items: start;
+    align-items: start;
+}
+
+    .npcAspects > h4.concept,
+    .npcAspects > h1.name
+    {
+        grid-column: 1/auto;
+    }
+
+    .npcAspects > input[type="text"].name,
+    .npcAspects > textarea.concept
+    {
+        grid-column: 2/auto;
+    }
+
+    .npcAspects > .name,
+    .npcAspects > .ascension,
+    .npcAspects > .ascensionSpecific
+    {
+        grid-row: 1/auto;
+    }
+
+    .npcAspects > h4.ascension,
+    .npcAspects > h4.description
+    {
+        grid-column: 3/auto;
+    }
+
+    .npcAspects > h4.description
+    {
+        grid-column: 3/auto;
+    }
+
+    .npcAspects > input[type="text"].ascension
+    {
+        grid-column: 4/auto;
+    }
+
+    .npcAspects > input[type="text"].ascensionSpecific
+    {
+        grid-column: 5/auto;
+    }
+
+    .npcAspects > textarea.description
+    {
+        grid-column: 4/-1;
+    }
+
+    .npcAspects > textarea.concept,
+    .npcAspects > textarea.description
+    {
+        grid-row: 2/-1;
+    }
+
+
+.npcSheetGrid > .charateristicWidget
+{
+    grid-area: 2/1/auto/auto;
+}
+
+.npcSheetGrid > .tagWidget
+{
+    grid-area: 2/2/auto/auto;
+}
+
+
+div.npckey
+{
+    display: grid;
+    width: 842px;
+    height: 100%;
+    grid-area: 2/1/auto/auto;
+    grid-template-columns: 12px 1fr;
+    grid-template-rows: 22px;
+    justify-items: start;
+    align-items: start;
+    margin: 3px;
+    grid-gap: 3px;
+}
+
+    div.npckey > .key
+    {
+        grid-area: 1/2/-1/-1;
+    }
 
 /* Fatekeeper Deck */
 .fatekeeperDeck

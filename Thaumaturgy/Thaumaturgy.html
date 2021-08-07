@@ -89,13 +89,12 @@
 
     <!-- Natures -->
     <datalist id="nature">
-        <option>Mundane Folk</option>
-        <option>Fantastic Folk</option>
-        <option>Shattered Folk</option>
+        <option>Folk</option>
+        <option>Changeling</option>
+        <option>Fragment</option>
         <option>Magical Creature</option>
         <option>Accursed</option>
         <option>Devotees</option>
-        <option>Patron</option>
     </datalist>
 
     <!-- Curse Severity -->
@@ -1456,21 +1455,13 @@
             <section class="pawnAspects">
                 <h1 class="name">Name</h1>
                 <input type="text" name="attr_character_name" class="name" />
-                <h4 class="pronouns">pronouns</h4>
-                <input type="text" name="attr_character_pronouns" class="pronouns" />
                 <h4 class="concept">Concept</h4>
                 <textarea class="concept" name="attr_concept" />
                 <h4 class="nature">Nature</h4>
                 <input type="text" class="nature" name="attr_nature" list="nature" />
-                <h4 class="relationship">Relationship</h4>
-                <input type="text" name="attr_relationship" class="relationship" />
-                <h4 class="relationshipFacing">Facing</h4>
-                <select name="attr_relationshipFacing" class="relationshipFacing">
-                    <option value="0">Chaos</option>
-                    <option value="1">Harmony</option>
-                </select>
-                <h4 class="willpower">Willpower</h4>
-                <input type="text" class="willpower" name="attr_willpower" />
+                <input type="text" class="natureSpecific" name="attr_natureSpecific" />
+                <h4 class="description">Description</h4>
+                <textarea name="attr_description" class="description" />
             </section>
             <!-- Charateristics -->
             <section class="charateristicWidget tagbox">
@@ -1482,12 +1473,12 @@
                 <h2 class="tags">Tags</h2>
                 <textarea class="tags" name="attr_tags"></textarea>
             </section>
-            <!-- Tangle -->
-            <section class="npcTangle">
-                <h1>Tangle</h1>
-                <fieldset class="repeating_tangle">
-                    <div class="npcDifficulty">
-                        <input type="text" class="npcDifficultyName" name="attr_npcDifficultyName" />
+            <!-- Resistances -->
+            <section class="resistancesWidget">
+                <h1>Resistances</h1>
+                <fieldset class="repeating_resistances">
+                    <div class="resistance">
+                        <input type="text" class="resistanceName" name="attr_pawnResistanceName" />
                         <div class="potency">
                             <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
                             <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
@@ -1499,12 +1490,23 @@
                 </fieldset>
             </section>
             <!-- Powers -->
-            <section class="npcPowers">
+            <section class="powersWidget">
                 <h1>Powers</h1>
                 <fieldset class="repeating_power">
-                    <div class="npcAbility">
-                        <input type="text" class="npcAbilityName" name="attr_npcAbilityName" />
-                        <input type="text" class="npcAbilityDescription" name="attr_npcAbilityDescription" />
+                    <div class="ability">
+                        <input type="text" class="abilityName" name="attr_pawnAbilityName" />
+                        <textarea class="abilityDescription" name="attr_pawnAbilityDescription" />
+                    </div>
+                </fieldset>
+            </section>
+            <!-- Key & Tell -->
+            <section class="keyTellWidget">
+                <h1>Key & Tell</h1>
+                <fieldset class="repeating_key">
+                    <div class="key">
+                        <input type="checkbox" class="keyDamage" name="attr_keyDamage"/>
+                        <textarea class="key" name="attr_pawnKey" />
+                        <textarea class="tell" name="attr_pawntell" />
                     </div>
                 </fieldset>
             </section>
@@ -1514,7 +1516,66 @@
     <!-- NPC -->
     <article class="sheetType npcSheet">
         <div class="npcSheetGrid">
- 
+            <section class="npcAspects">
+                <h1 class="name">Name</h1>
+                <input type="text" name="attr_character_name" class="name" />
+                <h4 class="concept">Concept</h4>
+                <textarea class="concept" name="attr_concept" />
+                <h4 class="ascension">Ascension</h4>
+                <input type="text" class="ascension" name="attr_ascension" />
+                <input type="text" class="ascensionSpecific" name="attr_ascensionSpecific" />
+                <h4 class="description">Description</h4>
+                <textarea name="attr_description" class="description" />
+            </section>
+            <!-- Charateristics -->
+            <section class="charateristicWidget tagbox">
+                <h2 class="charateristics">Charateristics</h2>
+                <textarea class="charateristics" name="attr_charateristics"></textarea>
+            </section>
+            <!-- Tags -->
+            <section class="tagWidget tagbox">
+                <h2 class="tags">Tags</h2>
+                <textarea class="tags" name="attr_tags"></textarea>
+            </section>
+            <!-- Resistances -->
+            <section class="resistancesWidget">
+                <h1>Resistances</h1>
+                <fieldset class="repeating_resistances">
+                    <div class="resistance">
+                        <input type="text" class="resistanceName" name="attr_npcResistanceName" />
+                        <div class="potency">
+                            <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
+                            <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
+                            <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
+                            <input type="radio" name="attr_potency" class="potency4 diceCheckbox hideCheckbox" value="4" /><span class="potency4 diceCheckbox D10"></span>
+                            <input type="radio" name="attr_potency" class="potency5 diceCheckbox hideCheckbox" value="5" /><span class="potency5 diceCheckbox D10"></span>
+                        </div>
+                    </div>
+                </fieldset>
+            </section>
+            <!-- Powers -->
+            <section class="powersWidget">
+                <h1>Grimoire</h1>
+                <fieldset class="repeating_power">
+                    <div class="ability">
+                        <input type="text" class="abilityName" name="attr_npcAbilityName" />
+                        <textarea class="abilityDescription" name="attr_npcAbilityDescription" />
+                    </div>
+                </fieldset>
+            </section>
+            <!-- Key & Tell -->
+            <section class="keyTellWidget">
+                <h1>Key</h1>
+                <fieldset class="repeating_key">
+                    <div class="npckey">
+                        <input type="checkbox" class="keyDamage" name="attr_npcDamage" />
+                        <select class="key" name="attr_npcKey">
+                            <option></option>
+                            <option>Inflict a distinct and lethal effect</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </section>
         </div>
     </article>
 
