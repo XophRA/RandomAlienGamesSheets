@@ -2962,63 +2962,58 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     grid-template-columns: 350px 16px auto;
-    grid-template-rows: 37px repeat(10,20px) auto;
+    grid-template-rows: 37px repeat(10,19px) auto;
     grid-row-gap: 4px;
 }
 
     .intentionWidget > .conduitBox
     {
-        grid-column: 2 / 3;
+        grid-column: 2/3;
     }
 
     .intentionWidget > .conjureBox
     {
-        grid-row: 2 / 3;
+        grid-row: 2/3;
     }
 
     .intentionWidget > .decayBox
     {
-        grid-row: 3 / 4;
+        grid-row: 3/4;
     }
 
     .intentionWidget > .dispelBox
     {
-        grid-row: 4 / 5;
+        grid-row: 4/5;
     }
 
     .intentionWidget > .enchantBox
     {
-        grid-row: 5 / 6;
+        grid-row: 5/6;
     }
 
     .intentionWidget > .manipulateBox
     {
-        grid-row: 6 / 7;
-    }
-
-    .intentionWidget > .sacrificeBox
-    {
-        grid-row: 7 / 8;
+        grid-row: 6/7;
     }
 
     .intentionWidget > .scryBox
     {
-        grid-row: 8 / 9;
+        grid-row: 7/8;
     }
 
     .intentionWidget > .summonBox
     {
-        grid-row: 9 / 10;
+        grid-row: 8/9;
     }
 
     .intentionWidget > .transmuteBox
     {
-        grid-row: 10 / 11;
+        grid-row: 9/10;
     }
 
     .intentionWidget > .wardBox
     {
-        grid-row: 11 / 12;
+        grid-row: 10/11;
     }
 
 /* Arts */
@@ -3659,19 +3654,28 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .enchantmentCard textarea.form
     {
-        grid-row: 9/span 4;
+        grid-row: 9/span 3;
     }
 
-    .enchantmentCard h4.spellEffect
+    .enchantmentCard h4.continousEffect
     {
         grid-row: 12/auto;
     }
 
-    .enchantmentCard textarea.spellEffect
+    .enchantmentCard textarea.continousEffect
     {
-        grid-row: 12/-1;
+        grid-row: 12/span 3;
     }
 
+    .enchantmentCard h4.spellEffect
+    {
+        grid-row: 15/auto;
+    }
+
+    .enchantmentCard textarea.spellEffect
+    {
+        grid-row: 15/-1;
+    }
 
 /* Dueling Focus Card */
 .duelingFocusCard
