@@ -982,10 +982,14 @@ main.masterGrid
     {
         grid-row: 9/auto;
     }
+    .ritualCard .potency
+    {
+        grid-row: 9/auto;
+    }
 
     .ritualCard textarea.ritualComponents
     {
-        grid-row: 9/13;
+        grid-row: 10/13;
     }
 
     .ritualCard .ritualSigilSize
@@ -3340,6 +3344,35 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     {
         padding-top: 4px;
     }
+    .customCard div.potency
+    {
+        grid-column: 2/span 2;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(3,20px) 1fr;
+        grid-template-rows: 1fr;
+    }
+
+        .customCard div.potency > .diceCheckbox
+        {
+            grid-row: 1/auto;
+        }
+
+        .customCard div.potency > .potency1
+        {
+            grid-column: 1/auto;
+        }
+
+        .customCard div.potency > .potency2
+        {
+            grid-column: 2/auto;
+        }
+
+        .customCard div.potency > .potency3
+        {
+            grid-column: 3/auto;
+        }
 
 /* Curses */
 .playerCasterSheetGrid > .curseWidget
@@ -3529,22 +3562,22 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     .roteSpellCard h4.spellComponents,
     .roteSpellCard input.spellComponents
     {
-        grid-row: 8/auto;
+        grid-row: 5/auto;
     }
 
     .roteSpellCard textarea.spellComponents
     {
-        grid-row: 9/12;
+        grid-row: 6/span 4;
     }
 
     .roteSpellCard h4.spellEffect
     {
-        grid-row: 13/auto;
+        grid-row: 10/auto;
     }
 
     .roteSpellCard textarea.spellEffect
     {
-        grid-row: 13/-1;
+        grid-row: 10/-1;
     }
 
 /* Scroll Cards */
@@ -3570,22 +3603,22 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .scrollCard h4.spellComponents
     {
-        grid-row: 8/auto;
+        grid-row: 5/auto;
     }
 
     .scrollCard .clockWidget
     {
-        grid-row: 8/span 4;
+        grid-row: 5/span 4;
     }
 
     .scrollCard h4.spellEffect
     {
-        grid-row: 12/auto;
+        grid-row: 9/auto;
     }
 
     .scrollCard textarea.spellEffect
     {
-        grid-row: 12/-1;
+        grid-row: 9/-1;
     }
 
 /* Artefact Card */
@@ -3604,36 +3637,6 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 3/auto;
     }
 
-    .enchantmentCard div.potency
-    {
-        grid-column: 2/span 2;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(3,20px) 1fr;
-        grid-template-rows: 1fr;
-    }
-
-        .enchantmentCard div.potency > .diceCheckbox
-        {
-            grid-row: 1/auto;
-        }
-
-        .enchantmentCard div.potency > .potency1
-        {
-            grid-column: 1/auto;
-        }
-
-        .enchantmentCard div.potency > .potency2
-        {
-            grid-column: 2/auto;
-        }
-
-        .enchantmentCard div.potency > .potency3
-        {
-            grid-column: 3/auto;
-        }
-
     .enchantmentCard .manoeuvre
     {
         grid-row: 4/auto;
@@ -3641,32 +3644,32 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .enchantmentCard h4.spellComponents
     {
-        grid-row: 8/auto;
+        grid-row: 5/auto;
     }
 
     .enchantmentCard .clockWidget
     {
-        grid-row: 8/span 4;
+        grid-row: 5/span 4;
     }
 
     .enchantmentCard h4.form
     {
-        grid-row: 12/auto;
+        grid-row: 9/auto;
     }
 
     .enchantmentCard textarea.form
     {
-        grid-row: 12/span 4;
+        grid-row: 9/span 4;
     }
 
     .enchantmentCard h4.spellEffect
     {
-        grid-row: 16/auto;
+        grid-row: 12/auto;
     }
 
     .enchantmentCard textarea.spellEffect
     {
-        grid-row: 16/-1;
+        grid-row: 12/-1;
     }
 
 
@@ -3688,24 +3691,23 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .duelingFocusCard h4.spellComponents
     {
-        grid-row: 8/auto;
+        grid-row: 4/auto;
     }
 
     .duelingFocusCard .clockWidget
     {
-        grid-row: 8/span 4;
+        grid-row: 4/span 4;
     }
 
     .duelingFocusCard h4.form
     {
-        grid-row: 12/auto;
+        grid-row: 8/auto;
     }
 
     .duelingFocusCard textarea.form
     {
-        grid-row: 12/-1;
+        grid-row: 8/-1;
     }
-
 
 /* Puzzle Cards */
 .puzzleCard
