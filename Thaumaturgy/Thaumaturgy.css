@@ -4361,7 +4361,7 @@ div.npckey
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: 80px autp;
+        grid-template-columns: 80px auto;
         grid-template-rows: 30px auto;
     }
 
