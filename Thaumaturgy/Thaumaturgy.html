@@ -58,17 +58,6 @@
         <option>Viviomancy</option>
     </datalist>
 
-    <!-- Techniques -->
-    <datalist id="techniques">
-        <option>Action</option>
-        <option>Arrange</option>
-        <option>Collaborate</option>
-        <option>Gesture</option>
-        <option>Incant</option>
-        <option>Inscribe</option>
-        <option>Mime</option>
-    </datalist>
-
     <!-- Components -->
     <datalist id="components">
         <option>Apparel</option>
@@ -104,7 +93,7 @@
     </datalist>
 
     <!-- SHEETS -->
-    <!-- Caster -->
+    <!-- Player Caster -->
     <article class="sheetType playerCasterSheet">
         <!--PC Sheet Grid-->
         <div class="playerCasterSheetGrid">
@@ -142,7 +131,6 @@
                 <input type="checkbox" class="conduitBox dispelBox hideCheckbox maxCheckbox" name="attr_Dispel" /><span class="conduitBox dispelBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox enchantBox hideCheckbox maxCheckbox" name="attr_Enchant" /><span class="conduitBox enchantBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox manipulateBox hideCheckbox maxCheckbox" name="attr_Manipulate" /><span class="conduitBox manipulateBox maxCheckbox conduit"></span>
-                <input type="checkbox" class="conduitBox sacrificeBox hideCheckbox maxCheckbox" name="attr_Sacrifice" /><span class="conduitBox sacrificeBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox scryBox hideCheckbox maxCheckbox" name="attr_Scry" /><span class="conduitBox scryBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox summonBox hideCheckbox maxCheckbox" name="attr_Summon" /><span class="conduitBox summonBox maxCheckbox conduit"></span>
                 <input type="checkbox" class="conduitBox transmuteBox hideCheckbox maxCheckbox" name="attr_Transmute" /><span class="conduitBox transmuteBox maxCheckbox conduit"></span>
@@ -454,9 +442,6 @@
                             <h4 class="spellArt">Arts</h4>
                             <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
                             <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
                             <h4 class="spellComponents">Components</h4>
                             <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
                             <textarea class="spellComponents" name="attr_spellComponents" />
@@ -477,9 +462,6 @@
                             <h4 class="spellArt">Arts</h4>
                             <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
                             <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_scrollTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_scrollTechniqueSpecific" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
@@ -514,9 +496,6 @@
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_enchantmentForm" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_enchantmentTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_enchantmentTechniqueSpecific" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_enchantmentEffect" />
                             <h4 class="spellComponents">Charges</h4>
@@ -539,9 +518,6 @@
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_formDuelingFocus" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_focusTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_focusTechniqueSpecific" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
@@ -730,8 +706,8 @@
                             <input type="text" class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
                             <h4 class="ritualMilestones">Milestones</h4>
                             <textarea class="ritualMilestones" name="attr_ritualMilestones" />
-                            <h4 class="ritualWorkings">Workings</h4>
-                            <textarea class="ritualWorkings" name="attr_ritualWorkings" />
+                            <h4 class="ritualComponents">Components</h4>
+                            <textarea class="ritualComponents" name="attr_ritualComponents" />
                             <h4 class="ritualSigilSize">Ritual Sigil</h4>
                             <select class="ritualSigilSize" name="attr_ritualSigilSize">
                                 <option value="3">Dawn</option>
@@ -822,8 +798,8 @@
                     <input type="text" class="ritualObjectiveDetail" name="attr_ascensionObjectiveDetail" />
                     <h4 class="ritualMilestones">Milestones</h4>
                     <textarea class="ritualMilestones" name="attr_ascensionMilestones" />
-                    <h4 class="ritualWorkings">Workings</h4>
-                    <textarea class="ritualWorkings" name="attr_ascensionWorkings" />
+                    <h4 class="ritualComponents">Components</h4>
+                    <textarea class="ritualComponents" name="attr_ascensionWorkings" />
                     <h4 class="ritualSigilSize">Ritual Sigil</h4>
                     <select class="ritualSigilSize" name="attr_ascensionSigilSize">
                         <option value="3">Dawn</option>
@@ -1660,9 +1636,7 @@
                             <h4 class="spellArt">Arts</h4>
                             <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
                             <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_spellTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_spellTechniqueSpecific" />
+
                             <h4 class="spellComponents">Components</h4>
                             <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
                             <textarea class="spellComponents" name="attr_spellComponents" />
@@ -1683,9 +1657,7 @@
                             <h4 class="spellArt">Arts</h4>
                             <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
                             <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_scrollTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_scrollTechniqueSpecific" />
+
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
@@ -1716,14 +1688,13 @@
                                 <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
                                 <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
                             </div>
+                            <h4 class="manoeuvre">Manoeuvre</h4>
+                            <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_enchantmentForm" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_enchantmentTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_enchantmentTechniqueSpecific" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_enchantmentEffect" />
-
+                            <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
                                 <input type="number" min="0" max="5" value="0" name="attr_chargeClock" class="clockControl" />
@@ -1741,12 +1712,9 @@
                             <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
                             <h4 class="manoeuvre">Manoeuvre</h4>
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
-
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_formDuelingFocus" />
-                            <h4 class="spellTechnique">Technique</h4>
-                            <input type="text" class="spellTechnique" name="attr_focusTechnique" list="techniques" />
-                            <textarea class="spellTechniqueSpecific" name="attr_focusTechniqueSpecific" />
+                            <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
                                 <input type="number" min="0" max="7" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
@@ -1771,12 +1739,14 @@
                 <div class="fatekeeperDeckAspects">
                     <h1 class="">Level:</h1>
                     <input type="text" name="attr_character_name" class="" />
+                    <textarea name="attr_description" placeholder="what is this all about?"></textarea>
                 </div>
-                <div class="deckHeader deck1">
+                <div class="deckHeader deck2">
+                    <h2>Puzzle</h2>
                     <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
                 </div>
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
-                <div class="deck deck1">
+                <div class="deck deck2">
                     <fieldset class="repeating_puzzleCard">
                         <div class="card customCard puzzleCard">
                             <h4 class="puzzleName">Name</h4>
@@ -1788,44 +1758,16 @@
                             <h4 class="solution">Solution</h4>
                             <input type="text" class="solution" name="attr_puzzleSolution" list="arts" />
                             <input type="text" class="solutionSynergy" name="attr_puzzleSolutionSynergy" list="arts" />
-                            <h4 class="puzzleTechnique">Technique</h4>
-                            <input type="text" class="puzzleTechnique" name="attr_puzzleTechnique" list="techniques" />
-                            <textarea class="puzzleTechnique" name="attr_puzzleTechniqueSpecific" />
                             <h4 class="solutionRewards">Rewards</h4>
                             <textarea class="solutionRewards" name="attr_solutionRewards" />
                         </div>
                     </fieldset>
                 </div>
-                <div class="deckHeader deck2">
+                <div class="deckHeader deck3">
+                    <h2>Curse</h2> 
                     <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
                 </div>
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
-                <div class="deck deck2">
-                    <fieldset class="repeating_fontCard">
-                        <div class="card customCard fontCard">
-                            <h4 class="source">Source</h4>
-                            <input type="text" class="source" name="attr_fontSource" />
-                            <h4 class="description">Description</h4>
-                            <textarea class="description" name="attr_fontDescription" />
-                            <h4 class="fontResource">Resource</h4>
-                            <textarea class="fontResource" name="attr_fontResource" />
-                            <h4 class="quanity">Quantity</h4>
-                            <div class="clockWidget">
-                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="5" value="0" name="attr_chargeClock" class="clockControl" />
-                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment5" />
-                                <span class="clock"></span>
-                                <span class="clockSpoke clockSpoke50"></span>
-                                <span class="clockSpoke clockSpoke51"></span>
-                                <span class="clockSpoke clockSpoke52"></span>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="deckHeader deck3">
-                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
-                </div>
-                <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                 <div class="deck deck3">
                     <fieldset class="repeating_curseCard">
                         <div class="card customCard curseCard">
