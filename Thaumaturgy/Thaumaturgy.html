@@ -115,7 +115,7 @@
 
             <!-- Description -->
             <section class="descriptionWidget">
-                <div class="scholarlyName"><input type="text" name="attr_character_name" /></div>
+                <div class="scholarlyName"><input type="text" name="attr_character_name" class="titlefill"/></div>
                 <input type="hidden" name="attr_level" />
                 <div class="rankLevel"><input type="text" name="attr_rankLevel" readonly /></div>
                 <div class="pronouns"><input type="text" name="attr_pronouns"/> </div>
@@ -594,7 +594,7 @@
                 <h1 class="notesTitle">Notes</h1>
                 <fieldset class="repeating_noteCards">
                     <div class="noteCard">
-                        <input type="text" class="notesTitle" name="attr_notesTitle" placeholder="a note" />
+                        <input type="text" class="notesTitle titlefill" name="attr_notesTitle" placeholder="a note" />
                         <textarea class="notes" name="attr_notes" placeholder="something noteworthy"></textarea>
                     </div>
                 </fieldset>
@@ -608,7 +608,7 @@
         <div class="covenSheetGrid">
             <!--Coven Aspects-->
             <section class="covenAspects">
-                <input type="text" name="attr_character_name" class="covenName" />
+                <input type="text" name="attr_character_name" class="covenName titlefill" />
                 <h4 class="covenDescription">Description</h4>
                 <textarea name="attr_covendescription" class="covenDescription" />
                 <h4 class="covenkins">Covenkin</h4>
@@ -903,28 +903,26 @@
             <section class="layoutWidget">
                 <div class="academylayout layout">
                     <h1 class="layoutName">Academy</h1>
-                    <input type="text" name="attr_academy" class="layoutName" placeholder="Academy Name" />
+                    <input type="text" name="attr_academy" class="layoutName titlefill" placeholder="Academy Name" />
                     <h3 class="layoutDescription">Description</h3>
                     <textarea name="attr_academydescription" class="layoutDescription" placeholder="A description of the Academy" />
                     <!-- Sections -->
-                    <h2 class="layoutSectionsTitle">Sections</h2>
                     <fieldset class="repeating_academySections">
                         <div class="layoutSections">
-                            <input type="text" class="layoutSectionTitle" name="attr_academySectionTitle" placeholder="Section name" />
+                            <input type="text" class="layoutSectionTitle titlefill" name="attr_academySectionTitle" placeholder="Section name" />
                             <textarea class="layoutSection" name="attr_academySectionDescription" placeholder="A description of the Section"></textarea>
                         </div>
                     </fieldset>
                 </div>
                 <div class="sanctumlayout layout">
                     <h1 class="layoutName">Sanctum</h1>
-                    <input type="text" name="attr_sanctum" class="layoutName">
+                    <input type="text" name="attr_sanctum" class="layoutName titlefill">
                     <h3 class="layoutDescription">Description</h3>
                     <textarea name="attr_sanctumdescription" class="layoutDescription" />
                     <!-- Sections -->
-                    <h2 class="layoutSectionsTitle">Sections</h2>
                     <fieldset class="repeating_sanctumSections">
                         <div class="layoutSections">
-                            <input type="text" class="layoutSectionTitle" name="attr_sanctumSectionTitle" placeholder="Section name" />
+                            <input type="text" class="layoutSectionTitle titlefill" name="attr_sanctumSectionTitle" placeholder="Section name" />
                             <textarea class="layoutSection" name="attr_sanctumSectionDescription" placeholder="A description of the Section"></textarea>
                         </div>
                     </fieldset>
@@ -1439,7 +1437,7 @@
             <fieldset class="repeating_folk">
                 <section class="tagCharacterAspects">
                     <h1 class="name">Name</h1>
-                    <input type="text" name="attr_character_name" class="name" />
+                    <input type="text" name="attr_character_name" class="name titlefill" />
                     <h4 class="pronouns">pronouns</h4>
                     <input type="text" name="attr_character_pronouns" class="pronouns" />
                     <h4 class="relationship">Relationship</h4>
@@ -1461,7 +1459,7 @@
         <div class="pawnSheetGrid">
             <section class="pawnAspects">
                 <h1 class="name">Name</h1>
-                <input type="text" name="attr_character_name" class="name" />
+                <input type="text" name="attr_character_name" class="name titlefill" />
                 <h4 class="concept">Concept</h4>
                 <textarea class="concept" name="attr_concept" />
                 <h4 class="nature">Nature</h4>
@@ -1525,7 +1523,7 @@
         <div class="npcSheetGrid">
             <section class="npcAspects">
                 <h1 class="name">Name</h1>
-                <input type="text" name="attr_character_name" class="name" />
+                <input type="text" name="attr_character_name" class="name titlefill" />
                 <h4 class="concept">Concept</h4>
                 <textarea class="concept" name="attr_concept" />
                 <h4 class="ascension">Ascension</h4>
@@ -1591,7 +1589,7 @@
         <div class="patronSheetGrid">
             <section class="patronAspects">
                 <h1 class="name">Name</h1>
-                <input type="text" name="attr_character_name" class="name" />
+                <input type="text" name="attr_character_name" class="name titlefill" />
                 <h4 class="concept">Concept</h4>
                 <textarea class="concept" name="attr_concept" />
                 <h4 class="nature">Nature</h4>
@@ -1774,7 +1772,7 @@
             <section class="fatekeeperDeck">
                 <div class="fatekeeperDeckAspects">
                     <h1 class="">Level:</h1>
-                    <input type="text" name="attr_character_name" class="" />
+                    <input type="text" name="attr_character_name" class="titlefill" />
                     <textarea name="attr_description" placeholder="what is this all about?"></textarea>
                 </div>
                 <div class="deckHeader deck2">

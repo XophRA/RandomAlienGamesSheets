@@ -148,6 +148,12 @@ input.fatekeepersDeckSelector:checked ~ article.fatekeepersDeckSheet
     background-image: linear-gradient(to right, rgba(240,240,240,0.4), rgba(240,240,240,0.1), rgba(240,240,240,0), rgba(240,240,240,0) );
 }
 
+    .charsheet textarea.titlefill, .charsheet input[type="text"].titlefill
+    {
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+
 .charsheet textarea
 {
     padding-top: 4px;
@@ -395,7 +401,7 @@ main.masterGrid
         {
             grid-column: 1/-1;
             display: grid;
-            grid-template-columns: 75px 22px auto;
+            grid-template-columns: 75px 30px auto;
             grid-template-rows: repeat(3,21px);
             width: 100%;
         }
@@ -580,7 +586,7 @@ main.masterGrid
         width: 100%;
         height: 100%;
         grid-template-columns: 110px 1fr;
-        grid-template-rows: 42px 30px 60px 30px auto;
+        grid-template-rows: 42px 30px 60px auto;
     }
 
         .layoutWidget > .layout > .layoutName
@@ -598,11 +604,6 @@ main.masterGrid
             grid-row: 2/span 2;
         }
 
-        .layoutWidget > .layout > h2.layoutSectionsTitle
-        {
-            grid-row: 4/auto;
-        }
-
         .layoutWidget > .layout > h1,
         .layoutWidget > .layout > h2,
         .layoutWidget > .layout > h3
@@ -618,13 +619,13 @@ main.masterGrid
 
 .layout .repcontainer
 {
-    grid-area: 5/1/-1/-1;
+    grid-area: 4/1/-1/-1;
     height: fit-content;
 }
 
 .layout .repcontrol
 {
-    grid-area: 6/1/-1/-1;
+    grid-area: 5/1/-1/-1;
     height: 100%;
 }
         .layout .layoutSections
@@ -641,7 +642,7 @@ main.masterGrid
             .layout .layoutSections > .layoutSectionTitle
             {
                 grid-area: 1/1/auto/-1;
-                height: 16px;
+                height: 20px;
                 margin-top: 10px;
             }
 
