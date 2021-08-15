@@ -611,14 +611,8 @@
                 <input type="text" name="attr_character_name" class="covenName" />
                 <h4 class="covenDescription">Description</h4>
                 <textarea name="attr_covendescription" class="covenDescription" />
-                <h4 class="academyName">Academy</h4>
-                <input type="text" name="attr_academy" class="academyName" />
-                <h4 class="academyDescription">Description</h4>
-                <textarea name="attr_academydescription" class="academyDescription" />
-                <h4 class="sanctumName">Sanctum</h4>
-                <input type="text" name="attr_sanctum" class="sanctumName">
-                <h4 class="sanctumDescription">Description</h4>
-                <textarea name="attr_sanctumdescription" class="sanctumDescription" />
+
+
                 <h4 class="seniorCovens">Senior Covens</h4>
                 <textarea name="attr_seniorCovens" class="seniorCovens" />
             </section>
@@ -905,11 +899,37 @@
                 <textarea name="attr_anagoge13" class="anagoge13">While the Wizard is remembered, many other ascendant wizards are not. Despite their mastery of magic, these wizards are lost to fate before they can ascend. Although there are questions about how the Wizard managed it and others didn’t, there are no answers to be found.</textarea>
             </section>
 
-            <!-- Amenities -->
-            <section class="amenitiesWidget">
-                <h1 class="amenitiesTitle">Amenities</h1>
-                <textarea name="attr_amenities1" class="amenities1"></textarea>
-                <textarea name="attr_amenities2" class="amenities2"></textarea>
+            <!-- Layout -->
+            <section class="layoutWidget">
+                <div class="academylayout layout">
+                    <h1 class="layoutName">Academy</h1>
+                    <input type="text" name="attr_academy" class="layoutName" placeholder="Academy Name" />
+                    <h3 class="layoutDescription">Description</h3>
+                    <textarea name="attr_academydescription" class="layoutDescription" placeholder="A description of the Academy" />
+                    <!-- Sections -->
+                    <h2 class="layoutSectionsTitle">Sections</h2>
+
+                    <fieldset class="repeating_layoutSections">
+                        <div class="layoutSections">
+                            <input type="text" class="layoutSectionTitle" name="attr_sectionTitle" placeholder="Section name" />
+                            <textarea class="layoutSection" name="attr_notes" placeholder="A description of the Section"></textarea>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="sanctumlayout layout">
+                    <h1 class="layoutName">Sanctum</h1>
+                    <input type="text" name="attr_sanctum" class="layoutName">
+                    <h3 class="layoutDescription">Description</h3>
+                    <textarea name="attr_sanctumdescription" class="layoutDescription" />
+                    <!-- Sections -->
+                    <h2 class="layoutSectionsTitle">Sections</h2>
+                    <fieldset class="repeating_layoutSections">
+                        <div class="layoutSections">
+                            <input type="text" class="layoutSectionTitle" name="attr_sectionTitle" placeholder="Section name" />
+                            <textarea class="layoutSection" name="attr_notes" placeholder="A description of the Section"></textarea>
+                        </div>
+                    </fieldset>
+                </div>
             </section>
 
         </div>
