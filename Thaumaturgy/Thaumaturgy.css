@@ -3308,6 +3308,25 @@ input.editToggle[value="1"] + .editMenu
         grid-column: 6/auto;
     }
 
+    .grimoireWidget > .concentrationWidget
+    {
+        grid-area: 2/4/auto/-2;
+        margin-left: 200px;
+        display: grid;
+        grid-template-areas: "title select";
+        place-content:center;
+        grid-gap: 15px;
+    }
+    .grimoireWidget > .concentrationWidget > select
+    {
+       width: 160px;
+    }
+
+    .grimoireWidget > .editCog
+    {
+        grid-area: 2/-2/auto/-1;
+    }
+
 /* Repeating Deck */
 section > .deck
 {
