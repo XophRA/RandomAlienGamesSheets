@@ -3327,6 +3327,40 @@ input.editToggle[value="1"] + .editMenu
         grid-area: 2/-2/auto/-1;
     }
 
+    /* Attunment Edit */
+    .grimoireWidget .editAttunement
+    {
+        grid-area: 1/1/ span 2/-1;
+    }
+
+    /* editToggle attuneToggle Controls */
+input.editToggle[value="0"] ~ .deck .repcontrol,
+input.editToggle[value="0"] ~ .deck .card .attunement
+{
+    display: none;
+}
+
+input.editToggle[value="1"] ~ .deck .repcontrol
+{
+    display: initial;
+}
+
+input.editToggle[value="1"] ~ .deck .card .attunement
+{
+    display: grid;
+}
+
+input.attuneToggle[value="0"] + .card
+{
+    display: none;
+}
+
+input.attuneToggle[value="1"] + .card,
+input.editToggle[value="1"] ~ .deck input.attuneToggle[value="0"] + .card
+{
+    display: grid;
+}
+
 /* Repeating Deck */
 section > .deck
 {
@@ -3440,6 +3474,15 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         {
             grid-column: 3/auto;
         }
+
+    .customCard .attunement
+    {
+        grid-area: 16/1/auto/auto;
+        display: grid;
+        grid-template-areas: "title checkbox";
+        height: 16px;
+        margin-top: 16px;
+    }
 
 /* Curses */
 .playerCasterSheetGrid > .curseWidget

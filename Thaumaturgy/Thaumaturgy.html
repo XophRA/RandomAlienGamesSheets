@@ -498,6 +498,7 @@
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                 <div class="deck deck3">
                     <fieldset class="repeating_enchantmentcard">
+                        <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
                         <div class="card customCard enchantmentCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
@@ -525,9 +526,14 @@
                                 <span class="clockSpoke clockSpoke51"></span>
                                 <span class="clockSpoke clockSpoke52"></span>
                             </div>
+                            <div class="attunement">
+                                <h4 >Attune</h4>
+                                <input type="checkbox" value="1" name="attr_attunedCard" />
+                            </div>
                         </div>
                     </fieldset>
                     <fieldset class="repeating_duelingfocuscard">
+                        <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
                         <div class="card customCard duelingFocusCard">
                             <h4 class="formulaDuelingFocus">Formula</h4>
                             <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
@@ -545,6 +551,10 @@
                                 <span class="clockSpoke clockSpoke71"></span>
                                 <span class="clockSpoke clockSpoke72"></span>
                                 <span class="clockSpoke clockSpoke73"></span>
+                            </div>
+                            <div class="attunement">
+                                <h4>Attune</h4>
+                                <input type="checkbox" value="1" name="attr_attunedCard" />
                             </div>
                         </div>
                     </fieldset>
