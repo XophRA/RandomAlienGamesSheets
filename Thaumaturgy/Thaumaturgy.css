@@ -3330,8 +3330,27 @@ input.editToggle[value="1"] + .editMenu
     /* Attunment Edit */
     .grimoireWidget .editAttunement
     {
-        grid-area: 1/1/ span 2/-1;
+        grid-area: 1/1/span 2/-1;
+        grid-template-columns: 22px repeat(12,1fr);
+        grid-template-rows: 26px 28px 20px;
     }
+
+        .grimoireWidget .editAttunement button.chargeButton
+        {
+            grid-area: 2/3/auto/auto;
+        }
+        
+        .grimoireWidget .editAttunement input
+        {
+            height: 16px;
+            width: 8px;
+            margin-bottom: 3px;
+        }
+        .grimoireWidget .editAttunement p
+        {
+            grid-area: 3/10/auto/-1;
+            justify-self: center;
+        }
 
     /* editToggle attuneToggle Controls */
 input.editToggle[value="0"] ~ .deck .repcontrol,

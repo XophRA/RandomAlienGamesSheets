@@ -442,7 +442,10 @@
                 <span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_editAttunement" />
                 <div class="editMenu editAttunement">
-
+                    <button type="action" class="chargeButton" name="act_chargeClocks">Charge</button>
+                    <input type="hidden" name="attr_attuneArtefactSlots" value="1"/>
+                    <input type="hidden" name="attr_attuneFocusSlots" value="0"/>
+                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> Dueling Focus</p>
                 </div>
 
                 <div class="deckHeader deck1">
@@ -518,9 +521,9 @@
                             <textarea class="spellEffect" name="attr_enchantmentEffect" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
-                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="5" value="0" name="attr_chargeClock" class="clockControl" />
-                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment5" />
+                                <input type="text" name="attr_artefactChargeClock" class="clockControl" value="0" readonly />
+                                <input type="number" min="0" max="5" value="0" name="attr_artefactChargeClock" class="clockControl" />
+                                <input type="hidden" name="attr_artefactChargeClock" value="0" class="clockSegment5" />
                                 <span class="clock"></span>
                                 <span class="clockSpoke clockSpoke50"></span>
                                 <span class="clockSpoke clockSpoke51"></span>
@@ -1918,15 +1921,15 @@
                 {
                     ascensionObjective = "Initiate";
                 }
-                else if (nextLevel < 4)
+                else if (nextLevel > 0 && nextLevel < 4)
                 {
                     ascensionObjective = "Apprentice, level " + nextLevel;
                 }
-                else if (nextLevel < 8)
+                else if (nextLevel < 8 && nextLevel > 3)
                 {
                     ascensionObjective = "Keeper, level " + nextLevel;
                 }
-                else if (nextLevel < 11)
+                else if (nextLevel <= 8 && nextLevel < 11)
                 {
                     ascensionObjective = "Graduate, level " + nextLevel;
                 }
@@ -1942,11 +1945,12 @@
                 console.log(globalAttributes);
             }
             /* Set Level elements on Player Caster Sheets*/
-            else if (globalAttributes.covenlevel && selectedSheet == 1)
+            else if (selectedSheet == 1)
             {
                 //Set RankLevel
-                let rankLevel = "Initiate";
+                let rankLevel = "—";
                 let curseNumber = 2;
+
                 covenLevel = parseInt(globalAttributes.covenlevel) || 0;
 
                 if (covenLevel < 0)
@@ -1957,16 +1961,16 @@
                 {
                     rankLevel = "Initiate";
                 }
-                else if (covenLevel < 4)
+                else if (covenLevel >= 1 && covenLevel < 4)
                 {
                     rankLevel = "Apprentice, level " + covenLevel;
                 }
-                else if (covenLevel < 8)
+                else if (covenLevel >= 4 && covenLevel < 8)
                 {
                     rankLevel = "Keeper, level " + covenLevel;
                     curseNumber = 3;
                 }
-                else if (covenLevel < 11)
+                else if (covenLevel >= 8 && covenLevel < 11)
                 {
                     rankLevel = "Graduate, level " + covenLevel;
                     curseNumber = 4;
@@ -1980,6 +1984,48 @@
                 setObj.rankLevel = rankLevel;
                 setObj.curseNumber = curseNumber;
                 setObj.level = covenLevel;
+
+                //Set Attunement Slots
+                let attuneArtefactSlots = 1;
+                let attuneFocusSlots = 0;
+
+                if (covenLevel < 1)
+                {
+                    attuneArtefactSlots = 1;
+                    attuneFocusSlots = 0;
+                }
+                if (covenLevel >= 1 && covenLevel < 4)
+                {
+                    attuneArtefactSlots = 2;
+                    attuneFocusSlots = 0;
+                }
+                else if (covenLevel >= 3 && covenLevel < 5)
+                {
+                    attuneArtefactSlots = 2;
+                    attuneFocusSlots = 1;
+                }
+                else if (covenLevel >= 5 && covenLevel < 7)
+                {
+                    attuneArtefactSlots = 3;
+                    attuneFocusSlots = 1;
+                }
+                else if (covenLevel >= 7 && covenLevel < 9)
+                {
+                    attuneArtefactSlots = 4;
+                    attuneFocusSlots = 1;
+                }
+                else if (covenLevel >= 9 && covenLevel < 12)
+                {
+                    attuneArtefactSlots = 4;
+                    attuneFocusSlots = 2;
+                }
+                else if (covenLevel >= 12)
+                {
+                    attuneArtefactSlots = 5;
+                    attuneFocusSlots = 2;
+                }
+                setObj.attuneArtefactSlots = attuneArtefactSlots;
+                setObj.attuneFocusSlots = attuneFocusSlots;
             }
             console.log(setObj);
             setAttrs(setObj);
@@ -2366,6 +2412,52 @@
         console.log(setObj);
         setAttrs(setObj);
     });
+
+    /* Charge all Grimoire Clocks */
+    on("clicked:chargeclocks", (event) =>
+    {
+        const setObj = {};
+
+        let artefactClockArray = [];
+        let focusClockArray = [];
+
+        //Charge Component Pounch
+        setObj.spellComponetClock = 0;
+
+        //Charge all the Artefact Clocks
+        getSectionIDs("enchantmentcard", (idArray) =>
+        {
+            artefactClockArray = idArray.reduce((m, id) =>
+            {
+                m[`repeating_enchantmentcard_${id}_artefactChargeClock`] = 0;
+                return m;
+            });
+        });
+        console.log(artefactClockArray);
+
+        //Charge all the Focus Clocks
+        getSectionIDs('duelingfocuscard', (idArray) =>
+        {
+            focusClockArray = idArray.reduce((m, id) =>
+            {
+                m[`repeating_duelingfocuscard_${id}_duelingFocusStressClock`] = 0;
+                return m;
+            });
+        });
+        console.log(focusClockArray);
+
+        //Concat the Atrefact and Focus Array then add them to the SetObj
+        let clockArray = artefactClockArray.concat(focusClockArray);
+        console.log(clockArray);
+
+        for (let num = 0; num < clockArray.length; num++)
+        {
+            setObj.clockArray[num];
+        }
+
+            console.log(setObj);
+            setAttrs(setObj);
+        });
 
     /* Wrap Around for Sort Curse*/
     on("clicked:sortcurses", (event) =>
