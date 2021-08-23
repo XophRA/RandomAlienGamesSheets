@@ -2412,51 +2412,58 @@
         setAttrs(setObj);
     });
 
-    /* Charge all Grimoire Clocks */
-    on("clicked:chargeclocks", (event) =>
-    {
-        const setObj = {};
+    const clockDetails = [//An array of the attributes to work with for repeating sections. In this case, the clocks.
+        {
+            section: 'repeating_enchantmentcard',//the section name
+            fields: ['artefactChargeClock']//Array of attributes to be gotten/worked with
+        },
+        {
+            section: 'repeating_duelingfocuscard',
+            fields: ['duelingFocusStressClock']
+        }
+    ];
 
-        let artefactClockArray = [];
-        let focusClockArray = [];
+    const getSections = function (callback, getArray, queue)
+    {//This function creates a work queue, or burn down, to work through a series of sections and assemble an array of attributes. In my sheets, this is used to get all the repeating attributes via a single getAttrs. For this use case, we're going to just set them directly.
+        queue = [...queue];//When getSections is first invoked, like from the listener at the end, we're passing the reference to our repeating section details (clockDetails in this demo). So, we want to shallow copy it so that working through the queue doesn't modify the original version.
+        getArray = getArray || [];//getArray can be passed as either an array of attributes that should be gotten (e.g. strength,acrobatics, etc; essentially non repeating attributes that you are going to need to work with) or falsy. If it is falsy (null, undefined, 0, NaN, etc) it gets initialized as an empty array.
+        let section = queue.shift();//And finally, get the section we are going to work with for this iteration of the work queue of the top of the queue.
+        getSectionIDs(section.section, (idArray) =>
+        {//get our IDs in an idArray
+            idArray.forEach((id) =>
+            {//iterate through the IDs in the idArray
+                section.fields.forEach((field) =>
+                {//iterate through the fields required for this section.
+                    getArray.push(`${section.section}_${id}_${field}`);//So, we wind up pushing the full attribute names for each field and ID combination to our getArray.
+                });
+            });
+            if (_.isEmpty(queue))
+            {//If our queue is empty, move on to the callback function
+                callback(getArray);
+            } else
+            {//If there's still things in our queue, call getSections again and work through the above code again. This can be repeated any number of times
+                getSections(callback, getArray, queue);
+            }
+        });
+    };
+
+    //Once all the ids are gotten, and the full getArray is assembled, this function is then invoked and passed the getArray. I'm still calling it getArray here, but we can call it whatever we want in the function definition
+    const resetClocks = function (getArray)
+    {
+        const setObj = {};//initialize our setObj as an empty array
+        getArray.forEach((attr) => setObj[attr] = 0);//iterate through the repeating attribute names stored in the getArray, and set each of them to 0 in the setObj.
 
         //Charge Component Pounch
         setObj.spellComponetClock = 0;
 
-        //Charge all the Artefact Clocks
-        getSectionIDs("enchantmentcard", (idArray) =>
-        {
-            artefactClockArray = idArray.reduce((m, id) =>
-            {
-                m[`repeating_enchantmentcard_${id}_artefactChargeClock`] = 0;
-                return m;
-            });
-        });
-        console.log(artefactClockArray);
+        setAttrs(setObj);//set all the attributes.
+    };
 
-        //Charge all the Focus Clocks
-        getSectionIDs('duelingfocuscard', (idArray) =>
-        {
-            focusClockArray = idArray.reduce((m, id) =>
-            {
-                m[`repeating_duelingfocuscard_${id}_duelingFocusStressClock`] = 0;
-                return m;
-            });
-        });
-        console.log(focusClockArray);
-
-        //Concat the Atrefact and Focus Array then add them to the SetObj
-        let clockArray = artefactClockArray.concat(focusClockArray);
-        console.log(clockArray);
-
-        for (let num = 0; num < clockArray.length; num++)
-        {
-            setObj.clockArray[num];
-        }
-
-            console.log(setObj);
-            setAttrs(setObj);
-        });
+    /* Charge all Grimoire Clocks */
+    on("clicked:chargeclocks", (event) =>
+    {
+        getSections(resetClocks, [], clockDetails);//Call getSections. We pass it a callback function which will be called once the work queue is completed, a getArray initial value (an empty array in this case), and the details for the sections that we want to work with.
+    });
 
     /* Wrap Around for Sort Curse*/
     on("clicked:sortcurses", (event) =>
