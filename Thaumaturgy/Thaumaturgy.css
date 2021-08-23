@@ -1338,18 +1338,45 @@ main.masterGrid
 .spellcastingProcess
 {
     grid-area: 4/1/auto/span 2;
+    display: grid;
+    grid-template-areas: "h1 h2" "col1 col2";
+    width: 100%;
 }
+
+    .spellcastingProcess .h1
+    {
+        grid-area: h1;
+    }
+
+    .spellcastingProcess .col1
+    {
+        grid-area: col1;
+    }
+
+    .spellcastingProcess .col2
+    {
+        grid-area: col2;
+    }
 
     .spellcastingProcess > ol
     {
         list-style: lower-roman;
         list-style-position: inside;
-        font-weight: 600;
+        font-weight: 800;
         font-size: 13px;
         margin: 0 0 0px 5px;
     }
 
         .spellcastingProcess > ol > li > ol
+        {
+            list-style: none;
+            text-indent: 1em;
+            font-weight: 600;
+            font-size: 11px;
+            margin: 0 0 0 10px;
+        }
+
+        .spellcastingProcess > ol > li > ol > li > ol
         {
             list-style: none;
             text-indent: 1em;
@@ -1365,8 +1392,8 @@ section.magicCircle
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 12px 80px 123px 80px 1fr 20px 10px 49px 18px 9px 12px;
-    grid-template-rows: 81px 81px 28px 81px 38px 250px 38px auto 40px;
+    grid-template-columns: 12px 80px 45px 120px 1fr 100px 20px 45px 14px 66px 12px;
+    grid-template-rows: 87px 35px 45px 81px 38px 250px 38px auto 45px;
     grid-gap: 0px;
 }
 
@@ -1399,17 +1426,17 @@ section.magicCircle
 
     section.magicCircle > .castingTangleDice
     {
-        grid-area: 4/-5/auto/span 4;
+        grid-area: 4/-4/auto/span 2;
     }   
 
     section.magicCircle > .resultsButton
     {
-        grid-area: 5/-5/auto/span 4;
+        grid-area: 5/-4/auto/span 2;
     }
 
     section.magicCircle > .clearCircleButton
     {
-        grid-area: -4/-5/auto/span 4;
+        grid-area: -4/-4/auto/span 2;
     }
 
     section.magicCircle > button
@@ -1422,25 +1449,24 @@ section.magicCircle
 
     section.magicCircle > .resultResource
     {
-        grid-area: 1/-6/auto/span 3;
+        grid-area: 1/-7/span 2/span 2;
         height: 100%;
         width: 100%;
     }
 
     section.magicCircle > .aetherResource
     {
-        grid-area: 1/4/auto/auto;
+        grid-area: 1/4/span 2/auto;
         height: 100%;
         width: 100%;
-        margin-left: 5px;
     }
 
     section.magicCircle > .fateResource
     {
-        grid-area: 2/-7/auto/span 3;
+        grid-area: 2/-6/span 2/span 3;
         height: 100%;
         width: 100%;
-        margin-left: 5px;
+        margin-left: 3px;
     }
 
 input.resourceBox
