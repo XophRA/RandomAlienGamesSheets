@@ -2329,7 +2329,6 @@ input[type="number"].rippleBox
     .tableSpread > .speculation
     {
         grid-column: -2/auto;
-        padding-left: 20px;
     }
 
     .tableSpread > textarea.speculation
