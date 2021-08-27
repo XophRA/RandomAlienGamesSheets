@@ -973,43 +973,43 @@
                         <ol>
                             <li>
                                 <!--<ol>
-                        <li>What do you want to do?</li>
-                    </ol>-->
+                            <li>What do you want to do?</li>
+                        </ol>-->
                             </li>
                             <li>
                                 Sympathy:
                                 <!--<ol>
-                        <li>Similarity, Contagion, Naming</li>
-                    </ol>-->
+                            <li>Similarity, Contagion, Naming</li>
+                        </ol>-->
                             </li>
                             <li>
                                 Significance:
                                 <!--<ol>
-                        <li>Prestidigitation, Cantrip, Incantation</li>
-                        <li>Duel</li>
-                    </ol>-->
+                            <li>Prestidigitation, Cantrip, Incantation</li>
+                            <li>Duel</li>
+                        </ol>-->
                             </li>
                             <li>
                                 Preperation:
                                 <!--<ol>
-                        <li>Rote, Stitch, Improvised</li>
-                        <li>Scroll, Channel, Solution</li>
-                        <li>Rites</li>
-                    </ol>-->
+                            <li>Rote, Stitch, Improvised</li>
+                            <li>Scroll, Channel, Solution</li>
+                            <li>Rites</li>
+                        </ol>-->
                             </li>
                             <li>
                                 Spell Verb (Ae: not Conduit)
                                 <!--<ol>
-                        <li>Conjure</li>
-                        <li>Decay</li>
-                        <li>Dispel</li>
-                        <li>Enchant</li>
-                        <li>Manipulate</li>
-                        <li>Scry</li>
-                        <li>Summon</li>
-                        <li>Transmute
-                        <li>Ward</li>
-                    </ol>-->
+                            <li>Conjure</li>
+                            <li>Decay</li>
+                            <li>Dispel</li>
+                            <li>Enchant</li>
+                            <li>Manipulate</li>
+                            <li>Scry</li>
+                            <li>Summon</li>
+                            <li>Transmute
+                            <li>Ward</li>
+                        </ol>-->
                             </li>
                         </ol>
                     </li>
@@ -1018,23 +1018,23 @@
                         <ol>
                             <li>(Ae: Synergy Art)</li>
                             <!--<li>
-                    <ol>
-                        <li>Animaturgy</li>
-                        <li>Astromancy</li>
-                        <li>Botomancy</li>
-                        <li>Chronomancy</li>
-                        <li>Cryptoturgy</li>
-                        <li>Geomancy</li>
-                        <li>Illusion</li>
-                        <li>Necromancy</li>
-                        <li>Pyromancy</li>
-                        <li>Spatiokinesis</li>
-                        <li>Telepathy</li>
-                        <li>Tempesturgy</li>
-                        <li>Theriomancy</li>
-                        <li>Viviomany</li>
-                    </ol>
-                </li>-->
+                        <ol>
+                            <li>Animaturgy</li>
+                            <li>Astromancy</li>
+                            <li>Botomancy</li>
+                            <li>Chronomancy</li>
+                            <li>Cryptoturgy</li>
+                            <li>Geomancy</li>
+                            <li>Illusion</li>
+                            <li>Necromancy</li>
+                            <li>Pyromancy</li>
+                            <li>Spatiokinesis</li>
+                            <li>Telepathy</li>
+                            <li>Tempesturgy</li>
+                            <li>Theriomancy</li>
+                            <li>Viviomany</li>
+                        </ol>
+                    </li>-->
                         </ol>
                     </li>
                     <li>
@@ -1042,28 +1042,28 @@
                         <ol>
                             <li>Rote Components (Ae)</li>
                             <!--<li>
-                    <ol>
-                        <li>1-3 Segments</li>
-                    </ol>
-                </li>-->
+                        <ol>
+                            <li>1-3 Segments</li>
+                        </ol>
+                    </li>-->
                             <li>Enchantment Charges (Ae)</li>
                             <!--<li>
-                    <ol>
-                        <li>1-3 Segments</li>
-                    </ol>
-                </li>-->
+                        <ol>
+                            <li>1-3 Segments</li>
+                        </ol>
+                    </li>-->
                             <li>Scroll Charges (Ae)</li>
                             <!--<li>
-                    <ol>
-                        <li>1-3 Segments</li>
-                    </ol>
-                </li>-->
+                        <ol>
+                            <li>1-3 Segments</li>
+                        </ol>
+                    </li>-->
                             <li>Ritual Component (Ae)</li>
                             <!--<li>
-                    <ol>
-                        <li>1-3 Potency</li>
-                    </ol>
-                </li>-->
+                        <ol>
+                            <li>1-3 Potency</li>
+                        </ol>
+                    </li>-->
                             <li>Improvised Components (Ae per)</li>
                             <li>
                                 <ol>
@@ -1119,8 +1119,6 @@
             <!-- Magic Circle-->
             <section class="magicCircle">
 
-
-
                 <!--Spell Dice-->
                 <div class="castingDice castingSpellDice">
                     <input type="number" class="resourceBox" name="attr_castSpellDice" min="0" max="13" value="3" />
@@ -1145,6 +1143,18 @@
                 <div class="resultResource"><input type="number" name="attr_resultResource" min="0" class="resourceBox" readonly value="0" /></div>
                 <div class="aetherResource"><input type="number" name="attr_aetherResource" class="resourceBox" value="0" /></div>
                 <div class="fateResource"><input type="number" name="attr_fateResource" min="0" class="resourceBox" value="0" /></div>
+
+                <!-- Disequlibrium Surge -->
+                <div class="clockWidget">
+                    <input type="text" name="attr_surgeClock" class="clockControl" value="0" readonly />
+                    <input type="number" min="0" max="7" value="0" name="attr_surgeClock" class="clockControl" />
+                    <input type="hidden" name="attr_surgeClock" value="0" class="clockSegment7" />
+                    <span class="clock"></span>
+                    <span class="clockSpoke clockSpoke70"></span>
+                    <span class="clockSpoke clockSpoke71"></span>
+                    <span class="clockSpoke clockSpoke72"></span>
+                    <span class="clockSpoke clockSpoke73"></span>
+                </div>
             </section>
 
             <!--Dice Positions-->
