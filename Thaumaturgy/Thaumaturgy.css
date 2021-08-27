@@ -246,7 +246,7 @@ main.masterGrid
 .playerCasterSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/PlayerCasterSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/PlayerCasterSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -261,7 +261,7 @@ main.masterGrid
 .covenSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/CovenSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/CovenSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -276,7 +276,7 @@ main.masterGrid
 .mediumSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/MediumSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/MediumSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -1008,7 +1008,7 @@ main.masterGrid
 
 .ritualCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/RitualCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/RitualCard.png);
 }
 
     .ritualCard .ritualObjective
@@ -1065,7 +1065,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 14px 14px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilSegment0.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilSegment0.png);
             opacity: 1;
             border: none;
             background-color: transparent;
@@ -1076,17 +1076,17 @@ main.masterGrid
 
         .ritualCard .ritualSigil > input[value="1"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilSegment1.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilSegment1.png);
         }
 
         .ritualCard .ritualSigil > input[value="2"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilSegment2.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilSegment2.png);
         }
 
         .ritualCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilSegment3.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilSegment3.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink
@@ -1109,7 +1109,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 25px 61px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink1.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink1.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink2
@@ -1121,7 +1121,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 25px 32px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink2.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink2.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink3
@@ -1133,7 +1133,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 26px 16px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink3.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink3.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink4
@@ -1145,7 +1145,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 24px 26px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink4.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink4.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink5
@@ -1157,7 +1157,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 17px 50px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink5.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink5.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink6
@@ -1169,7 +1169,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 23px 50px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink6.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink6.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink7
@@ -1181,7 +1181,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 21px 49px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink7.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink7.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink8
@@ -1193,7 +1193,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 22px 49px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink8.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink8.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink9
@@ -1205,7 +1205,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 32px 15px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink9.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink9.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink10
@@ -1217,7 +1217,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 18px 55px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink10.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink10.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink11
@@ -1229,7 +1229,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 46px 36px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SigilLink11.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SigilLink11.png);
         }
 
         .ritualCard .ritualSigil > .sigilSegment1
@@ -1393,7 +1393,7 @@ section.magicCircle
     width: 100%;
     height: 100%;
     grid-template-columns: 12px 80px 45px 120px 1fr 100px 20px 45px 14px 66px 12px;
-    grid-template-rows: 87px 35px 45px 125px 81px 38px 250px 38px auto 80px 45px;
+    grid-template-rows: 87px 35px 45px 130px 81px 38px 150px 38px auto 80px 45px;
     grid-gap: 0px;
 }
 
@@ -2444,72 +2444,72 @@ input[type="number"].rippleBox
     /* Arcana Card Background Image*/
     .tableSpread > div > input[value="0"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_0.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_0.png);
     }
 
     .tableSpread > div > input[value="1"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_1.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_1.png);
     }
 
     .tableSpread > div > input[value="2"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_2.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_2.png);
     }
 
     .tableSpread > div > input[value="3"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_3.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_3.png);
     }
 
     .tableSpread > div > input[value="4"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_4.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_4.png);
     }
 
     .tableSpread > div > input[value="5"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_5.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_5.png);
     }
 
     .tableSpread > div > input[value="6"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_6.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_6.png);
     }
 
     .tableSpread > div > input[value="7"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_7.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_7.png);
     }
 
     .tableSpread > div > input[value="8"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_8.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_8.png);
     }
 
     .tableSpread > div > input[value="9"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_9.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_9.png);
     }
 
     .tableSpread > div > input[value="10"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_10.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_10.png);
     }
 
     .tableSpread > div > input[value="11"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_11.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_11.png);
     }
 
     .tableSpread > div > input[value="12"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_12.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_12.png);
     }
 
     .tableSpread > div > input[value="13"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/arcanaCard_13.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/arcanaCard_13.png);
     }
 
 /* Clocks */
@@ -2856,7 +2856,7 @@ input.editCog
 
 span.editCog
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/editCog.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/editCog.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -3430,7 +3430,7 @@ section > .deckHeader
 
         section > .deckHeader > input.collapseDeck + span.collapseDeck
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/CollapseDeck.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/CollapseDeck.png);
             background-repeat: no-repeat;
             background-position: center;
             opacity: 1;
@@ -3442,7 +3442,7 @@ section > .deckHeader
 
         section > .deckHeader > input.collapseDeck:checked + span.collapseDeck
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/ExpandDeck.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/ExpandDeck.png);
         }
 
 
@@ -3629,7 +3629,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
 .curseCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/CurseCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/CurseCard.png);
     background-size: 350px 250px;
     width: 350px;
     height: 250px;
@@ -3685,7 +3685,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Rote Spell Cards */
 .roteSpellCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/SpellCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/SpellCard.png);
 }
 
     .roteSpellCard .spellEquation
@@ -3727,7 +3727,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Scroll Cards */
 .scrollCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/ScrollCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/ScrollCard.png);
 }
 
     .scrollCard .spellEquation
@@ -3768,7 +3768,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Artefact Card */
 .enchantmentCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/ArtefactCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/ArtefactCard.png);
 }
 
     .enchantmentCard .formula
@@ -3829,7 +3829,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Dueling Focus Card */
 .duelingFocusCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/DuelingFocusCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/DuelingFocusCard.png);
 }
 
     .duelingFocusCard .formulaDuelingFocus
@@ -3865,7 +3865,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Puzzle Cards */
 .puzzleCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/PuzzleCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/PuzzleCard.png);
 }
 
     .puzzleCard .puzzleName
@@ -3975,7 +3975,7 @@ input[type="radio"] + span.ZeroDie
 
 input[type="radio"] + span.D10
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/D10PipFilled.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/D10PipFilled.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -3986,7 +3986,7 @@ input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.study ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/D10Pip.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/D10Pip.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -3995,7 +3995,7 @@ input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 
 input[type="radio"] + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/studyBoxFilled.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/studyBoxFilled.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -4006,7 +4006,7 @@ input[type="radio"]:checked + span.study ~ input[type="radio"] + span.study,
 input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.study,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img39/studyBox.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img40/studyBox.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
