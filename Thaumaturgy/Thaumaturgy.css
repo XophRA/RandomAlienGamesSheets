@@ -1393,7 +1393,7 @@ section.magicCircle
     width: 100%;
     height: 100%;
     grid-template-columns: 12px 80px 45px 120px 1fr 100px 20px 45px 14px 66px 12px;
-    grid-template-rows: 87px 35px 45px 130px 81px 38px 150px 38px auto 80px 45px;
+    grid-template-rows: 87px 35px 45px 75px 80px 10px 38px 160px 38px auto 65px 45px;
     grid-gap: 0px;
 }
 
@@ -1420,7 +1420,7 @@ section.magicCircle
 
     section.magicCircle > .castingButton
     {
-        grid-area: 6/2/auto/auto;
+        grid-area: 7/2/auto/auto;
     }
 
     section.magicCircle > .castingTangleDice
@@ -1430,7 +1430,7 @@ section.magicCircle
 
     section.magicCircle > .resultsButton
     {
-        grid-area: 6/-4/auto/span 2;
+        grid-area: 7/-4/auto/span 2;
     }
 
     section.magicCircle > .clearCircleButton
