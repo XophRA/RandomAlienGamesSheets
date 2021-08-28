@@ -2982,7 +2982,7 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr 120px 45px;
-    grid-template-rows: 20px 1fr 37px;
+    grid-template-rows: 30px 1fr 30px;
 }
 
     .aetherWidget > .aetherTracker
@@ -3000,7 +3000,7 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr 120px 45px;
-    grid-template-rows: 20px 1fr 37px;
+    grid-template-rows: 26px 1fr 20px;
 }
 
     .studyCreditWidget > .creditTracker
@@ -3217,14 +3217,14 @@ input.editToggle[value="1"] + .editMenu
 {
     display: grid;
     grid-template-rows: 45px 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 20px 1fr;
     width: 100%;
     height: 100%;
 }
 
     .tagWidget > textarea.tags
     {
-        grid-area: 2/1/-1/-1;
+        grid-area: 2/2/-1/-1;
         width: 100%;
         height: 100%;
     }
