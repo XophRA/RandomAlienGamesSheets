@@ -99,8 +99,7 @@
         <div class="playerCasterSheetGrid">
             <!-- True Name -->
             <section class="trueNameWidget">
-                <div class="trueNamePic"><img name="attr_trueName" class="trueNamePic"/></div>
-                <div class="trueNamePhrase"><textarea name="attr_trueNamePhrase" class="trueNamePhrase" placeholder="write a phrase summarising your true name"></textarea></div>
+                <textarea name="attr_trueNamePhrase" placeholder="a pentagram – five symbols depicting your true name"></textarea>
             </section>
 
             <!-- Aether -->
@@ -115,13 +114,16 @@
 
             <!-- Description -->
             <section class="descriptionWidget">
-                <div class="scholarlyName"><input type="text" name="attr_character_name" class="titlefill"/></div>
                 <input type="hidden" name="attr_level" />
-                <div class="rankLevel"><input type="text" name="attr_rankLevel" readonly /></div>
-                <div class="pronouns"><input type="text" name="attr_pronouns"/> </div>
-                <div class="apprenticeship"><input type="text" name="attr_apprenticeship" /></div>
-                <div class="characteristics"><textarea name="attr_characteristic" placeholder="One aspect that indicates your abilities"/></div>
-                <div class="description"><textarea name="attr_description" placeholder="Three things that describe you" /></div>
+                <input type="text" name="attr_rankLevel" class="rankLevel titlefill" readonly />
+                <input type="text" name="attr_givenName" class="givenName titlefill" />
+                <input type="text" name="attr_academicName" class="academicName titlefill" />
+                <input type="text" name="attr_questName" class="questName titlefill" />
+                <input type="text" name="attr_pronouns" class="pronouns" />
+                <input type="hidden" name="attr_character_name"/>
+                <input type="text" name="attr_apprenticeship" class="apprenticeship" />
+                <textarea name="attr_characteristic" class="characteristics" placeholder="One aspect that indicates your mundane capabilities" />
+                <textarea name="attr_description" class="description" placeholder="Three things that describe you" />
             </section>
 
             <!-- Intentions -->
@@ -430,7 +432,6 @@
                     <span class="clockSpoke clockSpoke136"></span>
                 </div>
                 <div class="concentrationWidget">
-                    <h3>Concentration</h3>
                     <select name="attr_concentration">
                         <option>Calm: no dice</option>
                         <option>Strained: 1 tangle die</option>
