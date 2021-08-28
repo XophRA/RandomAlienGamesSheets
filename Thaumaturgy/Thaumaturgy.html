@@ -1939,10 +1939,10 @@
     /* Global Attributes */
     var globalAttributes = [];//Global Array for Storage of Player Caster Level
 
-    /* Set Defaults and Player Caster Level to Coven Level */
-    on("sheet:opened change:covenlevel", (event) =>
+    /* Set Defaults, name, and Player Caster Level to Coven Level */
+    on("sheet:opened change:covenlevel change:givenname change:academicname change:questname change:questname change:pronouns", (event) =>
     {
-        getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Disruption", "Danger","Divergence"], function (values)
+        getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Disruption", "Danger", "Divergence", "givenName", "academicName", "questName", "pronouns","character_name"], function (values)
         {
             const setObj = {};
             let selectedSheet = parseInt(values.selectedSheet) || 0;
@@ -2001,18 +2001,18 @@
                 globalAttributes.covenlevel = covenLevel;
                 console.log(globalAttributes);
             }
-            /* Set Level elements on Player Caster Sheets*/
+            /* Set name and Level elements on Player Caster Sheets*/
             else if (selectedSheet == 1)
             {
                 //Set RankLevel
-                let rankLevel = "—";
+                let rankLevel = "";
                 let curseNumber = 2;
 
                 covenLevel = parseInt(globalAttributes.covenlevel) || 0;
 
                 if (covenLevel < 0)
                 {
-                    rankLevel = "—";
+                    rankLevel = "";
                 }
                 else if (covenLevel == 0)
                 {
@@ -2041,6 +2041,43 @@
                 setObj.rankLevel = rankLevel;
                 setObj.curseNumber = curseNumber;
                 setObj.level = covenLevel;
+
+                //Set Name
+                name = values.character_name;
+
+                let nameArray = [];
+
+                if (covenLevel >= 0 && (values.givenName || values.academicName || values.questName))
+                {
+                    nameArray.push(rankLevel);
+                }
+                
+                if (values.givenName)
+                {
+                    nameArray.push(values.givenName);
+                }
+
+                if (values.academicName)
+                {
+                    nameArray.push(values.academicName);
+                }
+
+                if (values.questName)
+                {
+                    nameArray.push(values.questName);
+                }
+
+                if (values.pronouns && (values.givenName || values.academicName || values.questName))
+                {
+                    nameArray.push(values.pronouns);
+                }
+
+                if (nameArray.length > 0)
+                {
+                    name = nameArray.join(" ");
+                }
+
+                setObj.character_name = name;
 
                 //Set Attunement Slots
                 let attuneArtefactSlots = 1;
@@ -2618,41 +2655,5 @@
         })
     };
 
-        //Ripple Amplitude Trigger Surge (In process) Turns numbers red when equal to 5
-        //on("change:reactorcharge change:reactorovercharge change:shipreactorcharge change:shipreactorovercharge change:tugreactorcharge change:tugreactorovercharge", (event) =>
-        //{
-        //    let getArray = []; //An Array for all ripples to get
-
-        //    //Get all Ripple Totals
-        //    for (let num = 1; num <= 13; num++)
-        //    {
-        //        getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
-        //    }
-
-        //    getAttrs(getArray, function (values)
-        //    {
-        //        const setObj = {};
-
-        //        //Portable Reactor
-        //        let portableReactorCapacity = parseInt(values.portableReactor) || 3;
-        //        let portableReactorCharge = parseInt(values.ReactorCharge) || 0;
-        //        let portableReactorOvercharge = parseInt(values.ReactorOvercharge) || 0;
-
-        //        if (portableReactorCharge > portableReactorCapacity)
-        //        {
-        //            setObj.ReactorCharge = portableReactorCapacity;
-        //            setObj.ReactorOvercharge = 1;
-        //        }
-        //        else if (portableReactorOvercharge == 1 && (portableReactorCharge < portableReactorCapacity))
-        //        {
-        //            setObj.ReactorCharge = portableReactorCharge + 1;
-        //            setObj.ReactorOvercharge = 0;
-        //        }
-
-
-
-        //        setAttrs(setObj);
-        //    });
-        //});
 
 </script>
