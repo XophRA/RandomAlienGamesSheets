@@ -3618,7 +3618,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     background-size: 350px 250px;
     width: 350px;
     height: 250px;
-    grid-template-rows: 10px repeat(13,17px) 1fr;
+    grid-template-rows: 10px repeat(12,17px) 1fr;
     margin: 0;
 }
 
@@ -3639,32 +3639,32 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .curseCard > textarea.statusEffect
     {
-        grid-row: 4/span 5;
+        grid-row: 4/span 4;
     }
 
     .curseCard > h4.curseRestoration
     {
-        grid-area: 9/1/auto/auto;
+        grid-area: 8/1/auto/auto;
     }
 
     .curseCard > input[type=text].curseRestoration
     {
-        grid-area: 9/2/auto/auto;
+        grid-area: 8/2/auto/auto;
     }
 
     .curseCard > input[type=text].curseRestorationSynergy
     {
-        grid-area: 9/3/auto/auto;
+        grid-area: 8/3/auto/auto;
     }
 
     .curseCard > h4.restorationComponents
     {
-        grid-row: 10/auto;
+        grid-row: 9/auto;
     }
 
     .curseCard > textarea.restorationComponents
     {
-        grid-row: 10/-1;
+        grid-row: 9/-2;
     }
 
 /* Rote Spell Cards */
@@ -3706,7 +3706,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .roteSpellCard textarea.spellEffect
     {
-        grid-row: 10/-1;
+        grid-row: 10/-2;
     }
 
 /* Scroll Cards */
@@ -3747,7 +3747,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .scrollCard textarea.spellEffect
     {
-        grid-row: 9/-1;
+        grid-row: 9/-2;
     }
 
 /* Artefact Card */
@@ -3839,7 +3839,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .duelingFocusCard textarea.form
     {
-        grid-row: 8/-1;
+        grid-row: 8/-2;
     }
 
 /* Puzzle Cards */
