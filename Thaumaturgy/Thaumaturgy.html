@@ -501,9 +501,9 @@
                 </div>
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                 <div class="deck deck3">
-                    <fieldset class="repeating_enchantmentcard">
+                    <fieldset class="repeating_artefactcard">
                         <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
-                        <div class="card customCard enchantmentCard">
+                        <div class="card customCard artefactCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
                             <h4 class="potency">Potency</h4>
@@ -515,11 +515,11 @@
                             <h4 class="manoeuvre">Manoeuvre</h4>
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
-                            <textarea class="form" name="attr_enchantmentForm" />
+                            <textarea class="form" name="attr_artefactForm" />
                             <h4 class="continuousEffect">Continuous</h4>
-                            <textarea class="continuousEffect" name="attr_enchantmentcontinuousEffect" />
+                            <textarea class="continuousEffect" name="attr_artefactcontinuousEffect" />
                             <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_enchantmentEffect" />
+                            <textarea class="spellEffect" name="attr_artefactEffect" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_artefactChargeClock" class="clockControl" value="0" readonly />
@@ -1795,8 +1795,8 @@
                 </div>
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                 <div class="deck deck3">
-                    <fieldset class="repeating_enchantmentcard">
-                        <div class="card customCard enchantmentCard">
+                    <fieldset class="repeating_artefactcard">
+                        <div class="card customCard artefactCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
                             <h4 class="potency">Potency</h4>
@@ -1808,11 +1808,11 @@
                             <h4 class="manoeuvre">Manoeuvre</h4>
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
-                            <textarea class="form" name="attr_enchantmentForm" />
+                            <textarea class="form" name="attr_artefactForm" />
                             <h4 class="continuousEffect">Continuous</h4>
-                            <textarea class="continuousEffect" name="attr_enchantmentcontinuousEffect" />
+                            <textarea class="continuousEffect" name="attr_artefactcontinuousEffect" />
                             <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_enchantmentEffect" />
+                            <textarea class="spellEffect" name="attr_artefactEffect" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
@@ -2509,7 +2509,7 @@
 
     const clockDetails = [//An array of the attributes to work with for repeating sections. In this case, the clocks.
         {
-            section: 'repeating_enchantmentcard',//the section name
+            section: 'repeating_artefactcard',//the section name
             fields: ['artefactChargeClock']//Array of attributes to be gotten/worked with
         },
         {

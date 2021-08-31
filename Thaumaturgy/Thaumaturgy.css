@@ -3751,57 +3751,57 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     }
 
 /* Artefact Card */
-.enchantmentCard
+.artefactCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img43/ArtefactCard.png);
 }
 
-    .enchantmentCard .formula
+    .artefactCard .formula
     {
         grid-row: 2/auto;
     }
 
-    .enchantmentCard .manoeuvre
+    .artefactCard .manoeuvre
     {
         grid-row: 3/auto;
     }
 
-    .enchantmentCard h4.spellComponents
+    .artefactCard h4.spellComponents
     {
         grid-row: 4/auto;
     }
 
-    .enchantmentCard .clockWidget
+    .artefactCard .clockWidget
     {
         grid-row: 4/span 4;
     }
 
-    .enchantmentCard h4.form
+    .artefactCard h4.form
     {
         grid-row: 8/auto;
     }
 
-    .enchantmentCard textarea.form
+    .artefactCard textarea.form
     {
         grid-row: 8/span 3;
     }
 
-    .enchantmentCard h4.continuousEffect
+    .artefactCard h4.continuousEffect
     {
         grid-row: 11/auto;
     }
 
-    .enchantmentCard textarea.continuousEffect
+    .artefactCard textarea.continuousEffect
     {
         grid-row: 11/span 3;
     }
 
-    .enchantmentCard h4.spellEffect
+    .artefactCard h4.spellEffect
     {
         grid-row: 14/auto;
     }
 
-    .enchantmentCard textarea.spellEffect
+    .artefactCard textarea.spellEffect
     {
         grid-row: 14/-1;
     }
