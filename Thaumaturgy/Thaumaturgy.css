@@ -3786,12 +3786,12 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 8/span 3;
     }
 
-    .enchantmentCard h4.continousEffect
+    .enchantmentCard h4.continuousEffect
     {
         grid-row: 11/auto;
     }
 
-    .enchantmentCard textarea.continousEffect
+    .enchantmentCard textarea.continuousEffect
     {
         grid-row: 11/span 3;
     }
