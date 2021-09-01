@@ -115,11 +115,11 @@
             <!-- Description -->
             <section class="descriptionWidget">
                 <input type="hidden" name="attr_level" />
-                <input type="text" name="attr_rankLevel" class="rankLevel titlefill" readonly />
+                <input type="text" name="attr_rankLevel" class="rankLevel" readonly />
                 <input type="text" name="attr_givenName" class="givenName titlefill" />
                 <input type="text" name="attr_academicName" class="academicName titlefill" />
                 <input type="text" name="attr_questName" class="questName titlefill" />
-                <input type="text" name="attr_pronouns" class="pronouns" />
+                <input type="text" name="attr_pronouns" class="pronouns titlefill" />
                 <input type="hidden" name="attr_character_name"/>
                 <input type="text" name="attr_apprenticeship" class="apprenticeship" />
                 <textarea name="attr_characteristic" class="characteristics" placeholder="One aspect that indicates your mundane capabilities" />
@@ -506,8 +506,6 @@
                         <div class="card customCard artefactCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
-                            <h4 class="manoeuvre">Manoeuvre</h4>
-                            <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_artefactForm" />
                             <h4 class="continuousEffect">Continuous</h4>
@@ -539,6 +537,8 @@
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_formDuelingFocus" />
+                            <h4 class="continuousEffect">Continuous</h4>
+                            <textarea class="continuousEffect" name="attr_duelingFocusContinuousEffect" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
@@ -1793,8 +1793,6 @@
                         <div class="card customCard artefactCard">
                             <h4 class="formula">Formula</h4>
                             <input type="text" class="formula" name="attr_formula" />
-                            <h4 class="manoeuvre">Manoeuvre</h4>
-                            <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_artefactForm" />
                             <h4 class="continuousEffect">Continuous</h4>
@@ -1821,6 +1819,8 @@
                             <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
                             <h4 class="form">Form</h4>
                             <textarea class="form" name="attr_formDuelingFocus" />
+                            <h4 class="continuousEffect">Continuous</h4>
+                            <textarea class="continuousEffect" name="attr_duelingFocusContinuousEffect" />
                             <h4 class="spellComponents">Charges</h4>
                             <div class="clockWidget">
                                 <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />

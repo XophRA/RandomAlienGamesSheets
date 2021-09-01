@@ -3761,49 +3761,44 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 2/auto;
     }
 
-    .artefactCard .manoeuvre
+    .artefactCard h4.spellComponents
     {
         grid-row: 3/auto;
     }
 
-    .artefactCard h4.spellComponents
-    {
-        grid-row: 4/auto;
-    }
-
     .artefactCard .clockWidget
     {
-        grid-row: 4/span 4;
+        grid-row: 3/span 4;
     }
 
     .artefactCard h4.form
     {
-        grid-row: 8/auto;
+        grid-row: 7/auto;
     }
 
     .artefactCard textarea.form
     {
-        grid-row: 8/span 3;
+        grid-row: 7/span 3;
     }
 
     .artefactCard h4.continuousEffect
     {
-        grid-row: 11/auto;
+        grid-row: 10/auto;
     }
 
     .artefactCard textarea.continuousEffect
     {
-        grid-row: 11/span 3;
+        grid-row: 10/span 3;
     }
 
     .artefactCard h4.spellEffect
     {
-        grid-row: 14/auto;
+        grid-row: 13/auto;
     }
 
     .artefactCard textarea.spellEffect
     {
-        grid-row: 14/-2;
+        grid-row: 13/-2;
     }
 
 /* Dueling Focus Card */
@@ -3839,7 +3834,17 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .duelingFocusCard textarea.form
     {
-        grid-row: 8/-2;
+        grid-row: 8/span 4;
+    }
+
+    .duelingFocusCard h4.continuousEffect
+    {
+        grid-row: 12/auto;
+    }
+
+    .duelingFocusCard textarea.continuousEffect
+    {
+        grid-row: 12/-2;
     }
 
 /* Puzzle Cards */
