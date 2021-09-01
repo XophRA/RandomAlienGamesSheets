@@ -3865,17 +3865,17 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .puzzleCard textarea.puzzleDescription
     {
-        grid-row: 3/span 4;
+        grid-row: 3/span 3;
     }
 
     .puzzleCard .puzzlePeril
     {
-        grid-row: 7/auto;
+        grid-row: 6/auto;
     }
 
     .puzzleCard textarea.puzzlePeril
     {
-        grid-row: 7/span 2;
+        grid-row: 6/span 3;
     }
 
     .puzzleCard .solution
