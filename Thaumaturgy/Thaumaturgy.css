@@ -3875,27 +3875,37 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .puzzleCard textarea.puzzlePeril
     {
-        grid-row: 7/span 3;
+        grid-row: 7/span 2;
     }
 
     .puzzleCard .solution
     {
-        grid-row: 10/auto;
+        grid-row: 9/auto;
     }
 
     .puzzleCard .solutionSynergy
     {
-        grid-row: 11/auto;
+        grid-row: 10/auto;
     }
 
     .puzzleCard .solutionComponents
     {
-        grid-row: 12/auto;
+        grid-row: 11/auto;
     }
 
     .puzzleCard textarea.solutionComponents
     {
-        grid-row: 12/span 3;
+        grid-row: 11/span 2;
+    }
+
+    .puzzleCard .solutionComponentsFalse
+    {
+        grid-row: 13/auto;
+    }
+
+    .puzzleCard textarea.solutionComponentsFalse
+    {
+        grid-row: 13/span 2;
     }
 
     .puzzleCard .solutionRewards
