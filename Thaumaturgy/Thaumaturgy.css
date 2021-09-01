@@ -3865,32 +3865,42 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .puzzleCard textarea.puzzleDescription
     {
-        grid-row: 3/span 3;
+        grid-row: 3/span 4;
     }
 
     .puzzleCard .puzzlePeril
     {
-        grid-row: 6/auto;
+        grid-row: 7/auto;
     }
 
     .puzzleCard textarea.puzzlePeril
     {
-        grid-row: 6/span 3;
+        grid-row: 7/span 3;
     }
 
     .puzzleCard .solution
     {
-        grid-row: 9/auto;
+        grid-row: 10/auto;
     }
 
     .puzzleCard .solutionSynergy
     {
-        grid-row: 10/auto;
+        grid-row: 11/auto;
+    }
+
+    .puzzleCard .solutionComponents
+    {
+        grid-row: 12/auto;
+    }
+
+    .puzzleCard textarea.solutionComponents
+    {
+        grid-row: 12/span 3;
     }
 
     .puzzleCard .solutionRewards
     {
-        grid-row: 14/-1;
+        grid-row: 15/-2;
     }
 
 
