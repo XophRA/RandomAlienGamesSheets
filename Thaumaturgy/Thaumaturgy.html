@@ -455,6 +455,7 @@
                 <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
                 <div class="deck deck1">
                     <fieldset class="repeating_rotespellcard">
+                        <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
                         <div class="card customCard roteSpellCard">
                             <h4 class="spellEquation">Equation</h4>
                             <input type="text" class="spellEquation" name="attr_spellEquation" />
@@ -466,6 +467,10 @@
                             <textarea class="spellComponents" name="attr_spellComponents" />
                             <h4 class="spellEffect">Spell Effect</h4>
                             <textarea class="spellEffect" name="attr_spellEffect" />
+                            <div class="attunement">
+                                <h4>Memorise</h4>
+                                <input type="checkbox" value="1" name="attr_attunedCard" />
+                            </div>
                         </div>
                     </fieldset>
                 </div>
