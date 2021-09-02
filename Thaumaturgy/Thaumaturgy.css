@@ -4494,19 +4494,9 @@ div.npckey
 }
 
 /* Fatekeeper Deck */
-header.fatekeeperDeck
-{
-    grid-area: 1/1/auto/-1;
-    display: grid;
-    width: 850px;
-    height: 100%;
-    grid-template-columns: 85px auto;
-    grid-template-rows: 1fr;
-}
 
 section.fatekeeperDeck
 {
-    grid-area: 2/1/auto/-1;
     display: grid;
     width: 850px;
     height: 100%;
@@ -4515,7 +4505,6 @@ section.fatekeeperDeck
     grid-gap: 3px;
     justify-items: start;
     align-items: start;
-    padding-top: 25px;
 }
 
     section.fatekeeperDeck > .fatekeeperDeckAspects
