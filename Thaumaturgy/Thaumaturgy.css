@@ -253,7 +253,7 @@ main.masterGrid
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 400px 250px 1fr;
-    grid-template-rows: 312px 265px 175px 306px 159px 1fr 490px auto;
+    grid-template-rows: 312px 235px 205px 306px 159px 1fr 490px auto;
     justify-items: start;
     align-items: start;
 }
@@ -2975,7 +2975,7 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr 120px 45px;
-    grid-template-rows: 16px 1fr 42px;
+    grid-template-rows: 48px 1fr 40px;
 }
 
     .aetherWidget > .aetherTracker
