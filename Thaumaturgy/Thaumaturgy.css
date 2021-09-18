@@ -761,8 +761,9 @@ main.masterGrid
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: 1fr 275px 1fr;
+        grid-template-columns: 103px 275px 1fr;
         grid-template-rows: 28px 1fr;
+        margin-top: 57px;
     }
 
         .ritualWidget .hand > .deckHeader,
@@ -3208,6 +3209,7 @@ input.editToggle[value="1"] + .editMenu
 .playerCasterSheetGrid > .tagWidget
 {
     grid-area: 4/1/auto/auto;
+    width: 92%;
 }
 
 .tagWidget
@@ -3307,8 +3309,9 @@ input.editToggle[value="1"] + .editMenu
     .grimoireWidget > .twoHand
     {
         grid-column: 3/auto;
-        grid-template-columns: 275px 12px 275px;
+        grid-template-columns: 275px 6px 275px;
         min-height: 503px;
+        margin-left: 6px;
     }
 
         .grimoireWidget > .twoHand > .deck1
@@ -3422,6 +3425,7 @@ section > .hand > .deck
     flex-direction: column;
     grid-row: 2/auto;
     width: 100%;
+    margin-top: 4px;
 }
 
 section > .hand > .deckHeader
@@ -3542,6 +3546,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 .playerCasterSheetGrid > .curseWidget
 {
     grid-area: 4/2/span 2/span 2;
+    margin-left: -20px;
 }
 
 .covenSheetGrid > .curseWidget
@@ -3559,10 +3564,10 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 .curseWidget
 {
     display: grid;
-    width: 100%;
+    width: 475px;
     height: 100%;
-    grid-template-columns: 1fr 26px 30px;
-    grid-template-rows: 50px repeat(8, 40px) 1fr;
+    grid-template-columns: 1fr 26px;
+    grid-template-rows: 50px repeat(8, 33px) 1fr;
 }
     /* Enable curse3, curse4, & curse5 */
     .curseWidget > input[value="3"].curseNumber ~ .curse3,
@@ -3574,36 +3579,36 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     /* Curse Card Layout */
     .curseWidget > .curse1
     {
-        grid-area: 2/1/span 5/-2;
+        grid-area: 2/1/span 5/-1;
     }
 
     .curseWidget > .curse2
     {
-        grid-area: 3/1/span 5/-2;
+        grid-area: 3/1/span 5/-1;
     }
 
     .curseWidget > .curse3
     {
-        grid-area: 4/1/span 5/-2;
+        grid-area: 4/1/span 5/-1;
         display: none;
     }
 
     .curseWidget > .curse4
     {
-        grid-area: 5/1/span 5/-2;
+        grid-area: 5/1/span 5/-1;
         display: none;
     }
 
     .curseWidget > .curse5
     {
-        grid-area: 6/1/span 5/-2;
+        grid-area: 6/1/span 5/-1;
         display: none;
     }
 
     /* Sort the curses to be able to look at them all */
     .curseWidget > button.sortCurses
     {
-        grid-area: 1/-3/auto/auto;
+        grid-area: 1/-2/auto/auto;
         width: 26px;
         height: 20px;
         background-color: white;
@@ -3880,6 +3885,47 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     .duelingFocusCard textarea.continuousEffect
     {
         grid-row: 12/-2;
+    }
+
+/* Consumable Cards */
+.consumableCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/consumableCard.png);
+}
+
+    .consumableCard .spellEquation
+    {
+        grid-row: 2/auto;
+    }
+
+    .consumableCard .spellArt
+    {
+        grid-row: 3/auto;
+    }
+
+    .consumableCard .spellArtSynergy
+    {
+        grid-row: 4/auto;
+    }
+
+    .consumableCard h4.spellComponents
+    {
+        grid-row: 5/auto;
+    }
+
+    .consumableCard .clockWidget
+    {
+        grid-row: 5/span 4;
+    }
+
+    .consumableCard h4.spellEffect
+    {
+        grid-row: 9/auto;
+    }
+
+    .consumableCard textarea.spellEffect
+    {
+        grid-row: 9/-2;
     }
 
 /* Puzzle Cards */
