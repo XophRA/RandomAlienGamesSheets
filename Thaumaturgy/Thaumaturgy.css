@@ -246,14 +246,14 @@ main.masterGrid
 .playerCasterSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/PlayerCasterSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/PlayerCasterSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 400px 250px 1fr;
-    grid-template-rows: 312px 235px 205px 306px 159px 1fr 490px auto;
+    grid-template-rows: 312px 235px 205px 306px 159px auto 550px auto;
     justify-items: start;
     align-items: start;
 }
@@ -261,14 +261,14 @@ main.masterGrid
 .covenSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/CovenSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/CovenSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
-    grid-template-columns: 1fr 370px;
-    grid-template-rows: 460px 1fr 1010px auto;
+    grid-gap: 0px;
+    grid-template-columns: 43% 57%;
+    grid-template-rows: 490px auto 1010px auto;
     justify-items: start;
     align-items: start;
 }
@@ -276,7 +276,7 @@ main.masterGrid
 .mediumSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/MediumSheet.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/MediumSheet.png);
     background-size: 850px 2362px;
     background-repeat: no-repeat;
     width: 100%;
@@ -742,23 +742,52 @@ main.masterGrid
         grid-row: 15/auto;
     }
 
-/* Ascension */
-.ascensionWidget
+/* Rituals */
+.ritualWidget
 {
-    grid-area: 2/1/auto/auto;
+    grid-area: 2/1/auto/-1;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(19, 20px) 1fr;
-    grid-template-rows: 42px repeat(22, 20px) 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin-top: 0;
+    min-height: 543px;
 }
 
-    .ascensionWidget .editCog
+    .ritualWidget .hand
+    {
+        grid-area: 1/2/auto/auto;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr 275px 1fr;
+        grid-template-rows: 28px 1fr;
+    }
+
+        .ritualWidget .hand > .deckHeader,
+        .ritualWidget .hand > .deck
+        {
+            grid-column: 2/auto;
+        }
+
+/* Ascension */
+.ascensionDeck
+{
+    grid-area: 1/1/auto/auto;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(20, 20px) 1fr;
+    grid-template-rows: 42px repeat(22, 26px) 1fr;
+}
+
+    .ascensionDeck .editCog
     {
         grid-area: 1/-3/2/-2;
     }
 
-    .ascensionWidget .editAscension
+    .ascensionDeck .editAscension
     {
         grid-area: 1/1/-1/-1;
         display: grid;
@@ -766,29 +795,29 @@ main.masterGrid
         grid-template-rows: 78px repeat(12, 30px) 1fr;
     }
 
-        .ascensionWidget .editAscension > .levelControl
+        .ascensionDeck .editAscension > .levelControl
         {
             grid-row: 2/auto;
             align-self: center;
         }
 
-        .ascensionWidget .editAscension > div.levelControl
+        .ascensionDeck .editAscension > div.levelControl
         {
             grid-column: 2/auto;
         }
 
-        .ascensionWidget .editAscension > input.levelControl
+        .ascensionDeck .editAscension > input.levelControl
         {
             grid-column: 3/auto;
         }
 
-        .ascensionWidget .editAscension > .ascensionClear
+        .ascensionDeck .editAscension > .ascensionClear
         {
             grid-area: -4/4/auto/auto;
         }
 
     /* Level Numbers */
-    .ascensionWidget .level
+    .ascensionDeck .level
     {
         display: none; /* Intially Level Number off*/
         font-family: "Fredericka the Great", cursive;
@@ -798,210 +827,189 @@ main.masterGrid
         line-height: 40px;
     }
 
-        .ascensionWidget .level.lvl1
+        .ascensionDeck .level.lvl1
         {
             grid-area: 2/-4/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl2
+        .ascensionDeck .level.lvl2
         {
             grid-area: 5/-3/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl3
+        .ascensionDeck .level.lvl3
         {
             grid-area: 8/-3/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl4
+        .ascensionDeck .level.lvl4
         {
             grid-area: 14/-4/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl5
+        .ascensionDeck .level.lvl5
         {
             grid-area: 17/-3/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl6
+        .ascensionDeck .level.lvl6
         {
             grid-area: 20/-4/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl7
+        .ascensionDeck .level.lvl7
         {
             grid-area: 22/-6/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl8
+        .ascensionDeck .level.lvl8
         {
             grid-area: 22/7/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl9
+        .ascensionDeck .level.lvl9
         {
             grid-area: 22/4/span 2/auto;
         }
 
-        .ascensionWidget .level.lvl10
+        .ascensionDeck .level.lvl10
         {
             grid-area: 18/2/span 2/span 2;
         }
 
-        .ascensionWidget .level.lvl11
+        .ascensionDeck .level.lvl11
         {
             grid-area: 11/2/span 2/span 2;
         }
 
-        .ascensionWidget .level.lvl12
+        .ascensionDeck .level.lvl12
         {
             grid-area: 8/2/span 2/span 2;
         }
 
-        .ascensionWidget .level.lvl13
+        .ascensionDeck .level.lvl13
         {
             grid-area: 4/3/span 2/span 2;
         }
     /* Visability lavel 1*/
-    .ascensionWidget input[value="1"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="1"].levelControl ~ .lvl1,
     /* Visability lavel 2*/
-    .ascensionWidget input[value="2"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="2"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="2"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="2"].levelControl ~ .lvl2,
     /* Visability lavel 3*/
-    .ascensionWidget input[value="3"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="3"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="3"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="3"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="3"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="3"].levelControl ~ .lvl3,
     /* Visability lavel 4*/
-    .ascensionWidget input[value="4"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="4"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="4"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="4"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="4"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="4"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="4"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="4"].levelControl ~ .lvl4,
     /* Visability lavel 5*/
-    .ascensionWidget input[value="5"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="5"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="5"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="5"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="5"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="5"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="5"].levelControl ~ .lvl5,
     /* Visability lavel 6*/
-    .ascensionWidget input[value="6"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="6"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="6"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="6"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="6"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="6"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="6"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="6"].levelControl ~ .lvl6,
     /* Visability lavel 7*/
-    .ascensionWidget input[value="7"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="7"].levelControl ~ .lvl7,
+    .ascensionDeck input[value="7"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="7"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="7"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="7"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="7"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="7"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="7"].levelControl ~ .lvl7,
     /* Visability lavel 8*/
-    .ascensionWidget input[value="8"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="8"].levelControl ~ .lvl8,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl7,
+    .ascensionDeck input[value="8"].levelControl ~ .lvl8,
     /* Visability lavel 9*/
-    .ascensionWidget input[value="9"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="9"].levelControl ~ .lvl9,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl7,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl8,
+    .ascensionDeck input[value="9"].levelControl ~ .lvl9,
     /* Visability lavel 10*/
-    .ascensionWidget input[value="10"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="10"].levelControl ~ .lvl10,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl7,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl8,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl9,
+    .ascensionDeck input[value="10"].levelControl ~ .lvl10,
     /* Visability lavel 11*/
-    .ascensionWidget input[value="11"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl10,
-    .ascensionWidget input[value="11"].levelControl ~ .lvl11,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl7,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl8,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl9,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl10,
+    .ascensionDeck input[value="11"].levelControl ~ .lvl11,
     /* Visability lavel 12*/
-    .ascensionWidget input[value="12"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl10,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl11,
-    .ascensionWidget input[value="12"].levelControl ~ .lvl12,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl7,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl8,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl9,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl10,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl11,
+    .ascensionDeck input[value="12"].levelControl ~ .lvl12,
     /* Visability lavel 13*/
-    .ascensionWidget input[value="13"].levelControl ~ .lvl1,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl2,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl3,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl4,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl5,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl6,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl7,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl8,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl9,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl10,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl11,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl12,
-    .ascensionWidget input[value="13"].levelControl ~ .lvl13
+    .ascensionDeck input[value="13"].levelControl ~ .lvl1,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl2,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl3,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl4,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl5,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl6,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl7,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl8,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl9,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl10,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl11,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl12,
+    .ascensionDeck input[value="13"].levelControl ~ .lvl13
     {
         display: initial;
     }
 
     /* Ascension Card */
-    .ascensionWidget .ascensionCard
+    .ascensionDeck .ascensionCard
     {
         grid-area: 3/5/span 18/span 13;
     }
 
 
 /* Ritual Card */
-.ritualWidget
-{
-    grid-area: 2/2/auto/auto;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr 250px 1fr;
-    grid-template-rows: 42px 30px 1fr;
-    margin-top: 2px;
-}
-
-    .ritualWidget .deckHeader
-    {
-        grid-area: 2/2/auto/auto;
-    }
-
-    .ritualWidget .deck
-    {
-        grid-area: 3/2/auto/auto;
-    }
-
 .ritualCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/RitualCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/RitualCard.png);
 }
 
     .ritualCard .ritualObjective
@@ -1058,7 +1066,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 14px 14px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilSegment0.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilSegment0.png);
             opacity: 1;
             border: none;
             background-color: transparent;
@@ -1069,17 +1077,17 @@ main.masterGrid
 
         .ritualCard .ritualSigil > input[value="1"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilSegment1.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilSegment1.png);
         }
 
         .ritualCard .ritualSigil > input[value="2"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilSegment2.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilSegment2.png);
         }
 
         .ritualCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilSegment3.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilSegment3.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink
@@ -1102,7 +1110,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 25px 61px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink1.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink1.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink2
@@ -1114,7 +1122,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 25px 32px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink2.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink2.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink3
@@ -1126,7 +1134,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 26px 16px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink3.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink3.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink4
@@ -1138,7 +1146,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 24px 26px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink4.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink4.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink5
@@ -1150,7 +1158,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 17px 50px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink5.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink5.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink6
@@ -1162,7 +1170,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 23px 50px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink6.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink6.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink7
@@ -1174,7 +1182,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 21px 49px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink7.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink7.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink8
@@ -1186,7 +1194,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 22px 49px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink8.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink8.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink9
@@ -1198,7 +1206,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 32px 15px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink9.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink9.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink10
@@ -1210,7 +1218,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 18px 55px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink10.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink10.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink11
@@ -1222,7 +1230,7 @@ main.masterGrid
             background-repeat: no-repeat;
             background-position: center;
             background-size: 46px 36px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SigilLink11.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SigilLink11.png);
         }
 
         .ritualCard .ritualSigil > .sigilSegment1
@@ -1388,6 +1396,7 @@ section.magicCircle
     grid-template-columns: 12px 80px 45px 120px 1fr 100px 20px 45px 14px 66px 12px;
     grid-template-rows: 87px 35px 45px 75px 80px 10px 38px 160px 38px auto 65px 45px;
     grid-gap: 0px;
+    z-index: 7;
 }
 
     section.magicCircle > .castingDice
@@ -2441,72 +2450,72 @@ input[type="number"].rippleBox
     /* Arcana Card Background Image*/
     .tableSpread > div > input[value="0"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_0.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_0.png);
     }
 
     .tableSpread > div > input[value="1"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_1.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_1.png);
     }
 
     .tableSpread > div > input[value="2"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_2.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_2.png);
     }
 
     .tableSpread > div > input[value="3"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_3.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_3.png);
     }
 
     .tableSpread > div > input[value="4"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_4.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_4.png);
     }
 
     .tableSpread > div > input[value="5"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_5.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_5.png);
     }
 
     .tableSpread > div > input[value="6"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_6.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_6.png);
     }
 
     .tableSpread > div > input[value="7"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_7.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_7.png);
     }
 
     .tableSpread > div > input[value="8"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_8.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_8.png);
     }
 
     .tableSpread > div > input[value="9"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_9.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_9.png);
     }
 
     .tableSpread > div > input[value="10"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_10.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_10.png);
     }
 
     .tableSpread > div > input[value="11"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_11.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_11.png);
     }
 
     .tableSpread > div > input[value="12"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_12.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_12.png);
     }
 
     .tableSpread > div > input[value="13"].cardChoice + span.card
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/arcanaCard_13.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/arcanaCard_13.png);
     }
 
 /* Clocks */
@@ -2853,7 +2862,7 @@ input.editCog
 
 span.editCog
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/editCog.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/editCog.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -2886,9 +2895,9 @@ input.editToggle[value="1"] + .editMenu
     background-repeat: no-repeat;
     background-position: top;
     opacity: 1;
-    background-size: 250px 350px;
-    width: 250px;
-    height: 350px;
+    background-size: 275px 475px;
+    width: 275px;
+    height: 475px;
     overflow: hidden;
 }
 
@@ -3272,48 +3281,86 @@ input.editToggle[value="1"] + .editMenu
 {
     grid-area: 6/1/auto/-1;
     display: grid;
-    grid-template-rows: 4px 64px 28px 1fr;
-    grid-template-columns: 20px 250px 30px 250px 30px 250px 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 20px 275px 575px 1fr;
     width: 100%;
     height: 100%;
     min-height: 505px;
-    row-gap: 6px;
 }
 
-    .grimoireWidget > .clockWidget
+    .grimoireWidget > .hand
     {
-        grid-area: 2/4/auto/auto;
+        display: grid;
+        grid-template-rows: 28px auto;
+        width: 100%;
+        height: 100%;
+        row-gap: 6px;
     }
 
-    .grimoireWidget > .deck1
+    .grimoireWidget > .longHand
     {
-        grid-column: 2/auto;
+        grid-area: 3/2/span 2/auto;
+        grid-template-columns: 275px;
+        min-height: 978px;
     }
 
-    .grimoireWidget > .deck2
+    .grimoireWidget > .twoHand
     {
-        grid-column: 4/auto;
+        grid-column: 3/auto;
+        grid-template-columns: 275px 12px 275px;
+        min-height: 503px;
     }
 
-    .grimoireWidget > .deck3
+        .grimoireWidget > .twoHand > .deck1
+        {
+            grid-column: 1/auto;
+        }
+
+        .grimoireWidget > .twoHand > .deck2
+        {
+            grid-column: 3/auto;
+        }
+
+    .grimoireWidget > .upperHand
     {
-        grid-column: 6/auto;
+        grid-row: 3/auto;
     }
 
-    .grimoireWidget > .concentrationWidget
+    .grimoireWidget > .lowerHand
     {
-        grid-area: 2/-3/auto/auto;
-        margin-left: 60px;
-    }
-    .grimoireWidget > .concentrationWidget > select
-    {
-       width: 160px;
+        grid-row: 4/auto;
     }
 
-    .grimoireWidget > .editCog
+    .grimoireWidget > .grimoireHeader
     {
-        grid-area: 2/-2/auto/-1;
+        grid-area: 1/1/auto/-1;
+        display: grid;
+        grid-template-rows: 68px;
+        grid-template-columns: 290px 355px auto 26px;
+        width: 850px;
+        height: 68px;
+        margin-top: 9px;
     }
+
+        .grimoireWidget > .grimoireHeader > .clockWidget
+        {
+            grid-area: 1/2/auto/auto;
+        }
+
+        .grimoireWidget > .grimoireHeader > .concentrationWidget
+        {
+            grid-area: 1/3/auto/auto;
+        }
+
+            .grimoireWidget > .grimoireHeader > .concentrationWidget > select
+            {
+                width: 160px;
+            }
+
+        .grimoireWidget > .grimoireHeader > .editCog
+        {
+            grid-area: 1/-2/auto/-1;
+        }
 
     /* Attunment Edit */
     .grimoireWidget .editAttunement
@@ -3341,18 +3388,18 @@ input.editToggle[value="1"] + .editMenu
         }
 
     /* editToggle attuneToggle Controls */
-input.editToggle[value="0"] ~ .deck .repcontrol,
-input.editToggle[value="0"] ~ .deck .card .attunement
+input.editToggle[value="0"] ~ .hand > .deck .repcontrol,
+input.editToggle[value="0"] ~ .hand > .deck .card .attunement
 {
     display: none;
 }
 
-input.editToggle[value="1"] ~ .deck .repcontrol
+input.editToggle[value="1"] ~ .hand > .deck .repcontrol
 {
     display: initial;
 }
 
-input.editToggle[value="1"] ~ .deck .card .attunement
+input.editToggle[value="1"] ~ .hand > .deck .card .attunement
 {
     display: grid;
 }
@@ -3363,23 +3410,23 @@ input.attuneToggle[value="0"] + .card
 }
 
 input.attuneToggle[value="1"] + .card,
-input.editToggle[value="1"] ~ .deck input.attuneToggle[value="0"] + .card
+input.editToggle[value="1"] ~ .hand > .deck input.attuneToggle[value="0"] + .card
 {
     display: grid;
 }
 
 /* Repeating Deck */
-section > .deck
+section > .hand > .deck
 {
     display: flex;
     flex-direction: column;
-    grid-row: 4/auto;
+    grid-row: 2/auto;
     width: 100%;
 }
 
-section > .deckHeader
+section > .hand > .deckHeader
 {
-    grid-row: 3/auto;
+    grid-row: 1/auto;
     display: grid;
     grid-template-columns: 1fr 20px 18px;
     grid-template-rows: 28px;
@@ -3387,12 +3434,12 @@ section > .deckHeader
     margin-top: 4px;
 }
 
-    section > .deckHeader > .collapseDeck
+    section > .hand > .deckHeader > .collapseDeck
     {
         grid-area: 1/2/auto/auto;
     }
 
-    section > .deckHeader > input.collapseDeck
+    section > .hand > .deckHeader > input.collapseDeck
     {
         opacity: 0;
         cursor: pointer;
@@ -3401,9 +3448,9 @@ section > .deckHeader
         z-index: 13;
     }
 
-        section > .deckHeader > input.collapseDeck + span.collapseDeck
+        section > .hand > .deckHeader > input.collapseDeck + span.collapseDeck
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/CollapseDeck.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/CollapseDeck.png);
             background-repeat: no-repeat;
             background-position: center;
             opacity: 1;
@@ -3413,9 +3460,9 @@ section > .deckHeader
             z-index: 12;
         }
 
-        section > .deckHeader > input.collapseDeck:checked + span.collapseDeck
+        section > .hand > .deckHeader > input.collapseDeck:checked + span.collapseDeck
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/ExpandDeck.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/ExpandDeck.png);
         }
 
 
@@ -3430,7 +3477,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 {
     display: grid;
     grid-template-columns: 105px repeat(2,1fr);
-    grid-template-rows: 10px repeat(16,17px) 1fr;
+    grid-template-rows: 10px repeat(25,17px) 1fr;
     grid-gap: 2px;
     margin: 4px 0 4px 0;
 }
@@ -3514,7 +3561,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 20px 1fr 26px 30px;
+    grid-template-columns: 1fr 26px 30px;
     grid-template-rows: 50px repeat(8, 40px) 1fr;
 }
     /* Enable curse3, curse4, & curse5 */
@@ -3527,29 +3574,29 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     /* Curse Card Layout */
     .curseWidget > .curse1
     {
-        grid-area: 2/2/span 5/-2;
+        grid-area: 2/1/span 5/-2;
     }
 
     .curseWidget > .curse2
     {
-        grid-area: 3/2/span 5/-2;
+        grid-area: 3/1/span 5/-2;
     }
 
     .curseWidget > .curse3
     {
-        grid-area: 4/2/span 5/-2;
+        grid-area: 4/1/span 5/-2;
         display: none;
     }
 
     .curseWidget > .curse4
     {
-        grid-area: 5/2/span 5/-2;
+        grid-area: 5/1/span 5/-2;
         display: none;
     }
 
     .curseWidget > .curse5
     {
-        grid-area: 6/2/span 5/-2;
+        grid-area: 6/1/span 5/-2;
         display: none;
     }
 
@@ -3602,10 +3649,10 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
 .curseCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/CurseCard.png);
-    background-size: 350px 250px;
-    width: 350px;
-    height: 250px;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/CurseCard.png);
+    background-size: 475px 275px;
+    width: 475px;
+    height: 275px;
     grid-template-rows: 10px repeat(12,17px) 1fr;
     margin: 0;
 }
@@ -3658,7 +3705,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Rote Spell Cards */
 .roteSpellCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/SpellCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/SpellCard.png);
 }
 
     .roteSpellCard .spellEquation
@@ -3700,7 +3747,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Scroll Cards */
 .scrollCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/ScrollCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/ScrollCard.png);
 }
 
     .scrollCard .spellEquation
@@ -3741,7 +3788,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Artefact Card */
 .artefactCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/ArtefactCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/ArtefactCard.png);
 }
 
     .artefactCard .formula
@@ -3792,7 +3839,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Dueling Focus Card */
 .duelingFocusCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/DuelingFocusCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/DuelingFocusCard.png);
 }
 
     .duelingFocusCard .formulaDuelingFocus
@@ -3838,7 +3885,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Puzzle Cards */
 .puzzleCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/PuzzleCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/PuzzleCard.png);
 }
 
     .puzzleCard .puzzleName
@@ -3968,7 +4015,7 @@ input[type="radio"] + span.ZeroDie
 
 input[type="radio"] + span.D10
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/D10PipFilled.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/D10PipFilled.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -3979,7 +4026,7 @@ input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.study ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/D10Pip.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/D10Pip.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -3988,7 +4035,7 @@ input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 
 input[type="radio"] + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/studyBoxFilled.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/studyBoxFilled.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
@@ -3999,7 +4046,7 @@ input[type="radio"]:checked + span.study ~ input[type="radio"] + span.study,
 input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.study,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img45/studyBox.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/studyBox.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;

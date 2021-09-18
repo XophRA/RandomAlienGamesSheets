@@ -417,29 +417,31 @@
 
             <!-- Grimoire -->
             <section class="grimoireWidget">
-                <div class="clockWidget">
-                    <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
-                    <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
-                    <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment13" />
-                    <span class="clock"></span>
-                    <span class="clockSpoke clockSpoke130"></span>
-                    <span class="clockSpoke clockSpoke131"></span>
-                    <span class="clockSpoke clockSpoke132"></span>
-                    <span class="clockSpoke clockSpoke133"></span>
-                    <span class="clockSpoke clockSpoke134"></span>
-                    <span class="clockSpoke clockSpoke135"></span>
-                    <span class="clockSpoke clockSpoke136"></span>
+                <div class="grimoireHeader">
+                    <div class="clockWidget">
+                        <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
+                        <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
+                        <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment13" />
+                        <span class="clock"></span>
+                        <span class="clockSpoke clockSpoke130"></span>
+                        <span class="clockSpoke clockSpoke131"></span>
+                        <span class="clockSpoke clockSpoke132"></span>
+                        <span class="clockSpoke clockSpoke133"></span>
+                        <span class="clockSpoke clockSpoke134"></span>
+                        <span class="clockSpoke clockSpoke135"></span>
+                        <span class="clockSpoke clockSpoke136"></span>
+                    </div>
+                    <div class="concentrationWidget">
+                        <select name="attr_concentration">
+                            <option>Calm: no dice</option>
+                            <option>Strained: 1 tangle die</option>
+                            <option>Broken: 1 tangle die</option>
+                            <option>Focused: 1 spell die</option>
+                        </select>
+                    </div>
+                    <input type="checkbox" class="editCog" name="attr_editAttunement" value="1" />
+                    <span class="editCog"></span>
                 </div>
-                <div class="concentrationWidget">
-                    <select name="attr_concentration">
-                        <option>Calm: no dice</option>
-                        <option>Strained: 1 tangle die</option>
-                        <option>Broken: 1 tangle die</option>
-                        <option>Focused: 1 spell die</option>
-                    </select>
-                </div>
-                <input type="checkbox" class="editCog" name="attr_editAttunement" value="1" />
-                <span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_editAttunement" />
                 <div class="editMenu editAttunement">
                     <button type="action" class="chargeButton" name="act_chargeClocks">Charge</button>
@@ -447,121 +449,160 @@
                     <input type="hidden" name="attr_attuneFocusSlots" value="0" />
                     <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> Dueling Focus</p>
                 </div>
+                <div class="hand longHand">
+                    <div class="deckHeader">
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
+                    <div class="deck">
+                        <fieldset class="repeating_rotespellcard">
+                            <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
+                            <div class="card customCard roteSpellCard">
+                                <h4 class="spellEquation">Equation</h4>
+                                <input type="text" class="spellEquation" name="attr_spellEquation" />
+                                <h4 class="spellArt">Arts</h4>
+                                <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
+                                <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
+                                <h4 class="spellComponents">Components</h4>
+                                <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
+                                <textarea class="spellComponents" name="attr_spellComponents" />
+                                <h4 class="spellEffect">Spell Effect</h4>
+                                <textarea class="spellEffect" name="attr_spellEffect" />
+                                <div class="attunement">
+                                    <h4>Memorise</h4>
+                                    <input type="checkbox" value="1" name="attr_attunedCard" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
 
-                <div class="deckHeader deck1">
-                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
-                </div>
-                <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
-                <div class="deck deck1">
-                    <fieldset class="repeating_rotespellcard">
-                        <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
-                        <div class="card customCard roteSpellCard">
-                            <h4 class="spellEquation">Equation</h4>
-                            <input type="text" class="spellEquation" name="attr_spellEquation" />
-                            <h4 class="spellArt">Arts</h4>
-                            <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
-                            <input type="text" class="spellArtSynergy" name="attr_spellArtSynergy" list="arts" />
-                            <h4 class="spellComponents">Components</h4>
-                            <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
-                            <textarea class="spellComponents" name="attr_spellComponents" />
-                            <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_spellEffect" />
-                            <div class="attunement">
-                                <h4>Memorise</h4>
-                                <input type="checkbox" value="1" name="attr_attunedCard" />
+                <div class="hand twoHand upperHand">
+                    <div class="deckHeader deck1">
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                    <div class="deck deck1">
+                        <fieldset class="repeating_scrollcard">
+                            <div class="card customCard scrollCard">
+                                <h4 class="spellEquation">Equation</h4>
+                                <input type="text" class="spellEquation" name="attr_scrollEquation" />
+                                <h4 class="spellArt">Arts</h4>
+                                <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
+                                <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
+                                <h4 class="spellComponents">Charges</h4>
+                                <div class="clockWidget">
+                                    <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
+                                    <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
+                                    <span class="clock"></span>
+                                    <span class="clockSpoke clockSpoke30"></span>
+                                    <span class="clockSpoke clockSpoke31"></span>
+                                    <span class="clockSpoke clockSpoke32"></span>
+                                </div>
+                                <h4 class="spellEffect">Spell Effect</h4>
+                                <textarea class="spellEffect" name="attr_spellEffect" />
                             </div>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="deckHeader deck2">
-                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
-                </div>
-                <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
-                <div class="deck deck2">
-                    <fieldset class="repeating_scrollcard">
-                        <div class="card customCard scrollCard">
-                            <h4 class="spellEquation">Equation</h4>
-                            <input type="text" class="spellEquation" name="attr_scrollEquation" />
-                            <h4 class="spellArt">Arts</h4>
-                            <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
-                            <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
-                            <h4 class="spellComponents">Charges</h4>
-                            <div class="clockWidget">
-                                <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
-                                <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
-                                <span class="clock"></span>
-                                <span class="clockSpoke clockSpoke30"></span>
-                                <span class="clockSpoke clockSpoke31"></span>
-                                <span class="clockSpoke clockSpoke32"></span>
+                        </fieldset>
+                    </div>
+                    <div class="deckHeader deck2">
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
+                    <div class="deck deck2">
+                        <fieldset class="repeating_artefactcard">
+                            <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
+                            <div class="card customCard artefactCard">
+                                <h4 class="formula">Formula</h4>
+                                <input type="text" class="formula" name="attr_formula" />
+                                <h4 class="form">Form</h4>
+                                <textarea class="form" name="attr_artefactForm" />
+                                <h4 class="continuousEffect">Continuous</h4>
+                                <textarea class="continuousEffect" name="attr_artefactcontinuousEffect" />
+                                <h4 class="spellEffect">Spell Effect</h4>
+                                <textarea class="spellEffect" name="attr_artefactEffect" />
+                                <h4 class="spellComponents">Charges</h4>
+                                <div class="clockWidget">
+                                    <input type="text" name="attr_artefactChargeClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="5" value="0" name="attr_artefactChargeClock" class="clockControl" />
+                                    <input type="hidden" name="attr_artefactChargeClock" value="0" class="clockSegment5" />
+                                    <span class="clock"></span>
+                                    <span class="clockSpoke clockSpoke50"></span>
+                                    <span class="clockSpoke clockSpoke51"></span>
+                                    <span class="clockSpoke clockSpoke52"></span>
+                                </div>
+                                <div class="attunement">
+                                    <h4>Attune</h4>
+                                    <input type="checkbox" value="1" name="attr_attunedCard" />
+                                </div>
                             </div>
-                            <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_spellEffect" />
-                        </div>
-                    </fieldset>
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="deckHeader deck3">
-                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
+                <div class="hand twoHand lowerHand">
+                    <div class="deckHeader deck1">
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                    <div class="deck deck1">
+                        <fieldset class="repeating_consumablecard">
+                            <div class="card customCard consumableCard">
+                                <h4 class="spellEquation">Equation</h4>
+                                <input type="text" class="spellEquation" name="attr_scrollEquation" />
+                                <h4 class="spellArt">Arts</h4>
+                                <input type="text" class="spellArt" name="attr_scrollArt" list="arts" />
+                                <input type="text" class="spellArtSynergy" name="attr_scrollArtSynergy" list="arts" />
+                                <h4 class="spellComponents">Charges</h4>
+                                <div class="clockWidget">
+                                    <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
+                                    <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
+                                    <span class="clock"></span>
+                                    <span class="clockSpoke clockSpoke30"></span>
+                                    <span class="clockSpoke clockSpoke31"></span>
+                                    <span class="clockSpoke clockSpoke32"></span>
+                                </div>
+                                <h4 class="spellEffect">Spell Effect</h4>
+                                <textarea class="spellEffect" name="attr_spellEffect" />
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="deckHeader deck2">
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck4" />
+                    <div class="deck deck2">
+                        <fieldset class="repeating_duelingfocuscard">
+                            <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
+                            <div class="card customCard duelingFocusCard">
+                                <h4 class="formulaDuelingFocus">Formula</h4>
+                                <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
+                                <h4 class="manoeuvre">Manoeuvre</h4>
+                                <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
+                                <h4 class="form">Form</h4>
+                                <textarea class="form" name="attr_formDuelingFocus" />
+                                <h4 class="continuousEffect">Continuous</h4>
+                                <textarea class="continuousEffect" name="attr_duelingFocusContinuousEffect" />
+                                <h4 class="spellComponents">Charges</h4>
+                                <div class="clockWidget">
+                                    <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="7" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
+                                    <input type="hidden" name="attr_duelingFocusStressClock" value="0" class="clockSegment7" />
+                                    <span class="clock"></span>
+                                    <span class="clockSpoke clockSpoke70"></span>
+                                    <span class="clockSpoke clockSpoke71"></span>
+                                    <span class="clockSpoke clockSpoke72"></span>
+                                    <span class="clockSpoke clockSpoke73"></span>
+                                </div>
+                                <div class="attunement">
+                                    <h4>Attune</h4>
+                                    <input type="checkbox" value="1" name="attr_attunedCard" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
-                <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
-                <div class="deck deck3">
-                    <fieldset class="repeating_artefactcard">
-                        <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
-                        <div class="card customCard artefactCard">
-                            <h4 class="formula">Formula</h4>
-                            <input type="text" class="formula" name="attr_formula" />
-                            <h4 class="form">Form</h4>
-                            <textarea class="form" name="attr_artefactForm" />
-                            <h4 class="continuousEffect">Continuous</h4>
-                            <textarea class="continuousEffect" name="attr_artefactcontinuousEffect" />
-                            <h4 class="spellEffect">Spell Effect</h4>
-                            <textarea class="spellEffect" name="attr_artefactEffect" />
-                            <h4 class="spellComponents">Charges</h4>
-                            <div class="clockWidget">
-                                <input type="text" name="attr_artefactChargeClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="5" value="0" name="attr_artefactChargeClock" class="clockControl" />
-                                <input type="hidden" name="attr_artefactChargeClock" value="0" class="clockSegment5" />
-                                <span class="clock"></span>
-                                <span class="clockSpoke clockSpoke50"></span>
-                                <span class="clockSpoke clockSpoke51"></span>
-                                <span class="clockSpoke clockSpoke52"></span>
-                            </div>
-                            <div class="attunement">
-                                <h4>Attune</h4>
-                                <input type="checkbox" value="1" name="attr_attunedCard" />
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="repeating_duelingfocuscard">
-                        <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
-                        <div class="card customCard duelingFocusCard">
-                            <h4 class="formulaDuelingFocus">Formula</h4>
-                            <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
-                            <h4 class="manoeuvre">Manoeuvre</h4>
-                            <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
-                            <h4 class="form">Form</h4>
-                            <textarea class="form" name="attr_formDuelingFocus" />
-                            <h4 class="continuousEffect">Continuous</h4>
-                            <textarea class="continuousEffect" name="attr_duelingFocusContinuousEffect" />
-                            <h4 class="spellComponents">Charges</h4>
-                            <div class="clockWidget">
-                                <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
-                                <input type="number" min="0" max="7" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
-                                <input type="hidden" name="attr_duelingFocusStressClock" value="0" class="clockSegment7" />
-                                <span class="clock"></span>
-                                <span class="clockSpoke clockSpoke70"></span>
-                                <span class="clockSpoke clockSpoke71"></span>
-                                <span class="clockSpoke clockSpoke72"></span>
-                                <span class="clockSpoke clockSpoke73"></span>
-                            </div>
-                            <div class="attunement">
-                                <h4>Attune</h4>
-                                <input type="checkbox" value="1" name="attr_attunedCard" />
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-            </section>
+</section>
 
             <!-- Fate -->
             <section class="fateWidget tableSpread">
@@ -717,181 +758,182 @@
 
             <!-- Rituals -->
             <section class="ritualWidget">
-                <div class="deckHeader">
-                    <input type="checkbox" class="collapseDeck" name="attr_collapseRitualDeck" value="1" /><span class="collapseDeck"></span>
+                <div class="hand">
+                    <div class="deckHeader">
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseRitualDeck" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseRitualDeck" />
+                    <div class="deck">
+                        <fieldset class="repeating_ritualcard">
+                            <div class="card customCard ritualCard">
+                                <h4 class="ritualObjective">Objective</h4>
+                                <input type="text" class="ritualObjective" list="ritual" name="attr_ritualObjective" />
+                                <input type="text" class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
+                                <h4 class="ritualMilestones">Milestones</h4>
+                                <textarea class="ritualMilestones" name="attr_ritualMilestones" />
+                                <h4 class="ritualComponents">Components</h4>
+                                <div class="potency">
+                                    <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
+                                    <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
+                                    <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
+                                </div>
+                                <textarea class="ritualComponents" name="attr_ritualComponents" />
+                                <h4 class="ritualSigilSize">Ritual Sigil</h4>
+                                <select class="ritualSigilSize" name="attr_ritualSigilSize">
+                                    <option value="3">Dawn</option>
+                                    <option value="5">Sun</option>
+                                    <option value="7">Twilight</option>
+                                    <option value="9">Moon</option>
+                                    <option value="11">Oblivion</option>
+                                </select>
+                                <div class="ritualSigil">
+                                    <!-- Ritual Sigil -->
+                                    <input type="hidden" name="attr_ritualSigilSize" value="3" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
+                                    <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ritualsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
+                                    <button type="action" class="sigilSegment sigilSegment1" name="act_ritualsigilsegment1" value="0" /> <!-- Segment1 -->
+                                    <span class="sigilLink sigilLink1"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ritualsigilsegment2" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment2" name="act_ritualsigilsegment2" value="0" /> <!-- Segment2 -->
+                                    <span class="sigilLink sigilLink2"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ritualsigilsegment3" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment3" name="act_ritualsigilsegment3" value="0" /> <!-- Segment3 -->
+                                    <span class="sigilLink sigilLink3"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ritualsigilsegment4" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment4" name="act_ritualsigilsegment4" value="0" /> <!-- Segment4 -->
+                                    <span class="sigilLink sigilLink4"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ritualsigilsegment5" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment5" name="act_ritualsigilsegment5" value="0" /> <!-- Segment5 -->
+                                    <span class="sigilLink sigilLink5"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ritualsigilsegment6" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment6" name="act_ritualsigilsegment6" value="0" /> <!-- Segment6 -->
+                                    <span class="sigilLink sigilLink6"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment7" name="attr_ritualsigilsegment7" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment7" name="act_ritualsigilsegment7" value="0" /> <!-- Segment7 -->
+                                    <span class="sigilLink sigilLink7"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment8" name="attr_ritualsigilsegment8" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment8" name="act_ritualsigilsegment8" value="0" /> <!-- Segment8 -->
+                                    <span class="sigilLink sigilLink8"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment9" name="attr_ritualsigilsegment9" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment9" name="act_ritualsigilsegment9" value="0" /> <!-- Segment9 -->
+                                    <span class="sigilLink sigilLink9"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment10" name="attr_ritualsigilsegment10" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment10" name="act_ritualsigilsegment10" value="0" /> <!-- Segment10 -->
+                                    <span class="sigilLink sigilLink10"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment11" name="attr_ritualsigilsegment11" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment11" name="act_ritualsigilsegment11" value="0" /> <!-- Segment11 -->
+                                    <span class="sigilLink sigilLink11"></span>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
-                <input type="hidden" class="collapseToggle" name="attr_collapseRitualDeck" />
-                <div class="deck">
-                    <fieldset class="repeating_ritualcard">
-                        <div class="card customCard ritualCard">
-                            <h4 class="ritualObjective">Objective</h4>
-                            <input type="text" class="ritualObjective" list="ritual" name="attr_ritualObjective" />
-                            <input type="text" class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
-                            <h4 class="ritualMilestones">Milestones</h4>
-                            <textarea class="ritualMilestones" name="attr_ritualMilestones" />
-                            <h4 class="ritualComponents">Components</h4>
-                            <div class="potency">
-                                <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
-                                <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
-                                <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
-                            </div>
-                            <textarea class="ritualComponents" name="attr_ritualComponents" />
-                            <h4 class="ritualSigilSize">Ritual Sigil</h4>
-                            <select class="ritualSigilSize" name="attr_ritualSigilSize">
-                                <option value="3">Dawn</option>
-                                <option value="5">Sun</option>
-                                <option value="7">Twilight</option>
-                                <option value="9">Moon</option>
-                                <option value="11">Oblivion</option>
-                            </select>
-                            <div class="ritualSigil">
-                                <!-- Ritual Sigil -->
-                                <input type="hidden" name="attr_ritualSigilSize" value="3" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
-                                <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ritualsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
-                                <button type="action" class="sigilSegment sigilSegment1" name="act_ritualsigilsegment1" value="0" /> <!-- Segment1 -->
-                                <span class="sigilLink sigilLink1"></span>
 
-                                <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ritualsigilsegment2" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment2" name="act_ritualsigilsegment2" value="0" /> <!-- Segment2 -->
-                                <span class="sigilLink sigilLink2"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ritualsigilsegment3" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment3" name="act_ritualsigilsegment3" value="0" /> <!-- Segment3 -->
-                                <span class="sigilLink sigilLink3"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ritualsigilsegment4" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment4" name="act_ritualsigilsegment4" value="0" /> <!-- Segment4 -->
-                                <span class="sigilLink sigilLink4"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ritualsigilsegment5" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment5" name="act_ritualsigilsegment5" value="0" /> <!-- Segment5 -->
-                                <span class="sigilLink sigilLink5"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ritualsigilsegment6" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment6" name="act_ritualsigilsegment6" value="0" /> <!-- Segment6 -->
-                                <span class="sigilLink sigilLink6"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment7" name="attr_ritualsigilsegment7" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment7" name="act_ritualsigilsegment7" value="0" /> <!-- Segment7 -->
-                                <span class="sigilLink sigilLink7"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment8" name="attr_ritualsigilsegment8" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment8" name="act_ritualsigilsegment8" value="0" /> <!-- Segment8 -->
-                                <span class="sigilLink sigilLink8"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment9" name="attr_ritualsigilsegment9" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment9" name="act_ritualsigilsegment9" value="0" /> <!-- Segment9 -->
-                                <span class="sigilLink sigilLink9"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment10" name="attr_ritualsigilsegment10" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment10" name="act_ritualsigilsegment10" value="0" /> <!-- Segment10 -->
-                                <span class="sigilLink sigilLink10"></span>
-
-                                <input type="hidden" class="sigilSegment sigilSegment11" name="attr_ritualsigilsegment11" value="0" />
-                                <button type="action" class="sigilSegment sigilSegment11" name="act_ritualsigilsegment11" value="0" /> <!-- Segment11 -->
-                                <span class="sigilLink sigilLink11"></span>
-
-                            </div>
+                <!--Ascension-->
+                <div class="ascensionDeck">
+                    <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
+                    <input type="hidden" class="editToggle" name="attr_EditAscension" />
+                    <div class="editMenu editAscension">
+                        <div class="levelControl">Level</div>
+                        <input type="number" class="levelControl" name="attr_covenLevel" value="-1" min="-1" max="13" />
+                        <button type="action" class="ascensionClear" name="act_ascensionClear">Clear</button>
+                    </div>
+                    <input type="hidden" class="levelControl" name="attr_covenLevel" />
+                    <span class="level lvl1">1</span>
+                    <span class="level lvl2">2</span>
+                    <span class="level lvl3">3</span>
+                    <span class="level lvl4">4</span>
+                    <span class="level lvl5">5</span>
+                    <span class="level lvl6">6</span>
+                    <span class="level lvl7">7</span>
+                    <span class="level lvl8">8</span>
+                    <span class="level lvl9">9</span>
+                    <span class="level lvl10">10</span>
+                    <span class="level lvl11">11</span>
+                    <span class="level lvl12">12</span>
+                    <span class="level lvl13">13</span>
+                    <div class="card customCard ascensionCard ritualCard">
+                        <h4 class="ritualObjective">Objective</h4>
+                        <input type="text" class="ritualObjective" name="attr_ascensionObjective" readonly />
+                        <input type="text" class="ritualObjectiveDetail" name="attr_ascensionObjectiveDetail" />
+                        <h4 class="ritualMilestones">Milestones</h4>
+                        <textarea class="ritualMilestones" name="attr_ascensionMilestones" />
+                        <h4 class="ritualComponents">Components</h4>
+                        <div class="potency">
+                            <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
+                            <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
+                            <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
                         </div>
-                    </fieldset>
-                </div>
-            </section>
+                        <textarea class="ritualComponents" name="attr_ascensionWorkings" />
+                        <h4 class="ritualSigilSize">Ritual Sigil</h4>
+                        <select class="ritualSigilSize" name="attr_ascensionSigilSize">
+                            <option value="3">Dawn</option>
+                            <option value="5">Sun</option>
+                            <option value="7">Twilight</option>
+                            <option value="9">Moon</option>
+                            <option value="11">Oblivion</option>
+                        </select>
+                        <div class="ritualSigil">
+                            <!-- Ritual Sigil -->
+                            <input type="hidden" name="attr_ascensionSigilSize" value="5" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
+                            <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ascensionsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
+                            <button type="action" class="sigilSegment sigilSegment1" name="act_ascensionsigilsegment1" value="0" /> <!-- Segment1 -->
+                            <span class="sigilLink sigilLink1"></span>
 
-            <!--Ascension-->
-            <section class="ascensionWidget">
-                <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
-                <input type="hidden" class="editToggle" name="attr_EditAscension" />
-                <div class="editMenu editAscension">
-                    <div class="levelControl">Level</div>
-                    <input type="number" class="levelControl" name="attr_covenLevel" value="-1" min="-1" max="13" />
-                    <button type="action" class="ascensionClear" name="act_ascensionClear">Clear</button>
-                </div>
-                <input type="hidden" class="levelControl" name="attr_covenLevel" />
-                <span class="level lvl1">1</span>
-                <span class="level lvl2">2</span>
-                <span class="level lvl3">3</span>
-                <span class="level lvl4">4</span>
-                <span class="level lvl5">5</span>
-                <span class="level lvl6">6</span>
-                <span class="level lvl7">7</span>
-                <span class="level lvl8">8</span>
-                <span class="level lvl9">9</span>
-                <span class="level lvl10">10</span>
-                <span class="level lvl11">11</span>
-                <span class="level lvl12">12</span>
-                <span class="level lvl13">13</span>
-                <div class="card customCard ascensionCard ritualCard">
-                    <h4 class="ritualObjective">Objective</h4>
-                    <input type="text" class="ritualObjective" name="attr_ascensionObjective" readonly />
-                    <input type="text" class="ritualObjectiveDetail" name="attr_ascensionObjectiveDetail" />
-                    <h4 class="ritualMilestones">Milestones</h4>
-                    <textarea class="ritualMilestones" name="attr_ascensionMilestones" />
-                    <h4 class="ritualComponents">Components</h4>
-                    <div class="potency">
-                        <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
-                        <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
-                        <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
-                    </div>
-                    <textarea class="ritualComponents" name="attr_ascensionWorkings" />
-                    <h4 class="ritualSigilSize">Ritual Sigil</h4>
-                    <select class="ritualSigilSize" name="attr_ascensionSigilSize">
-                        <option value="3">Dawn</option>
-                        <option value="5">Sun</option>
-                        <option value="7">Twilight</option>
-                        <option value="9">Moon</option>
-                        <option value="11">Oblivion</option>
-                    </select>
-                    <div class="ritualSigil">
-                        <!-- Ritual Sigil -->
-                        <input type="hidden" name="attr_ascensionSigilSize" value="5" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
-                        <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ascensionsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
-                        <button type="action" class="sigilSegment sigilSegment1" name="act_ascensionsigilsegment1" value="0" /> <!-- Segment1 -->
-                        <span class="sigilLink sigilLink1"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ascensionsigilsegment2" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment2" name="act_ascensionsigilsegment2" value="0" /> <!-- Segment2 -->
+                            <span class="sigilLink sigilLink2"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ascensionsigilsegment2" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment2" name="act_ascensionsigilsegment2" value="0" /> <!-- Segment2 -->
-                        <span class="sigilLink sigilLink2"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ascensionsigilsegment3" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment3" name="act_ascensionsigilsegment3" value="0" /> <!-- Segment3 -->
+                            <span class="sigilLink sigilLink3"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ascensionsigilsegment3" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment3" name="act_ascensionsigilsegment3" value="0" /> <!-- Segment3 -->
-                        <span class="sigilLink sigilLink3"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ascensionsigilsegment4" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment4" name="act_ascensionsigilsegment4" value="0" /> <!-- Segment4 -->
+                            <span class="sigilLink sigilLink4"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ascensionsigilsegment4" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment4" name="act_ascensionsigilsegment4" value="0" /> <!-- Segment4 -->
-                        <span class="sigilLink sigilLink4"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ascensionsigilsegment5" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment5" name="act_ascensionsigilsegment5" value="0" /> <!-- Segment5 -->
+                            <span class="sigilLink sigilLink5"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ascensionsigilsegment5" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment5" name="act_ascensionsigilsegment5" value="0" /> <!-- Segment5 -->
-                        <span class="sigilLink sigilLink5"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ascensionsigilsegment6" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment6" name="act_ascensionsigilsegment6" value="0" /> <!-- Segment6 -->
+                            <span class="sigilLink sigilLink6"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ascensionsigilsegment6" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment6" name="act_ascensionsigilsegment6" value="0" /> <!-- Segment6 -->
-                        <span class="sigilLink sigilLink6"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment7" name="attr_ascensionsigilsegment7" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment7" name="act_ascensionsigilsegment7" value="0" /> <!-- Segment7 -->
+                            <span class="sigilLink sigilLink7"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment7" name="attr_ascensionsigilsegment7" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment7" name="act_ascensionsigilsegment7" value="0" /> <!-- Segment7 -->
-                        <span class="sigilLink sigilLink7"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment8" name="attr_ascensionsigilsegment8" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment8" name="act_ascensionsigilsegment8" value="0" /> <!-- Segment8 -->
+                            <span class="sigilLink sigilLink8"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment8" name="attr_ascensionsigilsegment8" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment8" name="act_ascensionsigilsegment8" value="0" /> <!-- Segment8 -->
-                        <span class="sigilLink sigilLink8"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment9" name="attr_ascensionsigilsegment9" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment9" name="act_ascensionsigilsegment9" value="0" /> <!-- Segment9 -->
+                            <span class="sigilLink sigilLink9"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment9" name="attr_ascensionsigilsegment9" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment9" name="act_ascensionsigilsegment9" value="0" /> <!-- Segment9 -->
-                        <span class="sigilLink sigilLink9"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment10" name="attr_ascensionsigilsegment10" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment10" name="act_ascensionsigilsegment10" value="0" /> <!-- Segment10 -->
+                            <span class="sigilLink sigilLink10"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment10" name="attr_ascensionsigilsegment10" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment10" name="act_ascensionsigilsegment10" value="0" /> <!-- Segment10 -->
-                        <span class="sigilLink sigilLink10"></span>
+                            <input type="hidden" class="sigilSegment sigilSegment11" name="attr_ascensionsigilsegment11" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment11" name="act_ascensionsigilsegment11" value="0" /> <!-- Segment11 -->
+                            <span class="sigilLink sigilLink11"></span>
 
-                        <input type="hidden" class="sigilSegment sigilSegment11" name="attr_ascensionsigilsegment11" value="0" />
-                        <button type="action" class="sigilSegment sigilSegment11" name="act_ascensionsigilsegment11" value="0" /> <!-- Segment11 -->
-                        <span class="sigilLink sigilLink11"></span>
-
+                        </div>
                     </div>
                 </div>
             </section>
-
             <!-- Arcane Anagoge -->
             <section class="arcaneAnagogeWidget">
                 <h1 class="anagogeTitle">Arcane Anagoge</h1>
