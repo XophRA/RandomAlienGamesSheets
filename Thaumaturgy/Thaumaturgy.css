@@ -253,7 +253,7 @@ main.masterGrid
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 400px 250px 1fr;
-    grid-template-rows: 312px 235px 205px 306px 159px auto 550px auto;
+    grid-template-rows: 312px 235px 205px 306px 159px auto 570px auto;
     justify-items: start;
     align-items: start;
 }
@@ -283,7 +283,7 @@ main.masterGrid
     display: grid;
     grid-row-gap: 0px;
     grid-template-columns: 98px 1fr 169px 98px;
-    grid-template-rows: 17px 703px 52px 333px 490px 50px;
+    grid-template-rows: 17px 703px 52px 333px 575px auto;
     justify-items: start;
     align-items: start;
 }
@@ -2310,8 +2310,8 @@ input[type="number"].rippleBox
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 20px 125px 125px 100px 125px 100px 25px auto;
-    grid-template-rows: 46px 77px 175px 175px auto;
+    grid-template-columns: 10px 138px 137px 70px 138px 111px 25px auto;
+    grid-template-rows: 46px 125px 150px 175px auto;
     align-items: center;
     justify-items: center;
 }
@@ -2371,10 +2371,11 @@ input[type="number"].rippleBox
 
     .tableSpread > .editTableSpread
     {
-        grid-area: 2 / 2 / -2 / -2;
+        grid-area: 2 / 2 / -1 / -1;
         display: grid;
-        grid-template-columns: repeat(2,1fr) 100px repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr) 70px repeat(2,1fr);
         grid-template-rows: 75px 175px auto;
+        padding: 2px;
     }
 
         .tableSpread > .editTableSpread > .leftLegEdit
@@ -3022,7 +3023,7 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     grid-template-columns: 350px 16px auto;
-    grid-template-rows: 37px repeat(8,20px) auto;
+    grid-template-rows: 37px repeat(7,20px) auto;
     grid-row-gap: 4px;
 }
 
@@ -3043,32 +3044,32 @@ input.editToggle[value="1"] + .editMenu
 
     .intentionWidget > .dispelBox
     {
-        grid-row: 4/5;
+        grid-row: 3/4;
     }
 
     .intentionWidget > .manipulateBox
     {
-        grid-row: 5/6;
+        grid-row: 4/5;
     }
 
     .intentionWidget > .scryBox
     {
-        grid-row: 6/7;
+        grid-row: 5/6;
     }
 
     .intentionWidget > .summonBox
     {
-        grid-row: 7/8;
+        grid-row: 6/7;
     }
 
     .intentionWidget > .transmuteBox
     {
-        grid-row: 8/9;
+        grid-row: 7/8;
     }
 
     .intentionWidget > .wardBox
     {
-        grid-row: 9/10;
+        grid-row: 8/9;
     }
 
 /* Arts */
@@ -3481,7 +3482,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 {
     display: grid;
     grid-template-columns: 105px repeat(2,1fr);
-    grid-template-rows: 10px repeat(25,17px) 1fr;
+    grid-template-rows: 10px repeat(23,17px) 1fr;
     grid-gap: 2px;
     margin: 4px 0 4px 0;
 }
@@ -3718,35 +3719,40 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 2/auto;
     }
 
-    .roteSpellCard .spellArt
+    .roteSpellCard .spellVerb
     {
         grid-row: 3/auto;
     }
 
-    .roteSpellCard .spellArtSynergy
+    .roteSpellCard .spellArt
     {
         grid-row: 4/auto;
+    }
+
+    .roteSpellCard .spellArtSynergy
+    {
+        grid-row: 5/auto;
     }
 
     .roteSpellCard h4.spellComponents,
     .roteSpellCard input.spellComponents
     {
-        grid-row: 5/auto;
+        grid-row: 6/auto;
     }
 
     .roteSpellCard textarea.spellComponents
     {
-        grid-row: 6/span 4;
+        grid-row: 6/span 5;
     }
 
     .roteSpellCard h4.spellEffect
     {
-        grid-row: 10/auto;
+        grid-row: 11/auto;
     }
 
     .roteSpellCard textarea.spellEffect
     {
-        grid-row: 10/-2;
+        grid-row: 11/-2;
     }
 
 /* Scroll Cards */
@@ -3760,34 +3766,39 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 2/auto;
     }
 
-    .scrollCard .spellArt
+    .scrollCard .spellVerb
     {
         grid-row: 3/auto;
     }
 
-    .scrollCard .spellArtSynergy
+    .scrollCard .spellArt
     {
         grid-row: 4/auto;
     }
 
-    .scrollCard h4.spellComponents
+    .scrollCard .spellArtSynergy
     {
         grid-row: 5/auto;
     }
 
+    .scrollCard h4.spellComponents
+    {
+        grid-row: 6/auto;
+    }
+
     .scrollCard .clockWidget
     {
-        grid-row: 5/span 4;
+        grid-row: 6/span 4;
     }
 
     .scrollCard h4.spellEffect
     {
-        grid-row: 9/auto;
+        grid-row: 10/auto;
     }
 
     .scrollCard textarea.spellEffect
     {
-        grid-row: 9/-2;
+        grid-row: 10/-2;
     }
 
 /* Artefact Card */
@@ -3801,44 +3812,49 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 2/auto;
     }
 
-    .artefactCard h4.spellComponents
+    .artefactCard .spellVerb
     {
         grid-row: 3/auto;
     }
 
+    .artefactCard h4.spellComponents
+    {
+        grid-row: 4/auto;
+    }
+
     .artefactCard .clockWidget
     {
-        grid-row: 3/span 4;
+        grid-row: 4/span 4;
     }
 
     .artefactCard h4.form
     {
-        grid-row: 7/auto;
+        grid-row: 8/auto;
     }
 
     .artefactCard textarea.form
     {
-        grid-row: 7/span 3;
+        grid-row: 8/span 5;
     }
 
     .artefactCard h4.continuousEffect
     {
-        grid-row: 10/auto;
+        grid-row: 13/auto;
     }
 
     .artefactCard textarea.continuousEffect
     {
-        grid-row: 10/span 3;
+        grid-row: 13/span 5;
     }
 
     .artefactCard h4.spellEffect
     {
-        grid-row: 13/auto;
+        grid-row: 18/auto;
     }
 
     .artefactCard textarea.spellEffect
     {
-        grid-row: 13/-2;
+        grid-row: 18/-2;
     }
 
 /* Dueling Focus Card */
@@ -3874,17 +3890,17 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .duelingFocusCard textarea.form
     {
-        grid-row: 8/span 4;
+        grid-row: 8/span 6;
     }
 
     .duelingFocusCard h4.continuousEffect
     {
-        grid-row: 12/auto;
+        grid-row: 14/auto;
     }
 
     .duelingFocusCard textarea.continuousEffect
     {
-        grid-row: 12/-2;
+        grid-row: 14/-2;
     }
 
 /* Consumable Cards */
@@ -3893,39 +3909,44 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img46/consumableCard.png);
 }
 
-    .consumableCard .spellEquation
+    .consumableCard .formula
     {
         grid-row: 2/auto;
     }
 
-    .consumableCard .spellArt
+    .consumableCard .spellVerb
     {
         grid-row: 3/auto;
     }
 
-    .consumableCard .spellArtSynergy
+    .consumableCard h4.spellComponents
     {
         grid-row: 4/auto;
     }
 
-    .consumableCard h4.spellComponents
-    {
-        grid-row: 5/auto;
-    }
-
     .consumableCard .clockWidget
     {
-        grid-row: 5/span 4;
+        grid-row: 4/span 4;
+    }
+
+    .consumableCard h4.form
+    {
+        grid-row: 8/auto;
+    }
+
+    .consumableCard textarea.form
+    {
+        grid-row: 8/span 6;
     }
 
     .consumableCard h4.spellEffect
     {
-        grid-row: 9/auto;
+        grid-row: 14/auto;
     }
 
     .consumableCard textarea.spellEffect
     {
-        grid-row: 9/-2;
+        grid-row: 14/-2;
     }
 
 /* Puzzle Cards */
@@ -3956,42 +3977,42 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .puzzleCard textarea.puzzlePeril
     {
-        grid-row: 6/span 3;
+        grid-row: 6/span 4;
     }
 
     .puzzleCard .solution
     {
-        grid-row: 9/auto;
+        grid-row: 10/auto;
     }
 
     .puzzleCard .solutionSynergy
     {
-        grid-row: 10/auto;
+        grid-row: 11/auto;
     }
 
     .puzzleCard .solutionComponents
     {
-        grid-row: 11/auto;
+        grid-row: 12/auto;
     }
 
     .puzzleCard textarea.solutionComponents
     {
-        grid-row: 11/span 2;
+        grid-row: 12/span 4;
     }
 
     .puzzleCard .solutionComponentsFalse
     {
-        grid-row: 13/auto;
+        grid-row: 16/auto;
     }
 
     .puzzleCard textarea.solutionComponentsFalse
     {
-        grid-row: 13/span 2;
+        grid-row: 16/span 4;
     }
 
     .puzzleCard .solutionRewards
     {
-        grid-row: 15/-2;
+        grid-row: 20/-2;
     }
 
 
@@ -4588,7 +4609,7 @@ section.fatekeeperDeck
     display: grid;
     width: 850px;
     height: 100%;
-    grid-template-columns: auto 250px 350px;
+    grid-template-columns: auto 275px 475px;
     grid-template-rows: 30px auto;
     grid-gap: 3px;
     justify-items: start;
