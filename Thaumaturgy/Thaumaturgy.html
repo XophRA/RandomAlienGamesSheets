@@ -465,9 +465,10 @@
                 </div>
                 <div class="hand longHand">
                     <div class="deckHeader">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
+                        <h2>Rote Spells</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck0" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck0" />
                     <div class="deck">
                         <fieldset class="repeating_rotespellcard">
                             <!--<input type="hidden" name="attr_attunedCard" class="attuneToggle" />-->
@@ -495,9 +496,10 @@
 
                 <div class="hand twoHand upperHand">
                     <div class="deckHeader deck1">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                        <h2>Scrolls</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
                     <div class="deck deck1">
                         <fieldset class="repeating_scrollcard">
                             <div class="card customCard scrollCard">
@@ -524,9 +526,10 @@
                         </fieldset>
                     </div>
                     <div class="deckHeader deck2">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
+                        <h2>Artefacts</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
                     <div class="deck deck2">
                         <fieldset class="repeating_artefactcard">
                             <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
@@ -561,9 +564,10 @@
                 </div>
                 <div class="hand twoHand lowerHand">
                     <div class="deckHeader deck1">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                        <h2>Consumables</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                     <div class="deck deck1">
                         <fieldset class="repeating_consumablecard">
                             <div class="card customCard consumableCard">
@@ -589,6 +593,7 @@
                         </fieldset>
                     </div>
                     <div class="deckHeader deck2">
+                        <h2>Dueling Foci</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck4" />
@@ -1799,14 +1804,51 @@
         <div class="fatekeepersGrimoireSheetGrid">
             <!-- Grimoire -->
             <section class="grimoireWidget">
-                
+                <div class="grimoireHeader">
+                    <div class="clockWidget">
+                        <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
+                        <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
+                        <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment13" />
+                        <span class="clock"></span>
+                        <span class="clockSpoke clockSpoke130"></span>
+                        <span class="clockSpoke clockSpoke131"></span>
+                        <span class="clockSpoke clockSpoke132"></span>
+                        <span class="clockSpoke clockSpoke133"></span>
+                        <span class="clockSpoke clockSpoke134"></span>
+                        <span class="clockSpoke clockSpoke135"></span>
+                        <span class="clockSpoke clockSpoke136"></span>
+                    </div>
+                    <div class="concentrationWidget">
+                        <select name="attr_concentration">
+                            <option>Calm: no dice</option>
+                            <option>Strained: 1 tangle die</option>
+                            <option>Broken: 1 tangle die</option>
+                            <option>Focused: 1 spell die</option>
+                        </select>
+                    </div>
+                    <input type="checkbox" class="editCog" name="attr_editAttunement" value="1" />
+                    <span class="editCog"></span>
+                </div>
+                <input type="hidden" class="editToggle" name="attr_editAttunement" />
+                <div class="editMenu editAttunement">
+                    <button type="action" class="chargeButton" name="act_chargeClocks">Charge</button>
+                    <input type="hidden" name="attr_attuneArtefactSlots" value="1" />
+                    <input type="hidden" name="attr_attuneFocusSlots" value="0" />
+                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> Dueling Focus</p>
+                    <h3 class="equationList">Equations</h3>
+                    <textarea class="equationList" name="attr_equationlist" placeholder="A list of equations you've found."></textarea>
+                    <h3 class="formulaList">Formula</h3>
+                    <textarea class="formulaList" name="attr_formulalist" placeholder="A list of formula you've found."></textarea>
+                </div>
                 <div class="hand longHand">
                     <div class="deckHeader">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
+                        <h2>Rote Spells</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck0" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck0" />
                     <div class="deck">
                         <fieldset class="repeating_rotespellcard">
+                           
                             <div class="card customCard roteSpellCard">
                                 <h4 class="spellEquation">Equation</h4>
                                 <input type="text" class="spellEquation" name="attr_spellEquation" />
@@ -1819,7 +1861,8 @@
                                 <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
                                 <textarea class="spellComponents" name="attr_spellComponents" />
                                 <h4 class="spellEffect">Spell Effect</h4>
-                                <textarea class="spellEffect" name="attr_spellEffect" />                                
+                                <textarea class="spellEffect" name="attr_spellEffect" />
+
                             </div>
                         </fieldset>
                     </div>
@@ -1827,9 +1870,10 @@
 
                 <div class="hand twoHand upperHand">
                     <div class="deckHeader deck1">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                        <h2>Scrolls</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
                     <div class="deck deck1">
                         <fieldset class="repeating_scrollcard">
                             <div class="card customCard scrollCard">
@@ -1856,9 +1900,10 @@
                         </fieldset>
                     </div>
                     <div class="deckHeader deck2">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
+                        <h2>Artefacts</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
                     <div class="deck deck2">
                         <fieldset class="repeating_artefactcard">
                             <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
@@ -1893,9 +1938,10 @@
                 </div>
                 <div class="hand twoHand lowerHand">
                     <div class="deckHeader deck1">
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                        <h2>Consumables</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
                     </div>
-                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                     <div class="deck deck1">
                         <fieldset class="repeating_consumablecard">
                             <div class="card customCard consumableCard">
@@ -1921,6 +1967,7 @@
                         </fieldset>
                     </div>
                     <div class="deckHeader deck2">
+                        <h2>Dueling Foci</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck4" />
