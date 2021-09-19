@@ -1990,55 +1990,58 @@
                     <input type="text" name="attr_character_name" class="titlefill" />
                     <textarea name="attr_description" placeholder="what is this all about?"></textarea>
                 </div>
-                <div class="deckHeader">
-                    <h2>Puzzle</h2>
-                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
+                <div class="hand">
+                    <div class="deckHeader">
+                        <h2>Puzzle</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
+                    <div class="deck">
+                        <fieldset class="repeating_puzzleCard">
+                            <div class="card customCard puzzleCard">
+                                <h4 class="puzzleName">Name</h4>
+                                <input type="text" class="puzzleName" name="attr_puzzleName" />
+                                <h4 class="puzzleDescription">Concept</h4>
+                                <textarea class="puzzleDescription" name="attr_puzzleDescription" />
+                                <h4 class="puzzlePeril">Peril</h4>
+                                <textarea class="puzzlePeril" name="attr_puzzlePeril" />
+                                <h4 class="solution">Solution</h4>
+                                <input type="text" class="solution" name="attr_puzzleSolution" list="arts" />
+                                <input type="text" class="solutionSynergy" name="attr_puzzleSolutionSynergy" list="arts" />
+                                <h4 class="solutionComponents">Components</h4>
+                                <textarea class="solutionComponents" name="attr_solutionComponents" />
+                                <h4 class="solutionComponentsFalse">Distraction</h4>
+                                <textarea class="solutionComponentsFalse" name="attr_solutionComponentsFalse" />
+                                <h4 class="solutionRewards">Rewards</h4>
+                                <textarea class="solutionRewards" name="attr_solutionRewards" />
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
-                <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
-                <div class="deck">
-                    <fieldset class="repeating_puzzleCard">
-                        <div class="card customCard puzzleCard">
-                            <h4 class="puzzleName">Name</h4>
-                            <input type="text" class="puzzleName" name="attr_puzzleName" />
-                            <h4 class="puzzleDescription">Concept</h4>
-                            <textarea class="puzzleDescription" name="attr_puzzleDescription" />
-                            <h4 class="puzzlePeril">Peril</h4>
-                            <textarea class="puzzlePeril" name="attr_puzzlePeril" />
-                            <h4 class="solution">Solution</h4>
-                            <input type="text" class="solution" name="attr_puzzleSolution" list="arts" />
-                            <input type="text" class="solutionSynergy" name="attr_puzzleSolutionSynergy" list="arts" />
-                            <h4 class="solutionComponents">Components</h4>
-                            <textarea class="solutionComponents" name="attr_solutionComponents" />
-                            <h4 class="solutionComponentsFalse">Distraction</h4>
-                            <textarea class="solutionComponentsFalse" name="attr_solutionComponentsFalse" />
-                            <h4 class="solutionRewards">Rewards</h4>
-                            <textarea class="solutionRewards" name="attr_solutionRewards" />
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="deckHeader deck3">
-                    <h2>Curse</h2>
-                    <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
-                </div>
-                <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
-                <div class="deck deck3">
-                    <fieldset class="repeating_curseCard">
-                        <div class="card customCard curseCard">
-                            <h4 class="curseName">Affliction</h4>
-                            <input type="text" class="curseName" name="attr_curseName1" />
-                            <h4 class="curseSeverity">Severity</h4>
-                            <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
-                            <h4 class="statusEffect">Status Effect</h4>
-                            <textarea class="statusEffect" name="attr_statusEffect1" />
-                            <h4 class="curseRestoration">Solution</h4>
-                            <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts" />
-                            <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
-                            <h4 class="restorationComponents">Components</h4>
-                            <textarea class="restorationComponents" name="attr_restorationComponents1" />
-                        </div>
-                    </fieldset>
-                </div>
-
+                <div class="hand wideHand">
+                    <div class="deckHeader">
+                        <h2>Curse</h2>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
+                    </div>
+                    <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
+                    <div class="deck">
+                        <fieldset class="repeating_curseCard">
+                            <div class="card customCard curseCard">
+                                <h4 class="curseName">Affliction</h4>
+                                <input type="text" class="curseName" name="attr_curseName1" />
+                                <h4 class="curseSeverity">Severity</h4>
+                                <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
+                                <h4 class="statusEffect">Status Effect</h4>
+                                <textarea class="statusEffect" name="attr_statusEffect1" />
+                                <h4 class="curseRestoration">Solution</h4>
+                                <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts" />
+                                <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
+                                <h4 class="restorationComponents">Components</h4>
+                                <textarea class="restorationComponents" name="attr_restorationComponents1" />
+                            </div>
+                        </fieldset>
+                    </div>
+                    </div>
             </section>
         </div>
     </article>

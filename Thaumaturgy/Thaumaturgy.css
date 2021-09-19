@@ -3291,13 +3291,14 @@ input.editToggle[value="1"] + .editMenu
     min-height: 505px;
 }
 
-    .grimoireWidget > .hand
+    .grimoireWidget > .hand,
+    .fatekeeperDeck > .hand
     {
         display: grid;
         grid-template-rows: 28px auto;
+        row-gap: 6px;
         width: 275px;
         height: 100%;
-        row-gap: 6px;
         background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img47/cardDeck.png);
         background-repeat: no-repeat;
         background-position: center top;
@@ -4639,16 +4640,15 @@ section.fatekeeperDeck
     display: grid;
     width: 850px;
     height: 100%;
-    grid-template-columns: auto 275px 475px;
-    grid-template-rows: 30px auto;
-    grid-gap: 3px;
+    grid-template-columns: 10px 275px 10px 475px auto;
+    grid-template-rows: 100px auto;
     justify-items: start;
     align-items: start;
 }
 
     section.fatekeeperDeck > .fatekeeperDeckAspects
     {
-        grid-area: 1/1/-1/auto;
+        grid-area: 1/1/auto/-1;
         display: grid;
         width: 100%;
         height: 100%;
@@ -4678,22 +4678,15 @@ section.fatekeeperDeck
             height: 100%;
         }
 
-    section.fatekeeperDeck > .deck2
+    section.fatekeeperDeck > .hand
     {
-        grid-column: 2/auto;
+        grid-area: 2/2/auto/auto;
     }
 
-    section.fatekeeperDeck > .deck3
+    section.fatekeeperDeck > .wideHand
     {
-        grid-column: 3/auto;
-    }
-
-    section.fatekeeperDeck > .deckHeader
-    {
-        grid-row: 1/auto;
-    }
-
-    section.fatekeeperDeck > .deck
-    {
-        grid-row: 2/auto;
+        grid-column: 4/auto;
+        width: 475px;
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img47/cardDeckLandscape.png);
+        background-size: 275px 475px;
     }
