@@ -3285,7 +3285,7 @@ input.editToggle[value="1"] + .editMenu
     grid-area: 6/1/auto/-1;
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-template-columns: 20px 275px 575px 1fr;
+    grid-template-columns: 20px auto 275px 575px 1fr;
     width: 100%;
     height: 100%;
     min-height: 505px;
@@ -3302,7 +3302,7 @@ input.editToggle[value="1"] + .editMenu
 
     .grimoireWidget > .longHand
     {
-        grid-area: 3/2/span 2/auto;
+        grid-area: 4/2/span 2/auto;
         grid-template-columns: 275px;
         min-height: 978px;
     }
@@ -3327,12 +3327,12 @@ input.editToggle[value="1"] + .editMenu
 
     .grimoireWidget > .upperHand
     {
-        grid-row: 3/auto;
+        grid-row: 4/auto;
     }
 
     .grimoireWidget > .lowerHand
     {
-        grid-row: 4/auto;
+        grid-row: 5/auto;
     }
 
     .grimoireWidget > .grimoireHeader
@@ -3367,29 +3367,56 @@ input.editToggle[value="1"] + .editMenu
         }
 
     /* Attunment Edit */
-    .grimoireWidget .editAttunement
+    .grimoireWidget > .editAttunement
     {
-        grid-area: 1/1/span 2/-1;
-        grid-template-columns: 22px repeat(12,1fr);
-        grid-template-rows: 26px 28px 20px;
+        grid-area: 3/1/auto/-1;
+        grid-template-columns: 20px 270px 70px 60px 5px 80px 1fr;
+        grid-template-rows: 28px 20px 150px;
+        max-width: 850px;
     }
 
-        .grimoireWidget .editAttunement button.chargeButton
-        {
-            grid-area: 2/3/auto/auto;
-        }
-        
-        .grimoireWidget .editAttunement input
-        {
-            height: 16px;
-            width: 8px;
-            margin-bottom: 3px;
-        }
-        .grimoireWidget .editAttunement p
-        {
-            grid-area: 3/10/auto/-1;
-            justify-self: center;
-        }
+    .grimoireWidget > .editAttunement > button.chargeButton
+    {
+        grid-area: 1/3/auto/auto;
+    }
+
+    .grimoireWidget .editAttunement input
+    {
+        height: 16px;
+        width: 8px;
+        margin-bottom: 3px;
+    }
+
+    .grimoireWidget > .editAttunement > p
+    {
+        grid-area: 2/7/auto/-1;
+        padding-top: 5px;
+        margin: 0;
+        justify-self: end;
+    }
+
+    .grimoireWidget > .editAttunement > h3
+    {
+        grid-row: 2/auto;
+    }
+
+    .grimoireWidget > .editAttunement > textarea
+    {
+        grid-row: 3/auto;
+        width: 100%;
+        height: 100%;
+        margin-left: 5px;
+    }
+
+    .grimoireWidget > .editAttunement > .equationList
+    {
+        grid-column: 2/5;
+    }
+
+    .grimoireWidget > .editAttunement > .formulaList
+    {
+        grid-column: 6/-1;
+    }
 
     /* editToggle attuneToggle Controls */
 input.editToggle[value="0"] ~ .hand > .deck .repcontrol,
