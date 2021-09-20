@@ -1030,34 +1030,34 @@ main.masterGrid
 
     .ritualCard textarea.ritualMilestones
     {
-        grid-row: 4/span 5;
+        grid-row: 4/span 9;
     }
 
     .ritualCard h4.ritualComponents
     {
-        grid-row: 9/auto;
+        grid-row: 13/auto;
     }
     .ritualCard .potency
-    {
-        grid-row: 9/auto;
-    }
-
-    .ritualCard textarea.ritualComponents
-    {
-        grid-row: 10/13;
-    }
-
-    .ritualCard .ritualSigilSize
     {
         grid-row: 13/auto;
     }
 
+    .ritualCard textarea.ritualComponents
+    {
+        grid-row: 14/span 5;
+    }
+
+    .ritualCard .ritualSigilSize
+    {
+        grid-row: 19/auto;
+    }
+
     .ritualCard .ritualSigil
     {
-        grid-area: 14/1/-1/-1;
+        grid-area: 20/1/-1/-1;
         display: grid;
-        grid-template-columns: 8px repeat(20,12px) 1fr;
-        grid-template-rows: 12px repeat(8,12px) 1fr;
+        grid-template-columns: 20px repeat(20,12px) 1fr;
+        grid-template-rows: 11px repeat(8,12px) 1fr;
     }
 
         .ritualCard .ritualSigil > button
