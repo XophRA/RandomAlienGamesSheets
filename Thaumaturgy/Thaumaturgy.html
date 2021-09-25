@@ -1665,14 +1665,12 @@
             </section>
             <!-- Key & Tell -->
             <section class="keyTellWidget">
-                <h1>Key</h1>
+                <h1>Key & Tell</h1>
                 <fieldset class="repeating_key">
-                    <div class="npckey">
+                    <div class="key">
                         <input type="checkbox" class="keyDamage" name="attr_npcDamage" />
-                        <select class="key" name="attr_npcKey">
-                            <option></option>
-                            <option>Inflict a distinct and lethal effect</option>
-                        </select>
+                        <textarea class="key" name="attr_npcKey" placeholder="Enter the Status Effect Inflicted"/>
+                        <p class="tell" name="attr_npcTell">Inflict a distinct and lethal effect</p>
                     </div>
                 </fieldset>
             </section>
@@ -1938,6 +1936,7 @@
                                 <textarea class="puzzleDescription" name="attr_puzzleDescription" />
                                 <h4 class="puzzlePeril">Peril</h4>
                                 <textarea class="puzzlePeril" name="attr_puzzlePeril" />
+                                <input type="checkbox" class="gradePeril" name="attr_gradePeril" />
                                 <h4 class="solution">Solution</h4>
                                 <input type="text" class="solution" name="attr_puzzleSolution" list="arts" />
                                 <input type="text" class="solutionSynergy" name="attr_puzzleSolutionSynergy" list="arts" />
@@ -1947,6 +1946,7 @@
                                 <textarea class="solutionComponentsFalse" name="attr_solutionComponentsFalse" />
                                 <h4 class="solutionRewards">Rewards</h4>
                                 <textarea class="solutionRewards" name="attr_solutionRewards" />
+                                <input type="checkbox" class="gradeReward" name="attr_gradeReward" />
                             </div>
                         </fieldset>
                     </div>

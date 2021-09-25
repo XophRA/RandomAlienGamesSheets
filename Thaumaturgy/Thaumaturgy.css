@@ -2584,67 +2584,67 @@ input[value="0"].clockSegment13 ~ .clock
 
 input[value="1"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(112deg, #555 50%, white 50% );
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(112deg, IndianRed 50%, white 50% );
 }
 
 input[value="2"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, IndianRed 50%, white 50%);
 }
 
 input[value="3"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(164deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(164deg, IndianRed 50%, white 50%);
 }
 
 input[value="4"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(190deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(190deg, IndianRed 50%, white 50%);
 }
 
 input[value="5"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, IndianRed 50%, white 50%);
 }
 
 input[value="6"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(246deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(246deg, IndianRed 50%, white 50%);
 }
 
 input[value="7"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(112deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(112deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="8"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(140deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(140deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="9"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(165deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(165deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="10"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(195deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(195deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="11"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(221deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(221deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="12"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(247deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(247deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="13"].clockSegment13 ~ .clock
 {
-    background-color: #555;
+    background-color: IndianRed;
 }
 
 
@@ -2656,40 +2656,40 @@ input[value="0"].clockSegment7 ~ .clock
 
 input[value="1"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(130deg, #555 50%, white 50% );
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(130deg, IndianRed 50%, white 50% );
 }
 
 input[value="2"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(180deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(180deg, IndianRed 50%, white 50%);
 }
 
 
 input[value="3"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(240deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(240deg, IndianRed 50%, white 50%);
 }
 
 
 input[value="4"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(130deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(130deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="5"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(180deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(180deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 
 input[value="6"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(240deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(240deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="7"].clockSegment7 ~ .clock
 {
-    background-color: #555;
+    background-color: IndianRed;
 }
 
 /* Clock Segments for 5 Segment Clock */
@@ -2700,28 +2700,28 @@ input[value="0"].clockSegment5 ~ .clock
 
 input[value="1"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, IndianRed 50%, white 50%);
 }
 
 input[value="2"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, IndianRed 50%, white 50%);
 }
 
 input[value="3"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(142deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(142deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 
 input[value="4"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(220deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(220deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="5"].clockSegment5 ~ .clock
 {
-    background-color: #555;
+    background-color: IndianRed;
 }
 
 /* Clock Segments for 3 Segment Clock */
@@ -2732,17 +2732,17 @@ input[value="0"].clockSegment3 ~ .clock
 
 input[value="1"].clockSegment3 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(210deg, #555 50%, white 50%);
+    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(210deg, IndianRed 50%, white 50%);
 }
 
 input[value="2"].clockSegment3 ~ .clock
 {
-    background-image: linear-gradient(150deg, transparent 50%, #555 50%), linear-gradient(90deg, white 50%, #555 50%);
+    background-image: linear-gradient(150deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
 }
 
 input[value="3"].clockSegment3 ~ .clock
 {
-    background-color: #555;
+    background-color: IndianRed;
 }
 
 /* Clock Spokes */
@@ -3995,6 +3995,13 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/PuzzleCard.png);
 }
 
+    .puzzleCard input[type=checkbox]
+    {
+        justify-self: center;
+        width: 20px;
+        accent-color: IndianRed;
+    }
+
     .puzzleCard .puzzleName
     {
         grid-row: 2/auto;
@@ -4018,6 +4025,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     .puzzleCard textarea.puzzlePeril
     {
         grid-row: 6/span 4;
+    }
+
+    .puzzleCard input.gradePeril
+    {
+        grid-area: 7/1/span 2/auto;
     }
 
     .puzzleCard .solution
@@ -4053,6 +4065,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     .puzzleCard .solutionRewards
     {
         grid-row: 20/-2;
+    }
+
+    .puzzleCard input.gradeReward
+    {
+        grid-area: 22/1/span 2/auto;
     }
 
 
@@ -4513,25 +4530,6 @@ div.key
 {
     grid-area: 2/2/auto/auto;
 }
-
-div.npckey
-{
-    display: grid;
-    width: 842px;
-    height: 100%;
-    grid-area: 2/1/auto/auto;
-    grid-template-columns: 12px 1fr;
-    grid-template-rows: 22px;
-    justify-items: start;
-    align-items: start;
-    margin: 3px;
-    grid-gap: 3px;
-}
-
-    div.npckey > .key
-    {
-        grid-area: 1/2/-1/-1;
-    }
 
 /* Patron */
 .patronAspects
