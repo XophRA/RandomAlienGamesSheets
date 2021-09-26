@@ -23,14 +23,37 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
     display: initial;
 }
 
-
-/*General Sheet Style*/
+/* General Sheet Style */
 .charsheet
 {
+    /* Color Scheme */
+    /* Variables for a selection of colors to be used in the sheet colors */
+    /* Sheet Colors */
+    --bgSheet: #FFF;
+    --bgFieldDark: rgba(240,240,240,0.4);
+    --bgFieldLight: rgba(240,240,240,0.1);
+    --txtBody: #000;
+    --txtTitle: #000;
+    --txtAlert: #C71585;
+    --buttonBG: #FFF;
+    --border: #000;
+    --buttonTxt: #000;
+    --buttonTxtCaution: #C71585;
+    --buttonShadow: rgba(0,0,0,0.20);
+    --buttonBGHover: #708090;
+    --buttonTxtHover: #FFF;
+    --buttonBGHoverCaution: #C71585;
+    --buttonTxtHoverCaution: #000;
+    --circleSegmentFilled: #6F339B;
+    --circleSegmentEmpty: #FFF;
+    --checkboxAccent: #6F339B;
+    --diceTxt: #FFF;
+    /* Basic Styles */
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
-    color: #000;
-    background-color: #FFF;
+    color: var(--txtBody);
+    background-color: var(--bgSheet);
+    --borderStyle: 2px solid #000;
 }
 
     .charsheet h1, .charsheet h2, .charsheet h3, .charsheet th
@@ -74,13 +97,14 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
 
     .charsheet hr
     {
-        border-top: 1px solid #D3D3D3;
+        border-top: var(--borderStyle);
     }
 
     .charsheet input[type="checkbox"],
     .charsheet input[type="radio"]
     {
         height: 100%;
+        accent-color: var(--checkboxAccent);
     }
 
     .charsheet button,
@@ -88,8 +112,8 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
     {
         margin: 0;
         background-image: none;
-        background-color: white;
-        border: 2px solid black;
+        background-color: var(--buttonBG);
+        border: var(--borderStyle);
         font-weight: 600;
         font-size: 13px;
         line-height: 18px;
@@ -102,8 +126,8 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
         .charsheet input[type="checkbox"]:hover + span,
         .charsheet input[type="radio"]:hover + span
         {
-            box-shadow: 0 8px 8px 0 rgba(0,0,0,0.20);
-            background-color: white;
+            box-shadow: 0 8px 8px 0 var(--buttonShadow);
+            background-color: var(--buttonBG);
         }
 
 .ui-dialog .charsheet input[type="number"]
@@ -131,7 +155,7 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
     border: none;
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
-    color: #000;
+    color: var(--txtBody);
     height: 98%;
     width: 98%;
     line-height: 100%;
@@ -145,7 +169,7 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
 
 .charsheet textarea, .charsheet input[type="text"]
 {
-    background-image: linear-gradient(to right, rgba(240,240,240,0.4), rgba(240,240,240,0.1), rgba(240,240,240,0), rgba(240,240,240,0) );
+    background-image: linear-gradient(to right, var(--bgFieldDark), var(--bgFieldLight), transparent, transparent );
 }
 
     .charsheet textarea.titlefill, .charsheet input[type="text"].titlefill
@@ -161,25 +185,25 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
 /* Repeating Items */
 .repcontainer > .repitem > .itemcontrol > .repcontrol_del
 {
-    color: red;
+    color: var(--buttonTxtCaution);
 }
 
     .repcontainer > .repitem > .itemcontrol > .repcontrol_del:hover
     {
-        background-color: red;
-        color: black;
+        background-color: var(--buttonBGHoverCaution);
+        color: var(--buttonTxtHoverCaution);
     }
 
 .repcontainer > .repitem > .itemcontrol > .repcontrol_move:hover
 {
-    background-color: slategrey;
-    color: white;
+    background-color: var(--buttonBGHover);
+    color: var(--buttonTxt);
 }
 
 .repcontrol
 {
     width: 95%;
-    justify-self:center;
+    justify-self: center;
     margin: 6px;
 }
 
@@ -201,7 +225,7 @@ div.title
     font-family: "Fredericka the Great", cursive;
     font-size: 5em;
     color: #000;
-    background-color: #FFF;
+    background-color: var(--bgSheet);
     background-size: 450px 100px;
     background-repeat: no-repeat;
     background-position: center;
@@ -1535,7 +1559,7 @@ input[type=number].resourceBox
             background-repeat: no-repeat;
             background-position: center;
             text-align: center;
-            color: white;
+            color: var(--diceTxt);
             font-size: 18px;
             -webkit-appearance: none;
             -moz-appearance: textfield;
@@ -1559,7 +1583,7 @@ input[type=number].resourceBox
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type=number]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
-            background-color: gold;
+            background-color: var(--checkboxAccent);
         }
         /* Spell Die Double */
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type=number]
@@ -1570,7 +1594,7 @@ input[type=number].resourceBox
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type=number]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
-            background-color: gold;
+            background-color: var(--checkboxAccent);
         }
         /* Tangle Die Miss */
         section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type=number]
@@ -1581,7 +1605,7 @@ input[type=number].resourceBox
         section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type=number]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
-            background-color: gold;
+            background-color: var(--checkboxAccent);
         }
 
 
@@ -2550,8 +2574,8 @@ input[type="number"].rippleBox
         height: var(--clockheight);
         display: inline-block;
         border-radius: 50%;
-        background: black;
-        border: 2px solid black;
+        background: var(--border);
+        border: var(--borderStyle);
     }
 
     .clockWidget > input[type=number].clockControl::-webkit-inner-spin-button,
@@ -2579,170 +2603,170 @@ input[type="number"].rippleBox
 /* Clock Segments for 13 Segment Clock */
 input[value="0"].clockSegment13 ~ .clock
 {
-    background: white;
+    background: var(--circleSegmentEmpty);
 }
 
 input[value="1"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(112deg, IndianRed 50%, white 50% );
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(112deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50% );
 }
 
 input[value="2"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(139deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="3"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(164deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(164deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="4"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(190deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(190deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="5"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(220deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="6"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(246deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(246deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="7"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(112deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(112deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="8"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(140deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(140deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="9"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(165deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(165deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="10"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(195deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(195deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="11"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(221deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(221deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="12"].clockSegment13 ~ .clock
 {
-    background-image: linear-gradient(247deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(247deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="13"].clockSegment13 ~ .clock
 {
-    background-color: IndianRed;
+    background-color: var(--circleSegmentFilled);
 }
 
 
 /* Clock Segments for 7 Segment Clock */
 input[value="0"].clockSegment7 ~ .clock
 {
-    background: white;
+    background: var(--circleSegmentEmpty);
 }
 
 input[value="1"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(130deg, IndianRed 50%, white 50% );
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(130deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50% );
 }
 
 input[value="2"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(180deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(180deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 
 input[value="3"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(240deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(240deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 
 input[value="4"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(130deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(130deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="5"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(180deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(180deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 
 input[value="6"].clockSegment7 ~ .clock
 {
-    background-image: linear-gradient(240deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(240deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="7"].clockSegment7 ~ .clock
 {
-    background-color: IndianRed;
+    background-color: var(--circleSegmentFilled);
 }
 
 /* Clock Segments for 5 Segment Clock */
 input[value="0"].clockSegment5 ~ .clock
 {
-    background: white;
+    background: var(--circleSegmentEmpty);
 }
 
 input[value="1"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(139deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(139deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="2"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(220deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(220deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="3"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(142deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(142deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 
 input[value="4"].clockSegment5 ~ .clock
 {
-    background-image: linear-gradient(220deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(220deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="5"].clockSegment5 ~ .clock
 {
-    background-color: IndianRed;
+    background-color: var(--circleSegmentFilled);
 }
 
 /* Clock Segments for 3 Segment Clock */
 input[value="0"].clockSegment3 ~ .clock
 {
-    background: white;
+    background: var(--circleSegmentEmpty);
 }
 
 input[value="1"].clockSegment3 ~ .clock
 {
-    background-image: linear-gradient(90deg, white 50%, transparent 50%), linear-gradient(210deg, IndianRed 50%, white 50%);
+    background-image: linear-gradient(90deg, var(--circleSegmentEmpty) 50%, transparent 50%), linear-gradient(210deg, var(--circleSegmentFilled) 50%, var(--circleSegmentEmpty) 50%);
 }
 
 input[value="2"].clockSegment3 ~ .clock
 {
-    background-image: linear-gradient(150deg, transparent 50%, IndianRed 50%), linear-gradient(90deg, white 50%, IndianRed 50%);
+    background-image: linear-gradient(150deg, transparent 50%, var(--circleSegmentFilled) 50%), linear-gradient(90deg, var(--circleSegmentEmpty) 50%, var(--circleSegmentFilled) 50%);
 }
 
 input[value="3"].clockSegment3 ~ .clock
 {
-    background-color: IndianRed;
+    background-color: var(--circleSegmentFilled);
 }
 
 /* Clock Spokes */
@@ -2754,7 +2778,7 @@ input[value="3"].clockSegment3 ~ .clock
     display: block;
     left: 0;
     top: 0;
-    background: black;
+    background: var(--border);
 }
 
     /* Clock Spokes for 13 Segment Clock */
@@ -2881,7 +2905,7 @@ span.editCog
     width: 22px;
     height: 32px;
     z-index: 12;
-    border: 2px solid black;
+    border: var(--borderStyle);
     border-radius: 4px;
 }
 
@@ -3652,8 +3676,8 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-area: 1/-2/auto/auto;
         width: 26px;
         height: 20px;
-        background-color: white;
-        border-color: #555555;
+        background-color: var(--buttonBG);
+        border: var(--borderStyle);
         border-radius: 12%;
         align-self: center;
         padding: 0;
@@ -3999,7 +4023,6 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     {
         justify-self: center;
         width: 20px;
-        accent-color: IndianRed;
     }
 
     .puzzleCard .puzzleName
