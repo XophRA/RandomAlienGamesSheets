@@ -30,7 +30,7 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
     /* Variables for a selection of colors to be used in the sheet colors */
     --paper: #FFF;
     --text: #000;
-    --primary: #6F339B;
+    --primary: #a985c3;
     --accent: #708090;
     --alert: #C71585;
     /* Sheet Colors */
@@ -383,13 +383,10 @@ main.masterGrid
 }
 
 /* Roll Template */
-.textchatcontainer
-{
-    background-color: var(--bgSheet);
-}
-
 .sheet-rolltemplate-Thaumaturgy
 {
+    background-color: white;
+    margin: -24px -45px;
 }
 
     .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer
@@ -401,7 +398,7 @@ main.masterGrid
         border: none;
         font-family: "Open Sans", sans-serif;
         color: black;
-        margin-left: -5px;
+        padding: 23px 0 0 35px;
         font-weight: 400;
         font-size: 12px;
     }
