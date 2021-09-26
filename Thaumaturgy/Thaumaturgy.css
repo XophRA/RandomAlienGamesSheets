@@ -388,13 +388,6 @@ main.masterGrid
     background-color: var(--bgSheet);
 }
 
-    .textchatcontainer .spacer,
-    .textchatcontainer .message .spacer,
-    .textchatcontainer .message.you .spacer
-    {
-        background-color: var(--accent);
-    }
-
 .sheet-rolltemplate-Thaumaturgy
 {
 }
