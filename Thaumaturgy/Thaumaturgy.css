@@ -28,32 +28,37 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
 {
     /* Color Scheme */
     /* Variables for a selection of colors to be used in the sheet colors */
+    --paper: #FFF;
+    --text: #000;
+    --primary: #6F339B;
+    --accent: #708090;
+    --alert: #C71585;
     /* Sheet Colors */
-    --bgSheet: #FFF;
+    --bgSheet: var(--paper);
     --bgFieldDark: rgba(240,240,240,0.4);
     --bgFieldLight: rgba(240,240,240,0.1);
-    --txtBody: #000;
-    --txtTitle: #000;
-    --txtAlert: #C71585;
-    --buttonBG: #FFF;
-    --border: #000;
-    --buttonTxt: #000;
-    --buttonTxtCaution: #C71585;
+    --txtBody: var(--text);
+    --txtTitle: var(--text);
+    --txtAlert: var(--alert);
+    --buttonBG: var(--paper);
+    --border: var(--text);
+    --buttonTxt: var(--text);
+    --buttonTxtCaution: var(--alert);
     --buttonShadow: rgba(0,0,0,0.20);
-    --buttonBGHover: #708090;
-    --buttonTxtHover: #FFF;
-    --buttonBGHoverCaution: #C71585;
-    --buttonTxtHoverCaution: #000;
-    --circleSegmentFilled: #6F339B;
-    --circleSegmentEmpty: #FFF;
-    --checkboxAccent: #6F339B;
-    --diceTxt: #FFF;
+    --buttonBGHover: var(--accent);
+    --buttonTxtHover: var(--paper);
+    --buttonBGHoverCaution: var(--alert);
+    --buttonTxtHoverCaution: var(--text);
+    --circleSegmentFilled: var(--primary);
+    --circleSegmentEmpty: var(--paper);
+    --checkboxAccent: var(--primary);
+    --diceTxt: var(--paper);
     /* Basic Styles */
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
     color: var(--txtBody);
     background-color: var(--bgSheet);
-    --borderStyle: 2px solid #000;
+    --borderStyle: 2px solid var(--text);
 }
 
     .charsheet h1, .charsheet h2, .charsheet h3, .charsheet th
@@ -224,7 +229,7 @@ div.title
     grid-area: title;
     font-family: "Fredericka the Great", cursive;
     font-size: 5em;
-    color: #000;
+    color: var(--txtTitle);
     background-color: var(--bgSheet);
     background-size: 450px 100px;
     background-repeat: no-repeat;
@@ -378,6 +383,18 @@ main.masterGrid
 }
 
 /* Roll Template */
+.textchatcontainer
+{
+    background-color: var(--bgSheet);
+}
+
+    .textchatcontainer .spacer,
+    .textchatcontainer .message .spacer,
+    .textchatcontainer .message.you .spacer
+    {
+        background-color: var(--accent);
+    }
+
 .sheet-rolltemplate-Thaumaturgy
 {
 }
@@ -387,11 +404,10 @@ main.masterGrid
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 23px 1fr 1fr;
-        background-color: #1a1a1a;
         width: 99%;
         border: none;
         font-family: "Open Sans", sans-serif;
-        color: white;
+        color: black;
         margin-left: -5px;
         font-weight: 400;
         font-size: 12px;
@@ -401,13 +417,9 @@ main.masterGrid
         {
             grid-row: 1/2;
             grid-column: 1/-1;
-            background-color: #FAF9F6;
             font-family: "Fredericka the Great", cursive;
             font-weight: 600;
             font-size: 17px;
-            color: #E34234;
-            margin-left: -5px;
-            padding-left: 2px;
             padding-top: 1px;
             width: 100%;
             z-index: 5;
@@ -435,11 +447,8 @@ main.masterGrid
             /*Subheaders*/
             .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-rolltemplateDiceContainer .sheet-templateSubheader
             {
-                color: #FAF9F6;
-                font-family: "Fredericka the Great", cursive;
-                font-weight: 500;
+                font-weight: 600;
                 font-size: 12px;
-                padding-left: 2px;
                 padding-top: 3px;
                 min-width: fit-content;
             }
@@ -467,6 +476,8 @@ main.masterGrid
                 justify-content: flex-start;
                 align-items: flex-start;
                 flex-wrap: wrap;
+                color: indigo;
+                font-style:italic;
             }
 
         /*Dice*/
