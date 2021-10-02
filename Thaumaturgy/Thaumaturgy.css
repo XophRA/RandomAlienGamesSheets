@@ -544,10 +544,10 @@ main.masterGrid
 {
     grid-area: 1/1/auto/auto;
     display: grid;
-    width: 100%;
-    height: 100%;
+    width: 340px;
+    height: 490px;
     grid-template-columns: 110px 1fr;
-    grid-template-rows: 24px repeat(3, 1fr);
+    grid-template-rows: 24px repeat(2, 1fr) 3fr;
     grid-row-gap: 4px;
     margin-left: 25px;
     margin-top: 22px;
@@ -576,12 +576,12 @@ main.masterGrid
 
     .covenAspects > .covenkins
     {
-        grid-row: 3/auto;
+        grid-row: 4/auto;
     }
 
     .covenAspects > .seniorCovens
     {
-        grid-row: 4/auto;
+        grid-row: 3/auto;
     }
 
 /* Layout */
@@ -794,7 +794,7 @@ main.masterGrid
         width: 100%;
         height: 100%;
         grid-template-columns: 103px 275px 1fr;
-        grid-template-rows: 28px 1fr;
+        grid-template-rows: 33px auto;
         margin-top: 57px;
     }
 
@@ -1037,7 +1037,10 @@ main.masterGrid
     {
         grid-area: 3/5/span 18/span 13;
     }
-
+        .ascensionDeck .ascensionCard .ritualObjective
+        {
+            grid-row: 2/span 2;
+        }
 
 /* Ritual Card */
 .ritualCard
@@ -3339,7 +3342,7 @@ input.editToggle[value="1"] + .editMenu
     .fatekeeperDeck > .hand
     {
         display: grid;
-        grid-template-rows: 28px auto;
+        grid-template-rows: 32px auto;
         row-gap: 6px;
         width: 275px;
         height: 100%;
@@ -3511,7 +3514,7 @@ section > .hand > .deckHeader
     grid-template-rows: 28px;
     width: 100%;
     height: 100%;
-    padding: 8px;
+    padding: 6px;
 }
 
     section > .hand > .deckHeader > .collapseDeck
@@ -3540,12 +3543,20 @@ section > .hand > .deckHeader
             width: 20px;
             height: 28px;
             z-index: 12;
+            border-radius: 4px;
             border: var(--buttonBorderStyle)
         }
 
         section > .hand > .deckHeader > input.collapseDeck:checked + span.collapseDeck
         {
             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/ExpandDeckWhite.png);
+        }
+
+        section > .hand > .deckHeader > input.collapseDeck:hover + span.collapseDeck
+        {
+            background-color: var(--buttonBGHover);
+            color: var(--buttonTxtHover);
+            border: var(--buttonHoverBorderStyle);
         }
 
 

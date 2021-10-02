@@ -708,7 +708,7 @@
             <!--Coven Aspects-->
             <section class="covenAspects">
                 <input type="text" name="attr_character_name" class="covenName titlefill" />
-                <h4 class="covenDescription">Description</h4>
+                <h4 class="covenDescription">Location</h4>
                 <textarea name="attr_covendescription" class="covenDescription" />
                 <h4 class="covenkins">Covenkin</h4>
                 <textarea name="attr_covenkins" class="covenkins" />
@@ -894,9 +894,8 @@
                     <span class="level lvl12">12</span>
                     <span class="level lvl13">13</span>
                     <div class="card customCard ascensionCard ritualCard">
-                        <h4 class="ritualObjective">Objective</h4>
-                        <input type="text" class="ritualObjective" name="attr_ascensionObjective" readonly />
-                        <input type="text" class="ritualObjectiveDetail" name="attr_ascensionObjectiveDetail" />
+                        <h4 class="ritualObjective">Quest</h4>
+                        <textarea class="ritualObjective" name="attr_ascensionObjectiveDetail" />
                         <h4 class="ritualMilestones">Milestones</h4>
                         <textarea class="ritualMilestones" name="attr_ascensionMilestones" />
                         <h4 class="ritualComponents">Components</h4>
@@ -906,14 +905,9 @@
                             <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
                         </div>
                         <textarea class="ritualComponents" name="attr_ascensionWorkings" />
-                        <h4 class="ritualSigilSize">Ritual Sigil</h4>
-                        <select class="ritualSigilSize" name="attr_ascensionSigilSize">
-                            <option value="3">Dawn</option>
-                            <option value="5">Sun</option>
-                            <option value="7">Twilight</option>
-                            <option value="9">Moon</option>
-                            <option value="11">Oblivion</option>
-                        </select>
+                        <h4 class="ritualSigilSize">Next Level</h4>
+                        <input type="text" class="ritualSigilSize" name="attr_ascensionObjective" readonly />
+                        
                         <div class="ritualSigil">
                             <!-- Ritual Sigil -->
                             <input type="hidden" name="attr_ascensionSigilSize" value="5" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
@@ -2013,7 +2007,7 @@
     var globalAttributes = [];//Global Array for Storage of Player Caster Level
 
     /* Set Defaults, name, and Player Caster Level to Coven Level */
-    on("sheet:opened change:covenlevel change:givenname change:academicname change:questname change:questname change:pronouns", (event) =>
+    on("sheet:opened change:covenlevel change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns", (event) =>
     {
         getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Disruption", "Danger", "Divergence", "givenName", "academicName", "questName", "pronouns","character_name"], function (values)
         {
@@ -2030,6 +2024,7 @@
             setObj.Consequences = parseInt(values.Consequences) || 0;
             setObj.Destiny = parseInt(values.Destiny) || 0;
             setObj.Obstacle = parseInt(values.Obstacle) || 0;
+
             /* Ensure Disequilibrium is set */
             setObj.Disruption = parseInt(values.Disruption) || 0;
             setObj.Danger = parseInt(values.Danger) || 0;
@@ -2042,33 +2037,41 @@
                 covenLevel = parseInt(values.covenLevel) || 0;
                 let nextLevel = covenLevel + 1;
                 let ascensionObjective = "";
+                let ascensionSigilSize = 5;
 
                 if (nextLevel >= 13)
                 {
                     ascensionObjective = "Final Ascension";
+                    ascensionSigilSize = 11;
                 }
                 else if (nextLevel <= 0)
                 {
                     ascensionObjective = "Initiate";
+                    ascensionSigilSize = 3;
                 }
                 else if (nextLevel > 0 && nextLevel < 4)
                 {
                     ascensionObjective = "Apprentice, level " + nextLevel;
+                    ascensionSigilSize = 5;
                 }
                 else if (nextLevel < 8 && nextLevel > 3)
                 {
                     ascensionObjective = "Keeper, level " + nextLevel;
+                    ascensionSigilSize = 7;
                 }
                 else if (nextLevel <= 8 && nextLevel < 11)
                 {
                     ascensionObjective = "Graduate, level " + nextLevel;
+                    ascensionSigilSize = 9;
                 }
                 else
                 {
                     ascensionObjective = "Scholar, level " + nextLevel;
+                    ascensionSigilSize = 11;
                 }
 
                 setObj.ascensionObjective = ascensionObjective;
+                setObj.ascensionSigilSize = ascensionSigilSize;
 
                 // Globally Store Coven Level from Ascension Widget on Coven Sheet
                 globalAttributes.covenlevel = covenLevel;
