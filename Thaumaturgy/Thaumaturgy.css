@@ -40,9 +40,9 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
     --txtBody: var(--text);
     --txtTitle: var(--text);
     --txtAlert: var(--alert);
-    --buttonBG: var(--paper);
+    --buttonBG: var(--primary);
     --border: var(--text);
-    --buttonTxt: var(--text);
+    --buttonTxt: var(--paper);
     --buttonTxtCaution: var(--alert);
     --buttonShadow: rgba(0,0,0,0.20);
     --buttonBGHover: var(--accent);
@@ -59,6 +59,9 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
     color: var(--txtBody);
     background-color: var(--bgSheet);
     --borderStyle: 2px solid var(--text);
+    --buttonBorderStyle: 2px solid var(--primary);
+    --buttonBorderCautionStyle: 2px solid var(--alert);
+    --buttonHoverBorderStyle: 2px solid var(--accent);
 }
 
     .charsheet h1, .charsheet h2, .charsheet h3, .charsheet th
@@ -118,13 +121,14 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
         margin: 0;
         background-image: none;
         background-color: var(--buttonBG);
-        border: var(--borderStyle);
+        border: var(--buttonBorderStyle);
         font-weight: 600;
         font-size: 13px;
         line-height: 18px;
         text-align: center;
         border-radius: 4px;
         padding: 2px 6px;
+        color: var(--buttonTxt);
     }
 
         .charsheet button:hover,
@@ -132,7 +136,8 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
         .charsheet input[type="radio"]:hover + span
         {
             box-shadow: 0 8px 8px 0 var(--buttonShadow);
-            background-color: var(--buttonBG);
+            background-color: var(--buttonBGHover);
+            border: var(--buttonHoverBorderStyle);
         }
 
 .ui-dialog .charsheet input[type="number"]
@@ -197,12 +202,14 @@ input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
     {
         background-color: var(--buttonBGHoverCaution);
         color: var(--buttonTxtHoverCaution);
+        border: var(--buttonBorderCautionStyle);
     }
 
 .repcontainer > .repitem > .itemcontrol > .repcontrol_move:hover
 {
     background-color: var(--buttonBGHover);
-    color: var(--buttonTxt);
+    color: var(--buttonTxtHover);
+    border: var(--buttonHoverBorderStyle);
 }
 
 .repcontrol
@@ -1366,13 +1373,14 @@ main.masterGrid
 {
     grid-area: 4/1/auto/span 2;
     display: grid;
-    grid-template-areas: "h1 h2" "col1 col2";
+    grid-template-rows: 35px auto;
+    grid-template-areas: "header1 header2" "col1 col2";
     width: 100%;
 }
 
-    .spellcastingProcess .h1
+    .spellcastingProcess .header1
     {
-        grid-area: h1;
+        grid-area: header1;
     }
 
     .spellcastingProcess .col1
@@ -2898,16 +2906,18 @@ input.editCog
 
 span.editCog
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/editCog.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/editCogWhite.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--buttonBG);
     opacity: 1;
     background-size: 24px 24px;
     width: 22px;
     height: 32px;
     z-index: 12;
-    border: var(--borderStyle);
+    border: var(--buttonBorderStyle);
     border-radius: 4px;
+    color: var(--buttonTxt)
 }
 
 input.editToggle[value="0"] + .editMenu
@@ -3520,19 +3530,22 @@ section > .hand > .deckHeader
 
         section > .hand > .deckHeader > input.collapseDeck + span.collapseDeck
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/CollapseDeck.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/CollapseDeckWhite.png);
             background-repeat: no-repeat;
             background-position: center;
+            background-color: var(--buttonBG);
+            color: var(--buttonTxt);
             opacity: 1;
             background-size: 20px 28px;
             width: 20px;
             height: 28px;
             z-index: 12;
+            border: var(--buttonBorderStyle)
         }
 
         section > .hand > .deckHeader > input.collapseDeck:checked + span.collapseDeck
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/ExpandDeck.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/ExpandDeckWhite.png);
         }
 
 
@@ -3677,12 +3690,8 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-area: 1/-2/auto/auto;
         width: 26px;
         height: 20px;
-        background-color: var(--buttonBG);
-        border: var(--borderStyle);
-        border-radius: 12%;
         align-self: center;
         padding: 0;
-        vertical-align: middle;
     }
 
     /* Top Card */
@@ -4066,29 +4075,34 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 11/auto;
     }
 
-    .puzzleCard .solutionComponents
+    .puzzleCard .spellVerb
     {
         grid-row: 12/auto;
     }
 
+    .puzzleCard .solutionComponents
+    {
+        grid-row: 13/auto;
+    }
+
     .puzzleCard textarea.solutionComponents
     {
-        grid-row: 12/span 4;
+        grid-row: 13/span 4;
     }
 
     .puzzleCard .solutionComponentsFalse
     {
-        grid-row: 16/auto;
+        grid-row: 17/auto;
     }
 
     .puzzleCard textarea.solutionComponentsFalse
     {
-        grid-row: 16/span 4;
+        grid-row: 17/span 4;
     }
 
     .puzzleCard .solutionRewards
     {
-        grid-row: 20/-2;
+        grid-row: 21/-2;
     }
 
     .puzzleCard input.gradeReward
@@ -4219,6 +4233,16 @@ input[type="checkbox"]:checked + span.conduit
     z-index: 2;
 }
 
+/* Disable Hoverchanges on dice and conduit */
+input[type="checkbox"]:hover + span.conduit,
+input[type="radio"]:hover + span.study,
+input[type="radio"]:hover + span.D10,
+input[type="radio"]:hover + span.ZeroDie
+{
+    background-color: var(--bgSheet);
+    box-shadow: none;
+    border: none;
+}
 
 /*Change Colour of Total Cargo when overloaded*/
 .colorChanger[value="1"] + .resourceBox
