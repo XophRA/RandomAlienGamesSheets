@@ -2412,6 +2412,7 @@ input[type="number"].rippleBox
         grid-area: 2 / 3 / span 2 / span 3;
         display: grid;
         z-index: 5;
+        transform: rotate( -90deg);
     }
 
     .tableSpread > .editTableSpread
@@ -2478,20 +2479,9 @@ input[type="number"].rippleBox
                 grid-column: 2/3;
             }
 
-    .tableSpread > div > .landscapeCard
-    {
-        transform: rotate(-90deg);
-    }
-
-
     .tableSpread > div > input.facingChoice[value="1"] + input.cardChoice + span.card
     {
         transform: rotate(-180deg);
-    }
-
-    .tableSpread > div > input.facingChoice[value="1"] + input.cardChoice + span.landscapeCard
-    {
-        transform: rotate(-270deg);
     }
 
     /* Arcana Card Background Image*/
