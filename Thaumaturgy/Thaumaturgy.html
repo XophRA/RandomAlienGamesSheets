@@ -2472,8 +2472,9 @@
             console.log(allValue);
 
             //Add Dice that didn't match to the Ripple Table, total odds to the Fate Resource, & Calculate Aether to be returned to the Player Caster from the total evens
-            let fateResource = parseInt(attrs[`fateResource`]) || 0;
+            let aetherResource = parseInt(attrs[`aetherResource`]) || 0;
             let evenDice = 0;
+            let oddDice = 0;
 
             for (let num = 0; num < allValue.length; num++) //loop through allValue
             {
@@ -2491,36 +2492,47 @@
                 let chaos = parseInt(attrs[`ripple${arcana}Chaos`]) || 0;
                 odds += oddDiceRolled(allValue[num]);
 
-                fateResource += odds;
+                oddDice += odds;
                 setObj[`ripple${arcana}Chaos`] = chaos + odds;
             }
 
-            setObj.fateResource = fateResource; //Set fateResource
+            //Set fateResource
+            let fateResource = parseInt(attrs[`fateResource`]) || 0;
+            let fate = 0;
+
+            if (aetherResource <= 0)
+            {
+                fate = 0;
+            }
+            else if (aetherResource >= oddDice)
+            {
+                fate = oddDice;
+            }
+            else if (aetherResource < oddDice)
+            {
+                fate = aetherResource + 1;
+            }
+
+            fateResource += fate;
+            setObj.fateResource = fateResource; 
 
             //Calculate aetherResource
-            let aetherResource = parseInt(attrs[`aetherResource`]) || 0;
             let aether = 0;
-            let greaterAether = 0;
 
-            if (evenDice == 1 && aetherResource > 0)
-            {
-                aether = Math.round(aetherResource / 2) || 1;
-            }
-            else if (evenDice == 2)
-            {
-                aether = aetherResource;
-            }
-            else if (evenDice > 2)
-            {
-                greaterAether = evenDice - 2;
-                aether = aetherResource + greaterAether;
-            }
-            else
+            if (aetherResource <= 0)
             {
                 aether = 0;
             }
+            else if (aetherResource >= evenDice)
+            {
+                aether = evenDice;
+            }
+            else if (aetherResource < evenDice)
+            {
+                aether = aetherResource +1;
+            }
 
-            console.log("Even Dice:", evenDice, "Risked Aether:", aetherResource, "increase: ", greaterAether, "Returned Aether:", aether,);
+            console.log("Risked Aether:", aetherResource, "Even Dice:", evenDice, "Returned Aether:", aether, "Odd Dice:", oddDice, "Added Fate:", fate, "Total Fate:", fateResource);
             setObj.aetherResource = aether; //Set aetherResource
 
             //Number of Evens and Odds Functions
