@@ -4281,43 +4281,29 @@ input[type="radio"]:hover + span.ZeroDie
     width: 850px;
     height: 100%;
     grid-area: 1/1/-1/-1;
-    grid-template-columns: 105px 2fr 105px 2fr;
-    grid-template-rows: 30px 22px 150px;
+    grid-template-columns: 105px 1fr;
+    grid-template-rows: 30px 22px 48px;
     margin: 5px 0;
     justify-items: start;
     align-items: start;
 }
 
     .tagCharacterAspects > h1.name,
-    .tagCharacterAspects > h4.charateristics
+    .tagCharacterAspects > h4.tags
     {
         grid-column: 1/auto;
     }
     .tagCharacterAspects > input[type="text"].name,
-    .tagCharacterAspects > textarea.charateristics
+    .tagCharacterAspects > textarea.tags
     {
         grid-column: 2/auto;
     }
 
-    .tagCharacterAspects > h4.pronouns,
-    .tagCharacterAspects > h4.tags
-    {
-        grid-column: 3/auto;
-    }
-
-    .tagCharacterAspects > input[type="text"].pronouns,
-    .tagCharacterAspects > textarea.tags
-    {
-        grid-column: 4/auto;
-    }
-
-    .tagCharacterAspects > .name,
-    .tagCharacterAspects > .pronouns
+    .tagCharacterAspects > .name
     {
         grid-row: 1/auto;
     }
 
-    .tagCharacterAspects > h4.charateristics,
     .tagCharacterAspects > h4.tags
     {
         grid-row: 2/auto;
