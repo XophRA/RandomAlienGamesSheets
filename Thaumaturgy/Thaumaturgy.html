@@ -80,8 +80,8 @@
         <option>Remains</option>
     </datalist>
 
-    <!-- Manoeuvres -->
-    <datalist id="manoeuvres">
+    <!-- techniques -->
+    <datalist id="techniques">
         <option>Attack</option>
         <option>Defend</option>
         <option>Misdirect</option>
@@ -365,6 +365,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents1" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse1">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse2">
                     <h4 class="curseName">Affliction</h4>
@@ -378,6 +379,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy2" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents2" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse2">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse3">
                     <h4 class="curseName">Affliction</h4>
@@ -391,6 +393,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy3" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents3" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse3">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse4">
                     <h4 class="curseName">Affliction</h4>
@@ -404,6 +407,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy4" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents4" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse4">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse5">
                     <h4 class="curseName">Affliction</h4>
@@ -417,6 +421,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy5" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents5" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse5">Cure</button>
                 </div>
             </section>
 
@@ -607,8 +612,8 @@
                             <div class="card customCard duelingFocusCard">
                                 <h4 class="formulaDuelingFocus">Formula</h4>
                                 <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
-                                <h4 class="manoeuvre">Manoeuvre</h4>
-                                <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
+                                <h4 class="technique"></h4>
+                                <input type="text" class="technique" name="attr_technique" list="techniques" />
 
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
@@ -732,6 +737,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents1" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse1">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse2">
                     <h4 class="curseName">Affliction</h4>
@@ -745,6 +751,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy2" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents2" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse2">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse3">
                     <h4 class="curseName">Affliction</h4>
@@ -758,6 +765,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy3" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents3" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse3">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse4">
                     <h4 class="curseName">Affliction</h4>
@@ -771,6 +779,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy4" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents4" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse4">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse5">
                     <h4 class="curseName">Affliction</h4>
@@ -784,6 +793,7 @@
                     <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy5" list="arts" />
                     <h4 class="restorationComponents">Components</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents5" />
+                    <button type="action" class="clearCurseButton" name="act_clearCurse5">Cure</button>
                 </div>
             </section>
 
@@ -1875,8 +1885,8 @@
                             <div class="card customCard duelingFocusCard">
                                 <h4 class="formulaDuelingFocus">Formula</h4>
                                 <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
-                                <h4 class="manoeuvre">Manoeuvre</h4>
-                                <input type="text" class="manoeuvre" name="attr_manoeuvre" list="manoeuvres" />
+                                <h4 class="technique">technique</h4>
+                                <input type="text" class="technique" name="attr_technique" list="techniques" />
 
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
@@ -2681,6 +2691,49 @@
             setAttrs(setObj);
         })
     });
+
+   /*  Button list for Curse Cures */
+    const cures = ['1', '2', '3', '4', '5'].forEach((num) =>
+        {
+        on(`clicked:clearCurse${num}`, () => { cureCurseClick(num) });
+    });
+
+     /*Clear Curse Cards*/
+    const cureCurseClick = function (num)
+    {
+        /* Create Array for Curse Card Attrs */
+        let curseAttr = [];
+
+        /* Set each Curse Card Attr to Clear */
+        curseAttr[`curseName${num}`] = "";
+        curseAttr[`curseSeverity${num}`] = "";
+        curseAttr[`statusEffect${num}`] = "";
+        curseAttr[`curseRestoration${num}`] = "";
+        curseAttr[`curseRestorationSynergy${num}`] = "";
+        curseAttr[`restorationComponents${num}`] = "";
+
+        console.log(curseAttr);
+        setAttrs(curseAttr);
+
+    };
+
+     /* Clear Curse Card 1 */
+    //on("clicked:clearCurse1", (event) =>
+    //{
+    //    const setObj = {};
+        
+    //    /* Clear the Card */
+    //    setObj.curseName1 = "";
+    //    setObj.curseSeverity1 = "";
+    //    setObj.statusEffect1 = "";
+    //    setObj.curseRestoration1 = "";
+    //    setObj.curseRestorationSynergy1 = "";
+    //    setObj.restorationComponents1 = "";
+
+    //    console.log(setObj);
+    //    setAttrs(setObj);
+
+    //});    
 
     /* Clear Ascension Card */
     on("clicked:ascensionclear", (event) =>

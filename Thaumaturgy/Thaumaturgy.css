@@ -3728,6 +3728,17 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         z-index: 2;
     }
 
+    /* Cure Button On/Off Functionality */
+    .curseWidget > input[value="1"].curseToggle ~ .curse1 > button,
+    .curseWidget > input[value="2"].curseToggle ~ .curse2 > button,
+    .curseWidget > input[value="3"].curseToggle ~ .curse3 > button,
+    .curseWidget > input[value="4"].curseToggle ~ .curse4 > button,
+    .curseWidget > input[value="5"].curseToggle ~ .curse5 > button
+    {
+        display: grid;
+    }
+
+
 .curseCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img50/CurseCard.png);
@@ -3781,6 +3792,18 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     .curseCard > textarea.restorationComponents
     {
         grid-row: 9/-2;
+    }
+
+    .curseCard > button
+    {
+        display: none;
+        grid-area: -2/-2/auto/auto;
+        height: fit-content;
+        width: fit-content;
+        place-self: end;
+        padding: 3px 6px;
+        margin-bottom: 4px;
+        margin-right: 5px;
     }
 
 /* Rote Spell Cards */
@@ -3943,7 +3966,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 2/auto;
     }
 
-    .duelingFocusCard .manoeuvre
+    .duelingFocusCard .technique
     {
         grid-row: 3/auto;
     }
