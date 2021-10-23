@@ -125,8 +125,9 @@
 
             <!-- Description -->
             <section class="descriptionWidget">
-                <input type="hidden" name="attr_level" />
-                <input type="text" name="attr_rankLevel" class="rankLevel" readonly />
+                <input type="number" name="attr_level" class="level" readonly/>
+                <input type="text" name="attr_rank" class="rank" readonly />
+                <input type="text" name="attr_conduitTitle" class="conduitTitle" />
                 <input type="text" name="attr_givenName" class="givenName titlefill" />
                 <input type="text" name="attr_academicName" class="academicName titlefill" />
                 <input type="text" name="attr_questName" class="questName titlefill" />
@@ -886,7 +887,7 @@
                     <input type="hidden" class="editToggle" name="attr_EditAscension" />
                     <div class="editMenu editAscension">
                         <div class="levelControl">Level</div>
-                        <input type="number" class="levelControl" name="attr_covenLevel" value="-1" min="-1" max="13" />
+                        <input type="number" class="levelControl" name="attr_covenLevel" value="-1" min="0" max="13" />
                         <button type="action" class="ascensionClear" name="act_ascensionClear">Clear</button>
                     </div>
                     <input type="hidden" class="levelControl" name="attr_covenLevel" />
@@ -1003,7 +1004,7 @@
                 <textarea name="attr_anagoge13" class="anagoge13">While the Wizard is remembered, many other ascendant wizards are not. Despite their mastery of magic, these wizards are lost to fate before they can ascend. Although there are questions about how the Wizard managed it and others didn’t, there are no answers to be found.</textarea>
             </section>
 
-            <!-- Layout -->
+            <!-- Academy Map -->
             <section class="layoutWidget">
                 <div class="academylayout layout">
                     <h1 class="layoutName">Academy</h1>
@@ -1062,7 +1063,7 @@
                                 Significance
                                 <ol>
                                     <li>
-                                        Cantrip, Working, Incantation, Evocation
+                                        Cantrip, Working, Incantation, Evocation, Ritual
                                     </li>
                                 </ol>
                             </li>
@@ -1076,7 +1077,7 @@
                                 Preperation
                                 <ol>
                                     <li>
-                                        Rote, Stitch, Improvised, Scroll, Channel, Solution, Rite
+                                        Rote, Stitch, Scroll, Channel, Rite
                                     </li>
                                 </ol>
                             </li>
@@ -1100,6 +1101,7 @@
                                             <li>Apparel, Botanicals, Debris, Effigy, Items, Minerals, Remains</li>
                                         </ol>
                                     </li>
+                                    <li>Dueling Focus Charges</li>
                                 </ol>
                             </li>
                         </ol>
@@ -2048,12 +2050,12 @@
                     ascensionObjective = "Final Ascension";
                     ascensionSigilSize = 11;
                 }
-                else if (nextLevel <= 0)
+                else if (nextLevel <= 1)
                 {
-                    ascensionObjective = "Initiate";
+                    ascensionObjective = "Initiate, level " + nextLevel;
                     ascensionSigilSize = 3;
                 }
-                else if (nextLevel > 0 && nextLevel < 4)
+                else if (nextLevel > 1 && nextLevel < 4)
                 {
                     ascensionObjective = "Apprentice, level " + nextLevel;
                     ascensionSigilSize = 5;
@@ -2084,41 +2086,41 @@
             /* Set name and Level elements on Player Caster Sheets*/
             else if (selectedSheet == 1)
             {
-                //Set RankLevel
-                let rankLevel = "";
+                //Set rank
+                let rank = "";
                 let curseNumber = 2;
 
                 covenLevel = parseInt(globalAttributes.covenlevel) || 0;
 
-                if (covenLevel < 0)
+                if (covenLevel <= 0)
                 {
-                    rankLevel = "";
+                    rank = "";
                 }
-                else if (covenLevel == 0)
+                else if (covenLevel == 1)
                 {
-                    rankLevel = "Initiate";
+                    rank = "Initiate";
                 }
-                else if (covenLevel >= 1 && covenLevel < 4)
+                else if (covenLevel > 1 && covenLevel < 4)
                 {
-                    rankLevel = "Apprentice, level " + covenLevel;
+                    rank = "Apprentice";
                 }
                 else if (covenLevel >= 4 && covenLevel < 8)
                 {
-                    rankLevel = "Keeper, level " + covenLevel;
+                    rank = "Keeper";
                     curseNumber = 3;
                 }
                 else if (covenLevel >= 8 && covenLevel < 11)
                 {
-                    rankLevel = "Graduate, level " + covenLevel;
+                    rank = "Graduate";
                     curseNumber = 4;
                 }
                 else
                 {
-                    rankLevel = "Scholar, level " + covenLevel;
+                    rank = "Scholar";
                     curseNumber = 5;
                 }
 
-                setObj.rankLevel = rankLevel;
+                setObj.rank = rank;
                 setObj.curseNumber = curseNumber;
                 setObj.level = covenLevel;
 
@@ -2129,7 +2131,7 @@
 
                 //if (covenLevel >= 0 && (values.givenName || values.academicName || values.questName))
                 //{
-                //    nameArray.push(rankLevel);
+                //    nameArray.push(rank);
                 //}
                 
                 if (values.givenName)
