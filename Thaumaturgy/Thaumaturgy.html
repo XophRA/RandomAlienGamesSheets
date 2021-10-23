@@ -44,11 +44,22 @@
     <datalist id="verbs">
         <option>Conjure</option>
         <option>Dispel</option>
-        <option>Manipulate</option>
+        <option>Ensorcell</option>
         <option>Scry</option>
         <option>Summon</option>
         <option>Transmute</option>
         <option>Ward</option>
+    </datalist>
+
+    <!-- Spell Verbs -->
+    <datalist id="conduitTitle">
+        <option>Conjurer</option>
+        <option>Counter Mage</option>
+        <option>Sorcerer</option>
+        <option>Seer</option>
+        <option>Summoner</option>
+        <option>Transmuter</option>
+        <option>Warden</option>
     </datalist>
 
     <!-- Arts -->
@@ -125,9 +136,9 @@
 
             <!-- Description -->
             <section class="descriptionWidget">
-                <input type="number" name="attr_level" class="level" readonly/>
+                <input type="text" name="attr_level" class="level" readonly />
                 <input type="text" name="attr_rank" class="rank" readonly />
-                <input type="text" name="attr_conduitTitle" class="conduitTitle" />
+                <input type="text" name="attr_conduitTitle" class="conduitTitle" list="conduitTitle" />
                 <input type="text" name="attr_givenName" class="givenName titlefill" />
                 <input type="text" name="attr_academicName" class="academicName titlefill" />
                 <input type="text" name="attr_questName" class="questName titlefill" />
@@ -492,9 +503,9 @@
                                 <h4 class="spellEffect">Spell Effect</h4>
                                 <textarea class="spellEffect" name="attr_spellEffect" />
                                 <!--<div class="attunement">
-                        <h4>Memorise</h4>
-                        <input type="checkbox" value="1" name="attr_attunedCard" />
-                    </div>-->
+                                    <h4>Memorise</h4>
+                                    <input type="checkbox" value="1" name="attr_attunedCard" />
+                                </div>-->
                             </div>
                         </fieldset>
                     </div>
@@ -810,9 +821,7 @@
                             <div class="card customCard ritualCard">
                                 <h4 class="ritualObjective">Objective</h4>
                                 <input type="text" class="ritualObjective" list="ritual" name="attr_ritualObjective" />
-                                <input type="text" class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
-                                <h4 class="ritualMilestones">Milestones</h4>
-                                <textarea class="ritualMilestones" name="attr_ritualMilestones" />
+                                <textarea class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
                                 <h4 class="ritualComponents">Components</h4>
                                 <div class="potency">
                                     <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
@@ -820,17 +829,9 @@
                                     <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
                                 </div>
                                 <textarea class="ritualComponents" name="attr_ritualComponents" />
-                                <h4 class="ritualSigilSize">Ritual Sigil</h4>
-                                <select class="ritualSigilSize" name="attr_ritualSigilSize">
-                                    <option value="3">Dawn</option>
-                                    <option value="5">Sun</option>
-                                    <option value="7">Twilight</option>
-                                    <option value="9">Moon</option>
-                                    <option value="11">Oblivion</option>
-                                </select>
+                               
                                 <div class="ritualSigil">
                                     <!-- Ritual Sigil -->
-                                    <input type="hidden" name="attr_ritualSigilSize" value="3" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
                                     <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ritualsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
                                     <button type="action" class="sigilSegment sigilSegment1" name="act_ritualsigilsegment1" value="0" /> <!-- Segment1 -->
                                     <span class="sigilLink sigilLink1"></span>
@@ -853,27 +854,7 @@
 
                                     <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ritualsigilsegment6" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment6" name="act_ritualsigilsegment6" value="0" /> <!-- Segment6 -->
-                                    <span class="sigilLink sigilLink6"></span>
-
-                                    <input type="hidden" class="sigilSegment sigilSegment7" name="attr_ritualsigilsegment7" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment7" name="act_ritualsigilsegment7" value="0" /> <!-- Segment7 -->
-                                    <span class="sigilLink sigilLink7"></span>
-
-                                    <input type="hidden" class="sigilSegment sigilSegment8" name="attr_ritualsigilsegment8" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment8" name="act_ritualsigilsegment8" value="0" /> <!-- Segment8 -->
-                                    <span class="sigilLink sigilLink8"></span>
-
-                                    <input type="hidden" class="sigilSegment sigilSegment9" name="attr_ritualsigilsegment9" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment9" name="act_ritualsigilsegment9" value="0" /> <!-- Segment9 -->
-                                    <span class="sigilLink sigilLink9"></span>
-
-                                    <input type="hidden" class="sigilSegment sigilSegment10" name="attr_ritualsigilsegment10" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment10" name="act_ritualsigilsegment10" value="0" /> <!-- Segment10 -->
-                                    <span class="sigilLink sigilLink10"></span>
-
-                                    <input type="hidden" class="sigilSegment sigilSegment11" name="attr_ritualsigilsegment11" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment11" name="act_ritualsigilsegment11" value="0" /> <!-- Segment11 -->
-                                    <span class="sigilLink sigilLink11"></span>
+                                    <span class="sigilLink sigilLink6"></span>                                   
 
                                 </div>
                             </div>
@@ -904,11 +885,9 @@
                     <span class="level lvl11">11</span>
                     <span class="level lvl12">12</span>
                     <span class="level lvl13">13</span>
-                    <div class="card customCard ascensionCard ritualCard">
-                        <h4 class="ritualObjective">Quest</h4>
+                    <div class="card customCard ascensionCard">
+                        <h4 class="ritualObjective">Quests</h4>
                         <textarea class="ritualObjective" name="attr_ascensionObjectiveDetail" />
-                        <h4 class="ritualMilestones">Milestones</h4>
-                        <textarea class="ritualMilestones" name="attr_ascensionMilestones" />
                         <h4 class="ritualComponents">Components</h4>
                         <div class="potency">
                             <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
@@ -918,9 +897,9 @@
                         <textarea class="ritualComponents" name="attr_ascensionWorkings" />
                         <h4 class="ritualSigilSize">Next Level</h4>
                         <input type="text" class="ritualSigilSize" name="attr_ascensionObjective" readonly />
-                        
+
                         <div class="ritualSigil">
-                            <!-- Ritual Sigil -->
+                            <!-- Ascension Sigil -->
                             <input type="hidden" name="attr_ascensionSigilSize" value="5" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
                             <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ascensionsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
                             <button type="action" class="sigilSegment sigilSegment1" name="act_ascensionsigilsegment1" value="0" /> <!-- Segment1 -->
@@ -1669,7 +1648,7 @@
                 <fieldset class="repeating_key">
                     <div class="key">
                         <input type="checkbox" class="keyDamage" name="attr_npcDamage" />
-                        <textarea class="key" name="attr_npcKey" placeholder="Enter the Status Effect Inflicted"/>
+                        <textarea class="key" name="attr_npcKey" placeholder="Enter the Status Effect Inflicted" />
                         <p class="tell" name="attr_npcTell">Inflict a distinct and lethal effect</p>
                     </div>
                 </fieldset>
@@ -1739,7 +1718,7 @@
         <div class="fatekeepersGrimoireSheetGrid">
             <!-- Grimoire -->
             <section class="grimoireWidget">
-                    
+
                 <div class="hand longHand">
                     <div class="deckHeader">
                         <h2>Rote Spells</h2>
@@ -1976,7 +1955,7 @@
                             </div>
                         </fieldset>
                     </div>
-                    </div>
+                </div>
             </section>
         </div>
     </article>
