@@ -16,7 +16,7 @@
 
         </select>
 
-        <div class="version">Version 0.3</div>
+        <div class="version">Version 0.4</div>
     </header>
     <!--Hidden Sheet Selection Radio switch-->
     <input type="radio" name="attr_selectedSheet" class="hidden playerCasterSelector" value="1" checked>
@@ -33,11 +33,12 @@
     <!--Data Lists-->
     <!-- Rituals -->
     <datalist id="ritual">
-        <option>Artifice</option>
+        <option>Ambitious</option>
+        <option>Improvised</option>
         <option>Petition</option>
-        <option>investigation</option>
-        <option>Resolution</option>
-        <option>Travel</option>
+        <option>Planer Travel</option>
+        <option>Solution</option>
+        <option>Test</option>
     </datalist>
 
     <!-- Spell Verbs -->
@@ -886,21 +887,19 @@
                     <span class="level lvl12">12</span>
                     <span class="level lvl13">13</span>
                     <div class="card customCard ascensionCard">
-                        <h4 class="ritualObjective">Quests</h4>
-                        <textarea class="ritualObjective" name="attr_ascensionObjectiveDetail" />
-                        <h4 class="ritualComponents">Components</h4>
-                        <div class="potency">
-                            <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
-                            <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
-                            <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
-                        </div>
-                        <textarea class="ritualComponents" name="attr_ascensionWorkings" />
-                        <h4 class="ritualSigilSize">Next Level</h4>
+                        <h4 class="ritualSigilSize">Ascension</h4>
                         <input type="text" class="ritualSigilSize" name="attr_ascensionObjective" readonly />
+                        <h4 class="ascensionQuest">Quests</h4>
+                        <input type="hidden" name="attr_ascensionSigilSize" value="5" class="sigilSize" />
+                        <textarea class="ascensionQuest1" name="attr_ascensionQuest1" />
+                        <textarea class="ascensionQuest2" name="attr_ascensionQuest2" />
+                        <textarea class="ascensionQuest3" name="attr_ascensionQuest3" />
+                        <textarea class="ascensionQuest4" name="attr_ascensionQuest4" />
+                        <textarea class="ascensionQuest5" name="attr_ascensionQuest5" />
 
                         <div class="ritualSigil">
                             <!-- Ascension Sigil -->
-                            <input type="hidden" name="attr_ascensionSigilSize" value="5" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
+                            <input type="hidden" name="attr_ascensionSigilSize" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
                             <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ascensionsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
                             <button type="action" class="sigilSegment sigilSegment1" name="act_ascensionsigilsegment1" value="0" /> <!-- Segment1 -->
                             <span class="sigilLink sigilLink1"></span>
@@ -921,29 +920,29 @@
                             <button type="action" class="sigilSegment sigilSegment5" name="act_ascensionsigilsegment5" value="0" /> <!-- Segment5 -->
                             <span class="sigilLink sigilLink5"></span>
 
-                            <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ascensionsigilsegment6" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment6" name="act_ascensionsigilsegment6" value="0" /> <!-- Segment6 -->
-                            <span class="sigilLink sigilLink6"></span>
+                            <!--<input type="hidden" class="sigilSegment sigilSegment6" name="attr_ascensionsigilsegment6" value="0" />
+                            <button type="action" class="sigilSegment sigilSegment6" name="act_ascensionsigilsegment6" value="0" />--> <!-- Segment6 -->
+                            <!--<span class="sigilLink sigilLink6"></span>
 
                             <input type="hidden" class="sigilSegment sigilSegment7" name="attr_ascensionsigilsegment7" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment7" name="act_ascensionsigilsegment7" value="0" /> <!-- Segment7 -->
-                            <span class="sigilLink sigilLink7"></span>
+                            <button type="action" class="sigilSegment sigilSegment7" name="act_ascensionsigilsegment7" value="0" />--> <!-- Segment7 -->
+                            <!--<span class="sigilLink sigilLink7"></span>
 
                             <input type="hidden" class="sigilSegment sigilSegment8" name="attr_ascensionsigilsegment8" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment8" name="act_ascensionsigilsegment8" value="0" /> <!-- Segment8 -->
-                            <span class="sigilLink sigilLink8"></span>
+                            <button type="action" class="sigilSegment sigilSegment8" name="act_ascensionsigilsegment8" value="0" />--> <!-- Segment8 -->
+                            <!--<span class="sigilLink sigilLink8"></span>
 
                             <input type="hidden" class="sigilSegment sigilSegment9" name="attr_ascensionsigilsegment9" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment9" name="act_ascensionsigilsegment9" value="0" /> <!-- Segment9 -->
-                            <span class="sigilLink sigilLink9"></span>
+                            <button type="action" class="sigilSegment sigilSegment9" name="act_ascensionsigilsegment9" value="0" />--> <!-- Segment9 -->
+                            <!--<span class="sigilLink sigilLink9"></span>
 
                             <input type="hidden" class="sigilSegment sigilSegment10" name="attr_ascensionsigilsegment10" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment10" name="act_ascensionsigilsegment10" value="0" /> <!-- Segment10 -->
-                            <span class="sigilLink sigilLink10"></span>
+                            <button type="action" class="sigilSegment sigilSegment10" name="act_ascensionsigilsegment10" value="0" />--> <!-- Segment10 -->
+                            <!--<span class="sigilLink sigilLink10"></span>
 
                             <input type="hidden" class="sigilSegment sigilSegment11" name="attr_ascensionsigilsegment11" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment11" name="act_ascensionsigilsegment11" value="0" /> <!-- Segment11 -->
-                            <span class="sigilLink sigilLink11"></span>
+                            <button type="action" class="sigilSegment sigilSegment11" name="act_ascensionsigilsegment11" value="0" />--> <!-- Segment11 -->
+                            <!--<span class="sigilLink sigilLink11"></span>-->
 
                         </div>
                     </div>
@@ -1902,32 +1901,75 @@
                 </div>
                 <div class="hand">
                     <div class="deckHeader">
-                        <h2>Puzzle</h2>
+                        <h2>Quests</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
                     <div class="deck">
-                        <fieldset class="repeating_puzzleCard">
-                            <div class="card customCard puzzleCard">
-                                <h4 class="puzzleName">Name</h4>
-                                <input type="text" class="puzzleName" name="attr_puzzleName" />
-                                <h4 class="puzzleDescription">Concept</h4>
-                                <textarea class="puzzleDescription" name="attr_puzzleDescription" />
-                                <h4 class="puzzlePeril">Peril</h4>
-                                <textarea class="puzzlePeril" name="attr_puzzlePeril" />
-                                <input type="checkbox" class="gradePeril" name="attr_gradePeril" />
-                                <h4 class="solution">Solution</h4>
-                                <input type="text" class="solution" name="attr_puzzleSolution" list="arts" />
-                                <input type="text" class="solutionSynergy" name="attr_puzzleSolutionSynergy" list="arts" />
-                                <h4 class="spellVerb">Verb</h4>
-                                <input type="text" class="spellVerb" name="attr_spellVerb" list="verbs" />
-                                <h4 class="solutionComponents">Components</h4>
-                                <textarea class="solutionComponents" name="attr_solutionComponents" />
-                                <h4 class="solutionComponentsFalse">Distraction</h4>
-                                <textarea class="solutionComponentsFalse" name="attr_solutionComponentsFalse" />
-                                <h4 class="solutionRewards">Rewards</h4>
-                                <textarea class="solutionRewards" name="attr_solutionRewards" />
-                                <input type="checkbox" class="gradeReward" name="attr_gradeReward" />
+                        <fieldset class="repeating_questCard">
+                            <div class="card customCard questCard">
+                                <h4 class="questObjective">Objective</h4>
+                                <input type="text" class="questObjective" list="ritual" name="attr_ritualObjective" />
+                                <input type="text" class="questObjectiveDetail" name="attr_ritualObjectiveDetail" />
+                                <h4 class="questGoals">Goals</h4>
+                                <textarea class="questGoals" name="attr_ritualMilestones" />
+                                <h4 class="questSigilSize">Quest Sigil</h4>
+                                <select class="questSigilSize" name="attr_questSigilSize">
+                                    <option value="3">Dawn</option>
+                                    <option value="5">Sun</option>
+                                    <option value="7">Twilight</option>
+                                    <option value="9">Moon</option>
+                                    <option value="11">Oblivion</option>
+                                </select>
+
+                                <div class="ritualSigil">
+                                    <!-- Quest Sigil -->
+                                    <input type="hidden" name="attr_questSigilSize" value="3" class="sigilSize" /> <!-- Number of segments in Sigil, set by select -->
+                                    <input type="hidden" class="sigilSegment sigilSegment1" name="attr_questsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
+                                    <button type="action" class="sigilSegment sigilSegment1" name="act_questsigilsegment1" value="0" /> <!-- Segment1 -->
+                                    <span class="sigilLink sigilLink1"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment2" name="attr_questsigilsegment2" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment2" name="act_questsigilsegment2" value="0" /> <!-- Segment2 -->
+                                    <span class="sigilLink sigilLink2"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment3" name="attr_questsigilsegment3" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment3" name="act_questsigilsegment3" value="0" /> <!-- Segment3 -->
+                                    <span class="sigilLink sigilLink3"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment4" name="attr_questsigilsegment4" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment4" name="act_questsigilsegment4" value="0" /> <!-- Segment4 -->
+                                    <span class="sigilLink sigilLink4"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment5" name="attr_questsigilsegment5" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment5" name="act_questsigilsegment5" value="0" /> <!-- Segment5 -->
+                                    <span class="sigilLink sigilLink5"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment6" name="attr_questsigilsegment6" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment6" name="act_questsigilsegment6" value="0" /> <!-- Segment6 -->
+                                    <span class="sigilLink sigilLink6"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment7" name="attr_questsigilsegment7" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment7" name="act_questsigilsegment7" value="0" /> <!-- Segment7 -->
+                                    <span class="sigilLink sigilLink7"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment8" name="attr_questsigilsegment8" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment8" name="act_questsigilsegment8" value="0" /> <!-- Segment8 -->
+                                    <span class="sigilLink sigilLink8"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment9" name="attr_questsigilsegment9" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment9" name="act_questsigilsegment9" value="0" /> <!-- Segment9 -->
+                                    <span class="sigilLink sigilLink9"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment10" name="attr_questsigilsegment10" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment10" name="act_questsigilsegment10" value="0" /> <!-- Segment10 -->
+                                    <span class="sigilLink sigilLink10"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment11" name="attr_questsigilsegment11" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment11" name="act_questsigilsegment11" value="0" /> <!-- Segment11 -->
+                                    <span class="sigilLink sigilLink11"></span>
+
+                                </div>
                             </div>
                         </fieldset>
                     </div>
@@ -2022,37 +2064,37 @@
                 covenLevel = parseInt(values.covenLevel) || 0;
                 let nextLevel = covenLevel + 1;
                 let ascensionObjective = "";
-                let ascensionSigilSize = 5;
+                let ascensionSigilSize = 1;
 
                 if (nextLevel >= 13)
                 {
                     ascensionObjective = "Final Ascension";
-                    ascensionSigilSize = 11;
+                    ascensionSigilSize = 5;
                 }
                 else if (nextLevel <= 1)
                 {
                     ascensionObjective = "Initiate, level " + nextLevel;
-                    ascensionSigilSize = 3;
+                    ascensionSigilSize = 1;
                 }
-                else if (nextLevel > 1 && nextLevel < 4)
+                else if (nextLevel > 1 && nextLevel <= 4)
                 {
                     ascensionObjective = "Apprentice, level " + nextLevel;
-                    ascensionSigilSize = 5;
+                    ascensionSigilSize = 2;
                 }
-                else if (nextLevel < 8 && nextLevel > 3)
+                else if (nextLevel < 8 && nextLevel > 4)
                 {
                     ascensionObjective = "Keeper, level " + nextLevel;
-                    ascensionSigilSize = 7;
+                    ascensionSigilSize = 3;
                 }
-                else if (nextLevel <= 8 && nextLevel < 11)
+                else if (nextLevel >= 8 && nextLevel < 11)
                 {
                     ascensionObjective = "Graduate, level " + nextLevel;
-                    ascensionSigilSize = 9;
+                    ascensionSigilSize = 4;
                 }
                 else
                 {
                     ascensionObjective = "Scholar, level " + nextLevel;
-                    ascensionSigilSize = 11;
+                    ascensionSigilSize = 5;
                 }
 
                 setObj.ascensionObjective = ascensionObjective;
@@ -2079,11 +2121,11 @@
                 {
                     rank = "Initiate";
                 }
-                else if (covenLevel > 1 && covenLevel < 4)
+                else if (covenLevel > 1 && covenLevel <= 4)
                 {
                     rank = "Apprentice";
                 }
-                else if (covenLevel >= 4 && covenLevel < 8)
+                else if (covenLevel > 4 && covenLevel < 8)
                 {
                     rank = "Keeper";
                     curseNumber = 3;
@@ -2692,23 +2734,6 @@
 
     };
 
-     /* Clear Curse Card 1 */
-    //on("clicked:clearCurse1", (event) =>
-    //{
-    //    const setObj = {};
-        
-    //    /* Clear the Card */
-    //    setObj.curseName1 = "";
-    //    setObj.curseSeverity1 = "";
-    //    setObj.statusEffect1 = "";
-    //    setObj.curseRestoration1 = "";
-    //    setObj.curseRestorationSynergy1 = "";
-    //    setObj.restorationComponents1 = "";
-
-    //    console.log(setObj);
-    //    setAttrs(setObj);
-
-    //});    
 
     /* Clear Ascension Card */
     on("clicked:ascensionclear", (event) =>
@@ -2728,11 +2753,11 @@
         setObj.ascensionsigilsegment11 = 0;
 
         /* Clear the rest of the Card */
-        setObj.ascensionObjective = "";
-        setObj.ascensionObjectiveDetail = "";
-        setObj.ascensionMilestones = "";
-        setObj.ascensionWorkings = "";
-        setObj.ascensionSigilSize = 5;
+        setObj.ascensionQuest1 = "";
+        setObj.ascensionQuest2 = "";
+        setObj.ascensionQuest3 = "";
+        setObj.ascensionQuest4 = "";
+        setObj.ascensionQuest5 = "";
 
         console.log(setObj);
         setAttrs(setObj);
@@ -2743,8 +2768,9 @@
     const buttons = ['ascensionsigilsegment1', 'ascensionsigilsegment2', 'ascensionsigilsegment3', 'ascensionsigilsegment4', 'ascensionsigilsegment5', 'ascensionsigilsegment6',
         'ascensionsigilsegment7', 'ascensionsigilsegment8', 'ascensionsigilsegment9', 'ascensionsigilsegment10', 'ascensionsigilsegment11',
         'repeating_ritualcard:ritualsigilsegment1', 'repeating_ritualcard:ritualsigilsegment2', 'repeating_ritualcard:ritualsigilsegment3', 'repeating_ritualcard:ritualsigilsegment4',
-        'repeating_ritualcard:ritualsigilsegment5', 'repeating_ritualcard:ritualsigilsegment6', 'repeating_ritualcard:ritualsigilsegment7', 'repeating_ritualcard:ritualsigilsegment8',
-        'repeating_ritualcard:ritualsigilsegment9', 'repeating_ritualcard:ritualsigilsegment10', 'repeating_ritualcard:ritualsigilsegment11'].forEach((string) =>
+        'repeating_ritualcard:ritualsigilsegment5', 'repeating_ritualcard:ritualsigilsegment6','repeating_questCard:questsigilsegment1', 'repeating_questCard:questsigilsegment2', 'repeating_questCard:questsigilsegment3', 'repeating_questCard:questsigilsegment4',
+        'repeating_questCard:questsigilsegment5', 'repeating_questCard:questsigilsegment6', 'repeating_questCard:questsigilsegment7', 'repeating_questCard:questsigilsegment8',
+        'repeating_questCard:questsigilsegment9', 'repeating_questCard:questsigilsegment10', 'repeating_questCard:questsigilsegment11'].forEach((string) =>
         {
             on(`clicked:${string}`, () => { sigilSegmentClick(string) });
         });
