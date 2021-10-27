@@ -741,83 +741,7 @@
                 <h4 class="seniorCovens">Senior Covens</h4>
                 <textarea name="attr_seniorCovens" class="seniorCovens" />
             </section>
-
-            <!-- Curses -->
-            <section class="curseWidget">
-                <button type="action" class="sortCurses" name="act_sortCurses"> v </button>
-                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="5" />
-                <div class="card customCard curseCard curse1">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName1" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect1" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents1" />
-                    <button type="action" class="clearCurseButton" name="act_clearCurse1">Cure</button>
-                </div>
-                <div class="card customCard curseCard curse2">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName2" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect2" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy2" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents2" />
-                    <button type="action" class="clearCurseButton" name="act_clearCurse2">Cure</button>
-                </div>
-                <div class="card customCard curseCard curse3">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName3" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect3" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy3" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents3" />
-                    <button type="action" class="clearCurseButton" name="act_clearCurse3">Cure</button>
-                </div>
-                <div class="card customCard curseCard curse4">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName4" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect4" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy4" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents4" />
-                    <button type="action" class="clearCurseButton" name="act_clearCurse4">Cure</button>
-                </div>
-                <div class="card customCard curseCard curse5">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName5" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect5" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy5" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents5" />
-                    <button type="action" class="clearCurseButton" name="act_clearCurse5">Cure</button>
-                </div>
-            </section>
-
+           
             <!-- Rituals -->
             <section class="ritualWidget">
                 <div class="hand">
@@ -1884,7 +1808,7 @@
                     <input type="text" name="attr_character_name" class="titlefill" />
                     <textarea name="attr_description" placeholder="what is this all about?"></textarea>
                 </div>
-                <div class="hand">
+                <div class="hand hand1">
                     <div class="deckHeader">
                         <h2>Quests</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
@@ -1959,26 +1883,53 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="hand wideHand">
+                <div class="hand hand2">
                     <div class="deckHeader">
-                        <h2>Curse</h2>
+                        <h2>Rituals</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
                     <div class="deck">
-                        <fieldset class="repeating_curseCard">
-                            <div class="card customCard curseCard">
-                                <h4 class="curseName">Affliction</h4>
-                                <input type="text" class="curseName" name="attr_curseName1" />
-                                <h4 class="curseSeverity">Severity</h4>
-                                <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
-                                <h4 class="statusEffect">Status Effect</h4>
-                                <textarea class="statusEffect" name="attr_statusEffect1" />
-                                <h4 class="curseRestoration">Solution</h4>
-                                <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts" />
-                                <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
-                                <h4 class="restorationComponents">Components</h4>
-                                <textarea class="restorationComponents" name="attr_restorationComponents1" />
+                        <fieldset class="repeating_ritualcard">
+                            <div class="card customCard ritualCard">
+                                <h4 class="ritualObjective">Objective</h4>
+                                <input type="text" class="ritualObjective" list="ritual" name="attr_ritualObjective" />
+                                <textarea class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
+                                <h4 class="ritualComponents">Components</h4>
+                                <div class="potency">
+                                    <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
+                                    <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
+                                    <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" /><span class="potency3 diceCheckbox D10"></span>
+                                </div>
+                                <textarea class="ritualComponents" name="attr_ritualComponents" />
+
+                                <div class="ritualSigil">
+                                    <!-- Ritual Sigil -->
+                                    <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ritualsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
+                                    <button type="action" class="sigilSegment sigilSegment1" name="act_ritualsigilsegment1" value="0" /> <!-- Segment1 -->
+                                    <span class="sigilLink sigilLink1"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ritualsigilsegment2" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment2" name="act_ritualsigilsegment2" value="0" /> <!-- Segment2 -->
+                                    <span class="sigilLink sigilLink2"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ritualsigilsegment3" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment3" name="act_ritualsigilsegment3" value="0" /> <!-- Segment3 -->
+                                    <span class="sigilLink sigilLink3"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ritualsigilsegment4" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment4" name="act_ritualsigilsegment4" value="0" /> <!-- Segment4 -->
+                                    <span class="sigilLink sigilLink4"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ritualsigilsegment5" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment5" name="act_ritualsigilsegment5" value="0" /> <!-- Segment5 -->
+                                    <span class="sigilLink sigilLink5"></span>
+
+                                    <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ritualsigilsegment6" value="0" />
+                                    <button type="action" class="sigilSegment sigilSegment6" name="act_ritualsigilsegment6" value="0" /> <!-- Segment6 -->
+                                    <span class="sigilLink sigilLink6"></span>
+
+                                </div>
                             </div>
                         </fieldset>
                     </div>
