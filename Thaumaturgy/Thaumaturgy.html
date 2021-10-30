@@ -13,6 +13,7 @@
             <option value="7">Patron</option>
             <option value="8">Fatekeeper's Grimoire</option>
             <option value="9">Fatekeeper's Deck</option>
+            <option value="10">duelling Sheet</option>
 
         </select>
 
@@ -28,12 +29,12 @@
     <input type="radio" name="attr_selectedSheet" class="hidden patronSelector" value="7">
     <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersGrimoireSelector" value="8">
     <input type="radio" name="attr_selectedSheet" class="hidden fatekeeperDeckSelector" value="9">
-
+    <input type="radio" name="attr_selectedSheet" class="hidden duellingSelector" value="10">
 
     <!--Data Lists-->
     <!-- Rituals -->
     <datalist id="ritual">
-        <option>Demonstration</option>
+        <option>Exam</option>
         <option>Improvise</option>
         <option>Petition</option>
         <option>Planer Travel</option>
@@ -44,6 +45,7 @@
     <!-- Quests -->
     <datalist id="quests">
         <option>Artificery</option>
+        <option>Contest</option>
         <option>Investigation</option>
         <option>Ordeal</option>
         <option>Journey</option>
@@ -145,6 +147,7 @@
 
             <!-- Description -->
             <section class="descriptionWidget">
+                <input type="hidden" name="attr_covenLevel"/>
                 <input type="text" name="attr_level" class="level" readonly />
                 <input type="text" name="attr_rank" class="rank" readonly />
                 <input type="text" name="attr_conduitTitle" class="conduitTitle" list="conduitTitle" />
@@ -483,7 +486,7 @@
                     <button type="action" class="chargeButton" name="act_chargeClocks">Charge</button>
                     <input type="hidden" name="attr_attuneArtefactSlots" value="1" />
                     <input type="hidden" name="attr_attuneFocusSlots" value="0" />
-                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> Dueling Focus</p>
+                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> duelling Focus</p>
                     <h3 class="equationList">Equations</h3>
                     <textarea class="equationList" name="attr_equationlist" placeholder="A list of equations you've found."></textarea>
                     <h3 class="formulaList">Formula</h3>
@@ -623,24 +626,24 @@
                 </div>
                 <div class="hand shortHand lowerHand rightHand">
                     <div class="deckHeader">
-                        <h2>Dueling Foci</h2>
+                        <h2>duelling Foci</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck4" />
                     <div class="deck">
-                        <fieldset class="repeating_duelingfocuscard">
+                        <fieldset class="repeating_duellingfocuscard">
                             <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
-                            <div class="card customCard duelingFocusCard">
-                                <h4 class="formulaDuelingFocus">Formula</h4>
-                                <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
+                            <div class="card customCard duellingFocusCard">
+                                <h4 class="formuladuellingFocus">Formula</h4>
+                                <input type="text" class="formuladuellingFocus" name="attr_formuladuellingFocus" />
                                 <h4 class="technique"></h4>
                                 <input type="text" class="technique" name="attr_technique" list="techniques" />
 
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
-                                    <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
-                                    <input type="number" min="0" max="7" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
-                                    <input type="hidden" name="attr_duelingFocusStressClock" value="0" class="clockSegment7" />
+                                    <input type="text" name="attr_duellingFocusStressClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="7" value="0" name="attr_duellingFocusStressClock" class="clockControl" />
+                                    <input type="hidden" name="attr_duellingFocusStressClock" value="0" class="clockSegment7" />
                                     <span class="clock"></span>
                                     <span class="clockSpoke clockSpoke70"></span>
                                     <span class="clockSpoke clockSpoke71"></span>
@@ -648,9 +651,9 @@
                                     <span class="clockSpoke clockSpoke73"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_formDuelingFocus" />
+                                <textarea class="form" name="attr_formduellingFocus" />
                                 <h4 class="continuousEffect">Continuous</h4>
-                                <textarea class="continuousEffect" name="attr_duelingFocusContinuousEffect" />
+                                <textarea class="continuousEffect" name="attr_duellingFocusContinuousEffect" />
                                 <div class="attunement">
                                     <h4>Attune</h4>
                                     <input type="checkbox" value="1" name="attr_attunedCard" />
@@ -741,7 +744,7 @@
                 <h4 class="seniorCovens">Senior Covens</h4>
                 <textarea name="attr_seniorCovens" class="seniorCovens" />
             </section>
-           
+
             <!-- Rituals -->
             <section class="ritualWidget">
                 <div class="hand">
@@ -801,7 +804,7 @@
                     <input type="hidden" class="editToggle" name="attr_EditAscension" />
                     <div class="editMenu editAscension">
                         <div class="levelControl">Level</div>
-                        <input type="number" class="levelControl" name="attr_covenLevel" value="-1" min="0" max="13" />
+                        <input type="number" class="levelControl" name="attr_covenLevel" value="0" min="0" max="13" />
                         <button type="action" class="ascensionClear" name="act_ascensionClear">Clear</button>
                     </div>
                     <input type="hidden" class="levelControl" name="attr_covenLevel" />
@@ -988,7 +991,7 @@
                                             <li>Apparel, Botanicals, Debris, Effigy, Items, Minerals, Remains</li>
                                         </ol>
                                     </li>
-                                    <li>Dueling Focus Charges</li>
+                                    <li>duelling Focus Charges</li>
                                 </ol>
                             </li>
                         </ol>
@@ -1758,24 +1761,24 @@
                 </div>
                 <div class="hand shortHand lowerHand rightHand">
                     <div class="deckHeader">
-                        <h2>Dueling Foci</h2>
+                        <h2>duelling Foci</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck4" />
                     <div class="deck">
-                        <fieldset class="repeating_duelingfocuscard">
+                        <fieldset class="repeating_duellingfocuscard">
                             <input type="hidden" name="attr_attunedCard" class="attuneToggle" />
-                            <div class="card customCard duelingFocusCard">
-                                <h4 class="formulaDuelingFocus">Formula</h4>
-                                <input type="text" class="formulaDuelingFocus" name="attr_formulaDuelingFocus" />
+                            <div class="card customCard duellingFocusCard">
+                                <h4 class="formuladuellingFocus">Formula</h4>
+                                <input type="text" class="formuladuellingFocus" name="attr_formuladuellingFocus" />
                                 <h4 class="technique">technique</h4>
                                 <input type="text" class="technique" name="attr_technique" list="techniques" />
 
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
-                                    <input type="text" name="attr_duelingFocusStressClock" class="clockControl" value="0" readonly />
-                                    <input type="number" min="0" max="7" value="0" name="attr_duelingFocusStressClock" class="clockControl" />
-                                    <input type="hidden" name="attr_duelingFocusStressClock" value="0" class="clockSegment7" />
+                                    <input type="text" name="attr_duellingFocusStressClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="7" value="0" name="attr_duellingFocusStressClock" class="clockControl" />
+                                    <input type="hidden" name="attr_duellingFocusStressClock" value="0" class="clockSegment7" />
                                     <span class="clock"></span>
                                     <span class="clockSpoke clockSpoke70"></span>
                                     <span class="clockSpoke clockSpoke71"></span>
@@ -1783,9 +1786,9 @@
                                     <span class="clockSpoke clockSpoke73"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_formDuelingFocus" />
+                                <textarea class="form" name="attr_formduellingFocus" />
                                 <h4 class="continuousEffect">Continuous</h4>
-                                <textarea class="continuousEffect" name="attr_duelingFocusContinuousEffect" />
+                                <textarea class="continuousEffect" name="attr_duellingFocusContinuousEffect" />
                                 <div class="attunement">
                                     <h4>Attune</h4>
                                     <input type="checkbox" value="1" name="attr_attunedCard" />
@@ -1938,6 +1941,11 @@
         </div>
     </article>
 
+    <article class="sheetType duellingSheet">
+        <div class="duellingSheetGrid">
+
+        </div>
+    </article>
 
 </main>
 
@@ -2047,7 +2055,14 @@
                 let rank = "";
                 let curseNumber = 2;
 
-                covenLevel = parseInt(globalAttributes.covenlevel) || 0;
+                if (globalAttributes.covenlevel)
+                {
+                    covenLevel = parseInt(globalAttributes.covenlevel) || 0;
+                }
+                else
+                {
+                    covenLevel = parseInt(values.covenLevel) || 0;
+                }
 
                 if (covenLevel <= 0)
                 {
@@ -2079,6 +2094,7 @@
 
                 setObj.rank = rank;
                 setObj.curseNumber = curseNumber;
+                setObj.covenLevel = covenLevel;
                 setObj.level = covenLevel;
 
                 //Set Name
@@ -2564,8 +2580,8 @@
             fields: ['artefactChargeClock']//Array of attributes to be gotten/worked with
         },
         {
-            section: 'repeating_duelingfocuscard',
-            fields: ['duelingFocusStressClock']
+            section: 'repeating_duellingfocuscard',
+            fields: ['duellingFocusStressClock']
         }
     ];
 

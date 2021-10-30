@@ -18,7 +18,8 @@ input.pawnSelector:checked ~ article.pawnSheet,
 input.npcSelector:checked ~ article.npcSheet,
 input.patronSelector:checked ~ article.patronSheet,
 input.fatekeepersGrimoireSelector:checked ~ article.fatekeepersGrimoireSheet,
-input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet
+input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet,
+input.duellingSelector:checked ~ article.duellingSheet
 {
     display: initial;
 }
@@ -317,7 +318,7 @@ main.masterGrid
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
+    row-gap: 0px;
     grid-template-columns: 98px 1fr 169px 98px;
     grid-template-rows: 17px 703px 52px 340px 575px auto;
     justify-items: start;
@@ -329,7 +330,7 @@ main.masterGrid
     grid-area: sheet;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
+    row-gap: 0px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items: start;
@@ -341,7 +342,7 @@ main.masterGrid
     grid-area: sheet;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
+    row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 100px 250px auto auto;
     justify-items: start;
@@ -353,7 +354,7 @@ main.masterGrid
     grid-area: sheet;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
+    row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 125px 250px auto auto;
     justify-items: start;
@@ -365,7 +366,7 @@ main.masterGrid
     grid-area: sheet;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
+    row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 100px 250px auto auto;
     justify-items: start;
@@ -377,7 +378,7 @@ main.masterGrid
     grid-area: sheet;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
+    row-gap: 0px;
     grid-template-columns: repeat(3,250px) 1fr;
     grid-template-rows: 1fr;
     justify-items: start;
@@ -387,6 +388,22 @@ main.masterGrid
 .fatekeeperDeckSheetGrid
 {
     grid-area: sheet;
+}
+
+.duellingSheetGrid
+{
+    grid-area: sheet;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img59/duellingSheet.png);
+    background-size: 850px 2362px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: 50px repeat(5,275px);
+    justify-items: start;
+    align-items: start;
 }
 
 /* Roll Template */
@@ -548,7 +565,7 @@ main.masterGrid
     height: 490px;
     grid-template-columns: 110px 1fr;
     grid-template-rows: 24px repeat(2, 1fr) 3fr;
-    grid-row-gap: 4px;
+    row-gap: 4px;
     margin-left: 25px;
     margin-top: 22px;
 }
@@ -686,7 +703,7 @@ main.masterGrid
     height: 100%;
     grid-template-columns: 20px 125px 1fr;
     grid-template-rows: 32px repeat(14,3fr) 1fr;
-    grid-row-gap: 4px;
+    row-gap: 4px;
 }
 
     .arcaneAnagogeWidget > .anagogeTitle
@@ -2649,7 +2666,7 @@ input[type=number].resourceBox
     display: grid;
     width: 100%;
     height: 100%;
-    grid-column-gap: 3px;
+    column-gap: 3px;
     grid-template-columns: auto repeat(2,45px) 16px;
     grid-template-rows: 50px repeat(13,25px) auto;
 }
@@ -3470,7 +3487,7 @@ input.editToggle[value="1"] + .editMenu
     height: 100%;
     grid-template-columns: 350px 16px auto;
     grid-template-rows: 37px repeat(7,20px) auto;
-    grid-row-gap: 7px;
+    row-gap: 7px;
 }
 
     .intentionWidget > .conduitBox
@@ -3527,7 +3544,7 @@ input.editToggle[value="1"] + .editMenu
     height: 100%;
     grid-template-columns: 1fr 138px;
     grid-template-rows: 32px repeat(14, 18px) auto;
-    grid-row-gap: 10px;
+    row-gap: 10px;
 }
 
 .artDice
@@ -3539,7 +3556,7 @@ input.editToggle[value="1"] + .editMenu
     text-align: start;
     grid-template-columns: 9px repeat(3,18px) 6px repeat(2,18px);
     grid-template-rows: 18px 1fr;
-    grid-column-gap: 3px;
+    column-gap: 3px;
 }
 
     .artDice.art1
@@ -3686,7 +3703,7 @@ input.editToggle[value="1"] + .editMenu
     grid-area: 8/1/auto/-1;
     width: 100%;
     display: grid;
-    grid-row-gap: 0px;
+    row-gap: 0px;
     grid-template-columns: 1fr;
     grid-template-rows: 30px 1fr;
     justify-items: start;
@@ -4352,48 +4369,48 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-row: 18/-2;
     }
 
-/* Dueling Focus Card */
-.duelingFocusCard
+/* duelling Focus Card */
+.duellingFocusCard
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img59/DuelingFocusCard.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img59/duellingFocusCard.png);
 }
 
-    .duelingFocusCard .formulaDuelingFocus
+    .duellingFocusCard .formuladuellingFocus
     {
         grid-row: 2/auto;
     }
 
-    .duelingFocusCard .technique
+    .duellingFocusCard .technique
     {
         grid-row: 3/auto;
     }
 
-    .duelingFocusCard h4.spellComponents
+    .duellingFocusCard h4.spellComponents
     {
         grid-row: 4/auto;
     }
 
-    .duelingFocusCard .clockWidget
+    .duellingFocusCard .clockWidget
     {
         grid-row: 4/span 4;
     }
 
-    .duelingFocusCard h4.form
+    .duellingFocusCard h4.form
     {
         grid-row: 8/auto;
     }
 
-    .duelingFocusCard textarea.form
+    .duellingFocusCard textarea.form
     {
         grid-row: 8/span 6;
     }
 
-    .duelingFocusCard h4.continuousEffect
+    .duellingFocusCard h4.continuousEffect
     {
         grid-row: 14/auto;
     }
 
-    .duelingFocusCard textarea.continuousEffect
+    .duellingFocusCard textarea.continuousEffect
     {
         grid-row: 14/-2;
     }
