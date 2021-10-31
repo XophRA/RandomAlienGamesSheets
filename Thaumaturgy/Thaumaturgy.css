@@ -5143,7 +5143,7 @@ section.exchange
     width: 850px;
     height: 275px;
     grid-template-columns: 383px 80px 387px;
-    grid-template-rows: 275px;
+    grid-template-rows: 120px 35px 1fr;
 }
 section.exchange1
 {
@@ -5172,7 +5172,7 @@ section.exchange5
 
 div.playerCard
 {
-    grid-area: 1/1/auto/auto;
+    grid-area: 1/1/-1/auto;
     width: 383px;
     background-position: right;
     margin: 0 10px 0 -10px;
@@ -5194,8 +5194,45 @@ div.duellingCard
     grid-template-rows: 10px repeat(12,17px) 1fr;
 }
 
-
-input[value="0"].exchangeFlip + section + div.duellingCard
+input.exchangeFlip,
+span.exchangeFlip
 {
-    
+    grid-area: 2/2/auto/auto;
+    place-self: center;
+    width: 60px;
+    margin:0;
+}
+
+input.exchangeFlip
+{
+    opacity: 0;
+    cursor: pointer;
+    z-index: 13;
+    height: 40px;
+}
+
+span.exchangeFlip
+{
+    font-family: "Fredericka the Great", cursive;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--buttonTxt);
+    background-color: var(--buttonBG);
+    border: var(--buttonBorderStyle);
+    padding-bottom: 7px;
+    height: 30px;
+}
+
+input.exchangeFlip:hover + span.exchangeFlip
+{
+    background-color: var(--buttonBGHover);
+    color: var(--buttonTxtHover);
+    border: var(--buttonHoverBorderStyle);
+}
+
+
+input.exchangeFlip:checked ~ div.duellingCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img59/arcanaCard_0.png);
 }
