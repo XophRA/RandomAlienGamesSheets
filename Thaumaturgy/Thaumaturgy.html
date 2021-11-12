@@ -161,15 +161,78 @@
                 <textarea name="attr_description" class="description" placeholder="Three things that describe you" />
             </section>
 
-            <!-- Intentions -->
-            <section class="intentionWidget">
-                <input type="checkbox" class="conduitBox conjureBox hideCheckbox maxCheckbox" name="attr_Conjure" /><span class="conduitBox conjureBox maxCheckbox conduit"></span>
-                <input type="checkbox" class="conduitBox dispelBox hideCheckbox maxCheckbox" name="attr_Dispel" /><span class="conduitBox dispelBox maxCheckbox conduit"></span>
-                <input type="checkbox" class="conduitBox manipulateBox hideCheckbox maxCheckbox" name="attr_Manipulate" /><span class="conduitBox manipulateBox maxCheckbox conduit"></span>
-                <input type="checkbox" class="conduitBox scryBox hideCheckbox maxCheckbox" name="attr_Scry" /><span class="conduitBox scryBox maxCheckbox conduit"></span>
-                <input type="checkbox" class="conduitBox summonBox hideCheckbox maxCheckbox" name="attr_Summon" /><span class="conduitBox summonBox maxCheckbox conduit"></span>
-                <input type="checkbox" class="conduitBox transmuteBox hideCheckbox maxCheckbox" name="attr_Transmute" /><span class="conduitBox transmuteBox maxCheckbox conduit"></span>
-                <input type="checkbox" class="conduitBox wardBox hideCheckbox maxCheckbox" name="attr_Ward" /><span class="conduitBox wardBox maxCheckbox conduit"></span>
+            <!-- Conduit -->
+            <section class="conduitWidget">
+                <!--Conjure-->
+                <div class="artDice art1">
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Conjure" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Conjure" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Conjure" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Conjure" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Conjure" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Conjure" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Conjure" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                </div>
+                <!--Dispel-->
+                <div class="artDice art2">
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Dispel" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Dispel" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Dispel" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Dispel" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Dispel" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Dispel" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Dispel" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                </div>
+                <!--Ensorcell-->
+                <div class="artDice art3">
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ensorcell" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ensorcell" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Ensorcell" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Ensorcell" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Ensorcell" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Ensorcell" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Ensorcell" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                </div>
+                <!--Scry-->
+                <div class="artDice art4">
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Scry" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Scry" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Scry" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Scry" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Scry" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Scry" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Scry" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                </div>
+                <!--Summon-->
+                <div class="artDice art5">
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Summon" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Summon" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Summon" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Summon" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Summon" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Summon" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Summon" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                </div>
+                <!--Transmute-->
+                <div class="artDice art6">
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Transmute" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Transmute" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Transmute" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Transmute" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Transmute" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Transmute" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Transmute" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                </div>
+                <!--Transmute-->
+                <div class="artDice art7">
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ward" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ward" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Ward" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Ward" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Ward" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Ward" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Ward" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                </div>                
             </section>
 
             <!-- Arts -->
@@ -383,11 +446,8 @@
                     <h4 class="curseSeverity">Severity</h4>
                     <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect1" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration1" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy1" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect1" />                    
+                    <h4 class="restorationComponents">Component</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents1" />
                     <button type="action" class="clearCurseButton" name="act_clearCurse1">Cure</button>
                 </div>
@@ -398,10 +458,7 @@
                     <input type="text" class="curseSeverity" name="attr_curseSeverity2" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect2" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration2" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy2" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
+                    <h4 class="restorationComponents">Component</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents2" />
                     <button type="action" class="clearCurseButton" name="act_clearCurse2">Cure</button>
                 </div>
@@ -412,10 +469,7 @@
                     <input type="text" class="curseSeverity" name="attr_curseSeverity3" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect3" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration3" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy3" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
+                    <h4 class="restorationComponents">Component</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents3" />
                     <button type="action" class="clearCurseButton" name="act_clearCurse3">Cure</button>
                 </div>
@@ -426,10 +480,7 @@
                     <input type="text" class="curseSeverity" name="attr_curseSeverity4" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect4" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration4" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy4" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
+                    <h4 class="restorationComponents">Component</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents4" />
                     <button type="action" class="clearCurseButton" name="act_clearCurse4">Cure</button>
                 </div>
@@ -440,10 +491,7 @@
                     <input type="text" class="curseSeverity" name="attr_curseSeverity5" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
                     <textarea class="statusEffect" name="attr_statusEffect5" />
-                    <h4 class="curseRestoration">Solution</h4>
-                    <input type="text" class="curseRestoration" name="attr_curseRestoration5" list="arts" />
-                    <input type="text" class="curseRestorationSynergy" name="attr_curseRestorationSynergy5" list="arts" />
-                    <h4 class="restorationComponents">Components</h4>
+                    <h4 class="restorationComponents">Component</h4>
                     <textarea class="restorationComponents" name="attr_restorationComponents5" />
                     <button type="action" class="clearCurseButton" name="act_clearCurse5">Cure</button>
                 </div>
@@ -486,7 +534,7 @@
                     <button type="action" class="chargeButton" name="act_chargeClocks">Charge</button>
                     <input type="hidden" name="attr_attuneArtefactSlots" value="1" />
                     <input type="hidden" name="attr_attuneFocusSlots" value="0" />
-                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> duelling Focus</p>
+                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> Duelling Focus</p>
                     <h3 class="equationList">Equations</h3>
                     <textarea class="equationList" name="attr_equationlist" placeholder="A list of equations you've found."></textarea>
                     <h3 class="formulaList">Formula</h3>
@@ -626,7 +674,7 @@
                 </div>
                 <div class="hand shortHand lowerHand rightHand">
                     <div class="deckHeader">
-                        <h2>duelling Foci</h2>
+                        <h2>Duelling Foci</h2>
                         <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck4" />
@@ -758,7 +806,7 @@
                                 <h4 class="ritualObjective">Objective</h4>
                                 <input type="text" class="ritualObjective" list="ritual" name="attr_ritualObjective" />
                                 <textarea class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" />
-                                <h4 class="ritualComponents">Components</h4>
+                                <h4 class="ritualComponents">Component</h4>
                                 <div class="potency">
                                     <input type="radio" name="attr_potency" class="potency1 diceCheckbox hideCheckbox" value="1" checked /><span class="potency1 diceCheckbox D10"></span>
                                     <input type="radio" name="attr_potency" class="potency2 diceCheckbox hideCheckbox" value="2" /><span class="potency2 diceCheckbox D10"></span>
@@ -1438,7 +1486,13 @@
 
     <!-- Dramatis Personae -->
     <article class="sheetType dramatisPersonaeSheet">
-        <div class="dramatisPersonaeGridGrid">
+        <div class="dramatisPersonaeSheetGrid">
+            <section class="tagCharacterAspects">
+                <h1 class="name">Drama</h1>
+                <input type="text" name="attr_character_name" class="name titlefill" />
+                <h4 class="tags">Notes</h4>
+                <textarea class="tags" name="attr_notes" />
+            </section>
             <fieldset class="repeating_folk">
                 <section class="tagCharacterAspects">
                     <h4 class="name">Name</h4>
@@ -1941,6 +1995,7 @@
         </div>
     </article>
 
+    <!-- Dueling Sheet -->
     <article class="sheetType duellingSheet">
         <div class="duellingSheetGrid">
 
@@ -2153,12 +2208,12 @@
                     ascensionObjective = "Final Ascension";
                     ascensionSigilSize = 5;
                 }
-                else if (nextLevel <= 1)
+                else if (nextLevel <= 2)
                 {
                     ascensionObjective = "Initiate, level " + nextLevel;
                     ascensionSigilSize = 1;
                 }
-                else if (nextLevel > 1 && nextLevel <= 4)
+                else if (nextLevel > 2 && nextLevel <= 4)
                 {
                     ascensionObjective = "Apprentice, level " + nextLevel;
                     ascensionSigilSize = 2;
@@ -2206,11 +2261,11 @@
                 {
                     rank = "";
                 }
-                else if (covenLevel == 1)
+                else if (covenLevel >= 1)
                 {
                     rank = "Initiate";
                 }
-                else if (covenLevel > 1 && covenLevel <= 4)
+                else if (covenLevel > 2 && covenLevel <= 4)
                 {
                     rank = "Apprentice";
                 }
@@ -2273,25 +2328,25 @@
                 setObj.character_name = name;
 
                 //Set Attunement Slots
-                let attuneArtefactSlots = 1;
+                let attuneArtefactSlots = 0;
                 let attuneFocusSlots = 0;
 
-                if (covenLevel < 1)
+                if (covenLevel == 1)
                 {
                     attuneArtefactSlots = 1;
                     attuneFocusSlots = 0;
                 }
-                if (covenLevel >= 1 && covenLevel < 4)
+                if (covenLevel == 2)
                 {
-                    attuneArtefactSlots = 2;
-                    attuneFocusSlots = 0;
+                    attuneArtefactSlots = 1;
+                    attuneFocusSlots = 1;
                 }
-                else if (covenLevel >= 3 && covenLevel < 5)
+                else if (covenLevel == 3)
                 {
                     attuneArtefactSlots = 2;
                     attuneFocusSlots = 1;
                 }
-                else if (covenLevel >= 5 && covenLevel < 7)
+                else if (covenLevel >= 4 && covenLevel < 7)
                 {
                     attuneArtefactSlots = 3;
                     attuneFocusSlots = 1;
