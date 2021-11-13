@@ -5141,6 +5141,43 @@ input.playerTurn:checked ~ section > div.playerChoice
     display: block;
 }
 
+/* Number of Exchanges Functionality */
+div.exchangeControl
+{
+    grid-area: 2/3/auto/auto;
+    display: grid;
+    height: 50px;
+    width: 60px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    place-self: end;
+    margin: 15px;
+    column-gap: 5px;
+}
+
+div.exchangeControl > h3
+{
+    grid-area: 1/1/auto/span 2;
+}
+
+div.exchangeControl > input.exchangeNum
+{
+    grid-area: 1/-2/auto/auto;
+    font-size: 1.5em;
+}
+
+div.exchangeControl > button
+{
+    grid-area: 2/1/-1/-1;
+}
+
+input[type="hidden"][value="4"].exchangeNum ~ section.exchange4,
+input[type="hidden"][value="5"].exchangeNum ~ section.exchange4,
+input[type="hidden"][value="5"].exchangeNum ~ section.exchange5
+{
+    display: grid;
+}
+
 /* Exchange sets */
 section.exchange
 {
@@ -5170,11 +5207,13 @@ section.exchange3
 section.exchange4
 {
     grid-row: 9/auto;
+    display: none;
 }
 
 section.exchange5
 {
     grid-row: 11/auto;
+    display: none;
 }
 
 /* Ready Cards */
