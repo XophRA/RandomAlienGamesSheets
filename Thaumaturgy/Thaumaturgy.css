@@ -4203,17 +4203,17 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .roteSpellCard textarea.spellComponents
     {
-        grid-row: 6/span 5;
+        grid-row: 7/span 5;
     }
 
     .roteSpellCard h4.spellEffect
     {
-        grid-row: 11/auto;
+        grid-row: 12/auto;
     }
 
     .roteSpellCard textarea.spellEffect
     {
-        grid-row: 11/-2;
+        grid-row: 12/-2;
     }
 
 /* Scroll Cards */
@@ -5138,7 +5138,7 @@ input.duellingTurn:hover + span.duellingTurn
 input.opponentTurn:checked ~ section > div.opponentChoice,
 input.playerTurn:checked ~ section > div.playerChoice
 {
-    display: block;
+    display: grid;
 }
 
 /* Number of Exchanges Functionality */
@@ -5186,7 +5186,7 @@ section.exchange
     width: 850px;
     height: 475px;
     grid-template-columns: 1fr 50px 175px 50px 260px 50px 175px 50px 1fr;
-    grid-template-rows: 50px 70px 40px 120px 1fr 20px 30px;
+    grid-template-rows: 38px 82px 40px 120px 1fr 22px 18px;
 }
 
 section.exchange1
@@ -5217,7 +5217,7 @@ section.exchange5
 }
 
 /* Ready Cards */
-span.readyCard
+div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img64/arcanaCard_0.png);
     background-size: 275px 475px;
@@ -5225,12 +5225,18 @@ span.readyCard
     width: 275px;
 }
 
-span.playerCard
+div.readyCardDisplay > textarea
+{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+div.readyCardDisplay.playerCard
 {
     grid-area: 1/2/-1/5;
 }
 
-span.opponentCard
+div.readyCardDisplay.opponentCard
 {
     grid-area: 1/6/-1/-2;
 }
@@ -5238,11 +5244,13 @@ span.opponentCard
 /* Choice pop-ups */
 div.duellingChoice
 {
-    width: 100%;
-    height: 100%;
+    width: 172px;
+    height: 396px;
     border: var(--borderStyle);
     background-color: var(--bgSheet);
     z-index: 8;
+    grid-template-columns: 1fr;
+    grid-template-rows: 24px repeat(2,20px 60px) repeat(2,20px) auto;
     display:none;
 }
 
@@ -5254,6 +5262,18 @@ div.playerCard
 div.opponentCard
 {
     grid-area: 2/7/-2/-3;
+}
+
+div.duellingChoice > h3
+{
+    padding: 0 5px;
+}
+
+div.duellingChoice > h4,
+div.duellingChoice > textarea,
+div.duellingChoice > select
+{
+    padding: 0 10px;
 }
 
 /* Exchange flip button */
@@ -5294,34 +5314,63 @@ input.exchangeFlip:hover + span.exchangeFlip
     border: var(--buttonHoverBorderStyle);
 }
 
+/* Card Display */
+div.readyCardDisplay
+{
+    display: grid;
+    cursor: default;
+    grid-template-rows: 60% repeat(2,1fr) 35px;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-areas: ". . ." ". spellChoice ." ". focusChoice .";
+}
+
+div.readyCardDisplay > .spellChoice
+{
+    grid-area: spellChoice;
+    cursor: default;
+}
+
+div.readyCardDisplay > .focusChoice
+{
+    grid-area: focusChoice;
+    cursor: default;
+}
 
 /* Functionality to display chosen card when exchange is flipped*/
-input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + span.readyCard
+input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img64/ReadyCard.png);
 }
 
-input.exchangeFlip:checked ~ input[value="1"].techniqueChoice + span.readyCard
+input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + div.readyCardDisplay > .spellChoice,
+input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + div.readyCardDisplay > .focusChoice,
+input.exchangeFlip:not(:checked) ~  div.readyCardDisplay > .spellChoice,
+input.exchangeFlip:not(:checked) ~ div.readyCardDisplay > .focusChoice
+{
+    display: none;
+}
+
+input.exchangeFlip:checked ~ input[value="1"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img64/ReadyCard1Power.png);
 }
 
-input.exchangeFlip:checked ~ input[value="2"].techniqueChoice + span.readyCard
+input.exchangeFlip:checked ~ input[value="2"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img64/ReadyCard2Block.png);
 }
 
-input.exchangeFlip:checked ~ input[value="3"].techniqueChoice + span.readyCard
+input.exchangeFlip:checked ~ input[value="3"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img64/ReadyCard3Haste.png);
 }
 
-input.exchangeFlip:checked ~ input[value="4"].techniqueChoice + span.readyCard
+input.exchangeFlip:checked ~ input[value="4"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img64/ReadyCard4Finesse.png);
 }
 
-input.exchangeFlip:checked ~ input[value="5"].techniqueChoice + span.readyCard
+input.exchangeFlip:checked ~ input[value="5"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img64/ReadyCard5Trick.png);
 }
