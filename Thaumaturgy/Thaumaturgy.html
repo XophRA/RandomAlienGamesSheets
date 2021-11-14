@@ -2542,20 +2542,20 @@
                     {
                         rank = "";
                     }
-                    else if (covenLevel >= 1)
+                    else if (covenLevel >= 1 && covenLevel <= 2)
                     {
                         rank = "Initiate";
                     }
-                    else if (covenLevel > 2 && covenLevel <= 4)
+                    else if (covenLevel >= 3 && covenLevel <= 4)
                     {
                         rank = "Apprentice";
                     }
-                    else if (covenLevel > 4 && covenLevel < 8)
+                    else if (covenLevel >= 5 && covenLevel <= 7)
                     {
                         rank = "Keeper";
                         curseNumber = 3;
                     }
-                    else if (covenLevel >= 8 && covenLevel < 11)
+                    else if (covenLevel >= 8 && covenLevel <= 10)
                     {
                         rank = "Graduate";
                         curseNumber = 4;
