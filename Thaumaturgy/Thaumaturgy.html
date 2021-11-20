@@ -1199,11 +1199,11 @@
                 </div>
                 <div class="fateResource"><input type="number" name="attr_fateResource" min="0" class="resourceBox" value="0" /></div>
 
-                <!-- Disequlibrium Surge -->
+                <!-- Disequlibrium -->
                 <div class="clockWidget">
-                    <input type="text" name="attr_surgeClock" class="clockControl" value="0" readonly />
-                    <input type="number" min="0" max="7" value="0" name="attr_surgeClock" class="clockControl" />
-                    <input type="hidden" name="attr_surgeClock" value="0" class="clockSegment7" />
+                    <input type="text" name="attr_dragClock" class="clockControl" value="0" readonly />
+                    <input type="number" min="0" max="7" value="0" name="attr_dragClock" class="clockControl" />
+                    <input type="hidden" name="attr_dragClock" value="0" class="clockSegment7" />
                     <span class="clock"></span>
                     <span class="clockSpoke clockSpoke70"></span>
                     <span class="clockSpoke clockSpoke71"></span>
@@ -1526,49 +1526,49 @@
                 <input type="hidden" class="editToggle" name="attr_EditDisequilbrium" />
                 <div class="editMenu editTableSpread">
                     <div class="leftLegEdit arcanaEdit">
-                        <h2>Disruption</h2>
+                        <h2>Aftermath</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice"
-                            name="attr_Disruption" min="0" max="13" value="0" />
+                            name="attr_Aftermath" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
-                        <select name="attr_DisruptionFacing" class="arcanaFacing">
+                        <select name="attr_AftermathFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
                             <option value="1">Harmony</option>
                         </select>
                     </div>
                     <div class="rightLegEdit arcanaEdit">
-                        <h2>Danger</h2>
+                        <h2>Backlash</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice"
-                            name="attr_Danger" min="0" max="13" value="0" />
+                            name="attr_Backlash" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
-                        <select name="attr_DangerFacing" class="arcanaFacing">
+                        <select name="attr_BacklashFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
                             <option value="1">Harmony</option>
                         </select>
                     </div>
                     <div class="tabletopEdit arcanaEdit">
-                        <h2>Divergence</h2>
+                        <h2>Complications</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice"
-                            name="attr_Divergence" min="0" max="13" value="0" />
+                            name="attr_Complications" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
-                        <select name="attr_DivergenceFacing" class="arcanaFacing">
+                        <select name="attr_ComplicationsFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
                             <option value="1">Harmony</option>
                         </select>
                     </div>
                 </div>
                 <div class="leftLeg">
-                    <input type="hidden" class="facingChoice" name="attr_DisruptionFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Disruption" />
+                    <input type="hidden" class="facingChoice" name="attr_AftermathFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Aftermath" />
                     <span class="card"></span>
                 </div>
                 <div class="rightLeg">
-                    <input type="hidden" class="facingChoice" name="attr_DangerFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Danger" />
+                    <input type="hidden" class="facingChoice" name="attr_BacklashFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Backlash" />
                     <span class="card"></span>
                 </div>
                 <div class="tabletop">
-                    <input type="hidden" class="facingChoice" name="attr_DivergenceFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Divergence" />
+                    <input type="hidden" class="facingChoice" name="attr_ComplicationsFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Complications" />
                     <span class="card"></span>
                 </div>
                 <textarea class="speculation" name="attr_disequilibriumSpeculation" placeholder="what does it all mean?"></textarea>
@@ -2471,7 +2471,7 @@
         /* Set Defaults, name, and Player Caster Level to Coven Level */
         on("sheet:opened change:covenlevel change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns", (event) =>
         {
-            getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Disruption", "Danger", "Divergence", "givenName", "academicName", "questName", "pronouns", "character_name"], function (values)
+            getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Aftermath", "Backlash", "Complications", "givenName", "academicName", "questName", "pronouns", "character_name"], function (values)
             {
                 const setObj = {};
                 let selectedSheet = parseInt(values.selectedSheet) || 0;
@@ -2488,9 +2488,9 @@
                 setObj.Obstacle = parseInt(values.Obstacle) || 0;
 
                 /* Ensure Disequilibrium is set */
-                setObj.Disruption = parseInt(values.Disruption) || 0;
-                setObj.Danger = parseInt(values.Danger) || 0;
-                setObj.Divergence = parseInt(values.Divergence) || 0;
+                setObj.Aftermath = parseInt(values.Aftermath) || 0;
+                setObj.Backlash = parseInt(values.Backlash) || 0;
+                setObj.Complications = parseInt(values.Complications) || 0;
 
                 /* Set Level elements on Coven Sheet*/
                 if (selectedSheet == 2)
@@ -2879,145 +2879,204 @@
         });
 
         /* Count Dice in Magic Circle and add to Resources and Ripples */
-        on("clicked:calculateresults", (event) =>
-        {
-            let getArray = []; //An Array for all attr to get
-
-            //Get all poolDice
-            for (let num = 1; num <= 26; num++)
+            on("clicked:calculateresults", (event) =>
             {
-                getArray = [...getArray, ...
-                    [`poolDieArcana${num}`, `poolDieMatch${num}`, `poolDieWorth${num}`, `poolDieSide${num}`]];// the ... is a javascript symbol for the spread operator which expands the object or array out into it's discrete parts
-            }
-            //Get all RippleDice
-            for (let num = 1; num <= 13; num++)
-            {
-                getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
-            }
-            //Get current Fate and risked Aether
-            getArray = [...getArray, ...[`fateResource`, `aetherResource`]];
+                let getArray = []; //An Array for all attr to get
 
-            getAttrs(getArray, (attrs) =>
-            {
-                const setObj = {};
-
-                //Calculate Results
-                let results = 0;
+                //Get all poolDice
                 for (let num = 1; num <= 26; num++)
                 {
-                    results += parseInt(attrs[`poolDieWorth${num}`]) || 0;
+                    getArray = [...getArray, ...
+                        [`poolDieArcana${num}`, `poolDieMatch${num}`, `poolDieWorth${num}`, `poolDieSide${num}`]];// the ... is a javascript symbol for the spread operator which expands the object or array out into it's discrete parts
                 }
-                setObj.resultResource = results;
-
-                //Create all Dice Values Array
-                let allValue = [];
-                for (let i = 0; i < 13; i++)
+                //Get all RippleDice
+                for (let num = 1; num <= 13; num++)
                 {
-                    allValue[i] = [];
-                    let arcanaNum = i + 1;
+                    getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
+                }
+                //Get current Fate and risked Aether
+                getArray = [...getArray, ...[`fateResource`, `aetherResource`, `dragClock`]];
 
-                    for (let j = 1; j <= 26; j++)
+                getAttrs(getArray, (attrs) =>
+                {
+                    const setObj = {};
+
+                    //Calculate Results
+                    let results = 0;
+                    for (let num = 1; num <= 26; num++)
                     {
-                        let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
-                        let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
+                        results += parseInt(attrs[`poolDieWorth${num}`]) || 0;
+                    }
+                    setObj.resultResource = results;
 
-                        if (match != 1 && arcana == arcanaNum)
+                    //Create all Dice Values Array
+                    let allValue = [];
+                    for (let i = 0; i < 13; i++)
+                    {
+                        allValue[i] = [];
+                        let arcanaNum = i + 1;
+
+                        for (let j = 1; j <= 26; j++)
                         {
-                            let dieSide = parseInt(attrs[`poolDieSide${j}`]) || 0;
-                            if (dieSide > 0)
+                            let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
+                            let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
+
+                            if (match != 1 && arcana == arcanaNum)
                             {
-                                allValue[i].push(dieSide);
+                                let dieSide = parseInt(attrs[`poolDieSide${j}`]) || 0;
+                                if (dieSide > 0)
+                                {
+                                    allValue[i].push(dieSide);
+                                }
                             }
                         }
                     }
-                }
-                console.log(allValue);
+                    console.log(allValue);
 
-                //Add Dice that didn't match to the Ripple Table, total odds to the Fate Resource, & Calculate Aether to be returned to the Player Caster from the total evens
-                let aetherResource = parseInt(attrs[`aetherResource`]) || 0;
-                let evenDice = 0;
-                let oddDice = 0;
+                    /*Add Dice that didn't match to the Ripple Table, total odds to the Fate Resource, & Calculate Aether to be returned to the Player Caster from the total evens*/
+                    let aetherResource = parseInt(attrs[`aetherResource`]) || 0;
+                    let evenDice = 0;
+                    let oddDice = 0;
+                    let dragClock = parseInt(attrs[`dragClock`]) || 0;
 
-                for (let num = 0; num < allValue.length; num++) //loop through allValue
-                {
-                    let arcana = num + 1;
-                    let evens = 0;
-                    let odds = 0;
-
-                    let harmony = parseInt(attrs[`ripple${arcana}Harmony`]) || 0;
-                    evens += evenDiceRolled(allValue[num]);
-
-                    evenDice += evens;
-                    setObj[`ripple${arcana}Harmony`] = harmony + evens;
-
-
-                    let chaos = parseInt(attrs[`ripple${arcana}Chaos`]) || 0;
-                    odds += oddDiceRolled(allValue[num]);
-
-                    oddDice += odds;
-                    setObj[`ripple${arcana}Chaos`] = chaos + odds;
-                }
-
-                //Set fateResource
-                let fateResource = parseInt(attrs[`fateResource`]) || 0;
-                let fate = 0;
-
-                if (aetherResource <= 0)
-                {
-                    fate = 0;
-                }
-                else if (aetherResource >= oddDice)
-                {
-                    fate = oddDice;
-                }
-                else if (aetherResource < oddDice)
-                {
-                    fate = aetherResource + 1;
-                }
-
-                fateResource += fate;
-                setObj.fateResource = fateResource;
-
-                //Calculate aetherResource
-                let aether = 0;
-
-                if (aetherResource <= 0)
-                {
-                    aether = 0;
-                }
-                else if (aetherResource >= evenDice)
-                {
-                    aether = evenDice;
-                }
-                else if (aetherResource < evenDice)
-                {
-                    aether = aetherResource + 1;
-                }
-
-                console.log("Risked Aether:", aetherResource, "Even Dice:", evenDice, "Returned Aether:", aether, "Odd Dice:", oddDice, "Added Fate:", fate, "Total Fate:", fateResource);
-                setObj.aetherResource = aether; //Set aetherResource
-
-                //Number of Evens and Odds Functions
-                function evenDiceRolled(diceArray)
-                {
-                    return diceArray.filter(function (number)
+                    for (let num = 0; num < allValue.length; num++) /*loop through allValue*/
                     {
-                        return number % 2 == 0;
-                    }).length;
-                }
+                        let arcana = num + 1;
+                        let evens = 0;
+                        let odds = 0;
 
-                function oddDiceRolled(diceArray)
-                {
-                    return diceArray.filter(function (number)
+                        let harmony = parseInt(attrs[`ripple${arcana}Harmony`]) || 0;
+                        evens += evenDiceRolled(allValue[num]);
+
+                        evenDice += evens;/*Add to the total evenDice rolled*/
+
+                        /*Set harmony ripple, add greater then 10 to drag clock unless it overfills the clock*/
+                        let rippleHarmony = harmony + evens;
+                        let rippleHarmonyDrag = 0;
+                        if (rippleHarmony >= 10 && dragClock < 7)
+                        {
+                            rippleHarmonyDrag += Math.floor(rippleHarmony / 10);
+                        }
+
+                        let rippleHarmonyDragClock = rippleHarmonyDrag + dragClock;
+
+                        if (rippleHarmonyDragClock <= 7)
+                        {
+                            rippleHarmony -= rippleHarmonyDrag * 10;
+                            dragClock = rippleHarmonyDragClock;
+                        }
+                        else if (rippleHarmonyDragClock > 7)
+                        {
+                            rippleHarmony -= (rippleHarmonyDragClock - 7) * 10;
+                            dragClock = 7;
+                        }
+
+                        setObj[`ripple${arcana}Harmony`] = rippleHarmony;/* Set the harmony ripple*/
+
+
+                        let chaos = parseInt(attrs[`ripple${arcana}Chaos`]) || 0;
+                        odds += oddDiceRolled(allValue[num]);
+
+                        oddDice += odds;/*Add to the total oddDice rolled*/
+
+                        /*Set chaos ripple, add greater then 10 to drag clock unless it overfills the clock*/
+                        let rippleChaos = chaos + odds;
+                        let rippleChaosDrag = 0;
+                        if (rippleChaos >= 10 && dragClock < 7)
+                        {
+                            rippleChaosDrag += Math.floor(rippleChaos / 10);
+                        }
+
+                        let rippleChaosDragClock = rippleChaosDrag + dragClock;
+
+                        if (rippleChaosDragClock <= 7)
+                        {
+                            rippleChaos -= rippleChaosDrag * 10;
+                            dragClock = rippleChaosDragClock;
+                        }
+                        else if (rippleChaosDragClock > 7)
+                        {
+                            rippleChaos -= (rippleChaosDragClock - 7) * 10;
+                            dragClock = 7;
+                        }
+
+                        setObj[`ripple${arcana}Chaos`] = rippleChaos;/* Set the chaos ripple*/
+                    }
+
+                    /*Set fateResource*/
+                    let fateResource = parseInt(attrs[`fateResource`]) || 0;
+                    let fate = 0;
+
+                    if (aetherResource >= oddDice)
                     {
-                        return number % 2 == 1;
-                    }).length;
-                }
+                        fate = oddDice;
+                    }
+                    else if (aetherResource < oddDice)
+                    {
+                        fate = aetherResource + 1;
+                    }
 
-                console.log(setObj);
-                setAttrs(setObj);
+                    fateResource += fate;
+
+                    /*Increase Drag for Fate Pool that is greater than 10*/
+                    let fateDrag = 0;
+
+                    if (fateResource >= 10 && dragClock < 7)
+                    {
+                        fateDrag += Math.floor(fateResource / 10);
+                    }
+
+                    let drag = fateDrag + dragClock;
+
+                    if (drag <= 7)
+                    {
+                        fateResource -= fateDrag * 10;
+                        dragClock = drag;
+                    }
+                    else if (drag > 7)
+                    {
+                        fateResource -= (drag - 7) * 10;
+                        dragClock = 7;
+                    }
+                    setObj.fateResource = fateResource;
+
+                    /*Calculate aetherResource*/
+                    let aether = 0;
+
+                    if (aetherResource >= evenDice)
+                    {
+                        aether = evenDice;
+                    }
+                    else if (aetherResource < evenDice)
+                    {
+                        aether = aetherResource + 1;
+                    }
+
+                    console.log("Risked Aether:", aetherResource, "Even Dice:", evenDice, "Returned Aether:", aether, "Odd Dice:", oddDice, "Added Fate:", fate, "Total Fate:", fateResource);
+                    setObj.aetherResource = aether; /*Set aetherResource*/
+                    setObj.dragClock = dragClock; /*Set the dragClock*/
+
+                    /*Number of Evens and Odds Functions*/
+                    function evenDiceRolled(diceArray)
+                    {
+                        return diceArray.filter(function (number)
+                        {
+                            return number % 2 == 0;
+                        }).length;
+                    }
+
+                    function oddDiceRolled(diceArray)
+                    {
+                        return diceArray.filter(function (number)
+                        {
+                            return number % 2 == 1;
+                        }).length;
+                    }
+
+                    console.log(setObj);
+                    setAttrs(setObj);
+                });
             });
-        });
 
         /* Clear Magic Circle, Results, & Aether */
         on("clicked:clearcircleresults", (event) =>
