@@ -1106,7 +1106,7 @@ main.masterGrid
         grid-template-columns: 1fr repeat(8,12px) 1fr;
         grid-template-rows: 33px repeat(35,12px) 1fr;
     }
-
+        /* Ascension Button style */
         .ascensionCard .ritualSigil > button
         {
             padding: 0;
@@ -1122,7 +1122,14 @@ main.masterGrid
             height: 12px;
             z-index: 3;
         }
-
+        /* Quest Button Style */
+        .ascensionCard .ritualSigil > button.questSegment
+        {
+            background-size: 10px 10px;
+            width: 9px;
+            height: 9px;
+        }
+        /* Switch Button img with each click*/
         .ascensionCard .ritualSigil > input[value="1"].sigilSegment + button.sigilSegment
         {
             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img67/SigilSegment1.png);
@@ -1209,6 +1216,7 @@ main.masterGrid
             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img67/ascensionLink5.png);
         }
 
+        /*Ascension Button Locations */
         .ascensionCard .ritualSigil > .sigilSegment1
         {
             grid-area: 7/8/auto/auto;
@@ -1248,11 +1256,26 @@ main.masterGrid
         .ascensionCard > input[value="1"].sigilSize ~ .ascensionQuest1,
         .ascensionCard .ritualSigil > input[value="2"].sigilSize ~ .sigilSegment1,
         .ascensionCard .ritualSigil > input[value="2"].sigilSize ~ .sigilSegment2,
+        .ascensionCard .ritualSigil > input[value="2"].sigilSize ~ .quest2Segment1,
+        .ascensionCard .ritualSigil > input[value="2"].sigilSize ~ .quest2Segment2,
+        .ascensionCard .ritualSigil > input[value="2"].sigilSize ~ .quest2Segment3,
+        .ascensionCard .ritualSigil > input[value="2"].sigilSize ~ .quest2Segment4,
+        .ascensionCard .ritualSigil > input[value="2"].sigilSize ~ .quest2Segment5,
         .ascensionCard > input[value="2"].sigilSize ~ .ascensionQuest1,
         .ascensionCard > input[value="2"].sigilSize ~ .ascensionQuest2,
         .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .sigilSegment1,
         .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .sigilSegment2,
         .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .sigilSegment3,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest2Segment1,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest2Segment2,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest2Segment3,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest2Segment4,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest2Segment5,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest3Segment1,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest3Segment2,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest3Segment3,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest3Segment4,
+        .ascensionCard .ritualSigil > input[value="3"].sigilSize ~ .quest3Segment5,
         .ascensionCard > input[value="3"].sigilSize ~ .ascensionQuest1,
         .ascensionCard > input[value="3"].sigilSize ~ .ascensionQuest2,
         .ascensionCard > input[value="3"].sigilSize ~ .ascensionQuest3,
@@ -1260,6 +1283,21 @@ main.masterGrid
         .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .sigilSegment2,
         .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .sigilSegment3,
         .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .sigilSegment4,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest2Segment1,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest2Segment2,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest2Segment3,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest2Segment4,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest2Segment5,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest3Segment1,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest3Segment2,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest3Segment3,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest3Segment4,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest3Segment5,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest4Segment1,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest4Segment2,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest4Segment3,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest4Segment4,
+        .ascensionCard .ritualSigil > input[value="4"].sigilSize ~ .quest4Segment5,
         .ascensionCard > input[value="4"].sigilSize ~ .ascensionQuest1,
         .ascensionCard > input[value="4"].sigilSize ~ .ascensionQuest2,
         .ascensionCard > input[value="4"].sigilSize ~ .ascensionQuest3,
@@ -1273,9 +1311,204 @@ main.masterGrid
         .ascensionCard > input[value="5"].sigilSize ~ .ascensionQuest2,
         .ascensionCard > input[value="5"].sigilSize ~ .ascensionQuest3,
         .ascensionCard > input[value="5"].sigilSize ~ .ascensionQuest4,
-        .ascensionCard > input[value="5"].sigilSize ~ .ascensionQuest5
+        .ascensionCard > input[value="5"].sigilSize ~ .ascensionQuest5,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest2Segment1,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest2Segment2,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest2Segment3,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest2Segment4,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest2Segment5,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest3Segment1,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest3Segment2,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest3Segment3,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest3Segment4,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest3Segment5,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest4Segment1,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest4Segment2,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest4Segment3,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest4Segment4,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest4Segment5,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest5Segment1,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest5Segment2,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest5Segment3,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest5Segment4,
+        .ascensionCard .ritualSigil > input[value="5"].sigilSize ~ .quest5Segment5
         {
             display: block;
+        }
+
+        /* Quest 1 Milestone Locations */
+        .ascensionCard .ritualSigil > .quest1Segment1
+        {
+            grid-area: 3/3/auto/auto;
+            margin: 0 0 0 0;
+        }
+
+        .ascensionCard .ritualSigil > .quest1Segment2
+        {
+            grid-area: 6/3/auto/auto;
+            margin: 4px 0 0 6px;
+        }
+
+        .ascensionCard .ritualSigil > .quest1Segment3
+        {
+            grid-area: 5/4/auto/auto;
+            margin: 8px 0 0 8px;
+        }
+
+        .ascensionCard .ritualSigil > .quest1Segment4
+        {
+            grid-area: 4/6/auto/auto;
+            margin: 0 0 0 2px;
+        }
+
+        .ascensionCard .ritualSigil > .quest1Segment5
+        {
+            grid-area: 7/7/auto/auto;
+            margin: 0 0 0 3px;
+        }
+
+        /* Quest 2 Milestone Locations */
+        .ascensionCard .ritualSigil > .quest2Segment1
+        {
+            grid-area: 8/8/auto/auto;
+            margin: 2px 0 0 0;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest2Segment2
+        {
+            grid-area: 9/6/auto/auto;
+            margin: 3px 0 0 2px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest2Segment3
+        {
+            grid-area: 10/8/auto/auto;
+            margin: 4px 0 0 0;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest2Segment4
+        {
+            grid-area: 11/7/auto/auto;
+            margin: 2px 0 0 -5px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest2Segment5
+        {
+            grid-area: 13/6/auto/auto;
+            margin: -6px 0 0 -3px;
+            display: none;
+        }
+
+        /* Quest 3 Milestone Locations */
+        .ascensionCard .ritualSigil > .quest3Segment1
+        {
+            grid-area: 14/5/auto/auto;
+            margin: 5px 0 0 3px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest3Segment2
+        {
+            grid-area: 16/4/auto/auto;
+            margin: -1px 0 0 7px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest3Segment3
+        {
+            grid-area: 17/3/auto/auto;
+            margin: 5px 0 0 -3px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest3Segment4
+        {
+            grid-area: 19/4/auto/auto;
+            margin: -6px 0 0 3px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest3Segment5
+        {
+            grid-area: 20/4/auto/auto;
+            margin: 4px 0 0 3px;
+            display: none;
+        }
+
+        /* Quest 4 Milestone Locations */
+        .ascensionCard .ritualSigil > .quest4Segment1
+        {
+            grid-area: 21/8/auto/auto;
+            margin: 8px 0 0 2px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest4Segment2
+        {
+            grid-area: 23/6/auto/auto;
+            margin: -1px 0 0 -4px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest4Segment3
+        {
+            grid-area: 24/8/auto/auto;
+            margin: -2px 0 0 0;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest4Segment4
+        {
+            grid-area: 25/5/auto/auto;
+            margin: 0 0 0 3px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest4Segment5
+        {
+            grid-area: 27/7/auto/auto;
+            margin: -6px 0 0 -6px;
+            display: none;
+        }
+
+        /* Quest 5 Milestone Locations */
+        .ascensionCard .ritualSigil > .quest5Segment1
+        {
+            grid-area: 28/7/auto/auto;
+            margin: -2px 0 0 0;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest5Segment2
+        {
+            grid-area: 29/5/auto/auto;
+            margin: -1px 0 0 -2px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest5Segment3
+        {
+            grid-area: 30/6/auto/auto;
+            margin: 4px 0 0 5px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest5Segment4
+        {
+            grid-area: 33/5/auto/auto;
+            margin: -5px 0 0 3px;
+            display: none;
+        }
+
+        .ascensionCard .ritualSigil > .quest5Segment5
+        {
+            grid-area: 35/7/auto/auto;
+            margin: -3px 0 0 -1px;
+            display: none;
         }
 
 /* Ritual Card */
