@@ -882,12 +882,12 @@ main.masterGrid
 
         .ascensionDeck .level.lvl2
         {
-            grid-area: 6/-3/span 2/auto;
+            grid-area: 4/-3/span 2/auto;
         }
 
         .ascensionDeck .level.lvl3
         {
-            grid-area: 9/-2/span 2/auto;
+            grid-area: 10/-2/span 2/auto;
         }
 
         .ascensionDeck .level.lvl4
@@ -1094,7 +1094,7 @@ main.masterGrid
 
     .ascensionCard .ascensionQuest5
     {
-        grid-row: 19/span 4;
+        grid-row: 20/span 4;
         display: none;
     }
     

@@ -811,8 +811,9 @@
                 <textarea name="attr_seniorCovens" class="seniorCovens" />
             </section>
 
-            <!-- Rituals -->
+<!-- Rituals and Ascension -->
             <section class="ritualWidget">
+                            <!-- Rituals -->
                 <div class="hand">
                     <div class="deckHeader">
                         <input type="checkbox" class="collapseDeck" name="attr_collapseRitualDeck" value="1" /><span class="collapseDeck"></span>
@@ -904,20 +905,20 @@
                     <span class="level lvl12">12</span>
                     <span class="level lvl13">13</span>
                     <div class="card customCard ascensionCard">
-                        <h4 class="ritualSigilSize">Ascension</h4>
+                        <h4 class="ritualSigilSize">Arc</h4>
                         <input type="text" class="ritualSigilSize" name="attr_ascensionObjective" readonly />
-                        <h4 class="ascensionQuest">Quests</h4>
+                        <!-- <h4 class="ascensionQuest">Quests</h4> -->
                         <input type="hidden" name="attr_ascensionSigilSize" value="5" class="sigilSize" />
-                        <textarea class="ascensionQuest1" name="attr_ascensionQuest1" />
-                        <textarea class="ascensionQuest2" name="attr_ascensionQuest2" />
-                        <textarea class="ascensionQuest3" name="attr_ascensionQuest3" />
-                        <textarea class="ascensionQuest4" name="attr_ascensionQuest4" />
-                        <textarea class="ascensionQuest5" name="attr_ascensionQuest5" />
+                        <textarea class="ascensionQuest1" name="attr_ascensionQuest1" placeholder="1st Quest Goal and details" ></textarea>
+                        <textarea class="ascensionQuest2" name="attr_ascensionQuest2" placeholder="2nd Quest Goal and details"></textarea>
+                        <textarea class="ascensionQuest3" name="attr_ascensionQuest3" placeholder="3rd Quest Goal and details"></textarea>
+                        <textarea class="ascensionQuest4" name="attr_ascensionQuest4" placeholder="4th Quest Goal and details"></textarea>
+                        <textarea class="ascensionQuest5" name="attr_ascensionQuest5" placeholder="5th Quest Goal and details"></textarea>
 
                         <div class="ritualSigil">
                             <!-- Ascension Sigil -->
                             <input type="hidden" name="attr_ascensionSigilSize" class="sigilSize" />
-                            <!-- Number of segments in Sigil, set by select -->
+                            <!-- Number of segments in Sigil, set by next Rank -->
                             <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ascensionsigilsegment1"
                                 value="0" /> <!-- store the number of clicks on segement -->
                             <button type="action" class="sigilSegment sigilSegment1" name="act_ascensionsigilsegment1"
@@ -2501,34 +2502,75 @@
                     let ascensionObjective = "";
                     let ascensionSigilSize = 1;
 
-                    if (nextLevel >= 13)
+                   
+                    if (nextLevel <= 1)
                     {
-                        ascensionObjective = "Final Ascension";
-                        ascensionSigilSize = 5;
-                    }
-                    else if (nextLevel <= 2)
-                    {
-                        ascensionObjective = "Initiate, level " + nextLevel;
+                        ascensionObjective = "Initiation";
                         ascensionSigilSize = 1;
                     }
-                    else if (nextLevel > 2 && nextLevel <= 4)
+                    else if (nextLevel == 2)
                     {
-                        ascensionObjective = "Apprentice, level " + nextLevel;
+                        ascensionObjective = "Student";
+                        ascensionSigilSize = 1;
+                    }
+                    else if (nextLevel == 3)
+                    {
+                        ascensionObjective = "Duelist";
                         ascensionSigilSize = 2;
                     }
-                    else if (nextLevel < 8 && nextLevel > 4)
+                    else if (nextLevel == 4)
                     {
-                        ascensionObjective = "Keeper, level " + nextLevel;
+                        ascensionObjective = "Apprentice";
+                        ascensionSigilSize = 2;
+                    }
+                    else if (nextLevel == 5)
+                    {
+                        ascensionObjective = "Artificer";
                         ascensionSigilSize = 3;
                     }
-                    else if (nextLevel >= 8 && nextLevel < 11)
+                    else if (nextLevel == 6)
                     {
-                        ascensionObjective = "Graduate, level " + nextLevel;
+                        ascensionObjective = "Warrior";
+                        ascensionSigilSize = 3;
+                    }
+                    else if (nextLevel == 7)
+                    {
+                        ascensionObjective = "Senior";
+                        ascensionSigilSize = 3;
+                    }
+                    else if (nextLevel == 8)
+                    {
+                        ascensionObjective = "Graduation";
                         ascensionSigilSize = 4;
+                    }
+                    else if (nextLevel == 9)
+                    {
+                        ascensionObjective = "Post Grad";
+                        ascensionSigilSize = 4;
+                    }
+                    else if (nextLevel == 10)
+                    {
+                        ascensionObjective = "Mentor";
+                        ascensionSigilSize = 4;
+                    }
+                    else if (nextLevel == 11)
+                    {
+                        ascensionObjective = "Master";
+                        ascensionSigilSize = 5;
+                    }
+                    else if (nextLevel == 12)
+                    {
+                        ascensionObjective = "Immortal";
+                        ascensionSigilSize = 5;
+                    }
+                    else if (nextLevel == 13)
+                    {
+                        ascensionObjective = "Ascendent";
+                        ascensionSigilSize = 5;
                     }
                     else
                     {
-                        ascensionObjective = "Scholar, level " + nextLevel;
+                        ascensionObjective = "Ascended or Destroyed";
                         ascensionSigilSize = 5;
                     }
 
