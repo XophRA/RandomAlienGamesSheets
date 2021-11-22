@@ -1339,8 +1339,8 @@ main.masterGrid
         /* Quest 1 Milestone Locations */
         .ascensionCard .ritualSigil > .quest1Segment1
         {
-            grid-area: 3/3/auto/auto;
-            margin: 0 0 0 0;
+            grid-area: 3/2/auto/auto;
+            margin: 0 0 0 4px;
         }
 
         .ascensionCard .ritualSigil > .quest1Segment2
@@ -1363,8 +1363,8 @@ main.masterGrid
 
         .ascensionCard .ritualSigil > .quest1Segment5
         {
-            grid-area: 7/7/auto/auto;
-            margin: 0 0 0 3px;
+            grid-area: 6/7/auto/auto;
+            margin: 1px 0 0 2px;
         }
 
         /* Quest 2 Milestone Locations */
