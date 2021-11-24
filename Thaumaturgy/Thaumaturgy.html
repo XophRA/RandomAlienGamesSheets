@@ -44,10 +44,10 @@
     <!-- Quests -->
     <datalist id="quests">
         <option>Contest</option>
-        <option>Adversary</option>
         <option>Investigation</option>
-        <option>Ordeal</option>
         <option>Journey</option>
+        <option>Ordeal</option>
+        <option>Struggle</option>
     </datalist>
 
     <!-- Spell Verbs -->
@@ -2544,928 +2544,839 @@
 
 <!-- Scripts -->
 <script type="text/worker">
-    <!-- <script type="text/javascript"> -->
-        /* Global Attributes */
-        var globalAttributes = [];/*Global Array for Storage of Player Caster Level*/
-
-        /* Set Defaults, name, and Player Caster Level to Coven Level */
-        on("sheet:opened change:covenlevel change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns", (event) =>
-        {
-            getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Aftermath", "Backlash", "Complications", "givenName", "academicName", "questName", "pronouns", "character_name"], function (values)
-            {
-                const setObj = {};
-                let selectedSheet = parseInt(values.selectedSheet) || 0;
-                let covenLevel = 0;
-                /* Set Defaults */
-                setObj.EditAscension = 0;
-                setObj.EditFate = 0;
-                setObj.EditDisequilbrium = 0;
-                setObj.editAttunement = 0;
-
-                /* Ensure Fate is set */
-                setObj.Consequences = parseInt(values.Consequences) || 0;
-                setObj.Destiny = parseInt(values.Destiny) || 0;
-                setObj.Obstacle = parseInt(values.Obstacle) || 0;
-
-                /* Ensure Disequilibrium is set */
-                setObj.Aftermath = parseInt(values.Aftermath) || 0;
-                setObj.Backlash = parseInt(values.Backlash) || 0;
-                setObj.Complications = parseInt(values.Complications) || 0;
-
-                /* Set Level elements on Coven Sheet*/
-                if (selectedSheet == 2)
-                {
-                    /*Set Ascension Objective*/
-                    covenLevel = parseInt(values.covenLevel) || 0;
-                    let nextLevel = covenLevel + 1;
-                    let ascensionObjective = "";
-                    let ascensionSigilSize = 1;
-
-                   
-                    if (nextLevel <= 1)
-                    {
-                        ascensionObjective = "Initiation";
-                        ascensionSigilSize = 1;
-                    }
-                    else if (nextLevel == 2)
-                    {
-                        ascensionObjective = "Student";
-                        ascensionSigilSize = 1;
-                    }
-                    else if (nextLevel == 3)
-                    {
-                        ascensionObjective = "Duelist";
-                        ascensionSigilSize = 2;
-                    }
-                    else if (nextLevel == 4)
-                    {
-                        ascensionObjective = "Apprentice";
-                        ascensionSigilSize = 2;
-                    }
-                    else if (nextLevel == 5)
-                    {
-                        ascensionObjective = "Artificer";
-                        ascensionSigilSize = 3;
-                    }
-                    else if (nextLevel == 6)
-                    {
-                        ascensionObjective = "Warrior";
-                        ascensionSigilSize = 3;
-                    }
-                    else if (nextLevel == 7)
-                    {
-                        ascensionObjective = "Senior";
-                        ascensionSigilSize = 3;
-                    }
-                    else if (nextLevel == 8)
-                    {
-                        ascensionObjective = "Graduation";
-                        ascensionSigilSize = 4;
-                    }
-                    else if (nextLevel == 9)
-                    {
-                        ascensionObjective = "Post Grad";
-                        ascensionSigilSize = 4;
-                    }
-                    else if (nextLevel == 10)
-                    {
-                        ascensionObjective = "Mentor";
-                        ascensionSigilSize = 4;
-                    }
-                    else if (nextLevel == 11)
-                    {
-                        ascensionObjective = "Master";
-                        ascensionSigilSize = 5;
-                    }
-                    else if (nextLevel == 12)
-                    {
-                        ascensionObjective = "Immortal";
-                        ascensionSigilSize = 5;
-                    }
-                    else if (nextLevel == 13)
-                    {
-                        ascensionObjective = "Ascendent";
-                        ascensionSigilSize = 5;
-                    }
-                    else
-                    {
-                        ascensionObjective = "Ascended or Destroyed";
-                        ascensionSigilSize = 5;
-                    }
-
-                    setObj.ascensionObjective = ascensionObjective;
-                    setObj.ascensionSigilSize = ascensionSigilSize;
-
-                    /* Globally Store Coven Level from Ascension Widget on Coven Sheet*/
-                    globalAttributes.covenlevel = covenLevel;
-                    console.log(globalAttributes);
-                }
-                /* Set name and Level elements on Player Caster Sheets*/
-                else if (selectedSheet == 1)
-                {
-                    /*Set rank*/
-                    let rank = "";
-                    let curseNumber = 2;
-
-                    if (globalAttributes.covenlevel)
-                    {
-                        covenLevel = parseInt(globalAttributes.covenlevel) || 0;
-                    }
-                    else
-                    {
-                        covenLevel = parseInt(values.covenLevel) || 0;
-                    }
-
-                    if (covenLevel <= 0)
-                    {
-                        rank = "";
-                    }
-                    else if (covenLevel >= 1 && covenLevel <= 2)
-                    {
-                        rank = "Initiate";
-                    }
-                    else if (covenLevel >= 3 && covenLevel <= 4)
-                    {
-                        rank = "Apprentice";
-                    }
-                    else if (covenLevel >= 5 && covenLevel <= 7)
-                    {
-                        rank = "Keeper";
-                        curseNumber = 3;
-                    }
-                    else if (covenLevel >= 8 && covenLevel <= 10)
-                    {
-                        rank = "Graduate";
-                        curseNumber = 4;
-                    }
-                    else
-                    {
-                        rank = "Scholar";
-                        curseNumber = 5;
-                    }
-
-                    setObj.rank = rank;
-                    setObj.curseNumber = curseNumber;
-                    setObj.covenLevel = covenLevel;
-                    setObj.level = covenLevel;
-
-                    /*Set Name*/
-                    name = values.character_name;
-
-                    let nameArray = [];
-
-                    /*if (covenLevel >= 0 && (values.givenName || values.academicName || values.questName))
-                    {
-                        nameArray.push(rank);
-                    }*/
-
-                    if (values.givenName)
-                    {
-                        nameArray.push(values.givenName);
-                    }
-
-                    if (values.academicName)
-                    {
-                        nameArray.push(values.academicName);
-                    }
-
-                    if (values.questName)
-                    {
-                        nameArray.push(values.questName);
-                    }
-
-                    if (values.pronouns && (values.givenName || values.academicName || values.questName))
-                    {
-                        nameArray.push(values.pronouns);
-                    }
-
-                    if (nameArray.length > 0)
-                    {
-                        name = nameArray.join(" ");
-                    }
-
-                    setObj.character_name = name;
-
-                    /*Set Attunement Slots*/
-                    let attuneArtefactSlots = 0;
-                    let attuneFocusSlots = 0;
-
-                    if (covenLevel == 1)
-                    {
-                        attuneArtefactSlots = 1;
-                        attuneFocusSlots = 0;
-                    }
-                    if (covenLevel == 2)
-                    {
-                        attuneArtefactSlots = 1;
-                        attuneFocusSlots = 1;
-                    }
-                    else if (covenLevel == 3)
-                    {
-                        attuneArtefactSlots = 2;
-                        attuneFocusSlots = 1;
-                    }
-                    else if (covenLevel >= 4 && covenLevel < 7)
-                    {
-                        attuneArtefactSlots = 3;
-                        attuneFocusSlots = 1;
-                    }
-                    else if (covenLevel >= 7 && covenLevel < 9)
-                    {
-                        attuneArtefactSlots = 4;
-                        attuneFocusSlots = 1;
-                    }
-                    else if (covenLevel >= 9 && covenLevel < 12)
-                    {
-                        attuneArtefactSlots = 4;
-                        attuneFocusSlots = 2;
-                    }
-                    else if (covenLevel >= 12)
-                    {
-                        attuneArtefactSlots = 5;
-                        attuneFocusSlots = 2;
-                    }
-                    setObj.attuneArtefactSlots = attuneArtefactSlots;
-                    setObj.attuneFocusSlots = attuneFocusSlots;
-                }
-                console.log(setObj);
-                setAttrs(setObj);
-            });
-        });
-
-        /* Roll dice for the Casting and input into the Magic Cicle before returning an Array of all results to rolltemplate */
-        on("clicked:rollcast", (event) =>
-        {
-            getAttrs(["castSpellDice", "castTangleDice"], function (values)
-            {
-                /*Spell dice*/
-                let spellDice = parseInt(values.castSpellDice) || 0;
-
-                /*Tangle dice*/
-                let tangleDice = parseInt(values.castTangleDice) || 0;
-
-                /*Position*/
-                let position = spellDice + tangleDice;
-
-                console.log(spellDice, "vs", tangleDice, "in", position);
-
-                const setObj = {};
-
-                /*Start the Roll*/
-                startRoll(`&{template:Thaumaturgy} {{name=Casting}} {{spellCast=[[${spellDice}d10cf<4cs10]]}} {{tangleCast=[[${tangleDice}d6cf<3cs10]]}}`, (rollResults) =>
-                {
-                    console.log(rollResults);
-
-                    //Let Arrays from the dice roll
-                    let spelld10Results = rollResults.results.spellCast.dice;//Array of d10 spell dice from the startRoll
-                    if (spelld10Results == null) { spelld10Results = [] };//ensure its not a NULL array
-                    console.log(spelld10Results);
-
-                    let tangled6Results = rollResults.results.tangleCast.dice;//Array of d6 tangle dice from the startRoll
-                    if (tangled6Results == null) { tangled6Results = [] };
-                    console.log(tangled6Results);
-
-                    //Create joined results array
-                    let totalDice = spelld10Results.concat(tangled6Results).length;
-
-                    //Generate Array of Random locations
-                    let diePosResults = [];
-                    for (let i = 0; i < 100; i++)//Create a 100 part array
-                    {
-                        let position = i + 1;//fill diePosResults with 100 numbers from 1-100
-                        diePosResults[i] = position;
-                    }
-
-                    let currentIndex = diePosResults.length, temporaryValue, randomIndex;
-
-                    while (0 !== currentIndex) // While there remain elements to shuffle
-                    {
-                        randomIndex = Math.floor(Math.random() * currentIndex); // Pick a remaining element...
-                        currentIndex -= 1;
-
-                        temporaryValue = diePosResults[currentIndex];  // And swap it with the current element.
-                        diePosResults[currentIndex] = diePosResults[randomIndex];
-                        diePosResults[randomIndex] = temporaryValue;
-                    }
-
-                    diePosResults.length = totalDice;//Reduce the diePos Array to the number of dice rolled
-                    console.log(diePosResults);
-
-                    //Number of dice and typo checker
-                    const arcanaPools = [];
-
-                    if (totalDice <= 26 && totalDice > 0)//Check to ensure between 26 and 0 dice inputed
-                    {
-                        //Make Array with both spell dice and tangle dice Array
-                        let circleArray = [spelld10Results, tangled6Results];
-
-                        //Set all circle dice
-                        for (let num = 1; num <= 26; num++)
-                        {
-                            arcanaPools[`poolDieArcana${num}`] = 0;
-                            arcanaPools[`poolDieArcanaPosition${num}`] = 0;
-                            arcanaPools[`poolDieSize${num}`] = 0;
-                            arcanaPools[`poolDieWorth${num}`] = 0;
-                            arcanaPools[`poolDieSide${num}`] = 0;
-                        }
-
-                        diePosResults.length = totalDice;//Reduce the diePosResults Array to the number of dice rolled
-
-                        //Loop through circleArray and assign to poolDie Attrs
-                        let attrNum = 1;
-                        let diePosResultsIndex = 0;
-
-
-                        for (let i = 0; i < circleArray.length; i++)// Circle Array loop
-                        {
-                            for (let k = 0; k < circleArray[i].length; k++)//Dice Input loop
-                            {
-                                let diePosition = diePosResults[diePosResultsIndex];
-
-                                arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePosition;
-                                arcanaPools[`poolDieSize${attrNum}`] = i;
-                                arcanaPools[`poolDieSide${attrNum}`] = circleArray[i][k];
-
-                                //Assign the Die Worth based on Die Value
-                                if (i == 0)
-                                {
-                                    if (circleArray[i][k] == 10)
-                                    {
-                                        arcanaPools[`poolDieWorth${attrNum}`] = 2;
-                                    }
-                                    else if (circleArray[i][k] > 4 && circleArray[i][k] < 10)
-                                    {
-                                        arcanaPools[`poolDieWorth${attrNum}`] = 1;
-                                    }
-                                    else
-                                    {
-                                        arcanaPools[`poolDieWorth${attrNum}`] = 0;
-                                    }
-                                }
-                                else
-                                {
-                                    if (circleArray[i][k] < 4)
-                                    {
-                                        arcanaPools[`poolDieWorth${attrNum}`] = -1;
-                                    }
-                                    else
-                                    {
-                                        arcanaPools[`poolDieWorth${attrNum}`] = 0;
-                                    }
-                                }
-
-                                //Assign the Arcana based on the Die Position
-                                if (diePosition <= 15)
-                                {
-
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 1;
-                                }
-                                else if (diePosition >= 16 && diePosition <= 20)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 2;
-                                }
-                                else if (diePosition >= 21 && diePosition <= 33)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 3;
-                                }
-                                else if (diePosition >= 34 && diePosition <= 48)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 4;
-                                }
-                                else if (diePosition >= 49 && diePosition <= 54)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 5;
-                                }
-                                else if (diePosition >= 55 && diePosition <= 69)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 6;
-                                }
-                                else if (diePosition >= 70 && diePosition <= 74)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 7;
-                                }
-                                else if (diePosition >= 75 && diePosition <= 81)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 8;
-                                }
-                                else if (diePosition >= 82 && diePosition <= 91)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 9;
-                                }
-                                else if (diePosition >= 92 && diePosition <= 94)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 10;
-                                }
-                                else if (diePosition == 95 || diePosition == 96)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 11;
-                                }
-                                else if (diePosition == 97)
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 12;
-                                }
-                                else
-                                {
-                                    arcanaPools[`poolDieArcana${attrNum}`] = 13;
-                                }
-
-                                attrNum++;
-                                diePosResultsIndex++;
-                            }
-                        }
-
-                        //Set all poolDie
-                        for (let num = 1; num <= 26; num++)
-                        {
-                            setObj[`poolDieArcana${num}`] = arcanaPools[`poolDieArcana${num}`];
-                            setObj[`poolDieArcanaPosition${num}`] = arcanaPools[`poolDieArcanaPosition${num}`];
-                            setObj[`poolDieSize${num}`] = arcanaPools[`poolDieSize${num}`];
-                            setObj[`poolDieWorth${num}`] = arcanaPools[`poolDieWorth${num}`];
-                            setObj[`poolDieSide${num}`] = arcanaPools[`poolDieSide${num}`];
-                            setObj[`poolDieMatch${num}`] = 0;
-                        }
-                    }
-
-                    console.log(setObj);
-                    setAttrs(setObj);
-
-                    finishRoll(
-                        rollResults.rollId,
-                        {
-                            spellCast: spellDice, tangleCast: tangleDice,
-                        }
-                    );
-                });
-            })
-        });
-
-        /* Count Dice in Magic Circle and add to Resources and Ripples */
-            on("clicked:calculateresults", (event) =>
-            {
-                let getArray = []; //An Array for all attr to get
-
-                //Get all poolDice
-                for (let num = 1; num <= 26; num++)
-                {
-                    getArray = [...getArray, ...
-                        [`poolDieArcana${num}`, `poolDieMatch${num}`, `poolDieWorth${num}`, `poolDieSide${num}`]];// the ... is a javascript symbol for the spread operator which expands the object or array out into it's discrete parts
-                }
-                //Get all RippleDice
-                for (let num = 1; num <= 13; num++)
-                {
-                    getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
-                }
-                //Get current Fate and risked Aether
-                getArray = [...getArray, ...[`fateResource`, `aetherResource`, `dragClock`]];
-
-                getAttrs(getArray, (attrs) =>
-                {
-                    const setObj = {};
-
-                    //Calculate Results
-                    let results = 0;
-                    for (let num = 1; num <= 26; num++)
-                    {
-                        results += parseInt(attrs[`poolDieWorth${num}`]) || 0;
-                    }
-                    setObj.resultResource = results;
-
-                    //Create all Dice Values Array
-                    let allValue = [];
-                    for (let i = 0; i < 13; i++)
-                    {
-                        allValue[i] = [];
-                        let arcanaNum = i + 1;
-
-                        for (let j = 1; j <= 26; j++)
-                        {
-                            let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
-                            let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
-
-                            if (match != 1 && arcana == arcanaNum)
-                            {
-                                let dieSide = parseInt(attrs[`poolDieSide${j}`]) || 0;
-                                if (dieSide > 0)
-                                {
-                                    allValue[i].push(dieSide);
-                                }
-                            }
-                        }
-                    }
-                    console.log(allValue);
-
-                    /*Add Dice that didn't match to the Ripple Table, total odds to the Fate Resource, & Calculate Aether to be returned to the Player Caster from the total evens*/
-                    let aetherResource = parseInt(attrs[`aetherResource`]) || 0;
-                    let evenDice = 0;
-                    let oddDice = 0;
-                    let dragClock = parseInt(attrs[`dragClock`]) || 0;
-
-                    for (let num = 0; num < allValue.length; num++) /*loop through allValue*/
-                    {
-                        let arcana = num + 1;
-                        let evens = 0;
-                        let odds = 0;
-
-                        let harmony = parseInt(attrs[`ripple${arcana}Harmony`]) || 0;
-                        evens += evenDiceRolled(allValue[num]);
-
-                        evenDice += evens;/*Add to the total evenDice rolled*/
-
-                        /*Set harmony ripple, add greater then 10 to drag clock unless it overfills the clock*/
-                        let rippleHarmony = harmony + evens;
-                        let rippleHarmonyDrag = 0;
-                        if (rippleHarmony >= 10 && dragClock < 7)
-                        {
-                            rippleHarmonyDrag += Math.floor(rippleHarmony / 10);
-                        }
-
-                        let rippleHarmonyDragClock = rippleHarmonyDrag + dragClock;
-
-                        if (rippleHarmonyDragClock <= 7)
-                        {
-                            rippleHarmony -= rippleHarmonyDrag * 10;
-                            dragClock = rippleHarmonyDragClock;
-                        }
-                        else if (rippleHarmonyDragClock > 7)
-                        {
-                            rippleHarmony -= (rippleHarmonyDragClock - 7) * 10;
-                            dragClock = 7;
-                        }
-
-                        setObj[`ripple${arcana}Harmony`] = rippleHarmony;/* Set the harmony ripple*/
-
-
-                        let chaos = parseInt(attrs[`ripple${arcana}Chaos`]) || 0;
-                        odds += oddDiceRolled(allValue[num]);
-
-                        oddDice += odds;/*Add to the total oddDice rolled*/
-
-                        /*Set chaos ripple, add greater then 10 to drag clock unless it overfills the clock*/
-                        let rippleChaos = chaos + odds;
-                        let rippleChaosDrag = 0;
-                        if (rippleChaos >= 10 && dragClock < 7)
-                        {
-                            rippleChaosDrag += Math.floor(rippleChaos / 10);
-                        }
-
-                        let rippleChaosDragClock = rippleChaosDrag + dragClock;
-
-                        if (rippleChaosDragClock <= 7)
-                        {
-                            rippleChaos -= rippleChaosDrag * 10;
-                            dragClock = rippleChaosDragClock;
-                        }
-                        else if (rippleChaosDragClock > 7)
-                        {
-                            rippleChaos -= (rippleChaosDragClock - 7) * 10;
-                            dragClock = 7;
-                        }
-
-                        setObj[`ripple${arcana}Chaos`] = rippleChaos;/* Set the chaos ripple*/
-                    }
-
-                    /*Set fateResource*/
-                    let fateResource = parseInt(attrs[`fateResource`]) || 0;
-                    let fate = 0;
-
-                    if (aetherResource >= oddDice)
-                    {
-                        fate = oddDice;
-                    }
-                    else if (aetherResource < oddDice)
-                    {
-                        fate = aetherResource + 1;
-                    }
-
-                    fateResource += fate;
-
-                    /*Increase Drag for Fate Pool that is greater than 10*/
-                    let fateDrag = 0;
-
-                    if (fateResource >= 10 && dragClock < 7)
-                    {
-                        fateDrag += Math.floor(fateResource / 10);
-                    }
-
-                    let drag = fateDrag + dragClock;
-
-                    if (drag <= 7)
-                    {
-                        fateResource -= fateDrag * 10;
-                        dragClock = drag;
-                    }
-                    else if (drag > 7)
-                    {
-                        fateResource -= (drag - 7) * 10;
-                        dragClock = 7;
-                    }
-                    setObj.fateResource = fateResource;
-
-                    /*Calculate aetherResource*/
-                    let aether = 0;
-
-                    if (aetherResource >= evenDice)
-                    {
-                        aether = evenDice;
-                    }
-                    else if (aetherResource < evenDice)
-                    {
-                        aether = aetherResource + 1;
-                    }
-
-                    console.log("Risked Aether:", aetherResource, "Even Dice:", evenDice, "Returned Aether:", aether, "Odd Dice:", oddDice, "Added Fate:", fate, "Total Fate:", fateResource);
-                    setObj.aetherResource = aether; /*Set aetherResource*/
-                    setObj.dragClock = dragClock; /*Set the dragClock*/
-
-                    /*Number of Evens and Odds Functions*/
-                    function evenDiceRolled(diceArray)
-                    {
-                        return diceArray.filter(function (number)
-                        {
-                            return number % 2 == 0;
-                        }).length;
-                    }
-
-                    function oddDiceRolled(diceArray)
-                    {
-                        return diceArray.filter(function (number)
-                        {
-                            return number % 2 == 1;
-                        }).length;
-                    }
-
-                    console.log(setObj);
-                    setAttrs(setObj);
-                });
-            });
-
-        /* Clear Magic Circle, Results, & Aether */
-        on("clicked:clearcircleresults", (event) =>
-        {
+<!-- <script type="text/javascript"> -->
+    /* Global Attributes */
+    var globalAttributes = [];/*Global Array for Storage of Player Caster Level*/
+
+    /* Set Defaults, name, and Player Caster Level to Coven Level */
+    on("sheet:opened change:covenlevel change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns", (event) => {
+        getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Aftermath", "Backlash", "Complications", "givenName", "academicName", "questName", "pronouns", "character_name"], function (values) {
             const setObj = {};
+            let selectedSheet = parseInt(values.selectedSheet) || 0;
+            let covenLevel = 0;
+            /* Set Defaults */
+            setObj.EditAscension = 0;
+            setObj.EditFate = 0;
+            setObj.EditDisequilbrium = 0;
+            setObj.editAttunement = 0;
 
-            /*Blank Aether Resource*/
-            setObj.aetherResource = 0;
+            /* Ensure Fate is set */
+            setObj.Consequences = parseInt(values.Consequences) || 0;
+            setObj.Destiny = parseInt(values.Destiny) || 0;
+            setObj.Obstacle = parseInt(values.Obstacle) || 0;
 
-            /*Blank Result*/
-            setObj.resultResource = 0;
+            /* Ensure Disequilibrium is set */
+            setObj.Aftermath = parseInt(values.Aftermath) || 0;
+            setObj.Backlash = parseInt(values.Backlash) || 0;
+            setObj.Complications = parseInt(values.Complications) || 0;
 
-            /*Blank Spell Dice*/
-            setObj.castSpellDice = 0;
+            /* Set Level elements on Coven Sheet*/
+            if (selectedSheet == 2) {
+                /*Set Ascension Objective*/
+                covenLevel = parseInt(values.covenLevel) || 0;
+                let nextLevel = covenLevel + 1;
+                let ascensionObjective = "";
+                let ascensionSigilSize = 1;
 
-            /*Blank Tangle Dice*/
-            setObj.castTangleDice = 0;
 
-            /*Blank all circle dice*/
-            for (let num = 1; num <= 26; num++)
-            {
-                setObj[`poolDieArcana${num}`] = 0;
-                setObj[`poolDieArcanaPosition${num}`] = 0;
-                setObj[`poolDieSize${num}`] = 0;
-                setObj[`poolDieWorth${num}`] = 0;
-                setObj[`poolDieSide${num}`] = 0;
-                setObj[`poolDieMatch${num}`] = 0;
-            }
-            //Blank the Dice Inputs
-            for (let num = 1; num <= 13; num++)
-            {
-                setObj[`position${num}d10`] = "";
-                setObj[`position${num}d6`] = "";
-            }
-
-            console.log(setObj);
-            setAttrs(setObj);
-        });
-
-        const clockDetails = [/*An array of the attributes to work with for repeating sections. In this case, the clocks.*/
-            {
-                section: 'repeating_artefactcard',/*the section name*/
-                fields: ['artefactChargeClock']/*Array of attributes to be gotten/worked with*/
-            },
-            {
-                section: 'repeating_duellingfocuscard',
-                fields: ['duellingFocusStressClock']
-            }
-        ];
-
-        const getSections = function (callback, getArray, queue)
-        {/*This function creates a work queue, or burn down, to work through a series of sections and assemble an array of attributes. In my sheets, this is used to get all the repeating attributes via a single getAttrs. For this use case, we're going to just set them directly.*/
-            queue = [...queue];/*When getSections is first invoked, like from the listener at the end, we're passing the reference to our repeating section details (clockDetails in this demo). So, we want to shallow copy it so that working through the queue doesn't modify the original version.*/
-            getArray = getArray || [];/*getArray can be passed as either an array of attributes that should be gotten (e.g. strength,acrobatics, etc; essentially non repeating attributes that you are going to need to work with) or falsy. If it is falsy (null, undefined, 0, NaN, etc) it gets initialized as an empty array.*/
-            let section = queue.shift();/*And finally, get the section we are going to work with for this iteration of the work queue of the top of the queue.*/
-            getSectionIDs(section.section, (idArray) =>
-            {/*get our IDs in an idArray*/
-                idArray.forEach((id) =>
-                {//iterate through the IDs in the idArray
-                    section.fields.forEach((field) =>
-                    {//iterate through the fields required for this section.
-                        getArray.push(`${section.section}_${id}_${field}`);//So, we wind up pushing the full attribute names for each field and ID combination to our getArray.
-                    });
-                });
-                if (_.isEmpty(queue))
-                {//If our queue is empty, move on to the callback function
-                    callback(getArray);
-                } else
-                {//If there's still things in our queue, call getSections again and work through the above code again. This can be repeated any number of times
-                    getSections(callback, getArray, queue);
+                if (nextLevel <= 1) {
+                    ascensionObjective = "Initiate";
+                    ascensionSigilSize = 1;
                 }
-            });
-        };
+                else if (nextLevel == 2) {
+                    ascensionObjective = "Student";
+                    ascensionSigilSize = 1;
+                }
+                else if (nextLevel == 3) {
+                    ascensionObjective = "Duelist";
+                    ascensionSigilSize = 2;
+                }
+                else if (nextLevel == 4) {
+                    ascensionObjective = "Apprentice";
+                    ascensionSigilSize = 2;
+                }
+                else if (nextLevel == 5) {
+                    ascensionObjective = "Artificer";
+                    ascensionSigilSize = 3;
+                }
+                else if (nextLevel == 6) {
+                    ascensionObjective = "Keeper";
+                    ascensionSigilSize = 3;
+                }
+                else if (nextLevel == 7) {
+                    ascensionObjective = "Harbingers";
+                    ascensionSigilSize = 3;
+                }
+                else if (nextLevel == 8) {
+                    ascensionObjective = "Senior";
+                    ascensionSigilSize = 4;
+                }
+                else if (nextLevel == 9) {
+                    ascensionObjective = "Graduate";
+                    ascensionSigilSize = 4;
+                }
+                else if (nextLevel == 10) {
+                    ascensionObjective = "Mentor";
+                    ascensionSigilSize = 4;
+                }
+                else if (nextLevel == 11) {
+                    ascensionObjective = "Master";
+                    ascensionSigilSize = 5;
+                }
+                else if (nextLevel == 12) {
+                    ascensionObjective = "Immortal";
+                    ascensionSigilSize = 5;
+                }
+                else if (nextLevel == 13) {
+                    ascensionObjective = "Ascendent";
+                    ascensionSigilSize = 5;
+                }
+                else {
+                    ascensionObjective = "Ascended or Destroyed";
+                    ascensionSigilSize = 5;
+                }
 
-        //Once all the ids are gotten, and the full getArray is assembled, this function is then invoked and passed the getArray. I'm still calling it getArray here, but we can call it whatever we want in the function definition
-        const resetClocks = function (getArray)
-        {
-            const setObj = {};//initialize our setObj as an empty array
-            getArray.forEach((attr) => setObj[attr] = 0);//iterate through the repeating attribute names stored in the getArray, and set each of them to 0 in the setObj.
+                setObj.ascensionObjective = ascensionObjective;
+                setObj.ascensionSigilSize = ascensionSigilSize;
 
-            //Charge Component Pounch
-            setObj.spellComponetClock = 0;
+                /* Globally Store Coven Level from Ascension Widget on Coven Sheet*/
+                globalAttributes.covenlevel = covenLevel;
+                console.log(globalAttributes);
+            }
+            /* Set name and Level elements on Player Caster Sheets*/
+            else if (selectedSheet == 1) {
+                /*Set rank*/
+                let rank = "";
+                let curseNumber = 2;
 
-            setAttrs(setObj);//set all the attributes.
-        };
+                if (globalAttributes.covenlevel) {
+                    covenLevel = parseInt(globalAttributes.covenlevel) || 0;
+                }
+                else {
+                    covenLevel = parseInt(values.covenLevel) || 0;
+                }
 
-        /* Charge all Grimoire Clocks */
-        on("clicked:chargeclocks", (event) =>
-        {
-            getSections(resetClocks, [], clockDetails);//Call getSections. We pass it a callback function which will be called once the work queue is completed, a getArray initial value (an empty array in this case), and the details for the sections that we want to work with.
-        });
-
-        /* Wrap Around for Sort Curse*/
-        on("clicked:sortcurses", (event) =>
-        {
-            getAttrs(["curseFocus", "curseNumber", "selectedSheet"], function (values)
-            {
-                const setObj = {};
-                //Curse on top
-                let curseFocus = parseInt(values.curseFocus) || 0;
-
-                //Number of Curses
-                let curseNumber = parseInt(values.curseNumber) || 0;
-
-                //Coven Sheet is always 5 curses
-                let selectedSheet = parseInt(values.selectedSheet) || 0;
-                if (selectedSheet == 2)
-                {
+                if (covenLevel <= 0) {
+                    rank = "";
+                }
+                else if (covenLevel >= 1 && covenLevel <= 2) {
+                    rank = "Initiate";
+                }
+                else if (covenLevel >= 3 && covenLevel <= 4) {
+                    rank = "Apprentice";
+                }
+                else if (covenLevel >= 5 && covenLevel <= 7) {
+                    rank = "Keeper";
+                    curseNumber = 3;
+                }
+                else if (covenLevel >= 8 && covenLevel <= 10) {
+                    rank = "Graduate";
+                    curseNumber = 4;
+                }
+                else {
+                    rank = "Scholar";
                     curseNumber = 5;
                 }
 
-                curseFocus++;
+                setObj.rank = rank;
+                setObj.curseNumber = curseNumber;
+                setObj.covenLevel = covenLevel;
+                setObj.level = covenLevel;
 
-                if (curseFocus > curseNumber)
+                /*Set Name*/
+                name = values.character_name;
+
+                let nameArray = [];
+
+                /*if (covenLevel >= 0 && (values.givenName || values.academicName || values.questName))
                 {
-                    setObj.curseFocus = 1;
+                    nameArray.push(rank);
+                }*/
+
+                if (values.givenName) {
+                    nameArray.push(values.givenName);
                 }
-                else
+
+                if (values.academicName) {
+                    nameArray.push(values.academicName);
+                }
+
+                if (values.questName) {
+                    nameArray.push(values.questName);
+                }
+
+                if (values.pronouns && (values.givenName || values.academicName || values.questName)) {
+                    nameArray.push(values.pronouns);
+                }
+
+                if (nameArray.length > 0) {
+                    name = nameArray.join(" ");
+                }
+
+                setObj.character_name = name;
+
+                /*Set Attunement Slots*/
+                let attuneArtefactSlots = 0;
+                let attuneFocusSlots = 0;
+
+                if (covenLevel == 1) {
+                    attuneArtefactSlots = 1;
+                    attuneFocusSlots = 0;
+                }
+                if (covenLevel == 2) {
+                    attuneArtefactSlots = 1;
+                    attuneFocusSlots = 1;
+                }
+                else if (covenLevel == 3) {
+                    attuneArtefactSlots = 2;
+                    attuneFocusSlots = 1;
+                }
+                else if (covenLevel >= 4 && covenLevel < 7) {
+                    attuneArtefactSlots = 3;
+                    attuneFocusSlots = 1;
+                }
+                else if (covenLevel >= 7 && covenLevel < 9) {
+                    attuneArtefactSlots = 4;
+                    attuneFocusSlots = 1;
+                }
+                else if (covenLevel >= 9 && covenLevel < 12) {
+                    attuneArtefactSlots = 4;
+                    attuneFocusSlots = 2;
+                }
+                else if (covenLevel >= 12) {
+                    attuneArtefactSlots = 5;
+                    attuneFocusSlots = 2;
+                }
+                setObj.attuneArtefactSlots = attuneArtefactSlots;
+                setObj.attuneFocusSlots = attuneFocusSlots;
+            }
+            console.log(setObj);
+            setAttrs(setObj);
+        });
+    });
+
+    /* Roll dice for the Casting and input into the Magic Cicle before returning an Array of all results to rolltemplate */
+    on("clicked:rollcast", (event) => {
+        getAttrs(["castSpellDice", "castTangleDice"], function (values) {
+            /*Spell dice*/
+            let spellDice = parseInt(values.castSpellDice) || 0;
+
+            /*Tangle dice*/
+            let tangleDice = parseInt(values.castTangleDice) || 0;
+
+            /*Position*/
+            let position = spellDice + tangleDice;
+
+            console.log(spellDice, "vs", tangleDice, "in", position);
+
+            const setObj = {};
+
+            /*Start the Roll*/
+            startRoll(`&{template:Thaumaturgy} {{name=Casting}} {{spellCast=[[${spellDice}d10cf<4cs10]]}} {{tangleCast=[[${tangleDice}d6cf<3cs10]]}}`, (rollResults) => {
+                console.log(rollResults);
+
+                //Let Arrays from the dice roll
+                let spelld10Results = rollResults.results.spellCast.dice;//Array of d10 spell dice from the startRoll
+                if (spelld10Results == null) { spelld10Results = [] };//ensure its not a NULL array
+                console.log(spelld10Results);
+
+                let tangled6Results = rollResults.results.tangleCast.dice;//Array of d6 tangle dice from the startRoll
+                if (tangled6Results == null) { tangled6Results = [] };
+                console.log(tangled6Results);
+
+                //Create joined results array
+                let totalDice = spelld10Results.concat(tangled6Results).length;
+
+                //Generate Array of Random locations
+                let diePosResults = [];
+                for (let i = 0; i < 100; i++)//Create a 100 part array
                 {
-                    setObj.curseFocus = curseFocus;
+                    let position = i + 1;//fill diePosResults with 100 numbers from 1-100
+                    diePosResults[i] = position;
                 }
+
+                let currentIndex = diePosResults.length, temporaryValue, randomIndex;
+
+                while (0 !== currentIndex) // While there remain elements to shuffle
+                {
+                    randomIndex = Math.floor(Math.random() * currentIndex); // Pick a remaining element...
+                    currentIndex -= 1;
+
+                    temporaryValue = diePosResults[currentIndex];  // And swap it with the current element.
+                    diePosResults[currentIndex] = diePosResults[randomIndex];
+                    diePosResults[randomIndex] = temporaryValue;
+                }
+
+                diePosResults.length = totalDice;//Reduce the diePos Array to the number of dice rolled
+                console.log(diePosResults);
+
+                //Number of dice and typo checker
+                const arcanaPools = [];
+
+                if (totalDice <= 26 && totalDice > 0)//Check to ensure between 26 and 0 dice inputed
+                {
+                    //Make Array with both spell dice and tangle dice Array
+                    let circleArray = [spelld10Results, tangled6Results];
+
+                    //Set all circle dice
+                    for (let num = 1; num <= 26; num++) {
+                        arcanaPools[`poolDieArcana${num}`] = 0;
+                        arcanaPools[`poolDieArcanaPosition${num}`] = 0;
+                        arcanaPools[`poolDieSize${num}`] = 0;
+                        arcanaPools[`poolDieWorth${num}`] = 0;
+                        arcanaPools[`poolDieSide${num}`] = 0;
+                    }
+
+                    diePosResults.length = totalDice;//Reduce the diePosResults Array to the number of dice rolled
+
+                    //Loop through circleArray and assign to poolDie Attrs
+                    let attrNum = 1;
+                    let diePosResultsIndex = 0;
+
+
+                    for (let i = 0; i < circleArray.length; i++)// Circle Array loop
+                    {
+                        for (let k = 0; k < circleArray[i].length; k++)//Dice Input loop
+                        {
+                            let diePosition = diePosResults[diePosResultsIndex];
+
+                            arcanaPools[`poolDieArcanaPosition${attrNum}`] = diePosition;
+                            arcanaPools[`poolDieSize${attrNum}`] = i;
+                            arcanaPools[`poolDieSide${attrNum}`] = circleArray[i][k];
+
+                            //Assign the Die Worth based on Die Value
+                            if (i == 0) {
+                                if (circleArray[i][k] == 10) {
+                                    arcanaPools[`poolDieWorth${attrNum}`] = 2;
+                                }
+                                else if (circleArray[i][k] > 4 && circleArray[i][k] < 10) {
+                                    arcanaPools[`poolDieWorth${attrNum}`] = 1;
+                                }
+                                else {
+                                    arcanaPools[`poolDieWorth${attrNum}`] = 0;
+                                }
+                            }
+                            else {
+                                if (circleArray[i][k] < 4) {
+                                    arcanaPools[`poolDieWorth${attrNum}`] = -1;
+                                }
+                                else {
+                                    arcanaPools[`poolDieWorth${attrNum}`] = 0;
+                                }
+                            }
+
+                            //Assign the Arcana based on the Die Position
+                            if (diePosition <= 15) {
+
+                                arcanaPools[`poolDieArcana${attrNum}`] = 1;
+                            }
+                            else if (diePosition >= 16 && diePosition <= 20) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 2;
+                            }
+                            else if (diePosition >= 21 && diePosition <= 33) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 3;
+                            }
+                            else if (diePosition >= 34 && diePosition <= 48) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 4;
+                            }
+                            else if (diePosition >= 49 && diePosition <= 54) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 5;
+                            }
+                            else if (diePosition >= 55 && diePosition <= 69) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 6;
+                            }
+                            else if (diePosition >= 70 && diePosition <= 74) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 7;
+                            }
+                            else if (diePosition >= 75 && diePosition <= 81) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 8;
+                            }
+                            else if (diePosition >= 82 && diePosition <= 91) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 9;
+                            }
+                            else if (diePosition >= 92 && diePosition <= 94) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 10;
+                            }
+                            else if (diePosition == 95 || diePosition == 96) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 11;
+                            }
+                            else if (diePosition == 97) {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 12;
+                            }
+                            else {
+                                arcanaPools[`poolDieArcana${attrNum}`] = 13;
+                            }
+
+                            attrNum++;
+                            diePosResultsIndex++;
+                        }
+                    }
+
+                    //Set all poolDie
+                    for (let num = 1; num <= 26; num++) {
+                        setObj[`poolDieArcana${num}`] = arcanaPools[`poolDieArcana${num}`];
+                        setObj[`poolDieArcanaPosition${num}`] = arcanaPools[`poolDieArcanaPosition${num}`];
+                        setObj[`poolDieSize${num}`] = arcanaPools[`poolDieSize${num}`];
+                        setObj[`poolDieWorth${num}`] = arcanaPools[`poolDieWorth${num}`];
+                        setObj[`poolDieSide${num}`] = arcanaPools[`poolDieSide${num}`];
+                        setObj[`poolDieMatch${num}`] = 0;
+                    }
+                }
+
                 console.log(setObj);
                 setAttrs(setObj);
-            })
-        });
 
-        /*  Button list for Curse Cures */
-        const cures = ['1', '2', '3', '4', '5'].forEach((num) =>
-        {
-            on(`clicked:clearCurse${num}`, () => { cureCurseClick(num) });
-        });
+                finishRoll(
+                    rollResults.rollId,
+                    {
+                        spellCast: spellDice, tangleCast: tangleDice,
+                    }
+                );
+            });
+        })
+    });
 
-        /*Clear Curse Cards*/
-        const cureCurseClick = function (num)
-        {
-            /* Create Array for Curse Card Attrs */
-            let curseAttr = [];
+    /* Count Dice in Magic Circle and add to Resources and Ripples */
+    on("clicked:calculateresults", (event) => {
+        let getArray = []; //An Array for all attr to get
 
-            /* Set each Curse Card Attr to Clear */
-            curseAttr[`curseName${num}`] = "";
-            curseAttr[`curseSeverity${num}`] = "";
-            curseAttr[`statusEffect${num}`] = "";
-            curseAttr[`curseRestoration${num}`] = "";
-            curseAttr[`curseRestorationSynergy${num}`] = "";
-            curseAttr[`restorationComponents${num}`] = "";
+        //Get all poolDice
+        for (let num = 1; num <= 26; num++) {
+            getArray = [...getArray, ...
+                [`poolDieArcana${num}`, `poolDieMatch${num}`, `poolDieWorth${num}`, `poolDieSide${num}`]];// the ... is a javascript symbol for the spread operator which expands the object or array out into it's discrete parts
+        }
+        //Get all RippleDice
+        for (let num = 1; num <= 13; num++) {
+            getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
+        }
+        //Get current Fate and risked Aether
+        getArray = [...getArray, ...[`fateResource`, `aetherResource`, `dragClock`]];
 
-            console.log(curseAttr);
-            setAttrs(curseAttr);
-
-        };
-
-
-        /* Clear Ascension Card */
-        on("clicked:ascensionclear", (event) =>
-        {
+        getAttrs(getArray, (attrs) => {
             const setObj = {};
-            /* Set the sigil Segments to 0 */
-            setObj.ascensionsigilsegment1 = 0;
-            setObj.ascensionsigilsegment2 = 0;
-            setObj.ascensionsigilsegment3 = 0;
-            setObj.ascensionsigilsegment4 = 0;
-            setObj.ascensionsigilsegment5 = 0;
 
-            /* Clear the rest of the Card */
-            setObj.ascensionQuest1 = "";
-            setObj.ascensionQuest2 = "";
-            setObj.ascensionQuest3 = "";
-            setObj.ascensionQuest4 = "";
-            setObj.ascensionQuest5 = "";
+            //Calculate Results
+            let results = 0;
+            for (let num = 1; num <= 26; num++) {
+                results += parseInt(attrs[`poolDieWorth${num}`]) || 0;
+            }
+            setObj.resultResource = results;
+
+            //Create all Dice Values Array
+            let allValue = [];
+            for (let i = 0; i < 13; i++) {
+                allValue[i] = [];
+                let arcanaNum = i + 1;
+
+                for (let j = 1; j <= 26; j++) {
+                    let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
+                    let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
+
+                    if (match != 1 && arcana == arcanaNum) {
+                        let dieSide = parseInt(attrs[`poolDieSide${j}`]) || 0;
+                        if (dieSide > 0) {
+                            allValue[i].push(dieSide);
+                        }
+                    }
+                }
+            }
+            console.log(allValue);
+
+            /*Add Dice that didn't match to the Ripple Table, total odds to the Fate Resource, & Calculate Aether to be returned to the Player Caster from the total evens*/
+            let aetherResource = parseInt(attrs[`aetherResource`]) || 0;
+            let evenDice = 0;
+            let oddDice = 0;
+            let dragClock = parseInt(attrs[`dragClock`]) || 0;
+
+            for (let num = 0; num < allValue.length; num++) /*loop through allValue*/ {
+                let arcana = num + 1;
+                let evens = 0;
+                let odds = 0;
+
+                let harmony = parseInt(attrs[`ripple${arcana}Harmony`]) || 0;
+                evens += evenDiceRolled(allValue[num]);
+
+                evenDice += evens;/*Add to the total evenDice rolled*/
+
+                /*Set harmony ripple, add greater then 10 to drag clock unless it overfills the clock*/
+                let rippleHarmony = harmony + evens;
+                let rippleHarmonyDrag = 0;
+                if (rippleHarmony >= 10 && dragClock < 7) {
+                    rippleHarmonyDrag += Math.floor(rippleHarmony / 10);
+                }
+
+                let rippleHarmonyDragClock = rippleHarmonyDrag + dragClock;
+
+                if (rippleHarmonyDragClock <= 7) {
+                    rippleHarmony -= rippleHarmonyDrag * 10;
+                    dragClock = rippleHarmonyDragClock;
+                }
+                else if (rippleHarmonyDragClock > 7) {
+                    rippleHarmony -= (rippleHarmonyDragClock - 7) * 10;
+                    dragClock = 7;
+                }
+
+                setObj[`ripple${arcana}Harmony`] = rippleHarmony;/* Set the harmony ripple*/
+
+
+                let chaos = parseInt(attrs[`ripple${arcana}Chaos`]) || 0;
+                odds += oddDiceRolled(allValue[num]);
+
+                oddDice += odds;/*Add to the total oddDice rolled*/
+
+                /*Set chaos ripple, add greater then 10 to drag clock unless it overfills the clock*/
+                let rippleChaos = chaos + odds;
+                let rippleChaosDrag = 0;
+                if (rippleChaos >= 10 && dragClock < 7) {
+                    rippleChaosDrag += Math.floor(rippleChaos / 10);
+                }
+
+                let rippleChaosDragClock = rippleChaosDrag + dragClock;
+
+                if (rippleChaosDragClock <= 7) {
+                    rippleChaos -= rippleChaosDrag * 10;
+                    dragClock = rippleChaosDragClock;
+                }
+                else if (rippleChaosDragClock > 7) {
+                    rippleChaos -= (rippleChaosDragClock - 7) * 10;
+                    dragClock = 7;
+                }
+
+                setObj[`ripple${arcana}Chaos`] = rippleChaos;/* Set the chaos ripple*/
+            }
+
+            /*Set fateResource*/
+            let fateResource = parseInt(attrs[`fateResource`]) || 0;
+            let fate = 0;
+
+            if (aetherResource >= oddDice) {
+                fate = oddDice;
+            }
+            else if (aetherResource < oddDice) {
+                fate = aetherResource + 1;
+            }
+
+            fateResource += fate;
+
+            /*Increase Drag for Fate Pool that is greater than 10*/
+            let fateDrag = 0;
+
+            if (fateResource >= 10 && dragClock < 7) {
+                fateDrag += Math.floor(fateResource / 10);
+            }
+
+            let drag = fateDrag + dragClock;
+
+            if (drag <= 7) {
+                fateResource -= fateDrag * 10;
+                dragClock = drag;
+            }
+            else if (drag > 7) {
+                fateResource -= (drag - 7) * 10;
+                dragClock = 7;
+            }
+            setObj.fateResource = fateResource;
+
+            /*Calculate aetherResource*/
+            let aether = 0;
+
+            if (aetherResource >= evenDice) {
+                aether = evenDice;
+            }
+            else if (aetherResource < evenDice) {
+                aether = aetherResource + 1;
+            }
+
+            console.log("Risked Aether:", aetherResource, "Even Dice:", evenDice, "Returned Aether:", aether, "Odd Dice:", oddDice, "Added Fate:", fate, "Total Fate:", fateResource);
+            setObj.aetherResource = aether; /*Set aetherResource*/
+            setObj.dragClock = dragClock; /*Set the dragClock*/
+
+            /*Number of Evens and Odds Functions*/
+            function evenDiceRolled(diceArray) {
+                return diceArray.filter(function (number) {
+                    return number % 2 == 0;
+                }).length;
+            }
+
+            function oddDiceRolled(diceArray) {
+                return diceArray.filter(function (number) {
+                    return number % 2 == 1;
+                }).length;
+            }
 
             console.log(setObj);
             setAttrs(setObj);
+        });
+    });
 
+    /* Clear Magic Circle, Results, & Aether */
+    on("clicked:clearcircleresults", (event) => {
+        const setObj = {};
+
+        /*Blank Aether Resource*/
+        setObj.aetherResource = 0;
+
+        /*Blank Result*/
+        setObj.resultResource = 0;
+
+        /*Blank Spell Dice*/
+        setObj.castSpellDice = 0;
+
+        /*Blank Tangle Dice*/
+        setObj.castTangleDice = 0;
+
+        /*Blank all circle dice*/
+        for (let num = 1; num <= 26; num++) {
+            setObj[`poolDieArcana${num}`] = 0;
+            setObj[`poolDieArcanaPosition${num}`] = 0;
+            setObj[`poolDieSize${num}`] = 0;
+            setObj[`poolDieWorth${num}`] = 0;
+            setObj[`poolDieSide${num}`] = 0;
+            setObj[`poolDieMatch${num}`] = 0;
+        }
+        //Blank the Dice Inputs
+        for (let num = 1; num <= 13; num++) {
+            setObj[`position${num}d10`] = "";
+            setObj[`position${num}d6`] = "";
+        }
+
+        console.log(setObj);
+        setAttrs(setObj);
+    });
+
+    const clockDetails = [/*An array of the attributes to work with for repeating sections. In this case, the clocks.*/
+        {
+            section: 'repeating_artefactcard',/*the section name*/
+            fields: ['artefactChargeClock']/*Array of attributes to be gotten/worked with*/
+        },
+        {
+            section: 'repeating_duellingfocuscard',
+            fields: ['duellingFocusStressClock']
+        }
+    ];
+
+    const getSections = function (callback, getArray, queue) {/*This function creates a work queue, or burn down, to work through a series of sections and assemble an array of attributes. In my sheets, this is used to get all the repeating attributes via a single getAttrs. For this use case, we're going to just set them directly.*/
+        queue = [...queue];/*When getSections is first invoked, like from the listener at the end, we're passing the reference to our repeating section details (clockDetails in this demo). So, we want to shallow copy it so that working through the queue doesn't modify the original version.*/
+        getArray = getArray || [];/*getArray can be passed as either an array of attributes that should be gotten (e.g. strength,acrobatics, etc; essentially non repeating attributes that you are going to need to work with) or falsy. If it is falsy (null, undefined, 0, NaN, etc) it gets initialized as an empty array.*/
+        let section = queue.shift();/*And finally, get the section we are going to work with for this iteration of the work queue of the top of the queue.*/
+        getSectionIDs(section.section, (idArray) => {/*get our IDs in an idArray*/
+            idArray.forEach((id) => {//iterate through the IDs in the idArray
+                section.fields.forEach((field) => {//iterate through the fields required for this section.
+                    getArray.push(`${section.section}_${id}_${field}`);//So, we wind up pushing the full attribute names for each field and ID combination to our getArray.
+                });
+            });
+            if (_.isEmpty(queue)) {//If our queue is empty, move on to the callback function
+                callback(getArray);
+            } else {//If there's still things in our queue, call getSections again and work through the above code again. This can be repeated any number of times
+                getSections(callback, getArray, queue);
+            }
+        });
+    };
+
+    //Once all the ids are gotten, and the full getArray is assembled, this function is then invoked and passed the getArray. I'm still calling it getArray here, but we can call it whatever we want in the function definition
+    const resetClocks = function (getArray) {
+        const setObj = {};//initialize our setObj as an empty array
+        getArray.forEach((attr) => setObj[attr] = 0);//iterate through the repeating attribute names stored in the getArray, and set each of them to 0 in the setObj.
+
+        //Charge Component Pounch
+        setObj.spellComponetClock = 0;
+
+        setAttrs(setObj);//set all the attributes.
+    };
+
+    /* Charge all Grimoire Clocks */
+    on("clicked:chargeclocks", (event) => {
+        getSections(resetClocks, [], clockDetails);//Call getSections. We pass it a callback function which will be called once the work queue is completed, a getArray initial value (an empty array in this case), and the details for the sections that we want to work with.
+    });
+
+    /* Wrap Around for Sort Curse*/
+    on("clicked:sortcurses", (event) => {
+        getAttrs(["curseFocus", "curseNumber", "selectedSheet"], function (values) {
+            const setObj = {};
+            //Curse on top
+            let curseFocus = parseInt(values.curseFocus) || 0;
+
+            //Number of Curses
+            let curseNumber = parseInt(values.curseNumber) || 0;
+
+            //Coven Sheet is always 5 curses
+            let selectedSheet = parseInt(values.selectedSheet) || 0;
+            if (selectedSheet == 2) {
+                curseNumber = 5;
+            }
+
+            curseFocus++;
+
+            if (curseFocus > curseNumber) {
+                setObj.curseFocus = 1;
+            }
+            else {
+                setObj.curseFocus = curseFocus;
+            }
+            console.log(setObj);
+            setAttrs(setObj);
+        })
+    });
+
+    /*  Button list for Curse Cures */
+    const cures = ['1', '2', '3', '4', '5'].forEach((num) => {
+        on(`clicked:clearCurse${num}`, () => { cureCurseClick(num) });
+    });
+
+    /*Clear Curse Cards*/
+    const cureCurseClick = function (num) {
+        /* Create Array for Curse Card Attrs */
+        let curseAttr = [];
+
+        /* Set each Curse Card Attr to Clear */
+        curseAttr[`curseName${num}`] = "";
+        curseAttr[`curseSeverity${num}`] = "";
+        curseAttr[`statusEffect${num}`] = "";
+        curseAttr[`curseRestoration${num}`] = "";
+        curseAttr[`curseRestorationSynergy${num}`] = "";
+        curseAttr[`restorationComponents${num}`] = "";
+
+        console.log(curseAttr);
+        setAttrs(curseAttr);
+    };
+
+
+    /* Clear Ascension Card */
+    on("clicked:ascensionclear", (event) => {
+        const setObj = {};
+        /* Set the sigil Segments to 0 */
+        setObj.ascensionsigilsegment1 = 0;
+        setObj.ascensionsigilsegment2 = 0;
+        setObj.ascensionsigilsegment3 = 0;
+        setObj.ascensionsigilsegment4 = 0;
+        setObj.ascensionsigilsegment5 = 0;
+
+        /* Clear the rest of the Card */
+        setObj.ascensionQuest1 = "";
+        setObj.ascensionQuest2 = "";
+        setObj.ascensionQuest3 = "";
+        setObj.ascensionQuest4 = "";
+        setObj.ascensionQuest5 = "";
+
+        /* Clear the Quest Milestones */
+        setObj.quest1sigilsegment1 = 0;
+        setObj.quest1sigilsegment2 = 0;
+        setObj.quest1sigilsegment3 = 0;
+        setObj.quest1sigilsegment4 = 0;
+        setObj.quest1sigilsegment5 = 0;
+        setObj.quest2sigilsegment1 = 0;
+        setObj.quest2sigilsegment2 = 0;
+        setObj.quest2sigilsegment3 = 0;
+        setObj.quest2sigilsegment4 = 0;
+        setObj.quest2sigilsegment5 = 0;
+        setObj.quest3sigilsegment1 = 0;
+        setObj.quest3sigilsegment2 = 0;
+        setObj.quest3sigilsegment3 = 0;
+        setObj.quest3sigilsegment4 = 0;
+        setObj.quest3sigilsegment5 = 0;
+        setObj.quest4sigilsegment1 = 0;
+        setObj.quest4sigilsegment2 = 0;
+        setObj.quest4sigilsegment3 = 0;
+        setObj.quest4sigilsegment4 = 0;
+        setObj.quest4sigilsegment5 = 0;
+        setObj.quest5sigilsegment1 = 0;
+        setObj.quest5sigilsegment2 = 0;
+        setObj.quest5sigilsegment3 = 0;
+        setObj.quest5sigilsegment4 = 0;
+        setObj.quest5sigilsegment5 = 0;
+
+        console.log(setObj);
+        setAttrs(setObj);
+    });
+
+    /* Button list for the Ascension & Ritual Sigil Segments */
+    const buttons = ['ascensionsigilsegment1', 'ascensionsigilsegment2', 'ascensionsigilsegment3', 'ascensionsigilsegment4', 'ascensionsigilsegment5',
+        'quest1sigilsegment1', 'quest1sigilsegment2', 'quest1sigilsegment3', 'quest1sigilsegment4', 'quest1sigilsegment5',
+        'quest2sigilsegment1', 'quest2sigilsegment2', 'quest2sigilsegment3', 'quest2sigilsegment4', 'quest2sigilsegment5',
+        'quest3sigilsegment1', 'quest3sigilsegment2', 'quest3sigilsegment3', 'quest3sigilsegment4', 'quest3sigilsegment5',
+        'quest4sigilsegment1', 'quest4sigilsegment2', 'quest4sigilsegment3', 'quest4sigilsegment4', 'quest4sigilsegment5',
+        'quest5sigilsegment1', 'quest5sigilsegment2', 'quest5sigilsegment3', 'quest5sigilsegment4', 'quest5sigilsegment5',
+        'repeating_ritualcard:ritualsigilsegment1', 'repeating_ritualcard:ritualsigilsegment2', 'repeating_ritualcard:ritualsigilsegment3', 'repeating_ritualcard:ritualsigilsegment4', 'repeating_ritualcard:ritualsigilsegment5', 'repeating_ritualcard:ritualsigilsegment6',
+        'repeating_questCard:questsigilsegment1', 'repeating_questCard:questsigilsegment2', 'repeating_questCard:questsigilsegment3', 'repeating_questCard:questsigilsegment4',
+        'repeating_questCard:questsigilsegment5', 'repeating_questCard:questsigilsegment6', 'repeating_questCard:questsigilsegment7', 'repeating_questCard:questsigilsegment8',
+        'repeating_questCard:questsigilsegment9', 'repeating_questCard:questsigilsegment10', 'repeating_questCard:questsigilsegment11'].forEach((string) => {
+            on(`clicked:${string}`, () => { sigilSegmentClick(string) });
         });
 
-        /* Button list for the Ascension & Ritual Sigil Segments */
-            const buttons = ['ascensionsigilsegment1', 'ascensionsigilsegment2', 'ascensionsigilsegment3', 'ascensionsigilsegment4', 'ascensionsigilsegment5',
-                'quest1sigilsegment1', 'quest1sigilsegment2', 'quest1sigilsegment3', 'quest1sigilsegment4', 'quest1sigilsegment5',
-                'quest2sigilsegment1', 'quest2sigilsegment2', 'quest2sigilsegment3', 'quest2sigilsegment4', 'quest2sigilsegment5',
-                'quest3sigilsegment1', 'quest3sigilsegment2', 'quest3sigilsegment3', 'quest3sigilsegment4', 'quest3sigilsegment5',
-                'quest4sigilsegment1', 'quest4sigilsegment2', 'quest4sigilsegment3', 'quest4sigilsegment4', 'quest4sigilsegment5',
-                'quest5sigilsegment1', 'quest5sigilsegment2', 'quest5sigilsegment3', 'quest5sigilsegment4', 'quest5sigilsegment5',
-                'repeating_ritualcard:ritualsigilsegment1', 'repeating_ritualcard:ritualsigilsegment2', 'repeating_ritualcard:ritualsigilsegment3', 'repeating_ritualcard:ritualsigilsegment4', 'repeating_ritualcard:ritualsigilsegment5', 'repeating_ritualcard:ritualsigilsegment6',
-                'repeating_questCard:questsigilsegment1', 'repeating_questCard:questsigilsegment2', 'repeating_questCard:questsigilsegment3', 'repeating_questCard:questsigilsegment4',
-                'repeating_questCard:questsigilsegment5', 'repeating_questCard:questsigilsegment6', 'repeating_questCard:questsigilsegment7', 'repeating_questCard:questsigilsegment8',
-                'repeating_questCard:questsigilsegment9', 'repeating_questCard:questsigilsegment10', 'repeating_questCard:questsigilsegment11'].forEach((string) =>
-                {
-                    on(`clicked:${string}`, () => { sigilSegmentClick(string) });
-                });
+    /* Advance Attribute One-step then Wrap Around */
+    const sigilSegmentClick = function (attr) {
+        attr = attr.replace(':', '_');
+        console.log(attr)
 
-        /* Advance Attribute One-step then Wrap Around */
-        const sigilSegmentClick = function (attr)
-        {
-            attr = attr.replace(':', '_');
-            console.log(attr)
+        const updateAttrs = {}; // create a hash
+        getAttrs([attr], (values) => {
+            var segmentState = parseInt(values[attr]) || 0;
+            segmentState++;
+            if (segmentState > 3) {
+                segmentState = 0;
+            }
 
-            const updateAttrs = {}; // create a hash
-            getAttrs([attr], (values) =>
-            {
-                var segmentState = parseInt(values[attr]) || 0;
-                segmentState++;
-                if (segmentState > 3)
-                {
-                    segmentState = 0;
-                }
+            updateAttrs[attr] = segmentState; // add new key-value-pair in the hash for the attribute to update: in this case, the attr that was changed.
 
-                updateAttrs[attr] = segmentState; // add new key-value-pair in the hash for the attribute to update: in this case, the attr that was changed.
+            setAttrs(updateAttrs);// set all attributes to their value from the hash
+        })
+    };
 
-                setAttrs(updateAttrs);// set all attributes to their value from the hash
-            })
-        };
+    /* Reset the Duel */
+    on("clicked:resetduel", (event) => {
+        const setObj = {};
 
-        /* Reset the Duel */
-            on("clicked:resetduel", (event) =>
-            {
-                const setObj = {};
+        /* Set Turns to 0 */
+        setObj.playerTurn = 0;
+        setObj.opponentTurn = 0;
 
-                /* Set Turns to 0 */
-                setObj.playerTurn = 0;
-                setObj.opponentTurn = 0;
+        /* Set the Exchange Flip to 0 */
+        setObj.exchange1 = 0;
+        setObj.exchange2 = 0;
+        setObj.exchange3 = 0;
+        setObj.exchange4 = 0;
+        setObj.exchange5 = 0;
 
-                /* Set the Exchange Flip to 0 */
-                setObj.exchange1 = 0;
-                setObj.exchange2 = 0;
-                setObj.exchange3 = 0;
-                setObj.exchange4 = 0;
-                setObj.exchange5 = 0;
+        /* Set the Technique Choices to 0 */
+        setObj.techniquePlayerChoice1 = 0;
+        setObj.techniquePlayerChoice2 = 0;
+        setObj.techniquePlayerChoice3 = 0;
+        setObj.techniquePlayerChoice4 = 0;
+        setObj.techniquePlayerChoice5 = 0;
+        setObj.techniqueOpponentChoice1 = 0;
+        setObj.techniqueOpponentChoice2 = 0;
+        setObj.techniqueOpponentChoice3 = 0;
+        setObj.techniqueOpponentChoice4 = 0;
+        setObj.techniqueOpponentChoice5 = 0;
 
-                /* Set the Technique Choices to 0 */
-                setObj.techniquePlayerChoice1 = 0;
-                setObj.techniquePlayerChoice2 = 0;
-                setObj.techniquePlayerChoice3 = 0;
-                setObj.techniquePlayerChoice4 = 0;
-                setObj.techniquePlayerChoice5 = 0;
-                setObj.techniqueOpponentChoice1 = 0;
-                setObj.techniqueOpponentChoice2 = 0;
-                setObj.techniqueOpponentChoice3 = 0;
-                setObj.techniqueOpponentChoice4 = 0;
-                setObj.techniqueOpponentChoice5 = 0;
+        /* Clear Focus Choices */
+        setObj.focusPlayerChoice1 = "";
+        setObj.focusPlayerChoice2 = "";
+        setObj.focusPlayerChoice3 = "";
+        setObj.focusPlayerChoice4 = "";
+        setObj.focusPlayerChoice5 = "";
+        setObj.focusOpponentChoice1 = "";
+        setObj.focusOpponentChoice2 = "";
+        setObj.focusOpponentChoice3 = "";
+        setObj.focusOpponentChoice4 = "";
+        setObj.focusOpponentChoice5 = "";
 
-                /* Clear Focus Choices */
-                setObj.focusPlayerChoice1 = "";
-                setObj.focusPlayerChoice2 = "";
-                setObj.focusPlayerChoice3 = "";
-                setObj.focusPlayerChoice4 = "";
-                setObj.focusPlayerChoice5 = "";
-                setObj.focusOpponentChoice1 = "";
-                setObj.focusOpponentChoice2 = "";
-                setObj.focusOpponentChoice3 = "";
-                setObj.focusOpponentChoice4 = "";
-                setObj.focusOpponentChoice5 = "";
+        /* Clear Spell Choices */
+        setObj.spellPlayerChoice1 = "";
+        setObj.spellPlayerChoice2 = "";
+        setObj.spellPlayerChoice3 = "";
+        setObj.spellPlayerChoice4 = "";
+        setObj.spellPlayerChoice5 = "";
+        setObj.spellOpponentChoice1 = "";
+        setObj.spellOpponentChoice2 = "";
+        setObj.spellOpponentChoice3 = "";
+        setObj.spellOpponentChoice4 = "";
+        setObj.spellOpponentChoice5 = "";
 
-                /* Clear Spell Choices */
-                setObj.spellPlayerChoice1 = "";
-                setObj.spellPlayerChoice2 = "";
-                setObj.spellPlayerChoice3 = "";
-                setObj.spellPlayerChoice4 = "";
-                setObj.spellPlayerChoice5 = "";
-                setObj.spellOpponentChoice1 = "";
-                setObj.spellOpponentChoice2 = "";
-                setObj.spellOpponentChoice3 = "";
-                setObj.spellOpponentChoice4 = "";
-                setObj.spellOpponentChoice5 = "";
+        console.log(setObj);
+        setAttrs(setObj);
 
-                console.log(setObj);
-                setAttrs(setObj);
-
-            });
+    });
 
 
-    </script>
+</script>
