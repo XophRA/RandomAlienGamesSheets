@@ -904,23 +904,23 @@
                             <input type="hidden" name="attr_ascensionSigilSize" class="sigilSize" />
                             <!-- Number of segments in Sigil, set by next Rank -->
                             <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ascensionsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
-                            <span class="sigilSegment sigilSegment1" ></span> <!-- Segment1 -->
+                            <button type="action" class="sigilSegment sigilSegment1" name="act_questoutcome1" ></button> <!-- Segment1 -->
                             <span class="sigilLink sigilLink1"></span>
     
                             <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ascensionsigilsegment2" value="0" />
-                            <span class="sigilSegment sigilSegment2" ></span> <!-- Segment2 -->
+                            <button type="action" class="sigilSegment sigilSegment2"  name="act_questoutcome2"></button> <!-- Segment2 -->
                             <span class="sigilLink sigilLink2"></span>
     
                             <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ascensionsigilsegment3" value="0" />
-                            <span class="sigilSegment sigilSegment3"></span> <!-- Segment3 -->
+                            <button type="action" class="sigilSegment sigilSegment3" name="act_questoutcome3"></button> <!-- Segment3 -->
                             <span class="sigilLink sigilLink3"></span>
     
                             <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ascensionsigilsegment4" value="0" />
-                            <span class="sigilSegment sigilSegment4" ></span> <!-- Segment4 -->
+                            <button type="action" class="sigilSegment sigilSegment4" name="act_questoutcome4" ></button> <!-- Segment4 -->
                             <span class="sigilLink sigilLink4"></span>
     
                             <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ascensionsigilsegment5" value="0" />
-                            <span class="sigilSegment sigilSegment5" ></span> <!-- Segment5 -->
+                            <button type="action" class="sigilSegment sigilSegment5" name="act_questoutcome5"></button> <!-- Segment5 -->
                             <span class="sigilLink sigilLink5"></span>
 
                             <!-- Quest Sigils -->
@@ -3301,7 +3301,6 @@
         setAttrs(curseAttr);
     };
 
-
     /* Clear Ascension Card */
     on("clicked:ascensionclear", (event) => {
         const setObj = {};
@@ -3350,7 +3349,7 @@
         setAttrs(setObj);
     });
 
-    /* Button list for the Ascension, Quest, & Ritual Sigil Segments */
+    /* Button list for the Quest & Ritual Sigil Segments */
     const buttons = ['quest1sigilsegment1', 'quest1sigilsegment2', 'quest1sigilsegment3', 'quest1sigilsegment4', 'quest1sigilsegment5',
         'quest2sigilsegment1', 'quest2sigilsegment2', 'quest2sigilsegment3', 'quest2sigilsegment4', 'quest2sigilsegment5',
         'quest3sigilsegment1', 'quest3sigilsegment2', 'quest3sigilsegment3', 'quest3sigilsegment4', 'quest3sigilsegment5',
@@ -3363,10 +3362,10 @@
             on(`clicked:${string}`, () => { sigilSegmentClick(string) });
         });
 
-    /* Advance Quest, & Ritual One-step then Wrap Around */
+    /* Advance Quest & Ritual One-step then Wrap Around */
     const sigilSegmentClick = function (attr) {
         attr = attr.replace(':', '_');
-        console.log(attr)
+        /* console.log(attr) */
 
         const updateAttrs = {}; // create a hash
         getAttrs([attr], (values) => {
@@ -3376,12 +3375,92 @@
             {
                 segmentState = 0;
             }
-            
+
             updateAttrs[attr] = segmentState; // add new key-value-pair in the hash for the attribute to update: in this case, the attr that was changed.
             console.log(updateAttrs);
             setAttrs(updateAttrs);// set all attributes to their value from the hash
         })
     };
+
+    /* Calaculate the Quest */
+    on("clicked:questoutcome1 clicked:questoutcome2 clicked:questoutcome3 clicked:questoutcome4 clicked:questoutcome5", (event) => {
+        getAttrs(["quest1sigilsegment1", "quest1sigilsegment2", "quest1sigilsegment3", "quest1sigilsegment4", "quest1sigilsegment5",
+            "quest2sigilsegment1", "quest2sigilsegment2", "quest2sigilsegment3", "quest2sigilsegment4", "quest2sigilsegment5",
+            "quest3sigilsegment1", "quest3sigilsegment2", "quest3sigilsegment3", "quest3sigilsegment4", "quest3sigilsegment5",
+            "quest4sigilsegment1", "quest4sigilsegment2", "quest4sigilsegment3", "quest4sigilsegment4", "quest4sigilsegment5",
+            "quest5sigilsegment1", "quest5sigilsegment2", "quest5sigilsegment3", "quest5sigilsegment4", "quest5sigilsegment5"], function (values) {
+                const setObj = {};
+
+                /*Quest Outcome 1*/
+                let questoutcome1 = 0;
+                let quest1sigilsegment1 = parseInt(values.quest1sigilsegment1) || 0;
+                let quest1sigilsegment2 = parseInt(values.quest1sigilsegment2) || 0;
+                let quest1sigilsegment3 = parseInt(values.quest1sigilsegment3) || 0;
+                let quest1sigilsegment4 = parseInt(values.quest1sigilsegment4) || 0;
+                let quest1sigilsegment5 = parseInt(values.quest1sigilsegment5) || 0;
+
+                if (quest1sigilsegment1 > 0 && quest1sigilsegment2 > 0 && quest1sigilsegment3 > 0 && quest1sigilsegment4 > 0 && quest1sigilsegment5 > 0)
+                {
+                    questoutcome1 = Math.round((quest1sigilsegment1 + quest1sigilsegment2 + quest1sigilsegment3 + quest1sigilsegment4 + quest1sigilsegment5)/5);
+                }
+                setObj.ascensionsigilsegment1 = questoutcome1;
+
+                /*Quest Outcome 2*/
+                let questoutcome2 = 0;
+                let quest2sigilsegment1 = parseInt(values.quest2sigilsegment1) || 0;
+                let quest2sigilsegment2 = parseInt(values.quest2sigilsegment2) || 0;
+                let quest2sigilsegment3 = parseInt(values.quest2sigilsegment3) || 0;
+                let quest2sigilsegment4 = parseInt(values.quest2sigilsegment4) || 0;
+                let quest2sigilsegment5 = parseInt(values.quest2sigilsegment5) || 0;
+                if (quest2sigilsegment1 > 0 && quest2sigilsegment2 > 0 && quest2sigilsegment3 > 0 && quest2sigilsegment4 > 0 && quest2sigilsegment5 > 0)
+                {
+                    questoutcome2 = Math.round((quest2sigilsegment1 + quest2sigilsegment2 + quest2sigilsegment3 + quest2sigilsegment4 + quest2sigilsegment5)/5);
+                }
+                setObj.ascensionsigilsegment2 = questoutcome2;
+
+                /*Quest Outcome 3*/
+                let questoutcome3 = 0;
+                let quest3sigilsegment1 = parseInt(values.quest3sigilsegment1) || 0;
+                let quest3sigilsegment2 = parseInt(values.quest3sigilsegment2) || 0;
+                let quest3sigilsegment3 = parseInt(values.quest3sigilsegment3) || 0;
+                let quest3sigilsegment4 = parseInt(values.quest3sigilsegment4) || 0;
+                let quest3sigilsegment5 = parseInt(values.quest3sigilsegment5) || 0;
+                if (quest3sigilsegment1 > 0 && quest3sigilsegment2 > 0 && quest3sigilsegment3 > 0 && quest3sigilsegment4 > 0 && quest3sigilsegment5 > 0)
+                {
+                    questoutcome3 = Math.round((quest3sigilsegment1 + quest3sigilsegment2 + quest3sigilsegment3 + quest3sigilsegment4 + quest3sigilsegment5)/5);
+                }
+                setObj.ascensionsigilsegment3 = questoutcome3;
+
+                /*Quest Outcome 4*/
+                let questoutcome4 = 0;
+                let quest4sigilsegment1 = parseInt(values.quest4sigilsegment1) || 0;
+                let quest4sigilsegment2 = parseInt(values.quest4sigilsegment2) || 0;
+                let quest4sigilsegment3 = parseInt(values.quest4sigilsegment3) || 0;
+                let quest4sigilsegment4 = parseInt(values.quest4sigilsegment4) || 0;
+                let quest4sigilsegment5 = parseInt(values.quest4sigilsegment5) || 0;
+                if (quest4sigilsegment1 > 0 && quest4sigilsegment2 > 0 && quest4sigilsegment3 > 0 && quest4sigilsegment4 > 0 && quest4sigilsegment5 > 0)
+                {
+                    questoutcome4 = Math.round((quest4sigilsegment1 + quest4sigilsegment2 + quest4sigilsegment3 + quest4sigilsegment4 + quest4sigilsegment5)/5);
+                }
+                setObj.ascensionsigilsegment4 = questoutcome4;
+
+                /*Quest Outcome 5*/
+                let questoutcome5 = 0;
+                let quest5sigilsegment1 = parseInt(values.quest5sigilsegment1) || 0;
+                let quest5sigilsegment2 = parseInt(values.quest5sigilsegment2) || 0;
+                let quest5sigilsegment3 = parseInt(values.quest5sigilsegment3) || 0;
+                let quest5sigilsegment4 = parseInt(values.quest5sigilsegment4) || 0;
+                let quest5sigilsegment5 = parseInt(values.quest5sigilsegment5) || 0;
+                if (quest5sigilsegment1 > 0 && quest5sigilsegment2 > 0 && quest5sigilsegment3 > 0 && quest5sigilsegment4 > 0 && quest5sigilsegment5 > 0)
+                {
+                    questoutcome5 = Math.round((quest5sigilsegment1 + quest5sigilsegment2 + quest5sigilsegment3 + quest5sigilsegment4 + quest5sigilsegment5)/5);
+                }
+                setObj.ascensionsigilsegment5 = questoutcome5;
+
+                console.log(setObj);
+                setAttrs(setObj);
+            })
+    });
 
     /* Reset the Duel */
     on("clicked:resetduel", (event) => {
@@ -3438,6 +3517,5 @@
         setAttrs(setObj);
 
     });
-
 
 </script>
