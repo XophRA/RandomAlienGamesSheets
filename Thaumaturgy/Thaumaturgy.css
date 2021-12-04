@@ -2563,7 +2563,7 @@ input[type=number].resourceBox
         section.circlePositions > input.circleDieArcana + input[value="29"].circleDieArcanaPosition + input + input + input + input + input,
         section.circlePositions > input.circleDieArcana + input[value="29"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 14 / 39 / span 3 / span 3;
+            grid-area: 18 / 42 / span 3 / span 3;
         }
 
         section.circlePositions > input.circleDieArcana + input[value="30"].circleDieArcanaPosition + input + input + input + input + input,
@@ -2623,7 +2623,7 @@ input[type=number].resourceBox
         section.circlePositions > input.circleDieArcana + input[value="39"].circleDieArcanaPosition + input + input + input + input + input,
         section.circlePositions > input.circleDieArcana + input[value="39"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 55 / 32 / span 3 / span 3;
+            grid-area: 58 / 30 / span 3 / span 3;
         }
 
         section.circlePositions > input.circleDieArcana + input[value="40"].circleDieArcanaPosition + input + input + input + input + input,
@@ -4329,7 +4329,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: repeat(3,20px) 1fr;
+        grid-template-columns: 6px repeat(3,20px) 1fr;
         grid-template-rows: 1fr;
     }
 
@@ -4338,19 +4338,24 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
             grid-row: 1/auto;
         }
 
-        .customCard div.potency > .potency1
+        .customCard div.potency > .potency0
         {
             grid-column: 1/auto;
         }
 
-        .customCard div.potency > .potency2
+        .customCard div.potency > .potency1
         {
             grid-column: 2/auto;
         }
 
-        .customCard div.potency > .potency3
+        .customCard div.potency > .potency2
         {
             grid-column: 3/auto;
+        }
+
+        .customCard div.potency > .potency3
+        {
+            grid-column: 4/auto;
         }
 
     .customCard .attunement
