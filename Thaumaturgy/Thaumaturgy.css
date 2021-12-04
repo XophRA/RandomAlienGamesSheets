@@ -4329,7 +4329,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: 6px repeat(3,20px) 1fr;
+        grid-template-columns: 9px repeat(3,20px) 1fr;
         grid-template-rows: 1fr;
     }
 
