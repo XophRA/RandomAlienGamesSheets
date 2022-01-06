@@ -131,7 +131,7 @@ input.duellingSelector:checked ~ article.duellingSheet
         padding: 2px 6px;
         color: var(--buttonTxt);
     }
-
+        /* Button Shadow */
         .charsheet button:hover,
         .charsheet input[type="checkbox"]:hover + span,
         .charsheet input[type="radio"]:hover + span
@@ -139,6 +139,29 @@ input.duellingSelector:checked ~ article.duellingSheet
             box-shadow: 0 8px 8px 0 var(--buttonShadow);
             background-color: var(--buttonBGHover);
             border: var(--buttonHoverBorderStyle);
+        }
+
+        /* Tooltip for Milestone Value */
+        .charsheet button + span + input.tooltip
+        {
+            display: none;
+            width: 20px;
+            background-color: var(--accent);
+            color: var(--primary);
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            -webkit-appearance: none; 
+            margin: 0; 
+            border: none;
+            top: -15px;
+            left: 105%;
+            z-index: 4;
+        }
+
+        .charsheet button:hover + span + input.tooltip
+        {
+            display: block;
         }
 
 .ui-dialog .charsheet input[type="number"]
