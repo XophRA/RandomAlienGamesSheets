@@ -654,7 +654,6 @@
             <section class="curseWidget">
                 <button type="action" class="sortCurses" name="act_sortCurses"> v </button>
                 <input type="hidden" class="curseToggle" name="attr_curseFocus" value="1" />
-                <input type="hidden" class="curseNumber" name="attr_curseNumber" value="2" />
                 <div class="card customCard curseCard curse1">
                     <h4 class="curseName">Affliction</h4>
                     <input type="text" class="curseName" name="attr_curseName1" />
@@ -2840,7 +2839,6 @@
             {
                 /*Set rank*/
                 let rank = "";
-                let curseNumber = 2;
 
                 if (globalAttributes.covenlevel)
                 {
@@ -2866,21 +2864,17 @@
                 else if (covenLevel >= 5 && covenLevel <= 7)
                 {
                     rank = "Keeper";
-                    curseNumber = 3;
                 }
                 else if (covenLevel >= 8 && covenLevel <= 10)
                 {
                     rank = "Graduate";
-                    curseNumber = 4;
                 }
                 else
                 {
                     rank = "Scholar";
-                    curseNumber = 5;
                 }
 
                 setObj.rank = rank;
-                setObj.curseNumber = curseNumber;
                 setObj.covenLevel = covenLevel;
                 setObj.level = covenLevel;
 
@@ -3426,24 +3420,14 @@
 
     /* Wrap Around for Sort Curse*/
     on("clicked:sortcurses", (event) => {
-        getAttrs(["curseFocus", "curseNumber", "selectedSheet"], function (values) {
+        getAttrs(["curseFocus"], function (values) {
             const setObj = {};
             //Curse on top
             let curseFocus = parseInt(values.curseFocus) || 0;
 
-            //Number of Curses
-            let curseNumber = parseInt(values.curseNumber) || 0;
-
-            //Coven Sheet is always 5 curses
-            let selectedSheet = parseInt(values.selectedSheet) || 0;
-            if (selectedSheet == 2)
-            {
-                curseNumber = 5;
-            }
-
             curseFocus++;
 
-            if (curseFocus > curseNumber)
+            if (curseFocus > 5)
             {
                 setObj.curseFocus = 1;
             }
@@ -3470,8 +3454,6 @@
         curseAttr[`curseName${num}`] = "";
         curseAttr[`curseSeverity${num}`] = "";
         curseAttr[`statusEffect${num}`] = "";
-        curseAttr[`curseRestoration${num}`] = "";
-        curseAttr[`curseRestorationSynergy${num}`] = "";
         curseAttr[`restorationComponents${num}`] = "";
 
         console.log(curseAttr);

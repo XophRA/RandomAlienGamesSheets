@@ -4415,13 +4415,6 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     grid-template-columns: 1fr 26px;
     grid-template-rows: 50px repeat(8, 33px) 1fr;
 }
-    /* Enable curse3, curse4, & curse5 */
-    .curseWidget > input[value="3"].curseNumber ~ .curse3,
-    .curseWidget > input[value="4"].curseNumber ~ .curse3, .curseWidget > input[value="4"].curseNumber ~ .curse4,
-    .curseWidget > input[value="5"].curseNumber ~ .curse3, .curseWidget > input[value="5"].curseNumber ~ .curse4, .curseWidget > input[value="5"].curseNumber ~ .curse5
-    {
-        display: grid;
-    }
     /* Curse Card Layout */
     .curseWidget > .curse1
     {
@@ -4436,19 +4429,16 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     .curseWidget > .curse3
     {
         grid-area: 4/1/span 5/-1;
-        display: none;
     }
 
     .curseWidget > .curse4
     {
         grid-area: 5/1/span 5/-1;
-        display: none;
     }
 
     .curseWidget > .curse5
     {
         grid-area: 6/1/span 5/-1;
-        display: none;
     }
 
     /* Sort the curses to be able to look at them all */
