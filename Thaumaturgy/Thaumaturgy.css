@@ -3702,6 +3702,7 @@ input.editToggle[value="0"] + .editMenu
 input.editToggle[value="1"] + input.editCog + span.editCog
 {
     background-color: var(--buttonBGHover);
+    border: var(--buttonHoverBorderStyle);
 }
 
 input.editToggle[value="1"] + input.editCog + span.editCog + .editMenu,
