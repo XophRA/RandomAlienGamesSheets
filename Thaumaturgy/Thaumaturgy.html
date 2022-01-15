@@ -145,7 +145,7 @@
                 </div>
             </section>
     
-            <!-- Study Credits -->
+            <!-- Certification Resources -->
             <section class="certificationWidget">
                 <div class="noteTracker">
                     <input type="number" name="attr_resourceNotes" value="0" class="resourceBox" />
@@ -175,6 +175,9 @@
     
             <!-- Conduit -->
             <section class="conduitWidget">
+                <input type="hidden" class="editToggle" name="attr_EditConduit" />
+                <input type="checkbox" class="editCog" name="attr_EditConduit" value="1" /><span class="editCog"></span>
+                <span class="conduitLock"></span>
                 <!--Conjure-->
                 <div class="artDice art1">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Conjure" checked /><span
@@ -298,6 +301,9 @@
     
             <!-- Arts -->
             <section class="artsWidget">
+                <input type="hidden" class="editToggle" name="attr_EditArts" />
+                <input type="checkbox" class="editCog" name="attr_EditArts" value="1" /><span class="editCog"></span>
+                <span class="artsLock"></span>
                 <!--Animaturgy-->
                 <div class="artDice art1">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Animaturgy" checked /><span
@@ -741,6 +747,7 @@
                             <option>Focused: 1 spell die</option>
                         </select>
                     </div>
+                    <input type="hidden" class="editToggle" name="attr_editAttunement" />
                     <input type="checkbox" class="editCog" name="attr_editAttunement" value="1" />
                     <span class="editCog"></span>
                 </div>
@@ -749,14 +756,11 @@
                     <button type="action" class="chargeButton" name="act_chargeClocks">Charge</button>
                     <input type="hidden" name="attr_attuneArtefactSlots" value="1" />
                     <input type="hidden" name="attr_attuneFocusSlots" value="0" />
-                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly />
-                        Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> Duelling Focus</p>
+                    <p class="attunmentTip">Attune <input type="text" name="attr_attuneArtefactSlots" readonly /> Aretfacts &amp; <input type="text" name="attr_attuneFocusSlots" readonly /> Duelling Focus</p>
                     <h3 class="equationList">Equations</h3>
-                    <textarea class="equationList" name="attr_equationlist"
-                        placeholder="A list of equations you've found."></textarea>
+                    <textarea class="equationList" name="attr_equationlist" placeholder="A list of equations you've found."></textarea>
                     <h3 class="formulaList">Formula</h3>
-                    <textarea class="formulaList" name="attr_formulalist"
-                        placeholder="A list of formula you've found."></textarea>
+                    <textarea class="formulaList" name="attr_formulalist" placeholder="A list of formula you've found."></textarea>
                 </div>
                 <div class="hand longHand">
                     <div class="deckHeader">
@@ -941,8 +945,8 @@
             <!-- Fate -->
             <section class="fateWidget tableSpread">
                 <h1 class="tableTitle">Fate</h1>
-                <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditFate" />
+                <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
                 <div class="editMenu editTableSpread">
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Consequences</h2>
@@ -1080,8 +1084,8 @@
     
                 <!--Ascension-->
                 <div class="ascensionDeck">
-                    <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
                     <input type="hidden" class="editToggle" name="attr_EditAscension" />
+                    <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
                     <div class="editMenu editAscension">
                         <div class="levelControl">Level</div>
                         <input type="number" class="levelControl" name="attr_covenLevel" value="0" min="0" max="13" />
@@ -1811,8 +1815,9 @@
 
             <!--Disequilibrium-->
             <section class="disequilibriumWidget tableSpread">
-                <input type="checkbox" class="editCog" name="attr_EditDisequilbrium" value="1" /><span class="editCog"></span>
                 <input type="hidden" class="editToggle" name="attr_EditDisequilbrium" />
+                <input type="checkbox" class="editCog" name="attr_EditDisequilbrium" value="1" />
+                <span class="editCog"></span>
                 <div class="editMenu editTableSpread">
                     <div class="leftLegEdit arcanaEdit">
                         <h2>Aftermath</h2>
@@ -2730,11 +2735,14 @@
             const setObj = {};
             let selectedSheet = parseInt(values.selectedSheet) || 0;
             let covenLevel = 0;
+            
             /* Set Defaults */
             setObj.EditAscension = 0;
             setObj.EditFate = 0;
             setObj.EditDisequilbrium = 0;
             setObj.editAttunement = 0;
+            setObj.EditConduit = 0;
+            setObj.EditArts = 0;
 
             /* Ensure Fate is set */
             setObj.Consequences = parseInt(values.Consequences) || 0;

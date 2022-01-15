@@ -3693,11 +3693,18 @@ span.editCog
     color: var(--buttonTxt)
 }
 
+input.editToggle[value="0"] + input.editCog + span.editCog + .editMenu,
 input.editToggle[value="0"] + .editMenu
 {
     display: none;
 }
 
+input.editToggle[value="1"] + input.editCog + span.editCog
+{
+    background-color: var(--buttonBGHover);
+}
+
+input.editToggle[value="1"] + input.editCog + span.editCog + .editMenu,
 input.editToggle[value="1"] + .editMenu
 {
     display: grid;
@@ -3864,11 +3871,28 @@ input.editToggle[value="1"] + .editMenu
 {
     grid-area: 2/1/auto/auto;
     display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 305px 81px auto;
+    width: 400px;
+    height: 245px;
+    grid-template-columns: 305px 56px 25px auto;
     grid-template-rows: 40px repeat(7,24px) auto;
     row-gap: 4px;
+}
+
+.conduitWidget > .editCog
+{
+    grid-area: 1/3/2/4;
+}
+
+.conduitWidget > .conduitLock
+{
+    grid-area: 1/1/-1/-1;
+    background-color: transparent;
+    z-index: 5;
+}
+
+.conduitWidget > .editToggle[value="1"] + input.editCog + span.editCog + .conduitLock
+{
+    display: none;
 }
 
     .conduitWidget > .artDice
@@ -3882,21 +3906,39 @@ input.editToggle[value="1"] + .editMenu
             grid-column: 5/6;
         }
 
-/* Arts */ /* Styles used for conduit as well*/
+/* Arts */ 
 .artsWidget
 {
     grid-area: 2/2/span 2/span 2;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 123px 16px;
+    grid-template-columns: 1fr 98px 25px 16px;
     grid-template-rows: 34px repeat(14, 24px) auto;
     row-gap: 4px;
 }
 
+.artsWidget > .editCog
+{
+    grid-area: 1/3/2/4;
+}
+
+.artsWidget > .artsLock
+{
+    grid-area: 1/1/-1/-1;
+    background-color: transparent;
+    z-index: 5;
+}
+
+.artsWidget > .editToggle[value="1"] + input.editCog + span.editCog + .artsLock
+{
+    display: none;
+}
+
+/* Art Dice for Arts and Conduit*/
 .artDice
 {
-    grid-column: 2 / 3;
+    grid-column: 2 / span 2;
     display: grid;
     width: 123px;
     height: 24px;
