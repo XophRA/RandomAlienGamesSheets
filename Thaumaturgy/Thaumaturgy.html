@@ -3425,7 +3425,7 @@
                     }
 
                     //Set all poolDie
-                    for (let num = 1; num <= magicCircleSegments; num++)
+                    for (let num = 0; num <= magicCircleSegments-1; num++)
                     {
                         setObj[`poolDieArcana${num}`] = arcanaPools[`poolDieArcana${num}`];
                         setObj[`poolDieArcanaPosition${num}`] = arcanaPools[`poolDieArcanaPosition${num}`];
@@ -3455,13 +3455,13 @@
         let magicCircleSegments = 44;
 
         //Get all poolDice
-        for (let num = 1; num <= magicCircleSegments; num++)
+        for (let num = 0; num <= magicCircleSegments-1; num++)
         {
             getArray = [...getArray, ...
                 [`poolDieArcana${num}`, `poolDieMatch${num}`, `poolDieWorth${num}`, `poolDieSide${num}`]];// the ... is a javascript symbol for the spread operator which expands the object or array out into it's discrete parts
         }
         //Get all RippleDice
-        for (let num = 1; num <= 13; num++)
+        for (let num = 0; num <= 21; num++)
         {
             getArray = [...getArray, ...[`ripple${num}Harmony`, `ripple${num}Chaos`]];
         }
@@ -3473,7 +3473,7 @@
 
             //Calculate Results
             let results = 0;
-            for (let num = 1; num <= magicCircleSegments; num++)
+            for (let num = 0; num <= magicCircleSegments-1; num++)
             {
                 results += parseInt(attrs[`poolDieWorth${num}`]) || 0;
             }
@@ -3486,7 +3486,7 @@
                 allValue[i] = [];
                 let arcanaNum = i + 1;
 
-                for (let j = 1; j <= magicCircleSegments; j++)
+                for (let j = 0; j <= magicCircleSegments-1; j++)
                 {
                     let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
                     let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
@@ -3637,7 +3637,7 @@
         setObj.castTangleDice = 0;
 
         /*Blank all circle dice*/
-        for (let num = 1; num <= magicCircleSegments; num++)
+        for (let num = 0; num <= magicCircleSegments-1; num++)
         {
             setObj[`poolDieArcana${num}`] = 0;
             setObj[`poolDieArcanaPosition${num}`] = 0;
@@ -3647,7 +3647,7 @@
             setObj[`poolDieMatch${num}`] = 0;
         }
         //Blank the Dice Inputs
-        for (let num = 1; num <= 13; num++)
+        for (let num = 0; num <= 21; num++)
         {
             setObj[`position${num}d10`] = "";
             setObj[`position${num}d6`] = "";
