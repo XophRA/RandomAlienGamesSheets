@@ -3041,69 +3041,114 @@ input[type="number"].rippleBox
     grid-column: 3 / 4;
 }
 
-.ripples > .ripple1
+.ripples > .ripple0
 {
     grid-row: 2 / 3;
 }
 
-.ripples > .ripple2
+.ripples > .ripple1
 {
     grid-row: 3 / 4;
 }
 
-.ripples > .ripple3
+.ripples > .ripple2
 {
     grid-row: 4 / 5;
 }
 
-.ripples > .ripple4
+.ripples > .ripple3
 {
     grid-row: 5 / 6;
 }
 
-.ripples > .ripple5
+.ripples > .ripple4
 {
     grid-row: 6 / 7;
 }
 
-.ripples > .ripple6
+.ripples > .ripple5
 {
     grid-row: 7 / 8;
 }
 
-.ripples > .ripple7
+.ripples > .ripple6
 {
     grid-row: 8 / 9;
 }
 
-.ripples > .ripple8
+.ripples > .ripple7
 {
     grid-row: 9 / 10;
 }
 
-.ripples > .ripple9
+.ripples > .ripple8
 {
     grid-row: 10 / 11;
 }
 
-.ripples > .ripple10
+.ripples > .ripple9
 {
     grid-row: 11 / 12;
 }
 
-.ripples > .ripple11
+.ripples > .ripple10
 {
     grid-row: 12 / 13;
 }
 
-.ripples > .ripple12
+.ripples > .ripple11
 {
     grid-row: 13 / 14;
 }
 
-.ripples > .ripple13
+.ripples > .ripple12
 {
     grid-row: 14 / 15;
+}
+
+.ripples > .ripple13
+{
+    grid-row: 15 / 16;
+}
+
+.ripples > .ripple14
+{
+    grid-row: 16 / 17;
+}
+
+.ripples > .ripple15
+{
+    grid-row: 17 / 18;
+}
+
+.ripples > .ripple16
+{
+    grid-row: 18 / 19;
+}
+
+.ripples > .ripple17
+{
+    grid-row: 19 / 20;
+}
+
+.ripples > .ripple18
+{
+    grid-row: 20 / 21;
+}
+
+.ripples > .ripple19
+{
+    grid-row: 21 / 22;
+}
+
+.ripples > .ripple20
+{
+    grid-row: 22 / 23;
+}
+
+.ripples > .ripple21
+{
+    grid-row: 23 / 24;
 }
 
 .disequilibriumWidget
