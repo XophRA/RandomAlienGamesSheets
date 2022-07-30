@@ -10,7 +10,6 @@
             <option value="3">Medium</option>
             <option value="4">Dramatis Personae</option>
             <option value="5">Pawn</option>
-            <option value="6">NPC</option>
             <option value="7">Patron</option>
             <option value="8">Fatekeeper's Grimoire</option>
             <option value="9">Fatekeeper's Deck</option>
@@ -21,12 +20,11 @@
         <div class="version">Version 0.4</div>
     </header>
     <!--Hidden Sheet Selection Radio switch-->
-    <input type="radio" name="attr_selectedSheet" class="hidden playerCasterSelector" value="1" checked>
+    <input type="radio" name="attr_selectedSheet" class="hidden casterSelector" value="1" checked>
     <input type="radio" name="attr_selectedSheet" class="hidden covenSelector" value="2">
     <input type="radio" name="attr_selectedSheet" class="hidden mediumSelector" value="3">
     <input type="radio" name="attr_selectedSheet" class="hidden dramatisPersonaeSelector" value="4">
     <input type="radio" name="attr_selectedSheet" class="hidden pawnSelector" value="5">
-    <input type="radio" name="attr_selectedSheet" class="hidden npcSelector" value="6">
     <input type="radio" name="attr_selectedSheet" class="hidden patronSelector" value="7">
     <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersGrimoireSelector" value="8">
     <input type="radio" name="attr_selectedSheet" class="hidden fatekeeperDeckSelector" value="9">
@@ -2151,65 +2149,6 @@
                         <input type="checkbox" class="keyDamage" name="attr_keyDamage" />
                         <textarea class="key" name="attr_pawnKey" />
                         <textarea class="tell" name="attr_pawntell" />
-                    </div>
-                </fieldset>
-            </section>
-        </div>
-    </article>
-
-    <!-- NPC -->
-    <article class="sheetType npcSheet">
-        <div class="npcSheetGrid">
-            <section class="npcAspects">
-                <h1 class="name">Name</h1>
-                <input type="text" name="attr_character_name" class="name titlefill" />
-                <h4 class="concept">Concept</h4>
-                <textarea class="concept" name="attr_concept" />
-                <h4 class="ascension">Rank, level</h4>
-                <input type="text" class="ascension" name="attr_ascension" />
-                <h4 class="coven">Coven</h4>
-                <input type="text" class="coven" name="attr_coven" />
-                <h4 class="description">Description</h4>
-                <textarea name="attr_description" class="description" />
-            </section>
-            <!-- Charateristics -->
-            <section class="charateristicWidget tagbox">
-                <h2>Charateristics</h2>
-                <textarea name="attr_charateristics"></textarea>
-            </section>
-            <!-- Tags -->
-            <section class="tagWidget tagbox">
-                <h2>Tags</h2>
-                <textarea name="attr_tags"></textarea>
-            </section>
-            <!-- Resistances -->
-            <section class="resistancesWidget">
-                <h1>Resistances</h1>
-                <fieldset class="repeating_resistances">
-                    <div class="resistance">
-                        <input type="text" class="resistanceName" name="attr_npcResistanceName" />
-                        <input type="number" min="1" max="10" value="2" name="attr_potency" class="potency">
-                    </div>
-                </fieldset>
-            </section>
-            <!-- Powers -->
-            <section class="powersWidget">
-                <h1>Grimoire</h1>
-                <fieldset class="repeating_power">
-                    <div class="power">
-                        <input type="text" class="powerName" name="attr_npcPowerName" />
-                        <textarea class="powerDescription" name="attr_npcPowerDescription" />
-                    </div>
-                </fieldset>
-            </section>
-            <!-- Key & Tell -->
-            <section class="keyTellWidget">
-                <h1>Key & Tell</h1>
-                <fieldset class="repeating_key">
-                    <div class="key">
-                        <input type="checkbox" class="keyDamage" name="attr_npcDamage" />
-                        <textarea class="key" name="attr_npcKey" placeholder="Enter the Status Effect Inflicted" />
-                        <p class="tell" name="attr_npcTell">Inflict a distinct and lethal effect</p>
                     </div>
                 </fieldset>
             </section>

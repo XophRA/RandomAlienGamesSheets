@@ -10,12 +10,11 @@ article.sheetType
     display: none;
 }
 
-input.playerCasterSelector:checked ~ article.playerCasterSheet,
+input.casterSelector:checked ~ article.playerCasterSheet,
 input.covenSelector:checked ~ article.covenSheet,
 input.mediumSelector:checked ~ article.mediumSheet,
 input.dramatisPersonaeSelector:checked ~ article.dramatisPersonaeSheet,
 input.pawnSelector:checked ~ article.pawnSheet,
-input.npcSelector:checked ~ article.npcSheet,
 input.patronSelector:checked ~ article.patronSheet,
 input.fatekeepersGrimoireSelector:checked ~ article.fatekeepersGrimoireSheet,
 input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet,
@@ -25,9 +24,9 @@ input.duellingSelector:checked ~ article.duellingSheet
 }
 
 /* General Sheet Style */
-.charsheet
+:root
 {
-    /* Color Scheme */
+    /* Lightmode Color Scheme */
     /* Variables for a selection of colors to be used in the sheet colors */
     --paper: #FFF;
     --text: #000;
@@ -54,6 +53,43 @@ input.duellingSelector:checked ~ article.duellingSheet
     --circleSegmentEmpty: var(--paper);
     --checkboxAccent: var(--primary);
     --diceTxt: var(--paper);
+}
+
+:root .sheet-darkmode
+{
+    /* Darkmode Color Scheme */
+    /* Variables for a selection of colors to be used in the sheet colors */
+    --paper: #181818;
+    --text: #fff;
+    --primary: #a985c3;
+    --accent: #708090;
+    --alert: #C71585;
+    /* Sheet Colors */
+    --bgSheet: var(--paper);
+    --bgFieldDark: rgba(240,240,240,0.4);
+    --bgFieldLight: rgba(240,240,240,0.1);
+    --txtBody: var(--text);
+    --txtTitle: var(--text);
+    --txtAlert: var(--alert);
+    --buttonBG: var(--primary);
+    --border: var(--text);
+    --buttonTxt: var(--paper);
+    --buttonTxtCaution: var(--alert);
+    --buttonShadow: rgba(0,0,0,0.20);
+    --buttonBGHover: var(--accent);
+    --buttonTxtHover: var(--paper);
+    --buttonBGHoverCaution: var(--alert);
+    --buttonTxtHoverCaution: var(--text);
+    --circleSegmentFilled: var(--primary);
+    --circleSegmentEmpty: var(--paper);
+    --checkboxAccent: var(--primary);
+    --diceTxt: var(--paper);
+
+}
+
+body,
+.charsheet
+{
     /* Basic Styles */
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
@@ -70,6 +106,7 @@ input.duellingSelector:checked ~ article.duellingSheet
         font-family: "Fredericka the Great", cursive;
         text-align: left;
         font-weight: 500;
+        color: var(--txtBody);
     }
 
     .charsheet h1
@@ -318,6 +355,11 @@ main.masterGrid
     align-items: start;
 }
 
+.sheet-darkmode .playerCasterSheetGrid
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/PlayerCasterSheetDarkmode.png);
+}
+
 .covenSheetGrid
 {
     grid-area: sheet;
@@ -333,6 +375,11 @@ main.masterGrid
     align-items: start;
 }
 
+.sheet-darkmode .covenSheetGrid
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/CovenSheetDarkmode.png);
+}
+
 .mediumSheetGrid
 {
     grid-area: sheet;
@@ -346,6 +393,11 @@ main.masterGrid
     grid-template-rows: 17px 703px 52px 553px 575px auto;
     justify-items: start;
     align-items: start;
+}
+
+.sheet-darkmode .mediumSheetGrid
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/MediumSheetDarkmode.png);
 }
 
 .dramatisPersonaeSheetGrid
