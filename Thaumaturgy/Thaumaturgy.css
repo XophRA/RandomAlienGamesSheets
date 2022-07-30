@@ -24,7 +24,8 @@ input.duellingSelector:checked ~ article.duellingSheet
 }
 
 /* General Sheet Style */
-:root
+:root,
+.sheet-rolltemplate-Thaumaturgy
 {
     /* Lightmode Color Scheme */
     /* Variables for a selection of colors to be used in the sheet colors */
@@ -55,7 +56,8 @@ input.duellingSelector:checked ~ article.duellingSheet
     --diceTxt: var(--paper);
 }
 
-:root .sheet-darkmode
+:root .sheet-darkmode,
+.sheet-rolltemplate-Thaumaturgy.sheet-rolltemplate-darkmode
 {
     /* Darkmode Color Scheme */
     /* Variables for a selection of colors to be used in the sheet colors */
@@ -73,18 +75,17 @@ input.duellingSelector:checked ~ article.duellingSheet
     --txtAlert: var(--alert);
     --buttonBG: var(--primary);
     --border: var(--text);
-    --buttonTxt: var(--paper);
+    --buttonTxt: var(--text);
     --buttonTxtCaution: var(--alert);
     --buttonShadow: rgba(0,0,0,0.20);
     --buttonBGHover: var(--accent);
-    --buttonTxtHover: var(--paper);
+    --buttonTxtHover: var(--text);
     --buttonBGHoverCaution: var(--alert);
     --buttonTxtHoverCaution: var(--text);
     --circleSegmentFilled: var(--primary);
     --circleSegmentEmpty: var(--paper);
     --checkboxAccent: var(--primary);
     --diceTxt: var(--paper);
-
 }
 
 body,
@@ -128,6 +129,7 @@ body,
     {
         font-family: "Open Sans", sans-serif;
         font-size: 1.2em;
+        color: var(--txtBody);
     }
 
     .charsheet td, .charsheet p
@@ -236,6 +238,12 @@ body,
     resize: none;
     padding: 0;
     outline: none;
+    box-sizing: border-box;
+}
+
+.charsheet select
+{
+    background: var(--paper);
 }
 
 .charsheet textarea, .charsheet input[type="text"]
@@ -479,15 +487,15 @@ main.masterGrid
     align-items: start;
 }
 
-.sheet-darkmode .duellingSheetGrid
+/*.sheet-darkmode .duellingSheetGrid
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/DuellingSheetDarkmode.png);
-}
+}*/
 
 /* Roll Template */
 .sheet-rolltemplate-Thaumaturgy
 {
-    background-color: white;
+    background-color: var(--paper);
     margin: -24px -45px;
 }
 
@@ -499,7 +507,7 @@ main.masterGrid
         width: 99%;
         border: none;
         font-family: "Open Sans", sans-serif;
-        color: black;
+        color: var(--text);
         padding: 23px 0 0 35px;
         font-weight: 400;
         font-size: 12px;
@@ -568,7 +576,7 @@ main.masterGrid
                 justify-content: flex-start;
                 align-items: flex-start;
                 flex-wrap: wrap;
-                color: indigo;
+                color: var(--alert);
                 font-style:italic;
             }
 
