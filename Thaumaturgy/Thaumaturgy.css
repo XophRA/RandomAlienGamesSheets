@@ -66,8 +66,8 @@ input.duellingSelector:checked ~ article.duellingSheet
     --alert: #C71585;
     /* Sheet Colors */
     --bgSheet: var(--paper);
-    --bgFieldDark: rgba(240,240,240,0.4);
-    --bgFieldLight: rgba(240,240,240,0.1);
+    --bgFieldDark: rgba(0, 0, 0, 0.4);
+    --bgFieldLight: rgba(0, 0, 0, 0.1);
     --txtBody: var(--text);
     --txtTitle: var(--text);
     --txtAlert: var(--alert);
@@ -477,6 +477,11 @@ main.masterGrid
     grid-template-rows: 20px 90px repeat(5,485px 36px) 1fr;
     justify-items: start;
     align-items: start;
+}
+
+.sheet-darkmode .duellingSheetGrid
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/DuellingSheetDarkmode.png);
 }
 
 /* Roll Template */
@@ -1133,6 +1138,11 @@ main.masterGrid
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/AscensionCard.png);
 }
 
+.sheet-darkmode .ascensionCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/AscensionCardDarkmode.png);
+}
+
     .ascensionCard .ritualSigilSize
     {
         grid-row: 2/auto;
@@ -1706,6 +1716,11 @@ main.masterGrid
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/RitualCard.png);
 }
 
+.sheet-darkmode .ritualCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/RitualCardDarkmode.png);
+}
+
     .ritualCard .ritualObjective
     {
         grid-row: 2/auto;
@@ -1892,6 +1907,11 @@ main.masterGrid
 .questCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/QuestCard.png);
+}
+
+.sheet-darkmode .questCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/QuestCardDarkmode.png);
 }
 
     .questCard .questObjective
@@ -4238,6 +4258,12 @@ input.editToggle[value="1"] + .editMenu
         background-size: 275px 475px;
     }
 
+    .sheet-darkmode .grimoireWidget > .hand,
+    .sheet-darkmode .fatekeeperDeck > .hand
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/cardDeckDarkmode.png);
+}
+
     .grimoireWidget > .longHand
     {
         grid-area: 4/2/span 2/auto;
@@ -4627,6 +4653,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     margin: 0;
 }
 
+.sheet-darkmode .curseCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/CurseCardDarkmode.png);
+}
+
     .curseCard > .curseName
     {
         grid-row: 2/auto;
@@ -4673,6 +4704,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 .roteSpellCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/SpellCard.png);
+}
+
+.sheet-darkmode .roteSpellCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/SpellCardDarkmode.png);
 }
 
     .roteSpellCard .spellEquation
@@ -4722,6 +4758,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ScrollCard.png);
 }
 
+.sheet-darkmode .scrollCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ScrollCardDarkmode.png);
+}
+
     .scrollCard .spellEquation
     {
         grid-row: 2/auto;
@@ -4766,6 +4807,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 .artefactCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ArtefactCard.png);
+}
+
+.sheet-darkmode .artefactCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ArtefactCardDarkmode.png);
 }
 
     .artefactCard .formula
@@ -4824,6 +4870,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/duellingFocusCard.png);
 }
 
+.sheet-darkmode .duellingFocusCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/duellingFocusCardDarkmode.png);
+}
+
     .duellingFocusCard .formuladuellingFocus
     {
         grid-row: 2/auto;
@@ -4870,6 +4921,10 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/consumableCard.png);
 }
 
+.sheet-darkmode .consumableCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/consumableCardDarkmode.png);
+}
     .consumableCard .formula
     {
         grid-row: 2/auto;
@@ -4914,6 +4969,11 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 .puzzleCard
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/PuzzleCard.png);
+}
+
+.sheet-darkmode .puzzleCard
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/PuzzleCardDarkmode.png);
 }
 
     .puzzleCard input[type=checkbox]
@@ -5842,6 +5902,11 @@ input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + div.readyCardDis
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard.png);
 }
 
+.sheet-darkmode input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + div.readyCardDisplay
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCardDarkmode.png);
+}
+
 input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + div.readyCardDisplay > .spellChoice,
 input.exchangeFlip:checked ~ input[value="0"].techniqueChoice + div.readyCardDisplay > .focusChoice,
 input.exchangeFlip:not(:checked) ~  div.readyCardDisplay > .spellChoice,
@@ -5855,9 +5920,19 @@ input.exchangeFlip:checked ~ input[value="1"].techniqueChoice + div.readyCardDis
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard1Power.png);
 }
 
+.sheet-darkmode input.exchangeFlip:checked ~ input[value="1"].techniqueChoice + div.readyCardDisplay
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard1PowerDarkmode.png);
+}
+
 input.exchangeFlip:checked ~ input[value="2"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard2Block.png);
+}
+
+.sheet-darkmode input.exchangeFlip:checked ~ input[value="2"].techniqueChoice + div.readyCardDisplay
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard2BlockDarkmode.png);
 }
 
 input.exchangeFlip:checked ~ input[value="3"].techniqueChoice + div.readyCardDisplay
@@ -5865,9 +5940,19 @@ input.exchangeFlip:checked ~ input[value="3"].techniqueChoice + div.readyCardDis
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard3Haste.png);
 }
 
+.sheet-darkmode input.exchangeFlip:checked ~ input[value="3"].techniqueChoice + div.readyCardDisplay
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard3HasteDarkmode.png);
+}
+
 input.exchangeFlip:checked ~ input[value="4"].techniqueChoice + div.readyCardDisplay
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard4Finesse.png);
+}
+
+.sheet-darkmode input.exchangeFlip:checked ~ input[value="4"].techniqueChoice + div.readyCardDisplay
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard4FinesseDarkmode.png);
 }
 
 input.exchangeFlip:checked ~ input[value="5"].techniqueChoice + div.readyCardDisplay
@@ -5875,3 +5960,7 @@ input.exchangeFlip:checked ~ input[value="5"].techniqueChoice + div.readyCardDis
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard5Trick.png);
 }
 
+.sheet-darkmode input.exchangeFlip:checked ~ input[value="5"].techniqueChoice + div.readyCardDisplay
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img69/ReadyCard5TrickDarkmode.png);
+}
