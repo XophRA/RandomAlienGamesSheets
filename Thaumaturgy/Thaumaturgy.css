@@ -3880,9 +3880,7 @@ input.editToggle[value="1"] + .editMenu
         min-height: 40px;
         min-width: 40px;
         text-align: center;
-        background-color: transparent;
         background-image: none;
-        color: black;
     }
 
     .descriptionWidget > .rank
