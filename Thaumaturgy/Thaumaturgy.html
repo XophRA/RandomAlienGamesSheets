@@ -117,6 +117,7 @@
         <option>Fragment</option>
         <option>Magical Creature</option>
         <option>Accursed</option>
+        <option>Monster</option>
         <option>Devotees</option>
     </datalist>
 
@@ -946,7 +947,7 @@
                 <input type="hidden" class="editToggle" name="attr_EditFate" />
                 <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
                 <div class="editMenu editTableSpread">
-                    <div class="leftLegEdit arcanaEdit">
+                    <div class="arcanaEdit leftLegEdit">
                         <h2>Consequences</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
@@ -955,7 +956,7 @@
                             <option value="1">Harmony</option>
                         </select>
                     </div>
-                    <div class="rightLegEdit arcanaEdit">
+                    <div class="arcanaEdit rightLegEdit">
                         <h2>Destiny</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
@@ -964,11 +965,20 @@
                             <option value="1">Harmony</option>
                         </select>
                     </div>
-                    <div class="tabletopEdit arcanaEdit">
+                    <div class="arcanaEdit tabletopEdit">
                         <h2>Obstacle</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ObstacleFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
+                    </div>
+                    <div class="arcanaEdit dragEdit">
+                        <h2>Drag</h2>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Drag" min="0" max="13" value="0" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DragFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
                             <option value="1">Harmony</option>
                         </select>
@@ -989,7 +999,11 @@
                     <input type="hidden" class="cardChoice" name="attr_Obstacle" />
                     <span class="card"></span>
                 </div>
-                <h3 class="speculation">Speculation</h3>
+                <div class="drag">
+                    <input type="hidden" class="facingChoice" name="attr_DragFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Drag" />
+                    <span class="card"></span>
+                </div>
                 <textarea class="speculation" name="attr_fateSpeculation" placeholder="what does it all mean?"></textarea>
             </section>
     
@@ -2025,7 +2039,7 @@
                 <input type="checkbox" class="editCog" name="attr_EditDisequilbrium" value="1" />
                 <span class="editCog"></span>
                 <div class="editMenu editTableSpread">
-                    <div class="leftLegEdit arcanaEdit">
+                    <div class="arcanaEdit leftLegEdit">
                         <h2>Aftermath</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice"
                             name="attr_Aftermath" min="0" max="13" value="0" />
@@ -2035,7 +2049,7 @@
                             <option value="1">Harmony</option>
                         </select>
                     </div>
-                    <div class="rightLegEdit arcanaEdit">
+                    <div class="arcanaEdit rightLegEdit">
                         <h2>Backlash</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice"
                             name="attr_Backlash" min="0" max="13" value="0" />
@@ -2045,12 +2059,21 @@
                             <option value="1">Harmony</option>
                         </select>
                     </div>
-                    <div class="tabletopEdit arcanaEdit">
+                    <div class="arcanaEdit tabletopEdit ">
                         <h2>Complications</h2>
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice"
                             name="attr_Complications" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ComplicationsFacing" class="arcanaFacing">
+                            <option value="0">Chaos</option>
+                            <option value="1">Harmony</option>
+                        </select>
+                    </div>
+                    <div class="arcanaEdit dragEdit">
+                        <h2>Drag</h2>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Drag" min="0" max="13" value="0" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DragFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
                             <option value="1">Harmony</option>
                         </select>
@@ -2069,6 +2092,11 @@
                 <div class="tabletop">
                     <input type="hidden" class="facingChoice" name="attr_ComplicationsFacing" />
                     <input type="hidden" class="cardChoice" name="attr_Complications" />
+                    <span class="card"></span>
+                </div>
+                <div class="drag">
+                    <input type="hidden" class="facingChoice" name="attr_DragFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Drag" />
                     <span class="card"></span>
                 </div>
                 <textarea class="speculation" name="attr_disequilibriumSpeculation" placeholder="what does it all mean?"></textarea>
@@ -2103,13 +2131,12 @@
             <section class="pawnAspects">
                 <h1 class="name">Name</h1>
                 <input type="text" name="attr_character_name" class="name titlefill" />
-                <h4 class="concept">Concept</h4>
-                <textarea class="concept" name="attr_concept" />
+                <h4 class="concept">Paradigm</h4>
+                <textarea class="concept" name="attr_concept" ></textarea>
                 <h4 class="nature">Nature</h4>
                 <input type="text" class="nature" name="attr_nature" list="nature" />
-                <input type="text" class="natureSpecific" name="attr_natureSpecific" />
                 <h4 class="description">Description</h4>
-                <textarea name="attr_description" class="description" />
+                <textarea name="attr_description" class="description"></textarea>
             </section>
             <!-- Charateristics -->
             <section class="charateristicWidget tagbox">
@@ -2127,7 +2154,7 @@
                 <fieldset class="repeating_resistances">
                     <div class="resistance">
                         <input type="text" class="resistanceName" name="attr_pawnResistanceName" />
-                        <input type="number" min="1" max="10" value="1" name="attr_potency" class="potency">
+                        <input type="number" min="1" max="13" value="1" name="attr_potency" class="potency">
                     </div>
                 </fieldset>
             </section>
@@ -2137,18 +2164,17 @@
                 <fieldset class="repeating_power">
                     <div class="power">
                         <input type="text" class="powerName" name="attr_pawnPowerName" />
-                        <textarea class="powerDescription" name="attr_pawnPowerDescription" />
+                        <textarea class="powerDescription" name="attr_pawnPowerDescription"></textarea>
                     </div>
                 </fieldset>
             </section>
-            <!-- Key & Tell -->
-            <section class="keyTellWidget">
-                <h1>Key & Tell</h1>
+            <!-- Key -->
+            <section class="keyWidget">
+                <h1>Key</h1>
                 <fieldset class="repeating_key">
                     <div class="key">
-                        <input type="checkbox" class="keyDamage" name="attr_keyDamage" />
-                        <textarea class="key" name="attr_pawnKey" />
-                        <textarea class="tell" name="attr_pawntell" />
+                        <input type="text" class="keyName" name="attr_pawnKeyName" />
+                        <textarea class="key" name="attr_pawnKey"></textarea>
                     </div>
                 </fieldset>
             </section>
@@ -2162,11 +2188,11 @@
                 <h1 class="name">Name</h1>
                 <input type="text" name="attr_character_name" class="name titlefill" />
                 <h4 class="concept">Concept</h4>
-                <textarea class="concept" name="attr_concept" />
+                <textarea class="concept" name="attr_concept" ></textarea>
                 <h4 class="nature">Nature</h4>
                 <input type="text" class="nature" name="attr_nature" />
                 <h4 class="domain">Domain</h4>
-                <textarea name="attr_domain" class="domain" />
+                <textarea name="attr_domain" class="domain" ></textarea>
             </section>
             <!-- Forms -->
             <section class="formsWidget tagbox">
@@ -2194,18 +2220,17 @@
                 <fieldset class="repeating_power">
                     <div class="power">
                         <input type="text" class="powerName" name="attr_patronPowerName" />
-                        <textarea class="powerDescription" name="attr_patronPowerDescription" />
+                        <textarea class="powerDescription" name="attr_patronPowerDescription" ></textarea>
                     </div>
                 </fieldset>
             </section>
-            <!-- Key & Tell -->
-            <section class="keyTellWidget">
-                <h1>Key & Tell</h1>
+            <!-- Key -->
+            <section class="keyWidget">
+                <h1>Key</h1>
                 <fieldset class="repeating_key">
                     <div class="key">
-                        <input type="checkbox" class="keyDamage" name="attr_keyDamage" />
-                        <textarea class="key" name="attr_patronKey" />
-                        <textarea class="tell" name="attr_patrontell" />
+                        <input type="text" class="keyName" name="attr_patronKeyName" />
+                        <textarea class="key" name="attr_patronKey" ></textarea>
                     </div>
                 </fieldset>
             </section>
@@ -2226,7 +2251,6 @@
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck0" />
                     <div class="deck">
                         <fieldset class="repeating_rotespellcard">
-
                             <div class="card customCard roteSpellCard">
                                 <h4 class="spellEquation">Equation</h4>
                                 <input type="text" class="spellEquation" name="attr_spellEquation" />
