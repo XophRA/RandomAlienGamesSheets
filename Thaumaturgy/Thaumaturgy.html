@@ -1264,54 +1264,61 @@
                 </div>
             </section>
 
-            <!-- Arcane Anagoge -->
-            <section class="arcaneAnagogeWidget">
-                <h1 class="anagogeTitle">Arcane Anagoge</h1>
-                <div class="anagogeIntro">
-                    Long ago—before the Shattering of the third realm—there was a Wizard who forecast a dreadful fate,
-                    which they strove to defy through magic. They pursued ascension—a journey through thirteen Arcana
-                    that would allow the Wizard to overcome their fate. There are many different tales of the Wizard’s
-                    adventures, each of which correspond to the 13 Arcana.
-                </div>
-                <h3 class="anagoge1">Folk[1]</h3>
-                <textarea name="attr_anagoge1"
-                    class="anagoge1">The Wizard’s journey begins where everyone’s story begins, amongst everyday Folk. They were raised in [where?]. [who?] read their fate and what they discovered was awful. With this knowledge they searched for magic, spells to change their fate. The first spell they cast was [what?] and [what happened?]—it was terrible, but they avoided their awful fate. Folk noticed and the weirdness frightened them, who drove the Wizard away.</textarea>
-                <h3 class="anagoge2">Apprentice[2]</h3>
-                <textarea name="attr_anagoge2"
-                    class="anagoge2">Having found magic, the Wizard quickly discovers the Academy when they meet an Apprentice called [Who?]. Soon they’re admitted and becomes an Apprentice themselves, taking the name [Scholarly Name?]. The Wizard’s time as an apprentice is exciting and Caster’s still whispers about the [what?] exploit.</textarea>
-                <h3 class="anagoge3">Wild[3]</h3>
-                <textarea name="attr_anagoge3"
-                    class="anagoge3">Later, [what objective?] drove the Wizard to quest beyond the Academy walls. They soon find themselves deep in the Wilds. There they fight [what foe?] the wilderness and soon they become as entangled with [who?]. </textarea>
-                <h3 class="anagoge4">Passions[4]</h3>
-                <textarea name="attr_anagoge4"
-                    class="anagoge4">For the first time since initiation, the Wizard returns home. They find that folk have forgotten and happily welcome them back. They use magic to indulge in [what?]. Soon they become entangled with [what?] until [what event?] proves that they must leave. </textarea>
-                <h3 class="anagoge5">Coin[5]</h3>
-                <textarea name="attr_anagoge5"
-                    class="anagoge5">Later, out in the world, the Wizard is tempted by [what temptation?]. They began by helping [who?]. Soon they move on to [what extravagence?], but find they’re entangled with [who?] as their fate.</textarea>
-                <h3 class="anagoge6">Judge[6]</h3>
-                <textarea name="attr_anagoge6"
-                    class="anagoge6">In their journey the Wizard has cast spells with impunity, but such latitude doesn’t last forever. When they’re suddenly confronted by the Judge, they demand that they [what ordeal?] to prove the morality of their spellcasting. The Judge pronounces the judgement of [what judgement?]. </textarea>
-                <h3 class="anagoge7">Crown[7]</h3>
-                <textarea name="attr_anagoge7"
-                    class="anagoge7">The Wizard’s journey toward ascension is separate from the structures of society. Eventually, the Crown notices them due to [what act?].  Crown agents use their entanglements with [who?] to pursues the Wizard. While the Wizard escapes the Crown’s control, they pay a price in the form of [what do they loose?].</textarea>
-                <h3 class="anagoge8">Master[8]</h3>
-                <textarea name="attr_anagoge8"
-                    class="anagoge8">After so long away, the Wizard returns to the Academy to study with a great Master of magic, but the Master rebuffs them by [what excuse?]. Before the Master accepts them, the Wizard must prove by [what act?]. Under this tutelage the Wizard masters [which art?].</textarea>
-                <h3 class="anagoge9">Rival[9]</h3>
-                <textarea name="attr_anagoge9"
-                    class="anagoge9">The Wizard is trapped in a web of intrigue woven around them by their Rival. Just before their doom the Wizard realises that they were fooled by [what ruse?]. Before they may confront their Rival, they must overcome [what challenge?]. In an epic battle, the Wizard uses [what plan?] to defeat their Rival despite the odds.</textarea>
-                <h3 class="anagoge10">Divine[10]</h3>
-                <textarea name="attr_anagoge10"
-                    class="anagoge10">Here the Wizard is summoned before the Divine, [which patron?]. They reproach them for [what act?] and demands [act of contrition?] as penitence. Once rebuked, the Wizard is recognised for [what act?] and offers them [what reward?] as a role in their domain.</textarea>
-                <h3 class="anagoge11">Trickster[11]</h3>
-                <textarea name="attr_anagoge11"
-                    class="anagoge11">After overcoming the ten Arcana, the Wizard is powerful, defiant, and confident. The Trickster notices their hubris when they [what act?]. So, in the guise of [which arcana?], they [what trick?]. </textarea>
-                <h3 class="anagoge12">Destroyer[12]</h3>
-                <textarea name="attr_anagoge12"
-                    class="anagoge12">Without Warning, the Destroyer shatters the third realm in the form of [what?]. Shocked, the Wizard fights back by [how?].</textarea>
-                <h3 class="anagoge13">Forgotten[13]</h3>
-                <textarea name="attr_anagoge13"
-                    class="anagoge13">While the Wizard is remembered, many other ascendant wizards are not. Despite their mastery of magic, these wizards are lost to fate before they can ascend. Although there are questions about how the Wizard managed it and others didn’t, there are no answers to be found.</textarea>
+            <!-- Familiar -->
+            <section class="familiarWidget">
+                <h1>Familiar</h1>
+                    <div class="pawnSheetGrid">
+                        <section class="pawnAspects">
+                            <h1 class="name">Name</h1>
+                            <input type="text" name="attr_character_name" class="name" />
+                            <h4 class="concept">Paradigm</h4>
+                            <textarea class="concept" name="attr_concept" ></textarea>
+                            <h4 class="nature">Nature</h4>
+                            <input type="text" class="nature" name="attr_nature" list="nature" />
+                            <h4 class="description">Description</h4>
+                            <textarea name="attr_description" class="description"></textarea>
+                        </section>
+                        <!-- Charateristics -->
+                        <section class="charateristicWidget tagbox">
+                            <h2>Charateristics</h2>
+                            <textarea name="attr_charateristics"></textarea>
+                        </section>
+                        <!-- Tags -->
+                        <section class="tagWidget tagbox">
+                            <h2>Tags</h2>
+                            <textarea name="attr_tags"></textarea>
+                        </section>
+                        <!-- Resistances -->
+                        <section class="resistancesWidget">
+                            <h1>Resistances</h1>
+                            <fieldset class="repeating_resistances">
+                                <div class="resistance">
+                                    <input type="text" class="resistanceName" name="attr_pawnResistanceName" />
+                                    <input type="number" min="1" max="13" value="1" name="attr_potency" class="potency">
+                                </div>
+                            </fieldset>
+                        </section>
+                        <!-- Powers -->
+                        <section class="powersWidget">
+                            <h1>Powers</h1>
+                            <fieldset class="repeating_power">
+                                <div class="power">
+                                    <input type="text" class="powerName" name="attr_pawnPowerName" />
+                                    <textarea class="powerDescription" name="attr_pawnPowerDescription"></textarea>
+                                </div>
+                            </fieldset>
+                        </section>
+                        <!-- Key -->
+                        <section class="keyWidget">
+                            <h1>Key</h1>
+                            <fieldset class="repeating_key">
+                                <div class="key">
+                                    <input type="text" class="keyName" name="attr_pawnKeyName" />
+                                    <textarea class="key" name="attr_pawnKey"></textarea>
+                                </div>
+                            </fieldset>
+                        </section>
+                    </div>
             </section>
 
             <!-- Academy Map -->
