@@ -134,16 +134,15 @@
         <div class="playerCasterSheetGrid">
             <!-- True Name -->
             <section class="trueNameWidget">
-                <textarea name="attr_trueNamePhrase"
-                    placeholder="a pentagram – five symbols depicting your true name"></textarea>
+                <textarea name="attr_trueNamePhrase" placeholder="a pentagram – five symbols depicting your true name"></textarea>
             </section>
-    
+
             <!-- Aether -->
             <section class="aetherWidget">
                 <div class="aetherTracker"><input type="number" name="attr_aether" value="0" class="resourceBox" />
                 </div>
             </section>
-    
+
             <!-- Certification Resources -->
             <section class="certificationWidget">
                 <div class="noteTracker">
@@ -153,7 +152,7 @@
                     <input type="number" name="attr_studyCredit" value="0" class="resourceBox" />
                 </div>
             </section>
-    
+
             <!-- Description -->
             <section class="descriptionWidget">
                 <input type="hidden" name="attr_covenLevel" />
@@ -167,12 +166,10 @@
                 <input type="hidden" name="attr_character_name" />
                 <input type="text" name="attr_apprenticeship" class="apprenticeship" />
                 <input type="text" name="attr_technique" class="technique" />
-                <textarea name="attr_characteristic" class="characteristics"
-                    placeholder="One aspect that indicates your mundane capabilities"></textarea>
-                <textarea name="attr_description" class="description"
-                    placeholder="Three things that describe you"></textarea>
+                <textarea name="attr_characteristic" class="characteristics" placeholder="One aspect that indicates your mundane capabilities"></textarea>
+                <textarea name="attr_description" class="description" placeholder="Three things that describe you"></textarea>
             </section>
-    
+
             <!-- Conduit -->
             <section class="conduitWidget">
                 <input type="hidden" class="editToggle" name="attr_EditConduit" />
@@ -180,125 +177,76 @@
                 <span class="conduitLock"></span>
                 <!--Conjure-->
                 <div class="artDice art1">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Conjure" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Conjure" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Conjure" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Conjure" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Conjure" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Conjure" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Conjure" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Conjure" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Conjure" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Conjure" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Conjure" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Conjure" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Conjure" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Conjure" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Dispel-->
                 <div class="artDice art2">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Dispel" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Dispel" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Dispel" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Dispel" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Dispel" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Dispel" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Dispel" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Dispel" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Dispel" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Dispel" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Dispel" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Dispel" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Dispel" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Dispel" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Ensorcell-->
                 <div class="artDice art3">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ensorcell" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ensorcell" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Ensorcell" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Ensorcell" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Ensorcell" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Ensorcell" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Ensorcell" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ensorcell" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ensorcell" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Ensorcell" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Ensorcell" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Ensorcell" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Ensorcell" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Ensorcell" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Scry-->
                 <div class="artDice art4">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Scry" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Scry" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Scry" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Scry" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Scry" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Scry" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Scry" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Scry" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Scry" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Scry" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Scry" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Scry" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Scry" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Scry" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Summon-->
                 <div class="artDice art5">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Summon" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Summon" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Summon" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Summon" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Summon" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Summon" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Summon" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Summon" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Summon" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Summon" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Summon" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Summon" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Summon" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Summon" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Transmute-->
                 <div class="artDice art6">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Transmute" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Transmute" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Transmute" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Transmute" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Transmute" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Transmute" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Transmute" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Transmute" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Transmute" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Transmute" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Transmute" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Transmute" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Transmute" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Transmute" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Transmute-->
                 <div class="artDice art7">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ward" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ward" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Ward" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Ward" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Ward" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Ward" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Ward" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ward" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ward" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Ward" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Ward" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Ward" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Ward" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Ward" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
             </section>
-    
+
             <!-- Arts -->
             <section class="artsWidget">
                 <input type="hidden" class="editToggle" name="attr_EditArts" />
@@ -306,356 +254,202 @@
                 <span class="artsLock"></span>
                 <!--Animaturgy-->
                 <div class="artDice art1">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Animaturgy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Animaturgy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Animaturgy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Animaturgy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Animaturgy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Animaturgy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Animaturgy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Animaturgy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Animaturgy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Animaturgy"
-                        value="4.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Animaturgy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Animaturgy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Animaturgy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Animaturgy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Animaturgy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Animaturgy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Animaturgy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Animaturgy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Animaturgy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Animaturgy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Animaturgy" value="4.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Animaturgy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Astromancy-->
                 <div class="artDice art2">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Astromancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Astromancy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Astromancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Astromancy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Astromancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Astromancy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Astromancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Astromancy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Astromancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Astromancy"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Astromancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Astromancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Astromancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Astromancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Astromancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Astromancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Astromancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Astromancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Astromancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Astromancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Astromancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Astromancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Botomancy-->
                 <div class="artDice art3">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Botomancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Botomancy" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Botomancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Botomancy" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Botomancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Botomancy" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Botomancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Botomancy" value="3.1" /><span
-                        class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Botomancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Botomancy" value="5.1" /><span
-                        class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Botomancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Botomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Botomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Botomancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Botomancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Botomancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Botomancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Botomancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Botomancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Botomancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Botomancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Botomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Chronomancy-->
                 <div class="artDice art4">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Chronomancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Chronomancy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Chronomancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Chronomancy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Chronomancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Chronomancy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Chronomancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Chronomancy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Chronomancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Chronomancy"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Chronomancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Chronomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Chronomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Chronomancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Chronomancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Chronomancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Chronomancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Chronomancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Chronomancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Chronomancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Chronomancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Chronomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Cryptoturgy-->
                 <div class="artDice art5">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Cryptoturgy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Cryptoturgy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Cryptoturgy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Cryptoturgy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Cryptoturgy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Cryptoturgy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Cryptoturgy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Cryptoturgy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Cryptoturgy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Cryptoturgy"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Cryptoturgy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Cryptoturgy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Cryptoturgy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Cryptoturgy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Cryptoturgy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Cryptoturgy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Cryptoturgy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Cryptoturgy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Cryptoturgy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Cryptoturgy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Cryptoturgy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Cryptoturgy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Geomancy-->
                 <div class="artDice art6">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Geomancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Geomancy" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Geomancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Geomancy" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Geomancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Geomancy" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Geomancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Geomancy" value="3.1" /><span
-                        class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Geomancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Geomancy" value="5.1" /><span
-                        class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Geomancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Geomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Geomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Geomancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Geomancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Geomancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Geomancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Geomancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Geomancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Geomancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Geomancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Geomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Illusion-->
                 <div class="artDice art7">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Illusion" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Illusion" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Illusion" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Illusion" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Illusion" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Illusion" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Illusion" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Illusion" value="3.1" /><span
-                        class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Illusion" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Illusion" value="5.1" /><span
-                        class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Illusion" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Illusion" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Illusion" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Illusion" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Illusion" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Illusion" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Illusion" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Illusion" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Illusion" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Illusion" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Illusion" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Illusion" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Necromancy-->
                 <div class="artDice art8">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Necromancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Necromancy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Necromancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Necromancy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Necromancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Necromancy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Necromancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Necromancy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Necromancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Necromancy"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Necromancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Necromancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Necromancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Necromancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Necromancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Necromancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Necromancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Necromancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Necromancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Necromancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Necromancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Necromancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Pyromancy-->
                 <div class="artDice art9">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Pyromancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Pyromancy" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Pyromancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Pyromancy" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Pyromancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Pyromancy" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Pyromancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Pyromancy" value="3.1" /><span
-                        class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Pyromancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Pyromancy" value="5.1" /><span
-                        class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Pyromancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Pyromancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Pyromancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Pyromancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Pyromancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Pyromancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Pyromancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Pyromancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Pyromancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Pyromancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Pyromancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Pyromancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Spatiokinesis-->
                 <div class="artDice art10">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Spatiokinesis" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Spatiokinesis"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Spatiokinesis"
-                        value="1" /><span class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Spatiokinesis"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Spatiokinesis"
-                        value="2" /><span class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Spatiokinesis"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Spatiokinesis"
-                        value="3" /><span class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Spatiokinesis"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Spatiokinesis"
-                        value="4" /><span class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Spatiokinesis"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Spatiokinesis"
-                        value="5" /><span class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Spatiokinesis" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Spatiokinesis" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Spatiokinesis" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Spatiokinesis" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Spatiokinesis" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Spatiokinesis" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Spatiokinesis" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Spatiokinesis" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Spatiokinesis" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Spatiokinesis" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Spatiokinesis" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Telepathy-->
                 <div class="artDice art11">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Telepathy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Telepathy" value="0.1" /><span
-                        class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Telepathy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Telepathy" value="1.1" /><span
-                        class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Telepathy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Telepathy" value="2.1" /><span
-                        class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Telepathy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Telepathy" value="3.1" /><span
-                        class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Telepathy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Telepathy" value="5.1" /><span
-                        class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Telepathy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Telepathy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Telepathy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Telepathy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Telepathy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Telepathy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Telepathy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Telepathy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Telepathy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Telepathy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Telepathy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Telepathy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Tempesturgy-->
                 <div class="artDice art12">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Tempesturgy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Tempesturgy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Tempesturgy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Tempesturgy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Tempesturgy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Tempesturgy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Tempesturgy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Tempesturgy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Tempesturgy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Tempesturgy"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Tempesturgy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Tempesturgy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Tempesturgy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Tempesturgy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Tempesturgy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Tempesturgy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Tempesturgy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Tempesturgy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Tempesturgy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Tempesturgy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Tempesturgy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Tempesturgy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Theriomancy-->
                 <div class="artDice art13">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Theriomancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Theriomancy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Theriomancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Theriomancy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Theriomancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Theriomancy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Theriomancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Theriomancy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Theriomancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Theriomancy"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Theriomancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Theriomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Theriomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Theriomancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Theriomancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Theriomancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Theriomancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Theriomancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Theriomancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Theriomancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Theriomancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Theriomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Viviomancy-->
                 <div class="artDice art14">
-                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Viviomancy" checked /><span
-                        class="zeroCheckbox diePip0 ZeroDie"></span>
-                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Viviomancy"
-                        value="0.1" /><span class="studyCheckbox diePip1 study"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Viviomancy" value="1" /><span
-                        class="diceCheckbox diePip1 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Viviomancy"
-                        value="1.1" /><span class="studyCheckbox diePip2 study"></span>
-                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Viviomancy" value="2" /><span
-                        class="diceCheckbox diePip2 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Viviomancy"
-                        value="2.1" /><span class="studyCheckbox diePip3 study"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Viviomancy" value="3" /><span
-                        class="diceCheckbox diePip3 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Viviomancy"
-                        value="3.1" /><span class="studyCheckbox diePip4 study"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Viviomancy" value="4" /><span
-                        class="diceCheckbox diePip4 D10"></span>
-                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Viviomancy"
-                        value="5.1" /><span class="studyCheckbox diePip5 study"></span>
-                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Viviomancy" value="5" /><span
-                        class="diceCheckbox diePip5 D10"></span>
+                    <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Viviomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
+                    <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Viviomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_Viviomancy" value="1" /><span class="diceCheckbox diePip1 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_Viviomancy" value="1.1" /><span class="studyCheckbox diePip2 study"></span>
+                    <input type="radio" class="diceCheckbox diePip2 hideCheckbox" name="attr_Viviomancy" value="2" /><span class="diceCheckbox diePip2 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip3 hideCheckbox" name="attr_Viviomancy" value="2.1" /><span class="studyCheckbox diePip3 study"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Viviomancy" value="3" /><span class="diceCheckbox diePip3 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip4 hideCheckbox" name="attr_Viviomancy" value="3.1" /><span class="studyCheckbox diePip4 study"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_Viviomancy" value="4" /><span class="diceCheckbox diePip4 D10"></span>
+                    <input type="radio" class="studyCheckbox diePip5 hideCheckbox" name="attr_Viviomancy" value="5.1" /><span class="studyCheckbox diePip5 study"></span>
+                    <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Viviomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
             </section>
-    
+
             <!-- Curses -->
             <section class="curseWidget">
                 <button type="action" class="sortCurses" name="act_sortCurses"> v </button>
@@ -666,9 +460,9 @@
                     <h4 class="curseSeverity">Severity</h4>
                     <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect1" ></textarea>
+                    <textarea class="statusEffect" name="attr_statusEffect1"></textarea>
                     <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents1" ></textarea>
+                    <textarea class="restorationComponents" name="attr_restorationComponents1"></textarea>
                     <button type="action" class="clearCurseButton" name="act_clearCurse1">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse2">
@@ -677,9 +471,9 @@
                     <h4 class="curseSeverity">Severity</h4>
                     <input type="text" class="curseSeverity" name="attr_curseSeverity2" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect2" ></textarea>
+                    <textarea class="statusEffect" name="attr_statusEffect2"></textarea>
                     <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents2" ></textarea>
+                    <textarea class="restorationComponents" name="attr_restorationComponents2"></textarea>
                     <button type="action" class="clearCurseButton" name="act_clearCurse2">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse3">
@@ -688,9 +482,9 @@
                     <h4 class="curseSeverity">Severity</h4>
                     <input type="text" class="curseSeverity" name="attr_curseSeverity3" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect3" ></textarea>
+                    <textarea class="statusEffect" name="attr_statusEffect3"></textarea>
                     <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents3" ></textarea>
+                    <textarea class="restorationComponents" name="attr_restorationComponents3"></textarea>
                     <button type="action" class="clearCurseButton" name="act_clearCurse3">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse4">
@@ -699,9 +493,9 @@
                     <h4 class="curseSeverity">Severity</h4>
                     <input type="text" class="curseSeverity" name="attr_curseSeverity4" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect4" ></textarea>
+                    <textarea class="statusEffect" name="attr_statusEffect4"></textarea>
                     <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents4" ></textarea>
+                    <textarea class="restorationComponents" name="attr_restorationComponents4"></textarea>
                     <button type="action" class="clearCurseButton" name="act_clearCurse4">Cure</button>
                 </div>
                 <div class="card customCard curseCard curse5">
@@ -710,25 +504,24 @@
                     <h4 class="curseSeverity">Severity</h4>
                     <input type="text" class="curseSeverity" name="attr_curseSeverity5" list="curseSeverity" />
                     <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect5" ></textarea>
+                    <textarea class="statusEffect" name="attr_statusEffect5"></textarea>
                     <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents5" ></textarea>
+                    <textarea class="restorationComponents" name="attr_restorationComponents5"></textarea>
                     <button type="action" class="clearCurseButton" name="act_clearCurse5">Cure</button>
                 </div>
             </section>
-    
+
             <!-- Tags -->
             <section class="tagWidget">
                 <textarea class="tags" name="attr_tags"></textarea>
             </section>
-    
+
             <!-- Grimoire -->
             <section class="grimoireWidget">
                 <div class="grimoireHeader">
                     <div class="clockWidget">
                         <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
-                        <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock"
-                            class="clockControl" />
+                        <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
                         <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment13" />
                         <span class="clock"></span>
                         <span class="clockSpoke clockSpoke130"></span>
@@ -765,8 +558,7 @@
                 <div class="hand longHand">
                     <div class="deckHeader">
                         <h2>Rote Spells</h2>
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck0" value="1" /><span
-                            class="collapseDeck"></span>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck0" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck0" />
                     <div class="deck">
@@ -780,8 +572,7 @@
                                 <h4 class="spellArt">Arts</h4>
                                 <input type="text" class="spellArt" name="attr_spellArt" list="arts" />
                                 <h4 class="spellComponents">Components</h4>
-                                <input type="text" class="spellComponents" name="attr_spellComponentType"
-                                    list="components" />
+                                <input type="text" class="spellComponents" name="attr_spellComponentType" list="components" />
                                 <textarea class="spellComponents" name="attr_spellComponents" />
                                 <h4 class="spellEffect">Spell Effect</h4>
                                 <textarea class="spellEffect" name="attr_spellEffect" />
@@ -793,12 +584,11 @@
                         </fieldset>
                     </div>
                 </div>
-    
+
                 <div class="hand shortHand upperHand centreHand">
                     <div class="deckHeader">
                         <h2>Scrolls</h2>
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span
-                            class="collapseDeck"></span>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck1" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck1" />
                     <div class="deck">
@@ -829,8 +619,7 @@
                 <div class="hand shortHand upperHand rightHand">
                     <div class="deckHeader">
                         <h2>Artefacts</h2>
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span
-                            class="collapseDeck"></span>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck2" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck2" />
                     <div class="deck">
@@ -843,10 +632,8 @@
                                 <input type="text" class="spellVerb" name="attr_spellVerb" list="verbs" />
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
-                                    <input type="text" name="attr_artefactChargeClock" class="clockControl" value="0"
-                                        readonly />
-                                    <input type="number" min="0" max="5" value="0" name="attr_artefactChargeClock"
-                                        class="clockControl" />
+                                    <input type="text" name="attr_artefactChargeClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="5" value="0" name="attr_artefactChargeClock" class="clockControl" />
                                     <input type="hidden" name="attr_artefactChargeClock" value="0" class="clockSegment5" />
                                     <span class="clock"></span>
                                     <span class="clockSpoke clockSpoke50"></span>
@@ -854,11 +641,11 @@
                                     <span class="clockSpoke clockSpoke52"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_artefactForm" ></textarea>
+                                <textarea class="form" name="attr_artefactForm"></textarea>
                                 <h4 class="continuousEffect">Continuous</h4>
-                                <textarea class="continuousEffect" name="attr_artefactcontinuousEffect" ></textarea>
+                                <textarea class="continuousEffect" name="attr_artefactcontinuousEffect"></textarea>
                                 <h4 class="spellEffect">Spell Effect</h4>
-                                <textarea class="spellEffect" name="attr_artefactEffect" ></textarea>
+                                <textarea class="spellEffect" name="attr_artefactEffect"></textarea>
                                 <div class="attunement">
                                     <h4>Attune</h4>
                                     <input type="checkbox" value="1" name="attr_attunedCard" />
@@ -870,8 +657,7 @@
                 <div class="hand shortHand lowerHand centreHand">
                     <div class="deckHeader">
                         <h2>Consumables</h2>
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span
-                            class="collapseDeck"></span>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck3" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck3" />
                     <div class="deck">
@@ -884,8 +670,7 @@
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
                                     <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
-                                    <input type="number" min="0" max="3" value="0" name="attr_chargeClock"
-                                        class="clockControl" />
+                                    <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
                                     <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
                                     <span class="clock"></span>
                                     <span class="clockSpoke clockSpoke30"></span>
@@ -893,9 +678,9 @@
                                     <span class="clockSpoke clockSpoke32"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_consumableForm" ></textarea>
+                                <textarea class="form" name="attr_consumableForm"></textarea>
                                 <h4 class="spellEffect">Spell Effect</h4>
-                                <textarea class="spellEffect" name="attr_spellEffect" ></textarea>
+                                <textarea class="spellEffect" name="attr_spellEffect"></textarea>
                             </div>
                         </fieldset>
                     </div>
@@ -903,8 +688,7 @@
                 <div class="hand shortHand lowerHand rightHand">
                     <div class="deckHeader">
                         <h2>Duelling Foci</h2>
-                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span
-                            class="collapseDeck"></span>
+                        <input type="checkbox" class="collapseDeck" name="attr_collapseDeck4" value="1" /><span class="collapseDeck"></span>
                     </div>
                     <input type="hidden" class="collapseToggle" name="attr_collapseDeck4" />
                     <div class="deck">
@@ -915,11 +699,10 @@
                                 <input type="text" class="formuladuellingFocus" name="attr_formuladuellingFocus" />
                                 <h4 class="technique"></h4>
                                 <input type="text" class="technique" name="attr_technique" list="techniques" />
-    
+
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
-                                    <input type="text" name="attr_duellingFocusStressClock" class="clockControl" value="0"
-                                        readonly />
+                                    <input type="text" name="attr_duellingFocusStressClock" class="clockControl" value="0" readonly />
                                     <input type="number" min="0" max="7" value="0" name="attr_duellingFocusStressClock" class="clockControl" />
                                     <input type="hidden" name="attr_duellingFocusStressClock" value="0" class="clockSegment7" />
                                     <span class="clock"></span>
@@ -929,9 +712,9 @@
                                     <span class="clockSpoke clockSpoke73"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_formduellingFocus" ></textarea>
+                                <textarea class="form" name="attr_formduellingFocus"></textarea>
                                 <h4 class="continuousEffect">Continuous</h4>
-                                <textarea class="continuousEffect" name="attr_duellingFocusContinuousEffect" ></textarea>
+                                <textarea class="continuousEffect" name="attr_duellingFocusContinuousEffect"></textarea>
                                 <div class="attunement">
                                     <h4>Attune</h4>
                                     <input type="checkbox" value="1" name="attr_attunedCard" />
@@ -941,7 +724,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <!-- Fate -->
             <section class="fateWidget tableSpread">
                 <h1 class="tableTitle">Fate</h1>
@@ -1007,7 +790,7 @@
                 </div>
                 <textarea class="speculation" name="attr_fateSpeculation" placeholder="what does it all mean?"></textarea>
             </section>
-    
+
             <!-- Notes -->
             <div class="noteWidget">
                 <h1 class="notesTitle">Notes</h1>
@@ -1048,7 +831,7 @@
                             <div class="card customCard ritualCard">
                                 <h4 class="ritualObjective">Objective</h4>
                                 <input type="text" class="ritualObjective" list="ritual" name="attr_ritualObjective" />
-                                <textarea class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail" ></textarea>
+                                <textarea class="ritualObjectiveDetail" name="attr_ritualObjectiveDetail"></textarea>
                                 <h4 class="ritualComponents">Component</h4>
                                 <div class="potency">
                                     <input type="radio" name="attr_potency" class="potency0 diceCheckbox zeroCheckbox hideCheckbox" checked />
@@ -1060,41 +843,41 @@
                                     <input type="radio" name="attr_potency" class="potency3 diceCheckbox hideCheckbox" value="3" />
                                     <span class="potency3 diceCheckbox D10"></span>
                                 </div>
-                                <textarea class="ritualComponents" name="attr_ritualComponents" ></textarea>
-    
+                                <textarea class="ritualComponents" name="attr_ritualComponents"></textarea>
+
                                 <div class="ritualSigil">
                                     <!-- Ritual Sigil -->
                                     <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ritualsigilsegment1" value="0" />
                                     <!-- store the number of clicks on segement -->
-                                    <button type="action" class="sigilSegment sigilSegment1" name="act_ritualsigilsegment1" value="0" ></button> <!-- Segment1 -->
+                                    <button type="action" class="sigilSegment sigilSegment1" name="act_ritualsigilsegment1" value="0"></button> <!-- Segment1 -->
                                     <span class="sigilLink sigilLink1"></span>
-    
+
                                     <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ritualsigilsegment2" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment2" name="act_ritualsigilsegment2" value="0" ></button> <!-- Segment2 -->
+                                    <button type="action" class="sigilSegment sigilSegment2" name="act_ritualsigilsegment2" value="0"></button> <!-- Segment2 -->
                                     <span class="sigilLink sigilLink2"></span>
-    
+
                                     <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ritualsigilsegment3" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment3" name="act_ritualsigilsegment3" value="0" ></button> <!-- Segment3 -->
+                                    <button type="action" class="sigilSegment sigilSegment3" name="act_ritualsigilsegment3" value="0"></button> <!-- Segment3 -->
                                     <span class="sigilLink sigilLink3"></span>
-    
+
                                     <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ritualsigilsegment4" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment4" name="act_ritualsigilsegment4" value="0"></button> <!-- Segment4 -->
                                     <span class="sigilLink sigilLink4"></span>
-    
+
                                     <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ritualsigilsegment5" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment5" name="act_ritualsigilsegment5" value="0" ></button> <!-- Segment5 -->
+                                    <button type="action" class="sigilSegment sigilSegment5" name="act_ritualsigilsegment5" value="0"></button> <!-- Segment5 -->
                                     <span class="sigilLink sigilLink5"></span>
-    
+
                                     <input type="hidden" class="sigilSegment sigilSegment6" name="attr_ritualsigilsegment6" value="0" />
-                                    <button type="action" class="sigilSegment sigilSegment6" name="act_ritualsigilsegment6" value="0" ></button> <!-- Segment6 -->
+                                    <button type="action" class="sigilSegment sigilSegment6" name="act_ritualsigilsegment6" value="0"></button> <!-- Segment6 -->
                                     <span class="sigilLink sigilLink6"></span>
-    
+
                                 </div>
                             </div>
                         </fieldset>
                     </div>
                 </div>
-    
+
                 <!--Ascension-->
                 <div class="ascensionDeck">
                     <input type="hidden" class="editToggle" name="attr_EditAscension" />
@@ -1128,28 +911,28 @@
                         <textarea class="ascensionQuest3" name="attr_ascensionQuest3" placeholder="3rd Quest Goal and details"></textarea>
                         <textarea class="ascensionQuest4" name="attr_ascensionQuest4" placeholder="4th Quest Goal and details"></textarea>
                         <textarea class="ascensionQuest5" name="attr_ascensionQuest5" placeholder="5th Quest Goal and details"></textarea>
-    
+
                         <div class="ritualSigil">
                             <!-- Ascension Path -->
                             <input type="hidden" name="attr_ascensionSigilSize" class="sigilSize" />
                             <!-- Number of segments in Sigil, set by next Rank -->
                             <input type="hidden" class="sigilSegment sigilSegment1" name="attr_ascensionsigilsegment1" value="0" /> <!-- store the number of clicks on segement -->
-                            <button type="action" class="sigilSegment sigilSegment1" name="act_questoutcome1" ></button> <!-- Segment1 -->
+                            <button type="action" class="sigilSegment sigilSegment1" name="act_questoutcome1"></button> <!-- Segment1 -->
                             <span class="sigilLink sigilLink1"></span>
                             <!-- <input type="number" class="sigilSegment sigilSegment1 tooltip" name="attr_ascensionsigilsegment1"/> -->
-    
+
                             <input type="hidden" class="sigilSegment sigilSegment2" name="attr_ascensionsigilsegment2" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment2"  name="act_questoutcome2"></button> <!-- Segment2 -->
+                            <button type="action" class="sigilSegment sigilSegment2" name="act_questoutcome2"></button> <!-- Segment2 -->
                             <span class="sigilLink sigilLink2"></span>
-    
+
                             <input type="hidden" class="sigilSegment sigilSegment3" name="attr_ascensionsigilsegment3" value="0" />
                             <button type="action" class="sigilSegment sigilSegment3" name="act_questoutcome3"></button> <!-- Segment3 -->
                             <span class="sigilLink sigilLink3"></span>
-    
+
                             <input type="hidden" class="sigilSegment sigilSegment4" name="attr_ascensionsigilsegment4" value="0" />
-                            <button type="action" class="sigilSegment sigilSegment4" name="act_questoutcome4" ></button> <!-- Segment4 -->
+                            <button type="action" class="sigilSegment sigilSegment4" name="act_questoutcome4"></button> <!-- Segment4 -->
                             <span class="sigilLink sigilLink4"></span>
-    
+
                             <input type="hidden" class="sigilSegment sigilSegment5" name="attr_ascensionsigilsegment5" value="0" />
                             <button type="action" class="sigilSegment sigilSegment5" name="act_questoutcome5"></button> <!-- Segment5 -->
                             <span class="sigilLink sigilLink5"></span>
@@ -1159,19 +942,19 @@
                             <input type="hidden" class="sigilSegment quest1Segment1" name="attr_quest1sigilsegment1" value="0" />
                             <button type="action" class="sigilSegment questSegment quest1Segment1" name="act_quest1sigilsegment1" value="0"></button> <!-- Segment1 -->
                             <span class="sigilLink quest1Link1"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest1Segment2" name="attr_quest1sigilsegment2" value="0" />
                             <button type="action" class="sigilSegment questSegment quest1Segment2" name="act_quest1sigilsegment2" value="0"></button> <!-- Segment2 -->
                             <span class="sigilLink quest1Link2"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest1Segment3" name="attr_quest1sigilsegment3" value="0" />
                             <button type="action" class="sigilSegment questSegment quest1Segment3" name="act_quest1sigilsegment3" value="0"></button> <!-- Segment3 -->
                             <span class="sigilLink quest1Link3"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest1Segment4" name="attr_quest1sigilsegment4" value="0" />
                             <button type="action" class="sigilSegment questSegment quest1Segment4" name="act_quest1sigilsegment4" value="0"></button> <!-- Segment4 -->
                             <span class="sigilLink quest1Link4"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest1Segment5" name="attr_quest1sigilsegment5" value="0" />
                             <button type="action" class="sigilSegment questSegment quest1Segment5" name="act_quest1sigilsegment5" value="0"></button> <!-- Segment5 -->
                             <span class="sigilLink quest1Link5"></span>
@@ -1180,19 +963,19 @@
                             <input type="hidden" class="sigilSegment quest2Segment1" name="attr_quest2sigilsegment1" value="0" />
                             <button type="action" class="sigilSegment questSegment quest2Segment1" name="act_quest2sigilsegment1" value="0"></button> <!-- Segment1 -->
                             <span class="sigilLink quest2Link1"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest2Segment2" name="attr_quest2sigilsegment2" value="0" />
                             <button type="action" class="sigilSegment questSegment quest2Segment2" name="act_quest2sigilsegment2" value="0"></button> <!-- Segment2 -->
                             <span class="sigilLink quest2Link2"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest2Segment3" name="attr_quest2sigilsegment3" value="0" />
                             <button type="action" class="sigilSegment questSegment quest2Segment3" name="act_quest2sigilsegment3" value="0"></button> <!-- Segment3 -->
                             <span class="sigilLink quest2Link3"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest2Segment4" name="attr_quest2sigilsegment4" value="0" />
                             <button type="action" class="sigilSegment questSegment quest2Segment4" name="act_quest2sigilsegment4" value="0"></button> <!-- Segment4 -->
                             <span class="sigilLink quest2Link4"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest2Segment5" name="attr_quest2sigilsegment5" value="0" />
                             <button type="action" class="sigilSegment questSegment quest2Segment5" name="act_quest2sigilsegment5" value="0"></button> <!-- Segment5 -->
                             <span class="sigilLink quest2Link5"></span>
@@ -1201,19 +984,19 @@
                             <input type="hidden" class="sigilSegment quest3Segment1" name="attr_quest3sigilsegment1" value="0" />
                             <button type="action" class="sigilSegment questSegment quest3Segment1" name="act_quest3sigilsegment1" value="0"></button> <!-- Segment1 -->
                             <span class="sigilLink quest3Link1"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest3Segment2" name="attr_quest3sigilsegment2" value="0" />
                             <button type="action" class="sigilSegment questSegment quest3Segment2" name="act_quest3sigilsegment2" value="0"></button> <!-- Segment2 -->
                             <span class="sigilLink quest3Link2"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest3Segment3" name="attr_quest3sigilsegment3" value="0" />
                             <button type="action" class="sigilSegment questSegment quest3Segment3" name="act_quest3sigilsegment3" value="0"></button> <!-- Segment3 -->
                             <span class="sigilLink quest3Link3"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest3Segment4" name="attr_quest3sigilsegment4" value="0" />
                             <button type="action" class="sigilSegment questSegment quest3Segment4" name="act_quest3sigilsegment4" value="0"></button> <!-- Segment4 -->
                             <span class="sigilLink quest3Link4"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest3Segment5" name="attr_quest3sigilsegment5" value="0" />
                             <button type="action" class="sigilSegment questSegment quest3Segment5" name="act_quest3sigilsegment5" value="0"></button> <!-- Segment5 -->
                             <span class="sigilLink quest3Link5"></span>
@@ -1222,19 +1005,19 @@
                             <input type="hidden" class="sigilSegment quest4Segment1" name="attr_quest4sigilsegment1" value="0" />
                             <button type="action" class="sigilSegment questSegment quest4Segment1" name="act_quest4sigilsegment1" value="0"></button> <!-- Segment1 -->
                             <span class="sigilLink quest4Link1"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest4Segment2" name="attr_quest4sigilsegment2" value="0" />
                             <button type="action" class="sigilSegment questSegment quest4Segment2" name="act_quest4sigilsegment2" value="0"></button> <!-- Segment2 -->
                             <span class="sigilLink quest4Link2"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest4Segment3" name="attr_quest4sigilsegment3" value="0" />
                             <button type="action" class="sigilSegment questSegment quest4Segment3" name="act_quest4sigilsegment3" value="0"></button> <!-- Segment3 -->
                             <span class="sigilLink quest4Link3"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest4Segment4" name="attr_quest4sigilsegment4" value="0" />
                             <button type="action" class="sigilSegment questSegment quest4Segment4" name="act_quest4sigilsegment4" value="0"></button> <!-- Segment4 -->
                             <span class="sigilLink quest4Link4"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest4Segment5" name="attr_quest4sigilsegment5" value="0" />
                             <button type="action" class="sigilSegment questSegment quest4Segment5" name="act_quest4sigilsegment5" value="0"></button> <!-- Segment5 -->
                             <span class="sigilLink quest4Link5"></span>
@@ -1243,19 +1026,19 @@
                             <input type="hidden" class="sigilSegment quest5Segment1" name="attr_quest5sigilsegment1" value="0" />
                             <button type="action" class="sigilSegment questSegment quest5Segment1" name="act_quest5sigilsegment1" value="0"></button> <!-- Segment1 -->
                             <span class="sigilLink quest5Link1"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest5Segment2" name="attr_quest5sigilsegment2" value="0" />
                             <button type="action" class="sigilSegment questSegment quest5Segment2" name="act_quest5sigilsegment2" value="0"></button> <!-- Segment2 -->
                             <span class="sigilLink quest5Link2"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest5Segment3" name="attr_quest5sigilsegment3" value="0" />
                             <button type="action" class="sigilSegment questSegment quest5Segment3" name="act_quest5sigilsegment3" value="0"></button> <!-- Segment3 -->
                             <span class="sigilLink quest5Link3"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest5Segment4" name="attr_quest5sigilsegment4" value="0" />
                             <button type="action" class="sigilSegment questSegment quest5Segment4" name="act_quest5sigilsegment4" value="0"></button> <!-- Segment4 -->
                             <span class="sigilLink quest5Link4"></span>
-                            
+
                             <input type="hidden" class="sigilSegment quest5Segment5" name="attr_quest5sigilsegment5" value="0" />
                             <button type="action" class="sigilSegment questSegment quest5Segment5" name="act_quest5sigilsegment5" value="0"></button> <!-- Segment5 -->
                             <span class="sigilLink quest5Link5"></span>
@@ -1266,59 +1049,17 @@
 
             <!-- Familiar -->
             <section class="familiarWidget">
-                <h1>Familiar</h1>
-                    <div class="pawnSheetGrid">
-                        <section class="pawnAspects">
-                            <h1 class="name">Name</h1>
-                            <input type="text" name="attr_character_name" class="name" />
-                            <h4 class="concept">Paradigm</h4>
-                            <textarea class="concept" name="attr_concept" ></textarea>
-                            <h4 class="nature">Nature</h4>
-                            <input type="text" class="nature" name="attr_nature" list="nature" />
-                            <h4 class="description">Description</h4>
-                            <textarea name="attr_description" class="description"></textarea>
-                        </section>
-                        <!-- Charateristics -->
-                        <section class="charateristicWidget tagbox">
-                            <h2>Charateristics</h2>
-                            <textarea name="attr_charateristics"></textarea>
-                        </section>
-                        <!-- Tags -->
-                        <section class="tagWidget tagbox">
-                            <h2>Tags</h2>
-                            <textarea name="attr_tags"></textarea>
-                        </section>
-                        <!-- Resistances -->
-                        <section class="resistancesWidget">
-                            <h1>Resistances</h1>
-                            <fieldset class="repeating_resistances">
-                                <div class="resistance">
-                                    <input type="text" class="resistanceName" name="attr_pawnResistanceName" />
-                                    <input type="number" min="1" max="13" value="1" name="attr_potency" class="potency">
-                                </div>
-                            </fieldset>
-                        </section>
-                        <!-- Powers -->
-                        <section class="powersWidget">
-                            <h1>Powers</h1>
-                            <fieldset class="repeating_power">
-                                <div class="power">
-                                    <input type="text" class="powerName" name="attr_pawnPowerName" />
-                                    <textarea class="powerDescription" name="attr_pawnPowerDescription"></textarea>
-                                </div>
-                            </fieldset>
-                        </section>
-                        <!-- Key -->
-                        <section class="keyWidget">
-                            <h1>Key</h1>
-                            <fieldset class="repeating_key">
-                                <div class="key">
-                                    <input type="text" class="keyName" name="attr_pawnKeyName" />
-                                    <textarea class="key" name="attr_pawnKey"></textarea>
-                                </div>
-                            </fieldset>
-                        </section>
-                    </div>
+                <h1 class="familiarTitle">Familiar</h1>
+                <h1 class="name">Name</h1>
+                <input type="text" name="attr_FamiliarName" class="name" />
+                <h4 class="description">Description</h4>
+                <textarea name="attr_description" class="description"></textarea>
+                <!-- Boons -->
+                    <h2 class="charateristic" >Boons</h2>
+                    <textarea name="attr_charateristics" class="charateristic"></textarea>
+                <div class="aetherTracker">
+                    <input type="number" name="attr_aether" value="0" class="resourceBox" />
+                </div>
             </section>
 
             <!-- Academy Map -->
@@ -1327,7 +1068,7 @@
                     <h1 class="layoutName">Academy</h1>
                     <input type="text" name="attr_academy" class="layoutName" placeholder="Academy Name" />
                     <h3 class="layoutDescription">Description</h3>
-                    <textarea name="attr_academydescription" class="layoutDescription" placeholder="A description of the Academy" ></textarea>
+                    <textarea name="attr_academydescription" class="layoutDescription" placeholder="A description of the Academy"></textarea>
                     <!-- Sections -->
                     <fieldset class="repeating_academySections">
                         <div class="layoutSections">
@@ -1340,7 +1081,7 @@
                     <h1 class="layoutName">Sanctum</h1>
                     <input type="text" name="attr_sanctum" class="layoutName">
                     <h3 class="layoutDescription">Description</h3>
-                    <textarea name="attr_sanctumdescription" class="layoutDescription" ></textarea>
+                    <textarea name="attr_sanctumdescription" class="layoutDescription"></textarea>
                     <!-- Sections -->
                     <fieldset class="repeating_sanctumSections">
                         <div class="layoutSections">
@@ -1415,7 +1156,7 @@
                                     </li>
                                 </ol>
                             </li>
-                            
+
                             <li>
                                 æ) Components &lt;Spell Dice&gt;
                                 <ol>
@@ -1428,7 +1169,7 @@
                                     <li>Charges: Scroll, Artefact, Consumable</li>
                                     <li>Ritual Component</li>
                                     <li>Duelling Focus Charges</li>
-                                    <li>Improvised Component</li>                                    
+                                    <li>Improvised Component</li>
                                 </ol>
                             </li>
                         </ol>
@@ -1438,22 +1179,22 @@
                     <li>
                         Bargain for Circumstances
                         <ol>
-                            
+
                             <li>
-                                 æ) Take advantage &lt;Spell Dice&gt;
+                                æ) Take advantage &lt;Spell Dice&gt;
                                 <ol>
                                     <li>
                                         <em>Stitch: Seize Circumstances</em>
                                     </li>
                                 </ol>
-                        <ol>
-                            <li>Concentration</li>
-                            <li>Curses</li>
-                            <li>Cooperation</li>
-                            <li>Tags</li>
+                                <ol>
+                                    <li>Concentration</li>
+                                    <li>Curses</li>
+                                    <li>Cooperation</li>
+                                    <li>Tags</li>
+                                </ol>
+                            </li>
                         </ol>
-                        </li>
-                            </ol>
                     </li>
                     <li>
                         Describe the Casting
@@ -1507,8 +1248,7 @@
                 <button type="action" class="clearCircleButton" name="act_clearCircleResults">Clear</button>
 
                 <!-- Resources -->
-                <div class="resultResource"><input type="number" name="attr_resultResource" min="0" class="resourceBox"
-                        readonly value="0" /></div>
+                <div class="resultResource"><input type="number" name="attr_resultResource" min="0" class="resourceBox" readonly value="0" /></div>
                 <div class="aetherResource"><input type="number" name="attr_aetherResource" class="resourceBox" value="0" />
                 </div>
                 <div class="fateResource"><input type="number" name="attr_fateResource" min="0" class="resourceBox" value="0" /></div>
@@ -2049,8 +1789,7 @@
                 <div class="editMenu editTableSpread">
                     <div class="arcanaEdit leftLegEdit">
                         <h2>Aftermath</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice"
-                            name="attr_Aftermath" min="0" max="13" value="0" />
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Aftermath" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_AftermathFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
@@ -2059,8 +1798,7 @@
                     </div>
                     <div class="arcanaEdit rightLegEdit">
                         <h2>Backlash</h2>
-                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice"
-                            name="attr_Backlash" min="0" max="13" value="0" />
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Backlash" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_BacklashFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
@@ -2069,8 +1807,7 @@
                     </div>
                     <div class="arcanaEdit tabletopEdit ">
                         <h2>Complications</h2>
-                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice"
-                            name="attr_Complications" min="0" max="13" value="0" />
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Complications" min="0" max="13" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ComplicationsFacing" class="arcanaFacing">
                             <option value="0">Chaos</option>
@@ -2140,7 +1877,7 @@
                 <h1 class="name">Name</h1>
                 <input type="text" name="attr_character_name" class="name" />
                 <h4 class="concept">Paradigm</h4>
-                <textarea class="concept" name="attr_concept" ></textarea>
+                <textarea class="concept" name="attr_concept"></textarea>
                 <h4 class="nature">Nature</h4>
                 <input type="text" class="nature" name="attr_nature" list="nature" />
                 <h4 class="description">Description</h4>
@@ -2196,11 +1933,11 @@
                 <h1 class="name">Name</h1>
                 <input type="text" name="attr_character_name" class="name" />
                 <h4 class="concept">Concept</h4>
-                <textarea class="concept" name="attr_concept" ></textarea>
+                <textarea class="concept" name="attr_concept"></textarea>
                 <h4 class="nature">Nature</h4>
                 <input type="text" class="nature" name="attr_nature" />
                 <h4 class="domain">Domain</h4>
-                <textarea name="attr_domain" class="domain" ></textarea>
+                <textarea name="attr_domain" class="domain"></textarea>
             </section>
             <!-- Forms -->
             <section class="formsWidget tagbox">
@@ -2228,7 +1965,7 @@
                 <fieldset class="repeating_power">
                     <div class="power">
                         <input type="text" class="powerName" name="attr_patronPowerName" />
-                        <textarea class="powerDescription" name="attr_patronPowerDescription" ></textarea>
+                        <textarea class="powerDescription" name="attr_patronPowerDescription"></textarea>
                     </div>
                 </fieldset>
             </section>
@@ -2238,7 +1975,7 @@
                 <fieldset class="repeating_key">
                     <div class="key">
                         <input type="text" class="keyName" name="attr_patronKeyName" />
-                        <textarea class="key" name="attr_patronKey" ></textarea>
+                        <textarea class="key" name="attr_patronKey"></textarea>
                     </div>
                 </fieldset>
             </section>
@@ -2302,7 +2039,7 @@
                                     <span class="clockSpoke clockSpoke32"></span>
                                 </div>
                                 <h4 class="spellEffect">Spell Effect</h4>
-                                <textarea class="spellEffect" name="attr_spellEffect" ></textarea>
+                                <textarea class="spellEffect" name="attr_spellEffect"></textarea>
                             </div>
                         </fieldset>
                     </div>
@@ -2332,11 +2069,11 @@
                                     <span class="clockSpoke clockSpoke52"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_artefactForm" ></textarea>
+                                <textarea class="form" name="attr_artefactForm"></textarea>
                                 <h4 class="continuousEffect">Continuous</h4>
-                                <textarea class="continuousEffect" name="attr_artefactcontinuousEffect" ></textarea>
+                                <textarea class="continuousEffect" name="attr_artefactcontinuousEffect"></textarea>
                                 <h4 class="spellEffect">Spell Effect</h4>
-                                <textarea class="spellEffect" name="attr_artefactEffect" ></textarea>
+                                <textarea class="spellEffect" name="attr_artefactEffect"></textarea>
                                 <!-- <div class="attunement">
                                     <h4>Attune</h4>
                                     <input type="checkbox" value="1" name="attr_attunedCard" />
@@ -2369,9 +2106,9 @@
                                     <span class="clockSpoke clockSpoke32"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_consumableForm" ></textarea>
+                                <textarea class="form" name="attr_consumableForm"></textarea>
                                 <h4 class="spellEffect">Spell Effect</h4>
-                                <textarea class="spellEffect" name="attr_spellEffect" ></textarea>
+                                <textarea class="spellEffect" name="attr_spellEffect"></textarea>
                             </div>
                         </fieldset>
                     </div>
@@ -2460,57 +2197,57 @@
                                     <button type="action" class="sigilSegment sigilSegment1" name="act_questsigilsegment1" value="0"></button>
                                     <!-- Segment1 -->
                                     <span class="sigilLink sigilLink1"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment2" name="attr_questsigilsegment2" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment2" name="act_questsigilsegment2" value="0"></button>
                                     <!-- Segment2 -->
                                     <span class="sigilLink sigilLink2"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment3" name="attr_questsigilsegment3" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment3" name="act_questsigilsegment3" value="0"></button>
                                     <!-- Segment3 -->
                                     <span class="sigilLink sigilLink3"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment4" name="attr_questsigilsegment4" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment4" name="act_questsigilsegment4" value="0"></button>
                                     <!-- Segment4 -->
                                     <span class="sigilLink sigilLink4"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment5" name="attr_questsigilsegment5" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment5" name="act_questsigilsegment5" value="0"></button>
                                     <!-- Segment5 -->
                                     <span class="sigilLink sigilLink5"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment6" name="attr_questsigilsegment6" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment6" name="act_questsigilsegment6" value="0"></button>
                                     <!-- Segment6 -->
                                     <span class="sigilLink sigilLink6"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment7" name="attr_questsigilsegment7" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment7" name="act_questsigilsegment7" value="0"></button>
                                     <!-- Segment7 -->
                                     <span class="sigilLink sigilLink7"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment8" name="attr_questsigilsegment8" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment8" name="act_questsigilsegment8" value="0"></button>
                                     <!-- Segment8 -->
                                     <span class="sigilLink sigilLink8"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment9" name="attr_questsigilsegment9" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment9" name="act_questsigilsegment9" value="0"></button>
                                     <!-- Segment9 -->
                                     <span class="sigilLink sigilLink9"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment10" name="attr_questsigilsegment10" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment10" name="act_questsigilsegment10" value="0"></button>
                                     <!-- Segment10 -->
                                     <span class="sigilLink sigilLink10"></span>
-                                
+
                                     <input type="hidden" class="sigilSegment sigilSegment11" name="attr_questsigilsegment11" value="0" />
                                     <button type="action" class="sigilSegment sigilSegment11" name="act_questsigilsegment11" value="0"></button>
                                     <!-- Segment11 -->
                                     <span class="sigilLink sigilLink11"></span>
-                                
+
                                 </div>
                             </div>
                         </fieldset>
@@ -2588,10 +2325,8 @@
                                 <input type="text" class="spellVerb" name="attr_spellVerb" list="verbs" />
                                 <h4 class="spellComponents">Charges</h4>
                                 <div class="clockWidget">
-                                    <input type="text" name="attr_chargeClock" class="clockControl" value="0"
-                                        readonly />
-                                    <input type="number" min="0" max="3" value="0" name="attr_chargeClock"
-                                        class="clockControl" />
+                                    <input type="text" name="attr_chargeClock" class="clockControl" value="0" readonly />
+                                    <input type="number" min="0" max="3" value="0" name="attr_chargeClock" class="clockControl" />
                                     <input type="hidden" name="attr_chargeClock" value="0" class="clockSegment3" />
                                     <span class="clock"></span>
                                     <span class="clockSpoke clockSpoke30"></span>
@@ -2599,9 +2334,9 @@
                                     <span class="clockSpoke clockSpoke32"></span>
                                 </div>
                                 <h4 class="form">Form</h4>
-                                <textarea class="form" name="attr_consumableForm" ></textarea>
+                                <textarea class="form" name="attr_consumableForm"></textarea>
                                 <h4 class="spellEffect">Spell Effect</h4>
-                                <textarea class="spellEffect" name="attr_spellEffect" ></textarea>
+                                <textarea class="spellEffect" name="attr_spellEffect"></textarea>
                             </div>
                         </fieldset>
                     </div>
@@ -2637,11 +2372,9 @@
                 <div class="duellingChoice playerCard playerChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen Spell"
-                        name="attr_spellPlayerChoice1"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen Spell" name="attr_spellPlayerChoice1"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusPlayerChoice1"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusPlayerChoice1"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniquePlayerChoice1" class="techniqueChoice">
                         <option value="0"></option>
@@ -2660,11 +2393,9 @@
                 <div class="duellingChoice opponentCard opponentChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellOpponentChoice1"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellOpponentChoice1"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusOpponentChoice1"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusOpponentChoice1"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniqueOpponentChoice1">
                         <option value="0"></option>
@@ -2686,11 +2417,9 @@
                 <div class="duellingChoice playerCard playerChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellPlayerChoice2"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellPlayerChoice2"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusPlayerChoice2"> </textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusPlayerChoice2"> </textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniquePlayerChoice2">
                         <option value="0"></option>
@@ -2709,11 +2438,9 @@
                 <div class="duellingChoice opponentCard opponentChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellOpponentChoice2"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellOpponentChoice2"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusOpponentChoice2"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusOpponentChoice2"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniqueOpponentChoice2">
                         <option value="0"></option>
@@ -2735,11 +2462,9 @@
                 <div class="duellingChoice playerCard playerChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellPlayerChoice3"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellPlayerChoice3"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusPlayerChoice3"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusPlayerChoice3"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniquePlayerChoice3">
                         <option value="0"></option>
@@ -2758,11 +2483,9 @@
                 <div class="duellingChoice opponentCard opponentChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellOpponentChoice3"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellOpponentChoice3"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusOpponentChoice3"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusOpponentChoice3"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniqueOpponentChoice3">
                         <option value="0"></option>
@@ -2784,11 +2507,9 @@
                 <div class="duellingChoice playerCard playerChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellPlayerChoice4"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellPlayerChoice4"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusPlayerChoice4"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusPlayerChoice4"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniquePlayerChoice4">
                         <option value="0"></option>
@@ -2807,11 +2528,9 @@
                 <div class="duellingChoice opponentCard opponentChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellOpponentChoice4"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellOpponentChoice4"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusOpponentChoice4"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusOpponentChoice4"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniqueOpponentChoice4">
                         <option value="0"></option>
@@ -2834,11 +2553,9 @@
                 <div class="duellingChoice playerCard playerChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellPlayerChoice5"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellPlayerChoice5"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusPlayerChoice5"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusPlayerChoice5"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniquePlayerChoice5">
                         <option value="0"></option>
@@ -2857,11 +2574,9 @@
                 <div class="duellingChoice opponentCard opponentChoice">
                     <h3 class="exchangeChoices">Choices</h3>
                     <h4 class="spellChoice">Spell</h4>
-                    <textarea class="spellChoice" placeholder="Record your chosen spell"
-                        name="attr_spellOpponentChoice5"></textarea>
+                    <textarea class="spellChoice" placeholder="Record your chosen spell" name="attr_spellOpponentChoice5"></textarea>
                     <h4 class="focusChoice">Dueling Focus</h4>
-                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus"
-                        name="attr_focusOpponentChoice5"></textarea>
+                    <textarea class="focusChoice" placeholder="Record your chosen Dueling Focus" name="attr_focusOpponentChoice5"></textarea>
                     <h4 class="techniqueChoice">Technique</h4>
                     <select name="attr_techniqueOpponentChoice5">
                         <option value="0"></option>
