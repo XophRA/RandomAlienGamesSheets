@@ -251,12 +251,6 @@ body,
     background-image: linear-gradient(to right, var(--bgFieldDark), var(--bgFieldLight), transparent, transparent );
 }
 
-    .charsheet textarea.titlefill, .charsheet input[type="text"].titlefill
-    {
-        font-weight: 600;
-        font-size: 1.1em;
-    }
-
 .charsheet textarea
 {
     padding-top: 4px;
@@ -3863,7 +3857,7 @@ input.editToggle[value="1"] + .editMenu
     grid-area: 1/2/auto/span 2;
     display: grid;
     grid-template-columns: 145px auto 40px 20px;
-    grid-template-rows: repeat(7,21px) 1fr 2fr;
+    grid-template-rows: repeat(8,21px) 1fr 80px;
     grid-gap: 0fr;
     height: 100%;
     width: 100%;
@@ -3873,7 +3867,7 @@ input.editToggle[value="1"] + .editMenu
     .descriptionWidget > input.level
     {
         grid-area: 1/-3/auto/-2;
-        margin-top: -15px;
+        margin-top: -13px;
         font-family: "Fredericka the Great", cursive;
         font-weight: 600;
         font-size: 30px;
@@ -3918,14 +3912,19 @@ input.editToggle[value="1"] + .editMenu
         grid-area: 7/2/auto/-1;
     }
 
-    .descriptionWidget > .characteristics
+    .descriptionWidget > .technique
     {
         grid-area: 8/2/auto/-1;
     }
 
-    .descriptionWidget > .description
+    .descriptionWidget > .characteristics
     {
         grid-area: 9/2/auto/-1;
+    }
+
+    .descriptionWidget > .description
+    {
+        grid-area: 10/2/auto/-1;
     }
 
 /* Aether */
