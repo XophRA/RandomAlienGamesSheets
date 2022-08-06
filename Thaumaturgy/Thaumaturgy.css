@@ -398,7 +398,7 @@ main.masterGrid
     display: grid;
     row-gap: 0px;
     grid-template-columns: 120px 1fr 280px 120px;
-    grid-template-rows: 17px 703px 52px 553px 575px auto;
+    grid-template-rows: 17px 703px 52px 516px 640px auto;
     justify-items: start;
     align-items: start;
 }
@@ -3242,8 +3242,8 @@ input[type="number"].rippleBox
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 10px 138px 137px 70px 138px 111px 25px auto;
-    grid-template-rows: 46px 125px 150px 175px auto;
+    grid-template-columns: 19px 138px 137px 6px 138px 111px 25px auto;
+    grid-template-rows: 46px 125px 150px 350px auto;
     align-items: center;
     justify-items: center;
 }
@@ -3263,21 +3263,15 @@ input[type="number"].rippleBox
 
     .tableSpread > .speculation
     {
-        grid-column: -2/auto;
-    }
-
-    .tableSpread > h3.speculation
-    {
-        margin-left: 5px;
+        grid-column: -3/span 2;
     }
 
     .tableSpread > textarea.speculation
     {
-        grid-row: 2/-2;
+        grid-row: 2/3;
         margin: 0;
         width: 96%;
         height: 100%;
-        margin-left: 30px;
     }
 
     .tableSpread > .leftLeg
@@ -3302,45 +3296,27 @@ input[type="number"].rippleBox
         transform: rotate( -90deg);
     }
 
+    .tableSpread > .drag
+    {
+        grid-area: 3 / 8 / span 2 / -1;
+        display: grid;
+        z-index: 4;
+    }
+
     .tableSpread > .editTableSpread
     {
         grid-area: 2 / 2 / -1 / -1;
         display: grid;
-        grid-template-columns: repeat(2,1fr) 70px repeat(2,1fr);
-        grid-template-rows: 75px 175px auto;
+        grid-template-columns: 39px 236px 6px 234px 38px 8px 1fr;
+        grid-template-rows: 138px 137px 335px auto;
         padding: 2px;
     }
 
-        .tableSpread > .editTableSpread > .leftLegEdit
-        {
-            grid-area: 2 / 1 / -1 / span 2;
-            display: grid;
-            width: 100%;
-            height: 30%;
-            align-self: end;
-        }
-
-        .tableSpread > .editTableSpread > .rightLegEdit
-        {
-            grid-area: 2 / -3 / -1 / -1;
-            display: grid;
-            width: 100%;
-            height: 30%;
-            align-self: end;
-        }
-
-        .tableSpread > .editTableSpread > .tabletopEdit
-        {
-            grid-area: 1 / 2 / span 2 / -2;
-            display: grid;
-            margin: 0 10px 0 10px;
-            width: 94%;
-            height: 40%;
-            align-self: start;
-        }
-
         .tableSpread > .editTableSpread > .arcanaEdit
         {
+            display: grid;
+            width: 275px;
+            height: 475px;
             grid-template-columns: 50px 80px 1fr;
             grid-template-rows: 30px repeat(2, 22px);
         }
@@ -3364,7 +3340,31 @@ input[type="number"].rippleBox
             .tableSpread > .editTableSpread > .arcanaEdit select
             {
                 grid-column: 2/3;
+                color: black;
+                background: transparent;
             }
+
+         .tableSpread > .editTableSpread > .leftLegEdit
+        {
+            grid-area: 2 / 1 / span 2 / span 2;
+        }
+
+        .tableSpread > .editTableSpread > .rightLegEdit
+        {
+            grid-area: 3 / 4 / 4 / 6;
+        }
+
+        .tableSpread > .editTableSpread > .tabletopEdit
+        {
+            grid-area: 1 / 2 / span 2 / span 3;
+            height: 275px;
+            width: 475px;
+        }
+
+        .tableSpread > .editTableSpread > .dragEdit
+        {
+            grid-area: 2 / 7 / span 2 / -1;
+        }
 
     .tableSpread > div > input.facingChoice[value="1"] + input.cardChoice + span.card
     {
@@ -3880,6 +3880,7 @@ input.editToggle[value="1"] + .editMenu
         min-height: 40px;
         min-width: 40px;
         text-align: center;
+        background-image: none;
     }
 
     .descriptionWidget > .rank
@@ -5291,7 +5292,7 @@ input[type="radio"]:hover + span.ZeroDie
     align-items: start;
 }
 
-.keyTellWidget
+.keyWidget
 {
     display: grid;
     width: 100%;
@@ -5358,27 +5359,21 @@ div.key
     width: 842px;
     height: 100%;
     grid-area: 2/1/auto/auto;
-    grid-template-columns: 12px 1fr 1fr;
-    grid-template-rows: repeat(3,22px);
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2,22px);
     justify-items: start;
     align-items: start;
     margin: 3px;
-    grid-gap: 3px;
 }
 
-.keyTellWidget .keyDamage
+.keyWidget .keyName
 {
     grid-area: 1/1/auto/auto;
 }
 
-.keyTellWidget textarea.key
+.keyWidget textarea.key
 {
     grid-area: 1/2/-1/auto;
-}
-
-.keyTellWidget .tell
-{
-    grid-area: 1/3/-1/auto;
 }
 
 /* Pawn of Fate Sheet */
