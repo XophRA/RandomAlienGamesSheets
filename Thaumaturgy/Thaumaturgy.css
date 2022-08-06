@@ -808,6 +808,9 @@ main.masterGrid
         grid-area: 1/-2/4/-1;
         height: 120px;
         width: 120px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 120px 120px;
         background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/Resource.png);
     }
     
