@@ -812,11 +812,11 @@
             <section class="covenAspects">
                 <input type="text" name="attr_character_name" class="covenName" />
                 <h4 class="covenDescription">Location</h4>
-                <textarea name="attr_covendescription" class="covenDescription" />
+                <textarea name="attr_covendescription" class="covenDescription"></textarea>
                 <h4 class="covenkins">Covenkin</h4>
-                <textarea name="attr_covenkins" class="covenkins" />
+                <textarea name="attr_covenkins" class="covenkins" ></textarea>
                 <h4 class="seniorCovens">Senior Covens</h4>
-                <textarea name="attr_seniorCovens" class="seniorCovens" />
+                <textarea name="attr_seniorCovens" class="seniorCovens" ></textarea>
             </section>
             <!-- Rituals and Ascension -->
             <section class="ritualWidget">
@@ -899,8 +899,8 @@
                     <span class="level lvl9">9</span>
                     <span class="level lvl10">10</span>
                     <span class="level lvl11">11</span>
-                    <span class="level lvl12">12</span>
-                    <span class="level lvl13">13</span>
+                    <!-- <span class="level lvl12">12</span>
+                    <span class="level lvl13">13</span> -->
                     <div class="card customCard ascensionCard">
                         <h4 class="ritualSigilSize">Arc</h4>
                         <input type="text" class="ritualSigilSize" name="attr_ascensionObjective" readonly />
@@ -939,109 +939,134 @@
 
                             <!-- Quest Sigils -->
                             <!-- Quest 1 Milestones-->
+                            <!-- Segment1 -->
                             <input type="hidden" class="sigilSegment quest1Segment1" name="attr_quest1sigilsegment1" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest1Segment1" name="act_quest1sigilsegment1" value="0"></button> <!-- Segment1 -->
+                            <button type="action" class="sigilSegment questSegment quest1Segment1" name="act_quest1sigilsegment1" value="0"></button>
                             <span class="sigilLink quest1Link1"></span>
 
+                            <!-- Segment2 -->
                             <input type="hidden" class="sigilSegment quest1Segment2" name="attr_quest1sigilsegment2" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest1Segment2" name="act_quest1sigilsegment2" value="0"></button> <!-- Segment2 -->
+                            <button type="action" class="sigilSegment questSegment quest1Segment2" name="act_quest1sigilsegment2" value="0"></button>
                             <span class="sigilLink quest1Link2"></span>
 
+                            <!-- Segment3 -->
                             <input type="hidden" class="sigilSegment quest1Segment3" name="attr_quest1sigilsegment3" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest1Segment3" name="act_quest1sigilsegment3" value="0"></button> <!-- Segment3 -->
+                            <button type="action" class="sigilSegment questSegment quest1Segment3" name="act_quest1sigilsegment3" value="0"></button>
                             <span class="sigilLink quest1Link3"></span>
 
-                            <input type="hidden" class="sigilSegment quest1Segment4" name="attr_quest1sigilsegment4" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest1Segment4" name="act_quest1sigilsegment4" value="0"></button> <!-- Segment4 -->
-                            <span class="sigilLink quest1Link4"></span>
+                            <!-- Segment4 -->
+                            <!-- <input type="hidden" class="sigilSegment quest1Segment4" name="attr_quest1sigilsegment4" value="0" /> -->
+                            <!-- <button type="action" class="sigilSegment questSegment quest1Segment4" name="act_quest1sigilsegment4" value="0"></button> --> 
+                            <!-- <span class="sigilLink quest1Link4"></span> -->
 
-                            <input type="hidden" class="sigilSegment quest1Segment5" name="attr_quest1sigilsegment5" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest1Segment5" name="act_quest1sigilsegment5" value="0"></button> <!-- Segment5 -->
-                            <span class="sigilLink quest1Link5"></span>
+                            <!-- Segment5 -->
+                            <!-- <input type="hidden" class="sigilSegment quest1Segment5" name="attr_quest1sigilsegment5" value="0" /> -->
+                            <!-- <button type="action" class="sigilSegment questSegment quest1Segment5" name="act_quest1sigilsegment5" value="0"></button> --> 
+                            <!-- <span class="sigilLink quest1Link5"></span> -->
 
                             <!-- Quest 2 Milestones-->
+                            <!-- Segment1 -->
                             <input type="hidden" class="sigilSegment quest2Segment1" name="attr_quest2sigilsegment1" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest2Segment1" name="act_quest2sigilsegment1" value="0"></button> <!-- Segment1 -->
+                            <button type="action" class="sigilSegment questSegment quest2Segment1" name="act_quest2sigilsegment1" value="0"></button>
                             <span class="sigilLink quest2Link1"></span>
 
+                            <!-- Segment2 -->
                             <input type="hidden" class="sigilSegment quest2Segment2" name="attr_quest2sigilsegment2" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest2Segment2" name="act_quest2sigilsegment2" value="0"></button> <!-- Segment2 -->
+                            <button type="action" class="sigilSegment questSegment quest2Segment2" name="act_quest2sigilsegment2" value="0"></button>
                             <span class="sigilLink quest2Link2"></span>
 
+                            <!-- Segment3 -->
                             <input type="hidden" class="sigilSegment quest2Segment3" name="attr_quest2sigilsegment3" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest2Segment3" name="act_quest2sigilsegment3" value="0"></button> <!-- Segment3 -->
+                            <button type="action" class="sigilSegment questSegment quest2Segment3" name="act_quest2sigilsegment3" value="0"></button>
                             <span class="sigilLink quest2Link3"></span>
 
-                            <input type="hidden" class="sigilSegment quest2Segment4" name="attr_quest2sigilsegment4" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest2Segment4" name="act_quest2sigilsegment4" value="0"></button> <!-- Segment4 -->
-                            <span class="sigilLink quest2Link4"></span>
+                            <!-- Segment4 -->
+                            <!-- <input type="hidden" class="sigilSegment quest2Segment4" name="attr_quest2sigilsegment4" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest2Segment4" name="act_quest2sigilsegment4" value="0"></button> 
+                            <span class="sigilLink quest2Link4"></span> -->
 
-                            <input type="hidden" class="sigilSegment quest2Segment5" name="attr_quest2sigilsegment5" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest2Segment5" name="act_quest2sigilsegment5" value="0"></button> <!-- Segment5 -->
-                            <span class="sigilLink quest2Link5"></span>
+                            <!-- Segment5 -->
+                            <!-- <input type="hidden" class="sigilSegment quest2Segment5" name="attr_quest2sigilsegment5" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest2Segment5" name="act_quest2sigilsegment5" value="0"></button> 
+                            <span class="sigilLink quest2Link5"></span> -->
 
                             <!-- Quest 3 Milestones-->
+                            <!-- Segment1 -->
                             <input type="hidden" class="sigilSegment quest3Segment1" name="attr_quest3sigilsegment1" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest3Segment1" name="act_quest3sigilsegment1" value="0"></button> <!-- Segment1 -->
+                            <button type="action" class="sigilSegment questSegment quest3Segment1" name="act_quest3sigilsegment1" value="0"></button> 
                             <span class="sigilLink quest3Link1"></span>
 
+                            <!-- Segment2 -->
                             <input type="hidden" class="sigilSegment quest3Segment2" name="attr_quest3sigilsegment2" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest3Segment2" name="act_quest3sigilsegment2" value="0"></button> <!-- Segment2 -->
+                            <button type="action" class="sigilSegment questSegment quest3Segment2" name="act_quest3sigilsegment2" value="0"></button> 
                             <span class="sigilLink quest3Link2"></span>
 
+                            <!-- Segment3 -->
                             <input type="hidden" class="sigilSegment quest3Segment3" name="attr_quest3sigilsegment3" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest3Segment3" name="act_quest3sigilsegment3" value="0"></button> <!-- Segment3 -->
+                            <button type="action" class="sigilSegment questSegment quest3Segment3" name="act_quest3sigilsegment3" value="0"></button>
                             <span class="sigilLink quest3Link3"></span>
 
-                            <input type="hidden" class="sigilSegment quest3Segment4" name="attr_quest3sigilsegment4" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest3Segment4" name="act_quest3sigilsegment4" value="0"></button> <!-- Segment4 -->
-                            <span class="sigilLink quest3Link4"></span>
+                            <!-- Segment4 -->
+                            <!-- <input type="hidden" class="sigilSegment quest3Segment4" name="attr_quest3sigilsegment4" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest3Segment4" name="act_quest3sigilsegment4" value="0"></button> 
+                            <span class="sigilLink quest3Link4"></span> -->
 
-                            <input type="hidden" class="sigilSegment quest3Segment5" name="attr_quest3sigilsegment5" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest3Segment5" name="act_quest3sigilsegment5" value="0"></button> <!-- Segment5 -->
-                            <span class="sigilLink quest3Link5"></span>
+                            <!-- Segment5 -->
+                            <!-- <input type="hidden" class="sigilSegment quest3Segment5" name="attr_quest3sigilsegment5" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest3Segment5" name="act_quest3sigilsegment5" value="0"></button> 
+                            <span class="sigilLink quest3Link5"></span> -->
 
                             <!-- Quest 4 Milestones-->
+                            <!-- Segment1 -->
                             <input type="hidden" class="sigilSegment quest4Segment1" name="attr_quest4sigilsegment1" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest4Segment1" name="act_quest4sigilsegment1" value="0"></button> <!-- Segment1 -->
+                            <button type="action" class="sigilSegment questSegment quest4Segment1" name="act_quest4sigilsegment1" value="0"></button>
                             <span class="sigilLink quest4Link1"></span>
 
+                            <!-- Segment2 -->
                             <input type="hidden" class="sigilSegment quest4Segment2" name="attr_quest4sigilsegment2" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest4Segment2" name="act_quest4sigilsegment2" value="0"></button> <!-- Segment2 -->
+                            <button type="action" class="sigilSegment questSegment quest4Segment2" name="act_quest4sigilsegment2" value="0"></button> 
                             <span class="sigilLink quest4Link2"></span>
 
+                             <!-- Segment3 -->
                             <input type="hidden" class="sigilSegment quest4Segment3" name="attr_quest4sigilsegment3" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest4Segment3" name="act_quest4sigilsegment3" value="0"></button> <!-- Segment3 -->
+                            <button type="action" class="sigilSegment questSegment quest4Segment3" name="act_quest4sigilsegment3" value="0"></button>
                             <span class="sigilLink quest4Link3"></span>
 
-                            <input type="hidden" class="sigilSegment quest4Segment4" name="attr_quest4sigilsegment4" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest4Segment4" name="act_quest4sigilsegment4" value="0"></button> <!-- Segment4 -->
-                            <span class="sigilLink quest4Link4"></span>
+                            <!-- Segment4 -->
+                            <!-- <input type="hidden" class="sigilSegment quest4Segment4" name="attr_quest4sigilsegment4" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest4Segment4" name="act_quest4sigilsegment4" value="0"></button> 
+                            <span class="sigilLink quest4Link4"></span> -->
 
-                            <input type="hidden" class="sigilSegment quest4Segment5" name="attr_quest4sigilsegment5" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest4Segment5" name="act_quest4sigilsegment5" value="0"></button> <!-- Segment5 -->
-                            <span class="sigilLink quest4Link5"></span>
+                            <!-- Segment5 -->
+                            <!-- <input type="hidden" class="sigilSegment quest4Segment5" name="attr_quest4sigilsegment5" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest4Segment5" name="act_quest4sigilsegment5" value="0"></button> 
+                            <span class="sigilLink quest4Link5"></span> -->
 
                             <!-- Quest 5 Milestones-->
+                            <!-- Segment1 -->
                             <input type="hidden" class="sigilSegment quest5Segment1" name="attr_quest5sigilsegment1" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest5Segment1" name="act_quest5sigilsegment1" value="0"></button> <!-- Segment1 -->
+                            <button type="action" class="sigilSegment questSegment quest5Segment1" name="act_quest5sigilsegment1" value="0"></button> 
                             <span class="sigilLink quest5Link1"></span>
 
+                            <!-- Segment2 -->
                             <input type="hidden" class="sigilSegment quest5Segment2" name="attr_quest5sigilsegment2" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest5Segment2" name="act_quest5sigilsegment2" value="0"></button> <!-- Segment2 -->
+                            <button type="action" class="sigilSegment questSegment quest5Segment2" name="act_quest5sigilsegment2" value="0"></button> 
                             <span class="sigilLink quest5Link2"></span>
 
+                            <!-- Segment3 -->
                             <input type="hidden" class="sigilSegment quest5Segment3" name="attr_quest5sigilsegment3" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest5Segment3" name="act_quest5sigilsegment3" value="0"></button> <!-- Segment3 -->
+                            <button type="action" class="sigilSegment questSegment quest5Segment3" name="act_quest5sigilsegment3" value="0"></button> 
                             <span class="sigilLink quest5Link3"></span>
 
-                            <input type="hidden" class="sigilSegment quest5Segment4" name="attr_quest5sigilsegment4" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest5Segment4" name="act_quest5sigilsegment4" value="0"></button> <!-- Segment4 -->
-                            <span class="sigilLink quest5Link4"></span>
+                            <!-- Segment4 -->
+                            <!-- <input type="hidden" class="sigilSegment quest5Segment4" name="attr_quest5sigilsegment4" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest5Segment4" name="act_quest5sigilsegment4" value="0"></button> 
+                            <span class="sigilLink quest5Link4"></span> -->
 
-                            <input type="hidden" class="sigilSegment quest5Segment5" name="attr_quest5sigilsegment5" value="0" />
-                            <button type="action" class="sigilSegment questSegment quest5Segment5" name="act_quest5sigilsegment5" value="0"></button> <!-- Segment5 -->
-                            <span class="sigilLink quest5Link5"></span>
+                            <!-- Segment5 -->
+                            <!-- <input type="hidden" class="sigilSegment quest5Segment5" name="attr_quest5sigilsegment5" value="0" />
+                            <button type="action" class="sigilSegment questSegment quest5Segment5" name="act_quest5sigilsegment5" value="0"></button> 
+                            <span class="sigilLink quest5Link5"></span> -->
                         </div>
                     </div>
                 </div>
@@ -1179,7 +1204,6 @@
                     <li>
                         Bargain for Circumstances
                         <ol>
-
                             <li>
                                 æ) Take advantage &lt;Spell Dice&gt;
                                 <ol>
@@ -1188,10 +1212,7 @@
                                     </li>
                                 </ol>
                                 <ol>
-                                    <li>Concentration</li>
-                                    <li>Curses</li>
-                                    <li>Cooperation</li>
-                                    <li>Tags</li>
+                                    <li>Concentration, Cooperation, Curses, Lore</li>
                                 </ol>
                             </li>
                         </ol>
@@ -1208,8 +1229,11 @@
                         Confront the Tangle
                         <ol>
                             <li>Face Tangle</li>
-                            <li>Tags</li>
-                            <li>Excess Dice</li>
+                        </ol>
+                        <ol>
+                            <li>Lore, Excess Dice</li>
+                        </ol>
+                        <ol>
                             <li>Cast the Dice</li>
                         </ol>
                     </li>
@@ -1217,12 +1241,16 @@
                         Interpetation
                         <ol>
                             <li>Matching</li>
-                            <li>Potential, Ripples</li>
-                            <li>Outcome: Intended or Corrupted</li>
+                            <li>Potential</li>
+                            <li>Ripples</li>
+                            <li>Outcome</li>
+                            <ol>
+                                <li> Intended or Corrupted</li>
+                            </ol>
                         </ol>
                     </li>
-                </ol>
-            </section>
+                    </ol>
+                    </section>
 
             <!-- Magic Circle-->
             <section class="magicCircle">
@@ -1857,14 +1885,14 @@
                 <h1 class="name">Drama</h1>
                 <input type="text" name="attr_character_name" class="name" />
                 <h4 class="tags">Notes</h4>
-                <textarea class="tags" name="attr_notes" />
+                <textarea class="tags" name="attr_notes"></textarea>
             </section>
             <fieldset class="repeating_folk">
                 <section class="tagCharacterAspects">
                     <h4 class="name">Name</h4>
                     <input type="text" name="attr_character_name" class="name" />
                     <h4 class="tags">Tags</h4>
-                    <textarea class="tags" name="attr_tags" />
+                    <textarea class="tags" name="attr_tags" ></textarea>
                 </section>
             </fieldset>
         </div>
@@ -2653,72 +2681,36 @@
             {
                 /*Set Ascension Objective*/
                 covenLevel = parseInt(values.covenLevel) || 0;
-                let nextLevel = covenLevel + 1;
                 let ascensionObjective = "";
                 let ascensionSigilSize = 1;
 
 
-                if (nextLevel <= 1)
+                if (covenLevel <= 0)
                 {
                     ascensionObjective = "Initiate";
                     ascensionSigilSize = 1;
                 }
-                else if (nextLevel == 2)
-                {
-                    ascensionObjective = "Student";
-                    ascensionSigilSize = 1;
-                }
-                else if (nextLevel == 3)
-                {
-                    ascensionObjective = "Duelist";
-                    ascensionSigilSize = 2;
-                }
-                else if (nextLevel == 4)
+                else if (covenLevel <= 3)
                 {
                     ascensionObjective = "Apprentice";
                     ascensionSigilSize = 2;
                 }
-                else if (nextLevel == 5)
-                {
-                    ascensionObjective = "Artificer";
-                    ascensionSigilSize = 3;
-                }
-                else if (nextLevel == 6)
+                else if (covenLevel <= 5)
                 {
                     ascensionObjective = "Keeper";
                     ascensionSigilSize = 3;
                 }
-                else if (nextLevel == 7)
+                else if (covenLevel <= 7)
                 {
-                    ascensionObjective = "Harbingers";
+                    ascensionObjective = "Scholar";
                     ascensionSigilSize = 3;
                 }
-                else if (nextLevel == 8)
-                {
-                    ascensionObjective = "Senior";
-                    ascensionSigilSize = 4;
-                }
-                else if (nextLevel == 9)
-                {
-                    ascensionObjective = "Graduate";
-                    ascensionSigilSize = 4;
-                }
-                else if (nextLevel == 10)
-                {
-                    ascensionObjective = "Mentor";
-                    ascensionSigilSize = 4;
-                }
-                else if (nextLevel == 11)
+                else if (covenLevel <= 9)
                 {
                     ascensionObjective = "Master";
-                    ascensionSigilSize = 5;
+                    ascensionSigilSize = 4;
                 }
-                else if (nextLevel == 12)
-                {
-                    ascensionObjective = "Immortal";
-                    ascensionSigilSize = 5;
-                }
-                else if (nextLevel == 13)
+                else if (covenLevel <= 11)
                 {
                     ascensionObjective = "Ascendent";
                     ascensionSigilSize = 5;
