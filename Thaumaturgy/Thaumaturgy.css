@@ -908,60 +908,60 @@ main.masterGrid
 
         .ascensionDeck .level.lvl1
         {
-            grid-area: 2/-4/span 2/auto;
+            grid-area: 2/-7/span 2/auto;
         }
 
         .ascensionDeck .level.lvl2
         {
-            grid-area: 4/-3/span 2/auto;
+            grid-area: 4/-4/span 2/auto;
         }
 
         .ascensionDeck .level.lvl3
         {
-            grid-area: 10/-2/span 2/auto;
+            grid-area: 6/-3/span 2/auto;
         }
 
         .ascensionDeck .level.lvl4
         {
-            grid-area: 12/-3/span 2/auto;
+            grid-area: 8/-5/span 2/auto;
         }
 
         .ascensionDeck .level.lvl5
         {
-            grid-area: 17/-4/span 2/auto;
+            grid-area: 10/-6/span 2/auto;
         }
 
         .ascensionDeck .level.lvl6
         {
-            grid-area: 20/-3/span 2/auto;
+            grid-area: 12/-4/span 2/auto;
         }
 
         .ascensionDeck .level.lvl7
         {
-            grid-area: 22/-5/span 2/auto;
+            grid-area: 14/-5/span 2/auto;
         }
 
         .ascensionDeck .level.lvl8
         {
-            grid-area: 22/7/span 2/auto;
+            grid-area: 17/-4/span 2/auto;
         }
 
         .ascensionDeck .level.lvl9
         {
-            grid-area: 22/4/span 2/auto;
+            grid-area: 19/-3/span 2/auto;
         }
 
         .ascensionDeck .level.lvl10
         {
-            grid-area: 18/2/span 2/span 2;
+            grid-area: 22/-7/span 2/span 2;
         }
 
         .ascensionDeck .level.lvl11
         {
-            grid-area: 11/2/span 2/span 2;
+            grid-area: 22/-9/span 2/span 2;
         }
 
-        .ascensionDeck .level.lvl12
+        /* .ascensionDeck .level.lvl12
         {
             grid-area: 8/2/span 2/span 2;
         }
@@ -969,7 +969,7 @@ main.masterGrid
         .ascensionDeck .level.lvl13
         {
             grid-area: 4/3/span 2/span 2;
-        }
+        } */
     /* Visability lavel 1*/
     .ascensionDeck input[value="1"].levelControl ~ .lvl1,
     /* Visability lavel 2*/
@@ -1081,7 +1081,7 @@ main.masterGrid
     /* Ascension Card */
     .ascensionDeck .ascensionCard
     {
-        grid-area: 3/5/span 18/span 13;
+        grid-area: 3/2/span 18/span 13;
     }
 
 .ascensionCard
