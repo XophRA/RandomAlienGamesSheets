@@ -1375,23 +1375,23 @@ main.masterGrid
         /* Quest 1 Milestone Locations */
         .ascensionCard .ritualSigil > .quest1Segment1
         {
-            grid-area: 3/2/auto/auto;
-            margin: 0 0 0 4px;
+            grid-area: 3/5/auto/auto;
+            margin: 2px 0 0 0;
         }
 
         .ascensionCard .ritualSigil > .quest1Segment2
         {
-            grid-area: 6/3/auto/auto;
-            margin: 4px 0 0 6px;
+            grid-area: 7/6/auto/auto;
+            margin: 0 0 0 0;
         }
 
         .ascensionCard .ritualSigil > .quest1Segment3
         {
-            grid-area: 5/4/auto/auto;
-            margin: 8px 0 0 8px;
+            grid-area: 6/7/auto/auto;
+            margin: 0 0 0 2px;
         }
 
-        .ascensionCard .ritualSigil > .quest1Segment4
+        /* .ascensionCard .ritualSigil > .quest1Segment4
         {
             grid-area: 4/6/auto/auto;
             margin: 0 0 0 2px;
@@ -1401,31 +1401,31 @@ main.masterGrid
         {
             grid-area: 6/7/auto/auto;
             margin: 1px 0 0 2px;
-        }
+        } */
 
         /* Quest 2 Milestone Locations */
         .ascensionCard .ritualSigil > .quest2Segment1
         {
-            grid-area: 8/8/auto/auto;
-            margin: 2px 0 0 0;
+            grid-area: 9/6/auto/auto;
+            margin: 0 0 0 0;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest2Segment2
         {
-            grid-area: 9/6/auto/auto;
-            margin: 3px 0 0 2px;
+            grid-area: 10/4/auto/auto;
+            margin: 3px 0 0 0;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest2Segment3
         {
-            grid-area: 10/8/auto/auto;
+            grid-area: 11/6/auto/auto;
             margin: 4px 0 0 0;
             display: none;
         }
 
-        .ascensionCard .ritualSigil > .quest2Segment4
+        /* .ascensionCard .ritualSigil > .quest2Segment4
         {
             grid-area: 11/7/auto/auto;
             margin: 2px 0 0 -5px;
@@ -1437,31 +1437,31 @@ main.masterGrid
             grid-area: 13/6/auto/auto;
             margin: -6px 0 0 -3px;
             display: none;
-        }
+        } */
 
         /* Quest 3 Milestone Locations */
         .ascensionCard .ritualSigil > .quest3Segment1
         {
-            grid-area: 14/5/auto/auto;
-            margin: 5px 0 0 3px;
+            grid-area: 15/5/auto/auto;
+            margin: 6px 0 0 3px;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest3Segment2
         {
-            grid-area: 16/4/auto/auto;
-            margin: -1px 0 0 7px;
+            grid-area: 17/4/auto/auto;
+            margin: 3px 0 0 3px;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest3Segment3
         {
-            grid-area: 17/3/auto/auto;
-            margin: 5px 0 0 -3px;
+            grid-area: 19/4/auto/auto;
+            margin: 0 0 0 3px;
             display: none;
         }
 
-        .ascensionCard .ritualSigil > .quest3Segment4
+        /* .ascensionCard .ritualSigil > .quest3Segment4
         {
             grid-area: 19/4/auto/auto;
             margin: -6px 0 0 3px;
@@ -1473,31 +1473,31 @@ main.masterGrid
             grid-area: 20/4/auto/auto;
             margin: 4px 0 0 3px;
             display: none;
-        }
+        } */
 
         /* Quest 4 Milestone Locations */
         .ascensionCard .ritualSigil > .quest4Segment1
         {
-            grid-area: 21/8/auto/auto;
-            margin: 8px 0 0 2px;
+            grid-area: 22/8/auto/auto;
+            margin: 7px 0 0 0;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest4Segment2
         {
-            grid-area: 23/6/auto/auto;
-            margin: -1px 0 0 -4px;
+            grid-area: 24/5/auto/auto;
+            margin: 0 0 0 2px;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest4Segment3
         {
-            grid-area: 24/8/auto/auto;
-            margin: -2px 0 0 0;
+            grid-area: 26/6/auto/auto;
+            margin: -5px 0 0 7px;
             display: none;
         }
 
-        .ascensionCard .ritualSigil > .quest4Segment4
+        /* .ascensionCard .ritualSigil > .quest4Segment4
         {
             grid-area: 25/5/auto/auto;
             margin: 0 0 0 3px;
@@ -1509,31 +1509,31 @@ main.masterGrid
             grid-area: 27/7/auto/auto;
             margin: -6px 0 0 -6px;
             display: none;
-        }
+        } */
 
         /* Quest 5 Milestone Locations */
         .ascensionCard .ritualSigil > .quest5Segment1
         {
-            grid-area: 28/7/auto/auto;
-            margin: -2px 0 0 0;
+            grid-area: 30/6/auto/auto;
+            margin: 3px 0 0 2px;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest5Segment2
         {
-            grid-area: 29/5/auto/auto;
-            margin: -1px 0 0 -2px;
+            grid-area: 33/5/auto/auto;
+            margin: -4px 0 0 4px;
             display: none;
         }
 
         .ascensionCard .ritualSigil > .quest5Segment3
         {
-            grid-area: 30/6/auto/auto;
-            margin: 4px 0 0 5px;
+            grid-area: 34/7/auto/auto;
+            margin: 8px 0 0 0;
             display: none;
         }
 
-        .ascensionCard .ritualSigil > .quest5Segment4
+        /* .ascensionCard .ritualSigil > .quest5Segment4
         {
             grid-area: 33/5/auto/auto;
             margin: -5px 0 0 3px;
@@ -1545,7 +1545,7 @@ main.masterGrid
             grid-area: 35/7/auto/auto;
             margin: -3px 0 0 -1px;
             display: none;
-        }
+        } */
 
         /* Quest 1 Milestone Links*/
         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest1Link1
@@ -1581,29 +1581,7 @@ main.masterGrid
             background-size: 29px 35px;
             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest1Link3.png);
         } 
-        .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest1Link4
-        {
-            grid-area: 4/6/span 4/span 2;
-            margin: -4px 0 0 0;
-            width: 24px;
-            height: 42px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 24px 42px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest1Link4.png);
-        }
-        .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest1Link5
-        {
-            grid-area: 6/7/span 2/span 3;
-            margin: 1px 0 0 1px;
-            width: 30px;
-            height: 22px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 30px 22px;
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest1Link5.png);
-        }
-
+        
          /* Quest 2 Milestone Links*/
          .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest2Link1
          {
@@ -1637,8 +1615,33 @@ main.masterGrid
              background-position: center;
              background-size: 31px 22px;
              background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest2Link3.png);
-         } 
-         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest2Link4
+         }
+
+         /* Quest 3 Milestone Links */
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest3Link1
+        {
+            grid-area: 4/6/span 4/span 2;
+            margin: -4px 0 0 0;
+            width: 24px;
+            height: 42px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 24px 42px;
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest3Link1.png);
+        }
+        .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest3Link2
+        {
+            grid-area: 6/7/span 2/span 3;
+            margin: 1px 0 0 1px;
+            width: 30px;
+            height: 22px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px 22px;
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest3Link2.png);
+        }
+
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest3Link3
          {
              grid-area: 11/4/span 3/span 3;
              margin: 0px 0 0 4px;
@@ -1647,9 +1650,11 @@ main.masterGrid
              background-repeat: no-repeat;
              background-position: center;
              background-size: 36px 28px;
-             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest2Link4.png);
+             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest3Link3.png);
          }
-         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest2Link5
+
+         /* Quest 4 Milestone Links */
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest4Link1
          {
              grid-area: 12/6/span 3/span 3;
              margin: 5px 0 0 -3px;
@@ -1658,7 +1663,68 @@ main.masterGrid
              background-repeat: no-repeat;
              background-position: center;
              background-size: 28px 28px;
-             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest2Link5.png);
+             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest4Link1.png);
+         } 
+
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest4Link2
+         {
+             grid-area: 12/6/span 3/span 3;
+             margin: 5px 0 0 -3px;
+             width: 28px;
+             height: 28px;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: 28px 28px;
+             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest4Link2.png);
+         } 
+
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest4Link3
+         {
+             grid-area: 12/6/span 3/span 3;
+             margin: 5px 0 0 -3px;
+             width: 28px;
+             height: 28px;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: 28px 28px;
+             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest4Link3.png);
+         }
+
+         /* Quest 5 Milestone Links */
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest5Link1
+         {
+             grid-area: 30/5/span 3/span 4;
+             margin: 4px 0 0 6px;
+             width: 33px;
+             height: 37px;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: 33px 37px;
+             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest5Link1.png);
+         } 
+
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest5Link2
+         {
+             grid-area: 32/5/span 3/span 3;
+             margin: 8px 0 0 6px;
+             width: 26px;
+             height: 35px;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: 26px 35px;
+             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest5Link2.png);
+         } 
+
+         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.quest5Link3
+         {
+             grid-area: 33/7/span 3/span 3;
+             margin: 9px 0 0 -1px;
+             width: 31px;
+             height: 21px;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: 31px 21px;
+             background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/quest5Link3.png);
          } 
 
 /* Ritual Card */
