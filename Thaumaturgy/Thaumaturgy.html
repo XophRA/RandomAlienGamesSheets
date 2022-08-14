@@ -3445,28 +3445,18 @@
         setObj.quest1sigilsegment1 = 0;
         setObj.quest1sigilsegment2 = 0;
         setObj.quest1sigilsegment3 = 0;
-        setObj.quest1sigilsegment4 = 0;
-        setObj.quest1sigilsegment5 = 0;
         setObj.quest2sigilsegment1 = 0;
         setObj.quest2sigilsegment2 = 0;
         setObj.quest2sigilsegment3 = 0;
-        setObj.quest2sigilsegment4 = 0;
-        setObj.quest2sigilsegment5 = 0;
         setObj.quest3sigilsegment1 = 0;
         setObj.quest3sigilsegment2 = 0;
         setObj.quest3sigilsegment3 = 0;
-        setObj.quest3sigilsegment4 = 0;
-        setObj.quest3sigilsegment5 = 0;
         setObj.quest4sigilsegment1 = 0;
         setObj.quest4sigilsegment2 = 0;
         setObj.quest4sigilsegment3 = 0;
-        setObj.quest4sigilsegment4 = 0;
-        setObj.quest4sigilsegment5 = 0;
         setObj.quest5sigilsegment1 = 0;
         setObj.quest5sigilsegment2 = 0;
         setObj.quest5sigilsegment3 = 0;
-        setObj.quest5sigilsegment4 = 0;
-        setObj.quest5sigilsegment5 = 0;
 
         console.log(setObj);
         setAttrs(setObj);
@@ -3519,12 +3509,10 @@
                 let quest1sigilsegment1 = parseInt(values.quest1sigilsegment1) || 0;
                 let quest1sigilsegment2 = parseInt(values.quest1sigilsegment2) || 0;
                 let quest1sigilsegment3 = parseInt(values.quest1sigilsegment3) || 0;
-                let quest1sigilsegment4 = parseInt(values.quest1sigilsegment4) || 0;
-                let quest1sigilsegment5 = parseInt(values.quest1sigilsegment5) || 0;
 
-                if (quest1sigilsegment1 > 0 && quest1sigilsegment2 > 0 && quest1sigilsegment3 > 0 && quest1sigilsegment4 > 0 && quest1sigilsegment5 > 0)
+                if (quest1sigilsegment1 > 0 && quest1sigilsegment2 > 0 && quest1sigilsegment3 > 0 )
                 {
-                    questoutcome1 = Math.round((quest1sigilsegment1 + quest1sigilsegment2 + quest1sigilsegment3 + quest1sigilsegment4 + quest1sigilsegment5)/5);
+                    questoutcome1 = Math.round((quest1sigilsegment1 + quest1sigilsegment2 + quest1sigilsegment3 )/3);
                 }
                 setObj.ascensionsigilsegment1 = questoutcome1;
 
@@ -3533,11 +3521,10 @@
                 let quest2sigilsegment1 = parseInt(values.quest2sigilsegment1) || 0;
                 let quest2sigilsegment2 = parseInt(values.quest2sigilsegment2) || 0;
                 let quest2sigilsegment3 = parseInt(values.quest2sigilsegment3) || 0;
-                let quest2sigilsegment4 = parseInt(values.quest2sigilsegment4) || 0;
-                let quest2sigilsegment5 = parseInt(values.quest2sigilsegment5) || 0;
-                if (quest2sigilsegment1 > 0 && quest2sigilsegment2 > 0 && quest2sigilsegment3 > 0 && quest2sigilsegment4 > 0 && quest2sigilsegment5 > 0)
+
+                if (quest2sigilsegment1 > 0 && quest2sigilsegment2 > 0 && quest2sigilsegment3 > 0)
                 {
-                    questoutcome2 = Math.round((quest2sigilsegment1 + quest2sigilsegment2 + quest2sigilsegment3 + quest2sigilsegment4 + quest2sigilsegment5)/5);
+                    questoutcome2 = Math.round((quest2sigilsegment1 + quest2sigilsegment2 + quest2sigilsegment3 )/3);
                 }
                 setObj.ascensionsigilsegment2 = questoutcome2;
 
@@ -3546,11 +3533,10 @@
                 let quest3sigilsegment1 = parseInt(values.quest3sigilsegment1) || 0;
                 let quest3sigilsegment2 = parseInt(values.quest3sigilsegment2) || 0;
                 let quest3sigilsegment3 = parseInt(values.quest3sigilsegment3) || 0;
-                let quest3sigilsegment4 = parseInt(values.quest3sigilsegment4) || 0;
-                let quest3sigilsegment5 = parseInt(values.quest3sigilsegment5) || 0;
-                if (quest3sigilsegment1 > 0 && quest3sigilsegment2 > 0 && quest3sigilsegment3 > 0 && quest3sigilsegment4 > 0 && quest3sigilsegment5 > 0)
+
+                if (quest3sigilsegment1 > 0 && quest3sigilsegment2 > 0 && quest3sigilsegment3 > 0 )
                 {
-                    questoutcome3 = Math.round((quest3sigilsegment1 + quest3sigilsegment2 + quest3sigilsegment3 + quest3sigilsegment4 + quest3sigilsegment5)/5);
+                    questoutcome3 = Math.round((quest3sigilsegment1 + quest3sigilsegment2 + quest3sigilsegment3 )/3);
                 }
                 setObj.ascensionsigilsegment3 = questoutcome3;
 
@@ -3559,11 +3545,10 @@
                 let quest4sigilsegment1 = parseInt(values.quest4sigilsegment1) || 0;
                 let quest4sigilsegment2 = parseInt(values.quest4sigilsegment2) || 0;
                 let quest4sigilsegment3 = parseInt(values.quest4sigilsegment3) || 0;
-                let quest4sigilsegment4 = parseInt(values.quest4sigilsegment4) || 0;
-                let quest4sigilsegment5 = parseInt(values.quest4sigilsegment5) || 0;
-                if (quest4sigilsegment1 > 0 && quest4sigilsegment2 > 0 && quest4sigilsegment3 > 0 && quest4sigilsegment4 > 0 && quest4sigilsegment5 > 0)
+
+                if (quest4sigilsegment1 > 0 && quest4sigilsegment2 > 0 && quest4sigilsegment3 > 0 )
                 {
-                    questoutcome4 = Math.round((quest4sigilsegment1 + quest4sigilsegment2 + quest4sigilsegment3 + quest4sigilsegment4 + quest4sigilsegment5)/5);
+                    questoutcome4 = Math.round((quest4sigilsegment1 + quest4sigilsegment2 + quest4sigilsegment3)/3);
                 }
                 setObj.ascensionsigilsegment4 = questoutcome4;
 
@@ -3572,11 +3557,10 @@
                 let quest5sigilsegment1 = parseInt(values.quest5sigilsegment1) || 0;
                 let quest5sigilsegment2 = parseInt(values.quest5sigilsegment2) || 0;
                 let quest5sigilsegment3 = parseInt(values.quest5sigilsegment3) || 0;
-                let quest5sigilsegment4 = parseInt(values.quest5sigilsegment4) || 0;
-                let quest5sigilsegment5 = parseInt(values.quest5sigilsegment5) || 0;
-                if (quest5sigilsegment1 > 0 && quest5sigilsegment2 > 0 && quest5sigilsegment3 > 0 && quest5sigilsegment4 > 0 && quest5sigilsegment5 > 0)
+
+                if (quest5sigilsegment1 > 0 && quest5sigilsegment2 > 0 && quest5sigilsegment3 > 0 )
                 {
-                    questoutcome5 = Math.round((quest5sigilsegment1 + quest5sigilsegment2 + quest5sigilsegment3 + quest5sigilsegment4 + quest5sigilsegment5)/5);
+                    questoutcome5 = Math.round((quest5sigilsegment1 + quest5sigilsegment2 + quest5sigilsegment3 )/3);
                 }
                 setObj.ascensionsigilsegment5 = questoutcome5;
 
