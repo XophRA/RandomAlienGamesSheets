@@ -1178,7 +1178,7 @@ main.masterGrid
 
         .ascensionCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/SigilSegment3.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/SigilSegment2.png);
         }
 
         .ascensionCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink
@@ -1799,7 +1799,7 @@ main.masterGrid
 
         .ritualCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/SigilSegment3.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/SigilSegment2.png);
         }
 
         .ritualCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink
@@ -1992,7 +1992,7 @@ main.masterGrid
 
         .questCard .ritualSigil > input[value="3"].sigilSegment + button.sigilSegment
         {
-            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/SigilSegment3.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/SigilSegment2.png);
         }
 
         .questCard .ritualSigil > input.sigilSegment + button.sigilSegment + span.sigilLink
