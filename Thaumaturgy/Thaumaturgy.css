@@ -392,7 +392,7 @@ main.masterGrid
     display: grid;
     row-gap: 0px;
     grid-template-columns: 120px 1fr 280px 120px;
-    grid-template-rows: 17px 703px 52px 516px 640px auto;
+    grid-template-rows: 17px 703px 52px 462px 700px auto;
     justify-items: start;
     align-items: start;
 }
@@ -3108,9 +3108,9 @@ input[type=number].resourceBox
     display: grid;
     width: 100%;
     height: 100%;
-    column-gap: 3px;
-    grid-template-columns: auto repeat(2,60px) 16px;
-    grid-template-rows: 17px repeat(22,25px) auto;
+    gap: 1px 5px;
+    grid-template-columns: auto repeat(2,60px) 5px;
+    grid-template-rows: 37px repeat(22,20px) auto;
 }
 
 input[type="number"].rippleBox
@@ -3314,7 +3314,7 @@ input[type="number"].rippleBox
 
     .tableSpread > .editTableSpread
     {
-        grid-area: 2 / 2 / -1 / -1;
+        grid-area: 2/2/-1/-1;
         display: grid;
         grid-template-columns: 39px 236px 6px 234px 38px 8px 1fr;
         grid-template-rows: 138px 137px 335px auto;
@@ -3324,10 +3324,11 @@ input[type="number"].rippleBox
         .tableSpread > .editTableSpread > .arcanaEdit
         {
             display: grid;
-            width: 275px;
-            height: 475px;
-            grid-template-columns: 50px 80px 1fr;
+            width: 50%;
+            height: 50%;
+            grid-template-columns: 50px 80px;
             grid-template-rows: 30px repeat(2, 22px);
+            margin: 5%;
         }
 
             .tableSpread > .editTableSpread > .arcanaEdit h2
@@ -3355,25 +3356,23 @@ input[type="number"].rippleBox
 
          .tableSpread > .editTableSpread > .leftLegEdit
         {
-            grid-area: 2 / 1 / span 2 / span 2;
+            grid-area: 3/1/span 2/span 2;
         }
 
         .tableSpread > .editTableSpread > .rightLegEdit
         {
-            grid-area: 3 / 4 / 4 / 6;
+            grid-area: 3/4/4/6;
         }
 
         .tableSpread > .editTableSpread > .tabletopEdit
         {
-            grid-area: 1 / 2 / span 2 / span 3;
-            height: 275px;
-            width: 475px;
+            grid-area: 1/2/span 2/span 3;
         }
 
-        .tableSpread > .editTableSpread > .dragEdit
-        {
-            grid-area: 2 / 7 / span 2 / -1;
-        }
+                .tableSpread > .editTableSpread > .dragEdit
+                {
+                    grid-area: 3/7/span 2/-1;
+                }
 
     .tableSpread > div > input.facingChoice[value="1"] + input.cardChoice + span.card
     {
