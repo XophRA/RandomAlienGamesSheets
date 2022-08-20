@@ -10,7 +10,7 @@ article.sheetType
     display: none;
 }
 
-input.casterSelector:checked ~ article.playerCasterSheet,
+input.casterSelector:checked ~ article.casterSheet,
 input.covenSelector:checked ~ article.covenSheet,
 input.mediumSelector:checked ~ article.mediumSheet,
 input.dramatisPersonaeSelector:checked ~ article.dramatisPersonaeSheet,
@@ -342,11 +342,11 @@ main.masterGrid
     grid-template-areas: "header" "sheet";
 }
 
-.playerCasterSheetGrid
+.casterSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/PlayerCasterSheet.png);
-    background-size: 850px 2362px;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Caster.png);
+    background-size: 850px 3347px;
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
@@ -357,16 +357,16 @@ main.masterGrid
     align-items: start;
 }
 
-.sheet-darkmode .playerCasterSheetGrid
+.sheet-darkmode .casterSheetGrid
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/PlayerCasterSheetDarkmode.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Caster_Darkmode.png);
 }
 
 .covenSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/CovenSheet.png);
-    background-size: 850px 2362px;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Coven.png);
+    background-size: 850px 3347px;
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
@@ -379,14 +379,14 @@ main.masterGrid
 
 .sheet-darkmode .covenSheetGrid
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/CovenSheetDarkmode.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Coven_Darkmode.png);
 }
 
 .mediumSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/MediumSheet.png);
-    background-size: 850px 2362px;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Medium.png);
+    background-size: 850px 3347px;
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
@@ -399,7 +399,7 @@ main.masterGrid
 
 .sheet-darkmode .mediumSheetGrid
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/MediumSheetDarkmode.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Medium_Darkmode.png);
 }
 
 .dramatisPersonaeSheetGrid
@@ -470,8 +470,8 @@ main.masterGrid
 .duellingSheetGrid
 {
     grid-area: sheet;
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/DuellingSheet.png);
-    background-size: 850px 2362px;
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Duelling.png);
+    background-size: 850px 3347px;
     background-repeat: no-repeat;
     width: 100%;
     display: grid;
@@ -483,7 +483,7 @@ main.masterGrid
 
 /*.sheet-darkmode .duellingSheetGrid
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/DuellingSheetDarkmode.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/sheet_Duelling_Darkmode.png);
 }*/
 
 /* Roll Template */
@@ -4182,7 +4182,7 @@ input.editToggle[value="1"] + .editMenu
     }
 
 /* Tags */
-.playerCasterSheetGrid > .tagWidget
+.casterSheetGrid > .tagWidget
 {
     grid-area: 4/1/auto/auto;
     width: 92%;
@@ -4205,12 +4205,12 @@ input.editToggle[value="1"] + .editMenu
     }
 
 /* Fate */
-.playerCasterSheetGrid > .fateWidget
+.casterSheetGrid > .fateWidget
 {
     grid-area: 7/1/auto/-1;
 }
 
-.playerCasterSheetGrid > .noteWidget
+.casterSheetGrid > .noteWidget
 {
     grid-area: 8/1/auto/-1;
     width: 100%;
@@ -4222,7 +4222,7 @@ input.editToggle[value="1"] + .editMenu
     align-items: start;
 }
 
-.playerCasterSheetGrid > .noteWidget > h1.notesTitle
+.casterSheetGrid > .noteWidget > h1.notesTitle
 {
     grid-area: 1/1/auto/auto;
 }
@@ -4572,7 +4572,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     }
 
 /* Curses */
-.playerCasterSheetGrid > .curseWidget
+.casterSheetGrid > .curseWidget
 {
     grid-area: 4/2/span 2/span 2;
     margin-left: -20px;
