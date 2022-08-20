@@ -216,6 +216,11 @@ body,
     margin: 0;
 }
 
+.nav-tabs > li
+{
+    font-size: 12px;
+}
+
 /*All Hidden styles*/
 .charsheet .hidden
 {
@@ -255,6 +260,7 @@ body,
 {
     padding-top: 4px;
 }
+
 /* Repeating Items */
 .repcontainer > .repitem > .itemcontrol > .repcontrol_del
 {
@@ -351,8 +357,8 @@ main.masterGrid
     width: 100%;
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: 400px 250px 1fr;
-    grid-template-rows: 312px 235px 205px 306px 159px auto 670px auto;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 312px 235px 52px 381px auto 320px 670px auto;
     justify-items: start;
     align-items: start;
 }
@@ -3870,9 +3876,9 @@ input.editToggle[value="1"] + .editMenu
 {
     grid-area: 1/2/auto/span 2;
     display: grid;
-    grid-template-columns: 145px auto 40px 20px;
+    grid-template-columns: 138px 223px 45px 1fr;
     grid-template-rows: repeat(8,21px) 1fr 80px;
-    grid-gap: 0fr;
+    grid-gap: 0px;
     height: 100%;
     width: 100%;
     margin-top: 15px;
@@ -3881,7 +3887,7 @@ input.editToggle[value="1"] + .editMenu
     .descriptionWidget > input.level
     {
         grid-area: 1/-3/auto/-2;
-        margin-top: -13px;
+        margin-top: 5px;
         font-family: "Fredericka the Great", cursive;
         font-weight: 600;
         font-size: 30px;
@@ -3898,95 +3904,104 @@ input.editToggle[value="1"] + .editMenu
 
     .descriptionWidget > .conduitTitle
     {
-        grid-area: 2/2/auto/-1;
+        grid-area: 2/2/auto/auto;
     }
 
     .descriptionWidget > .givenName
     {
-        grid-area: 3/2/auto/-1;
+        grid-area: 3/2/auto/auto;
     }
 
     .descriptionWidget > .academicName
     {
-        grid-area: 4/2/auto/-1;
+        grid-area: 4/2/auto/auto;
     }
 
     .descriptionWidget > .questName
     {
-        grid-area: 5/2/auto/-1;
+        grid-area: 5/2/auto/auto;
     }
 
     .descriptionWidget > .pronouns
     {
-        grid-area: 6/2/auto/-1;
+        grid-area: 6/2/auto/auto;
     }
 
     .descriptionWidget > .apprenticeship
     {
-        grid-area: 7/2/auto/-1;
+        grid-area: 7/2/auto/span 2;
     }
 
     .descriptionWidget > .technique
     {
-        grid-area: 8/2/auto/-1;
+        grid-area: 8/2/auto/span 2;
     }
 
     .descriptionWidget > .characteristics
     {
-        grid-area: 9/2/auto/-1;
+        grid-area: 9/2/auto/span 2;
     }
 
     .descriptionWidget > .description
     {
-        grid-area: 10/2/auto/-1;
+        grid-area: 10/2/auto/span 2;
     }
 
-/* Aether */
-.aetherWidget
+/* Resources */
+.resourceWidget
 {
-    grid-area: 3/1/auto/auto;
+    grid-area: 4/2/auto/auto;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 120px 48px;
-    grid-template-rows: 47px 1fr 40px;
+    grid-template-columns: 60px 120px 83px 120px 1fr;
+    grid-template-rows: 44px 120px 39px 120px 21px 24px 1fr;
 }
 
-    .aetherWidget > .aetherTracker
+    /* Research Notes */
+    .resourceWidget > .noteTracker
     {
-        grid-area: 2/2/3/-1;
+        grid-area: 2/2/auto/auto;
         width: 120px;
         height: 100%;
     }
 
-/* Certification */
-.certificationWidget
-{
-    grid-area: 5/1/auto/auto;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr 120px 65px 120px 45px;
-    grid-template-rows: 26px 1fr 20px;
-}
-
-/* Research Notes */
-    .certificationWidget > .noteTracker
+    /* Study Credits */
+    .resourceWidget > .creditTracker
     {
-        grid-area: 2/2/3/-1;
+        grid-area: 2/4/auto/auto;
         width: 120px;
         height: 100%;
     }
 
-
-/* Study Credits */
-    .certificationWidget > .creditTracker
+    /* Aether */
+    .resourceWidget > .aetherTracker
     {
-        grid-area: 2/4/3/-1;
+        grid-area: 4/2/auto/auto;
         width: 120px;
         height: 100%;
     }
+    /* Components */
+    .resourceWidget > .clockWidget
+    {
+        grid-area: 4/4/auto/auto;
+        grid-template-columns: 124px 16px;
+        grid-template-rows: 20px 1fr;
+        width: 140px;
+        height: 124px;
+        --clockcentre: 61px;
+        --clockheight: 120px;
+        --spokeheight: 124px;
+        --spokewidth: 2px;
+    }
 
+    /* Concentration */
+    .resourceWidget > .concentrationTracker
+    {
+        grid-area: 6/3/auto/span 2;
+        width: 100%;
+        height: 100%;
+    }
 
 /* Conduit */
 .conduitWidget
@@ -4031,12 +4046,12 @@ input.editToggle[value="1"] + .editMenu
 /* Arts */ 
 .artsWidget
 {
-    grid-area: 2/2/span 2/span 2;
+    grid-area: 3/1/span 2/auto;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 98px 25px 16px;
-    grid-template-rows: 34px repeat(14, 24px) auto;
+    grid-template-columns: 334px 98px 25px 1fr;
+    grid-template-rows: 40px repeat(14, 24px) auto;
     row-gap: 4px;
 }
 
@@ -4181,12 +4196,6 @@ input.editToggle[value="1"] + .editMenu
     }
 
 /* Tags */
-.casterSheetGrid > .tagWidget
-{
-    grid-area: 4/1/auto/auto;
-    width: 92%;
-}
-
 .tagWidget
 {
     display: grid;
@@ -4256,7 +4265,7 @@ input.editToggle[value="1"] + .editMenu
 /* Grimoire */
 .grimoireWidget
 {
-    grid-area: 6/1/auto/-1;
+    grid-area: 5/1/auto/-1;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 20px repeat(3, 275px 6px) 1fr;
@@ -4322,27 +4331,12 @@ input.editToggle[value="1"] + .editMenu
     {
         grid-area: 1/1/auto/-1;
         display: grid;
-        grid-template-rows: 68px;
+        grid-template-rows: 1fr;
         grid-template-columns: 290px 355px auto 26px;
         width: 850px;
-        height: 68px;
+        height: 45px;
         margin-top: 9px;
     }
-
-        .grimoireWidget > .grimoireHeader > .clockWidget
-        {
-            grid-area: 1/2/auto/auto;
-        }
-
-        .grimoireWidget > .grimoireHeader > .concentrationWidget
-        {
-            grid-area: 1/3/auto/auto;
-        }
-
-            .grimoireWidget > .grimoireHeader > .concentrationWidget > select
-            {
-                width: 160px;
-            }
 
         .grimoireWidget > .grimoireHeader > .editCog
         {
@@ -4353,53 +4347,53 @@ input.editToggle[value="1"] + .editMenu
     .grimoireWidget > .editAttunement
     {
         grid-area: 3/1/auto/-1;
-        grid-template-columns: 20px 270px 70px 60px 5px 80px 1fr;
+        grid-template-columns: 20px 400px 5px 1fr 80px;
         grid-template-rows: 28px 20px 150px;
         max-width: 850px;
     }
 
-    .grimoireWidget > .editAttunement > button.chargeButton
-    {
-        grid-area: 1/3/auto/auto;
-    }
+        .grimoireWidget > .editAttunement > button.chargeButton
+        {
+            grid-area: 1/-2/auto/auto;
+        }
 
-    .grimoireWidget .editAttunement input
-    {
-        height: 16px;
-        width: 8px;
-        margin-bottom: 3px;
-    }
+        .grimoireWidget .editAttunement input
+        {
+            height: 16px;
+            width: 8px;
+            margin-bottom: 3px;
+        }
 
-    .grimoireWidget > .editAttunement > p
-    {
-        grid-area: 2/7/auto/-1;
-        padding-top: 5px;
-        margin: 0;
-        justify-self: end;
-    }
+        .grimoireWidget > .editAttunement > p
+        {
+            grid-area: 1/-3/auto/auto;
+            padding: 5px;
+            margin: 0;
+            justify-self: end;
+        }
 
-    .grimoireWidget > .editAttunement > h3
-    {
-        grid-row: 2/auto;
-    }
+        .grimoireWidget > .editAttunement > h3
+        {
+            grid-row: 2/auto;
+        }
 
-    .grimoireWidget > .editAttunement > textarea
-    {
-        grid-row: 3/auto;
-        width: 100%;
-        height: 100%;
-        margin-left: 5px;
-    }
+        .grimoireWidget > .editAttunement > textarea
+        {
+            grid-row: 3/auto;
+            width: 100%;
+            height: 100%;
+            margin-left: 5px;
+        }
 
-    .grimoireWidget > .editAttunement > .equationList
-    {
-        grid-column: 2/5;
-    }
+        .grimoireWidget > .editAttunement > .equationList
+        {
+            grid-column: 2/5;
+        }
 
-    .grimoireWidget > .editAttunement > .formulaList
-    {
-        grid-column: 6/-1;
-    }
+        .grimoireWidget > .editAttunement > .formulaList
+        {
+            grid-column: -3/-1;
+        }
 
     /* editToggle attuneToggle Controls */
 input.editToggle[value="0"] ~ .hand > .deck .repcontrol,
@@ -4573,42 +4567,20 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Curses */
 .casterSheetGrid > .curseWidget
 {
-    grid-area: 4/2/span 2/span 2;
-    margin-left: -20px;
+    grid-area: 6/1/auto/-1;
 }
 
 .curseWidget
 {
     display: grid;
-    width: 475px;
+    width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 26px;
-    grid-template-rows: 50px repeat(8, 33px) 1fr;
+    grid-template-columns: repeat(5, 93px) auto 30px;
+    grid-template-rows: 33px 1fr;
 }
-    /* Curse Card Layout */
-    .curseWidget > .curse1
+    .curseWidget > h1
     {
-        grid-area: 2/1/span 5/-1;
-    }
-
-    .curseWidget > .curse2
-    {
-        grid-area: 3/1/span 5/-1;
-    }
-
-    .curseWidget > .curse3
-    {
-        grid-area: 4/1/span 5/-1;
-    }
-
-    .curseWidget > .curse4
-    {
-        grid-area: 5/1/span 5/-1;
-    }
-
-    .curseWidget > .curse5
-    {
-        grid-area: 6/1/span 5/-1;
+        grid-area: 1/1/auto/-2;
     }
 
     /* Sort the curses to be able to look at them all */
@@ -4620,6 +4592,34 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         align-self: center;
         padding: 0;
     }
+
+    /* Curse Card Layout */
+    .curseWidget > .curse1
+    {
+        grid-area: 2/1/span 5/-1;
+    }
+
+    .curseWidget > .curse2
+    {
+        grid-area: 2/2/span 5/-1;
+    }
+
+    .curseWidget > .curse3
+    {
+        grid-area: 2/3/span 5/-1;
+    }
+
+    .curseWidget > .curse4
+    {
+        grid-area: 2/4/span 5/-1;
+    }
+
+    .curseWidget > .curse5
+    {
+        grid-area: 2/5/span 5/-1;
+    }
+
+    
 
     /* Top Card */
     .curseWidget > input[value="1"].curseToggle ~ .curse1,
