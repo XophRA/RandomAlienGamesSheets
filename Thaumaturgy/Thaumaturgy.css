@@ -4009,9 +4009,9 @@ input.editToggle[value="1"] + .editMenu
     grid-area: 2/1/auto/auto;
     display: grid;
     width: 400px;
-    height: 245px;
+    height: 231px;
     grid-template-columns: 305px 56px 25px auto;
-    grid-template-rows: 40px repeat(7,24px) auto;
+    grid-template-rows: 40px repeat(6,24px) auto;
     row-gap: 4px;
 }
 
