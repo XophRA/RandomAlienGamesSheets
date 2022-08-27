@@ -358,7 +358,7 @@ main.masterGrid
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 50% 1fr;
-    grid-template-rows: 312px 235px 52px 381px auto 320px 670px auto;
+    grid-template-rows: 312px 206px 71px 367px auto 320px 670px auto;
     justify-items: start;
     align-items: start;
 }
@@ -2403,7 +2403,7 @@ input.resourceBox
     text-align: center;
 }
 
-input[type=number].resourceBox
+input[type="number"].resourceBox
 {
     font-size: 24px;
     -webkit-appearance: none;
@@ -2429,8 +2429,8 @@ input[type=number].resourceBox
         }
 
         /* Dice Cast */
-        section.circlePositions > input + input + input + input + input + input + input[type=number],
-        section.circlePositions > input + input + input + input + input + input + input + input[type=checkbox]
+        section.circlePositions > input + input + input + input + input + input + input[type="number"],
+        section.circlePositions > input + input + input + input + input + input + input + input[type="checkbox"]
         {
             width: 36px;
             height: 36px;
@@ -2440,7 +2440,7 @@ input[type=number].resourceBox
             z-index: 8;
         }
 
-        section.circlePositions > input + input + input + input + input + input + input[type=number]
+        section.circlePositions > input + input + input + input + input + input + input[type="number"]
         {
             background-size: 36px 36px;
             background-repeat: no-repeat;
@@ -2452,44 +2452,44 @@ input[type=number].resourceBox
             -moz-appearance: textfield;
         }
         /* Spell Die Null */
-        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieNull.png);
         }
         /* Tangle Die Null */
-        section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieNull.png);
         }
         /* Spell Die Hit */
-        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="1"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="1"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
         }
         /* Spell Die Hit Matched*/
-        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
             background-color: var(--checkboxAccent);
         }
         /* Spell Die Double */
-        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
         }
         /* Spell Die Double Matched*/
-        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
             background-color: var(--checkboxAccent);
         }
         /* Tangle Die Miss */
-        section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
         }
         /* Tangle Die Miss Matched*/
-        section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type=number]
+        section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type="number"]
         {
             background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
             background-color: var(--checkboxAccent);
@@ -2497,12 +2497,12 @@ input[type=number].resourceBox
 
 
         /* Match Dice Checkbox invisiable */
-        section.circlePositions > input + input + input + input + input + input + input + input[type=checkbox]
+        section.circlePositions > input + input + input + input + input + input + input + input[type="checkbox"]
         {
             opacity: 0;
         }
         /* Match Dice Checkbox Disabled on Null Dice */
-        section.circlePositions > input + input + input.circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type=number] + input[type=checkbox]
+        section.circlePositions > input + input + input.circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type="number"] + input[type="checkbox"]
         {
             display: none;
         }
@@ -3481,13 +3481,13 @@ input[type="number"].rippleBox
         border: var(--borderStyle);
     }
 
-    .clockWidget > input[type=number].clockControl::-webkit-inner-spin-button,
-    .clockWidget > input[type=number].clockControl::-webkit-outer-spin-button
+    .clockWidget > input[type="number"].clockControl::-webkit-inner-spin-button,
+    .clockWidget > input[type="number"].clockControl::-webkit-outer-spin-button
     {
         opacity: 1;
     }
 
-    .clockWidget > input[type=number].clockControl
+    .clockWidget > input[type="number"].clockControl
     {
         grid-area: 2/-2/auto/auto;
         width: 15px;
@@ -4051,7 +4051,7 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     grid-template-columns: 334px 98px 25px 1fr;
-    grid-template-rows: 40px repeat(14, 24px) auto;
+    grid-template-rows: 36px repeat(14, 24px) auto;
     row-gap: 4px;
 }
 
@@ -4511,7 +4511,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 
     .customCard input[type=text],
     .customCard textarea,
-    .customCard input[type=checkbox]
+    .customCard input[type="checkbox"]
     {
         grid-column: 2/-1;
     }
@@ -4998,7 +4998,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/PuzzleCardDarkmode.png);
 }
 
-    .puzzleCard input[type=checkbox]
+    .puzzleCard input[type="checkbox"]
     {
         justify-self: center;
         width: 20px;
@@ -5153,6 +5153,11 @@ input[type="radio"] + span.D10
     z-index: 2;
 }
 
+.sheet-darkmode input[type="radio"] + span.D10
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D10PipFilled_Darkmode.png);
+}
+
 input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.study ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
@@ -5164,6 +5169,13 @@ input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
     z-index: 2;
 }
 
+.sheet-darkmode input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10,
+.sheet-darkmode input[type="radio"]:checked + span.study ~ input[type="radio"] + span.D10,
+.sheet-darkmode input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D10Pip_Darkmode.png);
+}
+
 input[type="radio"] + span.study
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBoxFilled.png);
@@ -5171,6 +5183,11 @@ input[type="radio"] + span.study
     background-position: center;
     opacity: 1;
     z-index: 2;
+}
+
+.sheet-darkmode input[type="radio"] + span.study
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBoxFilled_Darkmode.png);
 }
 
 input[type="radio"]:checked + span.study ~ input[type="radio"] + span.study,
@@ -5182,6 +5199,13 @@ input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
     background-position: center;
     opacity: 1;
     z-index: 2;
+}
+
+.sheet-darkmode input[type="radio"]:checked + span.study ~ input[type="radio"] + span.study,
+.sheet-darkmode input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.study,
+.sheet-darkmode input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBox_Darkmode.png);
 }
 
 input[type="checkbox"] + span.conduit
