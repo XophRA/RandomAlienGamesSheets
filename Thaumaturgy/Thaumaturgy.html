@@ -754,8 +754,8 @@
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="-1" max="21" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ConsequencesFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
                         </select>
                     </div>
                     <div class="arcanaEdit rightLegEdit">
@@ -763,8 +763,8 @@
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="-1" max="21" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_DestinyFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
                         </select>
                     </div>
                     <div class="arcanaEdit tabletopEdit">
@@ -772,17 +772,24 @@
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="-1" max="21" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ObstacleFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
                         </select>
                     </div>
                     <div class="arcanaEdit dragEdit">
                         <h2>Drag</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Drag" min="-1" max="21" value="0" />
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Drag" min="1" max="14" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_DragFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
+                        </select>
+                        <div class="arcanaHouse">House:</div>
+                        <select name="attr_DragHouse" class="arcanaHouse">
+                            <option value="0">Wands</option>
+                            <option value="1">Cups</option>
+                            <option value="2">Swords</option>
+                            <option value="3">Pentacles</option>
                         </select>
                     </div>
                 </div>
@@ -1834,8 +1841,8 @@
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Aftermath" min="-1" max="21" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_AftermathFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
                         </select>
                     </div>
                     <div class="arcanaEdit rightLegEdit">
@@ -1843,8 +1850,8 @@
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Backlash" min="-1" max="21" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_BacklashFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
                         </select>
                     </div>
                     <div class="arcanaEdit tabletopEdit ">
@@ -1852,20 +1859,18 @@
                         <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Complications" min="-1" max="21" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_ComplicationsFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
                         </select>
                     </div>
                     <div class="arcanaEdit dragEdit">
                         <h2>Drag</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_dragClock" min="0" max="13" value="0" />
-
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_dragClock" min="1" max="14" value="0" />
                         <div class="arcanaFacing">Facing:</div>
                         <select name="attr_DragFacing" class="arcanaFacing">
-                            <option value="0">Chaos</option>
-                            <option value="1">Harmony</option>
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
                         </select>
-
                         <div class="arcanaHouse">House:</div>
                         <select name="attr_DragHouse" class="arcanaHouse">
                             <option value="0">Wands</option>
@@ -2677,7 +2682,7 @@
 
     /* Set Defaults, name, and Player Caster Level to Coven Level */
     on("sheet:opened change:covenlevel change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns", (event) => {
-        getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Aftermath", "Backlash", "Complications", "givenName", "academicName", "questName", "pronouns", "character_name"], function (values) {
+        getAttrs(["covenLevel", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Drag" , "Aftermath", "Backlash", "Complications", "dragClock","DragHouse", "givenName", "academicName", "questName", "pronouns", "character_name"], function (values) {
             const setObj = {};
             let selectedSheet = parseInt(values.selectedSheet) || 0;
             let covenLevel = 0;
@@ -2691,14 +2696,17 @@
             setObj.EditArts = 0;
 
             /* Ensure Fate is set */
-            setObj.Consequences = parseInt(values.Consequences) || 0;
-            setObj.Destiny = parseInt(values.Destiny) || 0;
-            setObj.Obstacle = parseInt(values.Obstacle) || 0;
+            setObj.Consequences = parseInt(values.Consequences) || -1;
+            setObj.Destiny = parseInt(values.Destiny) || -1;
+            setObj.Obstacle = parseInt(values.Obstacle) || -1;
+            setObj.Drag = parseInt(values.Drag) || 1;
 
             /* Ensure Disequilibrium is set */
             setObj.Aftermath = parseInt(values.Aftermath) || 0;
             setObj.Backlash = parseInt(values.Backlash) || 0;
             setObj.Complications = parseInt(values.Complications) || 0;
+            setObj.dragClock = parseInt(values.dragClock) || 1;
+            setObj.DragHouse = parseInt(values.DragHouse) || 0;
 
             /* Set Level elements on Coven Sheet*/
             if (selectedSheet == 2)
@@ -3186,9 +3194,9 @@
             for (let i = 0; i < 21; i++)
             {
                 allValue[i] = [];
-                let arcanaNum = i + 1;
+                let arcanaNum = i;
 
-                for (let j = 0; j <= magicCircleSegments-1; j++)
+                for (let j = 0; j <= magicCircleSegments; j++)
                 {
                     let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
                     let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
@@ -3210,6 +3218,7 @@
             let evenDice = 0;
             let oddDice = 0;
             let dragClock = parseInt(attrs[`dragClock`]) || 0;
+            let rippleDrag = 0;
 
             for (let num = 0; num < allValue.length; num++) /*loop through allValue*/
             {
@@ -3229,6 +3238,7 @@
                 {
                     rippleHarmonyWrap += Math.floor(rippleHarmony / 10);
                     rippleHarmony -= rippleHarmonyWrap * 10;
+                    rippleDrag++;
                 }
 
                 setObj[`ripple${arcana}Harmony`] = rippleHarmony;/* Set the harmony ripple*/
@@ -3245,6 +3255,7 @@
                 {
                     rippleChaosWrap += Math.floor(rippleChaos / 10);
                     rippleChaos -= rippleChaosWrap * 10;
+                    rippleDrag++;
                 }
 
                 setObj[`ripple${arcana}Chaos`] = rippleChaos;/* Set the chaos ripple*/
@@ -3273,16 +3284,16 @@
                 fateDrag += Math.floor(fateResource / 10);
             }
 
-            let drag = fateDrag + dragClock;
+            let drag = fateDrag + dragClock + rippleDrag;
 
-            if (drag <= 13)
+            if (drag <= 14)
             {
                 fateResource -= fateDrag * 10;
                 dragClock = drag;
             }
-            else if (drag > 13)
+            else if (drag > 14)
             {
-                fateResource -= (drag - 13) * 10;
+                fateResource -= (drag - 14) * 10;
                 dragClock = 1;
             }
             setObj.fateResource = fateResource;
