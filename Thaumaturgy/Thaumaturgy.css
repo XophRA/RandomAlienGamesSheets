@@ -3330,34 +3330,45 @@ input[type="number"].rippleBox
         .tableSpread > .editTableSpread > .arcanaEdit
         {
             display: grid;
+            place-self: auto center;
             width: 50%;
             height: 50%;
-            grid-template-columns: 50px 80px;
-            grid-template-rows: 30px repeat(2, 22px);
+            grid-template-columns: 1fr 50px 80px 1fr;
+            grid-template-rows: 30px repeat(3, 22px) auto;
             margin: 5%;
         }
 
             .tableSpread > .editTableSpread > .arcanaEdit h2
             {
-                grid-area: 1/1/2/-1;
+                grid-area: 1/2/auto/span 2;
             }
 
             .tableSpread > .editTableSpread > .arcanaEdit .arcanaChoice
             {
-                grid-row: 2/3;
+                grid-row: 2/auto;
             }
 
             .tableSpread > .editTableSpread > .arcanaEdit .arcanaFacing
             {
-                grid-row: 3/4;
+                grid-row: 3/auto;
+            }
+
+            .tableSpread > .editTableSpread > .arcanaEdit .arcanaHouse
+            {
+                grid-row: 4/auto;
+            }
+
+            .tableSpread > .editTableSpread > .arcanaEdit div
+            {
+                grid-column: 2/auto;
             }
 
             .tableSpread > .editTableSpread > .arcanaEdit input,
             .tableSpread > .editTableSpread > .arcanaEdit select
             {
-                grid-column: 2/3;
+                grid-column: 3/auto;
                 color: var(--text);
-                background: var(--bgFieldLight);
+                background: var(--bgFieldDark);
             }
 
          .tableSpread > .editTableSpread > .leftLegEdit
@@ -3386,74 +3397,119 @@ input[type="number"].rippleBox
     }
 
     /* Arcana Card Background Image*/
-    .tableSpread > div > input[value="0"].cardChoice + span.card
+    .tableSpread > div > input[value="-1"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_0.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_BG.png);
     }
 
-    .tableSpread > div > input[value="1"].cardChoice + span.card
+    .tableSpread > div > input[value="0"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_1.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_00.png);
     }
 
-    .tableSpread > div > input[value="2"].cardChoice + span.card
+    .tableSpread > div > input[value="1"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_2.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_01.png);
     }
 
-    .tableSpread > div > input[value="3"].cardChoice + span.card
+    .tableSpread > div > input[value="2"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_3.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_02.png);
     }
 
-    .tableSpread > div > input[value="4"].cardChoice + span.card
+    .tableSpread > div > input[value="3"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_4.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_03.png);
     }
 
-    .tableSpread > div > input[value="5"].cardChoice + span.card
+    .tableSpread > div > input[value="4"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_5.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_04.png);
     }
 
-    .tableSpread > div > input[value="6"].cardChoice + span.card
+    .tableSpread > div > input[value="5"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_6.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_05.png);
     }
 
-    .tableSpread > div > input[value="7"].cardChoice + span.card
+    .tableSpread > div > input[value="6"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_7.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_06.png);
     }
 
-    .tableSpread > div > input[value="8"].cardChoice + span.card
+    .tableSpread > div > input[value="7"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_8.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_07.png);
     }
 
-    .tableSpread > div > input[value="9"].cardChoice + span.card
+    .tableSpread > div > input[value="8"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_9.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_08.png);
     }
 
-    .tableSpread > div > input[value="10"].cardChoice + span.card
+    .tableSpread > div > input[value="9"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_10.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_09.png);
     }
 
-    .tableSpread > div > input[value="11"].cardChoice + span.card
+    .tableSpread > div > input[value="10"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_11.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_010.png);
     }
 
-    .tableSpread > div > input[value="12"].cardChoice + span.card
+    .tableSpread > div > input[value="11"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_12.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_11.png);
     }
 
-    .tableSpread > div > input[value="13"].cardChoice + span.card
+    .tableSpread > div > input[value="12"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_13.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_12.png);
+    }
+
+    .tableSpread > div > input[value="13"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_13.png);
+    }
+
+    .tableSpread > div > input[value="14"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_14.png);
+    }
+
+    .tableSpread > div > input[value="15"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_15.png);
+    }
+
+    .tableSpread > div > input[value="16"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_16.png);
+    }
+
+    .tableSpread > div > input[value="17"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_17.png);
+    }
+
+    .tableSpread > div > input[value="18"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_18.png);
+    }
+
+    .tableSpread > div > input[value="19"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_19.png);
+    }
+
+    .tableSpread > div > input[value="20"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_20.png);
+    }
+
+    .tableSpread > div > input[value="21"].cardChoice + span.majorArcana
+    {
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_21.png);
     }
 
 /* Clocks */
@@ -5895,7 +5951,7 @@ section.exchange5
 /* Ready Cards */
 div.readyCardDisplay
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_0.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/arcanaCard_BG.png);
     background-size: 275px 475px;
     height: 475px;
     width: 275px;
