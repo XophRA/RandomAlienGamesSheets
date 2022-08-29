@@ -3239,16 +3239,16 @@
 
             /*Set fateResource*/
             let fateResource = parseInt(attrs[`fateResource`]) || 0;
-            let fate = 0;
+            let fate = oddDice;
 
-            if (aetherResource >= oddDice)
+            /* if (aetherResource >= oddDice)
             {
                 fate = oddDice;
             }
             else if (aetherResource < oddDice)
             {
                 fate = aetherResource + 1;
-            }
+            } */
 
             fateResource += fate;
 
@@ -3270,7 +3270,7 @@
             else if (drag > 14)
             {
                 fateResource -= (drag - 14) * 10;
-                dragClock = 1;
+                dragClock = (drag - 14)||1;
             }
             setObj.fateResource = fateResource;
 
