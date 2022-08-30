@@ -3124,8 +3124,8 @@ input[type="number"].resourceBox
     width: 100%;
     height: 100%;
     gap: 1px 5px;
-    grid-template-columns: auto 60px 5px;
-    grid-template-rows: 37px repeat(22,20px) auto;
+    grid-template-columns: auto 66px 5px;
+    grid-template-rows: 23px repeat(22,20px) auto;
 }
 
 input[type="number"].rippleBox

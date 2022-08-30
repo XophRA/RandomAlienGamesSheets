@@ -3217,7 +3217,7 @@
                 let value = 0;
 
                 let rippleValue = parseInt(attrs[`ripple${arcana}`]) || 0;
-                value += parseInt(allValue[num]) || 0;
+                value += allValue[num].length;
 
                 evens += evenDiceRolled(allValue[num]);
 
@@ -3225,12 +3225,12 @@
 
                 /*Set ripple with each rolling over at 10*/
                 let currentRippleValue = rippleValue + value;
-
+                console.log(rippleValue,"+",value,"=",currentRippleValue)
                 let ripplesWrap = 0;
                 if (currentRippleValue >= 10)
                 {
                     ripplesWrap += Math.floor(currentRippleValue / 10);
-                    currentRippleValue -= ripplesWrap * 10;
+                    currentRippleValue -= (ripplesWrap * 10);
                     rippleDrag++;
                 }
 
@@ -3243,34 +3243,26 @@
 
             /*Set fateResource*/
             let fateResource = parseInt(attrs[`fateResource`]) || 0;
-            let fate = 0;
+            fateResource += oddDice; /* add odd dice to fate*/
 
-            fate = oddDice;
+            dragClock += rippleDrag; /*increase drag clock for every ripple greater then 10*/
 
-            fateResource += fate;
-
-            /*Increase Drag for Fate Pool that is greater than 10*/
-            let fateDrag = 0;
-
-            if (fateResource >= 10 && dragClock <= 14)
+            /*Increase Drag for Fate Pool that is greater than 10 and roll over fate*/
+            if (fateResource >= 10)
             {
-                fateDrag += Math.floor(fateResource / 10);
+                let dragBoost = 0; 
+                dragBoost = parseInt(fateResource / 10) || 0;
+                dragClock += dragBoost;
+                fateResource -= (dragBoost * 10);
             }
 
-            let drag = fateDrag + dragClock + rippleDrag;
-
-            if (drag <= 14)
+            if(dragClock > 14)
             {
-                fateResource -= fateDrag * 10;
-                dragClock = drag;
-            }
-            else if (drag > 14)
-            {
-                fateResource -= (drag - 14) * 10;
-                dragClock = (drag - 14);
+                dragClock -= 14;
             }
 
             setObj.fateResource = fateResource;
+            setObj.dragClock = dragClock; /*Set the dragClock*/
 
             /*Calculate aetherResource*/
             let aether = 0;
@@ -3284,9 +3276,9 @@
                 aether = aetherResource + 1;
             }
 
-            console.log("Risked Aether:", aetherResource, "Even Dice:", evenDice, "Returned Aether:", aether, "Odd Dice:", oddDice, "Added Fate:", fate, "Total Fate:", fateResource, "dragClock", dragClock);
+            console.log("Risked Aether:", aetherResource, "Even Dice:", evenDice, "Returned Aether:", aether, "Odd Dice:", oddDice,"Ripples rolling over",rippleDrag, "Total Fate:", fateResource, "dragClock", dragClock);
             setObj.aetherResource = aether; /*Set aetherResource*/
-            setObj.dragClock = dragClock; /*Set the dragClock*/
+
 
             /*Number of Evens and Odds Functions*/
             function evenDiceRolled(diceArray) {
