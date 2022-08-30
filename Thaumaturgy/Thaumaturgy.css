@@ -2306,7 +2306,7 @@ main.masterGrid
                 margin: 0 0 0 12px;
             }
         
-        .spellcastingProcess > em.aether
+        .spellcastingProcess em.aether
         {
             color: var(--alert);
         }
@@ -3130,14 +3130,10 @@ input[type="number"].resourceBox
 
 input[type="number"].rippleBox
 {
+    grid-column: 2 / 3;
     height: 100%;
     width: 100%;
     font-size: 18px;
-}
-
-.ripples > .ripples
-{
-    grid-column: 2 / 3;
 }
 
 .ripples > .ripple0
@@ -3458,7 +3454,7 @@ input[type="number"].rippleBox
 
     .tableSpread > div > input[value="10"].cardChoice + span.majorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_010.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/majorArcanaCard_10.png);
     }
 
     .tableSpread > div > input[value="11"].cardChoice + span.majorArcana
@@ -3564,7 +3560,7 @@ input[type="number"].rippleBox
 
     .tableSpread > div > input[value="0"].houseChoice + input + input[value="10"].cardChoice + span.minorArcana
     {
-        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana0Wands_010.png);
+        background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana0Wands_10.png);
     }
 
     .tableSpread > div > input[value="0"].houseChoice + input + input[value="11"].cardChoice + span.minorArcana
@@ -3635,7 +3631,7 @@ input[type="number"].rippleBox
 
 .tableSpread > div > input[value="1"].houseChoice + input + input[value="10"].cardChoice + span.minorArcana
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana1Cups_010.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana1Cups_10.png);
 }
 
 .tableSpread > div > input[value="1"].houseChoice + input + input[value="11"].cardChoice + span.minorArcana
@@ -3706,7 +3702,7 @@ input[type="number"].rippleBox
 
 .tableSpread > div > input[value="2"].houseChoice + input + input[value="10"].cardChoice + span.minorArcana
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana2Swords_010.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana2Swords_10.png);
 }
 
 .tableSpread > div > input[value="2"].houseChoice + input + input[value="11"].cardChoice + span.minorArcana
@@ -3777,7 +3773,7 @@ input[type="number"].rippleBox
 
 .tableSpread > div > input[value="3"].houseChoice + input + input[value="10"].cardChoice + span.minorArcana
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana3Pentacles_010.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/minorArcana3Pentacles_10.png);
 }
 
 .tableSpread > div > input[value="3"].houseChoice + input + input[value="11"].cardChoice + span.minorArcana
