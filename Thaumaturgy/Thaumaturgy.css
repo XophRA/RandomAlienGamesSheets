@@ -2732,7 +2732,7 @@ input[type="number"].resourceBox
         section.circlePositions > input.circleDieArcana + input[value="35"].circleDieArcanaPosition + input + input + input + input + input,
         section.circlePositions > input.circleDieArcana + input[value="35"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 25/15/span 3/span 3;
+            grid-area: 22/16/span 3/span 3;
         }
 
         section.circlePositions > input.circleDieArcana + input[value="36"].circleDieArcanaPosition + input + input + input + input + input,
@@ -2920,7 +2920,7 @@ input[type="number"].resourceBox
         section.circlePositions > input.circleDieArcana + input[value="65"].circleDieArcanaPosition + input + input + input + input + input,
         section.circlePositions > input.circleDieArcana + input[value="65"].circleDieArcanaPosition + input + input + input + input + input + input
         {
-            grid-area: 39/36/span 3/span 3;
+            grid-area: 39/35/span 3/span 3;
         }
         
         section.circlePositions > input.circleDieArcana + input[value="66"].circleDieArcanaPosition + input + input + input + input + input,
