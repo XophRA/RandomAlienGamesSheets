@@ -10,6 +10,7 @@
             <option value="3">Medium</option>
             <option value="4">Dramatis Personae</option>
             <option value="5">Pawn</option>
+            <option value="6">NPC</option>
             <option value="7">Patron</option>
             <option value="8">Fatekeeper's Grimoire</option>
             <option value="9">Fatekeeper's Deck</option>
@@ -25,6 +26,7 @@
     <input type="radio" name="attr_selectedSheet" class="hidden mediumSelector" value="3">
     <input type="radio" name="attr_selectedSheet" class="hidden dramatisPersonaeSelector" value="4">
     <input type="radio" name="attr_selectedSheet" class="hidden pawnSelector" value="5">
+    <input type="radio" name="attr_selectedSheet" class="hidden casterSelector" value="6">
     <input type="radio" name="attr_selectedSheet" class="hidden patronSelector" value="7">
     <input type="radio" name="attr_selectedSheet" class="hidden fatekeepersGrimoireSelector" value="8">
     <input type="radio" name="attr_selectedSheet" class="hidden fatekeeperDeckSelector" value="9">
@@ -2747,21 +2749,22 @@
 
                 /* Globally Store Coven Level from Ascension Widget on Coven Sheet*/
                 globalAttributes.covenlevel = covenLevel;
-                console.log(globalAttributes);
+                console.log("GlobalAttrs: ",globalAttributes);
             }
             /* Set name and Level elements on Player Caster Sheets*/
             else if (selectedSheet == 1)
             {
                 /*Set rank*/
                 let rank = "";
-
-                if (globalAttributes.covenlevel)
+                /* Set the Caster to the Level of the Coven*/
+                if (globalAttributes.covenlevel == null || globalAttributes.covenlevel == undefined)
                 {
-                    covenLevel = parseInt(globalAttributes.covenlevel) || 0;
+                    covenLevel = parseInt(values.covenLevel) || 0;
                 }
                 else
                 {
-                    covenLevel = parseInt(values.covenLevel) || 0;
+                    covenLevel = parseInt(globalAttributes.covenlevel) || 0;
+                    console.log("Pulling CovenLevel ",covenLevel,"from GlobalAttrs");
                 }
 
                 if (covenLevel <= 0)
@@ -2829,48 +2832,6 @@
                 }
 
                 setObj.character_name = name;
-
-                /*Set Attunement Slots*/
-                let attuneArtefactSlots = 0;
-                let attuneFocusSlots = 0;
-
-                if (covenLevel == 1)
-                {
-                    attuneArtefactSlots = 1;
-                    attuneFocusSlots = 0;
-                }
-                if (covenLevel == 2)
-                {
-                    attuneArtefactSlots = 1;
-                    attuneFocusSlots = 1;
-                }
-                else if (covenLevel == 3)
-                {
-                    attuneArtefactSlots = 2;
-                    attuneFocusSlots = 1;
-                }
-                else if (covenLevel >= 4 && covenLevel < 7)
-                {
-                    attuneArtefactSlots = 3;
-                    attuneFocusSlots = 1;
-                }
-                else if (covenLevel >= 7 && covenLevel < 9)
-                {
-                    attuneArtefactSlots = 4;
-                    attuneFocusSlots = 1;
-                }
-                else if (covenLevel >= 9 && covenLevel < 12)
-                {
-                    attuneArtefactSlots = 4;
-                    attuneFocusSlots = 2;
-                }
-                else if (covenLevel >= 12)
-                {
-                    attuneArtefactSlots = 5;
-                    attuneFocusSlots = 2;
-                }
-                setObj.attuneArtefactSlots = attuneArtefactSlots;
-                setObj.attuneFocusSlots = attuneFocusSlots;
             }
             console.log(setObj);
             setAttrs(setObj);
@@ -3180,12 +3141,12 @@
 
             //Create all Dice Values Array
             let allValue = [];
-            for (let i = 0; i < 21; i++)
+            for (let i = 0; i <= 21; i++)
             {
                 allValue[i] = [];
                 let arcanaNum = i;
 
-                for (let j = 0; j <= magicCircleSegments; j++)
+                for (let j = 0; j <= magicCircleSegments-1; j++)
                 {
                     let match = parseInt(attrs[`poolDieMatch${j}`]) || 0;
                     let arcana = parseInt(attrs[`poolDieArcana${j}`]) || 0;
