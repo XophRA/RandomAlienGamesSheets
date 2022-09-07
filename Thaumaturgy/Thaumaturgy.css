@@ -15,6 +15,7 @@ input.covenSelector:checked ~ article.covenSheet,
 input.mediumSelector:checked ~ article.mediumSheet,
 input.dramatisPersonaeSelector:checked ~ article.dramatisPersonaeSheet,
 input.pawnSelector:checked ~ article.pawnSheet,
+input.npcSelector:checked ~ article.casterSheet,
 input.patronSelector:checked ~ article.patronSheet,
 input.fatekeepersGrimoireSelector:checked ~ article.fatekeepersGrimoireSheet,
 input.fatekeeperDeckSelector:checked ~ article.fatekeeperDeckSheet,
@@ -4235,6 +4236,28 @@ input.editToggle[value="1"] + .editMenu
         text-align: center;
         background-image: none;
     }
+
+    .descriptionWidget > input[value="6"].npc + input[type="number"].levelNPC
+    {
+        display: initial;
+    }
+
+    .descriptionWidget > input[type="number"].levelNPC
+    {
+        display: none;
+        grid-area: 2/-2/auto/-1;
+        margin-top: -4px;
+        width: 15px;
+        font-size: 15px;
+        color: transparent;
+        text-align: left;
+    }
+        .descriptionWidget > input[type="number"].levelNPC::-webkit-inner-spin-button,
+        .descriptionWidget > input[type="number"].levelNPC::-webkit-outer-spin-button
+        {
+            -webkit-appearance: "Always Show Up/Down Arrows";
+            opacity: 1;
+        }
 
     .descriptionWidget > .rank
     {
