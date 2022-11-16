@@ -1747,25 +1747,25 @@
     <article class="sheetType pawnSheet">
         <div class="pawnSheetGrid">
             <section class="pawnAspects">
-                <h1 class="name">Name</h1>
-                <input type="text" name="attr_character_name" class="name" />
+                <h2 class="name">Name</h2>
+                <input type="text" name="attr_givenName" class="name" />
+                <h4 class="pronouns">Pronouns</h4>
+                <input type="text" name="attr_pronouns" class="pronouns" />
                 <h4 class="concept">Paradigm</h4>
-                <textarea class="concept" name="attr_concept"></textarea>
+                <input type="text" class="concept" name="attr_concept"/>
+                <input type="hidden" name="attr_character_name" />
                 <h4 class="nature">Nature</h4>
                 <input type="text" class="nature" name="attr_nature" list="nature" />
                 <h4 class="description">Description</h4>
                 <textarea name="attr_description" class="description"></textarea>
             </section>
+
             <!-- Charateristics -->
             <section class="charateristicWidget tagbox">
                 <h2>Charateristics</h2>
                 <textarea name="attr_charateristics"></textarea>
             </section>
-            <!-- Tags -->
-            <section class="tagWidget tagbox">
-                <h2>Tags</h2>
-                <textarea name="attr_tags"></textarea>
-            </section>
+
             <!-- Resistances -->
             <section class="resistancesWidget">
                 <h1>Resistances</h1>
@@ -1776,6 +1776,7 @@
                     </div>
                 </fieldset>
             </section>
+
             <!-- Powers -->
             <section class="powersWidget">
                 <h1>Powers</h1>
@@ -1786,6 +1787,7 @@
                     </div>
                 </fieldset>
             </section>
+
             <!-- Key -->
             <section class="keyWidget">
                 <h1>Key</h1>

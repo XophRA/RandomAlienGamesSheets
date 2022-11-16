@@ -5864,52 +5864,49 @@ div.key
     align-items: start;
 }
 
-    .pawnAspects > h4.concept,
-    .pawnAspects > h1.name
+    .pawnAspects > h2.name,
+    .pawnAspects > h4.pronouns,
+    .pawnAspects > h4.description
     {
         grid-column: 1/auto;
     }
 
     .pawnAspects > input[type="text"].name,
-    .pawnAspects > textarea.concept
+    .pawnAspects > input[type="text"].pronouns
     {
         grid-column: 2/auto;
     }
 
     .pawnAspects > .name,
-    .pawnAspects > .nature,
-    .pawnAspects > .natureSpecific
+    .pawnAspects > .nature
     {
         grid-row: 1/auto;
     }
 
+    .pawnAspects > .pronouns,
+    .pawnAspects > .concept
+    {
+        grid-row: 2/auto;
+    }
+
     .pawnAspects > h4.nature,
-    .pawnAspects > h4.description
+    .pawnAspects > h4.concept
     {
         grid-column: 3/auto;
     }
 
-    .pawnAspects > h4.description
-    {
-        grid-column: 3/auto;
-    }
 
-    .pawnAspects > input[type="text"].nature
+    .pawnAspects > input[type="text"].nature,
+    .pawnAspects > input[type="text"].concept
     {
         grid-column: 4/auto;
     }
 
-    .pawnAspects > input[type="text"].natureSpecific
-    {
-        grid-column: 5/auto;
-    }
-
     .pawnAspects > textarea.description
     {
-        grid-column: 4/-1;
+        grid-column: 3/-1;
     }
 
-    .pawnAspects > textarea.concept,
     .pawnAspects > textarea.description
     {
         grid-row: 2/-1;
@@ -5917,12 +5914,7 @@ div.key
 
 .pawnSheetGrid > .charateristicWidget
 {
-    grid-area: 2/1/auto/auto;
-}
-
-.pawnSheetGrid > .tagWidget
-{
-    grid-area: 2/2/auto/auto;
+    grid-area: 2/1/auto/-1;
 }
 
 /* NPC Sheet */
@@ -5985,10 +5977,6 @@ div.key
     grid-area: 2/1/auto/auto;
 }
 
-.npcSheetGrid > .tagWidget
-{
-    grid-area: 2/2/auto/auto;
-}
 
 /* Patron */
 .patronAspects
