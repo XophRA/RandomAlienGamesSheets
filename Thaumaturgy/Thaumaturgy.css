@@ -428,7 +428,7 @@ main.masterGrid
     display: grid;
     row-gap: 0px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 250px auto auto;
+    grid-template-rows: 120px 100px auto auto;
     justify-items: start;
     align-items: start;
 }
@@ -5748,7 +5748,7 @@ input[type="radio"]:hover + span.ZeroDie
     display: grid;
     width: 100%;
     height: 100%;
-    grid-area: 3/1/auto/auto;
+    grid-area: 4/1/auto/-1;
     grid-template-columns: 1fr;
     grid-template-rows: 36px 1fr;
     justify-items: start;
@@ -5760,7 +5760,7 @@ input[type="radio"]:hover + span.ZeroDie
     display: grid;
     width: 100%;
     height: 100%;
-    grid-area: 3/2/auto/auto;
+    grid-area: 3/1/auto/-1;
     grid-template-columns: 1fr;
     grid-template-rows: 36px 1fr;
     justify-items: start;
@@ -5772,21 +5772,20 @@ input[type="radio"]:hover + span.ZeroDie
     display: grid;
     width: 100%;
     height: 100%;
-    grid-area: 4/1/auto/-1;
+    grid-area: 5/1/auto/-1;
     grid-template-columns: 1fr;
     grid-template-rows: 36px 1fr;
     justify-items: start;
     align-items: start;
 }
 
-
 .resistance
 {
     display: grid;
-    width: 419px;
+    width: 840px;
     height: 100%;
     grid-area: 2/1/auto/auto;
-    grid-template-columns: 1fr 50px;
+    grid-template-columns: 1fr 30px 3fr;
     grid-template-rows: 1fr;
     justify-items: start;
     align-items: start;
@@ -5808,10 +5807,10 @@ input[type="radio"]:hover + span.ZeroDie
 .power
 {
     display: grid;
-    width: 419px;
+    width: 840px;
     height: 100%;
     grid-area: 2/1/auto/auto;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(2,22px);
     justify-items: start;
     align-items: start;
@@ -5831,7 +5830,7 @@ input[type="radio"]:hover + span.ZeroDie
 div.key
 {
     display: grid;
-    width: 842px;
+    width: 840px;
     height: 100%;
     grid-area: 2/1/auto/auto;
     grid-template-columns: 1fr 3fr;
@@ -5859,7 +5858,7 @@ div.key
     height: 100%;
     grid-area: 1/1/auto/-1;
     grid-template-columns: 1fr 5fr 1fr 5fr;
-    grid-template-rows: 30px repeat(3, 22px);
+    grid-template-rows: 30px repeat(4, 22px);
     justify-items: start;
     align-items: start;
 }
@@ -5904,12 +5903,12 @@ div.key
 
     .pawnAspects > textarea.description
     {
-        grid-column: 3/-1;
+        grid-column: 2/-1;
     }
 
     .pawnAspects > textarea.description
     {
-        grid-row: 2/-1;
+        grid-row: 3/-1;
     }
 
 .pawnSheetGrid > .charateristicWidget
@@ -5986,13 +5985,13 @@ div.key
     height: 100%;
     grid-area: 1/1/auto/-1;
     grid-template-columns: 80px 1fr 85px 1fr;
-    grid-template-rows: 30px repeat(3, 22px);
+    grid-template-rows: 30px repeat(4, 22px);
     justify-items: start;
     align-items: start;
 }
 
     .patronAspects > h4.concept,
-    .patronAspects > h1.name
+    .patronAspects > h2.name
     {
         grid-column: 1/auto;
     }

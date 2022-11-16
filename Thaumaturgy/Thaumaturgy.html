@@ -1766,17 +1766,6 @@
                 <textarea name="attr_charateristics"></textarea>
             </section>
 
-            <!-- Resistances -->
-            <section class="resistancesWidget">
-                <h1>Resistances</h1>
-                <fieldset class="repeating_resistances">
-                    <div class="resistance">
-                        <input type="text" class="resistanceName" name="attr_pawnResistanceName" />
-                        <input type="number" min="1" max="13" value="1" name="attr_potency" class="potency">
-                    </div>
-                </fieldset>
-            </section>
-
             <!-- Powers -->
             <section class="powersWidget">
                 <h1>Powers</h1>
@@ -1784,6 +1773,17 @@
                     <div class="power">
                         <input type="text" class="powerName" name="attr_pawnPowerName" />
                         <textarea class="powerDescription" name="attr_pawnPowerDescription"></textarea>
+                    </div>
+                </fieldset>
+            </section>
+
+            <!-- Resistances -->
+            <section class="resistancesWidget">
+                <h1>Resistances</h1>
+                <fieldset class="repeating_resistances">
+                    <div class="resistance">
+                        <input type="text" class="resistanceName" name="attr_pawnResistanceName" />
+                        <input type="number" min="1" max="13" value="1" name="attr_potency" class="potency">
                     </div>
                 </fieldset>
             </section>
@@ -1805,8 +1805,8 @@
     <article class="sheetType patronSheet">
         <div class="patronSheetGrid">
             <section class="patronAspects">
-                <h1 class="name">Name</h1>
-                <input type="text" name="attr_character_name" class="name" />
+                <h2 class="name">Name</h2>
+                <input type="text" name="attr_givenName" class="name" />
                 <h4 class="concept">Concept</h4>
                 <textarea class="concept" name="attr_concept"></textarea>
                 <h4 class="nature">Nature</h4>
@@ -1814,26 +1814,19 @@
                 <h4 class="domain">Domain</h4>
                 <textarea name="attr_domain" class="domain"></textarea>
             </section>
+
             <!-- Forms -->
             <section class="formsWidget tagbox">
                 <h2>Forms</h2>
                 <textarea name="attr_forms"></textarea>
             </section>
+
             <!-- Etiquette -->
             <section class="etiquetteWidget tagbox">
                 <h2>Etiquette</h2>
                 <textarea name="attr_etiquette"></textarea>
             </section>
-            <!-- Resistances -->
-            <section class="resistancesWidget">
-                <h1>Resistances</h1>
-                <fieldset class="repeating_resistances">
-                    <div class="resistance">
-                        <input type="text" class="resistanceName" name="attr_patronResistanceName" />
-                        <input type="number" min="1" max="10" value="6" name="attr_potency" class="potency">
-                    </div>
-                </fieldset>
-            </section>
+
             <!-- Powers -->
             <section class="powersWidget">
                 <h1>Powers</h1>
@@ -1844,6 +1837,18 @@
                     </div>
                 </fieldset>
             </section>
+            
+            <!-- Resistances -->
+            <section class="resistancesWidget">
+                <h1>Resistances</h1>
+                <fieldset class="repeating_resistances">
+                    <div class="resistance">
+                        <input type="text" class="resistanceName" name="attr_patronResistanceName" />
+                        <input type="number" min="1" max="10" value="6" name="attr_potency" class="potency">
+                    </div>
+                </fieldset>
+            </section>
+
             <!-- Key -->
             <section class="keyWidget">
                 <h1>Key</h1>
@@ -2499,8 +2504,8 @@
     var globalAttributes = [];/*Global Array for Storage of Player Caster Level*/
 
     /* Set Defaults, name, and Player Caster Level to Coven Level */
-    on("sheet:opened change:covenlevel change:level change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns", (event) => {
-        getAttrs(["covenLevel", "level", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Drag" , "Aftermath", "Backlash", "Complications", "dragClock","DragHouse", "givenName", "academicName", "questName", "pronouns", "character_name"], function (values) {
+    on("sheet:opened change:covenlevel change:level change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns change:concept", (event) => {
+        getAttrs(["covenLevel", "level", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Drag" , "Aftermath", "Backlash", "Complications", "dragClock","DragHouse", "givenName", "academicName", "questName", "pronouns", "concept", "character_name"], function (values) {
             const setObj = {};
             let selectedSheet = parseInt(values.selectedSheet) || 0;
             let covenLevel = 0;
@@ -2582,7 +2587,7 @@
                 console.log("GlobalAttrs: ",globalAttributes);
             }
             /* Set name and Level elements on Player Caster Sheets*/
-            else if (selectedSheet == 1 || selectedSheet == 6)
+            if (selectedSheet == 1 || selectedSheet == 6)
             {
                 /*Set rank*/
                 let rank = "";
@@ -2662,7 +2667,7 @@
 
                 if (values.pronouns && (values.givenName || values.academicName || values.questName))
                 {
-                    nameArray.push(values.pronouns);
+                    nameArray.push("("+values.pronouns+")");
                 }
 
                 if (nameArray.length > 0)
@@ -2672,6 +2677,40 @@
 
                 setObj.character_name = name;
             }
+
+            /* Set name elements on Pawn or Patron Sheets*/
+            else if (selectedSheet == 5 || selectedSheet == 7)
+            {
+                /*Set Name*/
+                name = values.character_name;
+
+                let nameArray = [];
+
+                if (values.givenName)
+                {
+                    nameArray.push(values.givenName);
+                }
+
+                if (values.pronouns && (values.givenName || values.academicName || values.questName))
+                {
+                    let pronouns = "("+values.pronouns+")";
+                    nameArray.push(pronouns);
+                }
+
+                if (values.concept)
+                {
+                    nameArray.push(values.concept);
+                }
+
+                if (nameArray.length > 0)
+                {
+                    name = nameArray.join(" ");
+                }
+
+                setObj.character_name = name;
+            }
+
+
             console.log(setObj);
             setAttrs(setObj);
         });
