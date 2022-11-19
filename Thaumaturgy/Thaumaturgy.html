@@ -90,6 +90,21 @@
         <option>Viviomancy</option>
     </datalist>
 
+    <!-- Practiced Techniques -->
+    <datalist id="practicedTechniques">
+        <option>Arranger</option>
+        <option>Device</option>
+        <option>Effigies builder</option>
+        <option>Finger-tutter</option>
+        <option>Immolator</option>
+        <option>Martial Artist</option>
+        <option>Musician</option>
+        <option>Ingestion</option>
+        <option>Recital</option>
+        <option>Sword Mage</option>
+        <option>Wand Wielder</option>
+    </datalist>
+
     <!-- Boons -->
     <datalist id="boon0">
         <option>Familiar Font</option>
@@ -98,10 +113,10 @@
         <option>Artefact Attunement</option>
     </datalist>
     <datalist id="boon2">
-        <option>Cooperative Familiar</option>
+        <option>Dueling Focus Attunement</option>
     </datalist>
     <datalist id="boon3">
-        <option>Dueling Focus Attunement</option>
+        <option>Cooperative Familiar</option>
     </datalist>
     <datalist id="boonChoice">
         <option>Aether Font</option>
@@ -206,7 +221,7 @@
                 <input type="text" name="attr_pronouns" class="pronouns" />
                 <input type="hidden" name="attr_character_name" />
                 <input type="text" name="attr_apprenticeship" class="apprenticeship" />
-                <input type="text" name="attr_technique" class="technique" />
+                <input type="text" name="attr_technique" class="technique" list="practicedTechniques" />
                 <textarea name="attr_characteristic" class="characteristics" placeholder="One aspect that indicates your mundane capabilities"></textarea>
                 <textarea name="attr_description" class="description" placeholder="Three things that describe you"></textarea>
             </section>
@@ -217,6 +232,8 @@
                 <input type="checkbox" class="editCog" name="attr_EditConduit" value="1" /><span class="editCog"></span>
                 <span class="conduitLock"></span>
                 <!--Conjure-->
+                <h2 class="art art1">Conjure</h2>
+                <h4 class="artSum art1">(manifest object or energy)</h4>
                 <div class="artDice art1">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Conjure" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Conjure" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -227,6 +244,8 @@
                     <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Conjure" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Ensorcell-->
+                <h2 class="art art2">Ensorcell</h2>
+                <h4 class="artSum art2">(suggest, command, or puppet)</h4>
                 <div class="artDice art2">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ensorcell" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ensorcell" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -237,6 +256,8 @@
                     <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Ensorcell" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Scry-->
+                <h2 class="art art3">Scry</h2>
+                <h4 class="artSum art3">(examine to reveal the truth)</h4>
                 <div class="artDice art3">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Scry" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Scry" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -247,6 +268,8 @@
                     <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Scry" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Summon-->
+                <h2 class="art art4">Summon</h2>
+                <h4 class="artSum art4">(transport an object or lifeform)</h4>
                 <div class="artDice art4">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Summon" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Summon" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -257,6 +280,8 @@
                     <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Summon" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Transmute-->
+                <h2 class="art art5">Transmute</h2>
+                <h4 class="artSum art5">(alter form and nature)</h4>
                 <div class="artDice art5">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Transmute" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Transmute" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -267,6 +292,8 @@
                     <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_Transmute" value="3" /><span class="diceCheckbox diePip3 D10"></span>
                 </div>
                 <!--Transmute-->
+                <h2 class="art art6">Ward</h2>
+                <h4 class="artSum art6">(abjure, counterspell, or defend)</h4>
                 <div class="artDice art6">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Ward" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Ward" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -284,6 +311,8 @@
                 <input type="checkbox" class="editCog" name="attr_EditArts" value="1" /><span class="editCog"></span>
                 <span class="artsLock"></span>
                 <!--Animaturgy-->
+                <h2 class="art art1">Animaturgy</h2>
+                <h4 class="artSum art1">(false life, animate, control)</h4>
                 <div class="artDice art1">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Animaturgy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Animaturgy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -298,6 +327,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Animaturgy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Astromancy-->
+                <h2 class="art art2">Astromancy</h2>
+                <h4 class="artSum art2">(stars, astral space, navigation)</h4>
                 <div class="artDice art2">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Astromancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Astromancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -312,6 +343,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Astromancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Botomancy-->
+                <h2 class="art art3">Botomancy</h2>
+                <h4 class="artSum art3">(plants, speak, control)</h4>
                 <div class="artDice art3">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Botomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Botomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -326,6 +359,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Botomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Chronomancy-->
+                <h2 class="art art4">Chronomancy</h2>
+                <h4 class="artSum art4">(time, causality, entropy)</h4>
                 <div class="artDice art4">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Chronomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Chronomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -340,6 +375,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Chronomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Cryptoturgy-->
+                <h2 class="art art5">Cryptoturgy</h2>
+                <h4 class="artSum art5">(math, probability, machines)</h4>
                 <div class="artDice art5">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Cryptoturgy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Cryptoturgy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -354,6 +391,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Cryptoturgy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Geomancy-->
+                <h2 class="art art6">Geomancy</h2>
+                <h4 class="artSum art6">(earth, shaping, transformation)</h4>
                 <div class="artDice art6">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Geomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Geomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -368,6 +407,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Geomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Illusion-->
+                <h2 class="art art7">Illusion</h2>
+                <h4 class="artSum art7">(light, sound, manipulation)</h4>
                 <div class="artDice art7">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Illusion" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Illusion" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -382,6 +423,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Illusion" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Necromancy-->
+                <h2 class="art art8">Necromancy</h2>
+                <h4 class="artSum art8">(death, speak, possession)</h4>
                 <div class="artDice art8">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Necromancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Necromancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -396,6 +439,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Necromancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Pyromancy-->
+                <h2 class="art art9">Pyromancy</h2>
+                <h4 class="artSum art9">(fire, combustion, temperature)</h4>
                 <div class="artDice art9">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Pyromancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Pyromancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -410,6 +455,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Pyromancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Spatiokinesis-->
+                <h2 class="art art10">Spatiokinesis</h2>
+                <h4 class="artSum art10">(space, compression, expansion)</h4>
                 <div class="artDice art10">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Spatiokinesis" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Spatiokinesis" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -424,6 +471,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Spatiokinesis" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Telepathy-->
+                <h2 class="art art11">Telepathy</h2>
+                <h4 class="artSum art11">(mind, emotions, dreams)</h4>
                 <div class="artDice art11">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Telepathy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Telepathy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -438,6 +487,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Telepathy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Tempesturgy-->
+                <h2 class="art art12">Tempesturgy</h2>
+                <h4 class="artSum art12">(storms, water, weather)</h4>
                 <div class="artDice art12">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Tempesturgy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Tempesturgy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -452,6 +503,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Tempesturgy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Theriomancy-->
+                <h2 class="art art13">Theriomancy</h2>
+                <h4 class="artSum art13">(animals, commune, shape shift)</h4>
                 <div class="artDice art13">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Theriomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Theriomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>
@@ -466,6 +519,8 @@
                     <input type="radio" class="diceCheckbox diePip5 hideCheckbox" name="attr_Theriomancy" value="5" /><span class="diceCheckbox diePip5 D10"></span>
                 </div>
                 <!--Viviomancy-->
+                <h2 class="art art14">Viviomancy</h2>
+                <h4 class="artSum art14">(channel life force, alter the body)</h4>
                 <div class="artDice art14">
                     <input type="radio" class="zeroCheckbox diePip0 hideCheckbox" name="attr_Viviomancy" checked /><span class="zeroCheckbox diePip0 ZeroDie"></span>
                     <input type="radio" class="studyCheckbox diePip1 hideCheckbox" name="attr_Viviomancy" value="0.1" /><span class="studyCheckbox diePip1 study"></span>

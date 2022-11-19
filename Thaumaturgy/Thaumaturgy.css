@@ -4448,7 +4448,7 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 334px 84px 25px auto;
+    grid-template-columns: 19px 124px 191px 84px 25px auto;
     grid-template-rows: 45px repeat(6,24px) auto;
     row-gap: 4px;
 }
@@ -4488,7 +4488,7 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 334px 84px 25px auto;
+    grid-template-columns: 19px 124px 191px 84px 25px auto;
     grid-template-rows: 45px repeat(14,24px) auto;
     row-gap: 4px;
 }
@@ -4510,10 +4510,23 @@ input.editToggle[value="1"] + .editMenu
     display: none;
 }
 
+/* Art name and summary for Arts and Conduit*/
+.art
+{
+    grid-column: 2/auto;
+    line-height: 18px;
+}
+
+.artSum
+{
+    grid-column: 3/auto;
+    line-height: 18px;
+}
+
 /* Art Dice for Arts and Conduit*/
 .artDice
 {
-    grid-column: 2 / span 2;
+    grid-column: 4 / span 2;
     display: grid;
     width: 123px;
     height: 24px;
@@ -4521,74 +4534,75 @@ input.editToggle[value="1"] + .editMenu
     grid-template-columns: 9px repeat(3,18px) 4px repeat(2,18px);
     grid-template-rows: 18px 1fr;
     column-gap: 3px;
+    line-height: 18px;
 }
 
-    .artDice.art1
+    .art1
     {
         grid-row: 2 / 3;
     }
 
-    .artDice.art2
+    .art2
     {
         grid-row: 3 / 4;
     }
 
-    .artDice.art3
+    .art3
     {
         grid-row: 4 / 5;
     }
 
-    .artDice.art4
+    .art4
     {
         grid-row: 5 / 6;
     }
 
-    .artDice.art5
+    .art5
     {
         grid-row: 6 / 7;
     }
 
-    .artDice.art6
+    .art6
     {
         grid-row: 7 / 8;
     }
 
-    .artDice.art7
+    .art7
     {
         grid-row: 8 / 9;
     }
 
-    .artDice.art8
+    .art8
     {
         grid-row: 9 / 10;
     }
 
-    .artDice.art9
+    .art9
     {
         grid-row: 10 / 11;
     }
 
-    .artDice.art10
+    .art10
     {
         grid-row: 11 / 12;
     }
 
-    .artDice.art11
+    .art11
     {
         grid-row: 12 / 13;
     }
 
-    .artDice.art12
+    .art12
     {
         grid-row: 13 / 14;
     }
 
-    .artDice.art13
+    .art13
     {
         grid-row: 14 / 15;
     }
 
-    .artDice.art14
+    .art14
     {
         grid-row: 15 / 16;
     }
