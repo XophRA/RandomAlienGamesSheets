@@ -23,12 +23,91 @@ input[type=number]::-webkit-inner-spin-button {
     -moz-appearance:textfield;
 }
 
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
 
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
-input[type=radio].tabs{
-    opacity:0;
-    width:11% ;
-    height:2em!important;
+    position: sticky;
+    top: 0px;
+    background-color:#111111;
+    z-index: 1;
+}
+
+.tabs .tab{
+    text-align:center;
+    color:#eeeeee;
+    background-color: #550000;
+    display:inline-block;
+    border-radius:5px;
+    border-color: #550000;
+    max-width: fit-content;
+}
+
+.tabstoggle[value="main"] ~ button.main,
+.tabstoggle[value="skills"] ~ button.skills,
+.tabstoggle[value="magic"] ~ button.magic,
+.tabstoggle[value="technomancy"] ~ button.technomancy,
+.tabstoggle[value="enhancements"] ~ button.enhancements,
+.tabstoggle[value="matrix"] ~ button.matrix,
+.tabstoggle[value="vehicles"] ~ button.vehicles,
+.tabstoggle[value="equipment"] ~ button.equipment,
+.tabstoggle[value="social"] ~ button.social,
+.tabstoggle[value="character"] ~ button.character
+{
+    color:#aaaaee;
+    font-weight:700;
+}
+
+.contentMain,
+.contentSkills,
+.contentMagic,
+.contentTechnomancer,
+.contentEnhancements,
+.contentMatrix,
+.contentVehiclesDrones,
+.contentEquipment,
+.contentSocial,
+.contentCharacter
+{
+    display:none;
+}
+
+/* show the selected tab */
+.tabstoggle[value="main"] ~ div.contentMain,
+.tabstoggle[value="skills"] ~ div.contentSkills,
+.tabstoggle[value="magic"] ~ div.contentMagic,
+.tabstoggle[value="technomancy"] ~ div.contentTechnomancer,
+.tabstoggle[value="enhancements"] ~ div.contentEnhancements,
+.tabstoggle[value="matrix"] ~ div.contentMatrix,
+.tabstoggle[value="vehicles"] ~ div.contentVehiclesDrones,
+.tabstoggle[value="equipment"] ~ div.contentEquipment,
+.tabstoggle[value="social"] ~ div.contentSocial,
+.tabstoggle[value="character"] ~ div.contentCharacter
+{
+    display:block;
+    width:100%;
+    margin-top: 120px;
+    color:#aaaaee;
+}
+
+.show-mage:not(:checked) ~ button.magic {
+    display:none;
+}
+
+.show-mage:checked ~ button.magic {
+}
+
+.show-technomancy:not(:checked) ~ button.technomancy {
+    display:none;
+}
+
+.show-technomancy:checked ~ button.technomancy {
 }
 
 .wrapper h2{
@@ -36,94 +115,14 @@ input[type=radio].tabs{
     color: #aaaaee;
 }
 
-.tablabel{
-    margin-left:-11%;
-    width:11%;
-    text-align:center;
-    vertical-align:top;
-    color:#eeeeee;
-    background-color:#550000;
-    display:inline-block;
-    border-radius:5px;
-    margin-bottom:5em;
+.wrapper h3{
+    margin-top:1em;
+    color: #aaaaee;
 }
 
-
-.tabs:checked + div.tablabel {
-    font-weight:700;
-}
-
-.tab1:checked + div.tablabel,
-.tab1:checked ~ div.gmroll,
-.content1{
-    color:#aaaaee;
-}
-
-.tab2:checked + div.tablabel,
-.tab2:checked ~ div.gmroll,
-.content2{
-    color:#aaaaee;
-}
-
-.tab3:checked + div.tablabel,
-.tab3:checked ~ div.gmroll,
-.content3{
-    color:#aaaaee;
-}
-
-.tab4:checked + div.tablabel,
-.tab4:checked ~ div.gmroll,
-.content4{
-    color:#aaaaee;
-}
-
-.tab5:checked + div.tablabel,
-.tab5:checked ~ div.gmroll,
-.content5{
-    color:#aaaaee;
-}
-
-.tab6:checked + div.tablabel,
-.tab6:checked ~ div.gmroll,
-.content6{
-    color:#aaaaee;
-}
-
-.tab7:checked + div.tablabel,
-.tab7:checked ~ div.gmroll,
-.content7{
-    color:#aaaaee;
-}
-
-.tab8:checked + div.tablabel,
-.tab8:checked ~ div.gmroll,
-.content8{
-    color:#aaaaee;
-}
-
-.content1,
-.content2,
-.content3,
-.content4,
-.content5,
-.content6,
-.content7,
-.content8{
-    display:none;
-}
-
-input[type=radio].tab1:checked ~ div.content1,
-input[type=radio].tab2:checked ~ div.content2,
-input[type=radio].tab3:checked ~ div.content3,
-input[type=radio].tab4:checked ~ div.content4,
-input[type=radio].tab5:checked ~ div.content5,
-input[type=radio].tab6:checked ~ div.content6,
-input[type=radio].tab7:checked ~ div.content7,
-input[type=radio].tab8:checked ~ div.content8
-{
-    display:block;   
-    width:100%;
-}
+/*
+GM Roll + Edge Button
+*/
 
 .gmroll{
     position:absolute;
@@ -158,14 +157,12 @@ input[type=radio].tab8:checked ~ div.content8
     display:none;
 }
 
-
 .gmrollcheckbox:checked +div,
 .edgerollcheckbox:checked +div{
-    color:inherit;
+    color:#aaaaee;
 }
 
 
-div .reloadlabel label,
 div .chummerimport label{
     display:inline-block;
     background-color:#550000;
@@ -174,6 +171,10 @@ div .chummerimport label{
     color:black;
     width:100%;
     margin-left:-100%;
+}
+
+div .chummerimport{
+    padding-left: 15px;
 }
 
 .chummertextfield textarea{
@@ -208,8 +209,6 @@ div .chummerimport label{
     top:-3em;
 }
 
-div .reloadlabel,
-div .reloadcheckbox,
 div .warningcheckbox,
 div .chummercheckbox,
 div .warninguncheckedwrapper,
@@ -218,7 +217,6 @@ div .chummercheckwrapper{
     width:15%;
 }
 
-.reloadlabel,
 .warninguncheckedwrapper,
 .warningcheckbox:checked ~ .warningcheckedwrapper,
 .warningcheckbox:checked ~ .chummercheckbox,
@@ -236,11 +234,10 @@ div .chummercheckwrapper{
 }
 
 
-.reloadcheckbox,
 .warningcheckbox,
 .chummercheckbox{
     opacity:0;
-    
+
 }
 
 
@@ -262,7 +259,7 @@ div .chummercheckwrapper{
 }
 
 
-.content2 h3{
+.contentSkills h3{
     display:inline-block;
     width:35%;
     color:inherit;
@@ -291,7 +288,7 @@ div .chummercheckwrapper{
 }
 
 
-.repcontrol_add, 
+.repcontrol_add,
 .repcontrol_edit,
 .repcontrol_del,
 .repcontrol_move,
@@ -303,6 +300,7 @@ div .chummercheckwrapper{
 button.spellrollmage,
 .spellrolltechno,
 .vehicleroll,
+.droneroll,
 .armorroll,
 .defenseroll,
 .weaponroll,
@@ -315,7 +313,6 @@ button.spellrollmage,
     border:none;
     border-radius:5px;
     text-shadow:none;
-    padding:3px 3px 0px 3px !important;
 }
 
 
@@ -336,11 +333,13 @@ select{
 
 
 
-.hiddencheckbox{
+input[type=checkbox].hiddencheckbox{
     opacity:0;
     width:1.2em;
     height:1.5em;
     margin-left:0.5em;
+    margin-top: 0.5em;
+    vertical-align: top;
 }
 
 
@@ -351,11 +350,12 @@ select{
     width:1em;
     height:1em;
     padding:0.15em 0.1em 0.1em 0.05em;
+    margin-top: 0.5em;
     text-align:center;
     background-color:#550000;
     font-size:1em;
     border-radius:5px;
-    vertical-align:middle;
+    vertical-align: top;
     line-height:100%;
     color:inherit;
 }
@@ -373,8 +373,6 @@ input.technomancycheckbox:checked ~ div label.labeltechnomancer{
 .weaponmodewrapper select,
 .hiddenmelee:checked ~ div.weaponmodewrapper input,
 .hiddenmelee:checked ~ div.weaponmeleerollwrapper,
-.istechnounticked,
-.istechnocheckbox:checked ~ div.istechnoticked,
 .mskillsilentunticked,
 .mskillsilentcheckbox:checked ~ div.mskillsilentticked,
 .mskillhotsimunticked,
@@ -412,7 +410,17 @@ input.technomancycheckbox:checked ~ div label.labeltechnomancer{
 .vehicleshowweaponunticked,
 .vehicleshowweaponcheckbox:checked ~ div.vehicleshowweaponticked,
 .vehicleweaponunticked,
-.vehicleweaponcheckbox:checked ~ div.vehicleweaponticked,
+.vehicleweaponcheckbox:checked ~ div.droneweaponticked,
+.droneskillsunticked,
+.droneskillscheckbox:checked ~ div.droneskillsticked,
+.dronenotesunticked,
+.dronenotescheckbox:checked ~ div.dronenotesticked,
+.dronedmgunticked,
+.dronedmgcheckbox:checked ~ div.dronedmgticked,
+.droneshowweaponunticked,
+.droneshowweaponcheckbox:checked ~ div.droneshowweaponticked,
+.droneweaponunticked,
+.droneweaponcheckbox:checked ~ div.droneweaponticked,
 .spiriteboundunticked,
 .spiriteboundcheckbox:checked ~ div.spiriteboundticked,
 .spellspecializedunticked,
@@ -425,12 +433,8 @@ input.technomancycheckbox:checked ~ div label.labeltechnomancer{
 .skillshowspec:checked ~ button.rollbuttonnospec,
 .mskillshowspec:checked ~ button.rollbuttonnospec,
 .knowledgeshowspec:checked ~ button.rollbuttonnospec,
-.technomancycheckbox:checked ~ .repcontainer .repitem .spellrow .spellbuttonwrapper .spellrolltechno,
-.technomancycheckbox:checked ~ .spelllabels .spelldrainwrapper .technolabel,
-.spellrollmage,
-.magebound,
-.technomancycheckbox:checked ~ div.technobound,
-.technomancycheckbox:checked ~ div div div div.technobound{
+.spellrollmage
+{
     display: inline-block;
 }
 
@@ -442,6 +446,7 @@ input.technomancycheckbox:checked ~ div label.labeltechnomancer{
 .hiddenmelee:checked ~ div.weaponmodewrapper select,
 .weaponmodewrapper input,
 .hiddenmelee:checked ~ div.weaponrangerollwrapper,
+.hide-rep:checked ~ div.hide-rep,
 .hide1:checked ~ div.hide1,
 .hide2:checked ~ div.hide2,
 .hide3:checked ~ div.hide3,
@@ -450,8 +455,6 @@ input.technomancycheckbox:checked ~ div label.labeltechnomancer{
 .hide6:checked ~ div.hide6,
 .hide7:checked ~ div.hide7,
 .hide8:checked ~ div.hide8,
-.istechnoticked,
-.istechnocheckbox:checked ~ div.istechnounticked,
 .mskillsilentticked,
 .mskillsilentcheckbox:checked ~ div.mskillsilentunticked,
 .mskillhotsimticked,
@@ -468,6 +471,16 @@ input.technomancycheckbox:checked ~ div label.labeltechnomancer{
 .vehicleshowweaponcheckbox:checked ~ div.vehicleshowweaponunticked,
 .vehicleweaponticked,
 .vehicleweaponcheckbox:checked ~ div.vehicleweaponunticked,
+.dronedmgticked,
+.dronedmgcheckbox:checked ~ div.dronedmgunticked,
+.dronenotesticked,
+.dronenotescheckbox:checked ~ div.dronenotesunticked,
+.droneskillsticked,
+.droneskillscheckbox:checked ~ div.droneskillsunticked,
+.droneshowweaponticked,
+.droneshowweaponcheckbox:checked ~ div.droneshowweaponunticked,
+.droneweaponticked,
+.droneweaponcheckbox:checked ~ div.droneweaponunticked,
 .meleeticked,
 .meleecheckbox:checked ~ div.meleeunticked,
 .weaponticked,
@@ -514,21 +527,13 @@ div .labeltechnomancer,
 .technomancycheckbox:checked ~ label.labelmage,
 .technomancycheckbox:checked ~ div.magician,
 .technomancycheckbox:checked ~ div.magicianinitiation,
+.technomancycheckbox:checked ~ div.mage,
 .hiddentextfield,
-.hiddenmelee,
-.technomancycheckbox:checked ~ .repcontainer .repitem .spellrow .spellbuttonwrapper .spellrollmage,
-.technomancycheckbox:checked ~ .spelllabels .spelldrainwrapper .magelabel,
-.technomancycheckbox:checked ~ .magiciandrainattribute,
-div .technolabel,
-.spellrolltechno,
-.technobound,
-.technomancycheckbox:checked ~ div.magebound,
-.technomancycheckbox:checked ~ div div div div.magebound{
+.hiddenmelee
+{
     display:none;
 }
 
-
-.woundsmod,
 .contacts,
 .ware,
 .martial,
@@ -536,27 +541,26 @@ div .technolabel,
 .statblock,
 .infoblock,
 .initiation,
-.spirites,
+.spirits,
 .equipment,
 .armor,
 .cyberdeck,
 .cyberprograms{
     width:calc(46% - 2px);
     display:inline-block;
-    margin:5em 0% 0% 2%;
+    margin-left: 2%;
     vertical-align:top;
 }
-
 
 .initiation{
     padding-bottom:2em;
 }
 
-.spirites{
+.spirits{
     vertical-align:bottom !important;
 }
 
-.content7 .weapon{
+.contentEquipment .weapon{
     display:inline-block;
     margin:2em 0% 0% 2%;
     vertical-align:top;
@@ -567,6 +571,7 @@ div .technolabel,
     display:block;
 }
 
+.statinputwrapper .statinput,
 .statinput{
     width:2em;
     background-color:#444444;
@@ -691,16 +696,15 @@ div .technolabel,
     margin:0px 8% 0.5em 0%;
 }
 
-
-.woundsmodrow div{
-    width:19%;
+.limitwrapper{
     display:inline-block;
+    width:25%;
 }
 
-.limitwrapper,
 .armortotal{
     display:inline-block;
     width:25%;
+    pointer-events: none;
 }
 
 
@@ -738,14 +742,16 @@ div .skilllabel,
 div .equipmentlabel,
 div .vehiclelabel,
 div .vehicleskillmodlabel label,
+div .dronelabel,
+div .droneskillmodlabel label,
 div .armorlabel,
 div .weaponlabel,
 div .ammolabel,
 div .initiativelabel label,
 div .standardrolls label,
 div .spelllabel,
-div .spirites label,
-div .spiritestable label,
+div .spirits label,
+div .spiritstable label,
 div .matrixactions label,
 div .wounds label,
 div .woundsmod label,
@@ -763,7 +769,7 @@ div .limitlabels label{
 .spiritelabel,
 .limitmodifier{
     display:inline-block;
-    width:30%;
+    width:20%;
 }
 
 .limitdisplay{
@@ -828,7 +834,7 @@ div .limitlabels label{
 }
 
 
-.spiritestable{
+.spiritstable{
     width:90%;
     margin-left:2%;
 }
@@ -839,11 +845,12 @@ div .limitlabels label{
 .knowledge,
 .spells,
 .vehicle,
+.drone,
 .magician,
 input.technomancycheckbox:checked ~ div.technomancer{
     display:block;
     width:90%;
-    margin:5em 0% 0% 2%;
+    margin-left: 2%;
     text-align:left;
 }
 
@@ -852,7 +859,8 @@ input.technomancycheckbox:checked ~ div.technomancer{
 .spelllabels,
 .weaponlabels,
 .ammolabels,
-.vehiclelabels{
+.vehiclelabels,
+.dronelabels{
     width:100%;
 }
 
@@ -874,7 +882,6 @@ input.technomancycheckbox:checked ~ div.technomancer{
 .limits input,
 .limits select,
 .woundsrow input,
-.woundsmodrow input,
 .skills input[type=text],
 .skills input[type=number],
 .skills select,
@@ -900,6 +907,10 @@ input.technomancycheckbox:checked ~ div.technomancer{
 .vehicle input[type=number],
 .vehicle textarea,
 .vehicle select,
+.drone input[type=text],
+.drone input[type=number],
+.drone textarea,
+.drone select,
 .equipment input[type=text],
 .equipment input[type=number],
 .equipment textarea,
@@ -920,6 +931,23 @@ input.technomancycheckbox:checked ~ div.technomancer{
     border:none;
     box-shadow:none;
     height:100%;
+    box-sizing:border-box;
+    margin:0px;
+    text-align:center;
+}
+
+.armor .armortotal input[type=number] {
+    background-color:#111111 !important;
+    border:3px solid #444444 !important;
+    padding:1px !important;
+}
+
+.magiciandrainattribute input[type=number] {
+    vertical-align:top;
+    background-color:#444444;
+    color:inherit;
+    border:none;
+    box-shadow:none;
     box-sizing:border-box;
     margin:0px;
     text-align:center;
@@ -949,7 +977,7 @@ input[disabled="true"]{
 .spiritetypewrapper{
     vertical-align:top;
 }
-        
+
 
 .movementrow div:not(.itemcontrol),
 .specrolls div:not(.itemcontrol),
@@ -965,6 +993,7 @@ input[disabled="true"]{
 .contactsrow div:not(.checkboxticker):not(.contactsnoteswrapper):not(.itemcontrol),
 .programrow div:not(.checkboxticker):not(.itemcontrol),
 .vehicle div:not(.checkboxticker):not(.vehicleskillmodelabel):not(.vehicleskillswrapper):not(.vehiclenoteswrapper):not(.vehicledmgwrapper):not(.vehicleweaponnoteswrapper):not(.vehicleweaponwrapper):not(.itemcontrol),
+.drone div:not(.checkboxticker):not(.droneskillmodelabel):not(.droneskillswrapper):not(.dronenoteswrapper):not(.dronedmgwrapper):not(.droneweaponnoteswrapper):not(.droneweaponwrapper):not(.itemcontrol),
 .equipmentrow div:not(.checkboxticker):not(.equipmentnoteswrapper):not(.itemcontrol),
 .weaponrow div:not(.checkboxticker):not(.weaponnoteswrapper):not(.itemcontrol):not(.weaponrangerollwrapper):not(.weaponmeleerollwrapper),
 .ammorow div:not(.checkboxticker):not(.itemcontrol):not(.ammofieldset):not(.ammolabels),
@@ -973,7 +1002,7 @@ input[disabled="true"]{
 .armorlabels div:not(.itemcontrol),
 .charinforow div:not(.itemcontrol):not(.checkboxticker){
     display:inline-block;
-    vertical-align:top;    
+    vertical-align:top;
 }
 
 
@@ -992,7 +1021,8 @@ input[disabled="true"]{
 }
 
 
-.vehicleskillmodboxwrapper{
+.vehicleskillmodboxwrapper,
+.droneskillmodboxwrapper{
     min-width:2.1em;
     margin-left:1%;
 }
@@ -1002,16 +1032,18 @@ input[disabled="true"]{
 }
 
 
-.vehicleskillmodlabel{
+.vehicleskillmodlabel,
+.droneskillmodlabel{
     margin-left:5%;
 }
 
 
 .vehicleskillmodlabel label,
+.droneskillmodlabel label,
 .armortotallabel label,
 .essencelabelwrapper label,
 .mskillmodlabel label{
-    text-align:right;  
+    text-align:right;
     font-size: initial;
 }
 
@@ -1022,11 +1054,13 @@ input[disabled="true"]{
 }
 
 .vehicleskillnoise,
+.droneskillnoise,
 .mskillnoise{
     width:100%;
 }
 
 .vehicleskillinputwrapper,
+.droneskillinputwrapper,
 .metamagicdescriptionwrapper,
 .programdescriptionwrapper{
     width:60%;
@@ -1068,17 +1102,21 @@ input[disabled="true"]{
 
 
 .charnamewrapper,
-.contactnamewrapper,
-.contacttypewrapper,
 .metamagicnamewrapper,
 .programnamewrapper{
     width:25%;
+}
+
+.contactnamewrapper,
+.contacttypewrapper{
+    width:18%;
 }
 
 
 .spiritenamewrapper,
 .charmetawrapper,
 .vehiclenamewrapper,
+.dronenamewrapper,
 .knowledgeskillnamewrapper,
 .ammodescriptionwrapper{
     width:20%;
@@ -1108,6 +1146,10 @@ input[disabled="true"]{
 .vehicleskillmaneuver,
 .vehicleskillperception,
 .vehicleskillsneak,
+.droneskilldodge,
+.droneskillmaneuver,
+.droneskillperception,
+.droneskillsneak,
 .movementtotal,
 .movementfactor,
 .contactconnectionwrapper,
@@ -1130,18 +1172,21 @@ input[disabled="true"]{
 
 
 .knowledgeskillattributewrapper,
-.ammodmgtypewrapper,
 .skillnoteswrapper,
 .armorratingwrapper,
-.mskillratingwrapper,
-.ammonamewrapper{
+.mskillratingwrapper{
     width:12%;
+}
+
+.ammonamewrapper{
+    width:24%;
 }
 
 
 .charplayerwrapper,
 .equipmentnumberwrapper,
 .weapondmgtypewrapper,
+.ammodmgtypewrapper,
 .equipmentnoteslabel,
 .charsexwrapper,
 .charagewrapper,
@@ -1155,6 +1200,7 @@ input[disabled="true"]{
 .spellschoolwrapper,
 .equipmentnumberwrapper,
 .vehicletestwrapper,
+.dronetestwrapper,
 .weaponmodewrapper,
 .weaponcategorywrapper{
     width:10%;
@@ -1163,8 +1209,7 @@ input[disabled="true"]{
 
 .skilllimitbonuswrapper,
 .spellsourcewrapper,
-.spiriterollwrapper,
-.ammoaccwrapper{
+.spiriterollwrapper{
     width:8%;
 }
 
@@ -1176,19 +1221,26 @@ input[disabled="true"]{
     width:7%;
 }
 
-.spiriteserviceswrapper,
+.droneskillother,
+.droneskillinitiative,
+.droneskillsoak,
+.dronecostwrapper{
+    width:7%;
+}
+
+.spiritserviceswrapper,
 .spiriteforcewrapper,
 .spriterollwrapper,
-.ammodvwrapper,
-.ammoapwrapper,
-.ammorollwrapper,
 .ammonumberwrapper,
+.ammorollwrapper,
 .ammomaxwrapper{
     width:6.5%;
 }
 
 .vehicleboxwrapper,
 .vehicleskillmodinput,
+.droneboxwrapper,
+.droneskillmodinput,
 .skillratingwrapper,
 .skillbonuswrapper,
 .skilldicepoolwrapper,
@@ -1213,10 +1265,23 @@ input[disabled="true"]{
 .vehicledamagewrapper,
 .vehicleskillwrapper,
 .vehicletestwrapper,
+.dronehandwrapper,
+.dronespeedwrapper,
+.droneacclwrapper,
+.dronepilotwrapper,
+.dronesenswrapper,
+.dronebodywrapper,
+.dronearmorwrapper,
+.dronedamagewrapper,
+.droneskillwrapper,
+.dronetestwrapper,
 .weaponaccuracywrapper,
+.ammoaccwrapper,
 .weapondvwrapper,
+.ammodvwrapper,
 .weapondicewrapper,
 .weaponapwrapper,
+.ammoapwrapper,
 .weaponrcwrapper,
 .weaponaccuracywrapper,
 .weaponspecwrapper,
@@ -1241,7 +1306,8 @@ input[disabled="true"]{
 
 
 
-.vehiclenoteboxwrapper{
+.vehiclenoteboxwrapper,
+.dronenoteboxwrapper{
     width:2em;
 }
 
@@ -1301,10 +1367,10 @@ input[disabled="true"]{
 
 .magiciandrainattribute{
     display:inline-block;
-    width:30%;
+    width:50%;
     margin-bottom:0.3em;
     vertical-align:top;
-    margin-left:30%;
+    margin-left:15%;
     position:relative;
     top:-1em;
     margin-bottom:-2em;
@@ -1323,22 +1389,26 @@ input[disabled="true"]{
 }
 
 
-.vehicles{
+.vehicles,
+.drones{
     width:100%;
 }
 
-.spiritespacer,
-.vehiclespacer{
+.spiritspacer,
+.vehiclespacer,
+.dronespacer{
     margin-right:calc(5% - 2em);
 }
 
 
-.vehicleskillmodelabel{
+.vehicleskillmodelabel,
+.droneskillmodelabel{
     width:8%;
     margin-left:-8%;
 }
 
-.vehicleskillmodelabel label{
+.vehicleskillmodelabel label,
+.droneskillmodelabel label{
     width:100%;
     display:inline-block;
     font-size:80%;
@@ -1349,13 +1419,15 @@ input[disabled="true"]{
     border-radius:5px;
 }
 
-.vehiclemode{
+.vehiclemode,
+.dronemode{
     opacity:0;
     width:8%;
     display:none;
 }
 
-.vehicleskillmodelabel{
+.vehicleskillmodelabel,
+.droneskillmodelabel{
     display:none;
 }
 
@@ -1376,13 +1448,32 @@ input[disabled="true"]{
     display:inline-block;
 }
 
+.dronemode0:checked ~ .dronemode1,
+.dronemode0:checked ~ .dronelabel0{
+    display:inline-block;
+}
+.dronemode1:checked ~ .dronemode2,
+.dronemode1:checked ~ .dronelabel1{
+    display:inline-block;
+}
+.dronemode2:checked ~ .dronemode3,
+.dronemode2:checked ~ .dronelabel2{
+    display:inline-block;
+}
+.dronemode3:checked ~ .dronemode0,
+.dronemode3:checked ~ .dronelabel3{
+    display:inline-block;
+}
+
 .pilotroll,
-.vehiclemode3:checked ~ div div div div div div button.autopilotroll{
+.vehiclemode3:checked ~ div div div div div div button.autopilotroll,
+.dronemode3:checked ~ div div div div div div button.autopilotroll{
     display:inline-block;
 }
 
 
 .vehiclemode3:checked ~ div button.pilotroll,
+.dronemode3:checked ~ div button.pilotroll,
 .autopilotroll{
     display:none;
 }
@@ -1403,12 +1494,12 @@ input[disabled="true"]{
 .limitfields,
 .limitlabels,
 .woundsrow,
-.woundsmodrow,
 .initiativerow,
 .programrow,
 .deckrow,
 .mskillrow,
 .vehiclerow,
+.dronerow,
 .equipmentrow,
 .weaponrow{
     width:100%;
@@ -1423,50 +1514,72 @@ input[disabled="true"]{
 
 .vehicleskillrow,
 .vehicleweaponrow,
+.droneskillrow,
+.droneweaponrow,
 .ammorow{
-    width:90%;
+    width:95%;
     display:inline-block;
-    margin-left:7%;
+    margin-left:5%;
     margin-top:0.3em;
 }
 
 
 .ammolabels{
-    width:90%;
+    width:95%;
     display:inline-block;
-    margin-left:7%;
+    margin-left:5%;
 }
 
 .vehicleammorow,
-.vehicleammolabels{
+.vehicleammolabels,
+.droneammorow,
+.droneammolabels{
     width:95%;
     display:inline-block;
     margin-left:3%;
     margin-top:0.3em;
 }
-    
+
 
 .skillrow{
     width: calc(100% - 2em);
     display:inline-block;
     margin-top:0.3em;
 }
-   
+
+.usagerow {
+    width: 100%;
+    display:inline-block;
+    margin-top:0.3em;
+}
+
+.namewrapper {
+    width: 28%;
+    margin-right: 8px;
+    margin-left: 2%;
+}
+
+
 .contactsnoteswrapper,
 .vehiclenoteswrapper,
-.vehicleweaponnoteswrapper{
+.vehicleweaponnoteswrapper,
+.dronenoteswrapper,
+.droneweaponnoteswrapper{
     width:85%;
     padding-top:0.3em;
 }
 
-.vehicledmginput{
+.vehicledmginput,
+.dronedmginput{
     width:40%;
     margin-right:5%;
     display:inline-block;
 }
 
 .vehicledmgphys,
-.vehicledmgmatrix{
+.vehicledmgmatrix,
+.dronedmgphys,
+.dronedmgmatrix{
     width:15%;
     display:inline-block;
 }
@@ -1509,6 +1622,7 @@ input[disabled="true"]{
 .charinfo textarea,
 .notesblock textarea,
 .vehiclenoteswrapper textarea,
+.dronenoteswrapper textarea,
 .qualitynoteswrapper textarea,
 .spiritenoteswrapper textarea,
 .warenoteswrapper textarea,
@@ -1529,6 +1643,11 @@ input[disabled="true"]{
 .vehicleskillswrapper,
 .vehicleweaponwrapper,
 .vehicleweaponnoteswrapper,
+.dronedmgwrapper,
+.dronenoteswrapper,
+.droneskillswrapper,
+.droneweaponwrapper,
+.droneweaponnoteswrapper,
 .equipmentnoteswrapper,
 .nuyennoteswrapper,
 .warenoteswrapper,
@@ -1547,6 +1666,11 @@ input.vehicledmgcheckbox:checked ~ div.vehicledmgwrapper,
 input.vehiclenotescheckbox:checked ~ div.vehiclenoteswrapper,
 input.vehicleskillscheckbox:checked ~ div.vehicleskillswrapper,
 input.vehicleweaponcheckbox:checked ~ div.vehicleweaponnoteswrapper,
+input.droneshowweaponcheckbox:checked ~ div.droneweaponwrapper,
+input.dronedmgcheckbox:checked ~ div.dronedmgwrapper,
+input.dronenotescheckbox:checked ~ div.dronenoteswrapper,
+input.droneskillscheckbox:checked ~ div.droneskillswrapper,
+input.droneweaponcheckbox:checked ~ div.droneweaponnoteswrapper,
 input.armornotescheckbox:checked ~ div.armornoteswrapper,
 input.warecheckbox:checked ~ div.warenoteswrapper,
 input.martialcheckbox:checked ~ div.martialnoteswrapper,
@@ -1559,24 +1683,179 @@ input.weaponcheckbox:checked ~ div.weaponnoteswrapper{
     display:block;
 }
 
+div .experimental{
+    padding-left: 15px;
+}
+
 .experimental checkbox {
     margin-right: 10px;
 }
 
+div.spacer {
+    padding-right: 20px;
+}
+
+.ui-dialog .charsheet button[type=action] {
+	font-size: 1.3em;
+	margin: 0px 3px 0px 3px;
+    vertical-align:top;
+}
+
+.charsheet button[type=action].weaponroll::before,
+.charsheet button[type=action].ammoroll::before,
+.charsheet button[type=action].vehicleroll::before,
+.charsheet button[type=action].droneroll::before,
+.charsheet button[type=action].standardroll::before,
+.charsheet button[type=action].rollbuttonspec::before,
+.charsheet button[type=action].rollbuttonnospec::before,
+.charsheet button[type=action].spellrolltechno::before,
+.charsheet button[type=action].spellrollmage::before
+ {
+    font-family: "dicefontd20";
+    content: "t";
+    font-size: 16px;
+}
+
+.weapon .heading2 {
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 1em;
+  color: #aaaaee;
+}
+
+.weapon .heading4 {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 1em;
+  color: #aaaaee;
+}
+
+input[type="checkbox"].invisiblecheckbox {
+    display: none
+}
+
+div.collapsible {
+  display: none;
+}
+
+.invisiblecheckbox:checked + div.collapsible {
+  display: block;
+}
+
+/* ==========
+    Settings
+   ==========
+*/
+
+.settings {
+    display: block;
+    padding: 10px;
+}
+
+.settings label {
+    color: #aaaaee;
+    font-weight: normal;
+    font-size: 13px;
+    width: fit-content;
+    min-width: 25%;
+}
+
+.settings span {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.sub-settings {
+    padding-left: 10px;
+}
+
+.setting-select {
+    width: fit-content;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+summary{
+  display:list-item;
+}
+
+summary.settings-caption {
+    text-decoration-line: underline;
+    color: #aaaaee;
+    margin-bottom: 5px;
+}
+
+label.settings-checkbox {
+    width: fit-content;
+    cursor: pointer;
+    color: #aaaaee;
+}
+
+.woundsmodrow div{
+    width:19%;
+    display:inline-block;
+}
+
+.woundsmodrow input{
+    width:100% !important;
+    vertical-align:top;
+    background-color:#444444;
+    color:inherit;
+    border:none;
+    box-shadow:none;
+    height:100%;
+    box-sizing:border-box;
+    margin:0px;
+    text-align:center;
+}
+
+.settings-counterstrike {
+    display: none;
+}
+
+.counterstrikeToggle[value="on"]  ~ .settings-counterstrike
+{
+    display:flex;
+}
+
+.settings-parry {
+    display: none;
+}
+
+.parryToggle[value="on"]  ~ .settings-parry
+{
+    display:flex;
+}
+
+.settings-riposte {
+    display: none;
+}
+
+.riposteToggle[value="on"]  ~ .settings-riposte
+{
+    display:flex;
+}
+
+.settings select,
+.settings input[type=number]
+{
+    background-color:#444444;
+    color:inherit;
+    border:none;
+    box-shadow:none;
+    height:100%;
+    box-sizing:border-box;
+    text-align:center;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+.sheet-rolltemplate-reactdefend table,
+.sheet-rolltemplate-reactsoak table,
+.sheet-rolltemplate-hitsToDrain table,
+.sheet-rolltemplate-extendedRoll table,
+.sheet-rolltemplate-reroll table,
+.sheet-rolltemplate-shadowrun-forcedglitch table,
 .sheet-rolltemplate-shadowrun table{
     background-color:#111111;
     border:4px solid #550000;
@@ -1587,12 +1866,24 @@ input.weaponcheckbox:checked ~ div.weaponnoteswrapper{
     margin-right:5%;
 }
 
+.sheet-rolltemplate-reactdefend img,
+.sheet-rolltemplate-reactsoak img,
+.sheet-rolltemplate-hitsToDrain img,
+.sheet-rolltemplate-extendedRoll img,
+.sheet-rolltemplate-reroll img,
+.sheet-rolltemplate-shadowrun-forcedglitch img,
 .sheet-rolltemplate-shadowrun img{
     float:left;
     width:auto;
     height:3em;
 }
 
+.sheet-rolltemplate-reactdefend table th,
+.sheet-rolltemplate-reactsoak table th,
+.sheet-rolltemplate-hitsToDrain table th,
+.sheet-rolltemplate-extendedRoll table th,
+.sheet-rolltemplate-reroll table th,
+.sheet-rolltemplate-shadowrun-forcedglitch table th,
 .sheet-rolltemplate-shadowrun table th{
     background-color:#444444;
     text-align:center;
@@ -1601,11 +1892,23 @@ input.weaponcheckbox:checked ~ div.weaponnoteswrapper{
     font-size:1em;
 }
 
+.sheet-rolltemplate-reactdefend table .inlinerollresult,
+.sheet-rolltemplate-reactsoak table .inlinerollresult,
+.sheet-rolltemplate-hitsToDrain table .inlinerollresult,
+.sheet-rolltemplate-extendedRoll table .inlinerollresult,
+.sheet-rolltemplate-reroll table .inlinerollresult,
+.sheet-rolltemplate-shadowrun-forcedglitch table .inlinerollresult,
+.sheet-rolltemplate-shadowrun table .inlinerollresult{
+    border:none !important;
+    background-color:inherit;
+}
+
 .sheet-rolltemplate-results-success{
     font-size:1em;
     text-align:center;
     margin:5em 0em 5em 0em;
     color:#99eeee;
+    border: none
 }
 
 .sheet-rolltemplate-results-fail{
@@ -1647,8 +1950,25 @@ input.weaponcheckbox:checked ~ div.weaponnoteswrapper{
     text-align:center;
 }
 
+.sheet-rolltemplate-button-row {
+	display: flex;
+	margin-top: -3px;
+	justify-content: center;
+	align-content: center;
+}
 
-.sheet-rolltemplate-shadowrun table .inlinerollresult{
-    border:none !important;
-    background-color:inherit;
+.sheet-rolltemplate-button a[href^="~"]{
+    text-align: center;
+    border-radius: 30px;
+    color: #eebb99;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sheet-rolltemplate-results-fail a[href^="~"],
+.sheet-rolltemplate-results-success a[href^="~"]{
+    color:inherit;
+    border: none;
+    background: inherit;
 }
