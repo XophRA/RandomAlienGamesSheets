@@ -64,7 +64,7 @@ input.duellingSelector:checked ~ article.duellingSheet
     /* Variables for a selection of colors to be used in the sheet colors */
     --paper: #181818;
     --text: #fff;
-    --primary: #a985c3;
+    --primary: #a938fa;
     --accent: #708090;
     --alert: #C71585;
     /* Sheet Colors */
