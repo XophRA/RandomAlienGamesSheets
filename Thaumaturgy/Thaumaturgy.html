@@ -802,80 +802,6 @@
                 </div>
             </section>
 
-            <!-- Fate -->
-            <section class="fateWidget tableSpread">
-                <h1 class="tableTitle">Fate</h1>
-                <input type="hidden" class="editToggle" name="attr_EditFate" />
-                <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
-                <div class="editMenu editTableSpread">
-                    <div class="arcanaEdit leftLegEdit">
-                        <h2>Consequences</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="-1" max="21" value="0" />
-                        <div class="arcanaFacing">Facing:</div>
-                        <select name="attr_ConsequencesFacing" class="arcanaFacing">
-                            <option value="0">Harmony</option>
-                            <option value="1">Chaos</option>
-                        </select>
-                    </div>
-                    <div class="arcanaEdit rightLegEdit">
-                        <h2>Destiny</h2>
-                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="-1" max="21" value="0" />
-                        <div class="arcanaFacing">Facing:</div>
-                        <select name="attr_DestinyFacing" class="arcanaFacing">
-                            <option value="0">Harmony</option>
-                            <option value="1">Chaos</option>
-                        </select>
-                    </div>
-                    <div class="arcanaEdit tabletopEdit">
-                        <h2>Obstacle</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="-1" max="21" value="0" />
-                        <div class="arcanaFacing">Facing:</div>
-                        <select name="attr_ObstacleFacing" class="arcanaFacing">
-                            <option value="0">Harmony</option>
-                            <option value="1">Chaos</option>
-                        </select>
-                    </div>
-                    <div class="arcanaEdit dragEdit">
-                        <h2>Drag</h2>
-                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Drag" min="1" max="14" value="0" />
-                        <div class="arcanaFacing">Facing:</div>
-                        <select name="attr_DragFacing" class="arcanaFacing">
-                            <option value="0">Harmony</option>
-                            <option value="1">Chaos</option>
-                        </select>
-                        <div class="arcanaHouse">House:</div>
-                        <select name="attr_DragHouse" class="arcanaHouse">
-                            <option value="0">Wands</option>
-                            <option value="1">Cups</option>
-                            <option value="2">Swords</option>
-                            <option value="3">Pentacles</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="leftLeg">
-                    <input type="hidden" class="facingChoice" name="attr_ConsequencesFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Consequences" />
-                    <span class="card majorArcana"></span>
-                </div>
-                <div class="rightLeg">
-                    <input type="hidden" class="facingChoice" name="attr_DestinyFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Destiny" />
-                    <span class="card majorArcana"></span>
-                </div>
-                <div class="tabletop">
-                    <input type="hidden" class="facingChoice" name="attr_ObstacleFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Obstacle" />
-                    <span class="card majorArcana"></span>
-                </div>
-                <div class="drag">
-                    <input type="hidden" class="houseChoice" name="attr_DragHouse" />
-                    <input type="hidden" class="facingChoice" name="attr_DragFacing" />
-                    <input type="hidden" class="cardChoice" name="attr_Drag" />
-                    <span class="card minorArcana"></span>
-                </div>
-                <textarea class="speculation" name="attr_fateSpeculation" placeholder="what does it all mean?"></textarea>
-            </section>
-
             <!-- Notes -->
             <div class="noteWidget">
                 <h1 class="notesTitle">Notes</h1>
@@ -900,7 +826,7 @@
                 <textarea name="attr_covendescription" class="covenDescription"></textarea>
                 <h4 class="covenkins">Covenkin</h4>
                 <textarea name="attr_covenkins" class="covenkins" ></textarea>
-                <h4 class="seniorCovens">Senior Covens</h4>
+                <h4 class="seniorCovens">Cohorts</h4>
                 <textarea name="attr_seniorCovens" class="seniorCovens" ></textarea>
             </section>
             <!-- Rituals and Ascension -->
@@ -1164,19 +1090,91 @@
                 <input type="text" name="attr_FamiliarName" class="name" />
                 <h4 class="description">Description</h4>
                 <textarea name="attr_description" class="description"></textarea>
-                <!-- Boons -->
-                    <h2 class="charateristic" >Boons</h2>
-                    <textarea name="attr_charateristics" class="charateristic"></textarea>
+                <!-- Aether -->
                 <div class="aetherTracker">
                     <input type="number" name="attr_aether" value="0" class="resourceBox" />
                 </div>
             </section>
 
+            <!-- Fate -->
+            <section class="fateWidget tableSpread">
+                <h1 class="tableTitle">Fate</h1>
+                <input type="hidden" class="editToggle" name="attr_EditFate" />
+                <input type="checkbox" class="editCog" name="attr_EditFate" value="1" /><span class="editCog"></span>
+                <div class="editMenu editTableSpread">
+                    <div class="arcanaEdit leftLegEdit">
+                        <h2>Consequences</h2>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Consequences" min="-1" max="21" value="0" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_ConsequencesFacing" class="arcanaFacing">
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
+                        </select>
+                    </div>
+                    <div class="arcanaEdit rightLegEdit">
+                        <h2>Destiny</h2>
+                        <div class="arcanaChoice">Arcana:</div><input type="number" class="arcanaChoice" name="attr_Destiny" min="-1" max="21" value="0" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DestinyFacing" class="arcanaFacing">
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
+                        </select>
+                    </div>
+                    <div class="arcanaEdit tabletopEdit">
+                        <h2>Obstacle</h2>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Obstacle" min="-1" max="21" value="0" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_ObstacleFacing" class="arcanaFacing">
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
+                        </select>
+                    </div>
+                    <div class="arcanaEdit dragEdit">
+                        <h2>Drag</h2>
+                        <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Drag" min="1" max="14" value="0" />
+                        <div class="arcanaFacing">Facing:</div>
+                        <select name="attr_DragFacing" class="arcanaFacing">
+                            <option value="0">Harmony</option>
+                            <option value="1">Chaos</option>
+                        </select>
+                        <div class="arcanaHouse">House:</div>
+                        <select name="attr_DragHouse" class="arcanaHouse">
+                            <option value="0">Wands</option>
+                            <option value="1">Cups</option>
+                            <option value="2">Swords</option>
+                            <option value="3">Pentacles</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="leftLeg">
+                    <input type="hidden" class="facingChoice" name="attr_ConsequencesFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Consequences" />
+                    <span class="card majorArcana"></span>
+                </div>
+                <div class="rightLeg">
+                    <input type="hidden" class="facingChoice" name="attr_DestinyFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Destiny" />
+                    <span class="card majorArcana"></span>
+                </div>
+                <div class="tabletop">
+                    <input type="hidden" class="facingChoice" name="attr_ObstacleFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Obstacle" />
+                    <span class="card majorArcana"></span>
+                </div>
+                <div class="drag">
+                    <input type="hidden" class="houseChoice" name="attr_DragHouse" />
+                    <input type="hidden" class="facingChoice" name="attr_DragFacing" />
+                    <input type="hidden" class="cardChoice" name="attr_Drag" />
+                    <span class="card minorArcana"></span>
+                </div>
+                <textarea class="speculation" name="attr_fateSpeculation" placeholder="what does it all mean?"></textarea>
+            </section>
+            
             <!-- Academy Map -->
             <section class="layoutWidget">
                 <div class="academylayout layout">
                     <h1 class="layoutName">Academy</h1>
-                    <input type="text" name="attr_academy" class="layoutName" placeholder="Academy Name" />
+                    <!-- <input type="text" name="attr_academy" class="layoutName" placeholder="Academy Name" /> -->
                     <h3 class="layoutDescription">Description</h3>
                     <textarea name="attr_academydescription" class="layoutDescription" placeholder="A description of the Academy"></textarea>
                     <!-- Sections -->
