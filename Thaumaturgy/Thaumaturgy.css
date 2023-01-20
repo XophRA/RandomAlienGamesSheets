@@ -32,7 +32,7 @@ input.duellingSelector:checked ~ article.duellingSheet
     /* Variables for a selection of colors to be used in the sheet colors */
     --paper: #FFF;
     --text: #000;
-    --primary: #a985c3;
+    --primary: #a938fa;
     --accent: #708090;
     --alert: #C71585;
     /* Sheet Colors */
@@ -359,7 +359,7 @@ main.masterGrid
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 50% 1fr;
-    grid-template-rows: 312px 215px 79px 367px auto 320px 670px auto;
+    grid-template-rows: 312px 215px 79px 367px auto 320px auto;
     justify-items: start;
     align-items: start;
 }
@@ -379,7 +379,7 @@ main.masterGrid
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 275px auto 275px auto;
+    grid-template-rows: 275px auto 275px 670px auto;
     justify-items: start;
     align-items: start;
 }
@@ -688,10 +688,16 @@ main.masterGrid
         grid-row: 3/auto;
     }
 
+/* Coven Fate */
+.fateWidget
+{
+    grid-area: 4/1/auto/-1;
+}
+
 /* Layout */
 .layoutWidget
 {
-    grid-area: 4/1/auto/-1;
+    grid-area: 5/1/auto/-1;
     display: grid;
     width: 100%;
     height: 100%;
@@ -789,7 +795,7 @@ main.masterGrid
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr 5fr 120px;
-    grid-template-rows: repeat(2, 30px) 1fr 1fr 15px;
+    grid-template-rows: repeat(2, 30px) 1fr 15px;
 }
 
     .familiarWidget .familiarTitle
@@ -805,10 +811,6 @@ main.masterGrid
     .familiarWidget .description
     {
         grid-row: 3/auto;
-    }
-    .familiarWidget .charateristic
-    {
-        grid-row: 4/auto;
     }
     .familiarWidget .aetherTracker
     {
@@ -4664,15 +4666,9 @@ input.editToggle[value="1"] + .editMenu
         height: 100%;
     }
 
-/* Fate */
-.casterSheetGrid > .fateWidget
-{
-    grid-area: 7/1/auto/-1;
-}
-
 .casterSheetGrid > .noteWidget
 {
-    grid-area: 8/1/auto/-1;
+    grid-area: 7/1/auto/-1;
     width: 100%;
     display: grid;
     row-gap: 0px;
