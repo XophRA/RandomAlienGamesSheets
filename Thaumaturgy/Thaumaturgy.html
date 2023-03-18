@@ -18,7 +18,7 @@
 
         </select>
 
-        <div class="version">Version 0.5</div>
+        <div class="version">Version 0.6</div>
     </header>
     <!--Hidden Sheet Selection Radio switch-->
     <input type="radio" name="attr_selectedSheet" class="hidden casterSelector" value="1" checked>
@@ -102,6 +102,7 @@
         <option>Ingestion</option>
         <option>Recital</option>
         <option>Sword Mage</option>
+        <option>Sigilist</option>
         <option>Wand Wielder</option>
     </datalist>
 
@@ -122,7 +123,9 @@
         <option>Aether Font</option>
         <option>Artefact Attunement</option>
         <option>Dueling Focus Attunement</option>
-        <option>Familiar form</option>
+        <option>Greater Concentration</option>
+        <option>Self-discipline</option>
+        <option>Multi-caster</option>
     </datalist>
 
     <!-- Components -->
@@ -212,7 +215,7 @@
                 <input type="hidden" name="attr_covenLevel" />
                 <input type="text" name="attr_level" class="level" readonly />
                 <input type="hidden" name="attr_selectedSheet" class="npc"/>
-                <input type="number" name="attr_level" min="0" max="11" class="levelNPC" />
+                <input type="number" name="attr_level" min="0" max="11" class="levelArrow" />
                 <input type="text" name="attr_rank" class="rank" readonly />
                 <input type="text" name="attr_conduitTitle" class="conduitTitle" list="conduitTitle" />
                 <input type="text" name="attr_givenName" class="givenName" />
@@ -2554,9 +2557,9 @@
 <!-- Scripts -->
 <script type="text/worker">
     /* Global Attributes */
-    var globalAttributes = [];/*Global Array for Storage of Player Caster Level*/
+    /*var globalAttributes = [];*/ /*Global Array for Storage of Player Caster Level*/
 
-    /* Set Defaults, name, and Player Caster Level to Coven Level */
+    /* Set Defaults and name */
     on("sheet:opened change:covenlevel change:level change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns change:concept", (event) => {
         getAttrs(["covenLevel", "level", "selectedSheet", "Consequences", "Destiny", "Obstacle", "Drag" , "Aftermath", "Backlash", "Complications", "dragClock","DragHouse", "givenName", "academicName", "questName", "pronouns", "concept", "character_name"], function (values) {
             const setObj = {};
@@ -2636,8 +2639,8 @@
                 setObj.ascensionSigilSize = ascensionSigilSize;
 
                 /* Globally Store Coven Level from Ascension Widget on Coven Sheet*/
-                globalAttributes.covenlevel = covenLevel;
-                console.log("GlobalAttrs: ",globalAttributes);
+                /* globalAttributes.covenlevel = covenLevel;
+                console.log("GlobalAttrs: ",globalAttributes);*/
             }
             /* Set name and Level elements on Player Caster Sheets*/
             if (selectedSheet == 1 || selectedSheet == 6)
@@ -2646,7 +2649,7 @@
                 let rank = "";
 
                 /* Set the Caster to the Level of the Coven*/
-                if(selectedSheet == 1)
+                /*if(selectedSheet == 1)
                 {
                     if (globalAttributes.covenlevel == null || globalAttributes.covenlevel == undefined)
                     {
@@ -2658,7 +2661,7 @@
                         console.log("Pulling CovenLevel ",covenLevel,"from GlobalAttrs");
                     }
                     level = covenLevel;
-                }
+                }*/
 
                 if (level == 0 || level == 1)
                 {
