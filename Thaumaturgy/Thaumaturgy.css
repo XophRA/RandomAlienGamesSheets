@@ -4205,17 +4205,38 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 25px 1fr 10px;
-    grid-template-rows: 55px 1fr 10px;
+    grid-template-columns: 25px repeat(4, 1fr) 10px;
+    grid-template-rows: 55px repeat(4, 1fr) 10px;
+    grid-gap: 2px;
 }
 
     .trueNameWidget > textarea
     {
-        grid-area: 2/2/auto/auto;
         width: 100%;
         height: 100%;
         padding: 0;
         margin: 0;
+    }
+
+    .trueNameWidget > textarea.trueName1
+    {
+        grid-area: 2/2/span 2/span 2;
+    }
+    .trueNameWidget > textarea.trueName2
+    {
+        grid-area: 2/4/span 2/span 2;
+    }
+    .trueNameWidget > textarea.trueName3
+    {
+        grid-area: 4/2/span 2/span 2;
+    }
+    .trueNameWidget > textarea.trueName4
+    {
+        grid-area: 3/3/span 2/span 2;
+    }
+    .trueNameWidget > textarea.trueName5
+    {
+        grid-area: 4/4/span 2/span 2;
     }
 
 /* Description */
@@ -4223,8 +4244,8 @@ input.editToggle[value="1"] + .editMenu
 {
     grid-area: 1/2/auto/span 2;
     display: grid;
-    grid-template-columns: 138px 223px 45px 1fr;
-    grid-template-rows: repeat(8,21px) 1fr 80px;
+    grid-template-columns: 125px 236px 45px 1fr;
+    grid-template-rows: repeat(8,20px) 1fr 1fr;
     grid-gap: 0px;
     height: 96%;
     width: 100%;
@@ -4318,7 +4339,7 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     grid-template-columns: 80px 1fr 20px;
-    grid-template-rows: 39px repeat(11, 21px) auto;
+    grid-template-rows: 39px repeat(12, 21px) auto;
 }
 
     .boonWidget > input.boons
@@ -4393,15 +4414,15 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 60px 120px 83px 120px 1fr;
-    grid-template-rows: 40px 120px 40px 120px 16px 20px 1fr;
+    grid-template-columns: 22px 98px 41px 98px 12px 1fr 42px;
+    grid-template-rows: 13px 98px 8px 98px 1fr;
 }
 
     /* Research Notes */
     .resourceWidget > .noteTracker
     {
         grid-area: 2/2/auto/auto;
-        width: 120px;
+        width: 100px;
         height: 100%;
     }
 
@@ -4409,7 +4430,7 @@ input.editToggle[value="1"] + .editMenu
     .resourceWidget > .creditTracker
     {
         grid-area: 2/4/auto/auto;
-        width: 120px;
+        width: 100px;
         height: 100%;
     }
 
@@ -4417,27 +4438,27 @@ input.editToggle[value="1"] + .editMenu
     .resourceWidget > .aetherTracker
     {
         grid-area: 4/2/auto/auto;
-        width: 120px;
+        width: 100px;
         height: 100%;
     }
     /* Components */
     .resourceWidget > .clockWidget
     {
         grid-area: 4/4/auto/auto;
-        grid-template-columns: 124px 16px;
-        grid-template-rows: 20px 1fr;
-        width: 140px;
-        height: 124px;
-        --clockcentre: 61px;
-        --clockheight: 120px;
-        --spokeheight: 124px;
+        grid-template-columns: 100x 12px;
+        grid-template-rows: 12px 1fr;
+        width: 100px;
+        height: 100px;
+        --clockcentre: 49px;
+        --clockheight: 98px;
+        --spokeheight: 98px;
         --spokewidth: 2px;
     }
 
     /* Concentration */
     .resourceWidget > .concentrationTracker
     {
-        grid-area: 6/3/auto/span 2;
+        grid-area: 2/6/span 3/auto;
         width: 100%;
         height: 100%;
     }
@@ -4449,8 +4470,8 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 19px 124px 191px 84px 25px auto;
-    grid-template-rows: 45px repeat(6,24px) auto;
+    grid-template-columns: 19px 120px 175px 84px 25px auto;
+    grid-template-rows: 40px repeat(6,24px) auto;
     row-gap: 4px;
 }
 
@@ -4489,8 +4510,8 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 19px 124px 191px 84px 25px auto;
-    grid-template-rows: 45px repeat(14,24px) auto;
+    grid-template-columns: 19px 120px 175px 84px 25px auto;
+    grid-template-rows: 40px repeat(14,24px) auto;
     row-gap: 4px;
 }
 
