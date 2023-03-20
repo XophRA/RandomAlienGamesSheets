@@ -4422,30 +4422,33 @@ input.editToggle[value="1"] + .editMenu
     .resourceWidget > .noteTracker
     {
         grid-area: 2/2/auto/auto;
-        width: 100px;
-        height: 100%;
+        width: 100%;
+        height: 90%;
+        padding-top: 10%;
     }
 
     /* Study Credits */
     .resourceWidget > .creditTracker
     {
         grid-area: 2/4/auto/auto;
-        width: 100px;
-        height: 100%;
+        width: 100%;
+        height: 90%;
+        padding-top: 10%;
     }
 
     /* Aether */
     .resourceWidget > .aetherTracker
     {
         grid-area: 4/2/auto/auto;
-        width: 100px;
-        height: 100%;
+        width: 100%;
+        height: 90%;
+        padding-top: 10%;
     }
     /* Components */
     .resourceWidget > .clockWidget
     {
         grid-area: 4/4/auto/auto;
-        grid-template-columns: 100px 12px;
+        grid-template-columns: 93px 12px;
         grid-template-rows: 14px 1fr;
         width: 100px;
         height: 100px;
@@ -5726,20 +5729,22 @@ input[type="radio"]:checked + span.concentrationCalm
 
 input[type="radio"] + span.concentrationD6
 {
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D6Pip.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D6Pip.png);
     background-repeat: no-repeat;
     background-position: left;
     opacity: 1;
     z-index: 2;
+    background-size: 14px;
 }
 
 input[type="radio"]:checked + span.concentrationD6
 {
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D6PipFilled.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D6PipFilled.png);
     background-repeat: no-repeat;
     background-position: left;
     opacity: 1;
     z-index: 2;
+    background-size: 14px;
 }
 
 input[type="radio"] + span.concentrationD10
@@ -5760,16 +5765,28 @@ input[type="radio"]:checked + span.concentrationD10
     z-index: 2;
 }
 
+input[type="radio"]:checked + span.doubledice,
 input[type="radio"] + span.doubledice
 {
-    background-repeat: repeat-x;
+    background-repeat: space;
+    width: 38px;
+}
+
+input[type="radio"]:checked + span.concentrationD6.doubledice,
+input[type="radio"] + span.concentrationD6.doubledice
+{
+    background-repeat: space;
+    width: 32px;
 }
 
 /* Disable Hoverchanges on dice and conduit */
 input[type="checkbox"]:hover + span.conduit,
 input[type="radio"]:hover + span.study,
 input[type="radio"]:hover + span.D10,
-input[type="radio"]:hover + span.ZeroDie
+input[type="radio"]:hover + span.ZeroDie,
+input[type="radio"]:hover + span.concentrationD6,
+input[type="radio"]:hover + span.concentrationD10,
+input[type="radio"]:hover + span.concentrationCalm
 {
     background-color: var(--bgSheet);
     box-shadow: none;
