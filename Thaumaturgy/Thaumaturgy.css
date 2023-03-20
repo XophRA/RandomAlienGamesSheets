@@ -4414,7 +4414,7 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 22px 98px 41px 98px 12px 1fr 42px;
+    grid-template-columns: 22px 98px 41px 98px 12px 1fr 34px 42px;
     grid-template-rows: 13px 98px 8px 98px 1fr;
 }
 
@@ -4445,8 +4445,8 @@ input.editToggle[value="1"] + .editMenu
     .resourceWidget > .clockWidget
     {
         grid-area: 4/4/auto/auto;
-        grid-template-columns: 100x 12px;
-        grid-template-rows: 12px 1fr;
+        grid-template-columns: 100px 12px;
+        grid-template-rows: 14px 1fr;
         width: 100px;
         height: 100px;
         --clockcentre: 49px;
@@ -4458,10 +4458,40 @@ input.editToggle[value="1"] + .editMenu
     /* Concentration */
     .resourceWidget > .concentrationTracker
     {
-        grid-area: 2/6/span 3/auto;
-        width: 100%;
+        grid-area: 2/7/span 3/auto;
+        display: grid;
+        width: 36px;
         height: 100%;
+        text-align: start;
+        grid-template-columns: 36px;
+        grid-template-rows: 30px repeat(2,18px 20px) 6px 32px repeat(2,18px 20px) 1fr;
     }
+
+        .resourceWidget > .concentrationTracker > .diceCheckbox,
+        .resourceWidget > .concentrationTracker > .studyCheckbox
+        {
+            grid-column: 1/auto;
+        }
+        .resourceWidget > .concentrationTracker > .diePip0
+        {
+            grid-row: 2/auto;
+        }
+        .resourceWidget > .concentrationTracker > .diePip1
+        {
+            grid-row: 4/auto;
+        }
+        .resourceWidget > .concentrationTracker > .diePip2
+        {
+            grid-row: 6/auto;
+        }
+        .resourceWidget > .concentrationTracker > .diePip3
+        {
+            grid-row: 8/auto;
+        }
+        .resourceWidget > .concentrationTracker > .diePip4
+        {
+            grid-row: 10/auto;
+        }
 
 /* Conduit */
 .conduitWidget
@@ -5676,22 +5706,63 @@ input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBox_Darkmode.png);
 }
 
-input[type="checkbox"] + span.conduit
+input[type="radio"] + span.concentrationCalm
 {
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPips.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBox.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
     z-index: 2;
 }
 
-input[type="checkbox"]:checked + span.conduit
+input[type="radio"]:checked + span.concentrationCalm
 {
-    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/CapacityPipsFilled.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBoxFilled.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     opacity: 1;
     z-index: 2;
+}
+
+input[type="radio"] + span.concentrationD6
+{
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D6Pip.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 1;
+    z-index: 2;
+}
+
+input[type="radio"]:checked + span.concentrationD6
+{
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/D6PipFilled.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 1;
+    z-index: 2;
+}
+
+input[type="radio"] + span.concentrationD10
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D10Pip.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 1;
+    z-index: 2;
+}
+
+input[type="radio"]:checked + span.concentrationD10
+{
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D10PipFilled.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 1;
+    z-index: 2;
+}
+
+input[type="radio"] + span.doubledice
+{
+    background-repeat: repeat-x;
 }
 
 /* Disable Hoverchanges on dice and conduit */

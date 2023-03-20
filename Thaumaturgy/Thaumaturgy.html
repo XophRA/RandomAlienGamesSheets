@@ -205,12 +205,11 @@
                     <span class="clockSpoke clockSpoke136"></span>
                 </div>
                 <div class="concentrationTracker">
-                    <select name="attr_concentration">
-                        <option>Calm: no dice</option>
-                        <option>Strained: 1 tangle die</option>
-                        <option>Broken: 1 tangle die</option>
-                        <option>Focused: 1 spell die</option>
-                    </select>
+                    <input type="radio" class="diceCheckbox diePip0 hideCheckbox" name="attr_concentration"  value="-2"/><span class="diceCheckbox diePip0 concentrationD6 doubledice"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_concentration" value="-1" /><span class="diceCheckbox diePip1 concentrationD6"></span>
+                    <input type="radio" class="studyCheckbox diePip2 hideCheckbox" name="attr_concentration" checked value="0" /><span class="studyCheckbox diePip2 concentrationCalm"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_concentration" value="1" /><span class="diceCheckbox diePip3 concentrationD10"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_concentration" value="2" /><span class="diceCheckbox diePip4 concentrationD10 doubledice"></span>
                 </div>
             </section>
 
