@@ -4474,6 +4474,7 @@ input.editToggle[value="1"] + .editMenu
         .resourceWidget > .concentrationTracker > .studyCheckbox
         {
             grid-column: 1/auto;
+            width: 36px;
         }
         .resourceWidget > .concentrationTracker > .diePip0
         {
@@ -5580,7 +5581,6 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
         grid-area: 22/1/span 2/auto;
     }
 
-
 /* Checkboxes */
 input[type="checkbox"].hideCheckbox,
 input[type="radio"].hideCheckbox
@@ -5713,7 +5713,7 @@ input[type="radio"] + span.concentrationCalm
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBox.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     opacity: 1;
     z-index: 2;
 }
@@ -5769,7 +5769,7 @@ input[type="radio"]:checked + span.concentrationD10
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBox_Darkmode.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     opacity: 1;
     z-index: 2;
 }
