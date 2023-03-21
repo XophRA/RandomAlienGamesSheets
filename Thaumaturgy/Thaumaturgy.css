@@ -2330,9 +2330,8 @@ section.magicCircle
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 12px 80px 45px 120px 1fr 100px 20px 45px 14px 66px 12px;
-    grid-template-rows: 87px 35px 45px 75px 80px 10px 38px 160px 38px auto 65px 45px;
-    grid-gap: 0px;
+    grid-template-columns: 12px 80px 52px 98px 362px 98px 12px 45px 52px 23px auto;
+    grid-template-rows: 97px 33px 74px 32px 80px 10px 38px 133px 38px auto 65px 45px;
     z-index: 7;
 }
 
@@ -2392,9 +2391,10 @@ section.magicCircle
 
     section.magicCircle > .resultResource
     {
-        grid-area: 1/-7/span 2/span 2;
+        grid-area: 1/-7/span 2/auto;
         height: 100%;
         width: 100%;
+        padding-left: 8px;
     }
 
     section.magicCircle > .aetherResource
@@ -2402,14 +2402,15 @@ section.magicCircle
         grid-area: 1/4/span 2/auto;
         height: 100%;
         width: 100%;
+        padding-left: 5px;
     }
 
     section.magicCircle > .fateResource
     {
-        grid-area: 2/-6/span 2/span 3;
+        grid-area: 2/-5/span 2/span 2;
         height: 100%;
         width: 100%;
-        margin-left: 3px;
+        padding-left: 10px;
     }
 
 input.resourceBox
@@ -4205,8 +4206,8 @@ input.editToggle[value="1"] + .editMenu
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 25px repeat(4, 1fr) 10px;
-    grid-template-rows: 55px repeat(4, 1fr) 10px;
+    grid-template-columns: 25px repeat(6, 1fr) 10px;
+    grid-template-rows: 55px repeat(5, 1fr) 10px;
     grid-gap: 2px;
 }
 
@@ -4220,23 +4221,23 @@ input.editToggle[value="1"] + .editMenu
 
     .trueNameWidget > textarea.trueName1
     {
-        grid-area: 2/2/span 2/span 2;
+        grid-area: 2/2/span 3/span 2;
     }
     .trueNameWidget > textarea.trueName2
     {
-        grid-area: 2/4/span 2/span 2;
+        grid-area: 2/4/span 3/span 2;
     }
     .trueNameWidget > textarea.trueName3
     {
-        grid-area: 4/2/span 2/span 2;
+        grid-area: 2/6/span 3/span 2;
     }
     .trueNameWidget > textarea.trueName4
     {
-        grid-area: 3/3/span 2/span 2;
+        grid-area: 5/2/span 2/span 3;
     }
     .trueNameWidget > textarea.trueName5
     {
-        grid-area: 4/4/span 2/span 2;
+        grid-area: 5/5/span 2/span 3;
     }
 
 /* Description */
@@ -4414,8 +4415,8 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 33px 98px 21px 98px 21px 1fr 34px 42px;
-    grid-template-rows: 13px 98px 10px 98px 1fr;
+    grid-template-columns: 33px 98px 21px 98px 21px 1fr 34px 22px 20px;
+    grid-template-rows: 13px 98px 10px 98px 10px 1fr 8px;
 }
 
     /* Research Notes */
@@ -4496,6 +4497,14 @@ input.editToggle[value="1"] + .editMenu
         {
             grid-row: 10/auto;
         }
+
+    .resourceWidget > textarea.studyGuide
+    {
+        grid-area: 6/2/-2/-2;
+        margin: 0;
+        width: 96%;
+        height: 100%;
+    }
 
 /* Conduit */
 .conduitWidget
