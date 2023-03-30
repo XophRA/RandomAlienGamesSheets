@@ -221,7 +221,7 @@
                 <input type="hidden" name="attr_selectedSheet" class="npc"/>
                 <input type="number" name="attr_level" min="0" max="11" class="levelArrow" />
                 <input type="text" name="attr_rank" class="rank" readonly />
-                <input type="text" name="attr_conduitTitle" class="conduitTitle" list="conduitTitle" />
+                <input type="text" name="attr_coven" class="coven" />
                 <input type="text" name="attr_givenName" class="givenName" />
                 <input type="text" name="attr_academicName" class="academicName" />
                 <input type="text" name="attr_questName" class="questName" />
@@ -238,6 +238,7 @@
                 <input type="hidden" class="editToggle" name="attr_EditConduit" />
                 <input type="checkbox" class="editCog" name="attr_EditConduit" value="1" /><span class="editCog"></span>
                 <span class="conduitLock"></span>
+                <input type="text" name="attr_conduitTitle" class="conduitTitle" list="conduitTitle" />
                 <!--Conjure-->
                 <h2 class="art art1">Conjure</h2>
                 <h4 class="artSum art1">(manifest object or energy)</h4>
@@ -317,6 +318,7 @@
                 <input type="hidden" class="editToggle" name="attr_EditArts" />
                 <input type="checkbox" class="editCog" name="attr_EditArts" value="1" /><span class="editCog"></span>
                 <span class="artsLock"></span>
+                <input type="text" name="attr_artTitle" class="artTitle" list="artTitle" />
                 <!--Animaturgy-->
                 <h2 class="art art1">Animaturgy</h2>
                 <h4 class="artSum art1">(false life, animate, control)</h4>
@@ -1302,7 +1304,14 @@
                             <li>Face Tangle</li>
                         </ol>
                         <ol>
-                            <li>Lore, Excess Dice</li>
+                            <li>Circumstances
+                                <ol>
+                                    Concentration, Cooperation, Curses, Entanglement, Lore
+                                </ol>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>Excess Dice</li>
                         </ol>
                         <ol>
                             <li>Cast the Dice</li>
