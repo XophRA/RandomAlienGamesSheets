@@ -30,15 +30,15 @@ input.duellingSelector:checked ~ article.duellingSheet
 {
     /* Lightmode Color Scheme */
     /* Variables for a selection of colors to be used in the sheet colors */
-    --paper: #FFF;
+    --paper: #F7F9EA;
     --text: #000;
     --primary: #986CE6;
-    --accent: #708090;
+    --accent: #a497bb;
     --alert: #D1B000;
     /* Sheet Colors */
     --bgSheet: var(--paper);
-    --bgFieldDark: rgba(240,240,240,0.6);
-    --bgFieldLight: rgba(240,240,240,0.2);
+    --bgFieldDark: rgba(247,249,234,0.6);
+    --bgFieldLight: rgba(247,249,234,0.2);
     --txtBody: var(--text);
     --txtTitle: var(--text);
     --txtAlert: var(--alert);
@@ -46,7 +46,7 @@ input.duellingSelector:checked ~ article.duellingSheet
     --border: var(--text);
     --buttonTxt: var(--paper);
     --buttonTxtCaution: var(--alert);
-    --buttonShadow: rgba(0,0,0,0.20);
+    --buttonShadow: rgba(50, 51, 44,0.20);
     --buttonBGHover: var(--accent);
     --buttonTxtHover: var(--paper);
     --buttonBGHoverCaution: var(--alert);
@@ -65,12 +65,12 @@ input.duellingSelector:checked ~ article.duellingSheet
     --paper: #181818;
     --text: #fff;
     --primary: #986CE6;
-    --accent: #708090;
+    --accent: #a497bb;
     --alert: #D1B000;
     /* Sheet Colors */
     --bgSheet: var(--paper);
-    --bgFieldDark: rgba(0, 0, 0, 0.6);
-    --bgFieldLight: rgba(0, 0, 0, 0.2);
+    --bgFieldDark: rgba(50, 51, 44, 0.6);
+    --bgFieldLight: rgba(50, 51, 44, 0.2);
     --txtBody: var(--text);
     --txtTitle: var(--text);
     --txtAlert: var(--alert);
@@ -78,7 +78,7 @@ input.duellingSelector:checked ~ article.duellingSheet
     --border: var(--text);
     --buttonTxt: var(--text);
     --buttonTxtCaution: var(--alert);
-    --buttonShadow: rgba(240,240,240,0.20);
+    --buttonShadow: rgba(247,249,234,0.20);
     --buttonBGHover: var(--accent);
     --buttonTxtHover: var(--text);
     --buttonBGHoverCaution: var(--alert);
@@ -4244,7 +4244,7 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     grid-template-columns: 125px 236px 45px 1fr;
     grid-template-rows: repeat(8,20px) 1fr 1fr;
-    grid-gap: 0px;
+    grid-gap: 1px;
     height: 96%;
     width: 100%;
     margin-top: 15px;
@@ -4509,7 +4509,7 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 19px 120px 175px 84px 25px auto;
+    grid-template-columns: 19px 120px 40px 135px 84px 25px auto;
     grid-template-rows: 40px repeat(6,24px) auto;
     row-gap: 4px;
 }
@@ -4533,8 +4533,8 @@ input.editToggle[value="1"] + .editMenu
 
     .conduitWidget > .conduitTitle
     {
-        grid-area: 1/3/auto/span 2;
-        margin:7px 0 0 41px;
+        grid-area: 1/4/auto/span 2;
+        margin:9px 0 0 0;
     }
 
     .conduitWidget > .artDice
@@ -4555,14 +4555,14 @@ input.editToggle[value="1"] + .editMenu
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 19px 120px 175px 84px 25px auto;
+    grid-template-columns: 19px 120px 40px 135px 84px 25px auto;
     grid-template-rows: 40px repeat(14,24px) auto;
     row-gap: 4px;
 }
     .artsWidget > .artTitle
     {
-        grid-area: 1/3/auto/span 2;
-        margin:7px 0 0 41px;
+        grid-area: 1/4/auto/span 2;
+        margin:9px 0 0 0;
     }
 
     .artsWidget > .editCog
@@ -4591,14 +4591,14 @@ input.editToggle[value="1"] + .editMenu
 
 .artSum
 {
-    grid-column: 3/auto;
+    grid-column: 3/span 2;
     line-height: 18px;
 }
 
 /* Art Dice for Arts and Conduit*/
 .artDice
 {
-    grid-column: 4 / span 2;
+    grid-column: 5 / span 2;
     display: grid;
     width: 123px;
     height: 24px;
