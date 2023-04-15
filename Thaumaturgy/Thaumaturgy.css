@@ -103,7 +103,7 @@ body,
     --buttonHoverBorderStyle: 2px solid var(--accent);
 }
 
-    .charsheet h1, .charsheet h2, .charsheet h3, .charsheet th
+    .charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheet th
     {
         font-family: "Aubrey", sans-serif;
         text-align: left;
@@ -128,8 +128,7 @@ body,
 
     .charsheet h4, .charsheet th
     {
-        font-family: "Source Sans Pro", sans-serif;
-        font-size: 1.2em;
+        font-size: 1.5em;
         color: var(--txtBody);
     }
 
@@ -600,7 +599,7 @@ main.masterGrid
 
         .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-spellDice .inlinerollresult
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieTally.png);
             background-repeat: no-repeat;
             background-position: center;
             opacity: 1;
@@ -610,7 +609,7 @@ main.masterGrid
 
             .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-spellDice .inlinerollresult.fullfail
             {
-                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieNull.png);
+                background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieNull.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 opacity: 1;
@@ -620,7 +619,7 @@ main.masterGrid
 
             .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-spellDice .inlinerollresult.fullcrit
             {
-                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
+                background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieDouble.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 opacity: 1;
@@ -630,7 +629,7 @@ main.masterGrid
 
         .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-tangleDice .inlinerollresult
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieNull.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/tangleDieNull.png);
             background-repeat: no-repeat;
             background-position: center;
             opacity: 1;
@@ -640,7 +639,7 @@ main.masterGrid
 
             .sheet-rolltemplate-Thaumaturgy .sheet-rolltemplateContainer .sheet-tangleDice .inlinerollresult.fullfail
             {
-                background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
+                background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/tangleDieTally.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 opacity: 1;
