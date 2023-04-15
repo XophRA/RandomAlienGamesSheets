@@ -30,7 +30,7 @@ input.duellingSelector:checked ~ article.duellingSheet
 {
     /* Lightmode Color Scheme */
     /* Variables for a selection of colors to be used in the sheet colors */
-    --paper: #F7F9EA;
+    --paper: #FFFFFF;
     --text: #000;
     --primary: #986CE6;
     --accent: #a497bb;
@@ -4447,12 +4447,26 @@ input.editToggle[value="1"] + .editMenu
         grid-area: 4/4/auto/auto;
         grid-template-columns: 100px 12px;
         grid-template-rows: 14px 1fr;
-        width: 100px;
-        height: 100px;
+        width: 96px;
+        height: 96px;
         --clockcentre: 50px;
-        --clockheight: 100px;
-        --spokeheight: 100px;
+        --clockheight: 96px;
+        --spokeheight: 98px;
         --spokewidth: 2px;
+    }
+
+    .resourceWidget > .componentTitle
+    {
+        background-color: var(--bgSheet);
+        font-size: 1.5em;
+        box-sizing: border-box;
+        font-family: "Aubrey", sans-serif;
+        text-align: center;
+        grid-area: 4/4/auto/auto;
+        width: 100px;
+        height: 20px;
+        margin-top: 13px;
+        z-index: 1;
     }
 
     /* Concentration */
