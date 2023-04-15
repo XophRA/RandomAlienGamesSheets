@@ -2468,44 +2468,44 @@ input[type="number"].resourceBox
         /* Spell Die Null */
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieNull.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieNull.png);
         }
         /* Tangle Die Null */
         section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="0"].circleDieWorth + input + input.circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieNull.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/tangleDieNull.png);
         }
         /* Spell Die Hit */
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="1"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieTally.png);
         }
         /* Spell Die Hit Matched*/
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieHit.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieTally.png);
             background-color: var(--checkboxAccent);
         }
         /* Spell Die Double */
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieDouble.png);
         }
         /* Spell Die Double Matched*/
         section.circlePositions > input + input + input[value="0"].circleDieSize + input[value="2"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/taskDieDouble.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/spellDieDouble.png);
             background-color: var(--checkboxAccent);
         }
         /* Tangle Die Miss */
         section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="0"].circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/tangleDieTally.png);
         }
         /* Tangle Die Miss Matched*/
         section.circlePositions > input + input + input[value="1"].circleDieSize + input[value="-1"].circleDieWorth + input + input[value="1"].circleDieMatch + input[type="number"]
         {
-            background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/FreeSpacer/img11/ThreatDieMiss.png);
+            background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/tangleDieTally.png);
             background-color: var(--checkboxAccent);
         }
 
