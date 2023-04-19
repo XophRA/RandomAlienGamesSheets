@@ -4481,7 +4481,7 @@ input.editToggle[value="1"] + .editMenu
     }
 
         .resourceWidget > .concentrationTracker > .diceCheckbox,
-        .resourceWidget > .concentrationTracker > .studyCheckbox
+        .resourceWidget > .concentrationTracker > .calmCheckbox
         {
             grid-column: 1/auto;
             width: 36px;
@@ -4558,7 +4558,7 @@ input.editToggle[value="1"] + .editMenu
 
         .conduitWidget > .artDice > .diePip3
         {
-            grid-column: 5/6;
+            grid-column: 6/7;
         }
 
 /* Arts */ 
@@ -4614,11 +4614,11 @@ input.editToggle[value="1"] + .editMenu
     grid-column: 5 / span 2;
     display: grid;
     width: 123px;
-    height: 24px;
+    height: 18px;
     text-align: start;
-    grid-template-columns: 9px repeat(3,18px) 4px repeat(2,18px);
-    grid-template-rows: 18px 1fr;
-    column-gap: 3px;
+    grid-template-columns: 9px repeat(4,18px) 3px repeat(2,18px);
+    grid-template-rows: 1fr;
+    column-gap: 2px;
     line-height: 18px;
 }
 
@@ -4697,39 +4697,39 @@ input.editToggle[value="1"] + .editMenu
         grid-row: 1 / 2;
     }
 
-    .artDice > .studyCheckbox
-    {
-        grid-row: 2 / 3;
-    }
-
     .artDice > .zeroCheckbox
     {
-        grid-area: 1/1/span 2/auto;
+        grid-area: 1/1/auto/auto;
+    }
+
+    .artDice > .studyCheckbox
+    {
+        grid-area: 1/2/auto/auto;
     }
 
     .artDice > .diePip1
     {
-        grid-column: 2 / 3;
+        grid-column: 3/4;
     }
 
     .artDice > .diePip2
     {
-        grid-column: 3 / 4;
+        grid-column: 4/5;
     }
 
     .artDice > .diePip3
     {
-        grid-column: 4 / 5;
+        grid-column: 6/7;
     }
 
     .artDice > .diePip4
     {
-        grid-column: 6 / 7;
+        grid-column: 7/8;
     }
 
     .artDice > .diePip5
     {
-        grid-column: 7 / 8;
+        grid-column: 8/9;
     }
 
 /* Tags */
@@ -5619,8 +5619,8 @@ input[type="radio"].hideCheckbox
     z-index: 3;
 }
 
-input[type="radio"].studyCheckbox,
-span.studyCheckbox
+input[type="radio"].calmCheckbox,
+span.calmCheckbox
 {
     width: 18px;
     height: 6px;
@@ -5631,7 +5631,9 @@ span.studyCheckbox
 }
 
 input[type="radio"].diceCheckbox,
-span.diceCheckbox
+span.diceCheckbox,
+input[type="radio"].studyCheckbox,
+span.studyCheckbox
 {
     width: 18px;
     height: 18px;
@@ -5689,7 +5691,6 @@ input[type="radio"] + span.D10
 }
 
 input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10,
-input[type="radio"]:checked + span.study ~ input[type="radio"] + span.D10,
 input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D10Pip.png);
@@ -5700,42 +5701,37 @@ input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 }
 
 .sheet-darkmode input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.D10,
-.sheet-darkmode input[type="radio"]:checked + span.study ~ input[type="radio"] + span.D10,
 .sheet-darkmode input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.D10
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/D10Pip_Darkmode.png);
 }
 
-input[type="radio"] + span.study
+input[type="checkbox"] + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBoxFilled.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/StudyLight.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
     z-index: 2;
 }
 
-.sheet-darkmode input[type="radio"] + span.study
+.sheet-darkmode input[type="checkbox"] + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBoxFilled_Darkmode.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/StudyDark.png);
 }
 
-input[type="radio"]:checked + span.study ~ input[type="radio"] + span.study,
-input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.study,
-input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
+input[type="checkbox"]:checked + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBox.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/StudyLightFilled.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
     z-index: 2;
 }
 
-.sheet-darkmode input[type="radio"]:checked + span.study ~ input[type="radio"] + span.study,
-.sheet-darkmode input[type="radio"]:checked + span.D10 ~ input[type="radio"] + span.study,
-.sheet-darkmode input[type="radio"]:checked + span.ZeroDie ~ input[type="radio"] + span.study
+.sheet-darkmode input[type="radio"]:checked + span.study
 {
-    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/studyBox_Darkmode.png);
+    background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/StudyDarkFilled.png);
 }
 
 input[type="radio"] + span.concentrationCalm
