@@ -132,9 +132,10 @@ body,
         color: var(--txtBody);
     }
 
-    .charsheet td, .charsheet p
+    .charsheet td, .charsheet h5, .charsheet p
     {
         font-size: 1em;
+        color: var(--txtBody);
     }
 
     .charsheet br
@@ -5727,7 +5728,7 @@ input[type="checkbox"]:checked + span.study
     z-index: 2;
 }
 
-.sheet-darkmode input[type="radio"]:checked + span.study
+.sheet-darkmode input[type="checkbox"]:checked + span.study
 {
     background-image: url(https://raw.githubusercontent.com/XophRA/RandomAlienGamesSheets/ThaumaturgySheet/Thaumaturgy/img/StudyDarkFilled.png);
 }
