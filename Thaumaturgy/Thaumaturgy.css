@@ -693,8 +693,8 @@ main.masterGrid
         grid-row: 3/auto;
     }
 
-/* Coven Fate */
-.fateWidget
+/* Coven Disequilibrium */
+.covenSheetGrid > .disequilibriumWidget
 {
     grid-area: 4/1/auto/-1;
 }
@@ -3252,7 +3252,7 @@ input[type="number"].rippleBox
     grid-row: 23 / 24;
 }
 
-.disequilibriumWidget
+.mediumSheetGrid > .disequilibriumWidget
 {
     grid-area: 5 / 1 / 6 / -1;
 }
