@@ -1059,10 +1059,10 @@
 
             <!--Disequilibrium-->
             <section class="disequilibriumWidget tableSpread">
-                <!-- <input type="hidden" class="editToggle" name="attr_EditDisequilbrium" />
+                <input type="hidden" class="editToggle" name="attr_EditDisequilbrium" />
                 <input type="checkbox" class="editCog" name="attr_EditDisequilbrium" value="1" />
                 <span class="editCog"></span>
-                <div class="editMenu editTableSpread">
+                <!-- <div class="editMenu editTableSpread">
                     <div class="arcanaEdit leftLegEdit">
                         <h2>Disruption</h2>
                         <div class="arcanaChoice">Arcana:</div> <input type="number" class="arcanaChoice" name="attr_Disruption" min="-1" max="21" value="0" />
@@ -1306,13 +1306,13 @@
 
                 <!--Spell Dice-->
                 <div class="castingDice castingSpellDice">
-                    <input type="number" class="resourceBox" name="attr_castSpellDice" min="0" max="13" value="3" />
+                    <input type="number" class="resourceBox" name="attr_castSpellDice" min="0" max="10" value="3" />
                     <div class="dieType">Spell Dice</div>
                 </div>
 
                 <!--Tangle Dice-->
                 <div class="castingDice castingTangleDice">
-                    <input type="number" class="resourceBox" name="attr_castTangleDice" min="0" max="13" value="0" />
+                    <input type="number" class="resourceBox" name="attr_castTangleDice" min="0" max="10" value="0" />
                     <div class="dieType">Tangle Dice</div>
                 </div>
 
@@ -2506,7 +2506,9 @@
             <div class="sheet-templateSubheader">Spell Dice</div>
             <div class="sheet-diceNum"> {{computed::spellCast}}</div>
             <div class="sheet-diceRow sheet-spellDice sheet-dice">Look at the Magic circle
-                {{computed::spell0}}{{computed::spell1}}{{computed::spell2}}{{computed::spell3}}{{computed::spell4}}{{computed::spell5}}{{computed::spell6}}{{computed::spell7}}{{computed::spell8}}{{computed::spell9}}{{computed::spell10}}{{computed::spell11}}{{computed::spell12}}
+                {{computed::spell0}} {{computed::spell1}} {{computed::spell2}} {{computed::spell3}}
+                {{computed::spell4}} {{computed::spell5}} {{computed::spell6}}
+                {{computed::spell7}} {{computed::spell8}} {{computed::spell9}}
             </div>
         </div>
         <div class="sheet-rolltemplateTangleDice sheet-rolltemplateDiceContainer">
@@ -2514,9 +2516,8 @@
             <div class="sheet-diceNum">{{computed::tangleCast}}</div>
             <div class="sheet-diceRow sheet-tangleDice sheet-dice">
                 {{computed::tangle0}} {{computed::tangle1}} {{computed::tangle2}} {{computed::tangle3}}
-                {{computed::tangle4}} {{computed::tangle5}} {{computed::tangle6}}{{computed::tangle7}}
-                {{computed::tangle8}} {{computed::tangle9}} {{computed::tangle10}} {{computed::tangle11}}
-                {{computed::tangle12}}
+                {{computed::tangle4}} {{computed::tangle5}} {{computed::tangle6}}
+                {{computed::tangle7}} {{computed::tangle8}} {{computed::tangle9}} 
             </div>
         </div>
     </div>
@@ -2527,25 +2528,13 @@
     /* Global Attributes */
     var globalAttributes = []; /*Global Array for Storage of Disequilibrium*/
 
-    /* Set Defaults and name */
-    on("sheet:opened change:covenlevel change:level change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns change:concept", (event) => {
-        getAttrs(["covenLevel", "level", "selectedSheet", "DisruptionFacing", "Disruption", "ReinforcedFacing", "Reinforced", "ObstacleFacing", "Obstacle", "dragClockHouse" , "dragClockFacing","dragClock", "givenName", "academicName", "questName", "pronouns", "concept", "character_name"], function (values) {
+    /* Store Disequilibrium to Global Attibutes */
+    on("change:EditDisequilbrium change:dragClockHouse change:dragClockFacing change:dragClock",(event)=>{
+        getAttrs(["selectedSheet","DisruptionFacing", "Disruption", "ReinforcedFacing", "Reinforced", "ObstacleFacing", "Obstacle", "dragClockHouse" , "dragClockFacing","dragClock", ], function (values) {
             const setObj = {};
             let selectedSheet = parseInt(values.selectedSheet) || 0;
-            let covenLevel = 0;
-            let level = parseInt(values.level) || 0;
-            
-            /* Set Defaults */
-            setObj.EditAscension = 0;
-            setObj.EditDisequilbrium = 0;
-            setObj.editAttunement = 0;
-            setObj.EditConduit = 0;
-            setObj.EditArts = 0;
-
-            /* Ensure Disequilibrium is set on Medium Sheet and Globally Store it */
-             if (selectedSheet == 3)
+            if (selectedSheet == 3)
              {
-
                 setObj.DisruptionFacing = parseInt(values.DisruptionFacing) || -1;
                 setObj.Disruption = parseInt(values.Disruption) || -1;
                 setObj.ReinforcedFacing = parseInt(values.ReinforcedFacing) || -1;
@@ -2571,6 +2560,68 @@
 
             /* Set Disequilibrium to Coven Sheet */
             if (selectedSheet == 2)
+             {
+                setObj.DisruptionFacing = parseInt(globalAttributes.DisruptionFacing) || -1;
+                setObj.Disruption = parseInt(globalAttributes.Disruption) || -1;
+                setObj.ReinforcedFacing = parseInt(globalAttributes.ReinforcedFacing) || -1;
+                setObj.Reinforced = parseInt(globalAttributes.Reinforced) || -1;
+                setObj.ObstacleFacing = parseInt(globalAttributes.ObstacleFacing) || -1;
+                setObj.Obstacle = parseInt(globalAttributes.Obstacle) || -1;
+                setObj.dragClockHouse = parseInt(globalAttributes.dragClockHouse) || 1;
+                setObj.dragClockFacing = parseInt(globalAttributes.dragClockFacing) || 0;
+                setObj.dragClock = parseInt(globalAttributes.dragClock) || 1;;
+
+                setObj.EditDisequilbrium = 0;
+             }
+
+             console.log(setObj);
+             setAttrs(setObj);
+        });
+    });
+
+    /* Set Defaults and name */
+    on("sheet:opened change:covenlevel change:level change:givenname change:academicname change:ascensionobjectivedetail change:questname change:pronouns change:concept change:selectedSheet", (event) => {
+        getAttrs(["covenLevel", "level", "selectedSheet", "DisruptionFacing", "Disruption", "ReinforcedFacing", "Reinforced", "ObstacleFacing", "Obstacle", "dragClockHouse" , "dragClockFacing","dragClock", "givenName", "academicName", "questName", "pronouns", "concept", "character_name"], function (values) {
+            const setObj = {};
+            let selectedSheet = parseInt(values.selectedSheet) || 0;
+            let covenLevel = 0;
+            let level = parseInt(values.level) || 0;
+            
+            /* Set Defaults */
+            setObj.EditAscension = 0;
+            setObj.EditDisequilbrium = 0;
+            setObj.editAttunement = 0;
+            setObj.EditConduit = 0;
+            setObj.EditArts = 0;
+
+            /* Ensure Disequilibrium is set on Medium Sheet and Globally Store it */
+            if (selectedSheet == 3)
+             {
+                setObj.DisruptionFacing = parseInt(values.DisruptionFacing) || -1;
+                setObj.Disruption = parseInt(values.Disruption) || -1;
+                setObj.ReinforcedFacing = parseInt(values.ReinforcedFacing) || -1;
+                setObj.Reinforced = parseInt(values.Reinforced) || -1;
+                setObj.ObstacleFacing = parseInt(values.ObstacleFacing) || -1;
+                setObj.Obstacle = parseInt(values.Obstacle) || -1;
+                setObj.dragClockHouse = parseInt(values.dragClockHouse) || 1;
+                setObj.dragClockFacing = parseInt(values.dragClockFacing) || 0;
+                setObj.dragClock = parseInt(values.dragClock) || 1;
+
+                globalAttributes.DisruptionFacing = parseInt(values.DisruptionFacing) || -1;
+                globalAttributes.Disruption = parseInt(values.Disruption) || -1;
+                globalAttributes.ReinforcedFacing = parseInt(values.ReinforcedFacing) || -1;
+                globalAttributes.Reinforced = parseInt(values.Reinforced) || -1;
+                globalAttributes.ObstacleFacing = parseInt(values.ObstacleFacing) || -1;
+                globalAttributes.Obstacle = parseInt(values.Obstacle) || -1;
+                globalAttributes.dragClockHouse = parseInt(values.dragClockHouse) || 1;
+                globalAttributes.dragClockFacing = parseInt(values.dragClockFacing) || 0;
+                globalAttributes.dragClock = parseInt(values.dragClock) || 1;
+
+                console.log("GlobalAttrs: ",globalAttributes);
+             }
+
+            /* Set Disequilibrium to Coven Sheet */
+           if (selectedSheet == 2)
              {
                 setObj.DisruptionFacing = parseInt(globalAttributes.DisruptionFacing) || -1;
                 setObj.Disruption = parseInt(globalAttributes.Disruption) || -1;
@@ -2635,21 +2686,6 @@
             {
                 /*Set rank*/
                 let rank = "";
-
-                /* Set the Caster to the Level of the Coven*/
-                /*if(selectedSheet == 1)
-                {
-                    if (globalAttributes.covenlevel == null || globalAttributes.covenlevel == undefined)
-                    {
-                        covenLevel = parseInt(values.covenLevel) || 0;
-                    }
-                    else
-                    {
-                        covenLevel = parseInt(globalAttributes.covenlevel) || 0;
-                        console.log("Pulling CovenLevel ",covenLevel,"from GlobalAttrs");
-                    }
-                    level = covenLevel;
-                }*/
 
                 if (level == 0 || level == 1)
                 {
@@ -2753,7 +2789,6 @@
 
                 setObj.character_name = name;
             }
-
 
             console.log(setObj);
             setAttrs(setObj);
@@ -3193,6 +3228,11 @@
                 dragClockHouse -= 3;
             }
  
+            /*Set the Drag*/
+            globalAttributes.dragClock = dragClock;
+            globalAttributes.dragClockHouse = dragClockHouse;
+            globalAttributes.dragClockFacing = dragClockFacing;
+
             /*Set the Drag*/
             setObj.dragClock = dragClock;
             setObj.dragClockHouse = dragClockHouse;
