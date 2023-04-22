@@ -198,42 +198,6 @@
                 <textarea name="attr_trueNamePhrase5" placeholder="Your Shadow" class="trueName5"></textarea>
             </section>
 
-            <!-- Resources -->
-            <section class="resourceWidget">
-                <div class="noteTracker">
-                    <input type="number" name="attr_resourceNotes" value="0" class="resourceBox" />
-                </div>
-                <div class="creditTracker">
-                    <input type="number" name="attr_studyCredit" value="0" class="resourceBox" />
-                </div>
-                <!-- Aether -->
-                <div class="aetherTracker">
-                    <input type="number" name="attr_aether" value="0" class="resourceBox" />
-                </div>
-                <div class="clockWidget">
-                    <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
-                    <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment13" />
-                    <span class="clock"></span>
-                    <span class="clockSpoke clockSpoke130"></span>
-                    <span class="clockSpoke clockSpoke131"></span>
-                    <span class="clockSpoke clockSpoke132"></span>
-                    <span class="clockSpoke clockSpoke133"></span>
-                    <span class="clockSpoke clockSpoke134"></span>
-                    <span class="clockSpoke clockSpoke135"></span>
-                    <span class="clockSpoke clockSpoke136"></span>
-                    <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
-                </div>
-                <div class="concentrationTracker">
-                    <input type="radio" class="diceCheckbox diePip0 hideCheckbox" name="attr_concentration"  value="-2"/><span class="diceCheckbox diePip0 concentrationD6 doubledice"></span>
-                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_concentration" value="-1" /><span class="diceCheckbox diePip1 concentrationD6"></span>
-                    <input type="radio" class="calmCheckbox diePip2 hideCheckbox" name="attr_concentration" checked value="0" /><span class="calmCheckbox diePip2 concentrationCalm"></span>
-                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_concentration" value="1" /><span class="diceCheckbox diePip3 concentrationD10"></span>
-                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_concentration" value="2" /><span class="diceCheckbox diePip4 concentrationD10 doubledice"></span>
-                </div>
-                <div class="componentTitle">Components</div>
-                <textarea class="studyGuide" name="attr_studyGuide" placeholder="Annotations, synopses, and lecture notes"></textarea>
-            </section>
-
             <!-- Description -->
             <section class="descriptionWidget">
                 <input type="hidden" name="attr_covenLevel" />
@@ -251,6 +215,27 @@
                 <input type="text" name="attr_technique" class="technique" list="practicedTechniques" />
                 <textarea name="attr_characteristic" class="characteristics" placeholder="One aspect that indicates your mundane capabilities"></textarea>
                 <textarea name="attr_description" class="description" placeholder="Three things that describe you"></textarea>
+                <!-- Entanglements -->
+                <input type="text" name="attr_entanglement0" class="entanglements entanglement0" />
+                <input type="number" name="attr_entanglement0String" min="1" max="3"  class="strings entanglement0"/>
+                
+                <input type="text" name="attr_entanglement1" class="entanglements entanglement1" />
+                <input type="number" name="attr_entanglement1String" min="1" max="3"  class="strings entanglement1"/>
+                
+                <input type="text" name="attr_entanglement2" class="entanglements entanglement2" />
+                <input type="number" name="attr_entanglement2String" min="1" max="3"  class="strings entanglement2"/>
+                
+                <input type="text" name="attr_entanglement3" class="entanglements entanglement3" />
+                <input type="number" name="attr_entanglement3String" min="1" max="3"  class="strings entanglement3"/>
+                
+                <input type="text" name="attr_entanglement4" class="entanglements entanglement4" />
+                <input type="number" name="attr_entanglement4String" min="1" max="3"  class="strings entanglement4"/>
+                
+                <input type="text" name="attr_entanglement5" class="entanglements entanglement5" />
+                <input type="number" name="attr_entanglement5String" min="1" max="3"  class="strings entanglement5"/>
+                
+                <input type="text" name="attr_entanglement6" class="entanglements entanglement6" />
+                <input type="number" name="attr_entanglement6String" min="1" max="3"  class="strings entanglement6"/>
             </section>
 
             <!-- Conduit -->
@@ -513,66 +498,39 @@
                 <input type="text" name="attr_boon11" class="boons boon11" list="boonChoice"/>
             </section>
 
-            <!-- Curses -->
-            <section class="curseWidget">
-                <h1>Curses</h1>
-                <button type="action" class="sortCurses" name="act_sortCurses"> > </button>
-                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="1" />
-                <div class="card customCard curseCard curse1">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName1" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect1"></textarea>
-                    <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents1"></textarea>
-                    <button type="action" class="clearCurseButton" name="act_clearCurse1">Cure</button>
+            <!-- Resources -->
+            <section class="resourceWidget">
+                <div class="noteTracker">
+                    <input type="number" name="attr_resourceNotes" value="0" class="resourceBox" />
                 </div>
-                <div class="card customCard curseCard curse2">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName2" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect2"></textarea>
-                    <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents2"></textarea>
-                    <button type="action" class="clearCurseButton" name="act_clearCurse2">Cure</button>
+                <div class="creditTracker">
+                    <input type="number" name="attr_studyCredit" value="0" class="resourceBox" />
                 </div>
-                <div class="card customCard curseCard curse3">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName3" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect3"></textarea>
-                    <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents3"></textarea>
-                    <button type="action" class="clearCurseButton" name="act_clearCurse3">Cure</button>
+                <!-- Aether -->
+                <div class="aetherTracker">
+                    <input type="number" name="attr_aether" value="0" class="resourceBox" />
                 </div>
-                <div class="card customCard curseCard curse4">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName4" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect4"></textarea>
-                    <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents4"></textarea>
-                    <button type="action" class="clearCurseButton" name="act_clearCurse4">Cure</button>
+                <div class="clockWidget">
+                    <input type="text" name="attr_spellComponetClock" class="clockControl" value="0" readonly />
+                    <input type="hidden" name="attr_spellComponetClock" value="0" class="clockSegment13" />
+                    <span class="clock"></span>
+                    <span class="clockSpoke clockSpoke130"></span>
+                    <span class="clockSpoke clockSpoke131"></span>
+                    <span class="clockSpoke clockSpoke132"></span>
+                    <span class="clockSpoke clockSpoke133"></span>
+                    <span class="clockSpoke clockSpoke134"></span>
+                    <span class="clockSpoke clockSpoke135"></span>
+                    <span class="clockSpoke clockSpoke136"></span>
+                    <input type="number" min="0" max="13" value="0" name="attr_spellComponetClock" class="clockControl" />
                 </div>
-                <div class="card customCard curseCard curse5">
-                    <h4 class="curseName">Affliction</h4>
-                    <input type="text" class="curseName" name="attr_curseName5" />
-                    <h4 class="curseSeverity">Severity</h4>
-                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" list="curseSeverity" />
-                    <h4 class="statusEffect">Status Effect</h4>
-                    <textarea class="statusEffect" name="attr_statusEffect5"></textarea>
-                    <h4 class="restorationComponents">Component</h4>
-                    <textarea class="restorationComponents" name="attr_restorationComponents5"></textarea>
-                    <button type="action" class="clearCurseButton" name="act_clearCurse5">Cure</button>
+                <div class="concentrationTracker">
+                    <input type="radio" class="diceCheckbox diePip0 hideCheckbox" name="attr_concentration"  value="-2"/><span class="diceCheckbox diePip0 concentrationD6 doubledice"></span>
+                    <input type="radio" class="diceCheckbox diePip1 hideCheckbox" name="attr_concentration" value="-1" /><span class="diceCheckbox diePip1 concentrationD6"></span>
+                    <input type="radio" class="calmCheckbox diePip2 hideCheckbox" name="attr_concentration" checked value="0" /><span class="calmCheckbox diePip2 concentrationCalm"></span>
+                    <input type="radio" class="diceCheckbox diePip3 hideCheckbox" name="attr_concentration" value="1" /><span class="diceCheckbox diePip3 concentrationD10"></span>
+                    <input type="radio" class="diceCheckbox diePip4 hideCheckbox" name="attr_concentration" value="2" /><span class="diceCheckbox diePip4 concentrationD10 doubledice"></span>
                 </div>
+                <div class="componentTitle">Components</div>
             </section>
 
             <!-- Grimoire -->
@@ -760,6 +718,68 @@
                             </div>
                         </fieldset>
                     </div>
+                </div>
+            </section>
+
+            <!-- Curses -->
+            <section class="curseWidget">
+                <h1>Curses</h1>
+                <button type="action" class="sortCurses" name="act_sortCurses"> > </button>
+                <input type="hidden" class="curseToggle" name="attr_curseFocus" value="1" />
+                <div class="card customCard curseCard curse1">
+                    <h4 class="curseName">Affliction</h4>
+                    <input type="text" class="curseName" name="attr_curseName1" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity1" list="curseSeverity" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect1"></textarea>
+                    <h4 class="restorationComponents">Component</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents1"></textarea>
+                    <button type="action" class="clearCurseButton" name="act_clearCurse1">Cure</button>
+                </div>
+                <div class="card customCard curseCard curse2">
+                    <h4 class="curseName">Affliction</h4>
+                    <input type="text" class="curseName" name="attr_curseName2" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity2" list="curseSeverity" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect2"></textarea>
+                    <h4 class="restorationComponents">Component</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents2"></textarea>
+                    <button type="action" class="clearCurseButton" name="act_clearCurse2">Cure</button>
+                </div>
+                <div class="card customCard curseCard curse3">
+                    <h4 class="curseName">Affliction</h4>
+                    <input type="text" class="curseName" name="attr_curseName3" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity3" list="curseSeverity" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect3"></textarea>
+                    <h4 class="restorationComponents">Component</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents3"></textarea>
+                    <button type="action" class="clearCurseButton" name="act_clearCurse3">Cure</button>
+                </div>
+                <div class="card customCard curseCard curse4">
+                    <h4 class="curseName">Affliction</h4>
+                    <input type="text" class="curseName" name="attr_curseName4" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity4" list="curseSeverity" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect4"></textarea>
+                    <h4 class="restorationComponents">Component</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents4"></textarea>
+                    <button type="action" class="clearCurseButton" name="act_clearCurse4">Cure</button>
+                </div>
+                <div class="card customCard curseCard curse5">
+                    <h4 class="curseName">Affliction</h4>
+                    <input type="text" class="curseName" name="attr_curseName5" />
+                    <h4 class="curseSeverity">Severity</h4>
+                    <input type="text" class="curseSeverity" name="attr_curseSeverity5" list="curseSeverity" />
+                    <h4 class="statusEffect">Status Effect</h4>
+                    <textarea class="statusEffect" name="attr_statusEffect5"></textarea>
+                    <h4 class="restorationComponents">Component</h4>
+                    <textarea class="restorationComponents" name="attr_restorationComponents5"></textarea>
+                    <button type="action" class="clearCurseButton" name="act_clearCurse5">Cure</button>
                 </div>
             </section>
 

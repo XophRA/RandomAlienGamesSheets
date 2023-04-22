@@ -364,7 +364,7 @@ main.masterGrid
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 50% 1fr;
-    grid-template-rows: 312px 215px 79px 367px auto 320px auto;
+    grid-template-rows: 312px 145px 69px 216px 222px auto 320px auto;
     justify-items: start;
     align-items: start;
 }
@@ -4240,10 +4240,10 @@ input.editToggle[value="1"] + .editMenu
 /* Description */
 .descriptionWidget
 {
-    grid-area: 1/2/auto/span 2;
+    grid-area: 1/2/span 2/auto;
     display: grid;
     grid-template-columns: 125px 236px 45px 1fr;
-    grid-template-rows: repeat(8,20px) 1fr 1fr;
+    grid-template-rows: repeat(8,20px) repeat(2,62px) repeat(7,20px) 1fr;
     grid-gap: 1px;
     height: 96%;
     width: 100%;
@@ -4327,16 +4327,54 @@ input.editToggle[value="1"] + .editMenu
         {
             grid-area: 10/2/auto/span 2;
         }
+        .descriptionWidget > .entanglements
+        {
+            grid-column: 2/auto;
+        }
+        .descriptionWidget > .strings
+        {
+            grid-column: -3/auto;
+        }
+        .descriptionWidget > .entanglement0
+        {
+            grid-row: 11/auto;
+        }
+        .descriptionWidget > .entanglement1
+        {
+            grid-row: 12/auto;
+        }
+
+        .descriptionWidget > .entanglement2
+        {
+            grid-row: 13/auto;
+        }
+        .descriptionWidget > .entanglement3
+        {
+            grid-row: 14/auto;
+        }
+        .descriptionWidget > .entanglement4
+        {
+            grid-row: 15/auto;
+        }
+        .descriptionWidget > .entanglement5
+        {
+            grid-row: 16/auto;
+        }
+        .descriptionWidget > .entanglement6
+        {
+            grid-row: 17/auto;
+        }
+
 
 /* Boons */
 .boonWidget
 {
-    grid-area: 2/2/span 2/auto;
+    grid-area: 3/2/span 2/auto;
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-columns: 80px 1fr 20px;
-    grid-template-rows: 39px repeat(12, 21px) auto;
+    grid-template-rows: 33px repeat(12, 21px) auto;
 }
 
     .boonWidget > input.boons
@@ -4407,12 +4445,12 @@ input.editToggle[value="1"] + .editMenu
  /* Resources */
 .resourceWidget
 {
-    grid-area: 4/2/auto/auto;
+    grid-area: 5/2/auto/auto;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 33px 98px 21px 98px 21px 1fr 34px 22px 20px;
-    grid-template-rows: 13px 98px 10px 98px 10px 1fr 8px;
+    grid-template-columns: 33px 98px 20px 98px 21px 1fr 34px 22px 20px;
+    grid-template-rows: 15px 98px 10px 98px 10px 1fr 8px;
 }
 
     /* Research Notes */
@@ -4478,7 +4516,7 @@ input.editToggle[value="1"] + .editMenu
         height: 100%;
         text-align: start;
         grid-template-columns: 36px;
-        grid-template-rows: 30px repeat(2,18px 20px) 6px 32px repeat(2,18px 20px) 1fr;
+        grid-template-rows: 30px 18px 22px 18px 27px 6px 27px 18px 22px 18px 32px 1fr;
     }
 
         .resourceWidget > .concentrationTracker > .diceCheckbox,
@@ -4519,11 +4557,11 @@ input.editToggle[value="1"] + .editMenu
 /* Conduit */
 .conduitWidget
 {
-    grid-area: 2/1/auto/auto;
+    grid-area: 2/1/span 2/auto;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 19px 115px 40px 130px 84px 25px auto;
+    grid-template-columns: 19px 115px 42px 128px 84px 25px auto;
     grid-template-rows: 40px repeat(6,24px) auto;
     row-gap: 4px;
 }
@@ -4564,11 +4602,11 @@ input.editToggle[value="1"] + .editMenu
 /* Arts */ 
 .artsWidget
 {
-    grid-area: 3/1/span 2/auto;
+    grid-area: 4/1/span 2/auto;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 19px 115px 40px 130px 84px 25px auto;
+    grid-template-columns: 19px 115px 47px 123px 84px 25px auto;
     grid-template-rows: 40px repeat(14,24px) auto;
     row-gap: 4px;
 }
@@ -4750,7 +4788,7 @@ input.editToggle[value="1"] + .editMenu
 
 .casterSheetGrid > .noteWidget
 {
-    grid-area: 7/1/auto/-1;
+    grid-area: 8/1/auto/-1;
     width: 100%;
     display: grid;
     row-gap: 0px;
@@ -4795,7 +4833,7 @@ input.editToggle[value="1"] + .editMenu
 /* Grimoire */
 .grimoireWidget
 {
-    grid-area: 5/1/auto/-1;
+    grid-area: 6/1/auto/-1;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 20px repeat(3, 275px 6px) 1fr;
@@ -5097,7 +5135,7 @@ input[value="1"].collapseToggle + .deck > div.repcontainer > div.repitem > .card
 /* Curses */
 .casterSheetGrid > .curseWidget
 {
-    grid-area: 6/1/auto/-1;
+    grid-area: 7/1/auto/-1;
 }
 
 .curseWidget
