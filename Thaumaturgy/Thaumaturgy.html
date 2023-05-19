@@ -803,13 +803,17 @@
             <!--Coven Aspects-->
             <section class="covenAspects">
                 <input type="text" name="attr_character_name" class="covenName" />
-                <h4 class="covenDescription">Location</h4>
+                <input type="text" name="attr_level" class="level" readonly />
+                <input type="number" name="attr_level" min="0" max="11" class="levelArrow" />
+
+                <!-- <h4 class="covenDescription">Location</h4>
                 <textarea name="attr_covendescription" class="covenDescription"></textarea>
                 <h4 class="covenkins">Covenkin</h4>
                 <textarea name="attr_covenkins" class="covenkins" ></textarea>
                 <h4 class="seniorCovens">Cohorts</h4>
-                <textarea name="attr_seniorCovens" class="seniorCovens" ></textarea>
+                <textarea name="attr_seniorCovens" class="seniorCovens" ></textarea> -->
             </section>
+            
             <!-- Rituals and Ascension -->
             <section class="ritualWidget">
                 <!-- Rituals -->
@@ -1067,7 +1071,7 @@
             <!-- Familiar -->
             <section class="familiarWidget">
                 <h1 class="familiarTitle">Familiar</h1>
-                <h1 class="name">Name</h1>
+                <h2 class="name">Name</h2>
                 <input type="text" name="attr_FamiliarName" class="name" />
                 <h4 class="description">Description</h4>
                 <textarea name="attr_description" class="description"></textarea>
