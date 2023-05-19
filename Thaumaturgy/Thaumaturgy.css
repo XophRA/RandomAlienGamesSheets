@@ -383,8 +383,8 @@ main.masterGrid
     width: 100%;
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 275px auto 275px 670px auto;
+    grid-template-columns: 64% auto;
+    grid-template-rows: 62px auto 275px 670px auto;
     justify-items: start;
     align-items: start;
 }
@@ -654,43 +654,42 @@ main.masterGrid
     grid-area: 1/1/auto/-1;
     display: grid;
     width: 100%;
-    height: 253px;
-    grid-template-columns: 110px 1fr;
-    grid-template-rows: 24px repeat(2, 1fr) 3fr;
-    row-gap: 4px;
-    margin-left: 25px;
-    margin-top: 22px;
+    height: 100%;
+    grid-template-columns: 115px 372px 42px 1fr;
+    grid-template-rows: 22px 24px 1fr;
 }
 
     .covenAspects > input,
     .covenAspects > textarea
     {
-        grid-column: 2/-1;
+        grid-column: 2/auto;
     }
 
     .covenAspects > h4
     {
-        grid-column: 1/auto;
+        grid-column: 2/auto;
     }
 
     .covenAspects > .covenName
     {
-        grid-row: 1/auto;
+        grid-row: 2/auto;
     }
 
     .covenAspects > .covenDescription
     {
-        grid-row: 2/auto;
-    }
-
-    .covenAspects > .covenkins
-    {
-        grid-row: 4/auto;
-    }
-
-    .covenAspects > .seniorCovens
-    {
         grid-row: 3/auto;
+    }
+
+    .covenAspects > input.level
+    {
+        grid-area: 2/3/auto/-2;
+        margin-top: 0;
+    }
+
+    .covenAspects > input[type="number"].levelArrow
+    {
+        grid-area: 2/4/auto/-1;
+        margin-top: 6px;
     }
 
 /* Coven Disequilibrium */
@@ -887,22 +886,6 @@ main.masterGrid
         grid-template-columns: 100px repeat(3,1fr) 120px;
         grid-template-rows: 78px repeat(12, 30px) 1fr;
     }
-
-        .ascensionDeck .editAscension > .levelControl
-        {
-            grid-row: 2/auto;
-            align-self: center;
-        }
-
-        .ascensionDeck .editAscension > div.levelControl
-        {
-            grid-column: 2/auto;
-        }
-
-        .ascensionDeck .editAscension > input.levelControl
-        {
-            grid-column: 3/auto;
-        }
 
         .ascensionDeck .editAscension > .ascensionClear
         {
@@ -4106,7 +4089,6 @@ input[value="3"].clockSegment3 ~ .clock
         transform: translateX(var(--clockcentre)) rotate(130deg);
     }
 
-
     /* Clock Spokes for 3 Segment Clock */
     .clockWidget > .clockSpoke.clockSpoke30
     {
@@ -4126,6 +4108,37 @@ input[value="3"].clockSegment3 ~ .clock
         transform: translateX(var(--clockcentre)) rotate(240deg);
         height: var(--clockcentre);
         transform-origin: bottom;
+    }
+
+/* Level Widget */
+.descriptionWidget > input.level,
+.covenAspects > input.level
+{
+    font-family: "Love Ya Like A Sister", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    min-height: 40px;
+    min-width: 40px;
+    text-align: center;
+    background-image: none;
+}
+
+.descriptionWidget > input[type="number"].levelArrow,
+.covenAspects > input[type="number"].levelArrow
+{
+    width: 15px;
+    font-size: 15px;
+    color: transparent;
+    text-align: left;
+}
+
+.descriptionWidget > input[type="number"].levelArrow::-webkit-inner-spin-button,
+.descriptionWidget > input[type="number"].levelArrow::-webkit-outer-spin-button,
+.covenAspects > input[type="number"].levelArrow::-webkit-inner-spin-button,
+.covenAspects > input[type="number"].levelArrow::-webkit-outer-spin-button
+    {
+        -webkit-appearance: "Always Show Up/Down Arrows";
+        opacity: 1;
     }
 
 /* Edit Mode */
@@ -4250,38 +4263,17 @@ input.editToggle[value="1"] + .editMenu
     margin-top: 15px;
 }
 
-    .descriptionWidget > input.level,
-    .covenAspects > input.level
+    .descriptionWidget > input.level
     {
         grid-area: 1/-3/auto/-2;
         margin-top: 8px;
-        font-family: "Love Ya Like A Sister", sans-serif;
-        font-weight: 600;
-        font-size: 30px;
-        min-height: 40px;
-        min-width: 40px;
-        text-align: center;
-        background-image: none;
     }
 
-    .descriptionWidget > input[type="number"].levelArrow,
-    .covenAspects > input[type="number"].levelArrow
+    .descriptionWidget > input[type="number"].levelArrow
     {
         grid-area: 2/-2/auto/-1;
         margin-top: -4px;
-        width: 15px;
-        font-size: 15px;
-        color: transparent;
-        text-align: left;
     }
-        .descriptionWidget > input[type="number"].levelArrow::-webkit-inner-spin-button,
-        .descriptionWidget > input[type="number"].levelArrow::-webkit-outer-spin-button,
-        .covenAspects > input[type="number"].levelArrow::-webkit-inner-spin-button,
-        .covenAspects > input[type="number"].levelArrow::-webkit-outer-spin-button
-        {
-            -webkit-appearance: "Always Show Up/Down Arrows";
-            opacity: 1;
-        }
     
         .descriptionWidget > .coven
         {

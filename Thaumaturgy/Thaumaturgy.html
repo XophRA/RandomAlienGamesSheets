@@ -803,8 +803,8 @@
             <!--Coven Aspects-->
             <section class="covenAspects">
                 <input type="text" name="attr_character_name" class="covenName" />
-                <input type="text" name="attr_level" class="level" readonly />
-                <input type="number" name="attr_level" min="0" max="11" class="levelArrow" />
+                <input type="text" name="attr_covenLevel" class="level" readonly />
+                <input type="number" name="attr_covenLevel" min="0" max="11" class="levelArrow" />
 
                 <!-- <h4 class="covenDescription">Location</h4>
                 <textarea name="attr_covendescription" class="covenDescription"></textarea>
@@ -813,7 +813,7 @@
                 <h4 class="seniorCovens">Cohorts</h4>
                 <textarea name="attr_seniorCovens" class="seniorCovens" ></textarea> -->
             </section>
-            
+
             <!-- Rituals and Ascension -->
             <section class="ritualWidget">
                 <!-- Rituals -->
@@ -879,12 +879,12 @@
                     <input type="hidden" class="editToggle" name="attr_EditAscension" />
                     <input type="checkbox" class="editCog" name="attr_EditAscension" value="1" /><span class="editCog"></span>
                     <div class="editMenu editAscension">
-                        <div class="levelControl">Level</div>
-                        <input type="number" class="levelControl" name="attr_covenLevel" value="0" min="0" max="11" />
+                        <!-- <div class="levelControl">Level</div>
+                        <input type="number" class="levelControl" name="attr_covenLevel" value="0" min="0" max="11" /> -->
                         <button type="action" class="ascensionClear" name="act_ascensionClear">Clear</button>
                     </div>
                     <input type="hidden" class="levelControl" name="attr_covenLevel" />
-                    <span class="level lvl1">1</span>
+                    <!-- <span class="level lvl1">1</span>
                     <span class="level lvl2">2</span>
                     <span class="level lvl3">3</span>
                     <span class="level lvl4">4</span>
@@ -895,7 +895,7 @@
                     <span class="level lvl9">9</span>
                     <span class="level lvl10">10</span>
                     <span class="level lvl11">11</span>
-                    <!-- <span class="level lvl12">12</span>
+                    <span class="level lvl12">12</span>
                     <span class="level lvl13">13</span> -->
                     <div class="card customCard ascensionCard">
                         <h4 class="ritualSigilSize">Arc</h4>
